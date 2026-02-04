@@ -31,7 +31,7 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npm run build
+        run: npx next build --webpack
 
       - name: Disable Jekyll (allow _next folder)
         run: touch ./out/.nojekyll

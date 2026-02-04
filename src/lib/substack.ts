@@ -16,8 +16,11 @@ export async function getSubstackArticles(
   limit = 5
 ): Promise<SubstackArticle[]> {
   const feedUrl = getFeedUrl();
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 8000);
   try {
     const res = await fetch(feedUrl, {
+      signal: controller.signal,
       next: { revalidate: 3600 },
       headers: {
         "User-Agent":
@@ -40,5 +43,7 @@ export async function getSubstackArticles(
   } catch (error) {
     console.error("Failed to fetch or parse Substack feed:", error);
     return [];
+  } finally {
+    clearTimeout(timeoutId);
   }
 }

@@ -4,6 +4,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const navigation = [
+  { name: "Freedom Tech", href: "/freedom-tech" },
+  { name: "Freedom from Tech", href: "/freedom-from-tech" },
   { name: "Philosophy", href: "/philosophy" },
   { name: "Practice", href: "/practice" },
   { name: "Connect", href: "/connect" },

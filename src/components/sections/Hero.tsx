@@ -12,13 +12,16 @@ export function Hero() {
             Where discipline meets depth.
           </Text>
           <Text variant="muted" className="mb-10 max-w-xl">
-            Exploring the integration of body, mind, and spirit through
-            intentional practice and grounded philosophy.
+            Bridging freedom tech and freedom from tech through a holistic
+            approach—with proof of work at the root.
           </Text>
           <div className="flex flex-wrap gap-4">
-            <Button href="/philosophy">Explore Philosophy</Button>
-            <Button href="/connect" variant="outline">
-              Get in Touch
+            <Button href="/freedom-tech">Freedom Tech</Button>
+            <Button href="/freedom-from-tech" variant="outline">
+              Freedom from Tech
+            </Button>
+            <Button href="/philosophy" variant="outline">
+              Philosophy
             </Button>
           </div>
         </div>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Hero } from "@/components/sections/Hero";
 import { ArticleFeed } from "@/components/sections/ArticleFeed";
 import { Container } from "@/components/ui/Container";
@@ -12,8 +13,63 @@ export default function Home() {
     <>
       <Hero />
 
-      {/* Manifesto Brief */}
+      {/* Two branches + bridge + proof of work */}
       <section className="py-16 md:py-24 bg-[var(--color-bg-secondary)]">
+        <Container>
+          <div className="text-center mb-12">
+            <SectionTitle subtitle="At the root: proof of work. Bridging both through a holistic approach to life.">
+              Two Branches, One Bridge
+            </SectionTitle>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
+            <Link href="/freedom-tech" className="group">
+              <Card variant="elevated" className="h-full transition-shadow group-hover:shadow-[var(--shadow-medium)]">
+                <CardContent>
+                  <h3 className="font-[family-name:var(--font-cormorant)] text-xl font-medium mb-3 text-[var(--color-text-primary)]">
+                    Freedom Tech
+                  </h3>
+                  <Text variant="small" className="mb-4">
+                    Bitcoin Park, summits, meetups, podcast, speaking. Work where
+                    technology serves human freedom.
+                  </Text>
+                  <span className="text-sm font-medium text-[var(--color-accent-forge)] group-hover:text-[var(--color-text-primary)] transition-colors">
+                    Explore →
+                  </span>
+                </CardContent>
+              </Card>
+            </Link>
+
+            <Link href="/freedom-from-tech" className="group">
+              <Card variant="elevated" className="h-full transition-shadow group-hover:shadow-[var(--shadow-medium)]">
+                <CardContent>
+                  <h3 className="font-[family-name:var(--font-cormorant)] text-xl font-medium mb-3 text-[var(--color-text-primary)]">
+                    Freedom from Tech
+                  </h3>
+                  <Text variant="small" className="mb-4">
+                    Yoga, Rewired Protocol, breathwork, MTA. Work that reclaims
+                    presence, body, and nervous system.
+                  </Text>
+                  <span className="text-sm font-medium text-[var(--color-accent-forge)] group-hover:text-[var(--color-text-primary)] transition-colors">
+                    Explore →
+                  </span>
+                </CardContent>
+              </Card>
+            </Link>
+          </div>
+
+          <div className="text-center max-w-xl mx-auto">
+            <Text variant="muted" className="italic">
+              I don’t see these as separate tracks. They inform each other. The
+              same proof of work—showing up, doing the work, letting results
+              speak—runs through both.
+            </Text>
+          </div>
+        </Container>
+      </section>
+
+      {/* Manifesto Brief */}
+      <section className="py-16 md:py-24">
         <Container size="narrow">
           <div className="text-center">
             <Text variant="lead" className="italic">

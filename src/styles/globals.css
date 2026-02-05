@@ -7,6 +7,8 @@
   --color-bg-secondary: #E8E4DE;
   --color-text-primary: #2A2520;
   --color-text-secondary: #5C5650;
+  --color-text-muted: #6B6560;
+  --color-text-on-dark: #F8F6F2;
   --color-accent-forge: #6B7B8A;
   --color-accent-ember: #C4956A;
 
@@ -117,6 +119,12 @@ a {
 
 a:hover {
   color: var(--color-text-primary);
+}
+
+/* Button links: keep text visible (override global link color) */
+a[data-button-variant="primary"],
+a[data-button-variant="primary"]:hover {
+  color: #F8F6F2;
 }
 
 /* Horizontal Divider */

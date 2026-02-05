@@ -7,12 +7,12 @@ import { Button } from "@/components/ui/Button";
 const SUBSTACK_BASE = "https://satflow.substack.com";
 
 export async function ArticleFeed() {
-  const articles = await getSubstackArticles(3);
+  const articles = await getSubstackArticles(5);
 
   return (
     <section className="py-16 md:py-24">
       <Container>
-        <SectionTitle subtitle="Thoughts on discipline, depth, and the path toward integration.">
+        <SectionTitle subtitle="From my Substack — thoughts on discipline, depth, and the path toward integration.">
           Latest Writing
         </SectionTitle>
 

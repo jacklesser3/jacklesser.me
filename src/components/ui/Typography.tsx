@@ -55,7 +55,7 @@ const textVariants = {
   body: "text-base text-[var(--color-text-primary)]",
   lead: "text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed",
   small: "text-sm text-[var(--color-text-secondary)]",
-  muted: "text-base text-[var(--color-text-secondary)]",
+  muted: "text-base text-[var(--color-text-muted)]",
 };
 
 export function Text({ children, className = "", variant = "body" }: TextProps) {

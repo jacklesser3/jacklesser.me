@@ -27,9 +27,9 @@ type ButtonProps = ButtonAsButton | ButtonAsLink;
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "bg-[var(--color-accent-forge)] text-[var(--color-bg-primary)] hover:bg-[var(--color-text-primary)]",
+    "bg-[var(--color-accent-forge)] text-[#F8F6F2] hover:bg-[var(--color-text-primary)] hover:text-[#F8F6F2]",
   secondary:
-    "bg-[var(--color-bg-secondary)] text-[var(--color-text-primary)] hover:bg-[var(--color-accent-ember)] hover:text-[var(--color-bg-primary)]",
+    "bg-[var(--color-bg-secondary)] text-[var(--color-text-primary)] hover:bg-[var(--color-accent-ember)] hover:text-[var(--color-text-on-dark)]",
   outline:
     "border border-[var(--color-text-secondary)] text-[var(--color-text-primary)] hover:border-[var(--color-accent-forge)] hover:text-[var(--color-accent-forge)]",
 };
@@ -54,7 +54,11 @@ export function Button({
 
   if ("href" in props && props.href) {
     return (
-      <Link href={props.href} className={combinedClassName}>
+      <Link
+        href={props.href}
+        className={combinedClassName}
+        data-button-variant={variant}
+      >
         {children}
       </Link>
     );

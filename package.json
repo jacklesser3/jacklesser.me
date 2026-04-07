@@ -7,7 +7,8 @@
     "view": "open http://127.0.0.1:3000",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "push": "bash scripts/push.sh"
   },
   "dependencies": {
     "next": "16.1.6",

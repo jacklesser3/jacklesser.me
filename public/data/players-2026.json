@@ -1,0 +1,5818 @@
+[
+  {
+    "id": "shohei-ohtani",
+    "name": "Shohei Ohtani",
+    "team": "LAD",
+    "positions": [
+      "SP",
+      "DH"
+    ],
+    "batting": {
+      "r": 120,
+      "hr": 44,
+      "rbi": 99,
+      "sb": 22,
+      "avg": 0.275,
+      "ops": 0.958
+    },
+    "pitching": {
+      "era": 3.46,
+      "whip": 1.15,
+      "k9": 10.5,
+      "qs": 10,
+      "nsv": 0,
+      "w": 9
+    },
+    "adp": 1,
+    "isKept": false
+  },
+  {
+    "id": "aaron-judge",
+    "name": "Aaron Judge",
+    "team": "NYY",
+    "positions": [
+      "OF",
+      "DH"
+    ],
+    "batting": {
+      "r": 109,
+      "hr": 42,
+      "rbi": 102,
+      "sb": 9,
+      "avg": 0.283,
+      "ops": 0.998
+    },
+    "pitching": null,
+    "adp": 2,
+    "isKept": false
+  },
+  {
+    "id": "bobby-witt-jr",
+    "name": "Bobby Witt Jr.",
+    "team": "KC",
+    "positions": [
+      "SS"
+    ],
+    "batting": {
+      "r": 99,
+      "hr": 28,
+      "rbi": 89,
+      "sb": 31,
+      "avg": 0.293,
+      "ops": 0.87
+    },
+    "pitching": null,
+    "adp": 3,
+    "isKept": false
+  },
+  {
+    "id": "juan-soto",
+    "name": "Juan Soto",
+    "team": "NYM",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 105,
+      "hr": 34,
+      "rbi": 89,
+      "sb": 20,
+      "avg": 0.273,
+      "ops": 0.946
+    },
+    "pitching": null,
+    "adp": 4,
+    "isKept": false
+  },
+  {
+    "id": "jose-ramirez",
+    "name": "Jose Ramirez",
+    "team": "CLE",
+    "positions": [
+      "3B",
+      "DH"
+    ],
+    "batting": {
+      "r": 83,
+      "hr": 27,
+      "rbi": 87,
+      "sb": 30,
+      "avg": 0.276,
+      "ops": 0.841
+    },
+    "pitching": null,
+    "adp": 5,
+    "isKept": false
+  },
+  {
+    "id": "ronald-acuna-jr",
+    "name": "Ronald Acuna Jr.",
+    "team": "ATL",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 109,
+      "hr": 31,
+      "rbi": 84,
+      "sb": 24,
+      "avg": 0.286,
+      "ops": 0.892
+    },
+    "pitching": null,
+    "adp": 6,
+    "isKept": false
+  },
+  {
+    "id": "elly-de-la-cruz",
+    "name": "Elly De La Cruz",
+    "team": "CIN",
+    "positions": [
+      "SS"
+    ],
+    "batting": {
+      "r": 83,
+      "hr": 23,
+      "rbi": 82,
+      "sb": 38,
+      "avg": 0.263,
+      "ops": 0.807
+    },
+    "pitching": null,
+    "adp": 7,
+    "isKept": false
+  },
+  {
+    "id": "tarik-skubal",
+    "name": "Tarik Skubal",
+    "team": "DET",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 2.79,
+      "whip": 1.02,
+      "k9": 10.9,
+      "qs": 23,
+      "nsv": 0,
+      "w": 14
+    },
+    "adp": 8,
+    "isKept": false
+  },
+  {
+    "id": "julio-rodriguez",
+    "name": "Julio Rodriguez",
+    "team": "SEA",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 85,
+      "hr": 30,
+      "rbi": 91,
+      "sb": 23,
+      "avg": 0.275,
+      "ops": 0.825
+    },
+    "pitching": null,
+    "adp": 9,
+    "isKept": false
+  },
+  {
+    "id": "kyle-tucker",
+    "name": "Kyle Tucker",
+    "team": "LAD",
+    "positions": [
+      "OF",
+      "DH"
+    ],
+    "batting": {
+      "r": 90,
+      "hr": 27,
+      "rbi": 78,
+      "sb": 18,
+      "avg": 0.269,
+      "ops": 0.867
+    },
+    "pitching": null,
+    "adp": 10,
+    "isKept": false
+  },
+  {
+    "id": "paul-skenes",
+    "name": "Paul Skenes",
+    "team": "PIT",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 2.92,
+      "whip": 1.08,
+      "k9": 11,
+      "qs": 21,
+      "nsv": 0,
+      "w": 13
+    },
+    "adp": 11,
+    "isKept": true,
+    "keeperOwner": "Matt LaPoff"
+  },
+  {
+    "id": "fernando-tatis-jr",
+    "name": "Fernando Tatis Jr.",
+    "team": "SD",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 96,
+      "hr": 30,
+      "rbi": 82,
+      "sb": 23,
+      "avg": 0.275,
+      "ops": 0.862
+    },
+    "pitching": null,
+    "adp": 12,
+    "isKept": false
+  },
+  {
+    "id": "gunnar-henderson",
+    "name": "Gunnar Henderson",
+    "team": "BAL",
+    "positions": [
+      "SS"
+    ],
+    "batting": {
+      "r": 101,
+      "hr": 28,
+      "rbi": 84,
+      "sb": 24,
+      "avg": 0.275,
+      "ops": 0.846
+    },
+    "pitching": null,
+    "adp": 13,
+    "isKept": false
+  },
+  {
+    "id": "garrett-crochet",
+    "name": "Garrett Crochet",
+    "team": "BOS",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.02,
+      "whip": 1.08,
+      "k9": 11.1,
+      "qs": 21,
+      "nsv": 0,
+      "w": 14
+    },
+    "adp": 14,
+    "isKept": true,
+    "keeperOwner": "Stimmel/Weiss"
+  },
+  {
+    "id": "corbin-carroll",
+    "name": "Corbin Carroll",
+    "team": "ARI",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 96,
+      "hr": 27,
+      "rbi": 81,
+      "sb": 33,
+      "avg": 0.261,
+      "ops": 0.847
+    },
+    "pitching": null,
+    "adp": 15,
+    "isKept": false
+  },
+  {
+    "id": "junior-caminero",
+    "name": "Junior Caminero",
+    "team": "TB",
+    "positions": [
+      "3B"
+    ],
+    "batting": {
+      "r": 71,
+      "hr": 32,
+      "rbi": 89,
+      "sb": 5,
+      "avg": 0.271,
+      "ops": 0.85
+    },
+    "pitching": null,
+    "adp": 16,
+    "isKept": true,
+    "keeperOwner": "Jack Lesser"
+  },
+  {
+    "id": "vladimir-guerrero-jr",
+    "name": "Vladimir Guerrero Jr.",
+    "team": "TOR",
+    "positions": [
+      "1B",
+      "DH"
+    ],
+    "batting": {
+      "r": 94,
+      "hr": 32,
+      "rbi": 99,
+      "sb": 5,
+      "avg": 0.297,
+      "ops": 0.914
+    },
+    "pitching": null,
+    "adp": 17,
+    "isKept": false
+  },
+  {
+    "id": "jackson-chourio",
+    "name": "Jackson Chourio",
+    "team": "MIL",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 83,
+      "hr": 24,
+      "rbi": 73,
+      "sb": 22,
+      "avg": 0.27,
+      "ops": 0.79
+    },
+    "pitching": null,
+    "adp": 18,
+    "isKept": true,
+    "keeperOwner": "Drew Davis"
+  },
+  {
+    "id": "kyle-schwarber",
+    "name": "Kyle Schwarber",
+    "team": "PHI",
+    "positions": [
+      "OF",
+      "DH"
+    ],
+    "batting": {
+      "r": 97,
+      "hr": 39,
+      "rbi": 90,
+      "sb": 6,
+      "avg": 0.231,
+      "ops": 0.852
+    },
+    "pitching": null,
+    "adp": 19,
+    "isKept": false
+  },
+  {
+    "id": "cal-raleigh",
+    "name": "Cal Raleigh",
+    "team": "SEA",
+    "positions": [
+      "C",
+      "DH"
+    ],
+    "batting": {
+      "r": 89,
+      "hr": 38,
+      "rbi": 91,
+      "sb": 8,
+      "avg": 0.23,
+      "ops": 0.818
+    },
+    "pitching": null,
+    "adp": 20,
+    "isKept": false
+  },
+  {
+    "id": "nick-kurtz",
+    "name": "Nick Kurtz",
+    "team": "ATH",
+    "positions": [
+      "1B"
+    ],
+    "batting": {
+      "r": 95,
+      "hr": 38,
+      "rbi": 87,
+      "sb": 5,
+      "avg": 0.258,
+      "ops": 0.887
+    },
+    "pitching": null,
+    "adp": 21,
+    "isKept": true,
+    "keeperOwner": "Drew Davis"
+  },
+  {
+    "id": "jazz-chisholm-jr",
+    "name": "Jazz Chisholm Jr.",
+    "team": "NYY",
+    "positions": [
+      "2B",
+      "3B"
+    ],
+    "batting": {
+      "r": 70,
+      "hr": 26,
+      "rbi": 72,
+      "sb": 27,
+      "avg": 0.24,
+      "ops": 0.763
+    },
+    "pitching": null,
+    "adp": 22,
+    "isKept": false
+  },
+  {
+    "id": "trea-turner",
+    "name": "Trea Turner",
+    "team": "PHI",
+    "positions": [
+      "SS"
+    ],
+    "batting": {
+      "r": 86,
+      "hr": 18,
+      "rbi": 65,
+      "sb": 26,
+      "avg": 0.281,
+      "ops": 0.774
+    },
+    "pitching": null,
+    "adp": 23,
+    "isKept": false
+  },
+  {
+    "id": "pete-alonso",
+    "name": "Pete Alonso",
+    "team": "BAL",
+    "positions": [
+      "1B"
+    ],
+    "batting": {
+      "r": 88,
+      "hr": 35,
+      "rbi": 100,
+      "sb": 3,
+      "avg": 0.254,
+      "ops": 0.831
+    },
+    "pitching": null,
+    "adp": 24,
+    "isKept": false
+  },
+  {
+    "id": "francisco-lindor",
+    "name": "Francisco Lindor",
+    "team": "NYM",
+    "positions": [
+      "SS"
+    ],
+    "batting": {
+      "r": 94,
+      "hr": 26,
+      "rbi": 73,
+      "sb": 23,
+      "avg": 0.259,
+      "ops": 0.788
+    },
+    "pitching": null,
+    "adp": 25,
+    "isKept": false
+  },
+  {
+    "id": "ketel-marte",
+    "name": "Ketel Marte",
+    "team": "ARI",
+    "positions": [
+      "2B",
+      "DH"
+    ],
+    "batting": {
+      "r": 91,
+      "hr": 26,
+      "rbi": 74,
+      "sb": 6,
+      "avg": 0.28,
+      "ops": 0.859
+    },
+    "pitching": null,
+    "adp": 26,
+    "isKept": false
+  },
+  {
+    "id": "yoshinobu-yamamoto",
+    "name": "Yoshinobu Yamamoto",
+    "team": "LAD",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.45,
+      "whip": 1.21,
+      "k9": 9.5,
+      "qs": 15,
+      "nsv": 0,
+      "w": 11
+    },
+    "adp": 27,
+    "isKept": false
+  },
+  {
+    "id": "yordan-alvarez",
+    "name": "Yordan Alvarez",
+    "team": "HOU",
+    "positions": [
+      "OF",
+      "DH"
+    ],
+    "batting": {
+      "r": 83,
+      "hr": 30,
+      "rbi": 88,
+      "sb": 4,
+      "avg": 0.3,
+      "ops": 0.955
+    },
+    "pitching": null,
+    "adp": 28,
+    "isKept": false
+  },
+  {
+    "id": "cristopher-sanchez",
+    "name": "Cristopher Sanchez",
+    "team": "PHI",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.15,
+      "whip": 1.18,
+      "k9": 8.7,
+      "qs": 21,
+      "nsv": 0,
+      "w": 14
+    },
+    "adp": 29,
+    "isKept": false
+  },
+  {
+    "id": "manny-machado",
+    "name": "Manny Machado",
+    "team": "SD",
+    "positions": [
+      "3B"
+    ],
+    "batting": {
+      "r": 75,
+      "hr": 26,
+      "rbi": 86,
+      "sb": 9,
+      "avg": 0.268,
+      "ops": 0.795
+    },
+    "pitching": null,
+    "adp": 30,
+    "isKept": false
+  },
+  {
+    "id": "james-wood",
+    "name": "James Wood",
+    "team": "WSH",
+    "positions": [
+      "OF",
+      "DH"
+    ],
+    "batting": {
+      "r": 71,
+      "hr": 22,
+      "rbi": 63,
+      "sb": 13,
+      "avg": 0.26,
+      "ops": 0.828
+    },
+    "pitching": null,
+    "adp": 31,
+    "isKept": false
+  },
+  {
+    "id": "zach-neto",
+    "name": "Zach Neto",
+    "team": "LAA",
+    "positions": [
+      "SS"
+    ],
+    "batting": {
+      "r": 83,
+      "hr": 26,
+      "rbi": 69,
+      "sb": 27,
+      "avg": 0.252,
+      "ops": 0.775
+    },
+    "pitching": null,
+    "adp": 32,
+    "isKept": true,
+    "keeperOwner": "Tyler Isbitts"
+  },
+  {
+    "id": "bryce-harper",
+    "name": "Bryce Harper",
+    "team": "PHI",
+    "positions": [
+      "1B"
+    ],
+    "batting": {
+      "r": 83,
+      "hr": 27,
+      "rbi": 87,
+      "sb": 9,
+      "avg": 0.273,
+      "ops": 0.863
+    },
+    "pitching": null,
+    "adp": 33,
+    "isKept": false
+  },
+  {
+    "id": "pete-crow-armstrong",
+    "name": "Pete Crow-Armstrong",
+    "team": "CHC",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 63,
+      "hr": 20,
+      "rbi": 68,
+      "sb": 27,
+      "avg": 0.252,
+      "ops": 0.752
+    },
+    "pitching": null,
+    "adp": 34,
+    "isKept": false
+  },
+  {
+    "id": "matt-olson",
+    "name": "Matt Olson",
+    "team": "ATL",
+    "positions": [
+      "1B"
+    ],
+    "batting": {
+      "r": 89,
+      "hr": 31,
+      "rbi": 94,
+      "sb": 1,
+      "avg": 0.256,
+      "ops": 0.828
+    },
+    "pitching": null,
+    "adp": 35,
+    "isKept": false
+  },
+  {
+    "id": "brent-rooker",
+    "name": "Brent Rooker",
+    "team": "ATH",
+    "positions": [
+      "OF",
+      "DH"
+    ],
+    "batting": {
+      "r": 82,
+      "hr": 30,
+      "rbi": 91,
+      "sb": 5,
+      "avg": 0.258,
+      "ops": 0.82
+    },
+    "pitching": null,
+    "adp": 36,
+    "isKept": false
+  },
+  {
+    "id": "hunter-brown",
+    "name": "Hunter Brown",
+    "team": "HOU",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.63,
+      "whip": 1.23,
+      "k9": 9.8,
+      "qs": 18,
+      "nsv": 0,
+      "w": 12
+    },
+    "adp": 37,
+    "isKept": true,
+    "keeperOwner": "Madey/Frazen"
+  },
+  {
+    "id": "logan-gilbert",
+    "name": "Logan Gilbert",
+    "team": "SEA",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.4,
+      "whip": 1.1,
+      "k9": 9.8,
+      "qs": 16,
+      "nsv": 0,
+      "w": 11
+    },
+    "adp": 38,
+    "isKept": false
+  },
+  {
+    "id": "chris-sale",
+    "name": "Chris Sale",
+    "team": "ATL",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.19,
+      "whip": 1.09,
+      "k9": 11,
+      "qs": 18,
+      "nsv": 0,
+      "w": 12
+    },
+    "adp": 39,
+    "isKept": false
+  },
+  {
+    "id": "bryan-woo",
+    "name": "Bryan Woo",
+    "team": "SEA",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.6,
+      "whip": 1.13,
+      "k9": 9,
+      "qs": 19,
+      "nsv": 0,
+      "w": 12
+    },
+    "adp": 40,
+    "isKept": true,
+    "keeperOwner": "Jack Lesser"
+  },
+  {
+    "id": "rafael-devers",
+    "name": "Rafael Devers",
+    "team": "SF",
+    "positions": [
+      "1B",
+      "DH"
+    ],
+    "batting": {
+      "r": 82,
+      "hr": 29,
+      "rbi": 84,
+      "sb": 2,
+      "avg": 0.248,
+      "ops": 0.81
+    },
+    "pitching": null,
+    "adp": 41,
+    "isKept": false
+  },
+  {
+    "id": "wyatt-langford",
+    "name": "Wyatt Langford",
+    "team": "TEX",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 78,
+      "hr": 22,
+      "rbi": 69,
+      "sb": 19,
+      "avg": 0.256,
+      "ops": 0.806
+    },
+    "pitching": null,
+    "adp": 42,
+    "isKept": false
+  },
+  {
+    "id": "mookie-betts",
+    "name": "Mookie Betts",
+    "team": "LAD",
+    "positions": [
+      "SS"
+    ],
+    "batting": {
+      "r": 84,
+      "hr": 22,
+      "rbi": 79,
+      "sb": 8,
+      "avg": 0.274,
+      "ops": 0.823
+    },
+    "pitching": null,
+    "adp": 43,
+    "isKept": false
+  },
+  {
+    "id": "logan-webb",
+    "name": "Logan Webb",
+    "team": "SF",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.32,
+      "whip": 1.21,
+      "k9": 8.5,
+      "qs": 21,
+      "nsv": 0,
+      "w": 13
+    },
+    "adp": 44,
+    "isKept": false
+  },
+  {
+    "id": "jacob-degrom",
+    "name": "Jacob deGrom",
+    "team": "TEX",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.52,
+      "whip": 1.1,
+      "k9": 10.4,
+      "qs": 17,
+      "nsv": 0,
+      "w": 11
+    },
+    "adp": 45,
+    "isKept": false
+  },
+  {
+    "id": "max-fried",
+    "name": "Max Fried",
+    "team": "NYY",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.28,
+      "whip": 1.21,
+      "k9": 8.5,
+      "qs": 20,
+      "nsv": 0,
+      "w": 13
+    },
+    "adp": 46,
+    "isKept": false
+  },
+  {
+    "id": "cole-ragans",
+    "name": "Cole Ragans",
+    "team": "KC",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.31,
+      "whip": 1.18,
+      "k9": 11,
+      "qs": 17,
+      "nsv": 0,
+      "w": 12
+    },
+    "adp": 47,
+    "isKept": false
+  },
+  {
+    "id": "freddie-freeman",
+    "name": "Freddie Freeman",
+    "team": "LAD",
+    "positions": [
+      "1B"
+    ],
+    "batting": {
+      "r": 89,
+      "hr": 24,
+      "rbi": 94,
+      "sb": 7,
+      "avg": 0.279,
+      "ops": 0.833
+    },
+    "pitching": null,
+    "adp": 48,
+    "isKept": false
+  },
+  {
+    "id": "brice-turang",
+    "name": "Brice Turang",
+    "team": "MIL",
+    "positions": [
+      "2B"
+    ],
+    "batting": {
+      "r": 77,
+      "hr": 14,
+      "rbi": 61,
+      "sb": 26,
+      "avg": 0.26,
+      "ops": 0.726
+    },
+    "pitching": null,
+    "adp": 49,
+    "isKept": false
+  },
+  {
+    "id": "roman-anthony",
+    "name": "Roman Anthony",
+    "team": "BOS",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 73,
+      "hr": 15,
+      "rbi": 52,
+      "sb": 8,
+      "avg": 0.264,
+      "ops": 0.804
+    },
+    "pitching": null,
+    "adp": 50,
+    "isKept": true,
+    "keeperOwner": "Mitch Lesser"
+  },
+  {
+    "id": "mason-miller",
+    "name": "Mason Miller",
+    "team": "SD",
+    "positions": [
+      "RP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 2.39,
+      "whip": 1,
+      "k9": 14.3,
+      "qs": 0,
+      "nsv": 32,
+      "w": 4
+    },
+    "adp": 51,
+    "isKept": true,
+    "keeperOwner": "Mitch Lesser"
+  },
+  {
+    "id": "edwin-diaz",
+    "name": "Edwin Diaz",
+    "team": "LAD",
+    "positions": [
+      "RP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.03,
+      "whip": 1.09,
+      "k9": 12.4,
+      "qs": 0,
+      "nsv": 36,
+      "w": 4
+    },
+    "adp": 52,
+    "isKept": false
+  },
+  {
+    "id": "austin-riley",
+    "name": "Austin Riley",
+    "team": "ATL",
+    "positions": [
+      "3B"
+    ],
+    "batting": {
+      "r": 79,
+      "hr": 27,
+      "rbi": 88,
+      "sb": 3,
+      "avg": 0.26,
+      "ops": 0.786
+    },
+    "pitching": null,
+    "adp": 53,
+    "isKept": false
+  },
+  {
+    "id": "josh-naylor",
+    "name": "Josh Naylor",
+    "team": "SEA",
+    "positions": [
+      "1B",
+      "DH"
+    ],
+    "batting": {
+      "r": 71,
+      "hr": 23,
+      "rbi": 80,
+      "sb": 15,
+      "avg": 0.266,
+      "ops": 0.781
+    },
+    "pitching": null,
+    "adp": 54,
+    "isKept": false
+  },
+  {
+    "id": "cj-abrams",
+    "name": "CJ Abrams",
+    "team": "WSH",
+    "positions": [
+      "SS"
+    ],
+    "batting": {
+      "r": 80,
+      "hr": 19,
+      "rbi": 61,
+      "sb": 29,
+      "avg": 0.255,
+      "ops": 0.746
+    },
+    "pitching": null,
+    "adp": 55,
+    "isKept": false
+  },
+  {
+    "id": "jarren-duran",
+    "name": "Jarren Duran",
+    "team": "BOS",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 74,
+      "hr": 15,
+      "rbi": 65,
+      "sb": 20,
+      "avg": 0.258,
+      "ops": 0.763
+    },
+    "pitching": null,
+    "adp": 56,
+    "isKept": true,
+    "keeperOwner": "Sam Lefkowitz"
+  },
+  {
+    "id": "riley-greene",
+    "name": "Riley Greene",
+    "team": "DET",
+    "positions": [
+      "OF",
+      "DH"
+    ],
+    "batting": {
+      "r": 73,
+      "hr": 25,
+      "rbi": 82,
+      "sb": 3,
+      "avg": 0.261,
+      "ops": 0.798
+    },
+    "pitching": null,
+    "adp": 57,
+    "isKept": false
+  },
+  {
+    "id": "william-contreras",
+    "name": "William Contreras",
+    "team": "MIL",
+    "positions": [
+      "C",
+      "DH"
+    ],
+    "batting": {
+      "r": 74,
+      "hr": 20,
+      "rbi": 74,
+      "sb": 6,
+      "avg": 0.27,
+      "ops": 0.804
+    },
+    "pitching": null,
+    "adp": 58,
+    "isKept": true,
+    "keeperOwner": "Sneider/Heame"
+  },
+  {
+    "id": "george-kirby",
+    "name": "George Kirby",
+    "team": "SEA",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.51,
+      "whip": 1.12,
+      "k9": 8.8,
+      "qs": 17,
+      "nsv": 0,
+      "w": 12
+    },
+    "adp": 59,
+    "isKept": false
+  },
+  {
+    "id": "jackson-merrill",
+    "name": "Jackson Merrill",
+    "team": "SD",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 71,
+      "hr": 22,
+      "rbi": 80,
+      "sb": 7,
+      "avg": 0.269,
+      "ops": 0.788
+    },
+    "pitching": null,
+    "adp": 60,
+    "isKept": false
+  },
+  {
+    "id": "freddy-peralta",
+    "name": "Freddy Peralta",
+    "team": "NYM",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.8,
+      "whip": 1.23,
+      "k9": 9.9,
+      "qs": 15,
+      "nsv": 0,
+      "w": 11
+    },
+    "adp": 61,
+    "isKept": true,
+    "keeperOwner": "Sneider/Heame"
+  },
+  {
+    "id": "cody-bellinger",
+    "name": "Cody Bellinger",
+    "team": "NYY",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 73,
+      "hr": 24,
+      "rbi": 80,
+      "sb": 9,
+      "avg": 0.264,
+      "ops": 0.785
+    },
+    "pitching": null,
+    "adp": 62,
+    "isKept": false
+  },
+  {
+    "id": "shea-langeliers",
+    "name": "Shea Langeliers",
+    "team": "ATH",
+    "positions": [
+      "C"
+    ],
+    "batting": {
+      "r": 68,
+      "hr": 27,
+      "rbi": 71,
+      "sb": 5,
+      "avg": 0.25,
+      "ops": 0.795
+    },
+    "pitching": null,
+    "adp": 63,
+    "isKept": true,
+    "keeperOwner": "Zack Davis"
+  },
+  {
+    "id": "joe-ryan",
+    "name": "Joe Ryan",
+    "team": "MIN",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.81,
+      "whip": 1.14,
+      "k9": 9.9,
+      "qs": 16,
+      "nsv": 0,
+      "w": 11
+    },
+    "adp": 64,
+    "isKept": false
+  },
+  {
+    "id": "vinnie-pasquantino",
+    "name": "Vinnie Pasquantino",
+    "team": "KC",
+    "positions": [
+      "1B",
+      "DH"
+    ],
+    "batting": {
+      "r": 73,
+      "hr": 25,
+      "rbi": 82,
+      "sb": 1,
+      "avg": 0.267,
+      "ops": 0.818
+    },
+    "pitching": null,
+    "adp": 65,
+    "isKept": false
+  },
+  {
+    "id": "maikel-garcia",
+    "name": "Maikel Garcia",
+    "team": "KC",
+    "positions": [
+      "2B",
+      "3B",
+      "SS",
+      "OF"
+    ],
+    "batting": {
+      "r": 82,
+      "hr": 13,
+      "rbi": 62,
+      "sb": 26,
+      "avg": 0.276,
+      "ops": 0.757
+    },
+    "pitching": null,
+    "adp": 66,
+    "isKept": false
+  },
+  {
+    "id": "jesus-luzardo",
+    "name": "Jesus Luzardo",
+    "team": "PHI",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.57,
+      "whip": 1.19,
+      "k9": 9.8,
+      "qs": 17,
+      "nsv": 0,
+      "w": 12
+    },
+    "adp": 67,
+    "isKept": false
+  },
+  {
+    "id": "byron-buxton",
+    "name": "Byron Buxton",
+    "team": "MIN",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 72,
+      "hr": 25,
+      "rbi": 63,
+      "sb": 14,
+      "avg": 0.247,
+      "ops": 0.802
+    },
+    "pitching": null,
+    "adp": 68,
+    "isKept": false
+  },
+  {
+    "id": "andres-munoz",
+    "name": "Andres Munoz",
+    "team": "SEA",
+    "positions": [
+      "RP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 2.93,
+      "whip": 1.17,
+      "k9": 11.4,
+      "qs": 0,
+      "nsv": 28,
+      "w": 4
+    },
+    "adp": 69,
+    "isKept": false
+  },
+  {
+    "id": "jhoan-duran",
+    "name": "Jhoan Duran",
+    "team": "PHI",
+    "positions": [
+      "RP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 2.78,
+      "whip": 1.13,
+      "k9": 10.7,
+      "qs": 0,
+      "nsv": 29,
+      "w": 4
+    },
+    "adp": 70,
+    "isKept": false
+  },
+  {
+    "id": "dylan-cease",
+    "name": "Dylan Cease",
+    "team": "TOR",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.54,
+      "whip": 1.21,
+      "k9": 10.6,
+      "qs": 17,
+      "nsv": 0,
+      "w": 12
+    },
+    "adp": 71,
+    "isKept": false
+  },
+  {
+    "id": "framber-valdez",
+    "name": "Framber Valdez",
+    "team": "DET",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.43,
+      "whip": 1.27,
+      "k9": 8.3,
+      "qs": 19,
+      "nsv": 0,
+      "w": 12
+    },
+    "adp": 72,
+    "isKept": false
+  },
+  {
+    "id": "geraldo-perdomo",
+    "name": "Geraldo Perdomo",
+    "team": "ARI",
+    "positions": [
+      "SS"
+    ],
+    "batting": {
+      "r": 71,
+      "hr": 12,
+      "rbi": 61,
+      "sb": 18,
+      "avg": 0.27,
+      "ops": 0.776
+    },
+    "pitching": null,
+    "adp": 73,
+    "isKept": false
+  },
+  {
+    "id": "cade-smith",
+    "name": "Cade Smith",
+    "team": "CLE",
+    "positions": [
+      "RP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 2.98,
+      "whip": 1.1,
+      "k9": 11.4,
+      "qs": 0,
+      "nsv": 30,
+      "w": 4
+    },
+    "adp": 74,
+    "isKept": false
+  },
+  {
+    "id": "hunter-goodman",
+    "name": "Hunter Goodman",
+    "team": "COL",
+    "positions": [
+      "C",
+      "DH"
+    ],
+    "batting": {
+      "r": 60,
+      "hr": 24,
+      "rbi": 71,
+      "sb": 2,
+      "avg": 0.255,
+      "ops": 0.792
+    },
+    "pitching": null,
+    "adp": 75,
+    "isKept": true,
+    "keeperOwner": "Sam Lefkowitz"
+  },
+  {
+    "id": "george-springer",
+    "name": "George Springer",
+    "team": "TOR",
+    "positions": [
+      "OF",
+      "DH"
+    ],
+    "batting": {
+      "r": 86,
+      "hr": 26,
+      "rbi": 73,
+      "sb": 13,
+      "avg": 0.259,
+      "ops": 0.795
+    },
+    "pitching": null,
+    "adp": 76,
+    "isKept": false
+  },
+  {
+    "id": "corey-seager",
+    "name": "Corey Seager",
+    "team": "TEX",
+    "positions": [
+      "SS"
+    ],
+    "batting": {
+      "r": 72,
+      "hr": 25,
+      "rbi": 75,
+      "sb": 3,
+      "avg": 0.276,
+      "ops": 0.858
+    },
+    "pitching": null,
+    "adp": 77,
+    "isKept": false
+  },
+  {
+    "id": "ben-rice",
+    "name": "Ben Rice",
+    "team": "NYY",
+    "positions": [
+      "C",
+      "1B",
+      "DH"
+    ],
+    "batting": {
+      "r": 62,
+      "hr": 23,
+      "rbi": 68,
+      "sb": 4,
+      "avg": 0.246,
+      "ops": 0.806
+    },
+    "pitching": null,
+    "adp": 78,
+    "isKept": false
+  },
+  {
+    "id": "randy-arozarena",
+    "name": "Randy Arozarena",
+    "team": "SEA",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 77,
+      "hr": 21,
+      "rbi": 74,
+      "sb": 21,
+      "avg": 0.233,
+      "ops": 0.732
+    },
+    "pitching": null,
+    "adp": 79,
+    "isKept": false
+  },
+  {
+    "id": "bo-bichette",
+    "name": "Bo Bichette",
+    "team": "NYM",
+    "positions": [
+      "SS"
+    ],
+    "batting": {
+      "r": 63,
+      "hr": 15,
+      "rbi": 64,
+      "sb": 5,
+      "avg": 0.288,
+      "ops": 0.786
+    },
+    "pitching": null,
+    "adp": 80,
+    "isKept": false
+  },
+  {
+    "id": "eugenio-suarez",
+    "name": "Eugenio Suarez",
+    "team": "CIN",
+    "positions": [
+      "3B"
+    ],
+    "batting": {
+      "r": 72,
+      "hr": 32,
+      "rbi": 85,
+      "sb": 3,
+      "avg": 0.234,
+      "ops": 0.782
+    },
+    "pitching": null,
+    "adp": 81,
+    "isKept": false
+  },
+  {
+    "id": "kyle-bradish",
+    "name": "Kyle Bradish",
+    "team": "BAL",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.71,
+      "whip": 1.24,
+      "k9": 9.5,
+      "qs": 14,
+      "nsv": 0,
+      "w": 10
+    },
+    "adp": 82,
+    "isKept": false
+  },
+  {
+    "id": "michael-harris-ii",
+    "name": "Michael Harris II",
+    "team": "ATL",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 60,
+      "hr": 19,
+      "rbi": 66,
+      "sb": 15,
+      "avg": 0.275,
+      "ops": 0.776
+    },
+    "pitching": null,
+    "adp": 83,
+    "isKept": false
+  },
+  {
+    "id": "tyler-soderstrom",
+    "name": "Tyler Soderstrom",
+    "team": "ATH",
+    "positions": [
+      "1B",
+      "OF"
+    ],
+    "batting": {
+      "r": 60,
+      "hr": 22,
+      "rbi": 67,
+      "sb": 5,
+      "avg": 0.259,
+      "ops": 0.805
+    },
+    "pitching": null,
+    "adp": 84,
+    "isKept": false
+  },
+  {
+    "id": "seiya-suzuki",
+    "name": "Seiya Suzuki",
+    "team": "CHC",
+    "positions": [
+      "OF",
+      "DH"
+    ],
+    "batting": {
+      "r": 68,
+      "hr": 22,
+      "rbi": 74,
+      "sb": 6,
+      "avg": 0.254,
+      "ops": 0.789
+    },
+    "pitching": null,
+    "adp": 85,
+    "isKept": false
+  },
+  {
+    "id": "eury-perez",
+    "name": "Eury Perez",
+    "team": "MIA",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 4,
+      "whip": 1.22,
+      "k9": 10,
+      "qs": 13,
+      "nsv": 0,
+      "w": 9
+    },
+    "adp": 86,
+    "isKept": true,
+    "keeperOwner": "Tyler Isbitts"
+  },
+  {
+    "id": "nico-hoerner",
+    "name": "Nico Hoerner",
+    "team": "CHC",
+    "positions": [
+      "2B"
+    ],
+    "batting": {
+      "r": 64,
+      "hr": 8,
+      "rbi": 57,
+      "sb": 24,
+      "avg": 0.285,
+      "ops": 0.731
+    },
+    "pitching": null,
+    "adp": 87,
+    "isKept": false
+  },
+  {
+    "id": "nick-pivetta",
+    "name": "Nick Pivetta",
+    "team": "SD",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.97,
+      "whip": 1.2,
+      "k9": 9.9,
+      "qs": 16,
+      "nsv": 0,
+      "w": 10
+    },
+    "adp": 88,
+    "isKept": false
+  },
+  {
+    "id": "oneil-cruz",
+    "name": "Oneil Cruz",
+    "team": "PIT",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 72,
+      "hr": 22,
+      "rbi": 60,
+      "sb": 27,
+      "avg": 0.238,
+      "ops": 0.763
+    },
+    "pitching": null,
+    "adp": 89,
+    "isKept": false
+  },
+  {
+    "id": "jeremy-pena",
+    "name": "Jeremy Pena",
+    "team": "HOU",
+    "positions": [
+      "SS"
+    ],
+    "batting": {
+      "r": 71,
+      "hr": 17,
+      "rbi": 65,
+      "sb": 15,
+      "avg": 0.273,
+      "ops": 0.756
+    },
+    "pitching": null,
+    "adp": 90,
+    "isKept": true,
+    "keeperOwner": "Stimmel/Weiss"
+  },
+  {
+    "id": "nolan-mclean",
+    "name": "Nolan McLean",
+    "team": "NYM",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.71,
+      "whip": 1.31,
+      "k9": 8.5,
+      "qs": 14,
+      "nsv": 0,
+      "w": 10
+    },
+    "adp": 91,
+    "isKept": true,
+    "keeperOwner": "Grant Goodman"
+  },
+  {
+    "id": "teoscar-hernandez",
+    "name": "Teoscar Hernandez",
+    "team": "LAD",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 69,
+      "hr": 26,
+      "rbi": 80,
+      "sb": 6,
+      "avg": 0.255,
+      "ops": 0.771
+    },
+    "pitching": null,
+    "adp": 92,
+    "isKept": false
+  },
+  {
+    "id": "aroldis-chapman",
+    "name": "Aroldis Chapman",
+    "team": "BOS",
+    "positions": [
+      "RP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.01,
+      "whip": 1.18,
+      "k9": 12.6,
+      "qs": 0,
+      "nsv": 31,
+      "w": 3
+    },
+    "adp": 93,
+    "isKept": false
+  },
+  {
+    "id": "christian-yelich",
+    "name": "Christian Yelich",
+    "team": "MIL",
+    "positions": [
+      "OF",
+      "DH"
+    ],
+    "batting": {
+      "r": 57,
+      "hr": 16,
+      "rbi": 59,
+      "sb": 12,
+      "avg": 0.258,
+      "ops": 0.769
+    },
+    "pitching": null,
+    "adp": 94,
+    "isKept": false
+  },
+  {
+    "id": "devin-williams",
+    "name": "Devin Williams",
+    "team": "NYM",
+    "positions": [
+      "RP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.11,
+      "whip": 1.19,
+      "k9": 11.5,
+      "qs": 0,
+      "nsv": 32,
+      "w": 4
+    },
+    "adp": 95,
+    "isKept": false
+  },
+  {
+    "id": "david-bednar",
+    "name": "David Bednar",
+    "team": "NYY",
+    "positions": [
+      "RP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.25,
+      "whip": 1.14,
+      "k9": 10.9,
+      "qs": 0,
+      "nsv": 33,
+      "w": 4
+    },
+    "adp": 96,
+    "isKept": false
+  },
+  {
+    "id": "michael-busch",
+    "name": "Michael Busch",
+    "team": "CHC",
+    "positions": [
+      "1B"
+    ],
+    "batting": {
+      "r": 72,
+      "hr": 24,
+      "rbi": 64,
+      "sb": 3,
+      "avg": 0.248,
+      "ops": 0.8
+    },
+    "pitching": null,
+    "adp": 97,
+    "isKept": false
+  },
+  {
+    "id": "trevor-story",
+    "name": "Trevor Story",
+    "team": "BOS",
+    "positions": [
+      "SS"
+    ],
+    "batting": {
+      "r": 53,
+      "hr": 15,
+      "rbi": 52,
+      "sb": 15,
+      "avg": 0.247,
+      "ops": 0.713
+    },
+    "pitching": null,
+    "adp": 98,
+    "isKept": false
+  },
+  {
+    "id": "alex-bregman",
+    "name": "Alex Bregman",
+    "team": "CHC",
+    "positions": [
+      "3B"
+    ],
+    "batting": {
+      "r": 85,
+      "hr": 23,
+      "rbi": 77,
+      "sb": 3,
+      "avg": 0.26,
+      "ops": 0.784
+    },
+    "pitching": null,
+    "adp": 99,
+    "isKept": false
+  },
+  {
+    "id": "kevin-gausman",
+    "name": "Kevin Gausman",
+    "team": "TOR",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.98,
+      "whip": 1.24,
+      "k9": 8.8,
+      "qs": 17,
+      "nsv": 0,
+      "w": 11
+    },
+    "adp": 100,
+    "isKept": true,
+    "keeperOwner": "Zack Davis"
+  },
+  {
+    "id": "jose-altuve",
+    "name": "Jose Altuve",
+    "team": "HOU",
+    "positions": [
+      "2B",
+      "OF",
+      "DH"
+    ],
+    "batting": {
+      "r": 80,
+      "hr": 20,
+      "rbi": 65,
+      "sb": 12,
+      "avg": 0.267,
+      "ops": 0.767
+    },
+    "pitching": null,
+    "adp": 101,
+    "isKept": false
+  },
+  {
+    "id": "willy-adames",
+    "name": "Willy Adames",
+    "team": "SF",
+    "positions": [
+      "SS"
+    ],
+    "batting": {
+      "r": 70,
+      "hr": 23,
+      "rbi": 72,
+      "sb": 11,
+      "avg": 0.233,
+      "ops": 0.739
+    },
+    "pitching": null,
+    "adp": 102,
+    "isKept": false
+  },
+  {
+    "id": "yandy-diaz",
+    "name": "Yandy Diaz",
+    "team": "TB",
+    "positions": [
+      "1B",
+      "DH"
+    ],
+    "batting": {
+      "r": 84,
+      "hr": 21,
+      "rbi": 67,
+      "sb": 3,
+      "avg": 0.287,
+      "ops": 0.82
+    },
+    "pitching": null,
+    "adp": 103,
+    "isKept": false
+  },
+  {
+    "id": "salvador-perez",
+    "name": "Salvador Perez",
+    "team": "KC",
+    "positions": [
+      "C",
+      "1B",
+      "DH"
+    ],
+    "batting": {
+      "r": 68,
+      "hr": 26,
+      "rbi": 83,
+      "sb": 0,
+      "avg": 0.256,
+      "ops": 0.758
+    },
+    "pitching": null,
+    "adp": 104,
+    "isKept": false
+  },
+  {
+    "id": "tyler-glasnow",
+    "name": "Tyler Glasnow",
+    "team": "LAD",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.61,
+      "whip": 1.22,
+      "k9": 10.5,
+      "qs": 13,
+      "nsv": 0,
+      "w": 10
+    },
+    "adp": 105,
+    "isKept": false
+  },
+  {
+    "id": "sonny-gray",
+    "name": "Sonny Gray",
+    "team": "BOS",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.69,
+      "whip": 1.21,
+      "k9": 9.4,
+      "qs": 17,
+      "nsv": 0,
+      "w": 12
+    },
+    "adp": 106,
+    "isKept": false
+  },
+  {
+    "id": "jo-adell",
+    "name": "Jo Adell",
+    "team": "LAA",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 56,
+      "hr": 26,
+      "rbi": 66,
+      "sb": 7,
+      "avg": 0.238,
+      "ops": 0.771
+    },
+    "pitching": null,
+    "adp": 107,
+    "isKept": false
+  },
+  {
+    "id": "drake-baldwin",
+    "name": "Drake Baldwin",
+    "team": "ATL",
+    "positions": [
+      "C"
+    ],
+    "batting": {
+      "r": 65,
+      "hr": 18,
+      "rbi": 61,
+      "sb": 1,
+      "avg": 0.268,
+      "ops": 0.789
+    },
+    "pitching": null,
+    "adp": 108,
+    "isKept": false
+  },
+  {
+    "id": "luis-robert-jr",
+    "name": "Luis Robert Jr.",
+    "team": "NYM",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 58,
+      "hr": 18,
+      "rbi": 60,
+      "sb": 26,
+      "avg": 0.232,
+      "ops": 0.697
+    },
+    "pitching": null,
+    "adp": 109,
+    "isKept": false
+  },
+  {
+    "id": "agustin-ramirez",
+    "name": "Agustin Ramirez",
+    "team": "MIA",
+    "positions": [
+      "C",
+      "DH"
+    ],
+    "batting": {
+      "r": 52,
+      "hr": 17,
+      "rbi": 56,
+      "sb": 10,
+      "avg": 0.25,
+      "ops": 0.755
+    },
+    "pitching": null,
+    "adp": 110,
+    "isKept": false
+  },
+  {
+    "id": "nick-lodolo",
+    "name": "Nick Lodolo",
+    "team": "CIN",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 4.03,
+      "whip": 1.22,
+      "k9": 9.2,
+      "qs": 13,
+      "nsv": 0,
+      "w": 9
+    },
+    "adp": 111,
+    "isKept": false
+  },
+  {
+    "id": "luke-keaschall",
+    "name": "Luke Keaschall",
+    "team": "MIN",
+    "positions": [
+      "2B"
+    ],
+    "batting": {
+      "r": 56,
+      "hr": 10,
+      "rbi": 53,
+      "sb": 20,
+      "avg": 0.267,
+      "ops": 0.75
+    },
+    "pitching": null,
+    "adp": 112,
+    "isKept": false
+  },
+  {
+    "id": "nathan-eovaldi",
+    "name": "Nathan Eovaldi",
+    "team": "TEX",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.65,
+      "whip": 1.2,
+      "k9": 8.8,
+      "qs": 17,
+      "nsv": 0,
+      "w": 11
+    },
+    "adp": 113,
+    "isKept": false
+  },
+  {
+    "id": "emmet-sheehan",
+    "name": "Emmet Sheehan",
+    "team": "LAD",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.95,
+      "whip": 1.22,
+      "k9": 10.1,
+      "qs": 11,
+      "nsv": 0,
+      "w": 10
+    },
+    "adp": 114,
+    "isKept": false
+  },
+  {
+    "id": "brandon-nimmo",
+    "name": "Brandon Nimmo",
+    "team": "TEX",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 85,
+      "hr": 23,
+      "rbi": 72,
+      "sb": 10,
+      "avg": 0.256,
+      "ops": 0.766
+    },
+    "pitching": null,
+    "adp": 115,
+    "isKept": false
+  },
+  {
+    "id": "spencer-strider",
+    "name": "Spencer Strider",
+    "team": "ATL",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.82,
+      "whip": 1.23,
+      "k9": 10.5,
+      "qs": 15,
+      "nsv": 0,
+      "w": 10
+    },
+    "adp": 116,
+    "isKept": true,
+    "keeperOwner": "Matt LaPoff"
+  },
+  {
+    "id": "brandon-woodruff",
+    "name": "Brandon Woodruff",
+    "team": "MIL",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.86,
+      "whip": 1.17,
+      "k9": 9.5,
+      "qs": 16,
+      "nsv": 0,
+      "w": 10
+    },
+    "adp": 117,
+    "isKept": false
+  },
+  {
+    "id": "will-smith",
+    "name": "Will Smith",
+    "team": "LAD",
+    "positions": [
+      "C"
+    ],
+    "batting": {
+      "r": 61,
+      "hr": 18,
+      "rbi": 63,
+      "sb": 3,
+      "avg": 0.254,
+      "ops": 0.79
+    },
+    "pitching": null,
+    "adp": 118,
+    "isKept": false
+  },
+  {
+    "id": "andy-pages",
+    "name": "Andy Pages",
+    "team": "LAD",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 61,
+      "hr": 21,
+      "rbi": 67,
+      "sb": 9,
+      "avg": 0.255,
+      "ops": 0.758
+    },
+    "pitching": null,
+    "adp": 119,
+    "isKept": false
+  },
+  {
+    "id": "jacob-misiorowski",
+    "name": "Jacob Misiorowski",
+    "team": "MIL",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 4.11,
+      "whip": 1.34,
+      "k9": 9.8,
+      "qs": 11,
+      "nsv": 0,
+      "w": 8
+    },
+    "adp": 120,
+    "isKept": true,
+    "keeperOwner": "Alex Lefkowitz"
+  },
+  {
+    "id": "chase-burns",
+    "name": "Chase Burns",
+    "team": "CIN",
+    "positions": [
+      "SP",
+      "RP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.71,
+      "whip": 1.19,
+      "k9": 10.2,
+      "qs": 9,
+      "nsv": 0,
+      "w": 7
+    },
+    "adp": 121,
+    "isKept": false
+  },
+  {
+    "id": "michael-king",
+    "name": "Michael King",
+    "team": "SD",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.8,
+      "whip": 1.25,
+      "k9": 9.4,
+      "qs": 15,
+      "nsv": 0,
+      "w": 10
+    },
+    "adp": 122,
+    "isKept": false
+  },
+  {
+    "id": "taylor-ward",
+    "name": "Taylor Ward",
+    "team": "BAL",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 80,
+      "hr": 25,
+      "rbi": 77,
+      "sb": 5,
+      "avg": 0.244,
+      "ops": 0.765
+    },
+    "pitching": null,
+    "adp": 123,
+    "isKept": false
+  },
+  {
+    "id": "ozzie-albies",
+    "name": "Ozzie Albies",
+    "team": "ATL",
+    "positions": [
+      "2B"
+    ],
+    "batting": {
+      "r": 64,
+      "hr": 17,
+      "rbi": 65,
+      "sb": 10,
+      "avg": 0.258,
+      "ops": 0.74
+    },
+    "pitching": null,
+    "adp": 124,
+    "isKept": false
+  },
+  {
+    "id": "zack-wheeler",
+    "name": "Zack Wheeler",
+    "team": "PHI",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.2,
+      "whip": 1.09,
+      "k9": 10.3,
+      "qs": 16,
+      "nsv": 0,
+      "w": 11
+    },
+    "adp": 125,
+    "isKept": false
+  },
+  {
+    "id": "ryan-pepiot",
+    "name": "Ryan Pepiot",
+    "team": "TB",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 4.02,
+      "whip": 1.26,
+      "k9": 9.5,
+      "qs": 15,
+      "nsv": 0,
+      "w": 10
+    },
+    "adp": 126,
+    "isKept": false
+  },
+  {
+    "id": "ryan-helsley",
+    "name": "Ryan Helsley",
+    "team": "BAL",
+    "positions": [
+      "RP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.48,
+      "whip": 1.22,
+      "k9": 10.7,
+      "qs": 0,
+      "nsv": 26,
+      "w": 3
+    },
+    "adp": 127,
+    "isKept": false
+  },
+  {
+    "id": "lawrence-butler",
+    "name": "Lawrence Butler",
+    "team": "ATH",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 60,
+      "hr": 19,
+      "rbi": 57,
+      "sb": 16,
+      "avg": 0.245,
+      "ops": 0.747
+    },
+    "pitching": null,
+    "adp": 128,
+    "isKept": false
+  },
+  {
+    "id": "blake-snell",
+    "name": "Blake Snell",
+    "team": "LAD",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.54,
+      "whip": 1.25,
+      "k9": 11,
+      "qs": 14,
+      "nsv": 0,
+      "w": 10
+    },
+    "adp": 129,
+    "isKept": false
+  },
+  {
+    "id": "cam-schlittler",
+    "name": "Cam Schlittler",
+    "team": "NYY",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 4.01,
+      "whip": 1.31,
+      "k9": 8.6,
+      "qs": 11,
+      "nsv": 0,
+      "w": 8
+    },
+    "adp": 130,
+    "isKept": false
+  },
+  {
+    "id": "jakob-marsee",
+    "name": "Jakob Marsee",
+    "team": "MIA",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 70,
+      "hr": 12,
+      "rbi": 46,
+      "sb": 33,
+      "avg": 0.232,
+      "ops": 0.704
+    },
+    "pitching": null,
+    "adp": 131,
+    "isKept": false
+  },
+  {
+    "id": "ceddanne-rafaela",
+    "name": "Ceddanne Rafaela",
+    "team": "BOS",
+    "positions": [
+      "2B",
+      "OF"
+    ],
+    "batting": {
+      "r": 57,
+      "hr": 15,
+      "rbi": 61,
+      "sb": 17,
+      "avg": 0.257,
+      "ops": 0.725
+    },
+    "pitching": null,
+    "adp": 132,
+    "isKept": false
+  },
+  {
+    "id": "kyle-stowers",
+    "name": "Kyle Stowers",
+    "team": "MIA",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 52,
+      "hr": 18,
+      "rbi": 55,
+      "sb": 3,
+      "avg": 0.241,
+      "ops": 0.76
+    },
+    "pitching": null,
+    "adp": 133,
+    "isKept": false
+  },
+  {
+    "id": "raisel-iglesias",
+    "name": "Raisel Iglesias",
+    "team": "ATL",
+    "positions": [
+      "RP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.71,
+      "whip": 1.2,
+      "k9": 9.7,
+      "qs": 0,
+      "nsv": 26,
+      "w": 3
+    },
+    "adp": 134,
+    "isKept": false
+  },
+  {
+    "id": "matt-chapman",
+    "name": "Matt Chapman",
+    "team": "SF",
+    "positions": [
+      "3B"
+    ],
+    "batting": {
+      "r": 76,
+      "hr": 22,
+      "rbi": 72,
+      "sb": 9,
+      "avg": 0.238,
+      "ops": 0.757
+    },
+    "pitching": null,
+    "adp": 135,
+    "isKept": false
+  },
+  {
+    "id": "sandy-alcantara",
+    "name": "Sandy Alcantara",
+    "team": "MIA",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 4.16,
+      "whip": 1.32,
+      "k9": 7.6,
+      "qs": 16,
+      "nsv": 0,
+      "w": 10
+    },
+    "adp": 136,
+    "isKept": false
+  },
+  {
+    "id": "daniel-palencia",
+    "name": "Daniel Palencia",
+    "team": "CHC",
+    "positions": [
+      "RP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.61,
+      "whip": 1.26,
+      "k9": 10.1,
+      "qs": 0,
+      "nsv": 32,
+      "w": 4
+    },
+    "adp": 137,
+    "isKept": false
+  },
+  {
+    "id": "luis-castillo",
+    "name": "Luis Castillo",
+    "team": "SEA",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.86,
+      "whip": 1.22,
+      "k9": 8.5,
+      "qs": 16,
+      "nsv": 0,
+      "w": 11
+    },
+    "adp": 138,
+    "isKept": false
+  },
+  {
+    "id": "dansby-swanson",
+    "name": "Dansby Swanson",
+    "team": "CHC",
+    "positions": [
+      "SS"
+    ],
+    "batting": {
+      "r": 60,
+      "hr": 17,
+      "rbi": 59,
+      "sb": 13,
+      "avg": 0.241,
+      "ops": 0.706
+    },
+    "pitching": null,
+    "adp": 139,
+    "isKept": false
+  },
+  {
+    "id": "drew-rasmussen",
+    "name": "Drew Rasmussen",
+    "team": "TB",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.72,
+      "whip": 1.22,
+      "k9": 8.5,
+      "qs": 15,
+      "nsv": 0,
+      "w": 11
+    },
+    "adp": 140,
+    "isKept": false
+  },
+  {
+    "id": "jeff-hoffman",
+    "name": "Jeff Hoffman",
+    "team": "TOR",
+    "positions": [
+      "RP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.4,
+      "whip": 1.17,
+      "k9": 10.9,
+      "qs": 0,
+      "nsv": 26,
+      "w": 3
+    },
+    "adp": 141,
+    "isKept": false
+  },
+  {
+    "id": "steven-kwan",
+    "name": "Steven Kwan",
+    "team": "CLE",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 64,
+      "hr": 9,
+      "rbi": 42,
+      "sb": 14,
+      "avg": 0.278,
+      "ops": 0.746
+    },
+    "pitching": null,
+    "adp": 142,
+    "isKept": false
+  },
+  {
+    "id": "jacob-wilson",
+    "name": "Jacob Wilson",
+    "team": "ATH",
+    "positions": [
+      "SS"
+    ],
+    "batting": {
+      "r": 58,
+      "hr": 11,
+      "rbi": 58,
+      "sb": 5,
+      "avg": 0.301,
+      "ops": 0.794
+    },
+    "pitching": null,
+    "adp": 143,
+    "isKept": true,
+    "keeperOwner": "Madey/Frazen"
+  },
+  {
+    "id": "ian-happ",
+    "name": "Ian Happ",
+    "team": "CHC",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 79,
+      "hr": 22,
+      "rbi": 74,
+      "sb": 8,
+      "avg": 0.241,
+      "ops": 0.759
+    },
+    "pitching": null,
+    "adp": 144,
+    "isKept": false
+  },
+  {
+    "id": "ranger-suarez",
+    "name": "Ranger Suarez",
+    "team": "BOS",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.74,
+      "whip": 1.28,
+      "k9": 8,
+      "qs": 16,
+      "nsv": 0,
+      "w": 11
+    },
+    "adp": 145,
+    "isKept": false
+  },
+  {
+    "id": "willson-contreras",
+    "name": "Willson Contreras",
+    "team": "BOS",
+    "positions": [
+      "1B"
+    ],
+    "batting": {
+      "r": 58,
+      "hr": 19,
+      "rbi": 62,
+      "sb": 4,
+      "avg": 0.248,
+      "ops": 0.785
+    },
+    "pitching": null,
+    "adp": 146,
+    "isKept": false
+  },
+  {
+    "id": "robbie-ray",
+    "name": "Robbie Ray",
+    "team": "SF",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 4.19,
+      "whip": 1.31,
+      "k9": 9.4,
+      "qs": 15,
+      "nsv": 0,
+      "w": 10
+    },
+    "adp": 147,
+    "isKept": false
+  },
+  {
+    "id": "mackenzie-gore",
+    "name": "MacKenzie Gore",
+    "team": "TEX",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.82,
+      "whip": 1.26,
+      "k9": 10.2,
+      "qs": 14,
+      "nsv": 0,
+      "w": 10
+    },
+    "adp": 148,
+    "isKept": false
+  },
+  {
+    "id": "trevor-rogers",
+    "name": "Trevor Rogers",
+    "team": "BAL",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 4.2,
+      "whip": 1.35,
+      "k9": 7.7,
+      "qs": 13,
+      "nsv": 0,
+      "w": 10
+    },
+    "adp": 149,
+    "isKept": false
+  },
+  {
+    "id": "yainer-diaz",
+    "name": "Yainer Diaz",
+    "team": "HOU",
+    "positions": [
+      "C",
+      "DH"
+    ],
+    "batting": {
+      "r": 57,
+      "hr": 19,
+      "rbi": 65,
+      "sb": 2,
+      "avg": 0.273,
+      "ops": 0.763
+    },
+    "pitching": null,
+    "adp": 150,
+    "isKept": false
+  },
+  {
+    "id": "brenton-doyle",
+    "name": "Brenton Doyle",
+    "team": "COL",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 55,
+      "hr": 16,
+      "rbi": 56,
+      "sb": 17,
+      "avg": 0.245,
+      "ops": 0.705
+    },
+    "pitching": null,
+    "adp": 151,
+    "isKept": false
+  },
+  {
+    "id": "bubba-chandler",
+    "name": "Bubba Chandler",
+    "team": "PIT",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 4.3,
+      "whip": 1.36,
+      "k9": 8.2,
+      "qs": 12,
+      "nsv": 0,
+      "w": 9
+    },
+    "adp": 152,
+    "isKept": false
+  },
+  {
+    "id": "shota-imanaga",
+    "name": "Shota Imanaga",
+    "team": "CHC",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 4.11,
+      "whip": 1.2,
+      "k9": 8.2,
+      "qs": 13,
+      "nsv": 0,
+      "w": 9
+    },
+    "adp": 153,
+    "isKept": false
+  },
+  {
+    "id": "tanner-bibee",
+    "name": "Tanner Bibee",
+    "team": "CLE",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 4.1,
+      "whip": 1.27,
+      "k9": 8.5,
+      "qs": 16,
+      "nsv": 0,
+      "w": 10
+    },
+    "adp": 154,
+    "isKept": false
+  },
+  {
+    "id": "gavin-williams",
+    "name": "Gavin Williams",
+    "team": "CLE",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 4.09,
+      "whip": 1.35,
+      "k9": 9.2,
+      "qs": 15,
+      "nsv": 0,
+      "w": 10
+    },
+    "adp": 155,
+    "isKept": false
+  },
+  {
+    "id": "josh-hader",
+    "name": "Josh Hader",
+    "team": "HOU",
+    "positions": [
+      "RP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.29,
+      "whip": 1.12,
+      "k9": 12.3,
+      "qs": 0,
+      "nsv": 29,
+      "w": 3
+    },
+    "adp": 156,
+    "isKept": false
+  },
+  {
+    "id": "pete-fairbanks",
+    "name": "Pete Fairbanks",
+    "team": "MIA",
+    "positions": [
+      "RP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.57,
+      "whip": 1.23,
+      "k9": 9.5,
+      "qs": 0,
+      "nsv": 27,
+      "w": 3
+    },
+    "adp": 157,
+    "isKept": false
+  },
+  {
+    "id": "ivan-herrera",
+    "name": "Ivan Herrera",
+    "team": "STL",
+    "positions": [
+      "C",
+      "DH"
+    ],
+    "batting": {
+      "r": 59,
+      "hr": 16,
+      "rbi": 60,
+      "sb": 7,
+      "avg": 0.273,
+      "ops": 0.803
+    },
+    "pitching": null,
+    "adp": 158,
+    "isKept": false
+  },
+  {
+    "id": "trey-yesavage",
+    "name": "Trey Yesavage",
+    "team": "TOR",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.72,
+      "whip": 1.26,
+      "k9": 10,
+      "qs": 10,
+      "nsv": 0,
+      "w": 8
+    },
+    "adp": 159,
+    "isKept": false
+  },
+  {
+    "id": "matt-mclain",
+    "name": "Matt McLain",
+    "team": "CIN",
+    "positions": [
+      "2B"
+    ],
+    "batting": {
+      "r": 60,
+      "hr": 15,
+      "rbi": 51,
+      "sb": 13,
+      "avg": 0.234,
+      "ops": 0.706
+    },
+    "pitching": null,
+    "adp": 160,
+    "isKept": false
+  },
+  {
+    "id": "brandon-lowe",
+    "name": "Brandon Lowe",
+    "team": "PIT",
+    "positions": [
+      "2B"
+    ],
+    "batting": {
+      "r": 59,
+      "hr": 22,
+      "rbi": 65,
+      "sb": 4,
+      "avg": 0.243,
+      "ops": 0.754
+    },
+    "pitching": null,
+    "adp": 161,
+    "isKept": false
+  },
+  {
+    "id": "spencer-torkelson",
+    "name": "Spencer Torkelson",
+    "team": "DET",
+    "positions": [
+      "1B"
+    ],
+    "batting": {
+      "r": 67,
+      "hr": 23,
+      "rbi": 72,
+      "sb": 2,
+      "avg": 0.228,
+      "ops": 0.745
+    },
+    "pitching": null,
+    "adp": 162,
+    "isKept": false
+  },
+  {
+    "id": "xavier-edwards",
+    "name": "Xavier Edwards",
+    "team": "MIA",
+    "positions": [
+      "2B",
+      "SS"
+    ],
+    "batting": {
+      "r": 59,
+      "hr": 4,
+      "rbi": 39,
+      "sb": 22,
+      "avg": 0.286,
+      "ops": 0.728
+    },
+    "pitching": null,
+    "adp": 163,
+    "isKept": false
+  },
+  {
+    "id": "bryan-reynolds",
+    "name": "Bryan Reynolds",
+    "team": "PIT",
+    "positions": [
+      "OF",
+      "DH"
+    ],
+    "batting": {
+      "r": 72,
+      "hr": 20,
+      "rbi": 74,
+      "sb": 5,
+      "avg": 0.254,
+      "ops": 0.748
+    },
+    "pitching": null,
+    "adp": 164,
+    "isKept": false
+  },
+  {
+    "id": "noelvi-marte",
+    "name": "Noelvi Marte",
+    "team": "CIN",
+    "positions": [
+      "3B",
+      "OF"
+    ],
+    "batting": {
+      "r": 44,
+      "hr": 13,
+      "rbi": 46,
+      "sb": 10,
+      "avg": 0.254,
+      "ops": 0.732
+    },
+    "pitching": null,
+    "adp": 165,
+    "isKept": false
+  },
+  {
+    "id": "adley-rutschman",
+    "name": "Adley Rutschman",
+    "team": "BAL",
+    "positions": [
+      "C"
+    ],
+    "batting": {
+      "r": 68,
+      "hr": 17,
+      "rbi": 67,
+      "sb": 1,
+      "avg": 0.256,
+      "ops": 0.764
+    },
+    "pitching": null,
+    "adp": 166,
+    "isKept": false
+  },
+  {
+    "id": "edward-cabrera",
+    "name": "Edward Cabrera",
+    "team": "CHC",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.96,
+      "whip": 1.3,
+      "k9": 9.6,
+      "qs": 12,
+      "nsv": 0,
+      "w": 9
+    },
+    "adp": 167,
+    "isKept": false
+  },
+  {
+    "id": "emilio-pagan",
+    "name": "Emilio Pagan",
+    "team": "CIN",
+    "positions": [
+      "RP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 4.14,
+      "whip": 1.25,
+      "k9": 9.9,
+      "qs": 0,
+      "nsv": 27,
+      "w": 3
+    },
+    "adp": 168,
+    "isKept": false
+  },
+  {
+    "id": "jonathan-aranda",
+    "name": "Jonathan Aranda",
+    "team": "TB",
+    "positions": [
+      "1B"
+    ],
+    "batting": {
+      "r": 60,
+      "hr": 16,
+      "rbi": 55,
+      "sb": 2,
+      "avg": 0.257,
+      "ops": 0.775
+    },
+    "pitching": null,
+    "adp": 169,
+    "isKept": false
+  },
+  {
+    "id": "carlos-rodon",
+    "name": "Carlos Rodon",
+    "team": "NYY",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.96,
+      "whip": 1.25,
+      "k9": 9.8,
+      "qs": 14,
+      "nsv": 0,
+      "w": 10
+    },
+    "adp": 170,
+    "isKept": false
+  },
+  {
+    "id": "alec-burleson",
+    "name": "Alec Burleson",
+    "team": "STL",
+    "positions": [
+      "1B",
+      "OF",
+      "DH"
+    ],
+    "batting": {
+      "r": 66,
+      "hr": 20,
+      "rbi": 73,
+      "sb": 6,
+      "avg": 0.278,
+      "ops": 0.789
+    },
+    "pitching": null,
+    "adp": 171,
+    "isKept": false
+  },
+  {
+    "id": "tatsuya-imai",
+    "name": "Tatsuya Imai",
+    "team": "HOU",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 4.37,
+      "whip": 1.39,
+      "k9": 8.5,
+      "qs": 12,
+      "nsv": 0,
+      "w": 9
+    },
+    "adp": 172,
+    "isKept": false
+  },
+  {
+    "id": "christian-walker",
+    "name": "Christian Walker",
+    "team": "HOU",
+    "positions": [
+      "1B"
+    ],
+    "batting": {
+      "r": 60,
+      "hr": 23,
+      "rbi": 68,
+      "sb": 3,
+      "avg": 0.23,
+      "ops": 0.734
+    },
+    "pitching": null,
+    "adp": 173,
+    "isKept": false
+  },
+  {
+    "id": "carlos-estevez",
+    "name": "Carlos Estevez",
+    "team": "KC",
+    "positions": [
+      "RP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 4.4,
+      "whip": 1.34,
+      "k9": 8.4,
+      "qs": 0,
+      "nsv": 28,
+      "w": 3
+    },
+    "adp": 174,
+    "isKept": false
+  },
+  {
+    "id": "jack-flaherty",
+    "name": "Jack Flaherty",
+    "team": "DET",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.89,
+      "whip": 1.26,
+      "k9": 9.7,
+      "qs": 14,
+      "nsv": 0,
+      "w": 10
+    },
+    "adp": 175,
+    "isKept": false
+  },
+  {
+    "id": "kenley-jansen",
+    "name": "Kenley Jansen",
+    "team": "DET",
+    "positions": [
+      "RP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 4.06,
+      "whip": 1.24,
+      "k9": 9.4,
+      "qs": 0,
+      "nsv": 23,
+      "w": 3
+    },
+    "adp": 176,
+    "isKept": false
+  },
+  {
+    "id": "cade-horton",
+    "name": "Cade Horton",
+    "team": "CHC",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 4.34,
+      "whip": 1.33,
+      "k9": 7.9,
+      "qs": 10,
+      "nsv": 0,
+      "w": 8
+    },
+    "adp": 177,
+    "isKept": false
+  },
+  {
+    "id": "ezequiel-tovar",
+    "name": "Ezequiel Tovar",
+    "team": "COL",
+    "positions": [
+      "SS"
+    ],
+    "batting": {
+      "r": 72,
+      "hr": 20,
+      "rbi": 75,
+      "sb": 9,
+      "avg": 0.263,
+      "ops": 0.745
+    },
+    "pitching": null,
+    "adp": 178,
+    "isKept": false
+  },
+  {
+    "id": "aaron-nola",
+    "name": "Aaron Nola",
+    "team": "PHI",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.98,
+      "whip": 1.22,
+      "k9": 8.7,
+      "qs": 16,
+      "nsv": 0,
+      "w": 11
+    },
+    "adp": 179,
+    "isKept": false
+  },
+  {
+    "id": "mike-trout",
+    "name": "Mike Trout",
+    "team": "LAA",
+    "positions": [
+      "OF",
+      "DH"
+    ],
+    "batting": {
+      "r": 56,
+      "hr": 19,
+      "rbi": 51,
+      "sb": 3,
+      "avg": 0.232,
+      "ops": 0.784
+    },
+    "pitching": null,
+    "adp": 180,
+    "isKept": false
+  },
+  {
+    "id": "heliot-ramos",
+    "name": "Heliot Ramos",
+    "team": "SF",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 64,
+      "hr": 19,
+      "rbi": 66,
+      "sb": 6,
+      "avg": 0.256,
+      "ops": 0.752
+    },
+    "pitching": null,
+    "adp": 181,
+    "isKept": false
+  },
+  {
+    "id": "sal-stewart",
+    "name": "Sal Stewart",
+    "team": "CIN",
+    "positions": [
+      "1B"
+    ],
+    "batting": {
+      "r": 50,
+      "hr": 15,
+      "rbi": 54,
+      "sb": 6,
+      "avg": 0.271,
+      "ops": 0.789
+    },
+    "pitching": null,
+    "adp": 182,
+    "isKept": false
+  },
+  {
+    "id": "kris-bubic",
+    "name": "Kris Bubic",
+    "team": "KC",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.91,
+      "whip": 1.3,
+      "k9": 8.5,
+      "qs": 12,
+      "nsv": 0,
+      "w": 9
+    },
+    "adp": 183,
+    "isKept": false
+  },
+  {
+    "id": "ryan-walker",
+    "name": "Ryan Walker",
+    "team": "SF",
+    "positions": [
+      "RP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.29,
+      "whip": 1.19,
+      "k9": 9.7,
+      "qs": 0,
+      "nsv": 32,
+      "w": 3
+    },
+    "adp": 184,
+    "isKept": false
+  },
+  {
+    "id": "marcus-semien",
+    "name": "Marcus Semien",
+    "team": "NYM",
+    "positions": [
+      "2B"
+    ],
+    "batting": {
+      "r": 72,
+      "hr": 20,
+      "rbi": 70,
+      "sb": 9,
+      "avg": 0.241,
+      "ops": 0.713
+    },
+    "pitching": null,
+    "adp": 185,
+    "isKept": false
+  },
+  {
+    "id": "zac-gallen",
+    "name": "Zac Gallen",
+    "team": "ARI",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 4.24,
+      "whip": 1.33,
+      "k9": 8.5,
+      "qs": 16,
+      "nsv": 0,
+      "w": 11
+    },
+    "adp": 186,
+    "isKept": false
+  },
+  {
+    "id": "daylen-lile",
+    "name": "Daylen Lile",
+    "team": "WSH",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 45,
+      "hr": 10,
+      "rbi": 46,
+      "sb": 11,
+      "avg": 0.271,
+      "ops": 0.756
+    },
+    "pitching": null,
+    "adp": 187,
+    "isKept": false
+  },
+  {
+    "id": "royce-lewis",
+    "name": "Royce Lewis",
+    "team": "MIN",
+    "positions": [
+      "3B"
+    ],
+    "batting": {
+      "r": 57,
+      "hr": 20,
+      "rbi": 63,
+      "sb": 9,
+      "avg": 0.251,
+      "ops": 0.757
+    },
+    "pitching": null,
+    "adp": 188,
+    "isKept": false
+  },
+  {
+    "id": "jac-caglianone",
+    "name": "Jac Caglianone",
+    "team": "KC",
+    "positions": [
+      "1B",
+      "OF"
+    ],
+    "batting": {
+      "r": 44,
+      "hr": 15,
+      "rbi": 49,
+      "sb": 2,
+      "avg": 0.256,
+      "ops": 0.774
+    },
+    "pitching": null,
+    "adp": 189,
+    "isKept": true,
+    "keeperOwner": "Grant Goodman"
+  },
+  {
+    "id": "addison-barger",
+    "name": "Addison Barger",
+    "team": "TOR",
+    "positions": [
+      "3B",
+      "OF"
+    ],
+    "batting": {
+      "r": 53,
+      "hr": 17,
+      "rbi": 59,
+      "sb": 3,
+      "avg": 0.249,
+      "ops": 0.758
+    },
+    "pitching": null,
+    "adp": 190,
+    "isKept": false
+  },
+  {
+    "id": "bryson-stott",
+    "name": "Bryson Stott",
+    "team": "PHI",
+    "positions": [
+      "2B",
+      "SS"
+    ],
+    "batting": {
+      "r": 59,
+      "hr": 12,
+      "rbi": 56,
+      "sb": 21,
+      "avg": 0.257,
+      "ops": 0.721
+    },
+    "pitching": null,
+    "adp": 191,
+    "isKept": false
+  },
+  {
+    "id": "chandler-simpson",
+    "name": "Chandler Simpson",
+    "team": "TB",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 38,
+      "hr": 2,
+      "rbi": 30,
+      "sb": 32,
+      "avg": 0.283,
+      "ops": 0.683
+    },
+    "pitching": null,
+    "adp": 192,
+    "isKept": false
+  },
+  {
+    "id": "matthew-boyd",
+    "name": "Matthew Boyd",
+    "team": "CHC",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.94,
+      "whip": 1.25,
+      "k9": 8.1,
+      "qs": 16,
+      "nsv": 0,
+      "w": 11
+    },
+    "adp": 193,
+    "isKept": false
+  },
+  {
+    "id": "shane-mcclanahan",
+    "name": "Shane McClanahan",
+    "team": "TB",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.35,
+      "whip": 1.16,
+      "k9": 10,
+      "qs": 14,
+      "nsv": 0,
+      "w": 9
+    },
+    "adp": 194,
+    "isKept": false
+  },
+  {
+    "id": "trevor-megill",
+    "name": "Trevor Megill",
+    "team": "MIL",
+    "positions": [
+      "RP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.43,
+      "whip": 1.17,
+      "k9": 11.1,
+      "qs": 0,
+      "nsv": 11,
+      "w": 3
+    },
+    "adp": 195,
+    "isKept": false
+  },
+  {
+    "id": "daulton-varsho",
+    "name": "Daulton Varsho",
+    "team": "TOR",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 66,
+      "hr": 23,
+      "rbi": 65,
+      "sb": 7,
+      "avg": 0.226,
+      "ops": 0.723
+    },
+    "pitching": null,
+    "adp": 196,
+    "isKept": false
+  },
+  {
+    "id": "shane-baz",
+    "name": "Shane Baz",
+    "team": "BAL",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 4.29,
+      "whip": 1.33,
+      "k9": 8.8,
+      "qs": 13,
+      "nsv": 0,
+      "w": 9
+    },
+    "adp": 197,
+    "isKept": false
+  },
+  {
+    "id": "jorge-polanco",
+    "name": "Jorge Polanco",
+    "team": "NYM",
+    "positions": [
+      "2B",
+      "3B",
+      "DH"
+    ],
+    "batting": {
+      "r": 58,
+      "hr": 20,
+      "rbi": 63,
+      "sb": 5,
+      "avg": 0.248,
+      "ops": 0.765
+    },
+    "pitching": null,
+    "adp": 198,
+    "isKept": false
+  },
+  {
+    "id": "konnor-griffin",
+    "name": "Konnor Griffin",
+    "team": "PIT",
+    "positions": [
+      "SS",
+      "OF"
+    ],
+    "batting": {
+      "r": 41,
+      "hr": 9,
+      "rbi": 39,
+      "sb": 15,
+      "avg": 0.259,
+      "ops": 0.714
+    },
+    "pitching": null,
+    "adp": 199,
+    "isKept": false
+  },
+  {
+    "id": "dylan-crews",
+    "name": "Dylan Crews",
+    "team": "WSH",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 41,
+      "hr": 12,
+      "rbi": 41,
+      "sb": 16,
+      "avg": 0.243,
+      "ops": 0.716
+    },
+    "pitching": null,
+    "adp": 200,
+    "isKept": false
+  },
+  {
+    "id": "munetaka-murakami",
+    "name": "Munetaka Murakami",
+    "team": "CWS",
+    "positions": [
+      "1B",
+      "3B"
+    ],
+    "batting": {
+      "r": 75,
+      "hr": 32,
+      "rbi": 85,
+      "sb": 8,
+      "avg": 0.23,
+      "ops": 0.789
+    },
+    "pitching": null,
+    "adp": 201,
+    "isKept": false
+  },
+  {
+    "id": "wilyer-abreu",
+    "name": "Wilyer Abreu",
+    "team": "BOS",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 55,
+      "hr": 18,
+      "rbi": 57,
+      "sb": 7,
+      "avg": 0.25,
+      "ops": 0.789
+    },
+    "pitching": null,
+    "adp": 202,
+    "isKept": false
+  },
+  {
+    "id": "andrew-abbott",
+    "name": "Andrew Abbott",
+    "team": "CIN",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 4.54,
+      "whip": 1.31,
+      "k9": 8.3,
+      "qs": 13,
+      "nsv": 0,
+      "w": 9
+    },
+    "adp": 203,
+    "isKept": false
+  },
+  {
+    "id": "gleyber-torres",
+    "name": "Gleyber Torres",
+    "team": "DET",
+    "positions": [
+      "2B"
+    ],
+    "batting": {
+      "r": 80,
+      "hr": 18,
+      "rbi": 66,
+      "sb": 5,
+      "avg": 0.26,
+      "ops": 0.752
+    },
+    "pitching": null,
+    "adp": 204,
+    "isKept": false
+  },
+  {
+    "id": "alejandro-kirk",
+    "name": "Alejandro Kirk",
+    "team": "TOR",
+    "positions": [
+      "C"
+    ],
+    "batting": {
+      "r": 54,
+      "hr": 14,
+      "rbi": 56,
+      "sb": 1,
+      "avg": 0.274,
+      "ops": 0.786
+    },
+    "pitching": null,
+    "adp": 205,
+    "isKept": false
+  },
+  {
+    "id": "kazuma-okamoto",
+    "name": "Kazuma Okamoto",
+    "team": "TOR",
+    "positions": [
+      "1B",
+      "3B"
+    ],
+    "batting": {
+      "r": 61,
+      "hr": 22,
+      "rbi": 68,
+      "sb": 3,
+      "avg": 0.248,
+      "ops": 0.765
+    },
+    "pitching": null,
+    "adp": 206,
+    "isKept": false
+  },
+  {
+    "id": "dennis-santana",
+    "name": "Dennis Santana",
+    "team": "PIT",
+    "positions": [
+      "RP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 4.03,
+      "whip": 1.32,
+      "k9": 8.4,
+      "qs": 0,
+      "nsv": 26,
+      "w": 3
+    },
+    "adp": 207,
+    "isKept": false
+  },
+  {
+    "id": "kerry-carpenter",
+    "name": "Kerry Carpenter",
+    "team": "DET",
+    "positions": [
+      "OF",
+      "DH"
+    ],
+    "batting": {
+      "r": 53,
+      "hr": 20,
+      "rbi": 60,
+      "sb": 2,
+      "avg": 0.253,
+      "ops": 0.783
+    },
+    "pitching": null,
+    "adp": 208,
+    "isKept": false
+  },
+  {
+    "id": "colson-montgomery",
+    "name": "Colson Montgomery",
+    "team": "CWS",
+    "positions": [
+      "3B",
+      "SS"
+    ],
+    "batting": {
+      "r": 65,
+      "hr": 24,
+      "rbi": 64,
+      "sb": 3,
+      "avg": 0.221,
+      "ops": 0.716
+    },
+    "pitching": null,
+    "adp": 209,
+    "isKept": true,
+    "keeperOwner": "Alex Lefkowitz"
+  },
+  {
+    "id": "jackson-holliday",
+    "name": "Jackson Holliday",
+    "team": "BAL",
+    "positions": [
+      "2B",
+      "SS"
+    ],
+    "batting": {
+      "r": 57,
+      "hr": 12,
+      "rbi": 44,
+      "sb": 13,
+      "avg": 0.251,
+      "ops": 0.737
+    },
+    "pitching": null,
+    "adp": 210,
+    "isKept": false
+  },
+  {
+    "id": "isaac-paredes",
+    "name": "Isaac Paredes",
+    "team": "HOU",
+    "positions": [
+      "3B"
+    ],
+    "batting": {
+      "r": 65,
+      "hr": 21,
+      "rbi": 60,
+      "sb": 1,
+      "avg": 0.248,
+      "ops": 0.801
+    },
+    "pitching": null,
+    "adp": 211,
+    "isKept": false
+  },
+  {
+    "id": "adolis-garcia",
+    "name": "Adolis Garcia",
+    "team": "PHI",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 59,
+      "hr": 22,
+      "rbi": 67,
+      "sb": 10,
+      "avg": 0.237,
+      "ops": 0.73
+    },
+    "pitching": null,
+    "adp": 212,
+    "isKept": false
+  },
+  {
+    "id": "abner-uribe",
+    "name": "Abner Uribe",
+    "team": "MIL",
+    "positions": [
+      "RP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.16,
+      "whip": 1.25,
+      "k9": 10.8,
+      "qs": 0,
+      "nsv": 19,
+      "w": 4
+    },
+    "adp": 213,
+    "isKept": false
+  },
+  {
+    "id": "luis-garcia",
+    "name": "Luis Garcia",
+    "team": "WSH",
+    "positions": [
+      "2B"
+    ],
+    "batting": {
+      "r": 52,
+      "hr": 15,
+      "rbi": 59,
+      "sb": 12,
+      "avg": 0.274,
+      "ops": 0.754
+    },
+    "pitching": null,
+    "adp": 214,
+    "isKept": false
+  },
+  {
+    "id": "griffin-jax",
+    "name": "Griffin Jax",
+    "team": "TB",
+    "positions": [
+      "RP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 2.94,
+      "whip": 1.1,
+      "k9": 11.3,
+      "qs": 0,
+      "nsv": 12,
+      "w": 4
+    },
+    "adp": 215,
+    "isKept": false
+  },
+  {
+    "id": "gerrit-cole",
+    "name": "Gerrit Cole",
+    "team": "NYY",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.94,
+      "whip": 1.21,
+      "k9": 9.2,
+      "qs": 12,
+      "nsv": 0,
+      "w": 8
+    },
+    "adp": 216,
+    "isKept": false
+  },
+  {
+    "id": "max-muncy",
+    "name": "Max Muncy",
+    "team": "LAD",
+    "positions": [
+      "3B"
+    ],
+    "batting": {
+      "r": 45,
+      "hr": 16,
+      "rbi": 45,
+      "sb": 2,
+      "avg": 0.222,
+      "ops": 0.78
+    },
+    "pitching": null,
+    "adp": 217,
+    "isKept": false
+  },
+  {
+    "id": "kyle-manzardo",
+    "name": "Kyle Manzardo",
+    "team": "CLE",
+    "positions": [
+      "1B",
+      "DH"
+    ],
+    "batting": {
+      "r": 51,
+      "hr": 20,
+      "rbi": 58,
+      "sb": 2,
+      "avg": 0.237,
+      "ops": 0.775
+    },
+    "pitching": null,
+    "adp": 218,
+    "isKept": false
+  },
+  {
+    "id": "jordan-beck",
+    "name": "Jordan Beck",
+    "team": "COL",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 50,
+      "hr": 13,
+      "rbi": 49,
+      "sb": 14,
+      "avg": 0.249,
+      "ops": 0.728
+    },
+    "pitching": null,
+    "adp": 219,
+    "isKept": false
+  },
+  {
+    "id": "trent-grisham",
+    "name": "Trent Grisham",
+    "team": "NYY",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 65,
+      "hr": 20,
+      "rbi": 52,
+      "sb": 5,
+      "avg": 0.219,
+      "ops": 0.739
+    },
+    "pitching": null,
+    "adp": 220,
+    "isKept": false
+  },
+  {
+    "id": "ramon-laureano",
+    "name": "Ramon Laureano",
+    "team": "SD",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 48,
+      "hr": 16,
+      "rbi": 52,
+      "sb": 7,
+      "avg": 0.243,
+      "ops": 0.733
+    },
+    "pitching": null,
+    "adp": 221,
+    "isKept": false
+  },
+  {
+    "id": "gabriel-moreno",
+    "name": "Gabriel Moreno",
+    "team": "ARI",
+    "positions": [
+      "C"
+    ],
+    "batting": {
+      "r": 48,
+      "hr": 10,
+      "rbi": 50,
+      "sb": 4,
+      "avg": 0.28,
+      "ops": 0.781
+    },
+    "pitching": null,
+    "adp": 222,
+    "isKept": false
+  },
+  {
+    "id": "alec-bohm",
+    "name": "Alec Bohm",
+    "team": "PHI",
+    "positions": [
+      "1B",
+      "3B"
+    ],
+    "batting": {
+      "r": 61,
+      "hr": 14,
+      "rbi": 67,
+      "sb": 3,
+      "avg": 0.275,
+      "ops": 0.756
+    },
+    "pitching": null,
+    "adp": 223,
+    "isKept": false
+  },
+  {
+    "id": "francisco-alvarez",
+    "name": "Francisco Alvarez",
+    "team": "NYM",
+    "positions": [
+      "C"
+    ],
+    "batting": {
+      "r": 48,
+      "hr": 18,
+      "rbi": 50,
+      "sb": 2,
+      "avg": 0.241,
+      "ops": 0.778
+    },
+    "pitching": null,
+    "adp": 224,
+    "isKept": false
+  },
+  {
+    "id": "sal-frelick",
+    "name": "Sal Frelick",
+    "team": "MIL",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 51,
+      "hr": 8,
+      "rbi": 47,
+      "sb": 13,
+      "avg": 0.271,
+      "ops": 0.727
+    },
+    "pitching": null,
+    "adp": 225,
+    "isKept": false
+  },
+  {
+    "id": "andrew-vaughn",
+    "name": "Andrew Vaughn",
+    "team": "MIL",
+    "positions": [
+      "1B"
+    ],
+    "batting": {
+      "r": 55,
+      "hr": 18,
+      "rbi": 61,
+      "sb": 1,
+      "avg": 0.248,
+      "ops": 0.731
+    },
+    "pitching": null,
+    "adp": 226,
+    "isKept": false
+  },
+  {
+    "id": "otto-lopez",
+    "name": "Otto Lopez",
+    "team": "MIA",
+    "positions": [
+      "2B",
+      "SS"
+    ],
+    "batting": {
+      "r": 52,
+      "hr": 10,
+      "rbi": 53,
+      "sb": 13,
+      "avg": 0.271,
+      "ops": 0.723
+    },
+    "pitching": null,
+    "adp": 227,
+    "isKept": false
+  },
+  {
+    "id": "caleb-durbin",
+    "name": "Caleb Durbin",
+    "team": "BOS",
+    "positions": [
+      "2B",
+      "3B"
+    ],
+    "batting": {
+      "r": 51,
+      "hr": 9,
+      "rbi": 47,
+      "sb": 18,
+      "avg": 0.267,
+      "ops": 0.746
+    },
+    "pitching": null,
+    "adp": 228,
+    "isKept": false
+  },
+  {
+    "id": "samuel-basallo",
+    "name": "Samuel Basallo",
+    "team": "BAL",
+    "positions": [
+      "C"
+    ],
+    "batting": {
+      "r": 43,
+      "hr": 16,
+      "rbi": 47,
+      "sb": 2,
+      "avg": 0.241,
+      "ops": 0.747
+    },
+    "pitching": null,
+    "adp": 229,
+    "isKept": false
+  },
+  {
+    "id": "xander-bogaerts",
+    "name": "Xander Bogaerts",
+    "team": "SD",
+    "positions": [
+      "SS"
+    ],
+    "batting": {
+      "r": 59,
+      "hr": 13,
+      "rbi": 59,
+      "sb": 14,
+      "avg": 0.27,
+      "ops": 0.741
+    },
+    "pitching": null,
+    "adp": 230,
+    "isKept": false
+  },
+  {
+    "id": "brendan-donovan",
+    "name": "Brendan Donovan",
+    "team": "SEA",
+    "positions": [
+      "2B",
+      "SS",
+      "OF"
+    ],
+    "batting": {
+      "r": 69,
+      "hr": 12,
+      "rbi": 53,
+      "sb": 6,
+      "avg": 0.274,
+      "ops": 0.755
+    },
+    "pitching": null,
+    "adp": 231,
+    "isKept": false
+  },
+  {
+    "id": "masyn-winn",
+    "name": "Masyn Winn",
+    "team": "STL",
+    "positions": [
+      "SS"
+    ],
+    "batting": {
+      "r": 78,
+      "hr": 16,
+      "rbi": 68,
+      "sb": 13,
+      "avg": 0.261,
+      "ops": 0.725
+    },
+    "pitching": null,
+    "adp": 232,
+    "isKept": false
+  },
+  {
+    "id": "merrill-kelly",
+    "name": "Merrill Kelly",
+    "team": "ARI",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 4.12,
+      "whip": 1.31,
+      "k9": 8.2,
+      "qs": 15,
+      "nsv": 0,
+      "w": 10
+    },
+    "adp": 233,
+    "isKept": false
+  },
+  {
+    "id": "jj-wetherholt",
+    "name": "JJ Wetherholt",
+    "team": "STL",
+    "positions": [
+      "2B",
+      "3B",
+      "SS"
+    ],
+    "batting": {
+      "r": 62,
+      "hr": 11,
+      "rbi": 42,
+      "sb": 11,
+      "avg": 0.255,
+      "ops": 0.734
+    },
+    "pitching": null,
+    "adp": 234,
+    "isKept": false
+  },
+  {
+    "id": "jack-leiter",
+    "name": "Jack Leiter",
+    "team": "TEX",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 4.52,
+      "whip": 1.37,
+      "k9": 8.7,
+      "qs": 11,
+      "nsv": 0,
+      "w": 9
+    },
+    "adp": 235,
+    "isKept": false
+  },
+  {
+    "id": "kevin-mcgonigle",
+    "name": "Kevin McGonigle",
+    "team": "DET",
+    "positions": [
+      "SS"
+    ],
+    "batting": {
+      "r": 64,
+      "hr": 12,
+      "rbi": 44,
+      "sb": 10,
+      "avg": 0.257,
+      "ops": 0.758
+    },
+    "pitching": null,
+    "adp": 236,
+    "isKept": false
+  },
+  {
+    "id": "jake-burger",
+    "name": "Jake Burger",
+    "team": "TEX",
+    "positions": [
+      "1B"
+    ],
+    "batting": {
+      "r": 61,
+      "hr": 25,
+      "rbi": 74,
+      "sb": 2,
+      "avg": 0.248,
+      "ops": 0.759
+    },
+    "pitching": null,
+    "adp": 237,
+    "isKept": false
+  },
+  {
+    "id": "joe-musgrove",
+    "name": "Joe Musgrove",
+    "team": "SD",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.91,
+      "whip": 1.22,
+      "k9": 8.5,
+      "qs": 14,
+      "nsv": 0,
+      "w": 10
+    },
+    "adp": 238,
+    "isKept": false
+  },
+  {
+    "id": "seranthony-dominguez",
+    "name": "Seranthony Dominguez",
+    "team": "CWS",
+    "positions": [
+      "RP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.83,
+      "whip": 1.3,
+      "k9": 10.2,
+      "qs": 0,
+      "nsv": 20,
+      "w": 3
+    },
+    "adp": 239,
+    "isKept": false
+  },
+  {
+    "id": "marcell-ozuna",
+    "name": "Marcell Ozuna",
+    "team": "PIT",
+    "positions": [
+      "DH"
+    ],
+    "batting": {
+      "r": 55,
+      "hr": 19,
+      "rbi": 60,
+      "sb": 1,
+      "avg": 0.244,
+      "ops": 0.775
+    },
+    "pitching": null,
+    "adp": 240,
+    "isKept": false
+  },
+  {
+    "id": "tj-friedl",
+    "name": "TJ Friedl",
+    "team": "CIN",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 67,
+      "hr": 14,
+      "rbi": 48,
+      "sb": 10,
+      "avg": 0.249,
+      "ops": 0.736
+    },
+    "pitching": null,
+    "adp": 241,
+    "isKept": false
+  },
+  {
+    "id": "colton-cowser",
+    "name": "Colton Cowser",
+    "team": "BAL",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 48,
+      "hr": 16,
+      "rbi": 49,
+      "sb": 10,
+      "avg": 0.23,
+      "ops": 0.725
+    },
+    "pitching": null,
+    "adp": 242,
+    "isKept": false
+  },
+  {
+    "id": "bryan-abreu",
+    "name": "Bryan Abreu",
+    "team": "HOU",
+    "positions": [
+      "RP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.24,
+      "whip": 1.17,
+      "k9": 11.7,
+      "qs": 0,
+      "nsv": 5,
+      "w": 4
+    },
+    "adp": 243,
+    "isKept": false
+  },
+  {
+    "id": "luis-arraez",
+    "name": "Luis Arraez",
+    "team": "SF",
+    "positions": [
+      "1B",
+      "2B",
+      "DH"
+    ],
+    "batting": {
+      "r": 64,
+      "hr": 6,
+      "rbi": 57,
+      "sb": 8,
+      "avg": 0.305,
+      "ops": 0.748
+    },
+    "pitching": null,
+    "adp": 244,
+    "isKept": false
+  },
+  {
+    "id": "bryce-miller",
+    "name": "Bryce Miller",
+    "team": "SEA",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 4.19,
+      "whip": 1.27,
+      "k9": 8,
+      "qs": 11,
+      "nsv": 0,
+      "w": 9
+    },
+    "adp": 245,
+    "isKept": false
+  },
+  {
+    "id": "mickey-moniak",
+    "name": "Mickey Moniak",
+    "team": "COL",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 48,
+      "hr": 17,
+      "rbi": 55,
+      "sb": 7,
+      "avg": 0.258,
+      "ops": 0.764
+    },
+    "pitching": null,
+    "adp": 246,
+    "isKept": false
+  },
+  {
+    "id": "ryne-nelson",
+    "name": "Ryne Nelson",
+    "team": "ARI",
+    "positions": [
+      "SP",
+      "RP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 4.31,
+      "whip": 1.32,
+      "k9": 7.5,
+      "qs": 12,
+      "nsv": 0,
+      "w": 10
+    },
+    "adp": 247,
+    "isKept": false
+  },
+  {
+    "id": "carter-jensen",
+    "name": "Carter Jensen",
+    "team": "KC",
+    "positions": [
+      "C"
+    ],
+    "batting": {
+      "r": 35,
+      "hr": 10,
+      "rbi": 36,
+      "sb": 3,
+      "avg": 0.248,
+      "ops": 0.748
+    },
+    "pitching": null,
+    "adp": 248,
+    "isKept": false
+  },
+  {
+    "id": "carlos-correa",
+    "name": "Carlos Correa",
+    "team": "HOU",
+    "positions": [
+      "3B",
+      "SS"
+    ],
+    "batting": {
+      "r": 59,
+      "hr": 16,
+      "rbi": 62,
+      "sb": 1,
+      "avg": 0.268,
+      "ops": 0.771
+    },
+    "pitching": null,
+    "adp": 249,
+    "isKept": false
+  },
+  {
+    "id": "ryan-weathers",
+    "name": "Ryan Weathers",
+    "team": "NYY",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.84,
+      "whip": 1.27,
+      "k9": 8.9,
+      "qs": 9,
+      "nsv": 0,
+      "w": 8
+    },
+    "adp": 250,
+    "isKept": false
+  },
+  {
+    "id": "j-t-realmuto",
+    "name": "J.T. Realmuto",
+    "team": "PHI",
+    "positions": [
+      "C"
+    ],
+    "batting": {
+      "r": 43,
+      "hr": 12,
+      "rbi": 45,
+      "sb": 5,
+      "avg": 0.246,
+      "ops": 0.704
+    },
+    "pitching": null,
+    "adp": 251,
+    "isKept": false
+  },
+  {
+    "id": "kodai-senga",
+    "name": "Kodai Senga",
+    "team": "NYM",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.92,
+      "whip": 1.33,
+      "k9": 9,
+      "qs": 10,
+      "nsv": 0,
+      "w": 9
+    },
+    "adp": 252,
+    "isKept": false
+  },
+  {
+    "id": "josh-lowe",
+    "name": "Josh Lowe",
+    "team": "LAA",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 47,
+      "hr": 13,
+      "rbi": 48,
+      "sb": 17,
+      "avg": 0.244,
+      "ops": 0.716
+    },
+    "pitching": null,
+    "adp": 253,
+    "isKept": false
+  },
+  {
+    "id": "casey-mize",
+    "name": "Casey Mize",
+    "team": "DET",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 4.06,
+      "whip": 1.27,
+      "k9": 8,
+      "qs": 12,
+      "nsv": 0,
+      "w": 9
+    },
+    "adp": 254,
+    "isKept": false
+  },
+  {
+    "id": "nolan-schanuel",
+    "name": "Nolan Schanuel",
+    "team": "LAA",
+    "positions": [
+      "1B"
+    ],
+    "batting": {
+      "r": 68,
+      "hr": 16,
+      "rbi": 62,
+      "sb": 6,
+      "avg": 0.27,
+      "ops": 0.783
+    },
+    "pitching": null,
+    "adp": 255,
+    "isKept": false
+  },
+  {
+    "id": "shane-smith",
+    "name": "Shane Smith",
+    "team": "CWS",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 4.37,
+      "whip": 1.35,
+      "k9": 8.2,
+      "qs": 13,
+      "nsv": 0,
+      "w": 9
+    },
+    "adp": 256,
+    "isKept": false
+  },
+  {
+    "id": "connelly-early",
+    "name": "Connelly Early",
+    "team": "BOS",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.69,
+      "whip": 1.29,
+      "k9": 9,
+      "qs": 2,
+      "nsv": 0,
+      "w": 2
+    },
+    "adp": 257,
+    "isKept": false
+  },
+  {
+    "id": "shane-bieber",
+    "name": "Shane Bieber",
+    "team": "TOR",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.74,
+      "whip": 1.21,
+      "k9": 8.4,
+      "qs": 10,
+      "nsv": 0,
+      "w": 8
+    },
+    "adp": 258,
+    "isKept": false
+  },
+  {
+    "id": "jose-soriano",
+    "name": "Jose Soriano",
+    "team": "LAA",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.68,
+      "whip": 1.38,
+      "k9": 8.4,
+      "qs": 16,
+      "nsv": 0,
+      "w": 11
+    },
+    "adp": 259,
+    "isKept": false
+  },
+  {
+    "id": "noah-cameron",
+    "name": "Noah Cameron",
+    "team": "KC",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 4.31,
+      "whip": 1.35,
+      "k9": 7.4,
+      "qs": 12,
+      "nsv": 0,
+      "w": 9
+    },
+    "adp": 260,
+    "isKept": false
+  },
+  {
+    "id": "cody-ponce",
+    "name": "Cody Ponce",
+    "team": "TOR",
+    "positions": [
+      "SP",
+      "RP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.91,
+      "whip": 1.25,
+      "k9": 8.8,
+      "qs": 12,
+      "nsv": 0,
+      "w": 9
+    },
+    "adp": 261,
+    "isKept": false
+  },
+  {
+    "id": "spencer-steer",
+    "name": "Spencer Steer",
+    "team": "CIN",
+    "positions": [
+      "1B",
+      "OF"
+    ],
+    "batting": {
+      "r": 45,
+      "hr": 13,
+      "rbi": 46,
+      "sb": 7,
+      "avg": 0.237,
+      "ops": 0.733
+    },
+    "pitching": null,
+    "adp": 262,
+    "isKept": false
+  },
+  {
+    "id": "chase-delauter",
+    "name": "Chase DeLauter",
+    "team": "CLE",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 50,
+      "hr": 14,
+      "rbi": 51,
+      "sb": 3,
+      "avg": 0.251,
+      "ops": 0.733
+    },
+    "pitching": null,
+    "adp": 263,
+    "isKept": false
+  },
+  {
+    "id": "hunter-greene",
+    "name": "Hunter Greene",
+    "team": "CIN",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.91,
+      "whip": 1.18,
+      "k9": 10.8,
+      "qs": 7,
+      "nsv": 0,
+      "w": 5
+    },
+    "adp": 264,
+    "isKept": false
+  },
+  {
+    "id": "mike-burrows",
+    "name": "Mike Burrows",
+    "team": "HOU",
+    "positions": [
+      "SP",
+      "RP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 4.24,
+      "whip": 1.3,
+      "k9": 8.7,
+      "qs": 10,
+      "nsv": 0,
+      "w": 9
+    },
+    "adp": 265,
+    "isKept": false
+  },
+  {
+    "id": "jose-caballero",
+    "name": "Jose Caballero",
+    "team": "NYY",
+    "positions": [
+      "2B",
+      "3B",
+      "SS",
+      "OF"
+    ],
+    "batting": {
+      "r": 33,
+      "hr": 5,
+      "rbi": 28,
+      "sb": 29,
+      "avg": 0.224,
+      "ops": 0.651
+    },
+    "pitching": null,
+    "adp": 266,
+    "isKept": false
+  },
+  {
+    "id": "joey-cantillo",
+    "name": "Joey Cantillo",
+    "team": "CLE",
+    "positions": [
+      "SP",
+      "RP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.95,
+      "whip": 1.34,
+      "k9": 9.2,
+      "qs": 9,
+      "nsv": 0,
+      "w": 8
+    },
+    "adp": 267,
+    "isKept": false
+  },
+  {
+    "id": "grayson-rodriguez",
+    "name": "Grayson Rodriguez",
+    "team": "LAA",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.82,
+      "whip": 1.25,
+      "k9": 9.5,
+      "qs": 11,
+      "nsv": 0,
+      "w": 7
+    },
+    "adp": 268,
+    "isKept": false
+  },
+  {
+    "id": "sean-manaea",
+    "name": "Sean Manaea",
+    "team": "NYM",
+    "positions": [
+      "SP",
+      "RP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.82,
+      "whip": 1.22,
+      "k9": 9.4,
+      "qs": 8,
+      "nsv": 0,
+      "w": 8
+    },
+    "adp": 269,
+    "isKept": false
+  },
+  {
+    "id": "brett-baty",
+    "name": "Brett Baty",
+    "team": "NYM",
+    "positions": [
+      "2B",
+      "3B"
+    ],
+    "batting": {
+      "r": 41,
+      "hr": 14,
+      "rbi": 44,
+      "sb": 4,
+      "avg": 0.248,
+      "ops": 0.736
+    },
+    "pitching": null,
+    "adp": 270,
+    "isKept": false
+  },
+  {
+    "id": "parker-messick",
+    "name": "Parker Messick",
+    "team": "CLE",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 4.08,
+      "whip": 1.32,
+      "k9": 8,
+      "qs": 12,
+      "nsv": 0,
+      "w": 8
+    },
+    "adp": 271,
+    "isKept": false
+  },
+  {
+    "id": "mark-vientos",
+    "name": "Mark Vientos",
+    "team": "NYM",
+    "positions": [
+      "3B",
+      "DH"
+    ],
+    "batting": {
+      "r": 53,
+      "hr": 20,
+      "rbi": 60,
+      "sb": 1,
+      "avg": 0.248,
+      "ops": 0.767
+    },
+    "pitching": null,
+    "adp": 272,
+    "isKept": false
+  },
+  {
+    "id": "jung-hoo-lee",
+    "name": "Jung Hoo Lee",
+    "team": "SF",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 60,
+      "hr": 9,
+      "rbi": 46,
+      "sb": 9,
+      "avg": 0.273,
+      "ops": 0.745
+    },
+    "pitching": null,
+    "adp": 273,
+    "isKept": false
+  },
+  {
+    "id": "justin-crawford",
+    "name": "Justin Crawford",
+    "team": "PHI",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 42,
+      "hr": 5,
+      "rbi": 35,
+      "sb": 18,
+      "avg": 0.267,
+      "ops": 0.701
+    },
+    "pitching": null,
+    "adp": 274,
+    "isKept": false
+  },
+  {
+    "id": "kyle-teel",
+    "name": "Kyle Teel",
+    "team": "CWS",
+    "positions": [
+      "C"
+    ],
+    "batting": {
+      "r": 35,
+      "hr": 9,
+      "rbi": 33,
+      "sb": 4,
+      "avg": 0.248,
+      "ops": 0.725
+    },
+    "pitching": null,
+    "adp": 275,
+    "isKept": false
+  },
+  {
+    "id": "robert-suarez",
+    "name": "Robert Suarez",
+    "team": "ATL",
+    "positions": [
+      "RP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.51,
+      "whip": 1.2,
+      "k9": 9.8,
+      "qs": 0,
+      "nsv": 8,
+      "w": 4
+    },
+    "adp": 276,
+    "isKept": false
+  },
+  {
+    "id": "robert-garcia",
+    "name": "Robert Garcia",
+    "team": "TEX",
+    "positions": [
+      "RP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.53,
+      "whip": 1.25,
+      "k9": 9.8,
+      "qs": 0,
+      "nsv": 20,
+      "w": 3
+    },
+    "adp": 277,
+    "isKept": false
+  },
+  {
+    "id": "roki-sasaki",
+    "name": "Roki Sasaki",
+    "team": "LAD",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 4.21,
+      "whip": 1.34,
+      "k9": 8.6,
+      "qs": 7,
+      "nsv": 0,
+      "w": 7
+    },
+    "adp": 278,
+    "isKept": false
+  },
+  {
+    "id": "miguel-vargas",
+    "name": "Miguel Vargas",
+    "team": "CWS",
+    "positions": [
+      "1B",
+      "3B"
+    ],
+    "batting": {
+      "r": 57,
+      "hr": 15,
+      "rbi": 56,
+      "sb": 6,
+      "avg": 0.238,
+      "ops": 0.735
+    },
+    "pitching": null,
+    "adp": 279,
+    "isKept": false
+  },
+  {
+    "id": "jordan-westburg",
+    "name": "Jordan Westburg",
+    "team": "BAL",
+    "positions": [
+      "2B",
+      "3B"
+    ],
+    "batting": {
+      "r": 54,
+      "hr": 17,
+      "rbi": 55,
+      "sb": 4,
+      "avg": 0.264,
+      "ops": 0.783
+    },
+    "pitching": null,
+    "adp": 280,
+    "isKept": false
+  },
+  {
+    "id": "matt-shaw",
+    "name": "Matt Shaw",
+    "team": "CHC",
+    "positions": [
+      "3B"
+    ],
+    "batting": {
+      "r": 27,
+      "hr": 7,
+      "rbi": 26,
+      "sb": 8,
+      "avg": 0.244,
+      "ops": 0.729
+    },
+    "pitching": null,
+    "adp": 281,
+    "isKept": false
+  },
+  {
+    "id": "david-peterson",
+    "name": "David Peterson",
+    "team": "NYM",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 3.65,
+      "whip": 1.34,
+      "k9": 8,
+      "qs": 16,
+      "nsv": 0,
+      "w": 11
+    },
+    "adp": 282,
+    "isKept": false
+  },
+  {
+    "id": "andres-gimenez",
+    "name": "Andres Gimenez",
+    "team": "TOR",
+    "positions": [
+      "2B",
+      "SS"
+    ],
+    "batting": {
+      "r": 60,
+      "hr": 12,
+      "rbi": 55,
+      "sb": 18,
+      "avg": 0.253,
+      "ops": 0.694
+    },
+    "pitching": null,
+    "adp": 283,
+    "isKept": false
+  },
+  {
+    "id": "willi-castro",
+    "name": "Willi Castro",
+    "team": "COL",
+    "positions": [
+      "2B",
+      "3B",
+      "OF"
+    ],
+    "batting": {
+      "r": 61,
+      "hr": 12,
+      "rbi": 52,
+      "sb": 13,
+      "avg": 0.251,
+      "ops": 0.723
+    },
+    "pitching": null,
+    "adp": 284,
+    "isKept": false
+  },
+  {
+    "id": "ryan-o-hearn",
+    "name": "Ryan O'Hearn",
+    "team": "PIT",
+    "positions": [
+      "1B",
+      "OF",
+      "DH"
+    ],
+    "batting": {
+      "r": 55,
+      "hr": 13,
+      "rbi": 52,
+      "sb": 3,
+      "avg": 0.269,
+      "ops": 0.767
+    },
+    "pitching": null,
+    "adp": 285,
+    "isKept": false
+  },
+  {
+    "id": "mitch-keller",
+    "name": "Mitch Keller",
+    "team": "PIT",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 4.35,
+      "whip": 1.32,
+      "k9": 7.8,
+      "qs": 15,
+      "nsv": 0,
+      "w": 10
+    },
+    "adp": 286,
+    "isKept": false
+  },
+  {
+    "id": "cedric-mullins-ii",
+    "name": "Cedric Mullins II",
+    "team": "TB",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 44,
+      "hr": 12,
+      "rbi": 43,
+      "sb": 16,
+      "avg": 0.227,
+      "ops": 0.683
+    },
+    "pitching": null,
+    "adp": 287,
+    "isKept": false
+  },
+  {
+    "id": "giancarlo-stanton",
+    "name": "Giancarlo Stanton",
+    "team": "NYY",
+    "positions": [
+      "OF",
+      "DH"
+    ],
+    "batting": {
+      "r": 45,
+      "hr": 21,
+      "rbi": 53,
+      "sb": 1,
+      "avg": 0.23,
+      "ops": 0.776
+    },
+    "pitching": null,
+    "adp": 288,
+    "isKept": false
+  },
+  {
+    "id": "zebby-matthews",
+    "name": "Zebby Matthews",
+    "team": "MIN",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 4.03,
+      "whip": 1.23,
+      "k9": 8.4,
+      "qs": 7,
+      "nsv": 0,
+      "w": 6
+    },
+    "adp": 289,
+    "isKept": false
+  },
+  {
+    "id": "braxton-ashcraft",
+    "name": "Braxton Ashcraft",
+    "team": "PIT",
+    "positions": [
+      "SP",
+      "RP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 4.08,
+      "whip": 1.33,
+      "k9": 7.6,
+      "qs": 10,
+      "nsv": 0,
+      "w": 8
+    },
+    "adp": 290,
+    "isKept": false
+  },
+  {
+    "id": "andrew-painter",
+    "name": "Andrew Painter",
+    "team": "PHI",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 4.66,
+      "whip": 1.4,
+      "k9": 7,
+      "qs": 8,
+      "nsv": 0,
+      "w": 7
+    },
+    "adp": 291,
+    "isKept": false
+  },
+  {
+    "id": "will-warren",
+    "name": "Will Warren",
+    "team": "NYY",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 4.02,
+      "whip": 1.3,
+      "k9": 8.8,
+      "qs": 9,
+      "nsv": 0,
+      "w": 8
+    },
+    "adp": 292,
+    "isKept": false
+  },
+  {
+    "id": "dillon-dingler",
+    "name": "Dillon Dingler",
+    "team": "DET",
+    "positions": [
+      "C"
+    ],
+    "batting": {
+      "r": 36,
+      "hr": 10,
+      "rbi": 39,
+      "sb": 1,
+      "avg": 0.245,
+      "ops": 0.709
+    },
+    "pitching": null,
+    "adp": 293,
+    "isKept": false
+  },
+  {
+    "id": "matt-wallner",
+    "name": "Matt Wallner",
+    "team": "MIN",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 52,
+      "hr": 19,
+      "rbi": 56,
+      "sb": 4,
+      "avg": 0.229,
+      "ops": 0.777
+    },
+    "pitching": null,
+    "adp": 294,
+    "isKept": false
+  },
+  {
+    "id": "yusei-kikuchi",
+    "name": "Yusei Kikuchi",
+    "team": "LAA",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 4.1,
+      "whip": 1.29,
+      "k9": 9.2,
+      "qs": 15,
+      "nsv": 0,
+      "w": 10
+    },
+    "adp": 295,
+    "isKept": false
+  },
+  {
+    "id": "jasson-dominguez",
+    "name": "Jasson Dominguez",
+    "team": "NYY",
+    "positions": [
+      "OF"
+    ],
+    "batting": {
+      "r": 13,
+      "hr": 4,
+      "rbi": 13,
+      "sb": 5,
+      "avg": 0.251,
+      "ops": 0.735
+    },
+    "pitching": null,
+    "adp": 296,
+    "isKept": false
+  },
+  {
+    "id": "brady-singer",
+    "name": "Brady Singer",
+    "team": "CIN",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 4.37,
+      "whip": 1.32,
+      "k9": 8.4,
+      "qs": 14,
+      "nsv": 0,
+      "w": 10
+    },
+    "adp": 297,
+    "isKept": false
+  },
+  {
+    "id": "austin-wells",
+    "name": "Austin Wells",
+    "team": "NYY",
+    "positions": [
+      "C"
+    ],
+    "batting": {
+      "r": 47,
+      "hr": 16,
+      "rbi": 49,
+      "sb": 5,
+      "avg": 0.229,
+      "ops": 0.723
+    },
+    "pitching": null,
+    "adp": 298,
+    "isKept": false
+  },
+  {
+    "id": "reid-detmers",
+    "name": "Reid Detmers",
+    "team": "LAA",
+    "positions": [
+      "RP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 4.03,
+      "whip": 1.29,
+      "k9": 9.5,
+      "qs": 12,
+      "nsv": 0,
+      "w": 8
+    },
+    "adp": 299,
+    "isKept": false
+  },
+  {
+    "id": "bailey-ober",
+    "name": "Bailey Ober",
+    "team": "MIN",
+    "positions": [
+      "SP"
+    ],
+    "batting": null,
+    "pitching": {
+      "era": 4.4,
+      "whip": 1.25,
+      "k9": 8.1,
+      "qs": 13,
+      "nsv": 0,
+      "w": 9
+    },
+    "adp": 300,
+    "isKept": false
+  }
+]

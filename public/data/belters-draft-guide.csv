@@ -1,0 +1,345 @@
+Round,Pick #,Expected Board Slot,Strategy,Option #,Player,Team,Pos,Rank,R,HR,RBI,SB,AVG,OPS,ERA,WHIP,K/9,QS,SV,W
+1,12,11,Anchor bat or ace (best value at turn),1,Ronald Acuna Jr.,ATL,OF,6,109,31,84,24,0.286,0.892,,,,,,
+,,,,2,Elly De La Cruz,CIN,SS,7,83,23,82,38,0.263,0.807,,,,,,
+,,,,3,Tarik Skubal,DET,SP,8,,,,,,,2.79,1.02,10.9,23,0,14
+,,,,4,Julio Rodriguez,SEA,OF,9,85,30,91,23,0.275,0.825,,,,,,
+,,,,5,Kyle Tucker,LAD,OF/DH,10,90,27,78,18,0.269,0.867,,,,,,
+,,,,6,Fernando Tatis Jr.,SD,OF,12,96,30,82,23,0.275,0.862,,,,,,
+,,,,7,Gunnar Henderson,BAL,SS,13,101,28,84,24,0.275,0.846,,,,,,
+,,,,8,Corbin Carroll,ARI,OF,15,96,27,81,33,0.261,0.847,,,,,,
+,,,,9,Vladimir Guerrero Jr.,TOR,1B/DH,17,94,32,99,5,0.297,0.914,,,,,,
+,,,,10,Kyle Schwarber,PHI,OF/DH,19,97,39,90,6,0.231,0.852,,,,,,
+,,,,11,Cal Raleigh,SEA,C/DH,20,89,38,91,8,0.230,0.818,,,,,,
+,,,,12,Jazz Chisholm Jr.,NYY,2B/3B,22,70,26,72,27,0.240,0.763,,,,,,
+
+2,13,12,Double-tap category strength (power/speed/ace),1,Elly De La Cruz,CIN,SS,7,83,23,82,38,0.263,0.807,,,,,,
+,,,,2,Tarik Skubal,DET,SP,8,,,,,,,2.79,1.02,10.9,23,0,14
+,,,,3,Julio Rodriguez,SEA,OF,9,85,30,91,23,0.275,0.825,,,,,,
+,,,,4,Kyle Tucker,LAD,OF/DH,10,90,27,78,18,0.269,0.867,,,,,,
+,,,,5,Fernando Tatis Jr.,SD,OF,12,96,30,82,23,0.275,0.862,,,,,,
+,,,,6,Gunnar Henderson,BAL,SS,13,101,28,84,24,0.275,0.846,,,,,,
+,,,,7,Corbin Carroll,ARI,OF,15,96,27,81,33,0.261,0.847,,,,,,
+,,,,8,Vladimir Guerrero Jr.,TOR,1B/DH,17,94,32,99,5,0.297,0.914,,,,,,
+,,,,9,Kyle Schwarber,PHI,OF/DH,19,97,39,90,6,0.231,0.852,,,,,,
+,,,,10,Cal Raleigh,SEA,C/DH,20,89,38,91,8,0.230,0.818,,,,,,
+,,,,11,Jazz Chisholm Jr.,NYY,2B/3B,22,70,26,72,27,0.240,0.763,,,,,,
+,,,,12,Trea Turner,PHI,SS,23,86,18,65,26,0.281,0.774,,,,,,
+
+3,36,35,Secure SP1/SP2 or elite middle infield,1,Brent Rooker,ATH,OF/DH,36,82,30,91,5,0.258,0.820,,,,,,
+,,,,2,Logan Gilbert,SEA,SP,38,,,,,,,3.40,1.10,9.8,16,0,11
+,,,,3,Chris Sale,ATL,SP,39,,,,,,,3.19,1.09,11.0,18,0,12
+,,,,4,Rafael Devers,SF,1B/DH,41,82,29,84,2,0.248,0.810,,,,,,
+,,,,5,Wyatt Langford,TEX,OF,42,78,22,69,19,0.256,0.806,,,,,,
+,,,,6,Mookie Betts,LAD,SS,43,84,22,79,8,0.274,0.823,,,,,,
+,,,,7,Logan Webb,SF,SP,44,,,,,,,3.32,1.21,8.5,21,0,13
+,,,,8,Jacob deGrom,TEX,SP,45,,,,,,,3.52,1.10,10.4,17,0,11
+,,,,9,Max Fried,NYY,SP,46,,,,,,,3.28,1.21,8.5,20,0,13
+,,,,10,Cole Ragans,KC,SP,47,,,,,,,3.31,1.18,11.0,17,0,12
+,,,,11,Freddie Freeman,LAD,1B,48,89,24,94,7,0.279,0.833,,,,,,
+,,,,12,Brice Turang,MIL,2B,49,77,14,61,26,0.260,0.726,,,,,,
+
+4,37,36,"Take board value, prioritize 5-category hitters",1,Logan Gilbert,SEA,SP,38,,,,,,,3.40,1.10,9.8,16,0,11
+,,,,2,Chris Sale,ATL,SP,39,,,,,,,3.19,1.09,11.0,18,0,12
+,,,,3,Rafael Devers,SF,1B/DH,41,82,29,84,2,0.248,0.810,,,,,,
+,,,,4,Wyatt Langford,TEX,OF,42,78,22,69,19,0.256,0.806,,,,,,
+,,,,5,Mookie Betts,LAD,SS,43,84,22,79,8,0.274,0.823,,,,,,
+,,,,6,Logan Webb,SF,SP,44,,,,,,,3.32,1.21,8.5,21,0,13
+,,,,7,Jacob deGrom,TEX,SP,45,,,,,,,3.52,1.10,10.4,17,0,11
+,,,,8,Max Fried,NYY,SP,46,,,,,,,3.28,1.21,8.5,20,0,13
+,,,,9,Cole Ragans,KC,SP,47,,,,,,,3.31,1.18,11.0,17,0,12
+,,,,10,Freddie Freeman,LAD,1B,48,89,24,94,7,0.279,0.833,,,,,,
+,,,,11,Brice Turang,MIL,2B,49,77,14,61,26,0.260,0.726,,,,,,
+,,,,12,Edwin Diaz,LAD,RP,52,,,,,,,3.03,1.09,12.4,0,36,4
+
+5,60,59,Stabilize ratios or lock first closer,1,Byron Buxton,MIN,OF,68,72,25,63,14,0.247,0.802,,,,,,
+,,,,2,Andres Munoz,SEA,RP,69,,,,,,,2.93,1.17,11.4,0,28,4
+,,,,3,Jhoan Duran,PHI,RP,70,,,,,,,2.78,1.13,10.7,0,29,4
+,,,,4,Dylan Cease,TOR,SP,71,,,,,,,3.54,1.21,10.6,17,0,12
+,,,,5,Framber Valdez,DET,SP,72,,,,,,,3.43,1.27,8.3,19,0,12
+,,,,6,Geraldo Perdomo,ARI,SS,73,71,12,61,18,0.270,0.776,,,,,,
+,,,,7,Cade Smith,CLE,RP,74,,,,,,,2.98,1.10,11.4,0,30,4
+,,,,8,George Springer,TOR,OF/DH,76,86,26,73,13,0.259,0.795,,,,,,
+,,,,9,Corey Seager,TEX,SS,77,72,25,75,3,0.276,0.858,,,,,,
+,,,,10,Ben Rice,NYY,C/1B/DH,78,62,23,68,4,0.246,0.806,,,,,,
+,,,,11,Randy Arozarena,SEA,OF,79,77,21,74,21,0.233,0.732,,,,,,
+,,,,12,Bo Bichette,NYM,SS,80,63,15,64,5,0.288,0.786,,,,,,
+
+6,61,60,Position scarcity fill (C/SS/2B) or SP depth,1,Andres Munoz,SEA,RP,69,,,,,,,2.93,1.17,11.4,0,28,4
+,,,,2,Jhoan Duran,PHI,RP,70,,,,,,,2.78,1.13,10.7,0,29,4
+,,,,3,Dylan Cease,TOR,SP,71,,,,,,,3.54,1.21,10.6,17,0,12
+,,,,4,Framber Valdez,DET,SP,72,,,,,,,3.43,1.27,8.3,19,0,12
+,,,,5,Geraldo Perdomo,ARI,SS,73,71,12,61,18,0.270,0.776,,,,,,
+,,,,6,Cade Smith,CLE,RP,74,,,,,,,2.98,1.10,11.4,0,30,4
+,,,,7,George Springer,TOR,OF/DH,76,86,26,73,13,0.259,0.795,,,,,,
+,,,,8,Corey Seager,TEX,SS,77,72,25,75,3,0.276,0.858,,,,,,
+,,,,9,Ben Rice,NYY,C/1B/DH,78,62,23,68,4,0.246,0.806,,,,,,
+,,,,10,Randy Arozarena,SEA,OF,79,77,21,74,21,0.233,0.732,,,,,,
+,,,,11,Bo Bichette,NYM,SS,80,63,15,64,5,0.288,0.786,,,,,,
+,,,,12,Eugenio Suarez,CIN,3B,81,72,32,85,3,0.234,0.782,,,,,,
+
+7,84,83,Add speed/power balance,1,David Bednar,NYY,RP,96,,,,,,,3.25,1.14,10.9,0,33,4
+,,,,2,Michael Busch,CHC,1B,97,72,24,64,3,0.248,0.800,,,,,,
+,,,,3,Trevor Story,BOS,SS,98,53,15,52,15,0.247,0.713,,,,,,
+,,,,4,Alex Bregman,CHC,3B,99,85,23,77,3,0.260,0.784,,,,,,
+,,,,5,Jose Altuve,HOU,2B/OF/DH,101,80,20,65,12,0.267,0.767,,,,,,
+,,,,6,Willy Adames,SF,SS,102,70,23,72,11,0.233,0.739,,,,,,
+,,,,7,Yandy Diaz,TB,1B/DH,103,84,21,67,3,0.287,0.820,,,,,,
+,,,,8,Salvador Perez,KC,C/1B/DH,104,68,26,83,0,0.256,0.758,,,,,,
+,,,,9,Tyler Glasnow,LAD,SP,105,,,,,,,3.61,1.22,10.5,13,0,10
+,,,,10,Sonny Gray,BOS,SP,106,,,,,,,3.69,1.21,9.4,17,0,12
+,,,,11,Jo Adell,LAA,OF,107,56,26,66,7,0.238,0.771,,,,,,
+,,,,12,Drake Baldwin,ATL,C,108,65,18,61,1,0.268,0.789,,,,,,
+
+8,85,84,SP depth with K/9 and QS,1,Michael Busch,CHC,1B,97,72,24,64,3,0.248,0.800,,,,,,
+,,,,2,Trevor Story,BOS,SS,98,53,15,52,15,0.247,0.713,,,,,,
+,,,,3,Alex Bregman,CHC,3B,99,85,23,77,3,0.260,0.784,,,,,,
+,,,,4,Jose Altuve,HOU,2B/OF/DH,101,80,20,65,12,0.267,0.767,,,,,,
+,,,,5,Willy Adames,SF,SS,102,70,23,72,11,0.233,0.739,,,,,,
+,,,,6,Yandy Diaz,TB,1B/DH,103,84,21,67,3,0.287,0.820,,,,,,
+,,,,7,Salvador Perez,KC,C/1B/DH,104,68,26,83,0,0.256,0.758,,,,,,
+,,,,8,Tyler Glasnow,LAD,SP,105,,,,,,,3.61,1.22,10.5,13,0,10
+,,,,9,Sonny Gray,BOS,SP,106,,,,,,,3.69,1.21,9.4,17,0,12
+,,,,10,Jo Adell,LAA,OF,107,56,26,66,7,0.238,0.771,,,,,,
+,,,,11,Drake Baldwin,ATL,C,108,65,18,61,1,0.268,0.789,,,,,,
+,,,,12,Luis Robert Jr.,NYM,OF,109,58,18,60,26,0.232,0.697,,,,,,
+
+9,108,107,"Best bat available, multi-position preferred",1,Michael King,SD,SP,122,,,,,,,3.80,1.25,9.4,15,0,10
+,,,,2,Taylor Ward,BAL,OF,123,80,25,77,5,0.244,0.765,,,,,,
+,,,,3,Ozzie Albies,ATL,2B,124,64,17,65,10,0.258,0.740,,,,,,
+,,,,4,Zack Wheeler,PHI,SP,125,,,,,,,3.20,1.09,10.3,16,0,11
+,,,,5,Ryan Pepiot,TB,SP,126,,,,,,,4.02,1.26,9.5,15,0,10
+,,,,6,Ryan Helsley,BAL,RP,127,,,,,,,3.48,1.22,10.7,0,26,3
+,,,,7,Lawrence Butler,ATH,OF,128,60,19,57,16,0.245,0.747,,,,,,
+,,,,8,Blake Snell,LAD,SP,129,,,,,,,3.54,1.25,11.0,14,0,10
+,,,,9,Cam Schlittler,NYY,SP,130,,,,,,,4.01,1.31,8.6,11,0,8
+,,,,10,Jakob Marsee,MIA,OF,131,70,12,46,33,0.232,0.704,,,,,,
+,,,,11,Ceddanne Rafaela,BOS,2B/OF,132,57,15,61,17,0.257,0.725,,,,,,
+,,,,12,Kyle Stowers,MIA,OF,133,52,18,55,3,0.241,0.760,,,,,,
+,,,,13,Raisel Iglesias,ATL,RP,134,,,,,,,3.71,1.20,9.7,0,26,3
+,,,,14,Matt Chapman,SF,3B,135,76,22,72,9,0.238,0.757,,,,,,
+,,,,15,Sandy Alcantara,MIA,SP,136,,,,,,,4.16,1.32,7.6,16,0,10
+
+10,109,108,Closer/SP value pocket,1,Taylor Ward,BAL,OF,123,80,25,77,5,0.244,0.765,,,,,,
+,,,,2,Ozzie Albies,ATL,2B,124,64,17,65,10,0.258,0.740,,,,,,
+,,,,3,Zack Wheeler,PHI,SP,125,,,,,,,3.20,1.09,10.3,16,0,11
+,,,,4,Ryan Pepiot,TB,SP,126,,,,,,,4.02,1.26,9.5,15,0,10
+,,,,5,Ryan Helsley,BAL,RP,127,,,,,,,3.48,1.22,10.7,0,26,3
+,,,,6,Lawrence Butler,ATH,OF,128,60,19,57,16,0.245,0.747,,,,,,
+,,,,7,Blake Snell,LAD,SP,129,,,,,,,3.54,1.25,11.0,14,0,10
+,,,,8,Cam Schlittler,NYY,SP,130,,,,,,,4.01,1.31,8.6,11,0,8
+,,,,9,Jakob Marsee,MIA,OF,131,70,12,46,33,0.232,0.704,,,,,,
+,,,,10,Ceddanne Rafaela,BOS,2B/OF,132,57,15,61,17,0.257,0.725,,,,,,
+,,,,11,Kyle Stowers,MIA,OF,133,52,18,55,3,0.241,0.760,,,,,,
+,,,,12,Raisel Iglesias,ATL,RP,134,,,,,,,3.71,1.20,9.7,0,26,3
+,,,,13,Matt Chapman,SF,3B,135,76,22,72,9,0.238,0.757,,,,,,
+,,,,14,Sandy Alcantara,MIA,SP,136,,,,,,,4.16,1.32,7.6,16,0,10
+,,,,15,Daniel Palencia,CHC,RP,137,,,,,,,3.61,1.26,10.1,0,32,4
+
+11,132,131,Batting average and OBP stabilizer,1,Robbie Ray,SF,SP,147,,,,,,,4.19,1.31,9.4,15,0,10
+,,,,2,MacKenzie Gore,TEX,SP,148,,,,,,,3.82,1.26,10.2,14,0,10
+,,,,3,Trevor Rogers,BAL,SP,149,,,,,,,4.20,1.35,7.7,13,0,10
+,,,,4,Yainer Diaz,HOU,C/DH,150,57,19,65,2,0.273,0.763,,,,,,
+,,,,5,Brenton Doyle,COL,OF,151,55,16,56,17,0.245,0.705,,,,,,
+,,,,6,Bubba Chandler,PIT,SP,152,,,,,,,4.30,1.36,8.2,12,0,9
+,,,,7,Shota Imanaga,CHC,SP,153,,,,,,,4.11,1.20,8.2,13,0,9
+,,,,8,Tanner Bibee,CLE,SP,154,,,,,,,4.10,1.27,8.5,16,0,10
+,,,,9,Gavin Williams,CLE,SP,155,,,,,,,4.09,1.35,9.2,15,0,10
+,,,,10,Josh Hader,HOU,RP,156,,,,,,,3.29,1.12,12.3,0,29,3
+,,,,11,Pete Fairbanks,MIA,RP,157,,,,,,,3.57,1.23,9.5,0,27,3
+,,,,12,Ivan Herrera,STL,C/DH,158,59,16,60,7,0.273,0.803,,,,,,
+,,,,13,Trey Yesavage,TOR,SP,159,,,,,,,3.72,1.26,10.0,10,0,8
+,,,,14,Matt McLain,CIN,2B,160,60,15,51,13,0.234,0.706,,,,,,
+,,,,15,Brandon Lowe,PIT,2B,161,59,22,65,4,0.243,0.754,,,,,,
+
+12,133,132,Rotation depth and innings floor,1,MacKenzie Gore,TEX,SP,148,,,,,,,3.82,1.26,10.2,14,0,10
+,,,,2,Trevor Rogers,BAL,SP,149,,,,,,,4.20,1.35,7.7,13,0,10
+,,,,3,Yainer Diaz,HOU,C/DH,150,57,19,65,2,0.273,0.763,,,,,,
+,,,,4,Brenton Doyle,COL,OF,151,55,16,56,17,0.245,0.705,,,,,,
+,,,,5,Bubba Chandler,PIT,SP,152,,,,,,,4.30,1.36,8.2,12,0,9
+,,,,6,Shota Imanaga,CHC,SP,153,,,,,,,4.11,1.20,8.2,13,0,9
+,,,,7,Tanner Bibee,CLE,SP,154,,,,,,,4.10,1.27,8.5,16,0,10
+,,,,8,Gavin Williams,CLE,SP,155,,,,,,,4.09,1.35,9.2,15,0,10
+,,,,9,Josh Hader,HOU,RP,156,,,,,,,3.29,1.12,12.3,0,29,3
+,,,,10,Pete Fairbanks,MIA,RP,157,,,,,,,3.57,1.23,9.5,0,27,3
+,,,,11,Ivan Herrera,STL,C/DH,158,59,16,60,7,0.273,0.803,,,,,,
+,,,,12,Trey Yesavage,TOR,SP,159,,,,,,,3.72,1.26,10.0,10,0,8
+,,,,13,Matt McLain,CIN,2B,160,60,15,51,13,0.234,0.706,,,,,,
+,,,,14,Brandon Lowe,PIT,2B,161,59,22,65,4,0.243,0.754,,,,,,
+,,,,15,Spencer Torkelson,DET,1B,162,67,23,72,2,0.228,0.745,,,,,,
+
+13,156,155,Closer two or high-leverage RP,1,Alec Burleson,STL,1B/OF/DH,171,66,20,73,6,0.278,0.789,,,,,,
+,,,,2,Tatsuya Imai,HOU,SP,172,,,,,,,4.37,1.39,8.5,12,0,9
+,,,,3,Christian Walker,HOU,1B,173,60,23,68,3,0.230,0.734,,,,,,
+,,,,4,Carlos Estevez,KC,RP,174,,,,,,,4.40,1.34,8.4,0,28,3
+,,,,5,Jack Flaherty,DET,SP,175,,,,,,,3.89,1.26,9.7,14,0,10
+,,,,6,Kenley Jansen,DET,RP,176,,,,,,,4.06,1.24,9.4,0,23,3
+,,,,7,Cade Horton,CHC,SP,177,,,,,,,4.34,1.33,7.9,10,0,8
+,,,,8,Ezequiel Tovar,COL,SS,178,72,20,75,9,0.263,0.745,,,,,,
+,,,,9,Aaron Nola,PHI,SP,179,,,,,,,3.98,1.22,8.7,16,0,11
+,,,,10,Mike Trout,LAA,OF/DH,180,56,19,51,3,0.232,0.784,,,,,,
+,,,,11,Heliot Ramos,SF,OF,181,64,19,66,6,0.256,0.752,,,,,,
+,,,,12,Sal Stewart,CIN,1B,182,50,15,54,6,0.271,0.789,,,,,,
+,,,,13,Kris Bubic,KC,SP,183,,,,,,,3.91,1.30,8.5,12,0,9
+,,,,14,Ryan Walker,SF,RP,184,,,,,,,3.29,1.19,9.7,0,32,3
+,,,,15,Marcus Semien,NYM,2B,185,72,20,70,9,0.241,0.713,,,,,,
+
+14,157,156,Upside bat bench build,1,Tatsuya Imai,HOU,SP,172,,,,,,,4.37,1.39,8.5,12,0,9
+,,,,2,Christian Walker,HOU,1B,173,60,23,68,3,0.230,0.734,,,,,,
+,,,,3,Carlos Estevez,KC,RP,174,,,,,,,4.40,1.34,8.4,0,28,3
+,,,,4,Jack Flaherty,DET,SP,175,,,,,,,3.89,1.26,9.7,14,0,10
+,,,,5,Kenley Jansen,DET,RP,176,,,,,,,4.06,1.24,9.4,0,23,3
+,,,,6,Cade Horton,CHC,SP,177,,,,,,,4.34,1.33,7.9,10,0,8
+,,,,7,Ezequiel Tovar,COL,SS,178,72,20,75,9,0.263,0.745,,,,,,
+,,,,8,Aaron Nola,PHI,SP,179,,,,,,,3.98,1.22,8.7,16,0,11
+,,,,9,Mike Trout,LAA,OF/DH,180,56,19,51,3,0.232,0.784,,,,,,
+,,,,10,Heliot Ramos,SF,OF,181,64,19,66,6,0.256,0.752,,,,,,
+,,,,11,Sal Stewart,CIN,1B,182,50,15,54,6,0.271,0.789,,,,,,
+,,,,12,Kris Bubic,KC,SP,183,,,,,,,3.91,1.30,8.5,12,0,9
+,,,,13,Ryan Walker,SF,RP,184,,,,,,,3.29,1.19,9.7,0,32,3
+,,,,14,Marcus Semien,NYM,2B,185,72,20,70,9,0.241,0.713,,,,,,
+,,,,15,Zac Gallen,ARI,SP,186,,,,,,,4.24,1.33,8.5,16,0,11
+
+15,180,179,SP streamable depth,1,Daulton Varsho,TOR,OF,196,66,23,65,7,0.226,0.723,,,,,,
+,,,,2,Shane Baz,BAL,SP,197,,,,,,,4.29,1.33,8.8,13,0,9
+,,,,3,Jorge Polanco,NYM,2B/3B/DH,198,58,20,63,5,0.248,0.765,,,,,,
+,,,,4,Konnor Griffin,PIT,SS/OF,199,41,9,39,15,0.259,0.714,,,,,,
+,,,,5,Dylan Crews,WSH,OF,200,41,12,41,16,0.243,0.716,,,,,,
+,,,,6,Munetaka Murakami,CWS,1B/3B,201,75,32,85,8,0.230,0.789,,,,,,
+,,,,7,Wilyer Abreu,BOS,OF,202,55,18,57,7,0.250,0.789,,,,,,
+,,,,8,Andrew Abbott,CIN,SP,203,,,,,,,4.54,1.31,8.3,13,0,9
+,,,,9,Gleyber Torres,DET,2B,204,80,18,66,5,0.260,0.752,,,,,,
+,,,,10,Alejandro Kirk,TOR,C,205,54,14,56,1,0.274,0.786,,,,,,
+,,,,11,Kazuma Okamoto,TOR,1B/3B,206,61,22,68,3,0.248,0.765,,,,,,
+,,,,12,Dennis Santana,PIT,RP,207,,,,,,,4.03,1.32,8.4,0,26,3
+,,,,13,Kerry Carpenter,DET,OF/DH,208,53,20,60,2,0.253,0.783,,,,,,
+,,,,14,Jackson Holliday,BAL,2B/SS,210,57,12,44,13,0.251,0.737,,,,,,
+,,,,15,Isaac Paredes,HOU,3B,211,65,21,60,1,0.248,0.801,,,,,,
+
+16,181,180,Late power target,1,Shane Baz,BAL,SP,197,,,,,,,4.29,1.33,8.8,13,0,9
+,,,,2,Jorge Polanco,NYM,2B/3B/DH,198,58,20,63,5,0.248,0.765,,,,,,
+,,,,3,Konnor Griffin,PIT,SS/OF,199,41,9,39,15,0.259,0.714,,,,,,
+,,,,4,Dylan Crews,WSH,OF,200,41,12,41,16,0.243,0.716,,,,,,
+,,,,5,Munetaka Murakami,CWS,1B/3B,201,75,32,85,8,0.230,0.789,,,,,,
+,,,,6,Wilyer Abreu,BOS,OF,202,55,18,57,7,0.250,0.789,,,,,,
+,,,,7,Andrew Abbott,CIN,SP,203,,,,,,,4.54,1.31,8.3,13,0,9
+,,,,8,Gleyber Torres,DET,2B,204,80,18,66,5,0.260,0.752,,,,,,
+,,,,9,Alejandro Kirk,TOR,C,205,54,14,56,1,0.274,0.786,,,,,,
+,,,,10,Kazuma Okamoto,TOR,1B/3B,206,61,22,68,3,0.248,0.765,,,,,,
+,,,,11,Dennis Santana,PIT,RP,207,,,,,,,4.03,1.32,8.4,0,26,3
+,,,,12,Kerry Carpenter,DET,OF/DH,208,53,20,60,2,0.253,0.783,,,,,,
+,,,,13,Jackson Holliday,BAL,2B/SS,210,57,12,44,13,0.251,0.737,,,,,,
+,,,,14,Isaac Paredes,HOU,3B,211,65,21,60,1,0.248,0.801,,,,,,
+,,,,15,Adolis Garcia,PHI,OF,212,59,22,67,10,0.237,0.730,,,,,,
+
+17,204,203,K/9 SP dart,1,Ramon Laureano,SD,OF,221,48,16,52,7,0.243,0.733,,,,,,
+,,,,2,Gabriel Moreno,ARI,C,222,48,10,50,4,0.280,0.781,,,,,,
+,,,,3,Alec Bohm,PHI,1B/3B,223,61,14,67,3,0.275,0.756,,,,,,
+,,,,4,Francisco Alvarez,NYM,C,224,48,18,50,2,0.241,0.778,,,,,,
+,,,,5,Sal Frelick,MIL,OF,225,51,8,47,13,0.271,0.727,,,,,,
+,,,,6,Andrew Vaughn,MIL,1B,226,55,18,61,1,0.248,0.731,,,,,,
+,,,,7,Otto Lopez,MIA,2B/SS,227,52,10,53,13,0.271,0.723,,,,,,
+,,,,8,Caleb Durbin,BOS,2B/3B,228,51,9,47,18,0.267,0.746,,,,,,
+,,,,9,Samuel Basallo,BAL,C,229,43,16,47,2,0.241,0.747,,,,,,
+,,,,10,Xander Bogaerts,SD,SS,230,59,13,59,14,0.270,0.741,,,,,,
+,,,,11,Brendan Donovan,SEA,2B/SS/OF,231,69,12,53,6,0.274,0.755,,,,,,
+,,,,12,Masyn Winn,STL,SS,232,78,16,68,13,0.261,0.725,,,,,,
+,,,,13,Merrill Kelly,ARI,SP,233,,,,,,,4.12,1.31,8.2,15,0,10
+,,,,14,JJ Wetherholt,STL,2B/3B/SS,234,62,11,42,11,0.255,0.734,,,,,,
+,,,,15,Jack Leiter,TEX,SP,235,,,,,,,4.52,1.37,8.7,11,0,9
+
+18,205,204,Speed specialist,1,Gabriel Moreno,ARI,C,222,48,10,50,4,0.280,0.781,,,,,,
+,,,,2,Alec Bohm,PHI,1B/3B,223,61,14,67,3,0.275,0.756,,,,,,
+,,,,3,Francisco Alvarez,NYM,C,224,48,18,50,2,0.241,0.778,,,,,,
+,,,,4,Sal Frelick,MIL,OF,225,51,8,47,13,0.271,0.727,,,,,,
+,,,,5,Andrew Vaughn,MIL,1B,226,55,18,61,1,0.248,0.731,,,,,,
+,,,,6,Otto Lopez,MIA,2B/SS,227,52,10,53,13,0.271,0.723,,,,,,
+,,,,7,Caleb Durbin,BOS,2B/3B,228,51,9,47,18,0.267,0.746,,,,,,
+,,,,8,Samuel Basallo,BAL,C,229,43,16,47,2,0.241,0.747,,,,,,
+,,,,9,Xander Bogaerts,SD,SS,230,59,13,59,14,0.270,0.741,,,,,,
+,,,,10,Brendan Donovan,SEA,2B/SS/OF,231,69,12,53,6,0.274,0.755,,,,,,
+,,,,11,Masyn Winn,STL,SS,232,78,16,68,13,0.261,0.725,,,,,,
+,,,,12,Merrill Kelly,ARI,SP,233,,,,,,,4.12,1.31,8.2,15,0,10
+,,,,13,JJ Wetherholt,STL,2B/3B/SS,234,62,11,42,11,0.255,0.734,,,,,,
+,,,,14,Jack Leiter,TEX,SP,235,,,,,,,4.52,1.37,8.7,11,0,9
+,,,,15,Kevin McGonigle,DET,SS,236,64,12,44,10,0.257,0.758,,,,,,
+
+19,228,227,RP depth/speculative saves,1,Bryce Miller,SEA,SP,245,,,,,,,4.19,1.27,8.0,11,0,9
+,,,,2,Mickey Moniak,COL,OF,246,48,17,55,7,0.258,0.764,,,,,,
+,,,,3,Ryne Nelson,ARI,SP/RP,247,,,,,,,4.31,1.32,7.5,12,0,10
+,,,,4,Carter Jensen,KC,C,248,35,10,36,3,0.248,0.748,,,,,,
+,,,,5,Carlos Correa,HOU,3B/SS,249,59,16,62,1,0.268,0.771,,,,,,
+,,,,6,Ryan Weathers,NYY,SP,250,,,,,,,3.84,1.27,8.9,9,0,8
+,,,,7,J.T. Realmuto,PHI,C,251,43,12,45,5,0.246,0.704,,,,,,
+,,,,8,Kodai Senga,NYM,SP,252,,,,,,,3.92,1.33,9.0,10,0,9
+,,,,9,Josh Lowe,LAA,OF,253,47,13,48,17,0.244,0.716,,,,,,
+,,,,10,Casey Mize,DET,SP,254,,,,,,,4.06,1.27,8.0,12,0,9
+,,,,11,Nolan Schanuel,LAA,1B,255,68,16,62,6,0.270,0.783,,,,,,
+,,,,12,Shane Smith,CWS,SP,256,,,,,,,4.37,1.35,8.2,13,0,9
+,,,,13,Connelly Early,BOS,SP,257,,,,,,,3.69,1.29,9.0,2,0,2
+,,,,14,Shane Bieber,TOR,SP,258,,,,,,,3.74,1.21,8.4,10,0,8
+,,,,15,Jose Soriano,LAA,SP,259,,,,,,,3.68,1.38,8.4,16,0,11
+
+20,229,228,Injury stash/high-upside role bet,1,Mickey Moniak,COL,OF,246,48,17,55,7,0.258,0.764,,,,,,
+,,,,2,Ryne Nelson,ARI,SP/RP,247,,,,,,,4.31,1.32,7.5,12,0,10
+,,,,3,Carter Jensen,KC,C,248,35,10,36,3,0.248,0.748,,,,,,
+,,,,4,Carlos Correa,HOU,3B/SS,249,59,16,62,1,0.268,0.771,,,,,,
+,,,,5,Ryan Weathers,NYY,SP,250,,,,,,,3.84,1.27,8.9,9,0,8
+,,,,6,J.T. Realmuto,PHI,C,251,43,12,45,5,0.246,0.704,,,,,,
+,,,,7,Kodai Senga,NYM,SP,252,,,,,,,3.92,1.33,9.0,10,0,9
+,,,,8,Josh Lowe,LAA,OF,253,47,13,48,17,0.244,0.716,,,,,,
+,,,,9,Casey Mize,DET,SP,254,,,,,,,4.06,1.27,8.0,12,0,9
+,,,,10,Nolan Schanuel,LAA,1B,255,68,16,62,6,0.270,0.783,,,,,,
+,,,,11,Shane Smith,CWS,SP,256,,,,,,,4.37,1.35,8.2,13,0,9
+,,,,12,Connelly Early,BOS,SP,257,,,,,,,3.69,1.29,9.0,2,0,2
+,,,,13,Shane Bieber,TOR,SP,258,,,,,,,3.74,1.21,8.4,10,0,8
+,,,,14,Jose Soriano,LAA,SP,259,,,,,,,3.68,1.38,8.4,16,0,11
+,,,,15,Noah Cameron,KC,SP,260,,,,,,,4.31,1.35,7.4,12,0,9
+
+21,252,251,Prospect upside swing,1,Sean Manaea,NYM,SP/RP,269,,,,,,,3.82,1.22,9.4,8,0,8
+,,,,2,Brett Baty,NYM,2B/3B,270,41,14,44,4,0.248,0.736,,,,,,
+,,,,3,Parker Messick,CLE,SP,271,,,,,,,4.08,1.32,8.0,12,0,8
+,,,,4,Mark Vientos,NYM,3B/DH,272,53,20,60,1,0.248,0.767,,,,,,
+,,,,5,Jung Hoo Lee,SF,OF,273,60,9,46,9,0.273,0.745,,,,,,
+,,,,6,Justin Crawford,PHI,OF,274,42,5,35,18,0.267,0.701,,,,,,
+,,,,7,Kyle Teel,CWS,C,275,35,9,33,4,0.248,0.725,,,,,,
+,,,,8,Robert Suarez,ATL,RP,276,,,,,,,3.51,1.20,9.8,0,8,4
+,,,,9,Robert Garcia,TEX,RP,277,,,,,,,3.53,1.25,9.8,0,20,3
+,,,,10,Roki Sasaki,LAD,SP,278,,,,,,,4.21,1.34,8.6,7,0,7
+,,,,11,Miguel Vargas,CWS,1B/3B,279,57,15,56,6,0.238,0.735,,,,,,
+,,,,12,Jordan Westburg,BAL,2B/3B,280,54,17,55,4,0.264,0.783,,,,,,
+,,,,13,Matt Shaw,CHC,3B,281,27,7,26,8,0.244,0.729,,,,,,
+,,,,14,David Peterson,NYM,SP,282,,,,,,,3.65,1.34,8.0,16,0,11
+,,,,15,Andres Gimenez,TOR,2B/SS,283,60,12,55,18,0.253,0.694,,,,,,
+
+22,253,252,Bench flexibility,1,Brett Baty,NYM,2B/3B,270,41,14,44,4,0.248,0.736,,,,,,
+,,,,2,Parker Messick,CLE,SP,271,,,,,,,4.08,1.32,8.0,12,0,8
+,,,,3,Mark Vientos,NYM,3B/DH,272,53,20,60,1,0.248,0.767,,,,,,
+,,,,4,Jung Hoo Lee,SF,OF,273,60,9,46,9,0.273,0.745,,,,,,
+,,,,5,Justin Crawford,PHI,OF,274,42,5,35,18,0.267,0.701,,,,,,
+,,,,6,Kyle Teel,CWS,C,275,35,9,33,4,0.248,0.725,,,,,,
+,,,,7,Robert Suarez,ATL,RP,276,,,,,,,3.51,1.20,9.8,0,8,4
+,,,,8,Robert Garcia,TEX,RP,277,,,,,,,3.53,1.25,9.8,0,20,3
+,,,,9,Roki Sasaki,LAD,SP,278,,,,,,,4.21,1.34,8.6,7,0,7
+,,,,10,Miguel Vargas,CWS,1B/3B,279,57,15,56,6,0.238,0.735,,,,,,
+,,,,11,Jordan Westburg,BAL,2B/3B,280,54,17,55,4,0.264,0.783,,,,,,
+,,,,12,Matt Shaw,CHC,3B,281,27,7,26,8,0.244,0.729,,,,,,
+,,,,13,David Peterson,NYM,SP,282,,,,,,,3.65,1.34,8.0,16,0,11
+,,,,14,Andres Gimenez,TOR,2B/SS,283,60,12,55,18,0.253,0.694,,,,,,
+,,,,15,Willi Castro,COL,2B/3B/OF,284,61,12,52,13,0.251,0.723,,,,,,
+
+23,276,275,Final ceiling play,1,Mitch Keller,PIT,SP,286,,,,,,,4.35,1.32,7.8,15,0,10
+,,,,2,Cedric Mullins II,TB,OF,287,44,12,43,16,0.227,0.683,,,,,,
+,,,,3,Giancarlo Stanton,NYY,OF/DH,288,45,21,53,1,0.230,0.776,,,,,,
+,,,,4,Zebby Matthews,MIN,SP,289,,,,,,,4.03,1.23,8.4,7,0,6
+,,,,5,Braxton Ashcraft,PIT,SP/RP,290,,,,,,,4.08,1.33,7.6,10,0,8
+,,,,6,Andrew Painter,PHI,SP,291,,,,,,,4.66,1.40,7.0,8,0,7
+,,,,7,Will Warren,NYY,SP,292,,,,,,,4.02,1.30,8.8,9,0,8
+,,,,8,Dillon Dingler,DET,C,293,36,10,39,1,0.245,0.709,,,,,,
+,,,,9,Matt Wallner,MIN,OF,294,52,19,56,4,0.229,0.777,,,,,,
+,,,,10,Yusei Kikuchi,LAA,SP,295,,,,,,,4.10,1.29,9.2,15,0,10
+,,,,11,Jasson Dominguez,NYY,OF,296,13,4,13,5,0.251,0.735,,,,,,
+,,,,12,Brady Singer,CIN,SP,297,,,,,,,4.37,1.32,8.4,14,0,10
+,,,,13,Austin Wells,NYY,C,298,47,16,49,5,0.229,0.723,,,,,,
+,,,,14,Reid Detmers,LAA,RP,299,,,,,,,4.03,1.29,9.5,12,0,8
+,,,,15,Bailey Ober,MIN,SP,300,,,,,,,4.40,1.25,8.1,13,0,9
+

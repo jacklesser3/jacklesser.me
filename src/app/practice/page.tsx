@@ -56,6 +56,19 @@ export default function PracticePage() {
           <Text variant="lead">
             Where philosophy becomes action. The daily work of integration.
           </Text>
+          <div className="mt-8">
+            <Card variant="elevated">
+              <CardContent>
+                <H3 className="mb-3">FlowState</H3>
+                <Text variant="muted" className="mb-5">
+                  Build and animate yoga class flows with Surya Namaskar
+                  templates, pranayama cues, and integrated wisdom from yogic
+                  philosophy, spirituality, and modern science.
+                </Text>
+                <Button href="/practice/sequencer">Open FlowState</Button>
+              </CardContent>
+            </Card>
+          </div>
         </Container>
       </section>
 

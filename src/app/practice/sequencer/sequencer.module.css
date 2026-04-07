@@ -1,0 +1,350 @@
+.pageShell {
+  position: relative;
+  overflow: clip;
+  background: #f8f6f2;
+}
+
+.pageShell::before {
+  content: none;
+}
+
+.stageCard,
+.panelCard,
+.threadCard,
+.breathCard,
+.metricsCard {
+  position: relative;
+  border-radius: 1rem;
+  border: 1px solid rgba(89, 100, 110, 0.22);
+  background: rgba(250, 248, 244, 0.86);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 14px 30px rgba(41, 47, 52, 0.09);
+}
+
+.stageCard {
+  padding: 1.25rem;
+}
+
+.stageHeader {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.subtitleText {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-accent-forge);
+}
+
+.counterPill {
+  background: rgba(107, 123, 138, 0.15);
+  border: 1px solid rgba(107, 123, 138, 0.4);
+  border-radius: 999px;
+  color: var(--color-text-secondary);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.42rem 0.68rem;
+}
+
+.stageBody {
+  border-radius: 0.9rem;
+  padding: 1rem;
+  min-height: 390px;
+  display: grid;
+  place-items: center;
+  background: #f3efe8;
+}
+
+.figureCanvas {
+  width: min(100%, 520px);
+  height: auto;
+  filter: drop-shadow(0 8px 16px rgba(52, 59, 69, 0.18));
+}
+
+.matt {
+  fill: rgba(96, 117, 136, 0.32);
+}
+
+.haloOuter {
+  fill: none;
+  stroke: rgba(109, 99, 78, 0.2);
+  stroke-width: 0.8;
+}
+
+.haloInner {
+  fill: none;
+  stroke: rgba(109, 99, 78, 0.25);
+  stroke-width: 0.6;
+  stroke-dasharray: 1 2;
+}
+
+.figureLine {
+  stroke: #3d3a35;
+}
+
+.figureHead {
+  fill: #d7c49a;
+  stroke: rgba(51, 44, 34, 0.58);
+  stroke-width: 1;
+}
+
+.figureCore {
+  fill: #6b7b8a;
+}
+
+.transportRow {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, auto) 1fr;
+  gap: 0.65rem;
+  align-items: center;
+}
+
+.transportButton {
+  border-radius: 0.55rem;
+  border: 1px solid rgba(83, 99, 118, 0.5);
+  padding: 0.45rem 0.75rem;
+  font-size: 0.86rem;
+  color: var(--color-text-primary);
+  background: rgba(245, 243, 238, 0.95);
+  transition: background var(--transition-fast);
+}
+
+.transportButton:hover {
+  background: rgba(237, 232, 223, 0.95);
+}
+
+.progressWrap {
+  position: relative;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(96, 117, 136, 0.2);
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #f4c983 0%, #7692ae 100%);
+  transition: none;
+}
+
+.sidePanel {
+  display: grid;
+  gap: 0.8rem;
+  align-content: start;
+}
+
+.threadCard,
+.breathCard,
+.metricsCard {
+  padding: 1rem;
+}
+
+.sourceTag {
+  color: var(--color-accent-forge);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.breathRow {
+  margin-top: 0.6rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.breathOrb {
+  width: 2.45rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 30%, #f8e4bc 0%, #6d88a5 100%);
+  box-shadow: 0 0 0 0 rgba(109, 136, 165, 0.45);
+}
+
+.panelCard {
+  padding: 1.1rem;
+}
+
+.panelHeader {
+  margin-bottom: 0.85rem;
+}
+
+.stepGrid {
+  display: grid;
+  gap: 0.75rem;
+  max-height: 820px;
+  overflow: auto;
+  padding-right: 0.3rem;
+}
+
+.stepCard {
+  border: 1px solid rgba(97, 112, 129, 0.28);
+  border-radius: 0.8rem;
+  background: rgba(248, 245, 239, 0.95);
+  padding: 0.78rem;
+}
+
+.stepCardActive {
+  border-color: rgba(101, 130, 162, 0.68);
+  box-shadow: 0 0 0 2px rgba(108, 140, 173, 0.2);
+}
+
+.stepTitle {
+  font-size: 0.98rem;
+  color: var(--color-text-primary);
+  text-align: left;
+  font-weight: 600;
+}
+
+.stepTag {
+  font-size: 0.69rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  border-radius: 999px;
+  border: 1px solid rgba(96, 117, 136, 0.36);
+  color: var(--color-text-secondary);
+  padding: 0.28rem 0.55rem;
+}
+
+.stepActions {
+  margin-top: 0.65rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.stepActions button {
+  border: 1px solid rgba(83, 99, 118, 0.4);
+  border-radius: 0.45rem;
+  background: rgba(249, 247, 243, 0.96);
+  padding: 0.32rem 0.62rem;
+  font-size: 0.8rem;
+  color: var(--color-text-primary);
+}
+
+.stepActions button:disabled {
+  opacity: 0.45;
+}
+
+.formField {
+  display: grid;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+}
+
+.formField input,
+.formField select,
+.formField textarea {
+  width: 100%;
+  border: 1px solid rgba(85, 101, 118, 0.38);
+  border-radius: 0.55rem;
+  padding: 0.5rem 0.6rem;
+  font-size: 0.9rem;
+  background: rgba(250, 248, 244, 0.97);
+  color: var(--color-text-primary);
+}
+
+.formField textarea {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  resize: vertical;
+}
+
+.poseBankList {
+  margin-top: 0.65rem;
+  max-height: 310px;
+  overflow: auto;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.datasetCard {
+  border: 1px solid rgba(92, 109, 127, 0.28);
+  border-radius: 0.7rem;
+  background: rgba(248, 245, 239, 0.95);
+  padding: 0.62rem 0.75rem;
+  margin-bottom: 0.7rem;
+}
+
+.poseBankItem {
+  border: 1px solid rgba(92, 109, 127, 0.28);
+  border-radius: 0.7rem;
+  padding: 0.55rem 0.7rem;
+  background: rgba(249, 246, 241, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.7rem;
+}
+
+.poseBankItem button,
+.secondaryButton {
+  border-radius: 0.5rem;
+  border: 1px solid rgba(93, 110, 128, 0.45);
+  padding: 0.42rem 0.68rem;
+  font-size: 0.8rem;
+  color: var(--color-text-primary);
+  background: rgba(248, 245, 239, 1);
+}
+
+.poseBankTitle {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.poseBankMeta {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(95, 111, 129, 0.5), transparent);
+  margin: 0.9rem 0;
+}
+
+.inlineLink {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+}
+
+.inlineLink:hover {
+  color: var(--color-text-primary);
+}
+
+.errorText {
+  color: #a83434;
+  font-size: 0.83rem;
+}
+
+@media (max-width: 1024px) {
+  .stageBody {
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 640px) {
+  .stageCard,
+  .panelCard,
+  .threadCard,
+  .breathCard,
+  .metricsCard {
+    border-radius: 0.8rem;
+  }
+
+  .transportRow {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .progressWrap {
+    grid-column: 1 / -1;
+  }
+}

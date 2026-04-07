@@ -41,6 +41,17 @@
   --radius-md: 0.5rem;
   --radius-lg: 0.75rem;
   --radius-xl: 1rem;
+
+  /* Draft War Room Colors */
+  --background: #F8F6F2;
+  --background-elevated: #FFFFFF;
+  --background-hover: #E8E4DE;
+  --text-primary: #2A2520;
+  --text-secondary: #5C5650;
+  --border-color: #D4CFC8;
+  --accent-blue: #2196F3;
+  --accent-green: #4CAF50;
+  --error-color: #f44336;
 }
 
 /* Tailwind Theme Extension */

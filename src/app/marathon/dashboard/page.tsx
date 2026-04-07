@@ -68,6 +68,10 @@ export default function DashboardPage() {
     router.push(`/marathon/week/${weekNumber}`);
   };
 
+  const handleWorkoutClick = (workout: Workout) => {
+    handleCompleteWorkout(workout.id);
+  };
+
   if (!isLoaded || !plan || !profile || !currentWeek) {
     return <div className={styles.loading}>Loading your training plan...</div>;
   }
@@ -193,7 +197,7 @@ export default function DashboardPage() {
           <div className={styles.weekCalendarContainer}>
             <CompactWeekView
               week={currentWeek}
-              onWorkoutClick={handleCompleteWorkout}
+              onWorkoutClick={handleWorkoutClick}
             />
           </div>
         </section>

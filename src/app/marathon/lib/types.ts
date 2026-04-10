@@ -12,7 +12,8 @@ export interface UserProfile {
   createdAt: number;
   currentFitness: FitnessLevel;
   longestRun: number; // miles in past 3 months
-  weeksAvailable: number; // weeks until race (calculated from today)
+  startDate: Date; // custom training start date
+  weeksAvailable: number; // weeks until race (calculated from start date)
   daysPerWeek: number; // 3-6 training days
   goalFinishTime: GoalFinishTime;
   hasInjuryHistory: boolean;

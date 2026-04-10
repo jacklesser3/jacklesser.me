@@ -158,6 +158,172 @@ export const TRAINING_TIPS: TrainingTip[] = [
     content: 'Break the race into chunks: get to mile 10, then halfway, then mile 20. When it gets hard (and it will), focus on the next mile marker. You\'ve trained for this.',
     relevantPhases: ['Taper'],
   },
+  {
+    id: 'race-day-taper-madness',
+    category: 'race_day',
+    title: 'Taper Madness is Real',
+    content: 'You\'ll feel weird during taper. Sluggish one day, antsy the next. You might even feel phantom aches. This is completely normal! Your body is absorbing months of training. Trust it.',
+    relevantPhases: ['Taper'],
+  },
+  {
+    id: 'race-day-excitement',
+    category: 'race_day',
+    title: 'Embrace the Nerves',
+    content: 'Pre-race jitters mean you care. Channel that energy into excitement. You\'ve put in the work. Race day is your victory lap. Smile at the start line—you earned this moment.',
+    relevantPhases: ['Taper'],
+  },
+
+  // Mental Toughness & Mindset
+  {
+    id: 'mental-bad-runs',
+    category: 'pacing',
+    title: 'Bad Runs Happen to Everyone',
+    content: 'Some days your legs feel like concrete. It happens. A bad workout doesn\'t erase weeks of training. Learn from it, shake it off, and show up for the next one. Consistency > perfection.',
+    relevantPhases: ['Build', 'Peak'],
+  },
+  {
+    id: 'mental-comparison',
+    category: 'pacing',
+    title: 'Don\'t Compare Your Chapter 1 to Someone\'s Chapter 20',
+    content: 'Everyone at the marathon worked to get there. Your pace is YOUR pace. There\'s no prize for finishing first in training. The only person you\'re racing is yesterday\'s version of yourself.',
+    relevantPhases: ['Base Building', 'Build'],
+  },
+  {
+    id: 'mental-why',
+    category: 'race_day',
+    title: 'Remember Your Why',
+    content: 'When training gets tough (and it will), remember why you started. Write it down. Put it somewhere you\'ll see it. At mile 20, when your legs are screaming, your "why" will carry you home.',
+    relevantPhases: ['Peak', 'Taper'],
+  },
+  {
+    id: 'mental-wall',
+    category: 'race_day',
+    title: 'The Wall is a Liar',
+    content: 'Around mile 20, your brain will try to convince you to stop. It\'s lying. You\'re not actually dying. Your body has way more in reserve than your brain thinks. This is where training pays off.',
+    relevantPhases: ['Peak', 'Taper'],
+  },
+
+  // Weather & Conditions
+  {
+    id: 'weather-heat',
+    category: 'pacing',
+    title: 'Heat Slows Everyone Down',
+    content: 'Running in summer heat? Slow down 30-60 seconds per mile. Run early morning or late evening. Hydrate more. Don\'t chase pace in the heat—chase effort. Heat training makes you stronger.',
+    relevantPhases: ['Build', 'Peak'],
+  },
+  {
+    id: 'weather-rain',
+    category: 'pacing',
+    title: 'Embrace Running in the Rain',
+    content: 'You can\'t control race day weather. Practice running in the rain during training. Wear a hat to keep water out of your eyes. Body Glide prevents chafing. You\'ll feel like a badass.',
+    relevantPhases: ['Build', 'Peak'],
+  },
+  {
+    id: 'weather-winter',
+    category: 'injury_prevention',
+    title: 'Cold Weather Running',
+    content: 'Layer up! You should feel slightly cool at the start—you\'ll warm up fast. Cover your ears and hands. Do a longer warm-up in cold weather. And yes, your nose will run. Embrace the snot rocket.',
+    relevantPhases: ['Base Building', 'Build'],
+  },
+
+  // Form & Technique
+  {
+    id: 'form-basics',
+    category: 'injury_prevention',
+    title: 'Running Form Fundamentals',
+    content: 'Don\'t overthink it, but: keep your shoulders relaxed, arms at 90 degrees, and land with your foot under your body. Run tall. Small tweaks make big differences over 26.2 miles.',
+    relevantPhases: ['Base Building'],
+  },
+  {
+    id: 'form-breathing',
+    category: 'zone2',
+    title: 'Breathing Patterns',
+    content: 'Breathe from your belly, not your chest. Try rhythmic breathing: 3 steps inhale, 2 steps exhale. This feels weird at first but becomes natural. Proper breathing = more oxygen = better running.',
+    relevantPhases: ['Base Building', 'Build'],
+  },
+  {
+    id: 'form-cadence',
+    category: 'injury_prevention',
+    title: 'Optimal Running Cadence',
+    content: 'Most efficient runners take 170-180 steps per minute. Shorter, quicker strides reduce impact and injury risk. Count your steps for 30 seconds and multiply by 2. Adjust from there.',
+    relevantPhases: ['Build'],
+  },
+
+  // Sleep & Recovery
+  {
+    id: 'sleep-adaptation',
+    category: 'recovery',
+    title: 'Sleep is Your Secret Weapon',
+    content: 'Adaptation happens when you sleep, not when you run. Aim for 7-9 hours, especially during peak training. Can\'t get enough? Even a 20-minute nap helps. Your marathon is won in bed.',
+    relevantPhases: ['Build', 'Peak'],
+  },
+  {
+    id: 'recovery-inflammation',
+    category: 'recovery',
+    title: 'Natural Anti-Inflammatories',
+    content: 'Tart cherry juice, turmeric, ginger, and omega-3s reduce inflammation naturally. Eat berries, fatty fish, and leafy greens. Food is medicine. Your body will thank you.',
+    relevantPhases: ['Peak'],
+  },
+  {
+    id: 'recovery-massage',
+    category: 'recovery',
+    title: 'Self-Massage Techniques',
+    content: 'Foam rolling, massage guns, or even a tennis ball on your feet all help. Spend 10 minutes post-run working out knots. It\'s not fun, but it prevents bigger problems later.',
+    relevantPhases: ['Build', 'Peak'],
+  },
+
+  // Fun & Motivation
+  {
+    id: 'fun-playlist',
+    category: 'pacing',
+    title: 'Music & Podcasts',
+    content: 'Running alone for hours? Make a killer playlist. Or queue up podcasts for long runs. But practice running without music sometimes—race day crowds are loud and you might not want earbuds.',
+    relevantPhases: ['Build', 'Peak'],
+  },
+  {
+    id: 'fun-running-community',
+    category: 'zone2',
+    title: 'Find Your Running Crew',
+    content: 'Solo training is fine, but running with others makes hard workouts easier. Join a local running club or find a training partner. Shared suffering creates unbreakable bonds.',
+    relevantPhases: ['Base Building', 'Build'],
+  },
+  {
+    id: 'fun-celebrate-milestones',
+    category: 'recovery',
+    title: 'Celebrate the Small Wins',
+    content: 'First double-digit run? New distance PR? Completed a recovery week? Celebrate it! Training is hard. Acknowledging progress keeps you motivated. You\'re doing something most people never will.',
+    relevantPhases: ['Build', 'Peak'],
+  },
+  {
+    id: 'fun-post-race',
+    category: 'race_day',
+    title: 'You\'ll Earn That Medal',
+    content: 'After 26.2 miles, you get a medal, a Mylar blanket, and probably free beer. You\'ll waddle like a penguin for 3 days. Stairs will be your nemesis. It\'s all worth it. You\'re a marathoner.',
+    relevantPhases: ['Taper'],
+  },
+
+  // Common Mistakes
+  {
+    id: 'mistake-too-fast',
+    category: 'pacing',
+    title: 'The #1 Beginner Mistake',
+    content: 'Running easy days too hard. Your ego wants to go fast. Your training demands you go slow. Easy runs build your engine. Hard runs just wear you down. Learn the difference.',
+    relevantPhases: ['Base Building'],
+  },
+  {
+    id: 'mistake-skipping-rest',
+    category: 'recovery',
+    title: 'Rest Days Aren\'t Optional',
+    content: 'You can\'t outrun bad recovery. Skipping rest days doesn\'t make you tougher—it makes you injured. The work happens during rest. Trust the plan.',
+    relevantPhases: ['Build', 'Peak'],
+  },
+  {
+    id: 'mistake-new-gear',
+    category: 'race_day',
+    title: 'Nothing New on Race Day',
+    content: 'New shoes? New shorts? New gel flavor? Don\'t do it. Race day is not the time to experiment. Everything should be tested in training. Even your socks. Especially your socks.',
+    relevantPhases: ['Taper'],
+  },
 ];
 
 /**

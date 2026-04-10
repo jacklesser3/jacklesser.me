@@ -24,24 +24,24 @@ import { NYC_MARATHON_2026 } from './utils';
  * Main entry point: Generate complete training plan
  */
 export function generateTrainingPlan(profile: UserProfile): TrainingPlan {
-  const raceDate = NYC_MARATHON_2026;
-  const weeksToRace = profile.weeksAvailable;
+  const weeksToRace = 24; // Fixed 24-week marathon plan
+  const startDate = profile.startDate;
+
+  // Calculate race date from start date
+  const raceDate = new Date(startDate);
+  raceDate.setDate(raceDate.getDate() + (weeksToRace * 7));
 
   // Determine starting mileage based on fitness level
   const startingMileage = determineStartingMileage(profile);
 
-  // Define training phases
-  const phases = defineTrainingPhases(weeksToRace);
+  // Define training phases (24-week structured plan)
+  const phases = defineMarathonPhases();
 
-  // Generate weekly mileage progression
-  const weeklyMileages = generateWeeklyProgression(
+  // Generate weekly mileage progression for full marathon
+  const weeklyMileages = generateMarathonProgression(
     startingMileage,
-    weeksToRace,
     profile.hasInjuryHistory
   );
-
-  // Calculate start date
-  const startDate = calculateStartDate(raceDate, weeksToRace);
 
   // Generate weeks with workouts
   const weeks = weeklyMileages.map((mileage, index) => {
@@ -108,53 +108,103 @@ function determineStartingMileage(profile: UserProfile): number {
 }
 
 /**
- * Define training phases based on total weeks
+ * Define structured 24-week marathon training phases
+ * Matches the Sub-5:00 First Timer plan structure
  */
-function defineTrainingPhases(totalWeeks: number): TrainingPhase[] {
-  // Taper is always last 3 weeks
-  const taperStart = totalWeeks - 2;
-
-  // Peak is 3-4 weeks before taper
-  const peakDuration = Math.min(4, Math.floor(totalWeeks * 0.2));
-  const peakStart = taperStart - peakDuration;
-
-  // Build phase
-  const buildDuration = Math.min(8, Math.floor(totalWeeks * 0.3));
-  const buildStart = peakStart - buildDuration;
-
-  // Base building is everything before build
-  const baseStart = 1;
-
+function defineMarathonPhases(): TrainingPhase[] {
   return [
     {
       name: 'Base Building',
-      startWeek: baseStart,
-      endWeek: buildStart - 1,
-      description: 'Building aerobic foundation with easy runs',
-      weeklyMileageRange: [8, 30],
+      startWeek: 1,
+      endWeek: 4,
+      description: 'Build a running habit and aerobic base. Every run is easy pace. No workouts.',
+      weeklyMileageRange: [15, 20],
     },
     {
       name: 'Build',
-      startWeek: buildStart,
-      endWeek: peakStart - 1,
-      description: 'Adding tempo runs and intervals',
-      weeklyMileageRange: [25, 45],
+      startWeek: 5,
+      endWeek: 8,
+      description: 'Start pushing long runs further and introduce structured workouts. Still 80% easy.',
+      weeklyMileageRange: [20, 28],
     },
     {
       name: 'Peak',
-      startWeek: peakStart,
-      endWeek: taperStart - 1,
-      description: 'Highest mileage and longest runs',
-      weeklyMileageRange: [35, 50],
+      startWeek: 9,
+      endWeek: 14,
+      description: 'Long runs grow to 14-16 miles. Weekly mileage reaches first plateau.',
+      weeklyMileageRange: [24, 35],
+    },
+    {
+      name: 'Peak',
+      startWeek: 15,
+      endWeek: 20,
+      description: 'Peak mileage and longest runs (18-20 miles). The hardest block.',
+      weeklyMileageRange: [28, 40],
     },
     {
       name: 'Taper',
-      startWeek: taperStart,
-      endWeek: totalWeeks,
-      description: 'Reducing volume, maintaining intensity',
-      weeklyMileageRange: [15, 35],
+      startWeek: 21,
+      endWeek: 24,
+      description: 'Reducing volume significantly. Trust the process. Race week included.',
+      weeklyMileageRange: [8, 25],
     },
   ];
+}
+
+/**
+ * Generate 24-week marathon mileage progression
+ * Exactly matches the Sub-5:00 First Timer plan
+ */
+function generateMarathonProgression(
+  startingMileage: number,
+  hasInjuryHistory: boolean
+): number[] {
+  // Exact weekly mileages from the example plan
+  const baseMileages = [
+    // Phase 1: Foundation (Weeks 1-4)
+    15, 17, 20, 15,
+    // Phase 2: Aerobic Development (Weeks 5-8)
+    22, 24, 28, 20,
+    // Phase 3: Endurance Building (Weeks 9-14)
+    28, 30, 33, 24, 33, 35,
+    // Phase 4: Peak Training (Weeks 15-20)
+    35, 38, 40, 28, 36, 32,
+    // Phase 5: Taper (Weeks 21-23)
+    25, 20, 18,
+    // Phase 6: Race Week (Week 24)
+    8
+  ];
+
+  // For beginners, use the plan as-is
+  // Only reduce slightly if injury history
+  const injuryFactor = hasInjuryHistory ? 0.95 : 1.0;
+
+  return baseMileages.map(miles => {
+    return roundToHalf(miles * injuryFactor);
+  });
+}
+
+/**
+ * Get exact long run distances from the Sub-5:00 plan
+ * Peak long run is 20 miles in Week 17
+ */
+function getMarathonLongRunDistance(weekNumber: number): number {
+  const longRunProgression = [
+    // Phase 1: Foundation (Weeks 1-4)
+    5, 6, 7, 5,
+    // Phase 2: Aerobic Development (Weeks 5-8)
+    8, 9, 10, 6,
+    // Phase 3: Endurance Building (Weeks 9-14)
+    11, 12, 14, 8, 15, 16,
+    // Phase 4: Peak Training (Weeks 15-20)
+    16, 18, 20, 10, 18, 14,  // Week 17 = 20 miles (PEAK)
+    // Phase 5: Taper (Weeks 21-23)
+    12, 10, 8,
+    // Phase 6: Race Week (Week 24)
+    26.2  // Race day - full marathon
+  ];
+
+  return longRunProgression[weekNumber - 1] || 10;
 }
 
 /**
@@ -165,64 +215,6 @@ function getPhaseForWeek(weekNumber: number, phases: TrainingPhase[]): TrainingP
   return phase?.name || 'Base Building';
 }
 
-/**
- * Generate weekly mileage progression with 10% rule and recovery weeks
- */
-function generateWeeklyProgression(
-  startingMileage: number,
-  totalWeeks: number,
-  hasInjuryHistory: boolean
-): number[] {
-  const mileages: number[] = [];
-  let currentMileage = startingMileage;
-
-  // Target peak mileage (conservative for beginners)
-  const targetPeak = startingMileage * (hasInjuryHistory ? 2.2 : 2.5);
-
-  // Calculate how many weeks until peak
-  const taperWeeks = 3;
-  const weeksUntilPeak = totalWeeks - taperWeeks - 1;
-
-  for (let week = 1; week <= totalWeeks; week++) {
-    // Recovery week every 4th week (reduce by 25%)
-    const isRecoveryWeek = week % 4 === 0 && week < totalWeeks - taperWeeks;
-
-    if (isRecoveryWeek) {
-      currentMileage = roundToHalf(currentMileage * 0.75);
-      mileages.push(currentMileage);
-      continue;
-    }
-
-    // Taper weeks (final 3 weeks)
-    if (week > totalWeeks - taperWeeks) {
-      const weeksFromRace = totalWeeks - week + 1;
-      if (weeksFromRace === 3) {
-        currentMileage = roundToHalf(currentMileage * 0.7); // -30%
-      } else if (weeksFromRace === 2) {
-        currentMileage = roundToHalf(currentMileage * 0.6); // -40% of previous
-      } else if (weeksFromRace === 1) {
-        currentMileage = roundToHalf(currentMileage * 0.5); // -50% of previous
-      }
-      mileages.push(currentMileage);
-      continue;
-    }
-
-    // Build weeks: 10% increase (or 8% if injury history)
-    const increaseRate = hasInjuryHistory ? 1.08 : 1.10;
-
-    // Don't exceed target peak too early
-    if (week < weeksUntilPeak) {
-      currentMileage = Math.min(
-        roundToHalf(currentMileage * increaseRate),
-        targetPeak
-      );
-    }
-
-    mileages.push(currentMileage);
-  }
-
-  return mileages;
-}
 
 /**
  * Generate a single training week
@@ -286,12 +278,13 @@ function generateWeekWorkouts(
 ): Workout[] {
   const workouts: Workout[] = [];
 
-  // Determine long run distance (30-35% of weekly mileage)
-  let longRunMiles = roundToHalf(totalMileage * 0.33);
+  // Determine long run distance based on 24-week progression
+  let longRunMiles = getMarathonLongRunDistance(weekNumber);
 
-  // Cap long run progression
-  const maxLongRun = phase === 'Peak' ? 22 : phase === 'Build' ? 18 : 14;
-  longRunMiles = Math.min(longRunMiles, maxLongRun);
+  // Adjust for injury history
+  if (hasInjuryHistory) {
+    longRunMiles = roundToHalf(longRunMiles * 0.95);
+  }
 
   // Remaining mileage to distribute
   const remainingMiles = totalMileage - longRunMiles;

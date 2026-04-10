@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useTrainingState } from '../lib/training-state';
-import { calculateWeeksToRace } from '../lib/utils';
 import type { FitnessLevel, GoalFinishTime } from '../lib/types';
 import styles from '../marathon.module.css';
 
@@ -12,11 +11,12 @@ export default function OnboardingPage() {
   const { createProfile } = useTrainingState();
 
   const [step, setStep] = useState(1);
-  const totalSteps = 7;
+  const totalSteps = 8;
 
   // Form state
   const [currentFitness, setCurrentFitness] = useState<FitnessLevel>('beginner');
   const [longestRun, setLongestRun] = useState<string>('');
+  const [startDate, setStartDate] = useState<string>('');
   const [daysPerWeek, setDaysPerWeek] = useState<number>(4);
   const [goalFinishTime, setGoalFinishTime] = useState<GoalFinishTime>('finish');
   const [hasInjuryHistory, setHasInjuryHistory] = useState<boolean>(false);
@@ -35,12 +35,14 @@ export default function OnboardingPage() {
   };
 
   const handleSubmit = () => {
-    const weeksAvailable = calculateWeeksToRace();
+    const startDateObj = new Date(startDate);
+    const weeksAvailable = 24; // Fixed 24-week plan
     const longestRunValue = parseFloat(longestRun) || 0;
 
     createProfile({
       currentFitness,
       longestRun: longestRunValue,
+      startDate: startDateObj,
       weeksAvailable,
       daysPerWeek,
       goalFinishTime,
@@ -58,14 +60,16 @@ export default function OnboardingPage() {
       case 2:
         return longestRun !== '' && !isNaN(parseFloat(longestRun));
       case 3:
-        return true; // days per week always has a value
+        return startDate !== '';
       case 4:
-        return true; // goal always has a value
+        return true; // days per week always has a value
       case 5:
-        return true; // injury history is boolean
+        return true; // goal always has a value
       case 6:
-        return !hasInjuryHistory || injuryNotes.trim().length > 0;
+        return true; // injury history is boolean
       case 7:
+        return !hasInjuryHistory || injuryNotes.trim().length > 0;
+      case 8:
         return true; // final confirmation
       default:
         return true;
@@ -153,6 +157,36 @@ export default function OnboardingPage() {
 
           {step === 3 && (
             <div className={styles.step}>
+              <h2 className={styles.stepTitle}>When do you want to start training?</h2>
+              <p className={styles.stepDescription}>
+                Pick your start date. You'll follow a 24-week plan building to the full marathon distance.
+              </p>
+
+              <div className={styles.inputGroup}>
+                <input
+                  type="date"
+                  value={startDate}
+                  onChange={(e) => setStartDate(e.target.value)}
+                  min={new Date().toISOString().split('T')[0]}
+                  className={styles.inputLarge}
+                />
+              </div>
+
+              {startDate && (
+                <p className={styles.recommendation}>
+                  24-week plan starting {new Date(startDate).toLocaleDateString('en-US', {
+                    weekday: 'long',
+                    month: 'long',
+                    day: 'numeric',
+                    year: 'numeric'
+                  })}
+                </p>
+              )}
+            </div>
+          )}
+
+          {step === 4 && (
+            <div className={styles.step}>
               <h2 className={styles.stepTitle}>How many days per week can you train?</h2>
               <p className={styles.stepDescription}>
                 Be realistic. More isn't always better. Recovery is crucial.
@@ -179,7 +213,7 @@ export default function OnboardingPage() {
             </div>
           )}
 
-          {step === 4 && (
+          {step === 5 && (
             <div className={styles.step}>
               <h2 className={styles.stepTitle}>What's your goal finish time?</h2>
               <p className={styles.stepDescription}>
@@ -230,7 +264,7 @@ export default function OnboardingPage() {
             </div>
           )}
 
-          {step === 5 && (
+          {step === 6 && (
             <div className={styles.step}>
               <h2 className={styles.stepTitle}>Do you have a history of running injuries?</h2>
               <p className={styles.stepDescription}>
@@ -254,7 +288,7 @@ export default function OnboardingPage() {
             </div>
           )}
 
-          {step === 6 && hasInjuryHistory && (
+          {step === 7 && hasInjuryHistory && (
             <div className={styles.step}>
               <h2 className={styles.stepTitle}>Tell us about your injury history</h2>
               <p className={styles.stepDescription}>
@@ -271,7 +305,7 @@ export default function OnboardingPage() {
             </div>
           )}
 
-          {((step === 6 && !hasInjuryHistory) || step === 7) && (
+          {((step === 7 && !hasInjuryHistory) || step === 8) && (
             <div className={styles.step}>
               <h2 className={styles.stepTitle}>Ready to generate your plan!</h2>
               <p className={styles.stepDescription}>
@@ -316,8 +350,19 @@ export default function OnboardingPage() {
                 </div>
 
                 <div className={styles.summaryItem}>
-                  <span className={styles.summaryLabel}>Weeks to Train:</span>
-                  <span className={styles.summaryValue}>{calculateWeeksToRace()} weeks</span>
+                  <span className={styles.summaryLabel}>Start Date:</span>
+                  <span className={styles.summaryValue}>
+                    {startDate && new Date(startDate).toLocaleDateString('en-US', {
+                      month: 'short',
+                      day: 'numeric',
+                      year: 'numeric'
+                    })}
+                  </span>
+                </div>
+
+                <div className={styles.summaryItem}>
+                  <span className={styles.summaryLabel}>Training Duration:</span>
+                  <span className={styles.summaryValue}>24 weeks</span>
                 </div>
               </div>
             </div>
@@ -331,7 +376,7 @@ export default function OnboardingPage() {
             </button>
           )}
 
-          {step < totalSteps && !(step === 6 && !hasInjuryHistory) && (
+          {step < totalSteps && !(step === 7 && !hasInjuryHistory) && (
             <button
               onClick={handleNext}
               disabled={!canProceed()}
@@ -341,7 +386,7 @@ export default function OnboardingPage() {
             </button>
           )}
 
-          {(step === totalSteps || (step === 6 && !hasInjuryHistory)) && (
+          {(step === totalSteps || (step === 7 && !hasInjuryHistory)) && (
             <button onClick={handleSubmit} className={styles.buttonPrimary}>
               Create My Plan
             </button>

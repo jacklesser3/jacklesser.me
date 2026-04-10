@@ -60,7 +60,7 @@ export default function MarathonLandingPage() {
             <div className={styles.featureIcon}>📅</div>
             <h3 className={styles.featureTitle}>Personalized Plan</h3>
             <p className={styles.featureDescription}>
-              16-32 week training plan tailored to your fitness level and schedule. Follows the proven 10% rule for safe progression.
+              24-week full marathon training plan building to 26.2 miles. Pick your start date and train at your own pace.
             </p>
           </div>
 

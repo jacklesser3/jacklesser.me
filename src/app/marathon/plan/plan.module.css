@@ -1,0 +1,339 @@
+/* Training Plan Page - Based on Sub-5:00 Blueprint */
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 6rem;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.65;
+}
+
+.loading {
+  text-align: center;
+  padding: 4rem;
+  color: var(--text-secondary);
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 4rem 0 3rem;
+  border-bottom: 1px solid var(--border-primary);
+  margin-bottom: 3rem;
+}
+
+.heroLabel {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-primary);
+  margin-bottom: 1rem;
+}
+
+.heroTitle {
+  font-family: 'Instrument Serif', serif;
+  font-size: clamp(2.4rem, 6vw, 3.8rem);
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 0.75rem;
+}
+
+.heroTitle em {
+  color: var(--accent-primary);
+  font-style: italic;
+}
+
+.heroSub {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.heroMeta {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.heroMetaItem {
+  text-align: center;
+}
+
+.heroMetaItem .value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.heroMetaItem .label {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-top: 0.2rem;
+}
+
+/* SECTIONS */
+.section {
+  margin-bottom: 3.5rem;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.sectionNumber {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  color: var(--accent-primary);
+  background: rgba(232, 101, 46, 0.2);
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.section h2 {
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.section p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+/* PHASE CARDS */
+.phase {
+  border: 1px solid var(--border-primary);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  background: var(--bg-secondary);
+}
+
+.phaseHeader {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.2s;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.phaseHeader:hover {
+  background: var(--bg-tertiary);
+}
+
+.phaseTitleGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.phaseDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.phaseName {
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.25rem;
+}
+
+.phaseDates {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+}
+
+.phaseBadge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+}
+
+.phaseBody {
+  padding: 0 1.5rem 1.5rem;
+  display: none;
+}
+
+.phase.open .phaseBody {
+  display: block;
+}
+
+.phase.open .phaseHeader {
+  border-bottom: 1px solid var(--border-primary);
+}
+
+/* WEEK TABLE */
+.weekTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.85rem;
+}
+
+.weekTable th {
+  text-align: left;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+.weekTable td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--border-primary);
+  color: var(--text-secondary);
+  vertical-align: top;
+}
+
+.weekTable tr:last-child td {
+  border-bottom: none;
+}
+
+.weekNum {
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--text-primary);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.miles {
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--accent-primary);
+  font-weight: 500;
+}
+
+.longRun {
+  font-family: 'JetBrains Mono', monospace;
+  color: #4ade80;
+}
+
+/* WORKOUT CHECKLIST */
+.workoutChecklist {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.workoutItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.workoutItem input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.workoutItem .completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* TIP BOX */
+.tipBox {
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  margin: 1.25rem 0;
+  border-left: 3px solid;
+}
+
+.tipBox.mindset {
+  background: rgba(192, 132, 252, 0.13);
+  border-color: #c084fc;
+}
+
+.tipBox h4 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+  color: #c084fc;
+}
+
+.tipBox p {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 2rem 0;
+  border-top: 1px solid var(--border-primary);
+  margin-top: 3rem;
+}
+
+.footer p {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.motto {
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--accent-primary);
+  margin-bottom: 0.5rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .container {
+    padding: 2rem 1rem 4rem;
+  }
+
+  .hero {
+    padding: 2.5rem 0 2rem;
+  }
+
+  .heroMeta {
+    gap: 1.25rem;
+  }
+
+  .phaseHeader {
+    padding: 1rem;
+  }
+
+  .phaseBody {
+    padding: 0 1rem 1rem;
+  }
+
+  .weekTable {
+    font-size: 0.78rem;
+  }
+
+  .weekTable th,
+  .weekTable td {
+    padding: 0.5rem;
+  }
+}

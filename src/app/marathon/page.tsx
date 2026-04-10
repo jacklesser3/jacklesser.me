@@ -16,9 +16,9 @@ export default function MarathonLandingPage() {
   }, []);
 
   useEffect(() => {
-    // Redirect to dashboard if user already has a profile
+    // Redirect to plan if user already has a profile
     if (isLoaded && hasProfile) {
-      router.push('/marathon/dashboard');
+      router.push('/marathon/plan');
     }
   }, [isLoaded, hasProfile, router]);
 

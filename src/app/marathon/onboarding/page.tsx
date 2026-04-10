@@ -50,7 +50,7 @@ export default function OnboardingPage() {
       injuryNotes: injuryNotes.trim() || undefined,
     });
 
-    router.push('/marathon/dashboard');
+    router.push('/marathon/plan');
   };
 
   const canProceed = () => {

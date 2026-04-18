@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. K x Andre Duqum — Eastern Wisdom & Neuroscience</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Playfair+Display:ital,wght@0,700;1,400&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #0a0a0f;
+      --card: #111118;
+      --accent: #f59e0b;
+      --accent2: #8b5cf6;
+      --accent3: #06b6d4;
+      --accent4: #ef4444;
+      --accent5: #10b981;
+      --text: #e4e4e7;
+      --muted: #71717a;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      background: radial-gradient(ellipse at 50% 0%, rgba(139,92,246,0.15) 0%, transparent 60%),
+                  radial-gradient(ellipse at 80% 80%, rgba(245,158,11,0.1) 0%, transparent 50%);
+    }
+
+    .hero-label {
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      font-size: 0.75rem;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 700;
+      line-height: 1.1;
+      max-width: 900px;
+      background: linear-gradient(135deg, #fff 0%, #a78bfa 50%, #f59e0b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      margin-top: 1.5rem;
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 600px;
+    }
+
+    .hero-meta {
+      margin-top: 2rem;
+      display: flex;
+      gap: 2rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .hero-meta span { display: flex; align-items: center; gap: 0.4rem; }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 2rem;
+      animation: bounce 2s infinite;
+      color: var(--muted);
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
+
+    .home-link {
+      position: fixed;
+      top: 1.25rem;
+      left: 1.25rem;
+      z-index: 1000;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1rem;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 999px;
+      background: rgba(10,10,15,0.72);
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      backdrop-filter: blur(12px);
+      transition: border-color 0.3s, transform 0.3s, color 0.3s;
+    }
+
+    .home-link:hover {
+      color: var(--accent);
+      border-color: rgba(245,158,11,0.45);
+      transform: translateY(-1px);
+    }
+
+    /* ─── SECTIONS ─── */
+    section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-number {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 2rem;
+      line-height: 1.2;
+    }
+
+    /* ─── QUOTE CARDS ─── */
+    .quote-card {
+      background: var(--card);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 12px 12px 0;
+      padding: 2rem 2.5rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .quote-card:hover {
+      transform: translateX(8px);
+      box-shadow: -4px 0 30px rgba(139,92,246,0.1);
+    }
+
+    .quote-card.purple { border-left-color: var(--accent2); }
+    .quote-card.cyan { border-left-color: var(--accent3); }
+    .quote-card.red { border-left-color: var(--accent4); }
+    .quote-card.green { border-left-color: var(--accent5); }
+
+    .quote-text {
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      font-weight: 300;
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    .quote-text strong {
+      font-weight: 700;
+      font-style: normal;
+      color: #fff;
+    }
+
+    .quote-attr {
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* ─── TALKING POINTS ─── */
+    .talk-points {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+
+    .talk-point {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 1.5rem;
+      border: 1px solid rgba(255,255,255,0.05);
+      transition: border-color 0.3s;
+    }
+
+    .talk-point:hover { border-color: rgba(139,92,246,0.3); }
+
+    .talk-point-icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .talk-point h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: #fff;
+    }
+
+    .talk-point p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* ─── BIG STAT / CALLOUT ─── */
+    .big-callout {
+      text-align: center;
+      padding: 6rem 2rem;
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .big-callout::before {
+      content: '';
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.15;
+      z-index: 0;
+    }
+
+    .big-callout.amber::before { background: var(--accent); }
+    .big-callout.violet::before { background: var(--accent2); }
+    .big-callout.teal::before { background: var(--accent3); }
+
+    .big-callout > * { position: relative; z-index: 1; }
+
+    .big-number {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(4rem, 12vw, 10rem);
+      font-weight: 700;
+      line-height: 1;
+      background: linear-gradient(135deg, #fff, var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .big-callout .label {
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+      color: var(--muted);
+      margin-top: 1rem;
+      max-width: 700px;
+    }
+
+    .big-callout .label strong {
+      color: #fff;
+    }
+
+    /* ─── FULL-WIDTH QUOTE ─── */
+    .full-quote {
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 4rem 2rem;
+      position: relative;
+    }
+
+    .full-quote blockquote {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.3;
+      max-width: 900px;
+      color: #fff;
+    }
+
+    .full-quote .fq-attr {
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .full-quote .fq-line {
+      width: 60px;
+      height: 3px;
+      margin: 1.5rem auto 0;
+      border-radius: 2px;
+    }
+
+    .fq-amber { background: var(--accent); }
+    .fq-violet { background: var(--accent2); }
+    .fq-cyan { background: var(--accent3); }
+    .fq-red { background: var(--accent4); }
+    .fq-green { background: var(--accent5); }
+
+    /* ─── FRAMEWORK VISUAL ─── */
+    .framework {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-top: 2rem;
+    }
+
+    .fw-step {
+      display: flex;
+      align-items: stretch;
+      gap: 1.5rem;
+    }
+
+    .fw-line {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 40px;
+    }
+
+    .fw-dot {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .fw-connector {
+      width: 2px;
+      flex-grow: 1;
+      background: rgba(255,255,255,0.08);
+    }
+
+    .fw-content {
+      padding-bottom: 2.5rem;
+    }
+
+    .fw-content h4 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.4rem;
+    }
+
+    .fw-content p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ─── COMPARISON ─── */
+    .compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      .compare { grid-template-columns: 1fr; }
+    }
+
+    .compare-card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 2rem;
+      border-top: 3px solid;
+    }
+
+    .compare-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+
+    .compare-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .compare-card li {
+      padding: 0.5rem 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .compare-card li:last-child { border: none; }
+
+    /* ─── NAV DOTS ─── */
+    .nav-dots {
+      position: fixed;
+      right: 1.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      z-index: 100;
+    }
+
+    .nav-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.15);
+      cursor: pointer;
+      transition: all 0.3s;
+      border: none;
+    }
+
+    .nav-dot:hover, .nav-dot.active {
+      background: var(--accent);
+      transform: scale(1.4);
+    }
+
+    .nav-dot[title]::after {
+      content: attr(title);
+      position: absolute;
+      right: 20px;
+      white-space: nowrap;
+      font-size: 0.7rem;
+      color: var(--muted);
+      opacity: 0;
+      transition: opacity 0.2s;
+      pointer-events: none;
+    }
+
+    .nav-dot:hover::after { opacity: 1; }
+
+    /* ─── FOOTER ─── */
+    footer {
+      text-align: center;
+      padding: 4rem 2rem;
+      color: var(--muted);
+      font-size: 0.8rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    /* ─── DIVIDER ─── */
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+      margin: 0 auto;
+      max-width: 1100px;
+    }
+  </style>
+</head>
+<body>
+
+  <a class="home-link" href="/">&#8592; Home</a>
+
+  <!-- NAV DOTS -->
+  <nav class="nav-dots" id="navDots"></nav>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- HERO -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="hero" id="hero">
+    <div class="hero-label">Know Thyself Podcast &mdash; Key Learnings</div>
+    <h1>Eastern Wisdom &amp; Neuroscience Unite to Unlock Human Potential</h1>
+    <p class="hero-sub">Dr. K (Harvard-trained psychiatrist &amp; 7-year ashram student) sits with Andr&eacute; Duqum for a rare, deep conversation bridging science and spirit.</p>
+    <div class="hero-meta">
+      <span>Dr. K &amp; Andr&eacute; Duqum</span>
+      <span>~3 hours</span>
+      <span>12 Key Themes</span>
+    </div>
+    <div class="scroll-hint">&darr; SCROLL TO EXPLORE</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- 1. THE EAST-WEST GAP -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="s1">
+    <div class="section-number" style="color:var(--accent);">01 &mdash; The Gap</div>
+    <div class="section-title">What Eastern &amp; Western Science Each Lack</div>
+
+    <div class="compare">
+      <div class="compare-card" style="border-color:var(--accent3);">
+        <h3>Western Science</h3>
+        <ul>
+          <li>Learns about the <strong>average</strong> brain, not <em>your</em> brain</li>
+          <li>Requires instruments &mdash; can measure matter, not mind</li>
+          <li>Science is verifiable &amp; transmissible</li>
+          <li>Does things <strong>to</strong> you (surgery, medication)</li>
+          <li>Gap: can&rsquo;t detect subjective experience</li>
+        </ul>
+      </div>
+      <div class="compare-card" style="border-color:var(--accent2);">
+        <h3>Eastern Traditions</h3>
+        <ul>
+          <li>The only tool that can observe mind is <strong>mind itself</strong></li>
+          <li>All DIY &mdash; no one can do it <em>for</em> you</li>
+          <li>Practices are personalized and experiential</li>
+          <li>No referral system between gurus</li>
+          <li>Gap: no external way to verify claims</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="quote-card cyan" style="margin-top:2rem;">
+      <div class="quote-text">&ldquo;A yogi sits in the Himalayas, doesn't talk to anyone, and he has the <strong>one tool that can actually observe the mind</strong>. You can observe your mind. I don&rsquo;t even know if you have thoughts.&rdquo;</div>
+      <div class="quote-attr">Dr. K</div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- 2. VIDYA vs GNAN -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="s2">
+    <div class="section-number" style="color:var(--accent2);">02 &mdash; Knowledge vs Wisdom</div>
+    <div class="section-title">Vidya vs G&ntilde;&aacute;n: Information Doesn&rsquo;t Change You</div>
+
+    <div class="quote-card purple">
+      <div class="quote-text">&ldquo;<strong>Information doesn&rsquo;t change behavior.</strong> The moment that you have g&ntilde;&aacute;n, the moment that you understand something, <strong>you have no choice but to change.</strong>&rdquo;</div>
+      <div class="quote-attr">Dr. K</div>
+    </div>
+
+    <div class="talk-points">
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F4D6;</div>
+        <h4>Vidya = Information</h4>
+        <p>Objective, transmissible. "My car is parked over there." You can pass it along, but it doesn't transform anyone.</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F4A1;</div>
+        <h4>G&ntilde;&aacute;n = Understanding</h4>
+        <p>Subjective, non-transmissible. Like a child tasting wasabi for the first time &mdash; after that experience, behavior permanently changes.</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x26A0;&#xFE0F;</div>
+        <h4>The TLDR Trap</h4>
+        <p>"I read 10 books on business habits. Here's the TLDR." &mdash; That goes into short-term memory and gets wiped when you go to bed. You have to <em>play around</em> with information to really learn it.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- FULL QUOTE: UNDERSTANDING -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="full-quote" id="fq1">
+    <blockquote>&ldquo;The understanding doesn't exist in the book. If the understanding was in the book, anyone who read it would get the understanding. The understanding comes from <em>within you</em> &mdash; the book serves as a trigger.&rdquo;</blockquote>
+    <div class="fq-attr">Dr. K on how knowledge actually works</div>
+    <div class="fq-line fq-violet"></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- 3. ATTENTION -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="s3">
+    <div class="section-number" style="color:var(--accent4);">03 &mdash; Attention</div>
+    <div class="section-title">Your Attention Is Being Farmed</div>
+
+    <div class="quote-card red">
+      <div class="quote-text">&ldquo;You as a human being have <strong>one resource</strong>, which is probably the most valuable thing you have in your whole life, which is <strong>your attention</strong>. If you can focus your attention on a book, you will get an A. If you can focus your attention on work, you will make money.&rdquo;</div>
+      <div class="quote-attr">Dr. K</div>
+    </div>
+
+    <div class="quote-card" style="margin-top:0;">
+      <div class="quote-text">&ldquo;<strong>The reclamation of our attention is essentially the reclamation of our life.</strong>&rdquo;</div>
+      <div class="quote-attr">Dr. K</div>
+    </div>
+
+    <div class="talk-points">
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F4F1;</div>
+        <h4>The Elevator Effect</h4>
+        <p>Tech concentrates our attention for us. But the more we take the elevator, the weaker our legs get. We're outsourcing focus and atrophying the muscle.</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F501;</div>
+        <h4>The Opiate Cycle</h4>
+        <p>Anxiety &rarr; can't control thoughts &rarr; pick up phone &rarr; temporary relief &rarr; weaker attention &rarr; more anxiety. Identical to the cycle of opiate addiction.</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F4CA;</div>
+        <h4>Algorithmic Drift</h4>
+        <p>Algorithms don't just steal your time. They shape your thoughts, your votes, your anger. "Online drift happens to everyone."</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- BIG CALLOUT: 99.999% -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="big-callout amber" id="s4">
+    <div class="big-number">99.999%</div>
+    <div class="label">&ldquo;If you look at your life and your life sucks, there is a 99.999% chance that <strong>your thinking is habitual</strong>.&rdquo;</div>
+    <p style="color:var(--muted); margin-top:2rem; max-width:650px; text-align:center; font-size:0.95rem;">
+      Most of your thoughts are not from today. They are <strong style="color:#fff;">echoes of the past</strong>.
+      If you&rsquo;ve had the thought before, it&rsquo;s a vasana &mdash; a mental habit, not a reflection of reality.
+    </p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- 5. IDLE TIME & EMOTIONAL PROCESSING -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="s5">
+    <div class="section-number" style="color:var(--accent3);">05 &mdash; Idle Time</div>
+    <div class="section-title">The Spiritual Cost of Never Being Bored</div>
+
+    <div class="quote-card cyan">
+      <div class="quote-text">&ldquo;When your brain is idle, <strong>your brain is not idle</strong>. It&rsquo;s doing emotional processing, consolidating things into memory. As the idle time of our mind decreases, <strong>we are no longer processing the emotions of every day.</strong>&rdquo;</div>
+      <div class="quote-attr">Dr. K</div>
+    </div>
+
+    <div class="talk-points">
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F4A4;</div>
+        <h4>Dreams as Digestion</h4>
+        <p>Just as your gut pulls out good stuff and discards bad stuff from food, your brain does that with emotions during idle time and sleep.</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F4E6;</div>
+        <h4>Emotions Pile Up</h4>
+        <p>When we suppress emotions with our phone, they don't get processed &mdash; they accumulate. That's why societal depression, anxiety, and loneliness are exploding.</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x2764;&#xFE0F;</div>
+        <h4>People Can't Fall in Love</h4>
+        <p>"South Korea's birth rate is super low because people on some level don't have the capacity to fall in love anymore." Emotional capacity requires idle processing.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- FULL QUOTE: ONE-POINTEDNESS -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="full-quote" id="fq2">
+    <blockquote>&ldquo;One-pointedness of attention feels good. Complete one-pointedness of attention feels <em>blissful</em>. That&rsquo;s why people love orgasm. There are ways to achieve that in your daily life &mdash; 45 minute orgasms without having sex. That&rsquo;s what we call <em>samadhi</em>.&rdquo;</blockquote>
+    <div class="fq-attr">Dr. K on the neuroscience of meditation</div>
+    <div class="fq-line fq-amber"></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- 6. THE 0-100 FRAMEWORK -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="s6">
+    <div class="section-number" style="color:var(--accent5);">06 &mdash; The Framework</div>
+    <div class="section-title">The 0 &rarr; 100 Model of Human Growth</div>
+
+    <div class="framework">
+      <div class="fw-step">
+        <div class="fw-line">
+          <div class="fw-dot" style="background:var(--accent4);"></div>
+          <div class="fw-connector"></div>
+        </div>
+        <div class="fw-content">
+          <h4>&minus;100 &rarr; 0 &nbsp;|&nbsp; Healing Pathology</h4>
+          <p>Depression, suicidality, cognitive distortions. This is a <strong>malfunction of the mind</strong>. Requires clinical treatment &mdash; therapy, possibly medication. Fix what is broken first.</p>
+        </div>
+      </div>
+      <div class="fw-step">
+        <div class="fw-line">
+          <div class="fw-dot" style="background:var(--accent);"></div>
+          <div class="fw-connector"></div>
+        </div>
+        <div class="fw-content">
+          <h4>0 &rarr; 50 &nbsp;|&nbsp; Shadow Work</h4>
+          <p>Reintegrating the parts of yourself you amputated to succeed. The sacrifices you made &mdash; undoing them. &ldquo;Shadow work is about reintegrating the parts of ourselves that we lopped off in order to get as far as we have.&rdquo;</p>
+        </div>
+      </div>
+      <div class="fw-step">
+        <div class="fw-line">
+          <div class="fw-dot" style="background:var(--accent2);"></div>
+          <div class="fw-connector"></div>
+        </div>
+        <div class="fw-content">
+          <h4>50 &rarr; 75 &nbsp;|&nbsp; Ego Work</h4>
+          <p>Getting control of the ego (ahamkara). The slippery trap: &ldquo;The thought that I&rsquo;ve conquered my ego <strong>is ego</strong>. That&rsquo;s its mechanism of tricking you.&rdquo;</p>
+        </div>
+      </div>
+      <div class="fw-step">
+        <div class="fw-line">
+          <div class="fw-dot" style="background:var(--accent5);"></div>
+          <div class="fw-connector" style="background:transparent;"></div>
+        </div>
+        <div class="fw-content">
+          <h4>75 &rarr; 100 &nbsp;|&nbsp; Spiritual Development</h4>
+          <p>Karma dissolution, shakti accumulation, samadhi. Doing things with no expectation &mdash; not even a <em>good</em> expectation. True equanimity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- 7. DEPRESSED vs UNHAPPY -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="s7">
+    <div class="section-number" style="color:var(--accent);">07 &mdash; A Critical Distinction</div>
+    <div class="section-title">&ldquo;You&rsquo;re Not Depressed. You&rsquo;re Unhappy.&rdquo;</div>
+
+    <div class="quote-card">
+      <div class="quote-text">&ldquo;Half the people who come into my office are not depressed, they&rsquo;re unhappy, but the language that we use is depression.&rdquo;</div>
+      <div class="quote-attr">Dr. K</div>
+    </div>
+
+    <div class="talk-points">
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F3E5;</div>
+        <h4>Depression = Pathology</h4>
+        <p>Cognitive distortions. "My family would be better off if I was dead." A malfunction of the mind requiring clinical intervention.</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F614;</div>
+        <h4>Unhappy = Not Sick</h4>
+        <p>Functional, working well, no distortions &mdash; but unfulfilled. This doesn't need medication. It needs a life worth living.</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F30D;</div>
+        <h4>Appropriate Sadness</h4>
+        <p>"If you have a genuinely bad life and you are sad, that is not a malfunction of the mind. That is an appropriate reaction to your circumstances."</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- FULL QUOTE: KARMA -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="full-quote" id="fq3">
+    <blockquote>&ldquo;99% of the karma that you and I do is <em>mental</em>. Thoughts have effects. Emotions have effects. Most of our thinking is just habitual &mdash; and <strong>breaking free of your patterns of thinking is literally how people become exceptional.</strong>&rdquo;</blockquote>
+    <div class="fq-attr">Dr. K on karma &amp; vasanas</div>
+    <div class="fq-line fq-amber"></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- 8. YOUNG MEN -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="s8">
+    <div class="section-number" style="color:var(--accent4);">08 &mdash; The Crisis</div>
+    <div class="section-title">Why Young Men Are Spiritually Bereft</div>
+
+    <div class="quote-card red">
+      <div class="quote-text">&ldquo;The core of the problem is that men have become <strong>spiritually bereft</strong>. There&rsquo;s no spirituality within men generally anymore.&rdquo;</div>
+      <div class="quote-attr">Dr. K</div>
+    </div>
+
+    <div class="talk-points">
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F9ED;</div>
+        <h4>No Internal Compass</h4>
+        <p>Men are alexithymic &mdash; colorblind to their emotional state. Without that compass, they copy other people's desires instead of finding their own.</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F4AA;</div>
+        <h4>Discipline Won't Save Them</h4>
+        <p>"They long for discipline. They want willpower. None of that stuff is going to save them." Without passion and internal direction, force fails.</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F525;</div>
+        <h4>What They Actually Need</h4>
+        <p>"Men are looking for answers, but what they really need is direction. They need to find that internal direction and they're not connected to it."</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- 9. DHARMA -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="s9">
+    <div class="section-number" style="color:var(--accent5);">09 &mdash; Dharma</div>
+    <div class="section-title">Dharma: The Antidote to Willpower</div>
+
+    <div class="quote-card green">
+      <div class="quote-text">&ldquo;<strong>Dharma is what allows you to do hard things.</strong> If someone pulls a gun on my daughter, I&rsquo;m stepping in the line of the gun. It becomes easy. It becomes simple. There&rsquo;s no question.&rdquo;</div>
+      <div class="quote-attr">Dr. K</div>
+    </div>
+
+    <div class="talk-points">
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F6AB;</div>
+        <h4>Shoulds vs Dharma</h4>
+        <p>Shoulds come from societal conditioning &amp; create anxiety. Dharma comes from within &mdash; it's a feeling, not a thought. "I don't have discipline. I don't have willpower. I don't think you need it."</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x2696;&#xFE0F;</div>
+        <h4>Wants &amp; Shoulds Are Twins</h4>
+        <p>"Once you get rid of the shoulds, the wants will go away too &mdash; because they're created as avoidance of a should." Both dissolve when dharma emerges.</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F336;&#xFE0F;</div>
+        <h4>Poison Before Ambrosia</h4>
+        <p>Like churning the ocean in Hindu mythology &mdash; poison comes up first. Finding your dharma starts with boredom and discomfort. On the other side is fulfillment.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- FULL QUOTE: ENLIGHTENMENT -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="full-quote" id="fq4">
+    <blockquote>&ldquo;You will <em>never</em> become enlightened if you desire enlightenment. It doesn&rsquo;t matter if you&rsquo;re longing for enlightenment or longing for a car &mdash; <strong>it&rsquo;s still longing. That&rsquo;s still the problem.</strong>&rdquo;</blockquote>
+    <div class="fq-attr">Dr. K on the paradox of striving</div>
+    <div class="fq-line fq-cyan"></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- 10. PRACTICES -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="s10">
+    <div class="section-number" style="color:var(--accent3);">10 &mdash; Practices</div>
+    <div class="section-title">Concrete Practices Dr. K Recommends</div>
+
+    <div class="talk-points">
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F56F;&#xFE0F;</div>
+        <h4>Trataka (Candle Gazing)</h4>
+        <p>Stare at a candle flame 1&ndash;5 min without blinking, then close eyes. Trains focus, feels challenging in a non-boring way, and secretly cleanses the ajna (third eye) chakra &mdash; increasing intuition.</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F4A8;</div>
+        <h4>Anulom Vilom (Without Fingers)</h4>
+        <p>Alternate nostril breathing using only attention &mdash; no hands. Visualize air moving in a triangle up to the third eye. The more subtle the practice, the more potent the spiritual effect.</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F9D8;</div>
+        <h4>Break Vasanas Daily</h4>
+        <p>Ask yourself: "Have I had this thought before?" If yes, it's an echo &mdash; not reality. 99% of thinking is recycled. This one question breaks the loop.</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x23F8;&#xFE0F;</div>
+        <h4>Reclaim Idle Time</h4>
+        <p>Stop picking up your phone every idle moment. Let boredom exist. Your brain uses that time for emotional processing, memory consolidation, and accessing intuition.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- 11. SHAKTI & THE IRRIGATION DITCH -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="s11">
+    <div class="section-number" style="color:var(--accent2);">11 &mdash; Shakti</div>
+    <div class="section-title">The Irrigation Ditch: Why Spiritual Practice Seems Futile Until It Isn&rsquo;t</div>
+
+    <div class="quote-card purple">
+      <div class="quote-text">&ldquo;Imagine I have a field and there&rsquo;s a river. I start digging an irrigation ditch. The first <strong>99 feet</strong> I dig, there&rsquo;s zero water irrigating the field. That last bit of earth &mdash; suddenly one unit of effort <strong>irrigates my entire field</strong>. Even when the 99 units of effort irrigated at 0%.&rdquo;</div>
+      <div class="quote-attr">Dr. K on shakti accumulation</div>
+    </div>
+
+    <div class="talk-points">
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x26A1;</div>
+        <h4>Non-Linear Progress</h4>
+        <p>Spiritual energy (shakti) accumulates invisibly, then hits a critical threshold where life suddenly starts going well. This is why most people quit before the breakthrough.</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F4B0;</div>
+        <h4>Compound Spiritual Interest</h4>
+        <p>Like compound interest in a bank account. But if you start spending it (externalizing siddhis / psychic powers), your balance drains rapidly.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- FULL QUOTE: KNOW THYSELF -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="full-quote" id="fq5">
+    <blockquote>&ldquo;To know thyself is to sit with that which has no object but still exists. You&rsquo;re not your body &mdash; I can take a piece off and you&rsquo;re still you. You&rsquo;re not your mind &mdash; it changes over and over. <strong>The one permanent part is that you experience your life.</strong>&rdquo;</blockquote>
+    <div class="fq-attr">Dr. K &mdash; defining who we are at our essence</div>
+    <div class="fq-line fq-green"></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- 12. SAMADHI & THE NATURE OF ENLIGHTENMENT -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="s12">
+    <div class="section-number" style="color:var(--accent);">12 &mdash; Enlightenment</div>
+    <div class="section-title">Samadhi, Moksha &amp; the Nature of Enlightenment</div>
+
+    <div class="quote-card">
+      <div class="quote-text">&ldquo;Experiences of samadhi <strong>radically transform your relationship with yourself and your relationship with the outside world</strong>. You begin to realize that we&rsquo;re all living in the matrix &mdash; which lets you chill out intensely.&rdquo;</div>
+      <div class="quote-attr">Dr. K</div>
+    </div>
+
+    <div class="talk-points">
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F31F;</div>
+        <h4>Samadhi = Temporary Enlightenment</h4>
+        <p>Bliss + freedom + knowledge. Waves of orgasmic bliss for extended periods. Default mode network completely deactivated. Ego dissolved.</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x267E;&#xFE0F;</div>
+        <h4>Moksha = One Moment Forever</h4>
+        <p>"It doesn't actually have duration. It's just one moment duplicated again and again. Not for infinity &mdash; just this moment, this moment, this moment."</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F9EA;</div>
+        <h4>Dopamine vs Serotonin</h4>
+        <p>Happiness from external things = dopamine (builds tolerance, never enough). Contentment from within = serotonin. They're inversely related. Enlightenment is serotonergic.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- CLOSING -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="big-callout violet" id="close">
+    <blockquote style="font-family:'Playfair Display',serif; font-size:clamp(1.5rem,3.5vw,2.5rem); font-weight:700; color:#fff; max-width:800px; text-align:center; line-height:1.4; position:relative; z-index:1;">
+      &ldquo;We&rsquo;re trapped, so we might as well make some sexually explicit jokes and have a good time and meditate a little bit. That&rsquo;s what it is.&rdquo;
+    </blockquote>
+    <p style="color:var(--muted); margin-top:1.5rem; font-size:0.85rem; letter-spacing:0.15em; text-transform:uppercase; position:relative; z-index:1;">Dr. K &mdash; closing wisdom</p>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- FOOTER -->
+  <!-- ═══════════════════════════════════════ -->
+  <footer>
+    <p>Source: <a href="https://www.youtube.com/watch?v=zj40FT631P4" target="_blank">Know Thyself Podcast &mdash; Dr. K x Andr&eacute; Duqum</a></p>
+    <p style="margin-top:0.5rem;">All quotes attributed to Dr. K (Dr. Alok Kanojia) &amp; Andr&eacute; Duqum</p>
+  </footer>
+
+  <script>
+    // All scrollable pages (including interstitial quotes)
+    const pages = [
+      { id: 'hero', label: 'Intro' },
+      { id: 's1', label: 'East vs West' },
+      { id: 'fq1', label: '' },
+      { id: 's2', label: 'Vidya vs Gnan' },
+      { id: 's3', label: 'Attention' },
+      { id: 's4', label: 'Habitual Thinking' },
+      { id: 's5', label: 'Idle Time' },
+      { id: 'fq2', label: '' },
+      { id: 's6', label: '0-100 Framework' },
+      { id: 's7', label: 'Depressed vs Unhappy' },
+      { id: 'fq3', label: '' },
+      { id: 's8', label: 'Young Men' },
+      { id: 's9', label: 'Dharma' },
+      { id: 'fq4', label: '' },
+      { id: 's10', label: 'Practices' },
+      { id: 's11', label: 'Shakti' },
+      { id: 'fq5', label: '' },
+      { id: 's12', label: 'Enlightenment' },
+      { id: 'close', label: 'Close' },
+    ];
+
+    let currentPage = 0;
+
+    // Arrow key navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+        e.preventDefault();
+        if (currentPage < pages.length - 1) {
+          currentPage++;
+          document.getElementById(pages[currentPage].id).scrollIntoView({ behavior: 'smooth' });
+        }
+      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        if (currentPage > 0) {
+          currentPage--;
+          document.getElementById(pages[currentPage].id).scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+
+    // Nav dots (only labeled pages)
+    const nav = document.getElementById('navDots');
+    pages.forEach((s, i) => {
+      if (!s.label) return;
+      const dot = document.createElement('button');
+      dot.className = 'nav-dot';
+      dot.title = s.label;
+      dot.dataset.target = s.id;
+      dot.dataset.index = i;
+      dot.addEventListener('click', () => {
+        currentPage = i;
+        document.getElementById(s.id).scrollIntoView({ behavior: 'smooth' });
+      });
+      nav.appendChild(dot);
+    });
+
+    // Track active section on scroll
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const idx = pages.findIndex(p => p.id === entry.target.id);
+          if (idx !== -1) currentPage = idx;
+          document.querySelectorAll('.nav-dot').forEach(d => d.classList.remove('active'));
+          const dot = document.querySelector(`.nav-dot[data-target="${entry.target.id}"]`);
+          if (dot) dot.classList.add('active');
+        }
+      });
+    }, { threshold: 0.3 });
+
+    pages.forEach(s => {
+      const el = document.getElementById(s.id);
+      if (el) observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>

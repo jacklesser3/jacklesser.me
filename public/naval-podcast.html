@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naval Ravikant x Joe Rogan — 4 Key Takeaways</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Playfair+Display:ital,wght@0,700;1,400&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #0c0c10;
+      --card: #16161c;
+      --accent: #38bdf8;
+      --accent2: #a78bfa;
+      --accent3: #22d3ee;
+      --accent4: #f472b6;
+      --accent5: #34d399;
+      --text: #e4e4e7;
+      --muted: #71717a;
+      --white: #fafafa;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ─── PAGES ─── */
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      background: radial-gradient(ellipse at 50% 20%, rgba(56,189,248,0.1) 0%, transparent 60%),
+                  radial-gradient(ellipse at 80% 80%, rgba(167,139,250,0.07) 0%, transparent 50%);
+    }
+
+    .hero-label {
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      font-size: 0.75rem;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 700;
+      line-height: 1.1;
+      max-width: 900px;
+      background: linear-gradient(135deg, #fff 0%, #38bdf8 50%, #a78bfa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      margin-top: 1.5rem;
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 650px;
+    }
+
+    .hero-meta {
+      margin-top: 2rem;
+      display: flex;
+      gap: 2rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 2rem;
+      animation: bounce 2s infinite;
+      color: var(--muted);
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
+
+    .home-link {
+      position: fixed;
+      top: 1.25rem;
+      left: 1.25rem;
+      z-index: 1000;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1rem;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 999px;
+      background: rgba(12,12,16,0.72);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      backdrop-filter: blur(12px);
+      transition: border-color 0.3s, transform 0.3s, color 0.3s;
+    }
+
+    .home-link:hover {
+      color: var(--accent);
+      border-color: rgba(56,189,248,0.45);
+      transform: translateY(-1px);
+    }
+
+    /* ─── SECTION ELEMENTS ─── */
+    .section-number {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 2rem;
+      line-height: 1.2;
+      color: var(--white);
+    }
+
+    /* ─── QUOTE CARDS ─── */
+    .quote-card {
+      background: var(--card);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 12px 12px 0;
+      padding: 2rem 2.5rem;
+      margin-bottom: 1.5rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .quote-card:hover {
+      transform: translateX(8px);
+      box-shadow: -4px 0 30px rgba(56,189,248,0.08);
+    }
+
+    .quote-card.violet { border-left-color: var(--accent2); }
+    .quote-card.cyan { border-left-color: var(--accent3); }
+    .quote-card.pink { border-left-color: var(--accent4); }
+    .quote-card.green { border-left-color: var(--accent5); }
+
+    .quote-text {
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      font-weight: 300;
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    .quote-text strong { font-weight: 700; font-style: normal; color: #fff; }
+
+    .quote-attr {
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* ─── TALK POINTS ─── */
+    .talk-points {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+
+    .talk-point {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 1.5rem;
+      border: 1px solid rgba(255,255,255,0.05);
+      transition: border-color 0.3s;
+    }
+
+    .talk-point:hover { border-color: rgba(56,189,248,0.25); }
+    .talk-point-icon { font-size: 1.5rem; margin-bottom: 0.75rem; }
+    .talk-point h4 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; color: #fff; }
+    .talk-point p { font-size: 0.9rem; color: var(--muted); line-height: 1.5; }
+
+    /* ─── FULL-WIDTH QUOTE ─── */
+    .full-quote {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .full-quote blockquote {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.3;
+      max-width: 900px;
+      color: #fff;
+    }
+
+    .full-quote .fq-attr {
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .full-quote .fq-line {
+      width: 60px;
+      height: 3px;
+      margin: 1.5rem auto 0;
+      border-radius: 2px;
+    }
+
+    .fq-blue { background: var(--accent); }
+    .fq-violet { background: var(--accent2); }
+    .fq-pink { background: var(--accent4); }
+    .fq-green { background: var(--accent5); }
+
+    /* ─── FRAMEWORK ─── */
+    .framework { display: flex; flex-direction: column; gap: 0; margin-top: 2rem; }
+    .fw-step { display: flex; align-items: stretch; gap: 1.5rem; }
+    .fw-line { display: flex; flex-direction: column; align-items: center; min-width: 40px; }
+    .fw-dot { width: 16px; height: 16px; border-radius: 50%; flex-shrink: 0; }
+    .fw-connector { width: 2px; flex-grow: 1; background: rgba(255,255,255,0.08); }
+    .fw-content { padding-bottom: 2.5rem; }
+    .fw-content h4 { font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 0.4rem; }
+    .fw-content p { font-size: 0.95rem; color: var(--muted); line-height: 1.6; }
+
+    /* ─── NAV DOTS ─── */
+    .nav-dots {
+      position: fixed;
+      right: 1.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 100;
+    }
+
+    .nav-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.15);
+      cursor: pointer;
+      transition: all 0.3s;
+      border: none;
+    }
+
+    .nav-dot:hover, .nav-dot.active {
+      background: var(--accent);
+      transform: scale(1.5);
+    }
+
+    /* ─── ARROW HINT ─── */
+    .arrow-hint {
+      position: fixed;
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.15);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      z-index: 100;
+      transition: opacity 0.5s;
+    }
+
+    /* ─── DIVIDER ─── */
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+      margin: 0 auto;
+      max-width: 1100px;
+    }
+
+    /* ─── CLOSING ─── */
+    .closing {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 4rem 2rem;
+      position: relative;
+    }
+
+    .closing::before {
+      content: '';
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.12;
+      background: var(--accent2);
+      z-index: 0;
+    }
+
+    .closing > * { position: relative; z-index: 1; }
+
+    /* ─── FOOTER ─── */
+    footer {
+      text-align: center;
+      padding: 4rem 2rem;
+      color: var(--muted);
+      font-size: 0.8rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    footer a { color: var(--accent); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <a class="home-link" href="/">&#8592; Home</a>
+
+  <nav class="nav-dots" id="navDots"></nav>
+  <div class="arrow-hint" id="arrowHint">&larr; &rarr; arrow keys to navigate</div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- HERO -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="hero" id="hero">
+    <div class="hero-label">Joe Rogan Experience #1309 &mdash; 4 Key Takeaways</div>
+    <h1>Wealth, Happiness &amp; the Art of Doing Nothing</h1>
+    <p class="hero-sub">Naval Ravikant &mdash; angel investor, philosopher, self-made immigrant &mdash; distilled into the four ideas that matter most.</p>
+    <div class="hero-meta">
+      <span>Naval Ravikant &amp; Joe Rogan</span>
+      <span>~2 hours</span>
+      <span>4 Takeaways</span>
+    </div>
+    <div class="scroll-hint">&rarr; press right arrow</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- TAKEAWAY 1: WEALTH -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="full-quote" id="t1-quote">
+    <blockquote>&ldquo;You&rsquo;re not going to get rich renting out your time. You need to own <em>equity</em> in a business. You need <strong>specific knowledge, accountability, and leverage.</strong>&rdquo;</blockquote>
+    <div class="fq-attr">Takeaway 1 of 4</div>
+    <div class="fq-line fq-blue"></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="page" id="t1">
+    <div class="section-number" style="color:var(--accent);">01 &mdash; Wealth</div>
+    <div class="section-title">Own Equity, Build Leverage, Be Irreplaceable</div>
+
+    <div class="quote-card">
+      <div class="quote-text">&ldquo;Even lawyers and doctors at $500/hr aren&rsquo;t getting rich. Their lifestyle ramps up with their income. <strong>Retirement is when you stop sacrificing today for some imaginary tomorrow.</strong> When today is complete in and of itself &mdash; you&rsquo;re retired.&rdquo;</div>
+      <div class="quote-attr">Naval Ravikant</div>
+    </div>
+
+    <div class="framework">
+      <div class="fw-step">
+        <div class="fw-line">
+          <div class="fw-dot" style="background:var(--accent);"></div>
+          <div class="fw-connector"></div>
+        </div>
+        <div class="fw-content">
+          <h4>Own Equity</h4>
+          <p>A business, a brand, shares &mdash; something that works while you sleep. Renting your time has a ceiling. Ownership doesn&rsquo;t.</p>
+        </div>
+      </div>
+      <div class="fw-step">
+        <div class="fw-line">
+          <div class="fw-dot" style="background:var(--accent2);"></div>
+          <div class="fw-connector"></div>
+        </div>
+        <div class="fw-content">
+          <h4>Specific Knowledge</h4>
+          <p>Found by pursuing genuine curiosity, not by being trained. If someone can replace you, someone will. "No one can compete with you if you love to do it."</p>
+        </div>
+      </div>
+      <div class="fw-step">
+        <div class="fw-line">
+          <div class="fw-dot" style="background:var(--accent3);"></div>
+          <div class="fw-connector"></div>
+        </div>
+        <div class="fw-content">
+          <h4>Accountability + Leverage</h4>
+          <p>Put your name on it. Then apply code, media, capital, or people. "It looks like work to them but feels like play to me. I&rsquo;m just playing 16 hours a day."</p>
+        </div>
+      </div>
+      <div class="fw-step">
+        <div class="fw-line">
+          <div class="fw-dot" style="background:var(--accent5);"></div>
+          <div class="fw-connector" style="background:transparent;"></div>
+        </div>
+        <div class="fw-content">
+          <h4>Work Like a Lion, Not a Cow</h4>
+          <p>Train, sprint, rest, reassess, sprint again. Outputs are non-linear &mdash; what you do and how you do it matters far more than hours clocked. The 9-to-5 is for machines.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- TAKEAWAY 2: HAPPINESS -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="full-quote" id="t2-quote">
+    <blockquote>&ldquo;Desire is a contract you make with yourself <em>to be unhappy</em> until you get what you want. <strong>Peace is happiness at rest. Happiness is peace in motion.</strong>&rdquo;</blockquote>
+    <div class="fq-attr">Takeaway 2 of 4</div>
+    <div class="fq-line fq-violet"></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="page" id="t2">
+    <div class="section-number" style="color:var(--accent2);">02 &mdash; Happiness</div>
+    <div class="section-title">If You&rsquo;re So Smart, Why Aren&rsquo;t You Happy?</div>
+
+    <div class="quote-card violet">
+      <div class="quote-text">&ldquo;Just like fitness can be a choice, health can be a choice, working hard can be a choice &mdash; <strong>happiness is also a choice.</strong> If you&rsquo;re so smart and capable, why can&rsquo;t you change this?&rdquo;</div>
+      <div class="quote-attr">Naval Ravikant</div>
+    </div>
+
+    <div class="talk-points">
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F4CB;</div>
+        <h4>The Social Contract Hack</h4>
+        <p>Tell everyone you&rsquo;re a happy person. Now you have to live up to it. Social consistency is a powerful force &mdash; the same way announcing you quit drinking makes it real.</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F4A1;</div>
+        <h4>Train the Bright Side</h4>
+        <p>Naval forcibly trained himself to see the positive interpretation in every moment. Positive thoughts release fast. Negative thoughts linger. Interpret positively and they pass quickly.</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x2600;&#xFE0F;</div>
+        <h4>Simple Feedback Loops</h4>
+        <p>Get more sunlight. Smile more. Hug more. Nature. These aren&rsquo;t just outward signals &mdash; they&rsquo;re feedback loops that release serotonin in reverse. The body can lead the mind.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- TAKEAWAY 3: THE MODERN TRAP -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="full-quote" id="t3-quote">
+    <blockquote>&ldquo;The peace we seek is not peace <em>of</em> mind. It&rsquo;s peace <em>from</em> mind. <strong>The only solution is to turn it off.</strong>&rdquo;</blockquote>
+    <div class="fq-attr">Takeaway 3 of 4</div>
+    <div class="fq-line fq-pink"></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="page" id="t3">
+    <div class="section-number" style="color:var(--accent4);">03 &mdash; The Modern Trap</div>
+    <div class="section-title">Diseases of Abundance &amp; the Art of Doing Nothing</div>
+
+    <div class="quote-card pink">
+      <div class="quote-text">&ldquo;Social media, sugar, drugs, porn, video games &mdash; entire factories of people working to <strong>addict you</strong>. And you stand alone. No tribe. No religion. No family nearby. The modern struggle is learning how to resist.&rdquo;</div>
+      <div class="quote-attr">Naval Ravikant</div>
+    </div>
+
+    <div class="talk-points">
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F4E7;</div>
+        <h4>Inbox Zero for the Mind</h4>
+        <p>Meditation is self-therapy. Unresolved issues pile up like unanswered emails for decades. Sit with them one by one until only yesterday&rsquo;s thoughts remain. Then meditation actually starts.</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F6AB;</div>
+        <h4>No Technique Needed</h4>
+        <p>&ldquo;Just sit. Whatever happens, happens. Don&rsquo;t put effort into it. Don&rsquo;t put effort against it.&rdquo; Every technique leads to the same place: witnessing. You can go straight to the end game.</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F3DA;&#xFE0F;</div>
+        <h4>Solitude Is a Superpower</h4>
+        <p>&ldquo;I now look forward to solitary confinement. Leave me alone for a day &mdash; it&rsquo;ll be the happiest day I&rsquo;ve had in a while.&rdquo; Learning to be alone and enjoy it is the superpower of modern life.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- TAKEAWAY 4: SINGLE PLAYER GAME -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="full-quote" id="t4-quote">
+    <blockquote>&ldquo;Life is a single-player game. It&rsquo;s all going on in your head. <strong>The world just reflects your own feelings back at you.</strong> To a tree, there&rsquo;s no concept of right or wrong.&rdquo;</blockquote>
+    <div class="fq-attr">Takeaway 4 of 4</div>
+    <div class="fq-line fq-green"></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="page" id="t4">
+    <div class="section-number" style="color:var(--accent5);">04 &mdash; The Single-Player Game</div>
+    <div class="section-title">Reality Is Neutral. You Choose the Interpretation.</div>
+
+    <div class="quote-card green">
+      <div class="quote-text">&ldquo;There is no answer to the meaning of life. And that&rsquo;s the beauty &mdash; <strong>if there was a single answer, we would not be free.</strong> We&rsquo;d be trapped. Luckily there is no answer &mdash; so you just do whatever you want.&rdquo;</div>
+      <div class="quote-attr">Naval Ravikant</div>
+    </div>
+
+    <div class="talk-points">
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F30E;</div>
+        <h4>Change Yourself First</h4>
+        <p>&ldquo;It&rsquo;s easier to change yourself than to change the world. And the best way to change the world <em>is</em> to change yourself.&rdquo; Live the life you want others to live &mdash; silently, without shouting.</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F9D0;</div>
+        <h4>The &ldquo;Sounding Smart&rdquo; Disease</h4>
+        <p>Naval&rsquo;s confession: &ldquo;I grew up poor. The way I got out was by sounding smart &mdash; not being smart.&rdquo; The test: would you still want to learn this if you could never tell anyone about it?</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F9E9;</div>
+        <h4>Nothing &amp; Everything</h4>
+        <p>&ldquo;I cannot say &lsquo;Joe Rogan&rsquo; without invoking the entire universe.&rdquo; You are completely alone inside your head &mdash; and inseparable from everything. Both are true. All great answers are paradoxes.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- CLOSING -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="closing" id="close">
+    <blockquote style="font-family:'Playfair Display',serif; font-size:clamp(1.5rem,3.5vw,2.5rem); font-weight:700; color:#fff; max-width:800px; text-align:center; line-height:1.4;">
+      &ldquo;Every man has two lives, and the second starts when he realizes he has just one.&rdquo;
+    </blockquote>
+    <p style="color:var(--muted); margin-top:1.5rem; font-size:0.85rem; letter-spacing:0.15em; text-transform:uppercase;">Confucius, quoted by Naval</p>
+  </div>
+
+  <footer>
+    <p>Source: <a href="https://www.youtube.com/watch?v=3qHkcs3kG44" target="_blank">Joe Rogan Experience #1309 &mdash; Naval Ravikant</a></p>
+    <p style="margin-top:0.5rem;">All quotes attributed to Naval Ravikant &amp; Joe Rogan</p>
+  </footer>
+
+  <script>
+    // Sections for navigation
+    const pages = [
+      { id: 'hero', label: 'Intro' },
+      { id: 't1-quote', label: '' },
+      { id: 't1', label: '1. Wealth' },
+      { id: 't2-quote', label: '' },
+      { id: 't2', label: '2. Happiness' },
+      { id: 't3-quote', label: '' },
+      { id: 't3', label: '3. Modern Trap' },
+      { id: 't4-quote', label: '' },
+      { id: 't4', label: '4. Single Player' },
+      { id: 'close', label: 'Close' },
+    ];
+
+    let currentPage = 0;
+
+    // Arrow key navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+        e.preventDefault();
+        if (currentPage < pages.length - 1) {
+          currentPage++;
+          document.getElementById(pages[currentPage].id).scrollIntoView({ behavior: 'smooth' });
+        }
+      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        if (currentPage > 0) {
+          currentPage--;
+          document.getElementById(pages[currentPage].id).scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+
+    // Nav dots (only for labeled pages)
+    const nav = document.getElementById('navDots');
+    pages.forEach((s, i) => {
+      if (!s.label) return; // skip quote interstitials
+      const dot = document.createElement('button');
+      dot.className = 'nav-dot';
+      dot.title = s.label;
+      dot.dataset.target = s.id;
+      dot.dataset.index = i;
+      dot.addEventListener('click', () => {
+        currentPage = i;
+        document.getElementById(s.id).scrollIntoView({ behavior: 'smooth' });
+      });
+      nav.appendChild(dot);
+    });
+
+    // Track active section on scroll
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const idx = pages.findIndex(p => p.id === entry.target.id);
+          if (idx !== -1) currentPage = idx;
+          document.querySelectorAll('.nav-dot').forEach(d => d.classList.remove('active'));
+          const dot = document.querySelector(`.nav-dot[data-target="${entry.target.id}"]`);
+          if (dot) dot.classList.add('active');
+        }
+      });
+    }, { threshold: 0.3 });
+
+    pages.forEach(s => {
+      const el = document.getElementById(s.id);
+      if (el) observer.observe(el);
+    });
+
+    // Fade arrow hint after first navigation
+    let hintShown = true;
+    document.addEventListener('keydown', () => {
+      if (hintShown) {
+        document.getElementById('arrowHint').style.opacity = '0';
+        hintShown = false;
+      }
+    }, { once: false });
+  </script>
+
+</body>
+</html>

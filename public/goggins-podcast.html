@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>David Goggins x Chris Williamson — Never Finished</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Playfair+Display:ital,wght@0,700;1,400&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #09090b;
+      --card: #18181b;
+      --accent: #dc2626;
+      --accent2: #f97316;
+      --accent3: #a3a3a3;
+      --accent4: #fbbf24;
+      --accent5: #64748b;
+      --text: #e4e4e7;
+      --muted: #71717a;
+      --white: #fafafa;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      background: radial-gradient(ellipse at 50% 20%, rgba(220,38,38,0.1) 0%, transparent 60%),
+                  radial-gradient(ellipse at 20% 80%, rgba(249,115,22,0.06) 0%, transparent 50%);
+    }
+
+    .hero-label {
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      font-size: 0.75rem;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 700;
+      line-height: 1.1;
+      max-width: 900px;
+      background: linear-gradient(135deg, #fff 0%, #dc2626 60%, #f97316 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      margin-top: 1.5rem;
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 650px;
+    }
+
+    .hero-meta {
+      margin-top: 2rem;
+      display: flex;
+      gap: 2rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .hero-meta span { display: flex; align-items: center; gap: 0.4rem; }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 2rem;
+      animation: bounce 2s infinite;
+      color: var(--muted);
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
+
+    .home-link {
+      position: fixed;
+      top: 1.25rem;
+      left: 1.25rem;
+      z-index: 1000;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1rem;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 999px;
+      background: rgba(9,9,11,0.72);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      backdrop-filter: blur(12px);
+      transition: border-color 0.3s, transform 0.3s, color 0.3s;
+    }
+
+    .home-link:hover {
+      color: var(--accent4);
+      border-color: rgba(251,191,36,0.45);
+      transform: translateY(-1px);
+    }
+
+    /* ─── SECTIONS ─── */
+    section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-number {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 2rem;
+      line-height: 1.2;
+      color: var(--white);
+    }
+
+    /* ─── QUOTE CARDS ─── */
+    .quote-card {
+      background: var(--card);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 12px 12px 0;
+      padding: 2rem 2.5rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .quote-card:hover {
+      transform: translateX(8px);
+      box-shadow: -4px 0 30px rgba(220,38,38,0.08);
+    }
+
+    .quote-card.orange { border-left-color: var(--accent2); }
+    .quote-card.steel { border-left-color: var(--accent3); }
+    .quote-card.gold { border-left-color: var(--accent4); }
+    .quote-card.slate { border-left-color: var(--accent5); }
+
+    .quote-text {
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      font-weight: 300;
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    .quote-text strong {
+      font-weight: 700;
+      font-style: normal;
+      color: #fff;
+    }
+
+    .quote-attr {
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* ─── TALKING POINTS ─── */
+    .talk-points {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+
+    .talk-point {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 1.5rem;
+      border: 1px solid rgba(255,255,255,0.05);
+      transition: border-color 0.3s;
+    }
+
+    .talk-point:hover { border-color: rgba(220,38,38,0.25); }
+
+    .talk-point-icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .talk-point h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: #fff;
+    }
+
+    .talk-point p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* ─── BIG CALLOUT ─── */
+    .big-callout {
+      text-align: center;
+      padding: 6rem 2rem;
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .big-callout::before {
+      content: '';
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.12;
+      z-index: 0;
+    }
+
+    .big-callout.red::before { background: var(--accent); }
+    .big-callout.orange::before { background: var(--accent2); }
+    .big-callout.gold::before { background: var(--accent4); }
+
+    .big-callout > * { position: relative; z-index: 1; }
+
+    .big-number {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(4rem, 12vw, 10rem);
+      font-weight: 700;
+      line-height: 1;
+      background: linear-gradient(135deg, #fff, var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .big-callout .label {
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+      color: var(--muted);
+      margin-top: 1rem;
+      max-width: 700px;
+    }
+
+    .big-callout .label strong { color: #fff; }
+
+    /* ─── FULL-WIDTH QUOTE ─── */
+    .full-quote {
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 4rem 2rem;
+      position: relative;
+    }
+
+    .full-quote blockquote {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.3;
+      max-width: 900px;
+      color: #fff;
+    }
+
+    .full-quote .fq-attr {
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .full-quote .fq-line {
+      width: 60px;
+      height: 3px;
+      margin: 1.5rem auto 0;
+      border-radius: 2px;
+    }
+
+    .fq-red { background: var(--accent); }
+    .fq-orange { background: var(--accent2); }
+    .fq-gold { background: var(--accent4); }
+    .fq-steel { background: var(--accent3); }
+
+    /* ─── FRAMEWORK VISUAL ─── */
+    .framework {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-top: 2rem;
+    }
+
+    .fw-step {
+      display: flex;
+      align-items: stretch;
+      gap: 1.5rem;
+    }
+
+    .fw-line {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 40px;
+    }
+
+    .fw-dot {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .fw-connector {
+      width: 2px;
+      flex-grow: 1;
+      background: rgba(255,255,255,0.08);
+    }
+
+    .fw-content {
+      padding-bottom: 2.5rem;
+    }
+
+    .fw-content h4 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.4rem;
+    }
+
+    .fw-content p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ─── COMPARISON ─── */
+    .compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      .compare { grid-template-columns: 1fr; }
+    }
+
+    .compare-card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 2rem;
+      border-top: 3px solid;
+    }
+
+    .compare-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+
+    .compare-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .compare-card li {
+      padding: 0.5rem 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .compare-card li:last-child { border: none; }
+
+    /* ─── NAV DOTS ─── */
+    .nav-dots {
+      position: fixed;
+      right: 1.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      z-index: 100;
+    }
+
+    .nav-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.15);
+      cursor: pointer;
+      transition: all 0.3s;
+      border: none;
+    }
+
+    .nav-dot:hover, .nav-dot.active {
+      background: var(--accent);
+      transform: scale(1.4);
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      text-align: center;
+      padding: 4rem 2rem;
+      color: var(--muted);
+      font-size: 0.8rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    /* ─── DIVIDER ─── */
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+      margin: 0 auto;
+      max-width: 1100px;
+    }
+  </style>
+</head>
+<body>
+
+  <a class="home-link" href="/">&#8592; Home</a>
+
+  <!-- NAV DOTS -->
+  <nav class="nav-dots" id="navDots"></nav>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- HERO -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="hero" id="hero">
+    <div class="hero-label">Modern Wisdom &mdash; Key Learnings</div>
+    <h1>Never Finished: Building an Unbreakable Mind</h1>
+    <p class="hero-sub">David Goggins returns after 4 years of silence to sit with Chris Williamson and lay bare the real process behind mental armor &mdash; no hype, no shortcuts, just the work.</p>
+    <div class="hero-meta">
+      <span>David Goggins &amp; Chris Williamson</span>
+      <span>~2 hours</span>
+      <span>11 Key Themes</span>
+    </div>
+    <div class="scroll-hint">&darr; SCROLL TO EXPLORE</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- 1. CAP YOUR SUCCESS -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="s1">
+    <div class="section-number" style="color:var(--accent);">01 &mdash; The Danger of Success</div>
+    <div class="section-title">Cap Your Success or It Will Make You Soft</div>
+
+    <div class="quote-card">
+      <div class="quote-text">&ldquo;I turned down millions of dollars to make <strong>$15 an hour</strong> jumping out of airplanes into forest fires. The growth for me is in that $15 an hour when you&rsquo;re freezing your ass off and you start questioning why you&rsquo;re here. <strong>There&rsquo;s a lot of growth in that.</strong>&rdquo;</div>
+      <div class="quote-attr">David Goggins</div>
+    </div>
+
+    <div class="talk-points">
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F6E1;&#xFE0F;</div>
+        <h4>The Growth Paradox</h4>
+        <p>All of Goggins' knowledge comes from the ground floor &mdash; not from the stage. He deliberately caps success to stay in the "mental lab" where real breakthroughs happen.</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F525;</div>
+        <h4>Smoke Jumping at $15/hr</h4>
+        <p>After retiring from the military, he became a smoke jumper in British Columbia &mdash; parachuting into remote wildfires with no vehicle access, no evac, for 7-day missions. Not for money. For growth.</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F504;</div>
+        <h4>Cookie-Cutter vs Real Knowledge</h4>
+        <p>"Get back to the mental lab. That's where the knowledge came from." If you stay comfortable, your message becomes generic. Real insight requires re-entering the struggle.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- FULL QUOTE: ARMOR -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="full-quote" id="fq1">
+    <blockquote>&ldquo;I&rsquo;m trying to build people up. I&rsquo;m trying to <em>armor their mind</em>. This world will beat you down. It will find your weakness and it will just hammer you.&rdquo;</blockquote>
+    <div class="fq-attr">David Goggins &mdash; his mission</div>
+    <div class="fq-line fq-red"></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- 2. TRAINED HUMILITY -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="s2">
+    <div class="section-number" style="color:var(--accent2);">02 &mdash; Trained Humility</div>
+    <div class="section-title">The Medal of Honor Winner Who Cleaned Toilets</div>
+
+    <div class="quote-card orange">
+      <div class="quote-text">&ldquo;William Crawford won the Medal of Honor &mdash; the highest award in the entire military &mdash; for heroics saving lives. Then he became a <strong>janitor at the Air Force Academy</strong>. He put his medal in the closet, picked up his broom and dust pan, and cleaned for young kids who didn&rsquo;t even know who he was.&rdquo;</div>
+      <div class="quote-attr">Goggins on trained humility</div>
+    </div>
+
+    <div class="talk-points">
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F9F9;</div>
+        <h4>Humility Is a Practice</h4>
+        <p>Humility isn't something you have. It's something you train. Goggins deliberately puts himself in menial, uncomfortable situations to keep his ego from calcifying.</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x2B07;&#xFE0F;</div>
+        <h4>"I've Never Been Above You"</h4>
+        <p>"I've always pretty much been beneath you. That's where my knowledge came from." The reason he can reach people in the dungeon is because he's lived there.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- 3. ONE-SECOND DECISION -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="s3">
+    <div class="section-number" style="color:var(--accent);">03 &mdash; The One-Second Decision</div>
+    <div class="section-title">130 Hours of Hell, Won or Lost in a Single Second</div>
+
+    <div class="quote-card">
+      <div class="quote-text">&ldquo;Hell Week is 130 hours. That&rsquo;s a lot of seconds. If you win every second but one &mdash; <strong>you lost</strong>. It only takes one second for you to lose the whole thing.&rdquo;</div>
+      <div class="quote-attr">David Goggins</div>
+    </div>
+
+    <div class="framework">
+      <div class="fw-step">
+        <div class="fw-line">
+          <div class="fw-dot" style="background:var(--accent4);"></div>
+          <div class="fw-connector"></div>
+        </div>
+        <div class="fw-content">
+          <h4>The Pep Rally</h4>
+          <p>Hell Week begins with guns, explosions, linked arms. Adrenaline. Everybody is hyped. This is the easy part &mdash; motivation is flowing freely.</p>
+        </div>
+      </div>
+      <div class="fw-step">
+        <div class="fw-line">
+          <div class="fw-dot" style="background:var(--accent);"></div>
+          <div class="fw-connector"></div>
+        </div>
+        <div class="fw-content">
+          <h4>The Silence</h4>
+          <p>Then they shut it all off. March you to the surf zone. Pacific Ocean, freezing. No more hype. Your mind jumps from hour 2 all the way to hour 130. "I can't be cold this long." Fight or flight takes over.</p>
+        </div>
+      </div>
+      <div class="fw-step">
+        <div class="fw-line">
+          <div class="fw-dot" style="background:var(--accent2);"></div>
+          <div class="fw-connector"></div>
+        </div>
+        <div class="fw-content">
+          <h4>The One-Second Decision</h4>
+          <p>You forget every reason you wanted to be there. You don't care about the Trident. You want warmth, food, comfort. In that ONE second, you have to stay physically in the water while mentally transporting yourself somewhere warm enough to <em>think logically</em>.</p>
+        </div>
+      </div>
+      <div class="fw-step">
+        <div class="fw-line">
+          <div class="fw-dot" style="background:#fff;"></div>
+          <div class="fw-connector" style="background:transparent;"></div>
+        </div>
+        <div class="fw-content">
+          <h4>The Reckoning</h4>
+          <p>"Where are you going to end up if you quit this? What are you going to say to yourself?" Gain control of your mind. Put things back in perspective. Then: "I really do want to be here."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- BIG CALLOUT: 1 SECOND -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="big-callout red" id="s4">
+    <div class="big-number">1 sec</div>
+    <div class="label">&ldquo;Most people fail those one seconds. And then that one second leads to <strong>20 years, 30 years, 40 years</strong> of thinking about what they could have been.&rdquo;</div>
+    <p style="color:var(--muted); margin-top:2rem; max-width:650px; text-align:center; font-size:0.95rem;">
+      People who quit decades ago still call Goggins today. They have great lives now &mdash; but they can&rsquo;t enjoy them because they failed in that one moment. <strong style="color:#fff;">They&rsquo;re warm now. But they&rsquo;re still suffering.</strong>
+    </p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- 4. PERISHABLE SKILL -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="s5">
+    <div class="section-number" style="color:var(--accent3);">04 &mdash; Perishable Skill</div>
+    <div class="section-title">Mental Toughness Expires. Requalify Every Day.</div>
+
+    <div class="quote-card steel">
+      <div class="quote-text">&ldquo;Mental toughness is a <strong>perishable skill</strong>. Just because you went through some training once and you got through it doesn&rsquo;t mean it lasts forever. You have recall on everything &mdash; and you definitely must recall when it comes to the mind.&rdquo;</div>
+      <div class="quote-attr">David Goggins</div>
+    </div>
+
+    <div class="talk-points">
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F4C9;</div>
+        <h4>The Expiration Date</h4>
+        <p>Hardness is not a permanent state. You can't check it off and say "I'm good for life." Even the most trained people in the world fall back if they stop recalling.</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F501;</div>
+        <h4>Daily Requalification</h4>
+        <p>At Goggins' level, recall isn't once a year. It's every single day. The morning run, the stretching, the meditation &mdash; it's all requalification for the mind.</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F3CB;&#xFE0F;</div>
+        <h4>"Part-Time Savage"</h4>
+        <p>Goggins' term for when he started getting soft. Injuries slowed him down. Comfort crept in. He noticed it &mdash; and course-corrected by signing up for a 240-mile race.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- FULL QUOTE: MOTIVATION -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="full-quote" id="fq2">
+    <blockquote>&ldquo;You have to learn to perform <em>without motivation</em>. You have to learn to perform <em>without purpose</em>. You have to be your best self when you are <strong>least motivated</strong>. That&rsquo;s the tricky part.&rdquo;</blockquote>
+    <div class="fq-attr">Goggins on the limits of motivation</div>
+    <div class="fq-line fq-orange"></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- 5. MOTIVATION IS NOT ENOUGH -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="s6">
+    <div class="section-number" style="color:var(--accent2);">05 &mdash; Beyond Motivation</div>
+    <div class="section-title">Discipline Needs a Clean Garage</div>
+
+    <div class="compare">
+      <div class="compare-card" style="border-color:var(--accent2);">
+        <h3>The Cluttered Garage</h3>
+        <ul>
+          <li>Brain is overloaded &mdash; kids, job, spouse, bills</li>
+          <li>No room for discipline because it can&rsquo;t fit</li>
+          <li>One interference knocks everything off the knife&rsquo;s edge</li>
+          <li>"Where are my dumbbells? Let me look&hellip;" &mdash; throwing stuff, searching through totes</li>
+          <li>Can&rsquo;t stay consistent because nothing is compartmentalized</li>
+        </ul>
+      </div>
+      <div class="compare-card" style="border-color:var(--accent3);">
+        <h3>The Militant Garage</h3>
+        <ul>
+          <li>Everything organized on shelves, labeled, accessible</li>
+          <li>"Where&rsquo;s my discipline? Right there."</li>
+          <li>2 hours meditation every night = reorganize the garage</li>
+          <li>Wake up with a clear mind &mdash; ready to go</li>
+          <li>One interference doesn&rsquo;t collapse the system</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="quote-card orange" style="margin-top:2rem;">
+      <div class="quote-text">&ldquo;Without a clear head space, there&rsquo;s no discipline. Discipline eats motivation for breakfast &mdash; but <strong>if your brain is a cluttered garage, there&rsquo;s nowhere to put discipline.</strong>&rdquo;</div>
+      <div class="quote-attr">David Goggins</div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- 6. DAILY ROUTINE (ARMOR PLATING) -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="s7">
+    <div class="section-number" style="color:var(--accent4);">06 &mdash; The Armor</div>
+    <div class="section-title">Armor Plate Your Mind Before the World Hits You</div>
+
+    <div class="quote-card gold">
+      <div class="quote-text">&ldquo;The second you leave your house and the second you open your phone, you are <strong>letting the poison in</strong>. So I make sure before I do any of that, <strong>I am armored up</strong> &mdash; like a person going to war puts on their body armor.&rdquo;</div>
+      <div class="quote-attr">David Goggins</div>
+    </div>
+
+    <div class="framework">
+      <div class="fw-step">
+        <div class="fw-line">
+          <div class="fw-dot" style="background:var(--accent);"></div>
+          <div class="fw-connector"></div>
+        </div>
+        <div class="fw-content">
+          <h4>5:00&ndash;5:30 AM &nbsp;|&nbsp; Wake Up &amp; Run</h4>
+          <p>Minimum 12 miles, fasted. Zone 2 heart rate. 90 min to 2 hours. "Running is the one thing I hate to do more than anything &mdash; that's my cup of coffee." This is where he builds armor before the world gets its shot.</p>
+        </div>
+      </div>
+      <div class="fw-step">
+        <div class="fw-line">
+          <div class="fw-dot" style="background:var(--accent2);"></div>
+          <div class="fw-connector"></div>
+        </div>
+        <div class="fw-content">
+          <h4>Post-Run &nbsp;|&nbsp; Eat &amp; Gym</h4>
+          <p>Small meal, then 45 min to 1.5 hours of strength training. Plus stationary cycling 3&ndash;4 days per week.</p>
+        </div>
+      </div>
+      <div class="fw-step">
+        <div class="fw-line">
+          <div class="fw-dot" style="background:var(--accent4);"></div>
+          <div class="fw-connector"></div>
+        </div>
+        <div class="fw-content">
+          <h4>Evening &nbsp;|&nbsp; 4-Hour Block</h4>
+          <p>Stretching + 2 hours of meditation combined. "I refresh, I reorganize the garage which is my mind, every single night." 7&ndash;8 hours of sleep.</p>
+        </div>
+      </div>
+      <div class="fw-step">
+        <div class="fw-line">
+          <div class="fw-dot" style="background:#fff;"></div>
+          <div class="fw-connector" style="background:transparent;"></div>
+        </div>
+        <div class="fw-content">
+          <h4>The Result</h4>
+          <p>This routine has been consistent for <strong>7 years</strong>. Phone stays off. No social media in the morning. "There's an art to getting hit in the mouth. You have to wake up and give yourself belief first."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- FULL QUOTE: CONFIDENCE -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="full-quote" id="fq3">
+    <blockquote>&ldquo;You don&rsquo;t become confident by shouting affirmations in the mirror. You become confident by having a <em>stack of undeniable proof</em> that you are who you say you are. <strong>Outwork your self-doubt.</strong>&rdquo;</blockquote>
+    <div class="fq-attr">Alex Hormozi, quoted by Chris Williamson</div>
+    <div class="fq-line fq-gold"></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- 7. BUILDING BELIEF -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="s8">
+    <div class="section-number" style="color:var(--accent);">07 &mdash; Built Belief</div>
+    <div class="section-title">Confidence Is Built, Not Found</div>
+
+    <div class="quote-card">
+      <div class="quote-text">&ldquo;There&rsquo;s an after-school-special belief where the mom says &lsquo;believe in yourself.&rsquo; Then there&rsquo;s <strong>built belief</strong> &mdash; one where you are constantly put through daunting tasks. That is proof positive. <strong>You must build belief. You must build confidence. It can&rsquo;t be given.</strong>&rdquo;</div>
+      <div class="quote-attr">David Goggins</div>
+    </div>
+
+    <div class="talk-points">
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F4DA;</div>
+        <h4>The Resume of Proof</h4>
+        <p>Three Hell Weeks. Ranger School. Delta Selection tryout. 100-mile races. "That is proof. So whenever you think you can't &mdash; confidence comes from the thing that you built."</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F4AD;</div>
+        <h4>Dreams vs Mastery</h4>
+        <p>"Don't make dreams your master." Dreaming about becoming a SEAL is easy. The laundry list of details and tasks that replace the dream &mdash; that's where you become the master of YOUR dream.</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x26A0;&#xFE0F;</div>
+        <h4>The Dopamine Trap</h4>
+        <p>Talking about the thing and doing the thing vie for the same resources. Telling friends "I'm going to be a SEAL" gives you the dopamine hit. Then the alarm goes off at 4am and you don't get up.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- 8. THE REVERSE ROLE MODEL -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="s9">
+    <div class="section-number" style="color:var(--accent3);">08 &mdash; The Reverse Role Model</div>
+    <div class="section-title">You Can Succeed by Studying What <em>Not</em> to Do</div>
+
+    <div class="quote-card steel">
+      <div class="quote-text">&ldquo;I had the <strong>ultimate blueprint</strong> by watching my family. I sat back and watched my dad &mdash; definitely don&rsquo;t want to do that. How not to live life &mdash; I watched people do things and said, &lsquo;I don&rsquo;t want to be like that.&rsquo;&rdquo;</div>
+      <div class="quote-attr">David Goggins</div>
+    </div>
+
+    <div class="talk-points">
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F50D;</div>
+        <h4>Most Success = Avoiding Failure</h4>
+        <p>Chris Williamson's concept: you don't need perfect role models. Look around at the people you <em>don't</em> want to be like. Weave your way through them. You can get awfully far just by doing that.</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F9D0;</div>
+        <h4>Studying the Haters</h4>
+        <p>Goggins doesn't just block trolls &mdash; he screenshots them, archives them, and makes mixtapes of hate to fuel his runs. "I was once that negative person. I've studied them and gained knowledge."</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F49C;</div>
+        <h4>Pity, Not Anger</h4>
+        <p>A SEAL Team Six member tried to destroy Goggins' reputation with lies. He was about to sue &mdash; then stopped. "For you to do this, you are in a very, very bad place." He felt sorry for him instead.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- FULL QUOTE: LIVE AUTOPSY -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="full-quote" id="fq4">
+    <blockquote>&ldquo;A lot of people do an autopsy when you die &mdash; they figure out why you died. But we never do a <em>live autopsy</em> to figure out <strong>why we&rsquo;re dying while we are alive.</strong>&rdquo;</blockquote>
+    <div class="fq-attr">David Goggins on facing your father</div>
+    <div class="fq-line fq-red"></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- 9. GENERATIONAL TRAUMA -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="s10">
+    <div class="section-number" style="color:var(--accent2);">09 &mdash; Breaking the Chain</div>
+    <div class="section-title">Generational Trauma: Be the Circuit Breaker</div>
+
+    <div class="quote-card orange">
+      <div class="quote-text">&ldquo;My grandfather would put my father bare naked in front of a furnace with the flames coming out and whip him. The whole idea: if you move, you get burned. Those demons went from his father, to my father, and he tried to transfer them to me. <strong>I had to break the chain.</strong>&rdquo;</div>
+      <div class="quote-attr">David Goggins</div>
+    </div>
+
+    <div class="talk-points">
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F50E;</div>
+        <h4>The Live Autopsy</h4>
+        <p>Goggins went back to visit his abusive father one last time. Not for an apology &mdash; that would have given him permission to be a victim. He went to understand. He studied the beast and saw a broken man.</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F9E9;</div>
+        <h4>Vindication Is a Trap</h4>
+        <p>"If I got the apology, I could go be a loser now. My failings would be justified." Instead, the voice on the drive said: "You've got to make it on your own. Long journey ahead, young man."</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F3AC;</div>
+        <h4>The 8 Mile Principle</h4>
+        <p>Like Eminem in the final rap battle: take all the power from them by telling the truth yourself first. "There's no more secrets." His mom did the same in the audiobook &mdash; owning every painful chapter out loud.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- 10. THE DARK SIDE IS THE GENESIS -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="s11">
+    <div class="section-number" style="color:var(--accent4);">10 &mdash; The Dark Side Is the Genesis</div>
+    <div class="section-title">Everything You&rsquo;re Ashamed of Becomes Your Greatest Weapon</div>
+
+    <div class="quote-card gold">
+      <div class="quote-text">&ldquo;A lot of the things that you feared or hated or were embarrassed about as a child end up being <strong>the genesis of the things that you&rsquo;re most proud about as an adult.</strong>&rdquo;</div>
+      <div class="quote-attr">Chris Williamson</div>
+    </div>
+
+    <div class="talk-points">
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F3A7;</div>
+        <h4>Audio Tapes &rarr; Podcasts</h4>
+        <p>Chris was lonely as a kid. Spent his time alone in his bedroom listening to audio tapes from the library. Roll the clock forward 20 years &mdash; the 2023 version of an audio tape is a podcast.</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F30C;</div>
+        <h4>Loneliness &rarr; Solitude</h4>
+        <p>Both Goggins and Chris grew up isolated. What once hurt now fuels them. "I used to hate being alone. Now I thrive in that. That's the only place to be."</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F50E;</div>
+        <h4>Hypervigilance &rarr; Genius With People</h4>
+        <p>Growing up in abuse made Goggins obsessed with reading energy. "Who can I trust? Who can I not trust?" He became a genius at reading human beings &mdash; a survival skill that became a superpower.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- 11. PERFORMANCE WITHOUT PURPOSE -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="s12">
+    <div class="section-number" style="color:var(--accent);">11 &mdash; Performance Without Purpose</div>
+    <div class="section-title">You Are Always the Purpose</div>
+
+    <div class="quote-card">
+      <div class="quote-text">&ldquo;Purpose never leaves us. The very purpose is <strong>you</strong>. If you wake up in the morning and you don&rsquo;t want to do something, <strong>you don&rsquo;t care enough about yourself.</strong> That is the number one purpose in life &mdash; to better oneself. That&rsquo;s the only purpose I need.&rdquo;</div>
+      <div class="quote-attr">David Goggins</div>
+    </div>
+
+    <div class="talk-points">
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F3AF;</div>
+        <h4>No Race? Still Perform.</h4>
+        <p>No 5K on the calendar. No school to get into. No one watching. Perform anyway. Because one day the moment will come &mdash; and if you haven't been performing without purpose, you won't be ready.</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F9E0;</div>
+        <h4>The Mission Statement</h4>
+        <p>"Make up your own mission statement. What do you want to stand for? Until you know, you'll always just be sitting down. You'll never stand for anything."</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F6E1;&#xFE0F;</div>
+        <h4>Unchosen Suffering Is Coming</h4>
+        <p>"The only thing you can do is have chosen suffering to prepare. Do something that sucks every day." Voluntary discomfort is the training ground for the involuntary kind.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- CLOSING -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="big-callout red" id="close">
+    <blockquote style="font-family:'Playfair Display',serif; font-size:clamp(1.5rem,3.5vw,2.5rem); font-weight:700; color:#fff; max-width:800px; text-align:center; line-height:1.4; position:relative; z-index:1;">
+      &ldquo;It&rsquo;s so easy to be great nowadays, my friend. Because most people are weak. Most people don&rsquo;t want to go that extra mile. Most people don&rsquo;t want to find that extra &mdash; because it sucks. It&rsquo;s miserable. It&rsquo;s lonely. And that&rsquo;s where I thrive.&rdquo;
+    </blockquote>
+    <p style="color:var(--muted); margin-top:1.5rem; font-size:0.85rem; letter-spacing:0.15em; text-transform:uppercase; position:relative; z-index:1;">David Goggins &mdash; closing</p>
+  </div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- FOOTER -->
+  <!-- ═══════════════════════════════════════ -->
+  <footer>
+    <p>Source: <a href="https://www.youtube.com/watch?v=ngvOyccUzzY" target="_blank">Modern Wisdom #702 &mdash; David Goggins x Chris Williamson</a></p>
+    <p style="margin-top:0.5rem;">All quotes attributed to David Goggins &amp; Chris Williamson</p>
+  </footer>
+
+  <script>
+    const sections = [
+      { id: 'hero', label: 'Intro' },
+      { id: 's1', label: 'Cap Success' },
+      { id: 's2', label: 'Trained Humility' },
+      { id: 's3', label: 'One-Second Decision' },
+      { id: 's4', label: '1 Second = 40 Years' },
+      { id: 's5', label: 'Perishable Skill' },
+      { id: 's6', label: 'Beyond Motivation' },
+      { id: 's7', label: 'Daily Armor' },
+      { id: 's8', label: 'Built Belief' },
+      { id: 's9', label: 'Reverse Role Model' },
+      { id: 's10', label: 'Break the Chain' },
+      { id: 's11', label: 'Dark Side = Genesis' },
+      { id: 's12', label: 'Purpose Is You' },
+    ];
+
+    const nav = document.getElementById('navDots');
+    sections.forEach(s => {
+      const dot = document.createElement('button');
+      dot.className = 'nav-dot';
+      dot.title = s.label;
+      dot.dataset.target = s.id;
+      dot.addEventListener('click', () => {
+        document.getElementById(s.id).scrollIntoView({ behavior: 'smooth' });
+      });
+      nav.appendChild(dot);
+    });
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          document.querySelectorAll('.nav-dot').forEach(d => d.classList.remove('active'));
+          const dot = document.querySelector(`.nav-dot[data-target="${entry.target.id}"]`);
+          if (dot) dot.classList.add('active');
+        }
+      });
+    }, { threshold: 0.3 });
+
+    sections.forEach(s => {
+      const el = document.getElementById(s.id);
+      if (el) observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>

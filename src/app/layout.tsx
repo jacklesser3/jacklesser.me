@@ -19,17 +19,17 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Jack Lesser | Where Discipline Meets Depth",
+    default: "Jack Lesser | Podcast Reviews",
     template: "%s | Jack Lesser",
   },
   description:
-    "Personal website of Jack Lesser. Exploring the intersection of discipline and depth through integrated wellness—body, mind, and spirit.",
+    "Jack Lesser's podcast reviews and notes on discipline, leverage, psychology, and the ideas worth revisiting.",
   keywords: [
     "Jack Lesser",
-    "wellness",
+    "podcast reviews",
     "discipline",
+    "psychology",
     "philosophy",
-    "practice",
     "personal development",
   ],
   authors: [{ name: "Jack Lesser" }],
@@ -39,15 +39,15 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://jacklesser.me",
     siteName: "Jack Lesser",
-    title: "Jack Lesser | Where Discipline Meets Depth",
+    title: "Jack Lesser | Podcast Reviews",
     description:
-      "Exploring the intersection of discipline and depth through integrated wellness—body, mind, and spirit.",
+      "Podcast reviews and personal notes on the conversations that shape how Jack Lesser thinks and lives.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jack Lesser | Where Discipline Meets Depth",
+    title: "Jack Lesser | Podcast Reviews",
     description:
-      "Exploring the intersection of discipline and depth through integrated wellness—body, mind, and spirit.",
+      "Podcast reviews and personal notes on discipline, leverage, psychology, and inner work.",
   },
   robots: {
     index: true,
@@ -62,7 +62,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
-      <body className="min-h-screen flex flex-col">
+      <body className="flex min-h-screen flex-col">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

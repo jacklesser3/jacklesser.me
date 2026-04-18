@@ -3,14 +3,16 @@
 /* Design System Variables */
 :root {
   /* Colors */
-  --color-bg-primary: #F8F6F2;
-  --color-bg-secondary: #E8E4DE;
-  --color-text-primary: #2A2520;
-  --color-text-secondary: #5C5650;
-  --color-text-muted: #6B6560;
-  --color-text-on-dark: #F8F6F2;
-  --color-accent-forge: #6B7B8A;
-  --color-accent-ember: #C4956A;
+  --color-bg-primary: #09090c;
+  --color-bg-secondary: #14141a;
+  --color-surface-elevated: #191a21;
+  --color-border-subtle: rgba(245, 239, 229, 0.1);
+  --color-text-primary: #f5efe5;
+  --color-text-secondary: #c2baaf;
+  --color-text-muted: #8a8176;
+  --color-text-on-dark: #09090c;
+  --color-accent-forge: #8e9baa;
+  --color-accent-ember: #d9a572;
 
   /* Typography Scale */
   --font-display: var(--font-cormorant);
@@ -27,9 +29,9 @@
   --space-4xl: 6rem;
 
   /* Shadows */
-  --shadow-subtle: 0 1px 3px rgba(42, 37, 32, 0.06);
-  --shadow-soft: 0 4px 12px rgba(42, 37, 32, 0.08);
-  --shadow-medium: 0 8px 24px rgba(42, 37, 32, 0.12);
+  --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.24);
+  --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.28);
+  --shadow-medium: 0 24px 60px rgba(0, 0, 0, 0.36);
 
   /* Transitions */
   --transition-fast: 150ms ease;
@@ -43,12 +45,12 @@
   --radius-xl: 1rem;
 
   /* Draft War Room Colors */
-  --background: #F8F6F2;
-  --background-elevated: #FFFFFF;
-  --background-hover: #E8E4DE;
-  --text-primary: #2A2520;
-  --text-secondary: #5C5650;
-  --border-color: #D4CFC8;
+  --background: #09090c;
+  --background-elevated: #191a21;
+  --background-hover: #14141a;
+  --text-primary: #f5efe5;
+  --text-secondary: #c2baaf;
+  --border-color: rgba(245, 239, 229, 0.12);
   --accent-blue: #2196F3;
   --accent-green: #4CAF50;
   --error-color: #f44336;
@@ -81,6 +83,9 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image:
+    radial-gradient(circle at top, rgba(217, 165, 114, 0.12), transparent 34%),
+    radial-gradient(circle at 85% 22%, rgba(142, 155, 170, 0.14), transparent 28%);
 }
 
 /* Typography Base */
@@ -100,7 +105,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Selection */
 ::selection {
   background-color: var(--color-accent-ember);
-  color: var(--color-bg-primary);
+  color: var(--color-text-on-dark);
 }
 
 /* Scrollbar Styling */
@@ -109,27 +114,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-bg-secondary);
+  background: var(--color-bg-primary);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-text-secondary);
+  background: rgba(245, 239, 229, 0.18);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-text-primary);
+  background: rgba(245, 239, 229, 0.28);
 }
 
 /* Link Base Styles */
 a {
-  color: var(--color-accent-forge);
+  color: var(--color-text-primary);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
 
 a:hover {
-  color: var(--color-text-primary);
+  color: var(--color-accent-ember);
 }
 
 /* Button links: keep text visible (override global link color) */
@@ -141,7 +146,7 @@ a[data-button-variant="primary"]:hover {
 /* Horizontal Divider */
 hr {
   border: none;
-  border-top: 1px solid var(--color-bg-secondary);
+  border-top: 1px solid var(--color-border-subtle);
   margin: var(--space-xl) 0;
 }
 

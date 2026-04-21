@@ -10,7 +10,7 @@ const podcastReviews = [
     title: "Naval Ravikant x Joe Rogan",
     subtitle: "Wealth, Happiness & Leverage",
     summary:
-      "A cleaner look at leverage, judgment, wealth creation, and how to think in a way that compounds over time.",
+      "A clean look at leverage, judgment, wealth creation, and how to think in a way that compounds over time.",
     videoId: "KxqsQ4xKlt8",
   },
   {
@@ -200,7 +200,7 @@ export default function Home() {
                   <p className="text-[0.65rem] font-medium uppercase tracking-[0.36em] text-[var(--color-text-muted)]">
                     {review.number}
                   </p>
-                  <div className={review.videoId ? "grid gap-6 md:grid-cols-[1fr_16rem]" : ""}>
+                  <div className="grid gap-6 md:grid-cols-[1fr_16rem]">
                     <div>
                       <p className="text-[0.65rem] font-medium uppercase tracking-[0.3em] text-[rgba(184,137,90,0.7)]">
                         {review.subtitle}
@@ -212,11 +212,17 @@ export default function Home() {
                         {review.summary}
                       </p>
                     </div>
-                    {review.videoId && (
+                    {review.videoId ? (
                       <YouTubeEmbed
                         videoId={review.videoId}
                         className="self-center rounded-lg border border-white/[0.08]"
                       />
+                    ) : (
+                      <div className="flex items-center justify-center self-center rounded-lg border border-white/[0.08] bg-[rgba(9,9,12,0.4)] aspect-video w-full">
+                        <p className="font-[family-name:var(--font-cormorant)] text-sm italic text-[var(--color-text-muted)]">
+                          Timeless reflection coming soon
+                        </p>
+                      </div>
                     )}
                   </div>
                 </div>

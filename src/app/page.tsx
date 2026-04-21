@@ -11,6 +11,7 @@ const podcastReviews = [
     summary:
       "A cleaner look at leverage, judgment, wealth creation, and how to think in a way that compounds over time.",
     gradient: "from-[#38bdf8] via-[#a78bfa] to-[#34d399]",
+    videoId: "KxqsQ4xKlt8",
   },
   {
     number: "02",
@@ -56,56 +57,72 @@ export default function Home() {
       </div>
 
       <section className="relative">
-        <Container className="flex min-h-[calc(100vh-9rem)] items-center py-10 md:py-14">
+        <Container className="flex min-h-[calc(100vh-9rem)] flex-col items-center justify-center py-10 md:py-14">
           <div className="w-full overflow-hidden rounded-[2.75rem] border border-white/8 bg-[rgba(6,7,9,0.66)] shadow-[var(--shadow-medium)]">
-            <div className="border-b border-white/8 px-6 py-6 md:px-10">
-              <p className="text-[0.72rem] uppercase tracking-[0.34em] text-[var(--color-text-muted)]">
-                Three Pillars
-              </p>
-              <p className="mt-4 max-w-2xl font-[family-name:var(--font-cormorant)] text-3xl leading-tight text-[var(--color-text-primary)] md:text-4xl">
-                Performance, leverage, and inner work are different expressions
-                of the same project.
+            <div className="px-6 py-12 md:px-10 md:py-16 text-center">
+              <h1 className="font-[family-name:var(--font-cormorant)] text-7xl italic leading-none text-[var(--color-text-primary)] md:text-9xl tracking-tight">
+                Timeless
+              </h1>
+              <p className="mx-auto mt-6 max-w-xl text-sm leading-7 tracking-wide text-[var(--color-text-muted)] md:text-base md:leading-8">
+                Ideas, thinkers, and technologies that hold up across time.
               </p>
             </div>
 
-            <div className="grid divide-y divide-white/8 md:grid-cols-3 md:divide-x md:divide-y-0">
+            <div className="grid divide-y divide-white/8 border-t border-white/8 md:grid-cols-3 md:divide-x md:divide-y-0">
               {pillars.map((item, index) => (
                 <div
                   key={item.label}
-                  className="animate-fade-in relative bg-white/[0.02] p-6 transition duration-300 hover:bg-white/[0.04] md:min-h-[24rem] md:p-8"
+                  className="animate-fade-in relative bg-white/[0.02] p-5 transition duration-300 hover:bg-white/[0.04] md:p-6"
                   style={{ animationDelay: `${(index + 1) * 100}ms` }}
                 >
-                  <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white/[0.03] to-transparent" />
-                  <p className="text-[0.72rem] uppercase tracking-[0.32em] text-[var(--color-text-muted)]">
-                    0{index + 1}
-                  </p>
-                  <p className="mt-12 font-[family-name:var(--font-cormorant)] text-4xl leading-[0.95] text-[var(--color-text-primary)] md:text-5xl">
+                  <p className="text-[0.68rem] uppercase tracking-[0.34em] text-[var(--color-text-muted)]">
                     {item.label}
                   </p>
-                  <p className="mt-8 max-w-sm text-lg leading-8 text-[var(--color-text-secondary)]">
+                  <p className="mt-3 max-w-sm text-sm leading-6 text-[var(--color-text-secondary)]">
                     {item.text}
                   </p>
                 </div>
               ))}
             </div>
           </div>
+
+          <a
+            href="#reviews"
+            className="mt-8 flex flex-col items-center gap-2 text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-text-secondary)]"
+          >
+            <span className="font-[family-name:var(--font-cormorant)] text-lg italic">
+              explore
+            </span>
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              className="animate-bounce"
+            >
+              <path
+                d="M8 3v10m0 0l-4-4m4 4l4-4"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </a>
         </Container>
       </section>
 
-      <section className="relative border-t border-white/8">
+      <section id="reviews" className="relative border-t border-white/8">
         <Container className="py-16 md:py-20">
           <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="text-[0.72rem] uppercase tracking-[0.32em] text-[var(--color-text-muted)]">
-                Latest Reviews
+                Timeless
               </p>
               <h2 className="mt-4 font-[family-name:var(--font-cormorant)] text-4xl leading-none text-[var(--color-text-primary)] md:text-5xl">
-                Summaries on the main page.
+                Discover to unlock ancient and present wisdom.
               </h2>
             </div>
-            <p className="max-w-xl text-sm leading-7 text-[var(--color-text-muted)]">
-              A quick read before diving into the full review.
-            </p>
           </div>
 
           <div className="grid gap-5">
@@ -121,16 +138,29 @@ export default function Home() {
                   <p className="text-[0.72rem] uppercase tracking-[0.32em] text-[var(--color-text-muted)]">
                     {review.number}
                   </p>
-                  <div>
-                    <p className="text-[0.72rem] uppercase tracking-[0.28em] text-[var(--color-accent-forge)]">
-                      {review.subtitle}
-                    </p>
-                    <h3 className="mt-3 font-[family-name:var(--font-cormorant)] text-3xl leading-tight text-[var(--color-text-primary)] md:text-4xl">
-                      {review.title}
-                    </h3>
-                    <p className="mt-5 max-w-3xl text-lg leading-8 text-[var(--color-text-secondary)]">
-                      {review.summary}
-                    </p>
+                  <div className={review.videoId ? "grid gap-6 md:grid-cols-[1fr_16rem]" : ""}>
+                    <div>
+                      <p className="text-[0.72rem] uppercase tracking-[0.28em] text-[var(--color-accent-forge)]">
+                        {review.subtitle}
+                      </p>
+                      <h3 className="mt-3 font-[family-name:var(--font-cormorant)] text-3xl leading-tight text-[var(--color-text-primary)] md:text-4xl">
+                        {review.title}
+                      </h3>
+                      <p className="mt-5 max-w-3xl text-lg leading-8 text-[var(--color-text-secondary)]">
+                        {review.summary}
+                      </p>
+                    </div>
+                    {review.videoId && (
+                      <div className="relative self-center overflow-hidden rounded-xl bg-black" style={{ paddingBottom: '56.25%' }}>
+                        <iframe
+                          className="absolute inset-0 h-full w-full"
+                          src={`https://www.youtube-nocookie.com/embed/${review.videoId}?modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&controls=1`}
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          style={{ border: 'none' }}
+                        />
+                      </div>
+                    )}
                   </div>
                 </div>
               </a>

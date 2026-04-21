@@ -14,19 +14,19 @@ const podcastReviews = [
   },
   {
     number: "02",
-    href: "/goggins-podcast.html",
-    title: "David Goggins x Chris Williamson",
-    subtitle: "Never Finished",
-    summary:
-      "A hard-edged review on identity, suffering, and the standard required to stop negotiating with yourself.",
-  },
-  {
-    number: "03",
     href: "/dr-k-podcast.html",
     title: "Dr. K x Andre Duqum",
     subtitle: "Eastern Wisdom & Neuroscience",
     summary:
       "A more reflective review on healing, attention, and the overlap between contemplative practice and modern psychology.",
+  },
+  {
+    number: "03",
+    href: "/goggins-podcast.html",
+    title: "David Goggins x Chris Williamson",
+    subtitle: "Never Finished",
+    summary:
+      "A hard-edged review on identity, suffering, and the standard required to stop negotiating with yourself.",
   },
 ];
 

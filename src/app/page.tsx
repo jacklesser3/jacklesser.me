@@ -119,14 +119,14 @@ export default function Home() {
 
       {/* ── Hero section ── */}
       <section className="relative z-10">
-        <Container className="flex min-h-[calc(100vh-9rem)] flex-col items-center justify-center py-10 md:py-14">
+        <Container className="flex min-h-[calc(100vh-8rem)] flex-col items-center justify-center py-8 sm:py-10 md:min-h-[calc(100vh-9rem)] md:py-14">
           <div className="relative w-full flex flex-col items-center">
             {/* Peak — Timeless */}
-            <div className="relative z-10 px-6 pb-10 pt-6 text-center md:pb-12 md:pt-8">
-              <h1 className="font-[family-name:var(--font-cormorant)] text-7xl italic leading-none text-[var(--color-text-primary)] md:text-9xl tracking-tight drop-shadow-[0_0_60px_rgba(255,255,255,0.06)]">
+            <div className="relative z-10 px-4 pb-10 pt-4 text-center sm:px-6 md:pb-12 md:pt-8">
+              <h1 className="font-[family-name:var(--font-cormorant)] text-[4.5rem] italic leading-none tracking-tight text-[var(--color-text-primary)] drop-shadow-[0_0_60px_rgba(255,255,255,0.06)] sm:text-8xl md:text-9xl">
                 Timeless
               </h1>
-              <p className="mx-auto mt-5 whitespace-nowrap text-sm tracking-wide text-[var(--color-text-muted)] md:text-base">
+              <p className="mx-auto mt-5 max-w-[18rem] text-sm leading-6 tracking-[0.18em] text-[var(--color-text-muted)] sm:max-w-2xl sm:text-base sm:tracking-wide">
                 Ideas, thinkers, and technologies that hold up across time.
               </p>
             </div>

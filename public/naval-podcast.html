@@ -88,6 +88,61 @@
       border: none;
     }
 
+    .hero-video .video-thumb {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      cursor: pointer;
+      transition: transform 0.5s;
+    }
+
+    .hero-video:hover .video-thumb {
+      transform: scale(1.05);
+    }
+
+    .hero-video .video-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.2);
+      transition: background 0.3s;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-video:hover .video-overlay {
+      background: rgba(0,0,0,0.1);
+    }
+
+    .hero-video .play-btn {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(9,9,12,0.7);
+      border: 1px solid rgba(217,165,114,0.3);
+      backdrop-filter: blur(12px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s, border-color 0.3s, background 0.3s;
+    }
+
+    .hero-video:hover .play-btn {
+      transform: scale(1.1);
+      border-color: rgba(217,165,114,0.5);
+      background: rgba(9,9,12,0.8);
+    }
+
+    .play-btn svg {
+      width: 20px;
+      height: 20px;
+      margin: 0;
+    }
+
     .hero h1 {
       font-family: 'Playfair Display', serif;
       font-size: clamp(2rem, 3.5vw, 3.2rem);
@@ -438,12 +493,13 @@
           <span>4 Takeaways</span>
         </div>
       </div>
-      <div class="hero-video">
-        <iframe
-          src="https://www.youtube-nocookie.com/embed/KxqsQ4xKlt8?modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&controls=1"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
+      <div class="hero-video" id="heroVideo">
+        <img class="video-thumb" src="https://img.youtube.com/vi/KxqsQ4xKlt8/maxresdefault.jpg" alt="Naval Ravikant x Joe Rogan" />
+        <div class="video-overlay" onclick="playVideo()">
+          <div class="play-btn">
+            <svg viewBox="0 0 20 20" fill="none" width="20" height="20"><path d="M6.5 3.5L16 10L6.5 16.5V3.5Z" fill="#d9a572"/></svg>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -655,6 +711,12 @@
   </footer>
 
   <script>
+    // Lite YouTube embed — swap thumbnail for iframe on click
+    function playVideo() {
+      const container = document.getElementById('heroVideo');
+      container.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/KxqsQ4xKlt8?autoplay=1&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&controls=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+    }
+
     // Sections for navigation
     const pages = [
       { id: 'hero', label: 'Intro' },

@@ -1,4 +1,5 @@
 import { Container } from "@/components/ui/Container";
+import { YouTubeEmbed } from "@/components/ui/YouTubeEmbed";
 
 export const revalidate = 3600; // Revalidate every hour for RSS feed
 
@@ -212,15 +213,10 @@ export default function Home() {
                       </p>
                     </div>
                     {review.videoId && (
-                      <div className="relative self-center overflow-hidden rounded-lg border border-white/[0.08] bg-black" style={{ paddingBottom: '56.25%' }}>
-                        <iframe
-                          className="absolute inset-0 h-full w-full"
-                          src={`https://www.youtube-nocookie.com/embed/${review.videoId}?modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&controls=1`}
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                          style={{ border: 'none' }}
-                        />
-                      </div>
+                      <YouTubeEmbed
+                        videoId={review.videoId}
+                        className="self-center rounded-lg border border-white/[0.08]"
+                      />
                     )}
                   </div>
                 </div>

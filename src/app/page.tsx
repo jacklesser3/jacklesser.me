@@ -46,14 +46,87 @@ const pillars = [
   },
 ];
 
+const ambientStars = [
+  { left: "6%", top: "8%", size: 2.2, opacity: 0.62, delay: "0.2s", duration: "7.8s" },
+  { left: "12%", top: "5.5%", size: 1.7, opacity: 0.55, delay: "1.1s", duration: "8.6s" },
+  { left: "18.5%", top: "12%", size: 2.1, opacity: 0.68, delay: "2.5s", duration: "7.2s" },
+  { left: "27%", top: "7.8%", size: 1.8, opacity: 0.52, delay: "0.6s", duration: "9s" },
+  { left: "35%", top: "10.5%", size: 2.4, opacity: 0.7, delay: "1.8s", duration: "7.4s" },
+  { left: "43%", top: "6.5%", size: 1.6, opacity: 0.5, delay: "2.2s", duration: "8.9s" },
+  { left: "52%", top: "11.8%", size: 2.2, opacity: 0.66, delay: "0.9s", duration: "7.7s" },
+  { left: "61%", top: "8.7%", size: 1.9, opacity: 0.58, delay: "1.4s", duration: "8.2s" },
+  { left: "69%", top: "5.2%", size: 2.1, opacity: 0.63, delay: "2.8s", duration: "7.9s" },
+  { left: "76.5%", top: "11.2%", size: 1.7, opacity: 0.54, delay: "0.4s", duration: "8.7s" },
+  { left: "84%", top: "7.5%", size: 2.3, opacity: 0.7, delay: "1.9s", duration: "7.1s" },
+  { left: "92%", top: "10.4%", size: 1.8, opacity: 0.57, delay: "0.7s", duration: "8.4s" },
+  { left: "9%", top: "24%", size: 1.6, opacity: 0.44, delay: "2.1s", duration: "9.1s" },
+  { left: "21%", top: "29%", size: 2, opacity: 0.5, delay: "1.2s", duration: "8s" },
+  { left: "28%", top: "24%", size: 1.5, opacity: 0.42, delay: "0.3s", duration: "8.8s" },
+  { left: "16%", top: "35%", size: 1.8, opacity: 0.48, delay: "2.7s", duration: "7.5s" },
+  { left: "82%", top: "28%", size: 1.7, opacity: 0.46, delay: "1.5s", duration: "8.3s" },
+  { left: "72%", top: "31%", size: 1.9, opacity: 0.52, delay: "0.8s", duration: "7.6s" },
+  { left: "87%", top: "25%", size: 1.6, opacity: 0.43, delay: "2.3s", duration: "8.9s" },
+  { left: "14%", top: "46%", size: 1.7, opacity: 0.4, delay: "1s", duration: "8.5s" },
+  { left: "29%", top: "52%", size: 1.9, opacity: 0.45, delay: "2.4s", duration: "7.8s" },
+  { left: "11%", top: "58%", size: 1.5, opacity: 0.38, delay: "0.5s", duration: "9.2s" },
+  { left: "86%", top: "60%", size: 1.8, opacity: 0.42, delay: "1.6s", duration: "8.1s" },
+  { left: "78%", top: "40%", size: 1.6, opacity: 0.39, delay: "2.9s", duration: "9s" },
+  { left: "81%", top: "53%", size: 1.9, opacity: 0.44, delay: "0.9s", duration: "7.9s" },
+  { left: "93%", top: "47%", size: 1.5, opacity: 0.36, delay: "1.9s", duration: "8.7s" },
+  { left: "7%", top: "68%", size: 1.6, opacity: 0.34, delay: "2.6s", duration: "8.6s" },
+  { left: "19%", top: "76%", size: 1.8, opacity: 0.38, delay: "0.6s", duration: "9.3s" },
+  { left: "38%", top: "71%", size: 1.5, opacity: 0.33, delay: "1.8s", duration: "8.4s" },
+  { left: "52%", top: "82%", size: 1.7, opacity: 0.36, delay: "2.2s", duration: "7.7s" },
+  { left: "67%", top: "73%", size: 1.9, opacity: 0.39, delay: "1.1s", duration: "8.2s" },
+  { left: "79%", top: "86%", size: 1.6, opacity: 0.34, delay: "2.8s", duration: "9s" },
+  { left: "91%", top: "78%", size: 1.7, opacity: 0.35, delay: "0.4s", duration: "8.8s" },
+];
+
+const shootingStars = [
+  { left: "8%", top: "6%", delay: "2s", duration: "11s", length: 130 },
+  { left: "64%", top: "9%", delay: "6.5s", duration: "13s", length: 150 },
+  { left: "82%", top: "62%", delay: "10s", duration: "16s", length: 120 },
+];
+
 export default function Home() {
   return (
     <div className="relative overflow-hidden">
       {/* ── Full-bleed terrain background ── */}
-      <div className="pointer-events-none fixed inset-0 z-0">
+      <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
         {/* Ambient glow — warm summit + cool glacier */}
         <div className="absolute left-1/2 top-[8%] -translate-x-1/2 h-[30rem] w-[50rem] rounded-full bg-[rgba(184,137,90,0.07)] blur-[160px]" />
         <div className="absolute right-[-8rem] top-[30%] h-[24rem] w-[24rem] rounded-full bg-[rgba(58,107,138,0.06)] blur-[140px]" />
+
+        {ambientStars.map((star) => (
+          <span
+            key={`${star.left}-${star.top}`}
+            className="absolute rounded-full bg-white animate-star-twinkle"
+            style={{
+              left: star.left,
+              top: star.top,
+              width: `${star.size}px`,
+              height: `${star.size}px`,
+              opacity: star.opacity,
+              boxShadow: `0 0 ${star.size * 6}px rgba(255,255,255,0.24)`,
+              animationDelay: star.delay,
+              animationDuration: star.duration,
+            }}
+          />
+        ))}
+
+        {shootingStars.map((star) => (
+          <span
+            key={`${star.left}-${star.top}`}
+            className="absolute animate-shooting-star"
+            style={{
+              left: star.left,
+              top: star.top,
+              width: `${star.length}px`,
+              animationDelay: star.delay,
+              animationDuration: star.duration,
+            }}
+          />
+        ))}
 
         {/* Topographic aerial SVG — contour lines seen from above */}
         <svg className="absolute inset-0 h-full w-full" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
@@ -123,9 +196,14 @@ export default function Home() {
           <div className="relative w-full flex flex-col items-center">
             {/* Peak — Timeless */}
             <div className="relative z-10 px-4 pb-10 pt-4 text-center sm:px-6 md:pb-12 md:pt-8">
-              <h1 className="font-[family-name:var(--font-cormorant)] text-[4.5rem] italic leading-none tracking-tight text-[var(--color-text-primary)] drop-shadow-[0_0_60px_rgba(255,255,255,0.06)] sm:text-8xl md:text-9xl">
-                Timeless
-              </h1>
+              <div className="relative inline-block">
+                <h1 className="font-[family-name:var(--font-cormorant)] text-[4.5rem] italic leading-none tracking-tight text-[var(--color-text-primary)] drop-shadow-[0_0_60px_rgba(255,255,255,0.06)] sm:text-8xl md:text-9xl">
+                  Timeless
+                </h1>
+                <span className="pointer-events-none absolute left-[8%] top-[88%] h-px w-[84%] overflow-hidden">
+                  <span className="absolute left-0 top-0 block h-full w-[42%] animate-title-shooting-star rounded-full bg-[linear-gradient(90deg,rgba(255,255,255,0)_0%,rgba(255,248,236,0.08)_24%,rgba(255,248,236,0.92)_54%,rgba(255,248,236,0.18)_78%,rgba(255,255,255,0)_100%)] shadow-[0_0_10px_rgba(255,244,228,0.28)]" />
+                </span>
+              </div>
               <p className="mx-auto mt-5 max-w-[18rem] text-sm leading-6 tracking-[0.18em] text-[var(--color-text-muted)] sm:max-w-2xl sm:text-base sm:tracking-wide">
                 Ideas, thinkers, and technologies that hold up across time.
               </p>

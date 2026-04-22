@@ -216,12 +216,89 @@ hr {
   }
 }
 
+@keyframes star-twinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.12);
+  }
+}
+
+@keyframes shooting-star {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) rotate(-28deg) scaleX(0.65);
+  }
+  8% {
+    opacity: 0.65;
+  }
+  22% {
+    opacity: 0;
+    transform: translate3d(180px, 92px, 0) rotate(-28deg) scaleX(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(180px, 92px, 0) rotate(-28deg) scaleX(1);
+  }
+}
+
+@keyframes title-shooting-star {
+  0% {
+    opacity: 0;
+    transform: translateX(-165%) scaleX(0.5);
+  }
+  10% {
+    opacity: 0;
+  }
+  18% {
+    opacity: 0.96;
+    transform: translateX(-58%) scaleX(0.72);
+  }
+  42% {
+    opacity: 0.82;
+    transform: translateX(42%) scaleX(1);
+  }
+  58% {
+    opacity: 0.42;
+    transform: translateX(118%) scaleX(0.94);
+  }
+  72% {
+    opacity: 0;
+    transform: translateX(178%) scaleX(0.72);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(178%) scaleX(0.72);
+  }
+}
+
 .animate-fade-in {
   animation: fade-in var(--transition-slow) ease forwards;
 }
 
 .animate-fade-in-slow {
   animation: fade-in-slow 600ms ease forwards;
+}
+
+.animate-star-twinkle {
+  animation: star-twinkle 7s ease-in-out infinite;
+}
+
+.animate-shooting-star {
+  height: 1px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.22) 55%, rgba(255,255,255,0) 100%);
+  box-shadow: 0 0 12px rgba(255,255,255,0.18);
+  transform-origin: left center;
+  animation: shooting-star 12s ease-out infinite;
+}
+
+.animate-title-shooting-star {
+  transform-origin: left center;
+  animation: title-shooting-star 6.8s ease-in-out infinite;
 }
 
 /* Staggered animation delays */

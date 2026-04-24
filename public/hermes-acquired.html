@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acquired: Herm&egrave;s &mdash; 5 Key Takeaways</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Playfair+Display:ital,wght@0,700;1,400&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #0c0a08;
+      --card: #1a1612;
+      --accent: #d4874e;
+      --accent2: #c9a96e;
+      --accent3: #8b7355;
+      --accent4: #e8cda0;
+      --accent5: #a0785a;
+      --text: #e8e0d4;
+      --muted: #8a7e6f;
+      --white: #faf5ee;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    /* ─── PAGES (viewport-locked) ─── */
+    .page {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: clamp(1.5rem, 3vh, 3rem) clamp(1.5rem, 4vw, 3rem);
+      max-width: 1100px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    /* ─── HERO (full-screen, no video) ─── */
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 3rem 2rem;
+      position: relative;
+      background: radial-gradient(ellipse at 50% 30%, rgba(212,135,78,0.1) 0%, transparent 60%),
+                  radial-gradient(ellipse at 80% 70%, rgba(201,169,110,0.06) 0%, transparent 50%);
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-weight: 700;
+      line-height: 1.15;
+      max-width: 900px;
+      background: linear-gradient(135deg, #faf5ee 0%, #d4874e 50%, #c9a96e 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-label {
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      font-size: 0.75rem;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+
+    .hero-sub {
+      margin-top: 1.5rem;
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      color: var(--muted);
+      max-width: 650px;
+      line-height: 1.6;
+    }
+
+    .hero-meta {
+      margin-top: 2rem;
+      display: flex;
+      gap: 2rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 2rem;
+      animation: bounce 2s infinite;
+      color: var(--muted);
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
+
+    .home-link {
+      position: fixed;
+      top: 1.25rem;
+      left: 1.25rem;
+      z-index: 1000;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1rem;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 999px;
+      background: rgba(12,10,8,0.72);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      backdrop-filter: blur(12px);
+      transition: border-color 0.3s, transform 0.3s, color 0.3s;
+    }
+
+    .home-link:hover {
+      color: var(--accent);
+      border-color: rgba(212,135,78,0.45);
+      transform: translateY(-1px);
+    }
+
+    /* ─── SECTION ELEMENTS ─── */
+    .section-number {
+      font-size: clamp(0.6rem, 1vw, 0.7rem);
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      font-weight: 600;
+      margin-bottom: clamp(0.3rem, 0.8vh, 0.6rem);
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.4rem, 3vw, 2.4rem);
+      font-weight: 700;
+      margin-bottom: clamp(0.8rem, 1.5vh, 1.5rem);
+      line-height: 1.2;
+      color: var(--white);
+    }
+
+    /* ─── QUOTE CARDS ─── */
+    .quote-card {
+      background: var(--card);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 12px 12px 0;
+      padding: clamp(1rem, 2vh, 1.5rem) clamp(1.2rem, 2vw, 2rem);
+      margin-bottom: clamp(0.8rem, 1.5vh, 1.2rem);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .quote-card:hover {
+      transform: translateX(8px);
+      box-shadow: -4px 0 30px rgba(212,135,78,0.08);
+    }
+
+    .quote-card.gold { border-left-color: var(--accent2); }
+    .quote-card.earth { border-left-color: var(--accent3); }
+    .quote-card.cream { border-left-color: var(--accent4); }
+    .quote-card.saddle { border-left-color: var(--accent5); }
+
+    .quote-text {
+      font-size: clamp(0.85rem, 1.5vw, 1.1rem);
+      font-weight: 300;
+      line-height: 1.6;
+      font-style: italic;
+    }
+
+    .quote-text strong { font-weight: 700; font-style: normal; color: #fff; }
+
+    .quote-attr {
+      margin-top: clamp(0.4rem, 0.8vh, 0.75rem);
+      font-size: clamp(0.65rem, 1vw, 0.75rem);
+      color: var(--muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* ─── TALK POINTS ─── */
+    .talk-points {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(0.6rem, 1vw, 1rem);
+      margin-top: clamp(0.5rem, 1vh, 1rem);
+    }
+
+    .talk-point {
+      background: var(--card);
+      border-radius: 12px;
+      padding: clamp(0.8rem, 1.5vh, 1.2rem);
+      border: 1px solid rgba(255,255,255,0.05);
+      transition: border-color 0.3s;
+    }
+
+    .talk-point:hover { border-color: rgba(212,135,78,0.25); }
+    .talk-point-icon { font-size: 1.3rem; margin-bottom: clamp(0.3rem, 0.5vh, 0.5rem); }
+    .talk-point h4 { font-size: clamp(0.85rem, 1.3vw, 1rem); font-weight: 700; margin-bottom: clamp(0.2rem, 0.5vh, 0.4rem); color: #fff; }
+    .talk-point p { font-size: clamp(0.78rem, 1.2vw, 0.88rem); color: var(--muted); line-height: 1.5; }
+
+    /* ─── FULL-WIDTH QUOTE ─── */
+    .full-quote {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    .full-quote blockquote {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.8rem);
+      font-weight: 700;
+      line-height: 1.3;
+      max-width: 900px;
+      color: #fff;
+    }
+
+    .full-quote .fq-attr {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .full-quote .fq-line {
+      width: 60px;
+      height: 3px;
+      margin: 1.5rem auto 0;
+      border-radius: 2px;
+    }
+
+    .fq-orange { background: var(--accent); }
+    .fq-gold { background: var(--accent2); }
+    .fq-earth { background: var(--accent3); }
+    .fq-cream { background: var(--accent4); }
+    .fq-saddle { background: var(--accent5); }
+
+    /* ─── FRAMEWORK ─── */
+    .framework { display: flex; flex-direction: column; gap: 0; margin-top: clamp(0.5rem, 1vh, 1rem); }
+    .fw-step { display: flex; align-items: stretch; gap: clamp(0.8rem, 1.2vw, 1.2rem); }
+    .fw-line { display: flex; flex-direction: column; align-items: center; min-width: 30px; }
+    .fw-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+    .fw-connector { width: 2px; flex-grow: 1; background: rgba(255,255,255,0.08); }
+    .fw-content { padding-bottom: clamp(0.6rem, 1.2vh, 1.5rem); }
+    .fw-content h4 { font-size: clamp(0.88rem, 1.3vw, 1.05rem); font-weight: 700; color: #fff; margin-bottom: clamp(0.1rem, 0.3vh, 0.25rem); }
+    .fw-content p { font-size: clamp(0.78rem, 1.2vw, 0.88rem); color: var(--muted); line-height: 1.5; }
+
+    /* ─── NAV DOTS ─── */
+    .nav-dots {
+      position: fixed;
+      right: 1.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 100;
+    }
+
+    .nav-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.15);
+      cursor: pointer;
+      transition: all 0.3s;
+      border: none;
+    }
+
+    .nav-dot:hover, .nav-dot.active {
+      background: var(--accent);
+      transform: scale(1.5);
+    }
+
+    /* ─── ARROW HINT ─── */
+    .arrow-hint {
+      position: fixed;
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.15);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      z-index: 100;
+      transition: opacity 0.5s;
+    }
+
+    /* ─── DIVIDER ─── */
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(212,135,78,0.12), transparent);
+      margin: 0 auto;
+      max-width: 1100px;
+    }
+
+    /* ─── CLOSING ─── */
+    .closing {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 3rem 2rem;
+      position: relative;
+    }
+
+    .closing::before {
+      content: '';
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.1;
+      background: var(--accent);
+      z-index: 0;
+    }
+
+    .closing > * { position: relative; z-index: 1; }
+
+    /* ─── FOOTER ─── */
+    footer {
+      text-align: center;
+      padding: 3rem 2rem;
+      color: var(--muted);
+      font-size: 0.8rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    footer a { color: var(--accent); text-decoration: none; }
+
+    /* ─── RESPONSIVE: iPad & smaller ─── */
+    @media (max-height: 850px) {
+      .page { padding: 1.2rem 1.5rem; }
+      .section-title { font-size: clamp(1.2rem, 2.5vw, 1.8rem); margin-bottom: 0.6rem; }
+      .quote-card { padding: 0.8rem 1.2rem; margin-bottom: 0.6rem; }
+      .quote-text { font-size: 0.82rem; line-height: 1.5; }
+      .fw-content { padding-bottom: 0.5rem; }
+      .fw-content p { font-size: 0.72rem; }
+      .fw-dot { width: 10px; height: 10px; }
+      .talk-point { padding: 0.7rem; }
+      .talk-point h4 { font-size: 0.8rem; }
+      .talk-point p { font-size: 0.72rem; }
+      .full-quote blockquote { font-size: clamp(1.5rem, 4vw, 2.6rem); }
+    }
+
+    @media (max-height: 700px) {
+      .page { padding: 0.8rem 1.2rem; }
+      .section-number { margin-bottom: 0.2rem; font-size: 0.55rem; }
+      .section-title { font-size: 1.1rem; margin-bottom: 0.4rem; }
+      .quote-card { padding: 0.6rem 1rem; margin-bottom: 0.4rem; }
+      .quote-text { font-size: 0.75rem; line-height: 1.4; }
+      .quote-attr { margin-top: 0.25rem; font-size: 0.6rem; }
+      .fw-content { padding-bottom: 0.35rem; }
+      .fw-content h4 { font-size: 0.78rem; }
+      .fw-content p { font-size: 0.68rem; line-height: 1.35; }
+      .fw-dot { width: 8px; height: 8px; }
+      .talk-point { padding: 0.5rem; }
+      .talk-point h4 { font-size: 0.75rem; }
+      .talk-point p { font-size: 0.68rem; line-height: 1.35; }
+      .full-quote blockquote { font-size: 1.4rem; }
+    }
+
+    @media (max-width: 768px) {
+      .talk-points { grid-template-columns: 1fr; gap: 0.5rem; }
+      .hero h1 { font-size: clamp(1.8rem, 6vw, 2.8rem); }
+      .hero-meta { flex-wrap: wrap; gap: 1rem; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <a class="home-link" href="/">&#8592; Home</a>
+
+  <nav class="nav-dots" id="navDots"></nav>
+  <div class="arrow-hint" id="arrowHint">&larr; &rarr; arrow keys to navigate</div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- HERO -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="hero" id="hero">
+    <div class="hero-label">Acquired &mdash; Season 14, Episode 2 &mdash; 5 Key Takeaways</div>
+    <h1>Herm&egrave;s: The $200 Billion Company That Won&rsquo;t Sell You a Handbag</h1>
+    <p class="hero-sub">Ben Gilbert &amp; David Rosenthal tell the 187-year story of a harness maker that became the crown jewel of luxury &mdash; by refusing to act like one.</p>
+    <div class="hero-meta">
+      <span>Ben Gilbert &amp; David Rosenthal</span>
+      <span>~4 hours</span>
+      <span>5 Takeaways</span>
+    </div>
+    <div class="scroll-hint">&darr; scroll to begin</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- TAKEAWAY 1: CRAFTSMANSHIP AS STRATEGY -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="full-quote" id="t1-quote">
+    <blockquote>&ldquo;If you have more than 300 people, it is not a workshop &mdash; <strong>it&rsquo;s a factory.</strong> And we are not in the business of factories.&rdquo;</blockquote>
+    <div class="fq-attr">Takeaway 1 of 5</div>
+    <div class="fq-line fq-orange"></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="page" id="t1">
+    <div class="section-number" style="color:var(--accent);">01 &mdash; Craftsmanship</div>
+    <div class="section-title">The Constraints Are the Strategy</div>
+
+    <div class="quote-card">
+      <div class="quote-text">&ldquo;Today hand stitching is the highest quality. When machine stitching gets better, we will do it. <strong>We are not a museum.</strong>&rdquo;</div>
+      <div class="quote-attr">Axel Dumas, CEO</div>
+    </div>
+
+    <div class="framework">
+      <div class="fw-step">
+        <div class="fw-line">
+          <div class="fw-dot" style="background:var(--accent);"></div>
+          <div class="fw-connector"></div>
+        </div>
+        <div class="fw-content">
+          <h4>One Artisan, One Bag</h4>
+          <p>Every Kelly starts with 36 pieces of leather. One craftsman stitches the entire thing by hand over 20+ hours. The saddle stitch &mdash; two needles, one thread, interlocking in both directions &mdash; can only be undone by cutting each individual stitch.</p>
+        </div>
+      </div>
+      <div class="fw-step">
+        <div class="fw-line">
+          <div class="fw-dot" style="background:var(--accent2);"></div>
+          <div class="fw-connector"></div>
+        </div>
+        <div class="fw-content">
+          <h4>Scale Horizontally, Not Vertically</h4>
+          <p>31 ateliers across France, each capped at 250&ndash;300 people where everyone knows each other by name. They add 2&ndash;4 new workshops per year. The AWS model applied to handcraft.</p>
+        </div>
+      </div>
+      <div class="fw-step">
+        <div class="fw-line">
+          <div class="fw-dot" style="background:var(--accent3);"></div>
+          <div class="fw-connector"></div>
+        </div>
+        <div class="fw-content">
+          <h4>Build the Pipeline Yourself</h4>
+          <p>No competitors train artisans. So Herm&egrave;s built trade schools in rural France. They hire people with zero experience, train them for 2+ years, and achieve 100% graduation rates. They&rsquo;re the only reason this art still exists.</p>
+        </div>
+      </div>
+      <div class="fw-step">
+        <div class="fw-line">
+          <div class="fw-dot" style="background:var(--accent5);"></div>
+          <div class="fw-connector" style="background:transparent;"></div>
+        </div>
+        <div class="fw-content">
+          <h4>Scarcity as a Result, Not a Goal</h4>
+          <p>~120,000 Birkin and Kelly bags per year. Not artificial constraint &mdash; each takes 20+ hours by a craftsman who needed 5+ years of training. The scarcity is the natural output of constraints they refuse to break.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- TAKEAWAY 2: THE ANTI-LVMH -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="full-quote" id="t2-quote">
+    <blockquote>&ldquo;Every decision we make has got some trade-off. <strong>You have to pick your fight.</strong> I&rsquo;m always disappointed when someone says we do everything at the same time. That doesn&rsquo;t happen in real life.&rdquo;</blockquote>
+    <div class="fq-attr">Takeaway 2 of 5</div>
+    <div class="fq-line fq-gold"></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="page" id="t2">
+    <div class="section-number" style="color:var(--accent2);">02 &mdash; Counter-Position</div>
+    <div class="section-title">Same Products, Entirely Different Business</div>
+
+    <div class="quote-card gold">
+      <div class="quote-text">&ldquo;The luxury industry is built on a paradox: the more desirable a brand becomes, the more it sells. But the more it sells, <strong>the less desirable it becomes.</strong>&rdquo;</div>
+      <div class="quote-attr">Patrick Thomas, Former CEO</div>
+    </div>
+
+    <div class="talk-points">
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F6AB;</div>
+        <h4>No Consultants, No Celebrities, No Shortcuts</h4>
+        <p>Consultants said outsource production and lower prices. Herm&egrave;s enshrined &ldquo;no consultants&rdquo; as policy. They don&rsquo;t pay for endorsements &mdash; celebrities pay full price for Birkins. Marketing spend: 4.5% of revenue vs. LVMH&rsquo;s 12%.</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F3AD;</div>
+        <h4>Leather &amp; Horses, Not Couture</h4>
+        <p>Every other luxury brand descended from fashion. Herm&egrave;s came from harnesses and saddles. They don&rsquo;t chase trends &mdash; they make timeless objects that coexist alongside fashion without participating in it.</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F310;</div>
+        <h4>The Rate-Limited Flywheel</h4>
+        <p>Amazon&rsquo;s flywheel maximizes cycles. Herm&egrave;s&rsquo;s intentionally minimizes them. Production grows 7% per year. They have $10B in cash. The constraint isn&rsquo;t capital &mdash; more money can&rsquo;t make artisans work faster.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- TAKEAWAY 3: GENERATIONAL STEWARDSHIP -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="full-quote" id="t3-quote">
+    <blockquote>&ldquo;The young customers came to us more than we went to them. People saw again, but with a new eye, <strong>the beauty of materials worked by fine hands.</strong> They came. We followed.&rdquo;</blockquote>
+    <div class="fq-attr">Takeaway 3 of 5</div>
+    <div class="fq-line fq-earth"></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="page" id="t3">
+    <div class="section-number" style="color:var(--accent3);">03 &mdash; Stewardship</div>
+    <div class="section-title">Six Generations, Six Rescues</div>
+
+    <div class="quote-card earth">
+      <div class="quote-text">&ldquo;Herm&egrave;s was absolutely the greatest company anyone could hope to work for. It wasn&rsquo;t even close. Either I got a job at Herm&egrave;s or I was going to <strong>leave this industry entirely.</strong>&rdquo;</div>
+      <div class="quote-attr">Beatrice Amblard, Former Herm&egrave;s Artisan</div>
+    </div>
+
+    <div class="framework">
+      <div class="fw-step">
+        <div class="fw-line">
+          <div class="fw-dot" style="background:var(--accent);"></div>
+          <div class="fw-connector"></div>
+        </div>
+        <div class="fw-content">
+          <h4>Thierry (Gen 1) &mdash; The Orphan</h4>
+          <p>Born 1801 in Germany. Family killed in Napoleonic Wars. Apprenticed 16 years, opened a harness shop in Paris in 1837. Became the finest carriage outfitter for French nobility.</p>
+        </div>
+      </div>
+      <div class="fw-step">
+        <div class="fw-line">
+          <div class="fw-dot" style="background:var(--accent2);"></div>
+          <div class="fw-connector"></div>
+        </div>
+        <div class="fw-content">
+          <h4>&Eacute;mile (Gen 3) &mdash; The Visionary</h4>
+          <p>Visited Henry Ford&rsquo;s assembly lines in Detroit during WWI. Brought the zipper to France. Introduced handbags as an accessory to saddles &mdash; accidentally creating the ancestor of the Birkin.</p>
+        </div>
+      </div>
+      <div class="fw-step">
+        <div class="fw-line">
+          <div class="fw-dot" style="background:var(--accent3);"></div>
+          <div class="fw-connector"></div>
+        </div>
+        <div class="fw-content">
+          <h4>Robert Dumas (Gen 4) &mdash; The Artist</h4>
+          <p>Created silk scarves in 1937. Hired theater designers for window displays. Made the Orange Box iconic. Renamed the bag after Grace Kelly.</p>
+        </div>
+      </div>
+      <div class="fw-step">
+        <div class="fw-line">
+          <div class="fw-dot" style="background:var(--accent4);"></div>
+          <div class="fw-connector"></div>
+        </div>
+        <div class="fw-content">
+          <h4>Jean-Louis (Gen 5) &mdash; The Transformer</h4>
+          <p>Rejected consultants. Ran &ldquo;scarves with jeans&rdquo; to reposition the brand. Created the Birkin on a flight next to Jane Birkin. Grew revenue from ~$50M to $2B.</p>
+        </div>
+      </div>
+      <div class="fw-step">
+        <div class="fw-line">
+          <div class="fw-dot" style="background:var(--accent5);"></div>
+          <div class="fw-connector" style="background:transparent;"></div>
+        </div>
+        <div class="fw-content">
+          <h4>Axel &amp; Pierre-Alexis (Gen 6) &mdash; The Defenders</h4>
+          <p>Repelled Arnault&rsquo;s hostile takeover. Locked 50.2% of equity into a 20-year vehicle. Scaled handcraft to 7,000 artisans, $14B revenue, 44% operating margins.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- TAKEAWAY 4: THE VEBLEN MACHINE -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="full-quote" id="t4-quote">
+    <blockquote>&ldquo;By adopting art as a critical piece of the bundle, it enables you to <strong>completely disconnect from any evaluation of value.</strong> The second component is priceless.&rdquo;</blockquote>
+    <div class="fq-attr">Takeaway 4 of 5</div>
+    <div class="fq-line fq-cream"></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="page" id="t4">
+    <div class="section-number" style="color:var(--accent4);">04 &mdash; Economics</div>
+    <div class="section-title">The Veblen Machine: Pricing Below Market on Purpose</div>
+
+    <div class="quote-card cream">
+      <div class="quote-text">&ldquo;Raise your prices as time goes on in order to increase demand. The hard thing about buying a Birkin is not coming up with the money &mdash; <strong>it&rsquo;s getting the call.</strong>&rdquo;</div>
+      <div class="quote-attr">The Luxury Strategy, Anti-Law #13</div>
+    </div>
+
+    <div class="talk-points">
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F4C8;</div>
+        <h4>Veblen Goods: Price Drives Demand Up</h4>
+        <p>Normal goods: higher price = lower demand. Birkin bags: higher price = higher demand. The price is a signal of desirability. Herm&egrave;s defies econ 101 &mdash; then defies it again by pricing below clearing price as a brand investment.</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F4B0;</div>
+        <h4>The Deliberate Consumer Surplus</h4>
+        <p>The Birkin launched at ~$2K in 1984 (~$6K adjusted). Today&rsquo;s retail: ~$12K. Roughly doubled in real terms across 40 years while secondary market prices are multiples higher. They leave surplus on the table &mdash; on purpose.</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F3AF;</div>
+        <h4>The Trickle-Up Effect</h4>
+        <p>Scarcity of Birkins and Kellys creates a halo over the brand. Customers buy scarves, belts, perfume to build a relationship, hoping to one day be &ldquo;offered&rdquo; a bag. 25&ndash;30% of revenue comes from two bags you can&rsquo;t even see in stores.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- TAKEAWAY 5: SELLING A SENSE OF PLACE -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="full-quote" id="t5-quote">
+    <blockquote>&ldquo;Look &mdash; it&rsquo;s about <em>soul.</em> Somebody made that thing with their bare hands. <strong>That means something.</strong> And there&rsquo;s nobody else at Herm&egrave;s&rsquo;s scale that does that.&rdquo;</blockquote>
+    <div class="fq-attr">Takeaway 5 of 5</div>
+    <div class="fq-line fq-saddle"></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="page" id="t5">
+    <div class="section-number" style="color:var(--accent5);">05 &mdash; The Dream</div>
+    <div class="section-title">Selling a Sense of Place to Those Outside It</div>
+
+    <div class="quote-card saddle">
+      <div class="quote-text">&ldquo;I would never diminish the quality of Herm&egrave;s. Herm&egrave;s can be an even rarer and greater quality business <strong>if they ever wanted to work with us.</strong>&rdquo;</div>
+      <div class="quote-attr">Bernard Arnault</div>
+    </div>
+
+    <div class="talk-points">
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F1EB;&#x1F1F7;</div>
+        <h4>76% Made in France, 85% Sold Outside</h4>
+        <p>French nobility, Parisian heritage, 187 years of history &mdash; universally revered. No matter where you live, there&rsquo;s something about French elegance that no other country can replicate. Herm&egrave;s sells that sense of place.</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F3A8;</div>
+        <h4>The Unbundleable Bundle</h4>
+        <p>Exclusivity, craftsmanship, service, shopping experience, and brand &mdash; all at once. LV has brand but not the craft. Supreme has exclusivity but not heritage. Independent artisans have craft but no brand. Nobody assembles this bundle.</p>
+      </div>
+      <div class="talk-point">
+        <div class="talk-point-icon">&#x1F9F5;</div>
+        <h4>Every Item Has a Soul</h4>
+        <p>Every product carries a blind stamp: the year it was made and the craftsman who made it. 15 repair shops mend 120,000 pieces per year. Some artisans receive items back that they created decades ago.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- CLOSING -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="closing" id="close">
+    <blockquote style="font-family:'Playfair Display',serif; font-size:clamp(1.5rem,3.5vw,2.5rem); font-weight:700; color:#fff; max-width:800px; text-align:center; line-height:1.4;">
+      &ldquo;What can we make with our hands here in this atelier that will interest our clients today?&rdquo;
+    </blockquote>
+    <p style="color:var(--muted); margin-top:1.5rem; font-size:0.85rem; letter-spacing:0.15em; text-transform:uppercase;">&Eacute;mile Herm&egrave;s, circa 1920</p>
+  </div>
+
+  <footer>
+    <p>Source: <a href="https://www.youtube.com/watch?v=Sz1RvCBIabg" target="_blank">Acquired &mdash; Season 14, Episode 2: Herm&egrave;s</a></p>
+    <p style="margin-top:0.5rem;">All quotes attributed to their respective speakers as discussed on Acquired</p>
+  </footer>
+
+  <script>
+    // Sections for navigation
+    const pages = [
+      { id: 'hero', label: 'Intro' },
+      { id: 't1-quote', label: '' },
+      { id: 't1', label: '1. Craftsmanship' },
+      { id: 't2-quote', label: '' },
+      { id: 't2', label: '2. Counter-Position' },
+      { id: 't3-quote', label: '' },
+      { id: 't3', label: '3. Stewardship' },
+      { id: 't4-quote', label: '' },
+      { id: 't4', label: '4. Economics' },
+      { id: 't5-quote', label: '' },
+      { id: 't5', label: '5. The Dream' },
+      { id: 'close', label: 'Close' },
+    ];
+
+    let currentPage = 0;
+
+    // Arrow key navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+        e.preventDefault();
+        if (currentPage < pages.length - 1) {
+          currentPage++;
+          document.getElementById(pages[currentPage].id).scrollIntoView({ behavior: 'smooth' });
+        }
+      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        if (currentPage > 0) {
+          currentPage--;
+          document.getElementById(pages[currentPage].id).scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+
+    // Nav dots (only for labeled pages)
+    const nav = document.getElementById('navDots');
+    pages.forEach((s, i) => {
+      if (!s.label) return;
+      const dot = document.createElement('button');
+      dot.className = 'nav-dot';
+      dot.title = s.label;
+      dot.dataset.target = s.id;
+      dot.dataset.index = i;
+      dot.addEventListener('click', () => {
+        currentPage = i;
+        document.getElementById(s.id).scrollIntoView({ behavior: 'smooth' });
+      });
+      nav.appendChild(dot);
+    });
+
+    // Track active section on scroll
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const idx = pages.findIndex(p => p.id === entry.target.id);
+          if (idx !== -1) currentPage = idx;
+          document.querySelectorAll('.nav-dot').forEach(d => d.classList.remove('active'));
+          const dot = document.querySelector(`.nav-dot[data-target="${entry.target.id}"]`);
+          if (dot) dot.classList.add('active');
+        }
+      });
+    }, { threshold: 0.3 });
+
+    pages.forEach(s => {
+      const el = document.getElementById(s.id);
+      if (el) observer.observe(el);
+    });
+
+    // Fade arrow hint after first navigation
+    let hintShown = true;
+    document.addEventListener('keydown', () => {
+      if (hintShown) {
+        document.getElementById('arrowHint').style.opacity = '0';
+        hintShown = false;
+      }
+    }, { once: false });
+  </script>
+
+</body>
+</html>

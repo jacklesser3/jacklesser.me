@@ -29,6 +29,14 @@ const podcastReviews = [
     summary:
       "A hard-edged review on identity, suffering, and the standard required to stop negotiating with yourself.",
   },
+  {
+    number: "04",
+    href: "/hermes-acquired.html",
+    title: "Acquired: Hermès",
+    subtitle: "Craftsmanship, Scarcity & the Dream",
+    summary:
+      "How a 187-year-old harness maker became the crown jewel of luxury by refusing to scale like everyone else.",
+  },
 ];
 
 const pillars = [

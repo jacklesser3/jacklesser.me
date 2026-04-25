@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naval Thumbnail Vertical</title>
+  <style>
+    @font-face {
+      font-family: "Cormorant Garamond";
+      src: url("../out/_next/static/media/01e4147cff8141ee-s.p.7787e134.woff2") format("woff2");
+      font-weight: 400 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Inter";
+      src: url("../out/_next/static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2") format("woff2");
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      --bg-top: #151111;
+      --bg-mid: #0d0b17;
+      --bg-bottom: #0a0914;
+      --card: rgba(24, 24, 32, 0.9);
+      --card-border: rgba(255, 255, 255, 0.06);
+      --text: #e9e8ee;
+      --muted: rgba(218, 211, 203, 0.72);
+      --title: #99b9ff;
+      --eyebrow: #c99b6a;
+      --blue: #5a95ff;
+      --violet: #8d74ff;
+      --pink: #ff74ba;
+      --green: #46da83;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 50% 10%, rgba(74, 70, 120, 0.22), transparent 28%),
+        radial-gradient(circle at 12% 16%, rgba(112, 62, 48, 0.16), transparent 24%),
+        radial-gradient(circle at 84% 14%, rgba(88, 73, 160, 0.13), transparent 25%),
+        linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 46%, var(--bg-bottom) 100%);
+      color: var(--text);
+      font-family: "Inter", Arial, sans-serif;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    body::before {
+      background:
+        radial-gradient(circle at 50% 38%, rgba(53, 71, 170, 0.14), transparent 24%),
+        radial-gradient(circle at 50% 100%, rgba(34, 27, 67, 0.85), transparent 48%);
+    }
+
+    body::after {
+      background: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.22));
+      mix-blend-mode: multiply;
+    }
+
+    .canvas {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      isolation: isolate;
+    }
+
+    .star {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.8);
+      box-shadow: 0 0 10px rgba(255,255,255,0.32);
+      opacity: var(--opacity);
+    }
+
+    .hero {
+      position: relative;
+      z-index: 1;
+      padding: 94px 68px 0;
+      text-align: center;
+    }
+
+    .eyebrow {
+      color: var(--eyebrow);
+      font-size: 24px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.84;
+    }
+
+    .eyebrow-mark {
+      display: inline-block;
+      width: 70px;
+      height: 3px;
+      margin: 0 14px 7px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, rgba(201,155,106,0), rgba(201,155,106,1), rgba(201,155,106,0));
+    }
+
+    h1 {
+      margin-top: 56px;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 146px;
+      line-height: 0.88;
+      font-weight: 500;
+      letter-spacing: -0.045em;
+      color: var(--title);
+      text-shadow:
+        0 0 34px rgba(108, 135, 233, 0.1),
+        0 0 92px rgba(108, 135, 233, 0.06);
+    }
+
+    .divider {
+      width: calc(100% - 144px);
+      margin: 30px auto 0;
+      height: 2px;
+      background: linear-gradient(90deg, rgba(255, 244, 232, 0.92), rgba(255, 244, 232, 0.72));
+      box-shadow: 0 0 18px rgba(255, 244, 232, 0.08);
+    }
+
+    .meta {
+      margin-top: 22px;
+      color: rgba(204, 194, 184, 0.72);
+      font-size: 30px;
+      letter-spacing: 0.02em;
+    }
+
+    .episode-title {
+      margin-top: 10px;
+      color: rgba(214, 206, 197, 0.62);
+      font-size: 28px;
+      letter-spacing: 0.01em;
+    }
+
+    .takeaways-shell {
+      position: absolute;
+      left: 48px;
+      right: 48px;
+      top: 1040px;
+      bottom: 78px;
+      z-index: 1;
+      padding: 30px 28px 30px;
+      border-radius: 34px;
+      background:
+        linear-gradient(180deg, rgba(17,17,24,0.12), rgba(10,10,18,0.7)),
+        radial-gradient(circle at 50% -10%, rgba(84,108,223,0.2), transparent 38%);
+      border: 1px solid rgba(255,255,255,0.04);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.04),
+        0 30px 80px rgba(4,4,12,0.42);
+      backdrop-filter: blur(10px);
+    }
+
+    .takeaways-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 22px;
+      padding: 0 8px;
+    }
+
+    .takeaways-label {
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: rgba(218,211,203,0.72);
+    }
+
+    .takeaways-rule {
+      flex: 1;
+      height: 1px;
+      margin-left: 18px;
+      background: linear-gradient(90deg, rgba(255,255,255,0.1), rgba(255,255,255,0.02));
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      height: calc(100% - 52px);
+    }
+
+    .card {
+      position: relative;
+      min-height: 0;
+      padding: 28px 24px 22px 28px;
+      border-radius: 20px;
+      background:
+        linear-gradient(180deg, rgba(30,31,42,0.92), rgba(21,21,30,0.94));
+      border: 1px solid var(--card-border);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.03),
+        0 18px 30px rgba(0,0,0,0.22);
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 18px;
+      bottom: 18px;
+      width: 5px;
+      border-radius: 0 6px 6px 0;
+      background: var(--accent);
+      box-shadow: 0 0 14px color-mix(in srgb, var(--accent) 68%, transparent);
+    }
+
+    .card-number {
+      color: color-mix(in srgb, var(--accent) 72%, white);
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .card-title {
+      margin-top: 12px;
+      font-size: 48px;
+      line-height: 0.98;
+      font-weight: 700;
+      color: #fbf8f3;
+      text-wrap: balance;
+    }
+
+    .card-subtitle {
+      margin-top: 14px;
+      color: rgba(207, 198, 189, 0.78);
+      font-size: 24px;
+      line-height: 1.22;
+      letter-spacing: -0.01em;
+      text-wrap: balance;
+    }
+
+    .footer {
+      position: absolute;
+      left: 72px;
+      bottom: 34px;
+      z-index: 2;
+      color: rgba(214,207,199,0.64);
+      font-size: 22px;
+    }
+
+    .blue { --accent: var(--blue); }
+    .violet { --accent: var(--violet); }
+    .pink { --accent: var(--pink); }
+    .green { --accent: var(--green); }
+  </style>
+</head>
+<body>
+  <div class="canvas">
+    <span class="star" style="left: 18px; top: 58px; --opacity: 0.72;"></span>
+    <span class="star" style="left: 96px; top: 112px; --opacity: 0.72;"></span>
+    <span class="star" style="left: 188px; top: 42px; --opacity: 0.78;"></span>
+    <span class="star" style="left: 268px; top: 76px; --opacity: 0.84;"></span>
+    <span class="star" style="left: 398px; top: 30px; --opacity: 0.88;"></span>
+    <span class="star" style="left: 528px; top: 104px; --opacity: 0.66;"></span>
+    <span class="star" style="left: 618px; top: 38px; --opacity: 0.84;"></span>
+    <span class="star" style="left: 792px; top: 62px; --opacity: 0.6;"></span>
+    <span class="star" style="left: 886px; top: 38px; --opacity: 0.72;"></span>
+    <span class="star" style="left: 954px; top: 112px; --opacity: 0.84;"></span>
+    <span class="star" style="left: 164px; top: 680px; --opacity: 0.5;"></span>
+    <span class="star" style="left: 846px; top: 760px; --opacity: 0.46;"></span>
+    <span class="star" style="left: 224px; top: 1320px; --opacity: 0.38;"></span>
+    <span class="star" style="left: 908px; top: 1570px; --opacity: 0.34;"></span>
+
+    <section class="hero">
+      <div class="eyebrow">TIMELESS <span class="eyebrow-mark"></span> KEY TAKEAWAYS</div>
+      <h1>Wealth, Happiness &amp;<br />the Art of Doing<br />Nothing</h1>
+      <div class="divider"></div>
+      <div class="meta">Naval Ravikant &amp; Joe Rogan</div>
+      <div class="episode-title">Joe Rogan Experience #1309</div>
+    </section>
+
+    <section class="takeaways-shell">
+      <div class="takeaways-header">
+        <div class="takeaways-label">4 Takeaways</div>
+        <div class="takeaways-rule"></div>
+      </div>
+      <div class="cards">
+        <article class="card blue">
+          <div class="card-number">01</div>
+          <div class="card-title">Wealth</div>
+          <div class="card-subtitle">Own equity, build leverage, be irreplaceable.</div>
+        </article>
+        <article class="card violet">
+          <div class="card-number">02</div>
+          <div class="card-title">Happiness</div>
+          <div class="card-subtitle">Desire is a contract to be unhappy.</div>
+        </article>
+        <article class="card pink">
+          <div class="card-number">03</div>
+          <div class="card-title">The Modern Trap</div>
+          <div class="card-subtitle">Diseases of abundance &amp; doing nothing.</div>
+        </article>
+        <article class="card green">
+          <div class="card-number">04</div>
+          <div class="card-title">Single-Player Game</div>
+          <div class="card-subtitle">Reality is neutral, you choose.</div>
+        </article>
+      </div>
+    </section>
+
+    <div class="footer">jacklesser.me</div>
+  </div>
+</body>
+</html>

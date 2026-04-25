@@ -1,0 +1,110 @@
+<svg width="1600" height="1100" viewBox="0 0 1600 1100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="800" y1="0" x2="800" y2="1100" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#020202"/>
+      <stop offset="0.42" stop-color="#060504"/>
+      <stop offset="1" stop-color="#0A0907"/>
+    </linearGradient>
+    <linearGradient id="terrainBack" x1="631" y1="77" x2="818" y2="902" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6B6258"/>
+      <stop offset="0.22" stop-color="#2C2824"/>
+      <stop offset="0.7" stop-color="#100F0E"/>
+      <stop offset="1" stop-color="#050505"/>
+    </linearGradient>
+    <linearGradient id="terrainMid" x1="862" y1="186" x2="931" y2="999" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5C544B"/>
+      <stop offset="0.28" stop-color="#24211E"/>
+      <stop offset="0.72" stop-color="#0D0D0C"/>
+      <stop offset="1" stop-color="#030303"/>
+    </linearGradient>
+    <linearGradient id="terrainFront" x1="584" y1="462" x2="641" y2="1100" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4E473F"/>
+      <stop offset="0.2" stop-color="#1E1C1A"/>
+      <stop offset="0.72" stop-color="#080808"/>
+      <stop offset="1" stop-color="#020202"/>
+    </linearGradient>
+    <radialGradient id="fogWarm" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(776 621) rotate(90) scale(431 676)">
+      <stop offset="0" stop-color="#76644E" stop-opacity="0.27"/>
+      <stop offset="1" stop-color="#76644E" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="fogCool" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1208 670) rotate(90) scale(386 477)">
+      <stop offset="0" stop-color="#6D5D49" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#6D5D49" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="terrainReliefBack" x="-12%" y="-12%" width="124%" height="124%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.009 0.026" numOctaves="5" seed="7" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="42" xChannelSelector="R" yChannelSelector="G" result="displaced"/>
+      <feDiffuseLighting in="noise" surfaceScale="28" lighting-color="#CBB99B" result="light">
+        <feDistantLight azimuth="224" elevation="52"/>
+      </feDiffuseLighting>
+      <feComposite in="light" in2="displaced" operator="in" result="lit"/>
+      <feBlend in="displaced" in2="lit" mode="soft-light"/>
+    </filter>
+    <filter id="terrainReliefMid" x="-12%" y="-12%" width="124%" height="124%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012 0.034" numOctaves="5" seed="12" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="50" xChannelSelector="R" yChannelSelector="G" result="displaced"/>
+      <feDiffuseLighting in="noise" surfaceScale="32" lighting-color="#C1AF92" result="light">
+        <feDistantLight azimuth="220" elevation="56"/>
+      </feDiffuseLighting>
+      <feComposite in="light" in2="displaced" operator="in" result="lit"/>
+      <feBlend in="displaced" in2="lit" mode="soft-light"/>
+    </filter>
+    <filter id="terrainReliefFront" x="-12%" y="-12%" width="124%" height="124%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.014 0.04" numOctaves="5" seed="17" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="62" xChannelSelector="R" yChannelSelector="G" result="displaced"/>
+      <feDiffuseLighting in="noise" surfaceScale="36" lighting-color="#D0BDA1" result="light">
+        <feDistantLight azimuth="226" elevation="60"/>
+      </feDiffuseLighting>
+      <feComposite in="light" in2="displaced" operator="in" result="lit"/>
+      <feBlend in="displaced" in2="lit" mode="soft-light"/>
+    </filter>
+    <filter id="softFog" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="32"/>
+    </filter>
+    <mask id="terrainFade">
+      <rect width="1600" height="1100" fill="url(#sky)"/>
+      <rect width="1600" height="1100" fill="url(#sky)"/>
+    </mask>
+  </defs>
+
+  <rect width="1600" height="1100" fill="url(#sky)"/>
+
+  <g opacity="0.96">
+    <path filter="url(#terrainReliefBack)" d="M29 812L16 770L55 748L98 695L155 665L205 659L251 630L306 597L348 545L393 512L446 470L506 389L555 311L605 246L679 181L760 129L840 99L917 84L1005 72L1103 77L1182 98L1259 130L1330 166L1400 212L1463 269L1518 338L1558 400L1585 474L1606 552L1606 883L1476 885L1399 864L1321 842L1239 813L1157 792L1062 794L971 769L890 741L813 725L740 706L661 683L592 683L513 694L438 719L345 755L263 784L175 816L97 833L29 812Z" fill="url(#terrainBack)"/>
+    <path filter="url(#terrainReliefMid)" d="M154 895L131 856L167 798L212 741L271 689L341 648L425 617L495 574L545 525L597 486L661 453L731 433L801 420L855 418L908 400L950 367L1002 335L1051 326L1127 334L1200 354L1265 365L1325 376L1381 399L1430 431L1476 477L1515 527L1545 582L1565 637L1571 704L1545 752L1496 778L1445 796L1383 804L1316 809L1246 806L1177 798L1106 792L1029 796L950 803L869 814L780 823L688 836L603 856L517 880L431 898L352 912L274 919L204 918L154 895Z" fill="url(#terrainMid)"/>
+    <path filter="url(#terrainReliefFront)" d="M0 1100V897L36 863L91 844L149 818L226 792L299 766L377 746L462 736L535 740L616 731L681 704L761 672L817 649L882 625L935 593L992 566L1054 551L1115 549L1163 562L1212 582L1272 598L1333 611L1392 636L1466 675L1534 733L1596 802L1600 1100H0Z" fill="url(#terrainFront)"/>
+  </g>
+
+  <g opacity="0.72">
+    <path d="M101 782L186 742L262 703L337 629L420 583L490 528L572 430L638 330L724 240L806 175L892 135L972 111L1052 102L1136 115L1213 146L1285 181L1352 225L1417 283L1473 346" stroke="#DCCAAE" stroke-opacity="0.2" stroke-width="3.2" stroke-linecap="round"/>
+    <path d="M189 884L249 830L323 777L404 718L483 644L554 581L625 537L704 505L784 490L856 488L921 466L984 423L1056 382L1129 377L1218 401L1299 426L1370 469L1431 527" stroke="#E3D1B4" stroke-opacity="0.16" stroke-width="2.6" stroke-linecap="round"/>
+    <path d="M225 842L310 809L380 778L455 734L520 698L596 642L670 601L733 571L798 555L873 545L937 523L1000 489L1068 464L1129 464L1193 482L1252 503L1308 531" stroke="#EADBBD" stroke-opacity="0.15" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M81 829L143 776L195 712L236 649L284 592L338 536L407 495L470 454L511 406L560 324L603 265" stroke="#F1E6D0" stroke-opacity="0.13" stroke-width="2" stroke-linecap="round"/>
+    <path d="M1005 370L1062 387L1119 418L1178 458L1227 505L1271 553L1314 610L1348 669L1368 740" stroke="#F0E4CC" stroke-opacity="0.13" stroke-width="1.9" stroke-linecap="round"/>
+    <path d="M929 603L977 646L1020 690L1055 735L1090 802" stroke="#F0E4CC" stroke-opacity="0.1" stroke-width="1.9" stroke-linecap="round"/>
+    <path d="M712 493L762 445L806 382L850 340L903 314" stroke="#EBDCC3" stroke-opacity="0.11" stroke-width="1.8" stroke-linecap="round"/>
+  </g>
+
+  <g opacity="0.46">
+    <path d="M0 916L79 872L147 836L214 801L301 761L364 749L445 740L520 736L586 733L642 717L697 688L757 662L812 637L872 612L941 580L998 554L1047 545L1095 543L1146 552L1200 572L1264 590L1322 603L1382 623L1439 649L1490 687L1539 728L1591 784" stroke="#161412" stroke-opacity="0.82" stroke-width="42" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g opacity="0.72" filter="url(#softFog)">
+    <ellipse cx="770" cy="615" rx="408" ry="196" fill="url(#fogWarm)"/>
+    <ellipse cx="1198" cy="679" rx="318" ry="205" fill="url(#fogCool)"/>
+    <ellipse cx="462" cy="897" rx="252" ry="170" fill="url(#fogWarm)"/>
+    <ellipse cx="1361" cy="916" rx="227" ry="185" fill="url(#fogCool)"/>
+  </g>
+
+  <g opacity="0.4">
+    <path d="M698 732L748 693L803 674L863 668L916 652L964 624L1005 605L1044 601L1095 611L1142 636L1181 672" stroke="#F3E4C9" stroke-opacity="0.22" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M382 728L414 690L455 656L500 625L548 581L586 535L628 487L666 440" stroke="#F3E4C9" stroke-opacity="0.18" stroke-width="1.3" stroke-linecap="round"/>
+    <path d="M1150 447L1207 486L1260 535L1303 589L1336 648L1358 706" stroke="#F3E4C9" stroke-opacity="0.18" stroke-width="1.3" stroke-linecap="round"/>
+    <path d="M120 770L182 721L244 674L296 621L349 556L405 498L476 441L545 385L603 305L664 239L733 183" stroke="#EBD9BC" stroke-opacity="0.16" stroke-width="1.8" stroke-linecap="round"/>
+    <path d="M271 816L332 786L405 749L476 697L556 639L629 589L699 550L779 530L851 520L922 501L986 463L1054 425L1124 422L1194 438L1265 470L1324 511" stroke="#E7D3B3" stroke-opacity="0.14" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M1040 411L1089 433L1147 470L1197 514L1238 556L1277 607L1308 664L1333 726" stroke="#F1E4CA" stroke-opacity="0.16" stroke-width="1.6" stroke-linecap="round"/>
+  </g>
+
+  <rect width="1600" height="1100" fill="url(#sky)" opacity="0.1"/>
+  <rect width="1600" height="1100" fill="url(#sky)" opacity="0.08"/>
+</svg>

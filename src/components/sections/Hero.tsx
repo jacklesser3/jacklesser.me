@@ -20,9 +20,6 @@ export function Hero() {
             <Button href="/freedom-from-tech" variant="outline">
               Freedom from Tech
             </Button>
-            <Button href="/philosophy" variant="outline">
-              Philosophy
-            </Button>
           </div>
         </div>
       </Container>

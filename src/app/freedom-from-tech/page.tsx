@@ -1,39 +1,39 @@
 import { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
-import { H1, H2, H3, Text, SectionTitle } from "@/components/ui/Typography";
+import { H1, H3, Text, SectionTitle } from "@/components/ui/Typography";
 import { Card, CardContent } from "@/components/ui/Card";
-import { Button } from "@/components/ui/Button";
 
 export const metadata: Metadata = {
   title: "Freedom from Tech",
   description:
-    "Work in freedom from tech: yoga, Rewired Protocol, breathwork, and MTA.",
+    "The competitive advantage of the future is the ability to disconnect. Yoga, breathwork, nervous system regulation, and the reclamation of presence.",
   openGraph: {
     title: "Freedom from Tech | Timeless Practice",
-    description: "Work in freedom from tech: yoga, Rewired Protocol, breathwork, and MTA.",
+    description:
+      "The competitive advantage of the future is the ability to disconnect. Yoga, breathwork, nervous system regulation, and the reclamation of presence.",
   },
 };
 
 const workAreas = [
   {
-    title: "Yoga",
+    title: "Yoga & Movement",
     description:
-      "Practice and teaching rooted in the body as the first teacher. Movement, breath, and presence as pathways to freedom from the noise.",
-  },
-  {
-    title: "Rewired Protocol",
-    description:
-      "A systematic approach to nervous system regulation and recovery. Bridging ancient practices with modern understanding of how we heal.",
+      "Teaching and practicing on rooftops, in studios, and wherever the cathedral effect opens minds. The body is the first teacher. The hardest moment for most people isn't the hardest posture — it's stillness.",
   },
   {
     title: "Breathwork",
     description:
-      "Intentional breathing as a tool for clarity, resilience, and connection. Proof of work that happens in the body, breath by breath.",
+      "You're not breathing correctly. That sounds crazy, but it's true. Intentional breathing is the most accessible tool for clarity, resilience, and nervous system regulation. Proof of work that happens in the body, breath by breath.",
   },
   {
-    title: "MTA",
+    title: "Slowmaxxing",
     description:
-      "Mind-body practices that integrate movement, awareness, and the capacity to show up fully—in tech and beyond.",
+      "Purposeful deceleration. Not laziness — discipline. Slow is smooth, smooth is fast. Brushing your teeth, showering, typing — transform mundane activities through deliberate slowness and watch your attention expand.",
+  },
+  {
+    title: "Nervous System Regulation",
+    description:
+      "We're in an era of numbness — dependency on quick dopamine hits from fake news and AI-generated slop. The antidote is learning to balance sympathetic and parasympathetic activation. The morning walk before the screen. The breath before the reaction.",
   },
 ];
 
@@ -44,8 +44,9 @@ export default function FreedomFromTechPage() {
         <Container size="narrow">
           <H1 className="mb-6">Freedom from Tech</H1>
           <Text variant="lead">
-            Work in the space where we reclaim presence, body, and nervous
-            system—so we can use tech without being used by it.
+            The reclamation of our attention is essentially the reclamation of
+            our life. Technology is leverage for sovereignty — but the
+            competitive advantage is the ability to disconnect.
           </Text>
         </Container>
       </section>
@@ -68,10 +69,18 @@ export default function FreedomFromTechPage() {
           </div>
 
           <div className="mt-12 flex flex-wrap gap-4">
-            <Button href="/freedom-tech" variant="outline">
-              ← Freedom Tech
-            </Button>
-            <Button href="/connect">Get in Touch</Button>
+            <a
+              href="/freedom-tech"
+              className="inline-flex items-center rounded-xl border border-white/10 bg-white/[0.03] px-6 py-3 text-xs font-medium uppercase tracking-[0.2em] text-[var(--color-text-primary)] transition hover:border-white/20 hover:bg-white/[0.06]"
+            >
+              &larr; Freedom Tech
+            </a>
+            <a
+              href="mailto:jack@bitcoinpark.com"
+              className="inline-flex items-center rounded-xl border border-[var(--color-accent-ember)]/30 bg-[var(--color-accent-ember)]/10 px-6 py-3 text-xs font-medium uppercase tracking-[0.2em] text-[var(--color-accent-ember)] transition hover:bg-[var(--color-accent-ember)]/20"
+            >
+              Get in Touch
+            </a>
           </div>
         </Container>
       </section>

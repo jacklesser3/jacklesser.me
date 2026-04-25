@@ -1,16 +1,16 @@
 import { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
-import { H1, H2, H3, Text, SectionTitle } from "@/components/ui/Typography";
+import { H1, H3, Text, SectionTitle } from "@/components/ui/Typography";
 import { Card, CardContent } from "@/components/ui/Card";
-import { Button } from "@/components/ui/Button";
 
 export const metadata: Metadata = {
   title: "Freedom Tech",
   description:
-    "Work in freedom tech: Bitcoin Park, summits, meetups, podcast, and speaking.",
+    "Freedom tech will be the underpinning thesis for all human-centered innovation. Bitcoin, sovereign systems, and the builders who make it real.",
   openGraph: {
     title: "Freedom Tech | Timeless Practice",
-    description: "Work in freedom tech: Bitcoin Park, summits, meetups, podcast, and speaking.",
+    description:
+      "Freedom tech will be the underpinning thesis for all human-centered innovation. Bitcoin, sovereign systems, and the builders who make it real.",
   },
 };
 
@@ -18,27 +18,22 @@ const workAreas = [
   {
     title: "Bitcoin Park",
     description:
-      "Building and contributing to the Nashville hub for Bitcoin and freedom technology. A physical space where builders, thinkers, and adopters converge.",
+      "Building the physical hub for Bitcoin and freedom technology. A space where builders, thinkers, and adopters converge in Nashville and Austin. The community is the product.",
   },
   {
-    title: "Summits",
+    title: "Summits & Events",
     description:
-      "Organizing and participating in summits that bring together the freedom tech community. High-signal gatherings for alignment and collaboration.",
+      "ImagineIF, NEMS, TEMS, and more. High-signal gatherings where the most curious and capable minds in Bitcoin, AI, energy, and freedom tech come together. Every talk should entertain, inform, and inspire.",
   },
   {
-    title: "Meetups",
+    title: "Vibe Coding",
     description:
-      "Local and regional meetups to foster connection, education, and grassroots adoption of sovereign technology.",
+      "Building real tools with AI. Organization matters most. Hallucination control is learnable. Breathing helps. Making is momentum — learn by shipping, breaking, fixing, and repeating.",
   },
   {
-    title: "Podcast",
+    title: "Bitcoin as Proof of Work",
     description:
-      "Conversations at the intersection of freedom tech, philosophy, and lived experience. Long-form dialogue with builders and thinkers.",
-  },
-  {
-    title: "Speaking",
-    description:
-      "Talks and workshops on Bitcoin, freedom tech, and the integration of technology with human flourishing.",
+      "Sound money that escapes inflationary systems. Not just a financial tool but an energy optimization protocol and a buyer of last resort for energy producers. The walls are cracking — it's not fringe anymore.",
   },
 ];
 
@@ -49,8 +44,9 @@ export default function FreedomTechPage() {
         <Container size="narrow">
           <H1 className="mb-6">Freedom Tech</H1>
           <Text variant="lead">
-            Work in the space where technology serves human freedom—Bitcoin,
-            sovereign systems, and the builders who make it real.
+            Freedom tech will be the underpinning thesis for all human-centered
+            innovation and abundance. AI will shape our future — and we&apos;re
+            building the one we want to see.
           </Text>
         </Container>
       </section>
@@ -73,10 +69,18 @@ export default function FreedomTechPage() {
           </div>
 
           <div className="mt-12 flex flex-wrap gap-4">
-            <Button href="/freedom-from-tech" variant="outline">
-              Freedom from Tech →
-            </Button>
-            <Button href="/connect">Get in Touch</Button>
+            <a
+              href="/freedom-from-tech"
+              className="inline-flex items-center rounded-xl border border-white/10 bg-white/[0.03] px-6 py-3 text-xs font-medium uppercase tracking-[0.2em] text-[var(--color-text-primary)] transition hover:border-white/20 hover:bg-white/[0.06]"
+            >
+              Freedom from Tech &rarr;
+            </a>
+            <a
+              href="mailto:jack@bitcoinpark.com"
+              className="inline-flex items-center rounded-xl border border-[var(--color-accent-ember)]/30 bg-[var(--color-accent-ember)]/10 px-6 py-3 text-xs font-medium uppercase tracking-[0.2em] text-[var(--color-accent-ember)] transition hover:bg-[var(--color-accent-ember)]/20"
+            >
+              Get in Touch
+            </a>
           </div>
         </Container>
       </section>

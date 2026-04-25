@@ -19,35 +19,40 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Jack Lesser | Podcast Reviews",
-    template: "%s | Jack Lesser",
+    default: "Timeless Practice | Jack Lesser",
+    template: "%s | Timeless Practice",
   },
   description:
-    "Jack Lesser's podcast reviews and notes on discipline, leverage, psychology, and the ideas worth revisiting.",
+    "Ideas, thinkers, and technologies that hold up across time. Podcast reviews, wellness tools, and notes on performance, leverage, and inner work.",
   keywords: [
     "Jack Lesser",
+    "Timeless Practice",
     "podcast reviews",
-    "discipline",
-    "psychology",
-    "philosophy",
+    "Bitcoin",
+    "yoga",
+    "wellness",
+    "leverage",
     "personal development",
+    "Naval Ravikant",
+    "David Goggins",
   ],
   authors: [{ name: "Jack Lesser" }],
   creator: "Jack Lesser",
+  metadataBase: new URL("https://jacklesser.me"),
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://jacklesser.me",
-    siteName: "Jack Lesser",
-    title: "Jack Lesser | Podcast Reviews",
+    siteName: "Timeless Practice",
+    title: "Timeless Practice | Jack Lesser",
     description:
-      "Podcast reviews and personal notes on the conversations that shape how Jack Lesser thinks and lives.",
+      "Ideas, thinkers, and technologies that hold up across time. Podcast reviews, wellness tools, and notes on performance, leverage, and inner work.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jack Lesser | Podcast Reviews",
+    title: "Timeless Practice | Jack Lesser",
     description:
-      "Podcast reviews and personal notes on discipline, leverage, psychology, and inner work.",
+      "Ideas, thinkers, and technologies that hold up across time. Podcast reviews and notes on performance, leverage, and inner work.",
   },
   robots: {
     index: true,

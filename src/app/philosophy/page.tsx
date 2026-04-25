@@ -7,6 +7,10 @@ export const metadata: Metadata = {
   title: "Philosophy",
   description:
     "Core beliefs and guiding principles on integrated wellness, discipline, and the pursuit of depth.",
+  openGraph: {
+    title: "Philosophy | Timeless Practice",
+    description: "Core beliefs and guiding principles on integrated wellness, discipline, and the pursuit of depth.",
+  },
 };
 
 const pillars = [

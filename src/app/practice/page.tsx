@@ -8,6 +8,10 @@ export const metadata: Metadata = {
   title: "Practice",
   description:
     "How philosophy translates into action. Methodology, areas of focus, and current work.",
+  openGraph: {
+    title: "Practice | Timeless Practice",
+    description: "How philosophy translates into action. Methodology, areas of focus, and current work.",
+  },
 };
 
 const areas = [

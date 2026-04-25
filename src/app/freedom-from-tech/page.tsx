@@ -8,6 +8,10 @@ export const metadata: Metadata = {
   title: "Freedom from Tech",
   description:
     "Work in freedom from tech: yoga, Rewired Protocol, breathwork, and MTA.",
+  openGraph: {
+    title: "Freedom from Tech | Timeless Practice",
+    description: "Work in freedom from tech: yoga, Rewired Protocol, breathwork, and MTA.",
+  },
 };
 
 const workAreas = [

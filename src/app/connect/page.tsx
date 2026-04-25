@@ -9,6 +9,10 @@ export const metadata: Metadata = {
   title: "Connect",
   description:
     "Get in touch with Jack Lesser. Reach out for collaboration, questions, or conversation.",
+  openGraph: {
+    title: "Connect | Timeless Practice",
+    description: "Get in touch with Jack Lesser. Reach out for collaboration, questions, or conversation.",
+  },
 };
 
 export default function ConnectPage() {

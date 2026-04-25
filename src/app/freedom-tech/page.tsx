@@ -8,6 +8,10 @@ export const metadata: Metadata = {
   title: "Freedom Tech",
   description:
     "Work in freedom tech: Bitcoin Park, summits, meetups, podcast, and speaking.",
+  openGraph: {
+    title: "Freedom Tech | Timeless Practice",
+    description: "Work in freedom tech: Bitcoin Park, summits, meetups, podcast, and speaking.",
+  },
 };
 
 const workAreas = [

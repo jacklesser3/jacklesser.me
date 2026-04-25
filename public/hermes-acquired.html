@@ -38,7 +38,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: clamp(1.5rem, 3vh, 3rem) clamp(1.5rem, 4vw, 3rem);
+      padding: clamp(1rem, 2.5vh, 3rem) clamp(1.5rem, 3vw, 3rem);
       max-width: 1100px;
       margin: 0 auto;
       overflow: hidden;
@@ -139,18 +139,18 @@
 
     /* ─── SECTION ELEMENTS ─── */
     .section-number {
-      font-size: clamp(0.6rem, 1vw, 0.7rem);
+      font-size: clamp(0.55rem, 0.85vh, 0.7rem);
       text-transform: uppercase;
       letter-spacing: 0.3em;
       font-weight: 600;
-      margin-bottom: clamp(0.3rem, 0.8vh, 0.6rem);
+      margin-bottom: clamp(0.2rem, 0.6vh, 0.6rem);
     }
 
     .section-title {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(1.4rem, 3vw, 2.4rem);
+      font-size: clamp(1.1rem, 2.8vh, 2.4rem);
       font-weight: 700;
-      margin-bottom: clamp(0.8rem, 1.5vh, 1.5rem);
+      margin-bottom: clamp(0.5rem, 1.2vh, 1.5rem);
       line-height: 1.2;
       color: var(--white);
     }
@@ -160,8 +160,8 @@
       background: var(--card);
       border-left: 4px solid var(--accent);
       border-radius: 0 12px 12px 0;
-      padding: clamp(1rem, 2vh, 1.5rem) clamp(1.2rem, 2vw, 2rem);
-      margin-bottom: clamp(0.8rem, 1.5vh, 1.2rem);
+      padding: clamp(0.6rem, 1.5vh, 1.5rem) clamp(1rem, 2vw, 2rem);
+      margin-bottom: clamp(0.5rem, 1.2vh, 1.2rem);
       transition: transform 0.3s, box-shadow 0.3s;
     }
 
@@ -176,17 +176,17 @@
     .quote-card.saddle { border-left-color: var(--accent5); }
 
     .quote-text {
-      font-size: clamp(0.85rem, 1.5vw, 1.1rem);
+      font-size: clamp(0.75rem, 1.3vh, 1.1rem);
       font-weight: 300;
-      line-height: 1.6;
+      line-height: 1.55;
       font-style: italic;
     }
 
     .quote-text strong { font-weight: 700; font-style: normal; color: #fff; }
 
     .quote-attr {
-      margin-top: clamp(0.4rem, 0.8vh, 0.75rem);
-      font-size: clamp(0.65rem, 1vw, 0.75rem);
+      margin-top: clamp(0.25rem, 0.6vh, 0.75rem);
+      font-size: clamp(0.6rem, 0.85vh, 0.75rem);
       color: var(--muted);
       font-weight: 600;
       text-transform: uppercase;
@@ -197,22 +197,22 @@
     .talk-points {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: clamp(0.6rem, 1vw, 1rem);
-      margin-top: clamp(0.5rem, 1vh, 1rem);
+      gap: clamp(0.5rem, 1vh, 1rem);
+      margin-top: clamp(0.4rem, 0.8vh, 1rem);
     }
 
     .talk-point {
       background: var(--card);
       border-radius: 12px;
-      padding: clamp(0.8rem, 1.5vh, 1.2rem);
+      padding: clamp(0.5rem, 1.2vh, 1.2rem);
       border: 1px solid rgba(255,255,255,0.05);
       transition: border-color 0.3s;
     }
 
     .talk-point:hover { border-color: rgba(212,135,78,0.25); }
-    .talk-point-icon { font-size: 1.3rem; margin-bottom: clamp(0.3rem, 0.5vh, 0.5rem); }
-    .talk-point h4 { font-size: clamp(0.85rem, 1.3vw, 1rem); font-weight: 700; margin-bottom: clamp(0.2rem, 0.5vh, 0.4rem); color: #fff; }
-    .talk-point p { font-size: clamp(0.78rem, 1.2vw, 0.88rem); color: var(--muted); line-height: 1.5; }
+    .talk-point-icon { font-size: clamp(1rem, 1.6vh, 1.3rem); margin-bottom: clamp(0.2rem, 0.4vh, 0.5rem); }
+    .talk-point h4 { font-size: clamp(0.75rem, 1.2vh, 1rem); font-weight: 700; margin-bottom: clamp(0.15rem, 0.35vh, 0.4rem); color: #fff; }
+    .talk-point p { font-size: clamp(0.68rem, 1.08vh, 0.88rem); color: var(--muted); line-height: 1.45; }
 
     /* ─── FULL-WIDTH QUOTE ─── */
     .full-quote {
@@ -227,7 +227,7 @@
 
     .full-quote blockquote {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 5vw, 3.8rem);
+      font-size: clamp(1.4rem, 4.5vh, 3.8rem);
       font-weight: 700;
       line-height: 1.3;
       max-width: 900px;
@@ -235,8 +235,8 @@
     }
 
     .full-quote .fq-attr {
-      margin-top: 2rem;
-      font-size: 0.9rem;
+      margin-top: clamp(1rem, 2vh, 2rem);
+      font-size: clamp(0.75rem, 1.1vh, 0.9rem);
       color: var(--muted);
       letter-spacing: 0.15em;
       text-transform: uppercase;
@@ -256,14 +256,14 @@
     .fq-saddle { background: var(--accent5); }
 
     /* ─── FRAMEWORK ─── */
-    .framework { display: flex; flex-direction: column; gap: 0; margin-top: clamp(0.5rem, 1vh, 1rem); }
-    .fw-step { display: flex; align-items: stretch; gap: clamp(0.8rem, 1.2vw, 1.2rem); }
-    .fw-line { display: flex; flex-direction: column; align-items: center; min-width: 30px; }
-    .fw-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+    .framework { display: flex; flex-direction: column; gap: 0; margin-top: clamp(0.3rem, 0.8vh, 1rem); }
+    .fw-step { display: flex; align-items: stretch; gap: clamp(0.6rem, 1vw, 1.2rem); }
+    .fw-line { display: flex; flex-direction: column; align-items: center; min-width: 28px; }
+    .fw-dot { width: clamp(8px, 1.4vh, 12px); height: clamp(8px, 1.4vh, 12px); border-radius: 50%; flex-shrink: 0; }
     .fw-connector { width: 2px; flex-grow: 1; background: rgba(255,255,255,0.08); }
-    .fw-content { padding-bottom: clamp(0.6rem, 1.2vh, 1.5rem); }
-    .fw-content h4 { font-size: clamp(0.88rem, 1.3vw, 1.05rem); font-weight: 700; color: #fff; margin-bottom: clamp(0.1rem, 0.3vh, 0.25rem); }
-    .fw-content p { font-size: clamp(0.78rem, 1.2vw, 0.88rem); color: var(--muted); line-height: 1.5; }
+    .fw-content { padding-bottom: clamp(0.35rem, 0.9vh, 1.5rem); }
+    .fw-content h4 { font-size: clamp(0.78rem, 1.25vh, 1.05rem); font-weight: 700; color: #fff; margin-bottom: clamp(0.05rem, 0.2vh, 0.25rem); }
+    .fw-content p { font-size: clamp(0.68rem, 1.08vh, 0.88rem); color: var(--muted); line-height: 1.45; }
 
     /* ─── NAV DOTS ─── */
     .nav-dots {
@@ -352,40 +352,9 @@
 
     footer a { color: var(--accent); text-decoration: none; }
 
-    /* ─── RESPONSIVE: iPad & smaller ─── */
-    @media (max-height: 850px) {
-      .page { padding: 1.2rem 1.5rem; }
-      .section-title { font-size: clamp(1.2rem, 2.5vw, 1.8rem); margin-bottom: 0.6rem; }
-      .quote-card { padding: 0.8rem 1.2rem; margin-bottom: 0.6rem; }
-      .quote-text { font-size: 0.82rem; line-height: 1.5; }
-      .fw-content { padding-bottom: 0.5rem; }
-      .fw-content p { font-size: 0.72rem; }
-      .fw-dot { width: 10px; height: 10px; }
-      .talk-point { padding: 0.7rem; }
-      .talk-point h4 { font-size: 0.8rem; }
-      .talk-point p { font-size: 0.72rem; }
-      .full-quote blockquote { font-size: clamp(1.5rem, 4vw, 2.6rem); }
-    }
-
-    @media (max-height: 700px) {
-      .page { padding: 0.8rem 1.2rem; }
-      .section-number { margin-bottom: 0.2rem; font-size: 0.55rem; }
-      .section-title { font-size: 1.1rem; margin-bottom: 0.4rem; }
-      .quote-card { padding: 0.6rem 1rem; margin-bottom: 0.4rem; }
-      .quote-text { font-size: 0.75rem; line-height: 1.4; }
-      .quote-attr { margin-top: 0.25rem; font-size: 0.6rem; }
-      .fw-content { padding-bottom: 0.35rem; }
-      .fw-content h4 { font-size: 0.78rem; }
-      .fw-content p { font-size: 0.68rem; line-height: 1.35; }
-      .fw-dot { width: 8px; height: 8px; }
-      .talk-point { padding: 0.5rem; }
-      .talk-point h4 { font-size: 0.75rem; }
-      .talk-point p { font-size: 0.68rem; line-height: 1.35; }
-      .full-quote blockquote { font-size: 1.4rem; }
-    }
-
+    /* ─── NARROW SCREENS ─── */
     @media (max-width: 768px) {
-      .talk-points { grid-template-columns: 1fr; gap: 0.5rem; }
+      .talk-points { grid-template-columns: 1fr; }
       .hero h1 { font-size: clamp(1.8rem, 6vw, 2.8rem); }
       .hero-meta { flex-wrap: wrap; gap: 1rem; justify-content: center; }
     }

@@ -39,6 +39,17 @@ export function Footer() {
             </svg>
           </a>
           <a
+            href="https://www.youtube.com/@timeless.practice"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-text-primary)]"
+            aria-label="YouTube"
+          >
+            <svg width="20" height="18" viewBox="0 0 24 18" fill="currentColor">
+              <path d="M23.498 2.186a3.016 3.016 0 0 0-2.122-2.136C19.505 0 12 0 12 0S4.495 0 2.623.05A3.016 3.016 0 0 0 .502 2.186C0 4.075 0 9 0 9s0 4.926.502 6.814a3.016 3.016 0 0 0 2.122 2.136C4.495 18 12 18 12 18s7.505 0 9.377-.05a3.016 3.016 0 0 0 2.122-2.136C24 13.926 24 9 24 9s0-4.926-.502-6.814zM9.545 12.818V5.182L15.818 9l-6.273 3.818z" />
+            </svg>
+          </a>
+          <a
             href="https://github.com/jacklesser3"
             target="_blank"
             rel="noopener noreferrer"

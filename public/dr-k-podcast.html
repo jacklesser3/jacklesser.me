@@ -75,11 +75,92 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      text-align: center;
-      padding: 2rem;
+      padding: 4rem 2rem;
       position: relative;
       background: radial-gradient(ellipse at 50% 0%, rgba(139,92,246,0.15) 0%, transparent 60%),
                   radial-gradient(ellipse at 80% 80%, rgba(245,158,11,0.1) 0%, transparent 50%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      align-items: center;
+      gap: 4rem;
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    .hero-left { text-align: left; }
+
+    .hero-video {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #000;
+      box-shadow: 0 0 80px rgba(139,92,246,0.1);
+    }
+
+    .hero-video iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .hero-video .video-thumb {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      cursor: pointer;
+      transition: transform 0.5s;
+    }
+
+    .hero-video:hover .video-thumb { transform: scale(1.05); }
+
+    .hero-video .video-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.2);
+      transition: background 0.3s;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-video:hover .video-overlay { background: rgba(0,0,0,0.1); }
+
+    .hero-video .play-btn {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(10,10,15,0.7);
+      border: 1px solid rgba(245,158,11,0.3);
+      backdrop-filter: blur(12px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s, border-color 0.3s, background 0.3s;
+    }
+
+    .hero-video:hover .play-btn {
+      transform: scale(1.1);
+      border-color: rgba(245,158,11,0.5);
+      background: rgba(10,10,15,0.8);
+    }
+
+    .play-btn svg { width: 20px; height: 20px; margin: 0; }
+
+    @media (max-width: 768px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .hero-left { text-align: center; }
     }
 
     .hero-label {
@@ -93,9 +174,9 @@
 
     .hero h1 {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-size: clamp(2rem, 3.5vw, 3.2rem);
       font-weight: 700;
-      line-height: 1.1;
+      line-height: 1.15;
       max-width: 900px;
       background: linear-gradient(135deg, #fff 0%, #a78bfa 50%, #f59e0b 100%);
       -webkit-background-clip: text;
@@ -103,11 +184,15 @@
       background-clip: text;
     }
 
+    @media (max-width: 768px) {
+      .hero h1 { font-size: clamp(2rem, 6vw, 3rem); }
+    }
+
     .hero-sub {
       margin-top: 1.5rem;
       font-size: 1.1rem;
       color: var(--muted);
-      max-width: 600px;
+      max-width: 650px;
     }
 
     .hero-meta {
@@ -426,15 +511,26 @@
   <!-- HERO -->
   <!-- ═══════════════════════════════════════ -->
   <div class="hero" id="hero">
-    <div class="hero-label">Know Thyself Podcast &mdash; 5 Key Takeaways</div>
-    <h1>Eastern Wisdom &amp; Neuroscience Unite to Unlock Human Potential</h1>
-    <p class="hero-sub">Dr. K (Harvard-trained psychiatrist &amp; 7-year ashram student) sits with Andr&eacute; Duqum for a rare, deep conversation bridging science and spirit.</p>
-    <div class="hero-meta">
-      <span>Dr. K &amp; Andr&eacute; Duqum</span>
-      <span>~3 hours</span>
-      <span>5 Takeaways</span>
+    <div class="hero-grid">
+      <div class="hero-left">
+        <div class="hero-label">Know Thyself Podcast &mdash; 5 Key Takeaways</div>
+        <h1>Eastern Wisdom &amp; Neuroscience Unite to Unlock Human Potential</h1>
+        <p class="hero-sub">Dr. K (Harvard-trained psychiatrist &amp; 7-year ashram student) sits with Andr&eacute; Duqum for a rare, deep conversation bridging science and spirit.</p>
+        <div class="hero-meta">
+          <span>Dr. K &amp; Andr&eacute; Duqum</span>
+          <span>~3 hours</span>
+          <span>5 Takeaways</span>
+        </div>
+      </div>
+      <div class="hero-video" id="heroVideo">
+        <img class="video-thumb" src="https://img.youtube.com/vi/KIE9spazZCk/maxresdefault.jpg" alt="Dr. K x Andr&eacute; Duqum &mdash; Know Thyself" />
+        <div class="video-overlay" onclick="playVideo()">
+          <div class="play-btn">
+            <svg viewBox="0 0 20 20" fill="none" width="20" height="20"><path d="M6.5 3.5L16 10L6.5 16.5V3.5Z" fill="#f59e0b"/></svg>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="scroll-hint">&rarr; press right arrow</div>
   </div>
 
   <div class="divider"></div>
@@ -693,6 +789,12 @@
   </footer>
 
   <script>
+    // Lite YouTube embed — swap thumbnail for iframe on click
+    function playVideo() {
+      const container = document.getElementById('heroVideo');
+      container.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/KIE9spazZCk?autoplay=1&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&controls=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+    }
+
     const pages = [
       { id: 'hero', label: 'Intro' },
       { id: 't1-quote', label: '' },

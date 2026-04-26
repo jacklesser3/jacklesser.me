@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. K Quote Thumbnail</title>
+  <style>
+    @font-face {
+      font-family: "Cormorant Garamond";
+      src: url("../out/_next/static/media/01e4147cff8141ee-s.p.7787e134.woff2") format("woff2");
+      font-weight: 400 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Inter";
+      src: url("../out/_next/static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2") format("woff2");
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      --bg-top: #111019;
+      --bg-mid: #0a0a0f;
+      --bg-bottom: #08080d;
+      --white: #fafafa;
+      --purple-soft: #a78bfa;
+      --amber: #f59e0b;
+      --eyebrow: #f59e0b;
+      --muted: rgba(216, 208, 198, 0.72);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      width: 1280px;
+      height: 720px;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at 50% 0%, rgba(139, 92, 246, 0.18) 0%, transparent 56%),
+        radial-gradient(ellipse at 80% 80%, rgba(245, 158, 11, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 15% 20%, rgba(139, 92, 246, 0.08), transparent 26%),
+        linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 46%, var(--bg-bottom) 100%);
+      color: #e9e8ee;
+      font-family: "Inter", Arial, sans-serif;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    body::before {
+      background:
+        radial-gradient(circle at 50% 42%, rgba(139, 92, 246, 0.1), transparent 26%),
+        radial-gradient(circle at 50% 100%, rgba(245, 158, 11, 0.08), transparent 54%);
+    }
+
+    body::after {
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.22));
+      mix-blend-mode: multiply;
+    }
+
+    .canvas {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      isolation: isolate;
+      padding: 42px 44px 30px;
+      text-align: center;
+    }
+
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.32);
+      opacity: var(--opacity);
+    }
+
+    .eyebrow {
+      position: relative;
+      z-index: 1;
+      color: var(--eyebrow);
+      font-size: 14px;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      opacity: 0.82;
+    }
+
+    .eyebrow-mark {
+      display: inline-block;
+      width: 44px;
+      height: 2px;
+      margin: 0 10px 4px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, rgba(245, 158, 11, 0), rgba(245, 158, 11, 1), rgba(245, 158, 11, 0));
+    }
+
+    .quote-wrap {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 1180px;
+      margin: 44px auto 0;
+    }
+
+    .quote {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 108px;
+      line-height: 0.92;
+      letter-spacing: -0.04em;
+      font-weight: 500;
+      background: linear-gradient(135deg, var(--white) 0%, var(--purple-soft) 52%, var(--amber) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow:
+        0 0 28px rgba(139, 92, 246, 0.1),
+        0 0 80px rgba(245, 158, 11, 0.06);
+      text-wrap: balance;
+    }
+
+    .meta {
+      position: relative;
+      z-index: 1;
+      margin-top: 38px;
+      color: var(--muted);
+    }
+
+    .author {
+      font-size: 21px;
+      letter-spacing: 0.01em;
+    }
+
+    .episode {
+      margin-top: 8px;
+      font-size: 17px;
+      opacity: 0.86;
+    }
+
+    .site {
+      position: absolute;
+      left: 48px;
+      bottom: 28px;
+      z-index: 1;
+      font-size: 15px;
+      color: rgba(214, 207, 199, 0.64);
+    }
+
+    .episode-corner {
+      position: absolute;
+      right: 48px;
+      bottom: 34px;
+      z-index: 1;
+      font-size: 15px;
+      color: rgba(214, 207, 199, 0.64);
+    }
+  </style>
+</head>
+<body>
+  <div class="canvas">
+    <span class="star" style="left: 8px; top: 36px; --opacity: 0.72;"></span>
+    <span class="star" style="left: 60px; top: 73px; --opacity: 0.72;"></span>
+    <span class="star" style="left: 123px; top: 25px; --opacity: 0.78;"></span>
+    <span class="star" style="left: 186px; top: 48px; --opacity: 0.84;"></span>
+    <span class="star" style="left: 238px; top: 12px; --opacity: 0.88;"></span>
+    <span class="star" style="left: 328px; top: 92px; --opacity: 0.66;"></span>
+    <span class="star" style="left: 396px; top: 16px; --opacity: 0.84;"></span>
+    <span class="star" style="left: 455px; top: 58px; --opacity: 0.6;"></span>
+    <span class="star" style="left: 518px; top: 51px; --opacity: 0.72;"></span>
+    <span class="star" style="left: 612px; top: 31px; --opacity: 0.74;"></span>
+    <span class="star" style="left: 711px; top: 92px; --opacity: 0.84;"></span>
+    <span class="star" style="left: 808px; top: 18px; --opacity: 0.76;"></span>
+    <span class="star" style="left: 892px; top: 82px; --opacity: 0.84;"></span>
+    <span class="star" style="left: 972px; top: 46px; --opacity: 0.92;"></span>
+    <span class="star" style="left: 1049px; top: 21px; --opacity: 0.8;"></span>
+    <span class="star" style="left: 1116px; top: 61px; --opacity: 0.68;"></span>
+    <span class="star" style="left: 1179px; top: 29px; --opacity: 0.8;"></span>
+    <span class="star" style="left: 214px; top: 371px; --opacity: 0.5;"></span>
+    <span class="star" style="left: 327px; top: 324px; --opacity: 0.6;"></span>
+    <span class="star" style="left: 437px; top: 524px; --opacity: 0.46;"></span>
+    <span class="star" style="left: 680px; top: 612px; --opacity: 0.46;"></span>
+    <span class="star" style="left: 1062px; top: 322px; --opacity: 0.38;"></span>
+    <span class="star" style="left: 1129px; top: 578px; --opacity: 0.34;"></span>
+    <span class="star" style="left: 104px; top: 612px; --opacity: 0.34;"></span>
+
+    <div class="eyebrow">TIMELESS <span class="eyebrow-mark"></span> KEY TAKEAWAYS</div>
+
+    <div class="quote-wrap">
+      <div class="quote">
+        &ldquo;The reclamation of your attention is essentially the reclamation of your life.&rdquo;
+      </div>
+    </div>
+
+    <div class="meta">
+      <div class="author">Dr. K</div>
+      <div class="episode">Know Thyself with Andre Duqum</div>
+    </div>
+
+    <div class="site">jacklesser.me</div>
+    <div class="episode-corner">Know Thyself</div>
+  </div>
+</body>
+</html>

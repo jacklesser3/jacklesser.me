@@ -19,7 +19,7 @@ export function Card({
 }: CardProps) {
   return (
     <div
-      className={`rounded-lg p-6 ${variantStyles[variant]} ${className}`}
+      className={`rounded-lg p-5 sm:p-6 ${variantStyles[variant]} ${className}`}
     >
       {children}
     </div>

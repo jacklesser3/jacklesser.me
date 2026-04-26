@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export default function ConnectPage() {
   return (
     <>
-      <section className="py-16 md:py-24">
+      <section className="py-12 md:py-24">
         <Container size="narrow">
           <H1 className="mb-6">Connect</H1>
           <Text variant="lead">
@@ -28,7 +28,7 @@ export default function ConnectPage() {
           <div className="mt-10">
             <a
               href="mailto:jack@bitcoinpark.com"
-              className="inline-flex items-center rounded-xl border border-[var(--color-accent-ember)]/30 bg-[var(--color-accent-ember)]/10 px-8 py-4 text-sm font-medium uppercase tracking-[0.2em] text-[var(--color-accent-ember)] transition hover:bg-[var(--color-accent-ember)]/20"
+              className="inline-flex w-full items-center justify-center rounded-xl border border-[var(--color-accent-ember)]/30 bg-[var(--color-accent-ember)]/10 px-8 py-4 text-xs font-medium uppercase tracking-[0.2em] text-[var(--color-accent-ember)] transition hover:bg-[var(--color-accent-ember)]/20 sm:w-auto sm:text-sm"
             >
               Get in Touch
             </a>

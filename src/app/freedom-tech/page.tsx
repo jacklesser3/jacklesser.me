@@ -40,7 +40,7 @@ const workAreas = [
 export default function FreedomTechPage() {
   return (
     <>
-      <section className="py-16 md:py-24">
+      <section className="py-12 md:py-24">
         <Container size="narrow">
           <H1 className="mb-6">Freedom Tech</H1>
           <Text variant="lead">
@@ -51,7 +51,7 @@ export default function FreedomTechPage() {
         </Container>
       </section>
 
-      <section className="py-16 md:py-24 bg-[var(--color-bg-secondary)]">
+      <section className="py-12 md:py-24 bg-[var(--color-bg-secondary)]">
         <Container>
           <SectionTitle subtitle="Where I show up. Proof of work in the freedom tech ecosystem.">
             Work &amp; Presence
@@ -68,16 +68,16 @@ export default function FreedomTechPage() {
             ))}
           </div>
 
-          <div className="mt-12 flex flex-wrap gap-4">
+          <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
             <a
               href="/freedom-from-tech"
-              className="inline-flex items-center rounded-xl border border-white/10 bg-white/[0.03] px-6 py-3 text-xs font-medium uppercase tracking-[0.2em] text-[var(--color-text-primary)] transition hover:border-white/20 hover:bg-white/[0.06]"
+              className="inline-flex w-full items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] px-6 py-3 text-xs font-medium uppercase tracking-[0.2em] text-[var(--color-text-primary)] transition hover:border-white/20 hover:bg-white/[0.06] sm:w-auto"
             >
               Freedom from Tech &rarr;
             </a>
             <a
               href="mailto:jack@bitcoinpark.com"
-              className="inline-flex items-center rounded-xl border border-[var(--color-accent-ember)]/30 bg-[var(--color-accent-ember)]/10 px-6 py-3 text-xs font-medium uppercase tracking-[0.2em] text-[var(--color-accent-ember)] transition hover:bg-[var(--color-accent-ember)]/20"
+              className="inline-flex w-full items-center justify-center rounded-xl border border-[var(--color-accent-ember)]/30 bg-[var(--color-accent-ember)]/10 px-6 py-3 text-xs font-medium uppercase tracking-[0.2em] text-[var(--color-accent-ember)] transition hover:bg-[var(--color-accent-ember)]/20 sm:w-auto"
             >
               Get in Touch
             </a>

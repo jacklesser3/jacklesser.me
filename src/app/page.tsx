@@ -20,6 +20,7 @@ const podcastReviews = [
     subtitle: "Eastern Wisdom & Neuroscience",
     summary:
       "A more reflective review on healing, attention, and the overlap between contemplative practice and modern psychology.",
+    videoId: "KIE9spazZCk",
   },
   {
     number: "03",

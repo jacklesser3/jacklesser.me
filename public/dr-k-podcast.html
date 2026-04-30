@@ -502,9 +502,16 @@
     /* ─── MOBILE OVERRIDES ─── */
     @media (max-width: 768px) {
       body { overflow-x: hidden; }
-      .page, .hero, .full-quote, .closing {
+      .page {
         height: auto;
         min-height: auto;
+        overflow: visible;
+        padding: 3rem 1.25rem;
+      }
+      .hero, .full-quote, .closing {
+        height: auto;
+        min-height: 100vh;
+        min-height: 100dvh;
         overflow: visible;
         padding: 3rem 1.25rem;
       }
@@ -518,6 +525,10 @@
       .hero-meta { gap: 1.25rem; flex-wrap: wrap; }
       .section-title { font-size: clamp(1.5rem, 6vw, 2rem); }
       .talk-points { grid-template-columns: 1fr !important; gap: 0.75rem !important; }
+      .full-quote blockquote { font-size: 1.35rem !important; line-height: 1.45; max-width: none; }
+      .full-quote .fq-attr { font-size: 0.7rem; margin-top: 1.25rem; }
+      .closing blockquote { font-size: 1.35rem !important; line-height: 1.45; max-width: none; }
+      .quote-text { font-size: 0.95rem !important; line-height: 1.55; }
       footer { padding: 3rem 1.25rem; }
     }
   </style>

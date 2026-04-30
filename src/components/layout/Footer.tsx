@@ -4,8 +4,8 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="mt-auto w-full border-t border-white/8 px-6 py-8 md:px-8">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4">
+    <footer className="mt-auto w-full border-t border-white/8 px-5 py-6 sm:px-6 sm:py-8 md:px-8">
+      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-5 sm:flex-row sm:gap-4">
         <Link
           href="/"
           className="font-[family-name:var(--font-cormorant)] text-xl italic text-[var(--color-text-primary)] transition-colors hover:text-[var(--color-accent-ember)]"
@@ -13,7 +13,7 @@ export function Footer() {
           Jack Lesser
         </Link>
 
-        <div className="flex items-center gap-5">
+        <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-3 sm:gap-5">
           <a
             href="https://x.com/jacklesser_"
             target="_blank"

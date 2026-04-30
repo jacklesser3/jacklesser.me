@@ -206,7 +206,7 @@ export default function Home() {
             {/* Peak — Timeless */}
             <div className="relative z-10 px-4 pb-10 pt-4 text-center sm:px-6 md:pb-12 md:pt-8">
               <div className="relative inline-block">
-                <h1 className="font-[family-name:var(--font-cormorant)] text-[4.5rem] italic leading-none tracking-tight text-[var(--color-text-primary)] drop-shadow-[0_0_60px_rgba(255,255,255,0.06)] sm:text-8xl md:text-9xl">
+                <h1 className="font-[family-name:var(--font-cormorant)] text-[3.5rem] italic leading-none tracking-tight text-[var(--color-text-primary)] drop-shadow-[0_0_60px_rgba(255,255,255,0.06)] sm:text-8xl md:text-9xl">
                   Timeless
                 </h1>
                 <span className="pointer-events-none absolute left-[8%] top-[88%] h-px w-[84%] overflow-hidden">
@@ -219,11 +219,11 @@ export default function Home() {
             </div>
 
             {/* Base — three pillars as frosted glass panels */}
-            <div className="relative z-10 grid w-full max-w-4xl gap-4 md:grid-cols-3">
+            <div className="relative z-10 grid w-full max-w-4xl gap-3 sm:gap-4 md:grid-cols-3">
               {pillars.map((item, index) => (
                 <div
                   key={item.label}
-                  className="animate-fade-in rounded-xl border border-white/[0.08] bg-[rgba(9,9,12,0.55)] p-6 backdrop-blur-[12px] transition duration-300 hover:border-white/[0.14] hover:bg-[rgba(9,9,12,0.65)]"
+                  className="animate-fade-in rounded-xl border border-white/[0.08] bg-[rgba(9,9,12,0.55)] p-5 backdrop-blur-[12px] transition duration-300 hover:border-white/[0.14] hover:bg-[rgba(9,9,12,0.65)] sm:p-6"
                   style={{ animationDelay: `${(index + 1) * 120}ms` }}
                 >
                   <p className="text-[0.65rem] font-medium uppercase tracking-[0.36em] text-[rgba(184,137,90,0.6)]">
@@ -265,12 +265,12 @@ export default function Home() {
 
       {/* ── Reviews section ── */}
       <section id="reviews" className="relative z-10 border-t border-white/[0.06]">
-        <Container className="py-16 md:py-20">
-          <div className="mb-10">
+        <Container className="py-12 sm:py-16 md:py-20">
+          <div className="mb-8 sm:mb-10">
             <p className="text-[0.65rem] font-medium uppercase tracking-[0.36em] text-[rgba(184,137,90,0.6)]">
               Timeless
             </p>
-            <h2 className="mt-4 font-[family-name:var(--font-cormorant)] text-4xl leading-none text-[var(--color-text-primary)] md:text-5xl">
+            <h2 className="mt-4 font-[family-name:var(--font-cormorant)] text-3xl leading-tight text-[var(--color-text-primary)] sm:text-4xl sm:leading-none md:text-5xl">
               Discover to unlock ancient and present wisdom.
             </h2>
           </div>
@@ -280,22 +280,22 @@ export default function Home() {
               <a
                 key={review.href}
                 href={review.href}
-                className="group animate-fade-in rounded-xl border border-white/[0.08] bg-[rgba(9,9,12,0.55)] p-6 backdrop-blur-[12px] transition duration-300 hover:border-white/[0.14] hover:bg-[rgba(9,9,12,0.65)] md:p-8"
+                className="group animate-fade-in rounded-xl border border-white/[0.08] bg-[rgba(9,9,12,0.55)] p-5 backdrop-blur-[12px] transition duration-300 hover:border-white/[0.14] hover:bg-[rgba(9,9,12,0.65)] sm:p-6 md:p-8"
                 style={{ animationDelay: `${(index + 1) * 100}ms` }}
               >
                 <div className="grid gap-4 md:grid-cols-[4rem_minmax(0,1fr)] md:gap-8">
                   <p className="text-[0.65rem] font-medium uppercase tracking-[0.36em] text-[var(--color-text-muted)]">
                     {review.number}
                   </p>
-                  <div className="grid gap-6 md:grid-cols-[1fr_16rem]">
+                  <div className="grid gap-5 md:grid-cols-[1fr_16rem] md:gap-6">
                     <div>
                       <p className="text-[0.65rem] font-medium uppercase tracking-[0.3em] text-[rgba(184,137,90,0.7)]">
                         {review.subtitle}
                       </p>
-                      <h3 className="mt-3 font-[family-name:var(--font-cormorant)] text-3xl leading-tight text-[var(--color-text-primary)] md:text-4xl">
+                      <h3 className="mt-3 font-[family-name:var(--font-cormorant)] text-2xl leading-tight text-[var(--color-text-primary)] sm:text-3xl md:text-4xl">
                         {review.title}
                       </h3>
-                      <p className="mt-5 max-w-3xl text-base leading-8 text-[var(--color-text-secondary)]">
+                      <p className="mt-4 max-w-3xl text-[0.95rem] leading-7 text-[var(--color-text-secondary)] sm:mt-5 sm:text-base sm:leading-8">
                         {review.summary}
                       </p>
                     </div>

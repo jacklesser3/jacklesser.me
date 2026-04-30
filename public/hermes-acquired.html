@@ -376,9 +376,25 @@
 
     /* ─── NARROW SCREENS ─── */
     @media (max-width: 768px) {
-      .talk-points { grid-template-columns: 1fr; }
+      body { overflow-x: hidden; }
+      .page, .hero, .full-quote, .closing {
+        height: auto;
+        min-height: auto;
+        overflow: visible;
+        padding: 3rem 1.25rem;
+      }
+      .hero { padding: 5rem 1.25rem 4rem; }
+      .home-link {
+        top: 0.875rem;
+        left: 0.875rem;
+        padding: 0.55rem 0.75rem;
+        font-size: 0.65rem;
+      }
+      .talk-points { grid-template-columns: 1fr; gap: 0.75rem; }
       .hero h1 { font-size: clamp(1.8rem, 6vw, 2.8rem); }
       .hero-meta { flex-wrap: wrap; gap: 1rem; justify-content: center; }
+      .section-title { font-size: clamp(1.5rem, 6vw, 2rem); }
+      footer { padding: 3rem 1.25rem; }
     }
   </style>
 </head>

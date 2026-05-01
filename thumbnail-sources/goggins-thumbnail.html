@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Goggins Thumbnail</title>
+  <style>
+    @font-face {
+      font-family: "Cormorant Garamond";
+      src: url("../out/_next/static/media/01e4147cff8141ee-s.p.7787e134.woff2") format("woff2");
+      font-weight: 400 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Inter";
+      src: url("../out/_next/static/media/83afe278b6a6bb3c-s.p.3a6ba036.woff2") format("woff2");
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      --bg: #0a0809;
+      --bg-top: #160c0c;
+      --bg-mid: #0c0809;
+      --bg-bottom: #080606;
+      --card-border: rgba(255, 255, 255, 0.06);
+      --text: #efe9e3;
+      --muted: #8b827a;
+      --white: #fbf8f3;
+      --eyebrow: #f59e0b;
+      --crimson: #dc2626;
+      --ember: #f97316;
+      --amber: #f59e0b;
+      --steel: #94a3b8;
+      --gold: #eab308;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      width: 1280px;
+      height: 720px;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at 50% 0%, rgba(220, 38, 38, 0.18) 0%, transparent 56%),
+        radial-gradient(ellipse at 80% 80%, rgba(249, 115, 22, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 18% 22%, rgba(220, 38, 38, 0.08), transparent 28%),
+        linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 46%, var(--bg-bottom) 100%);
+      color: var(--text);
+      font-family: "Inter", Arial, sans-serif;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    body::before {
+      background:
+        radial-gradient(circle at 50% 42%, rgba(220, 38, 38, 0.1), transparent 26%),
+        radial-gradient(circle at 50% 100%, rgba(249, 115, 22, 0.08), transparent 54%);
+    }
+
+    body::after {
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.24));
+      mix-blend-mode: multiply;
+    }
+
+    .canvas {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      isolation: isolate;
+    }
+
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.32);
+      opacity: var(--opacity);
+    }
+
+    .hero {
+      position: relative;
+      z-index: 1;
+      padding: 42px 40px 0;
+      text-align: center;
+    }
+
+    .eyebrow {
+      color: var(--eyebrow);
+      font-size: 14px;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      opacity: 0.86;
+    }
+
+    .eyebrow-mark {
+      display: inline-block;
+      width: 44px;
+      height: 2px;
+      margin: 0 10px 4px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, rgba(245, 158, 11, 0), rgba(245, 158, 11, 1), rgba(245, 158, 11, 0));
+    }
+
+    h1 {
+      margin-top: 24px;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 96px;
+      line-height: 0.92;
+      font-weight: 500;
+      letter-spacing: -0.04em;
+      max-width: 1080px;
+      margin-left: auto;
+      margin-right: auto;
+      background: linear-gradient(135deg, var(--white) 0%, var(--ember) 56%, var(--crimson) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow:
+        0 0 28px rgba(220, 38, 38, 0.1),
+        0 0 80px rgba(249, 115, 22, 0.06);
+    }
+
+    .divider {
+      width: calc(100% - 96px);
+      margin: 22px auto 0;
+      height: 2px;
+      background: linear-gradient(90deg, rgba(220, 38, 38, 0.78), rgba(249, 115, 22, 0.82));
+      box-shadow: 0 0 18px rgba(249, 115, 22, 0.1);
+    }
+
+    .meta {
+      margin-top: 14px;
+      color: rgba(204, 194, 184, 0.72);
+      font-size: 17px;
+      letter-spacing: 0.02em;
+    }
+
+    .episode-title {
+      max-width: 760px;
+      margin: 8px auto 0;
+      color: rgba(214, 206, 197, 0.6);
+      font-size: 16px;
+      line-height: 1.25;
+      letter-spacing: 0.01em;
+    }
+
+    .takeaways-shell {
+      position: absolute;
+      left: 28px;
+      right: 28px;
+      bottom: 30px;
+      z-index: 1;
+      padding: 24px 20px 20px;
+      border-radius: 28px;
+      background:
+        linear-gradient(180deg, rgba(20, 12, 12, 0.22), rgba(10, 7, 8, 0.74)),
+        radial-gradient(circle at 22% -10%, rgba(220, 38, 38, 0.16), transparent 34%),
+        radial-gradient(circle at 78% -8%, rgba(249, 115, 22, 0.12), transparent 32%);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.04),
+        0 30px 80px rgba(4, 2, 2, 0.42);
+      backdrop-filter: blur(10px);
+    }
+
+    .takeaways-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 18px;
+      padding: 0 8px;
+    }
+
+    .takeaways-label {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: rgba(218, 211, 203, 0.72);
+    }
+
+    .takeaways-rule {
+      flex: 1;
+      height: 1px;
+      margin-left: 16px;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02));
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .card {
+      position: relative;
+      min-height: 140px;
+      padding: 18px 16px 16px 19px;
+      border-radius: 14px;
+      background:
+        linear-gradient(180deg, rgba(20, 14, 14, 0.95), rgba(13, 9, 10, 0.96));
+      border: 1px solid var(--card-border);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.03),
+        0 18px 30px rgba(0, 0, 0, 0.24);
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 14px;
+      bottom: 14px;
+      width: 4px;
+      border-radius: 0 6px 6px 0;
+      background: var(--accent);
+      box-shadow: 0 0 14px color-mix(in srgb, var(--accent) 68%, transparent);
+    }
+
+    .card-number {
+      color: color-mix(in srgb, var(--accent) 72%, white);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .card-title {
+      margin-top: 8px;
+      font-size: 24px;
+      line-height: 1.02;
+      font-weight: 700;
+      color: #fbf8f3;
+      text-wrap: balance;
+    }
+
+    .card-subtitle {
+      margin-top: 9px;
+      color: rgba(207, 198, 189, 0.78);
+      font-size: 14px;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+      text-wrap: balance;
+    }
+
+    .footer {
+      position: absolute;
+      left: 48px;
+      bottom: 22px;
+      z-index: 2;
+      color: rgba(214, 207, 199, 0.64);
+      font-size: 15px;
+      letter-spacing: -0.01em;
+    }
+
+    .crimson { --accent: var(--crimson); }
+    .ember { --accent: var(--ember); }
+    .amber { --accent: var(--amber); }
+    .steel { --accent: var(--steel); }
+    .gold { --accent: var(--gold); }
+  </style>
+</head>
+<body>
+  <div class="canvas">
+    <span class="star" style="left: 8px; top: 36px; --opacity: 0.72;"></span>
+    <span class="star" style="left: 60px; top: 73px; --opacity: 0.72;"></span>
+    <span class="star" style="left: 123px; top: 25px; --opacity: 0.78;"></span>
+    <span class="star" style="left: 186px; top: 48px; --opacity: 0.84;"></span>
+    <span class="star" style="left: 238px; top: 12px; --opacity: 0.88;"></span>
+    <span class="star" style="left: 328px; top: 92px; --opacity: 0.66;"></span>
+    <span class="star" style="left: 396px; top: 16px; --opacity: 0.84;"></span>
+    <span class="star" style="left: 455px; top: 58px; --opacity: 0.6;"></span>
+    <span class="star" style="left: 518px; top: 51px; --opacity: 0.72;"></span>
+    <span class="star" style="left: 612px; top: 31px; --opacity: 0.74;"></span>
+    <span class="star" style="left: 711px; top: 92px; --opacity: 0.84;"></span>
+    <span class="star" style="left: 808px; top: 18px; --opacity: 0.76;"></span>
+    <span class="star" style="left: 892px; top: 82px; --opacity: 0.84;"></span>
+    <span class="star" style="left: 972px; top: 46px; --opacity: 0.92;"></span>
+    <span class="star" style="left: 1049px; top: 21px; --opacity: 0.8;"></span>
+    <span class="star" style="left: 1116px; top: 61px; --opacity: 0.68;"></span>
+    <span class="star" style="left: 1179px; top: 29px; --opacity: 0.8;"></span>
+    <span class="star" style="left: 214px; top: 371px; --opacity: 0.5;"></span>
+    <span class="star" style="left: 327px; top: 324px; --opacity: 0.6;"></span>
+    <span class="star" style="left: 437px; top: 524px; --opacity: 0.46;"></span>
+    <span class="star" style="left: 680px; top: 612px; --opacity: 0.46;"></span>
+    <span class="star" style="left: 1062px; top: 322px; --opacity: 0.38;"></span>
+    <span class="star" style="left: 1129px; top: 578px; --opacity: 0.34;"></span>
+    <span class="star" style="left: 104px; top: 612px; --opacity: 0.34;"></span>
+
+    <section class="hero">
+      <div class="eyebrow">MODERN WISDOM <span class="eyebrow-mark"></span> KEY TAKEAWAYS</div>
+      <h1>Never Finished: Building<br />an Unbreakable Mind</h1>
+      <div class="divider"></div>
+      <div class="meta">David Goggins &amp; Chris Williamson</div>
+      <div class="episode-title">No hype, no shortcuts &mdash; the real process behind mental armor.</div>
+    </section>
+
+    <section class="takeaways-shell">
+      <div class="takeaways-header">
+        <div class="takeaways-label">5 Takeaways</div>
+        <div class="takeaways-rule"></div>
+      </div>
+      <div class="cards">
+        <article class="card crimson">
+          <div class="card-number">01</div>
+          <div class="card-title">Stay in the Lab</div>
+          <div class="card-subtitle">Cap your success or it will make you soft.</div>
+        </article>
+        <article class="card ember">
+          <div class="card-number">02</div>
+          <div class="card-title">One-Second Decision</div>
+          <div class="card-subtitle">130 hours of hell, won or lost in a single second.</div>
+        </article>
+        <article class="card amber">
+          <div class="card-number">03</div>
+          <div class="card-title">Perishable Skill</div>
+          <div class="card-subtitle">Mental toughness expires. Requalify every day.</div>
+        </article>
+        <article class="card steel">
+          <div class="card-number">04</div>
+          <div class="card-title">Built Belief</div>
+          <div class="card-subtitle">Armor plate your mind before the world hits you.</div>
+        </article>
+        <article class="card gold">
+          <div class="card-number">05</div>
+          <div class="card-title">Break the Chain</div>
+          <div class="card-subtitle">Your darkest chapter becomes your greatest weapon.</div>
+        </article>
+      </div>
+    </section>
+
+    <div class="footer">jacklesser.me</div>
+  </div>
+</body>
+</html>

@@ -29,6 +29,7 @@ const podcastReviews = [
     subtitle: "Never Finished",
     summary:
       "A hard-edged review on identity, suffering, and the standard required to stop negotiating with yourself.",
+    videoId: "0LFzmYOxEZo",
   },
   {
     number: "04",

@@ -1,9 +1,9 @@
 import { Container } from "@/components/ui/Container";
-import { YouTubeEmbed } from "@/components/ui/YouTubeEmbed";
+import { PodcastReviewsList, type PodcastReview } from "@/components/sections/PodcastReviewsList";
 
 export const revalidate = 3600; // Revalidate every hour for RSS feed
 
-const podcastReviews = [
+const podcastReviews: PodcastReview[] = [
   {
     number: "01",
     href: "/naval-podcast.html",
@@ -292,47 +292,7 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="grid gap-5">
-            {podcastReviews.map((review, index) => (
-              <a
-                key={review.href}
-                href={review.href}
-                className="group animate-fade-in rounded-xl border border-white/[0.08] bg-[rgba(9,9,12,0.55)] p-5 backdrop-blur-[12px] transition duration-300 hover:border-white/[0.14] hover:bg-[rgba(9,9,12,0.65)] sm:p-6 md:p-8"
-                style={{ animationDelay: `${(index + 1) * 100}ms` }}
-              >
-                <div className="grid gap-4 md:grid-cols-[4rem_minmax(0,1fr)] md:gap-8">
-                  <p className="text-[0.65rem] font-medium uppercase tracking-[0.36em] text-[var(--color-text-muted)]">
-                    {review.number}
-                  </p>
-                  <div className="grid gap-5 md:grid-cols-[1fr_16rem] md:gap-6">
-                    <div>
-                      <p className="text-[0.65rem] font-medium uppercase tracking-[0.3em] text-[rgba(184,137,90,0.7)]">
-                        {review.subtitle}
-                      </p>
-                      <h3 className="mt-3 font-[family-name:var(--font-cormorant)] text-2xl leading-tight text-[var(--color-text-primary)] sm:text-3xl md:text-4xl">
-                        {review.title}
-                      </h3>
-                      <p className="mt-4 max-w-3xl text-[0.95rem] leading-7 text-[var(--color-text-secondary)] sm:mt-5 sm:text-base sm:leading-8">
-                        {review.summary}
-                      </p>
-                    </div>
-                    {review.videoId ? (
-                      <YouTubeEmbed
-                        videoId={review.videoId}
-                        className="self-center rounded-lg border border-white/[0.08]"
-                      />
-                    ) : (
-                      <div className="flex items-center justify-center self-center rounded-lg border border-white/[0.08] bg-[rgba(9,9,12,0.4)] aspect-video w-full">
-                        <p className="font-[family-name:var(--font-cormorant)] text-sm italic text-[var(--color-text-muted)]">
-                          Timeless reflection coming soon
-                        </p>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </a>
-            ))}
-          </div>
+          <PodcastReviewsList reviews={podcastReviews} />
         </Container>
       </section>
     </div>

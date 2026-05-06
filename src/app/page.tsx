@@ -39,6 +39,22 @@ const podcastReviews = [
     summary:
       "How a 187-year-old harness maker became the crown jewel of luxury by refusing to scale like everyone else.",
   },
+  {
+    number: "05",
+    href: "/kobe-podcast.html",
+    title: "Kobe Bryant x Jay Shetty",
+    subtitle: "Strategy, Obsession & the Long Game",
+    summary:
+      "Kobe's last great interview — on consistency, accepting fear, and why the figuring out matters more than the trophies.",
+  },
+  {
+    number: "06",
+    href: "/gilbert-podcast.html",
+    title: "Elizabeth Gilbert x Tim Ferriss",
+    subtitle: "Boundaries, Inner Voice & Letters from Love",
+    summary:
+      "On purpose anxiety, two-way prayer, and why relaxation — not resilience — might be the real revolution.",
+  },
 ];
 
 const pillars = [

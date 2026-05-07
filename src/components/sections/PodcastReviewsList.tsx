@@ -12,9 +12,10 @@ export interface PodcastReview {
   videoId?: string;
 }
 
-type SortKey = "newest" | "oldest" | "episode-desc" | "episode-asc";
+type SortKey = "recorded" | "newest" | "oldest" | "episode-desc" | "episode-asc";
 
 const sortOptions: { key: SortKey; label: string }[] = [
+  { key: "recorded", label: "Watch" },
   { key: "newest", label: "Newest" },
   { key: "oldest", label: "Oldest" },
   { key: "episode-desc", label: "Episode # ↓" },
@@ -23,11 +24,11 @@ const sortOptions: { key: SortKey; label: string }[] = [
 
 export function PodcastReviewsList({ reviews }: { reviews: PodcastReview[] }) {
   const [query, setQuery] = useState("");
-  const [sort, setSort] = useState<SortKey>("newest");
+  const [sort, setSort] = useState<SortKey>("recorded");
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
-    const matches = q
+    let matches = q
       ? reviews.filter((r) =>
           [r.title, r.subtitle, r.summary, r.number]
             .join(" ")
@@ -36,9 +37,14 @@ export function PodcastReviewsList({ reviews }: { reviews: PodcastReview[] }) {
         )
       : reviews.slice();
 
+    if (sort === "recorded") {
+      matches = matches.filter((r) => Boolean(r.videoId));
+    }
+
     const byNumber = (r: PodcastReview) => parseInt(r.number, 10) || 0;
 
     switch (sort) {
+      case "recorded":
       case "newest":
       case "episode-desc":
         return matches.sort((a, b) => byNumber(b) - byNumber(a));

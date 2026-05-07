@@ -374,6 +374,23 @@
 
     footer a { color: var(--accent); text-decoration: none; }
 
+    /* ─── LEADING QUESTION (epigraph) ─── */
+    .leading-question {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(0.85rem, 1.8vh, 1.05rem);
+      color: var(--muted);
+      max-width: 720px;
+      line-height: 1.5;
+      margin-bottom: clamp(0.6rem, 2vh, 1.25rem);
+    }
+
+    .leading-question::before {
+      content: '— ';
+      color: var(--accent);
+      font-style: normal;
+    }
+
     /* ─── NARROW SCREENS ─── */
     @media (max-width: 768px) {
       body { overflow-x: hidden; }
@@ -405,6 +422,7 @@
       .full-quote .fq-attr { font-size: 0.7rem; margin-top: 1.25rem; }
       .closing blockquote { font-size: 1.35rem !important; line-height: 1.45; max-width: none; }
       .quote-text { font-size: 0.95rem !important; line-height: 1.55; }
+      .leading-question { font-size: 0.95rem; }
       footer { padding: 3rem 1.25rem; }
     }
   </style>
@@ -446,6 +464,7 @@
 
   <div class="page" id="t1">
     <div class="section-number" style="color:var(--accent);">01 &mdash; Craftsmanship</div>
+    <div class="leading-question">Before reading: what in your work would you refuse to mechanize, even at a cost to growth?</div>
     <div class="section-title">The Constraints Are the Strategy</div>
 
     <div class="quote-card">
@@ -512,6 +531,7 @@
 
   <div class="page" id="t2">
     <div class="section-number" style="color:var(--accent2);">02 &mdash; Counter-Position</div>
+    <div class="leading-question">Where are you imitating competitors when you could be their opposite?</div>
     <div class="section-title">Same Products, Entirely Different Business</div>
 
     <div class="quote-card gold">
@@ -553,6 +573,7 @@
 
   <div class="page" id="t3">
     <div class="section-number" style="color:var(--accent3);">03 &mdash; Stewardship</div>
+    <div class="leading-question">What are you stewarding &mdash; not just owning &mdash; that should outlast you?</div>
     <div class="section-title">Six Generations, Six Rescues</div>
 
     <div class="quote-card earth">
@@ -629,6 +650,7 @@
 
   <div class="page" id="t4">
     <div class="section-number" style="color:var(--accent4);">04 &mdash; Economics</div>
+    <div class="leading-question">Where might leaving surplus on the table be more powerful than capturing it?</div>
     <div class="section-title">The Veblen Machine: Pricing Below Market on Purpose</div>
 
     <div class="quote-card cream">
@@ -670,6 +692,7 @@
 
   <div class="page" id="t5">
     <div class="section-number" style="color:var(--accent5);">05 &mdash; The Dream</div>
+    <div class="leading-question">What &lsquo;soul&rsquo; lives in the things you make &mdash; and is anyone able to feel it?</div>
     <div class="section-title">Selling a Sense of Place to Those Outside It</div>
 
     <div class="quote-card saddle">

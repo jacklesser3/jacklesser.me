@@ -35,9 +35,9 @@ const podcastReviews: PodcastReview[] = [
     number: "04",
     href: "/hermes-acquired.html",
     title: "Acquired: Hermès",
-    subtitle: "Craftsmanship, Scarcity & the Dream",
+    subtitle: "The Value of a Brand",
     summary:
-      "How a 187-year-old harness maker became the crown jewel of luxury by refusing to scale like everyone else.",
+      "The 187-year journey to build the most valuable brand in luxury — and the six-generation battle to keep it from being diluted, copied, or captured.",
   },
   {
     number: "05",

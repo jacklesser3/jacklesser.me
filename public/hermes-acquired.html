@@ -391,6 +391,80 @@
       font-style: normal;
     }
 
+    /* ─── VIDEO ─── */
+    .video-section {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 3rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .video-section .hero-label { margin-bottom: clamp(1rem, 2.5vh, 1.75rem); }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 960px;
+      padding-bottom: 54%;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #000;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.55), 0 0 0 1px rgba(212,135,78,0.12);
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .video-thumb {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      cursor: pointer;
+      transition: transform 0.5s;
+    }
+
+    .video-wrapper:hover .video-thumb { transform: scale(1.05); }
+
+    .video-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .video-wrapper:hover .video-overlay { background: rgba(0,0,0,0.12); }
+
+    .play-btn {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: rgba(250,245,238,0.94);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 28px rgba(0,0,0,0.4);
+      transition: transform 0.3s;
+    }
+
+    .video-wrapper:hover .play-btn { transform: scale(1.08); }
+    .play-btn svg { width: 26px; height: 26px; margin-left: 3px; }
+
     /* ─── NARROW SCREENS ─── */
     @media (max-width: 768px) {
       body { overflow-x: hidden; }
@@ -415,6 +489,7 @@
         font-size: 0.65rem;
       }
       .talk-points { grid-template-columns: 1fr; gap: 0.75rem; }
+      .video-section { height: auto; min-height: 100vh; min-height: 100dvh; padding: 4rem 1.25rem; }
       .hero h1 { font-size: clamp(1.8rem, 6vw, 2.8rem); }
       .hero-meta { flex-wrap: wrap; gap: 1rem; justify-content: center; }
       .section-title { font-size: clamp(1.5rem, 6vw, 2rem); }
@@ -447,6 +522,23 @@
       <span>Two Acts &middot; Six Chapters</span>
     </div>
     <div class="scroll-hint">&darr; scroll to begin</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- VIDEO — Jack's Reflection -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="video-section" id="video">
+    <div class="hero-label">A 40-Minute Reflection</div>
+    <div class="video-wrapper" id="jackTakeVideo">
+      <img class="video-thumb" src="https://img.youtube.com/vi/stjgwtuYtLY/maxresdefault.jpg" alt="Jack's reflection on the Acquired Herm&egrave;s episode" />
+      <div class="video-overlay" onclick="document.getElementById('jackTakeVideo').innerHTML='<iframe src=\'https://www.youtube-nocookie.com/embed/stjgwtuYtLY?autoplay=1&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&controls=1\' allow=\'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\' allowfullscreen></iframe>'">
+        <div class="play-btn">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M8 5.14v13.72a1 1 0 001.5.86l11.04-6.86a1 1 0 000-1.72L9.5 4.28a1 1 0 00-1.5.86z" fill="#0c0c10"/></svg>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="divider"></div>
@@ -823,6 +915,7 @@
     // Sections for navigation
     const pages = [
       { id: 'hero', label: 'Intro' },
+      { id: 'video', label: 'Reflection' },
       { id: 'act1', label: 'Act I' },
       { id: 't1-quote', label: '' },
       { id: 't1', label: '1. The Origin' },

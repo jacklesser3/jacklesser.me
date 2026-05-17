@@ -66,23 +66,99 @@
       overflow: hidden;
     }
 
-    /* ─── HERO (full-screen, no video) ─── */
+    /* ─── HERO ─── */
     .hero {
       height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      text-align: center;
-      padding: 3rem 2rem;
+      padding: 4rem 2rem;
       position: relative;
       background: radial-gradient(ellipse at 50% 30%, rgba(212,135,78,0.1) 0%, transparent 60%),
                   radial-gradient(ellipse at 80% 70%, rgba(201,169,110,0.06) 0%, transparent 50%);
     }
 
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      align-items: center;
+      gap: 4rem;
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    .hero-left { text-align: left; }
+
+    .hero-video {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #000;
+      box-shadow: 0 0 80px rgba(212,135,78,0.12);
+    }
+
+    .hero-video iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .hero-video .video-thumb {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      cursor: pointer;
+      transition: transform 0.5s;
+    }
+
+    .hero-video:hover .video-thumb { transform: scale(1.05); }
+
+    .hero-video .video-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.2);
+      transition: background 0.3s;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-video:hover .video-overlay { background: rgba(0,0,0,0.1); }
+
+    .hero-video .play-btn {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(12,10,8,0.72);
+      border: 1px solid rgba(201,169,110,0.35);
+      backdrop-filter: blur(12px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s, border-color 0.3s, background 0.3s;
+    }
+
+    .hero-video:hover .play-btn {
+      transform: scale(1.1);
+      border-color: rgba(212,135,78,0.55);
+      background: rgba(12,10,8,0.85);
+    }
+
+    .hero-video .play-btn svg { width: 20px; height: 20px; margin: 0; }
+
     .hero h1 {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-size: clamp(2rem, 3.5vw, 3.2rem);
       font-weight: 700;
       line-height: 1.15;
       max-width: 900px;
@@ -103,7 +179,7 @@
 
     .hero-sub {
       margin-top: 1.5rem;
-      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      font-size: 1.1rem;
       color: var(--muted);
       max-width: 650px;
       line-height: 1.6;
@@ -116,6 +192,8 @@
       font-size: 0.85rem;
       color: var(--muted);
     }
+
+    .hero-meta span { display: flex; align-items: center; gap: 0.4rem; }
 
     .scroll-hint {
       position: absolute;
@@ -391,80 +469,6 @@
       font-style: normal;
     }
 
-    /* ─── VIDEO ─── */
-    .video-section {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 3rem 2rem;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .video-section .hero-label { margin-bottom: clamp(1rem, 2.5vh, 1.75rem); }
-
-    .video-wrapper {
-      position: relative;
-      width: 100%;
-      max-width: 960px;
-      padding-bottom: 54%;
-      border-radius: 16px;
-      overflow: hidden;
-      background: #000;
-      box-shadow: 0 30px 80px rgba(0,0,0,0.55), 0 0 0 1px rgba(212,135,78,0.12);
-    }
-
-    .video-wrapper iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    .video-thumb {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      cursor: pointer;
-      transition: transform 0.5s;
-    }
-
-    .video-wrapper:hover .video-thumb { transform: scale(1.05); }
-
-    .video-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.25);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .video-wrapper:hover .video-overlay { background: rgba(0,0,0,0.12); }
-
-    .play-btn {
-      width: 72px;
-      height: 72px;
-      border-radius: 50%;
-      background: rgba(250,245,238,0.94);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 6px 28px rgba(0,0,0,0.4);
-      transition: transform 0.3s;
-    }
-
-    .video-wrapper:hover .play-btn { transform: scale(1.08); }
-    .play-btn svg { width: 26px; height: 26px; margin-left: 3px; }
-
     /* ─── NARROW SCREENS ─── */
     @media (max-width: 768px) {
       body { overflow-x: hidden; }
@@ -489,7 +493,8 @@
         font-size: 0.65rem;
       }
       .talk-points { grid-template-columns: 1fr; gap: 0.75rem; }
-      .video-section { height: auto; min-height: 100vh; min-height: 100dvh; padding: 4rem 1.25rem; }
+      .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .hero-left { text-align: center; }
       .hero h1 { font-size: clamp(1.8rem, 6vw, 2.8rem); }
       .hero-meta { flex-wrap: wrap; gap: 1rem; justify-content: center; }
       .section-title { font-size: clamp(1.5rem, 6vw, 2rem); }
@@ -513,32 +518,27 @@
   <!-- HERO -->
   <!-- ═══════════════════════════════════════ -->
   <div class="hero" id="hero">
-    <div class="hero-label">Acquired &mdash; Season 14, Episode 2 &mdash; The Value of a Brand</div>
-    <h1>Herm&egrave;s: How to Build the Most Valuable Brand in the World and Refuse to Trade It for Anything</h1>
-    <p class="hero-sub">The timeless lesson of this 187-year story isn&rsquo;t craftsmanship or scarcity or even luxury. It&rsquo;s <em>brand</em> &mdash; how six generations built one, and how they fought to keep it from being diluted, copied, or captured.</p>
-    <div class="hero-meta">
-      <span>Ben Gilbert &amp; David Rosenthal</span>
-      <span>~4 hours</span>
-      <span>Two Acts &middot; Six Chapters</span>
-    </div>
-    <div class="scroll-hint">&darr; scroll to begin</div>
-  </div>
-
-  <div class="divider"></div>
-
-  <!-- ═══════════════════════════════════════ -->
-  <!-- VIDEO — Jack's Reflection -->
-  <!-- ═══════════════════════════════════════ -->
-  <div class="video-section" id="video">
-    <div class="hero-label">A 40-Minute Reflection</div>
-    <div class="video-wrapper" id="jackTakeVideo">
-      <img class="video-thumb" src="https://img.youtube.com/vi/stjgwtuYtLY/maxresdefault.jpg" alt="Jack's reflection on the Acquired Herm&egrave;s episode" />
-      <div class="video-overlay" onclick="document.getElementById('jackTakeVideo').innerHTML='<iframe src=\'https://www.youtube-nocookie.com/embed/stjgwtuYtLY?autoplay=1&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&controls=1\' allow=\'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\' allowfullscreen></iframe>'">
-        <div class="play-btn">
-          <svg viewBox="0 0 24 24" fill="none"><path d="M8 5.14v13.72a1 1 0 001.5.86l11.04-6.86a1 1 0 000-1.72L9.5 4.28a1 1 0 00-1.5.86z" fill="#0c0c10"/></svg>
+    <div class="hero-grid">
+      <div class="hero-left">
+        <div class="hero-label">Acquired &mdash; Season 14, Episode 2 &mdash; The Value of a Brand</div>
+        <h1>Herm&egrave;s: How to Build the Most Valuable Brand in the World and Refuse to Trade It for Anything</h1>
+        <p class="hero-sub">The timeless lesson of this 187-year story isn&rsquo;t craftsmanship or scarcity or even luxury. It&rsquo;s <em>brand</em> &mdash; how six generations built one, and how they fought to keep it from being diluted, copied, or captured.</p>
+        <div class="hero-meta">
+          <span>Ben Gilbert &amp; David Rosenthal</span>
+          <span>~4 hours</span>
+          <span>Two Acts &middot; Six Chapters</span>
+        </div>
+      </div>
+      <div class="hero-video" id="heroVideo">
+        <img class="video-thumb" src="https://img.youtube.com/vi/stjgwtuYtLY/maxresdefault.jpg" alt="Acquired &mdash; Herm&egrave;s, The Value of a Brand" />
+        <div class="video-overlay" onclick="playVideo()">
+          <div class="play-btn">
+            <svg viewBox="0 0 20 20" fill="none" width="20" height="20"><path d="M6.5 3.5L16 10L6.5 16.5V3.5Z" fill="#c9a96e"/></svg>
+          </div>
         </div>
       </div>
     </div>
+    <div class="scroll-hint">&darr; scroll to begin</div>
   </div>
 
   <div class="divider"></div>
@@ -913,9 +913,13 @@
 
   <script>
     // Sections for navigation
+    function playVideo() {
+      const container = document.getElementById('heroVideo');
+      container.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/stjgwtuYtLY?autoplay=1&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&controls=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+    }
+
     const pages = [
       { id: 'hero', label: 'Intro' },
-      { id: 'video', label: 'Reflection' },
       { id: 'act1', label: 'Act I' },
       { id: 't1-quote', label: '' },
       { id: 't1', label: '1. The Origin' },

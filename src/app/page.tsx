@@ -38,7 +38,7 @@ const podcastReviews: PodcastReview[] = [
     subtitle: "The Value of a Brand",
     summary:
       "The 187-year journey to build the most valuable brand in luxury — and the six-generation battle to keep it from being diluted, copied, or captured.",
-    videoId: "stjgwtuYtLY",
+    videoId: "GQjivZw7Weg",
   },
   {
     number: "05",

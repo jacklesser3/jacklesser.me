@@ -54,7 +54,7 @@ const podcastReviews: PodcastReview[] = [
     title: "Elizabeth Gilbert x Tim Ferriss",
     subtitle: "Boundaries, Inner Voice & Letters from Love",
     summary:
-      "On purpose anxiety, two-way prayer, and why relaxation — not resilience — might be the real revolution.",
+      "On no cherished outcome, two-way prayer, radical ownership, and why relaxation — not resilience — might be the real revolution.",
   },
 ];
 

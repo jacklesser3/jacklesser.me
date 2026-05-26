@@ -52,7 +52,7 @@ const podcastReviews: PodcastReview[] = [
     number: "06",
     href: "/gilbert-podcast.html",
     title: "Elizabeth Gilbert x Tim Ferriss",
-    subtitle: "Boundaries, Inner Voice & Letters from Love",
+    subtitle: "No Cherished Outcome, Inner Voice & Letters from Love",
     summary:
       "On no cherished outcome, two-way prayer, and why relaxation — not resilience — might be the real revolution.",
   },

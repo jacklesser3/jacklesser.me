@@ -55,6 +55,7 @@ const podcastReviews: PodcastReview[] = [
     subtitle: "No Cherished Outcome, Inner Voice & Letters from Love",
     summary:
       "On no cherished outcome, two-way prayer, and why relaxation — not resilience — might be the real revolution.",
+    videoId: "cXTUixoCmt0",
   },
 ];
 

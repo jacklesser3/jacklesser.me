@@ -88,6 +88,83 @@
       align-items: center;
     }
 
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      align-items: center;
+      gap: 4rem;
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    .hero-left { text-align: left; }
+
+    .hero-video {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #000;
+      box-shadow: 0 0 80px rgba(232,160,152,0.14);
+    }
+
+    .hero-video iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .hero-video .video-thumb {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      cursor: pointer;
+      transition: transform 0.5s;
+    }
+
+    .hero-video:hover .video-thumb { transform: scale(1.05); }
+
+    .hero-video .video-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.2);
+      transition: background 0.3s;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-video:hover .video-overlay { background: rgba(0,0,0,0.1); }
+
+    .hero-video .play-btn {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(14,10,12,0.72);
+      border: 1px solid rgba(232,160,152,0.35);
+      backdrop-filter: blur(12px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s, border-color 0.3s, background 0.3s;
+    }
+
+    .hero-video:hover .play-btn {
+      transform: scale(1.1);
+      border-color: rgba(232,160,152,0.55);
+      background: rgba(14,10,12,0.85);
+    }
+
+    .hero-video .play-btn svg { width: 20px; height: 20px; margin: 0; }
+
     .hero-label {
       text-transform: uppercase;
       letter-spacing: 0.3em;
@@ -461,7 +538,10 @@
         padding: 0.55rem 0.75rem;
         font-size: 0.65rem;
       }
-      .hero-meta { gap: 1.25rem; flex-wrap: wrap; }
+      .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .hero-left { text-align: center; }
+      .hero h1 { font-size: clamp(2rem, 8vw, 3.2rem); }
+      .hero-meta { gap: 1.25rem; flex-wrap: wrap; justify-content: center; }
       .section-title { font-size: clamp(1.5rem, 6vw, 2rem); }
       .talk-points { grid-template-columns: 1fr !important; gap: 0.75rem !important; }
       .full-quote blockquote { font-size: 1.35rem !important; line-height: 1.45; max-width: none; }
@@ -483,16 +563,25 @@
   <!-- HERO -->
   <!-- ═══════════════════════════════════════ -->
   <div class="hero" id="hero">
-    <div class="hero-center">
-      <div class="hero-label">The Tim Ferriss Show #770 &mdash; 3 Key Takeaways</div>
-      <h1>No Cherished Outcome: Boundaries &amp; Inner Voice</h1>
-      <p class="hero-sub">Elizabeth Gilbert sits with Tim Ferriss to talk about the Celtic prayer of approach, two-way prayer, the stewardship of self &mdash; and why relaxation, not resilience, might be the real revolution.</p>
-      <div class="hero-meta">
-        <span>Elizabeth Gilbert &amp; Tim Ferriss</span>
-        <span>~1h 51m</span>
-        <span>3 Takeaways</span>
+    <div class="hero-grid">
+      <div class="hero-left">
+        <div class="hero-label">The Tim Ferriss Show #770 &mdash; 3 Key Takeaways</div>
+        <h1>No Cherished Outcome: Boundaries &amp; Inner Voice</h1>
+        <p class="hero-sub">Elizabeth Gilbert sits with Tim Ferriss to talk about the Celtic prayer of approach, two-way prayer, the stewardship of self &mdash; and why relaxation, not resilience, might be the real revolution.</p>
+        <div class="hero-meta">
+          <span>Elizabeth Gilbert &amp; Tim Ferriss</span>
+          <span>~1h 51m</span>
+          <span>3 Takeaways</span>
+        </div>
       </div>
-      <div class="hero-coming">Timeless reflection &mdash; recording soon</div>
+      <div class="hero-video" id="heroVideo">
+        <img class="video-thumb" src="https://img.youtube.com/vi/cXTUixoCmt0/maxresdefault.jpg" alt="No Cherished Outcome &mdash; Why I Had to Remind Myself to Have Fun" />
+        <div class="video-overlay" onclick="playVideo()">
+          <div class="play-btn">
+            <svg viewBox="0 0 20 20" fill="none" width="20" height="20"><path d="M6.5 3.5L16 10L6.5 16.5V3.5Z" fill="#e8a098"/></svg>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -699,6 +788,11 @@
   </footer>
 
   <script>
+    function playVideo() {
+      const container = document.getElementById('heroVideo');
+      container.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/cXTUixoCmt0?autoplay=1&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&controls=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+    }
+
     const pages = [
       { id: 'hero', label: 'Intro' },
       { id: 't1-quote', label: '' },

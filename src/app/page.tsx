@@ -42,20 +42,20 @@ const podcastReviews: PodcastReview[] = [
   },
   {
     number: "05",
-    href: "/kobe-podcast.html",
-    title: "Kobe Bryant x Jay Shetty",
-    subtitle: "Strategy, Obsession & the Long Game",
-    summary:
-      "Kobe's last great interview — on consistency, accepting fear, and why the figuring out matters more than the trophies.",
-  },
-  {
-    number: "06",
     href: "/gilbert-podcast.html",
     title: "Elizabeth Gilbert x Tim Ferriss",
     subtitle: "No Cherished Outcome, Inner Voice & Letters from Love",
     summary:
       "On no cherished outcome, two-way prayer, and why relaxation — not resilience — might be the real revolution.",
     videoId: "cXTUixoCmt0",
+  },
+  {
+    number: "06",
+    href: "/kobe-podcast.html",
+    title: "Kobe Bryant x Jay Shetty",
+    subtitle: "Strategy, Obsession & the Long Game",
+    summary:
+      "Kobe's last great interview — on consistency, accepting fear, and why the figuring out matters more than the trophies.",
   },
 ];
 

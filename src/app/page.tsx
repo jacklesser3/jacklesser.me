@@ -55,7 +55,7 @@ const podcastReviews: PodcastReview[] = [
     title: "Kobe Bryant x Jay Shetty",
     subtitle: "Strategy, Obsession & the Long Game",
     summary:
-      "Kobe's last great interview — on consistency, accepting fear, and why the figuring out matters more than the trophies.",
+      "Kobe's last great interview — on obsession, structure, unpacking fear, and why figuring it out yourself matters more than being handed the answer.",
   },
 ];
 

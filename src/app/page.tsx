@@ -57,6 +57,14 @@ const podcastReviews: PodcastReview[] = [
     summary:
       "Kobe's last great interview — on obsession, structure, unpacking fear, and why figuring it out yourself matters more than being handed the answer.",
   },
+  {
+    number: "07",
+    href: "/this-is-water.html",
+    title: "This Is Water",
+    subtitle: "David Foster Wallace — Kenyon College, 2005",
+    summary:
+      "The two fish, main character syndrome, what real education actually is, and the choice of what to worship — a reflection on one of the most studied commencement speeches in American letters.",
+  },
 ];
 
 const pillars = [

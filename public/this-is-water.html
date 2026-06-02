@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>This Is Water &mdash; David Foster Wallace</title>
+  <meta name="description" content="A reflection on David Foster Wallace's 2005 Kenyon commencement speech &mdash; the two fish, main character syndrome, what real education actually is, and the choice of what to worship.">
+  <meta name="author" content="Jack Lesser">
+  <link rel="canonical" href="https://jacklesser.me/this-is-water.html">
+  <meta property="og:title" content="This Is Water &mdash; David Foster Wallace">
+  <meta property="og:description" content="A reflection on David Foster Wallace's 2005 Kenyon commencement speech &mdash; the two fish, main character syndrome, what real education actually is, and the choice of what to worship.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://jacklesser.me/this-is-water.html">
+  <meta property="og:site_name" content="Timeless Practice">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="This Is Water &mdash; David Foster Wallace">
+  <meta name="twitter:description" content="A reflection on David Foster Wallace's 2005 Kenyon commencement speech.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "This Is Water — David Foster Wallace",
+    "author": { "@type": "Person", "name": "Jack Lesser", "url": "https://jacklesser.me" },
+    "publisher": { "@type": "Person", "name": "Jack Lesser" },
+    "description": "A reflection on David Foster Wallace's 2005 Kenyon commencement speech.",
+    "url": "https://jacklesser.me/this-is-water.html"
+  }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #0a0e12;
+      --card: #121821;
+      --accent: #8fb4c8;   /* water blue */
+      --accent2: #d9c89e;  /* warm sand */
+      --accent3: #6b8a9e;  /* deep water */
+      --text: #d8dde3;
+      --muted: #6f7a85;
+      --white: #f4f6f8;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ─── HOME LINK ─── */
+    .home-link {
+      position: fixed;
+      top: 1.25rem;
+      left: 1.25rem;
+      z-index: 1000;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.7rem 1rem;
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 999px;
+      background: rgba(10,14,18,0.78);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      backdrop-filter: blur(12px);
+      transition: border-color 0.3s, color 0.3s, transform 0.3s;
+    }
+
+    .home-link:hover {
+      color: var(--accent);
+      border-color: rgba(143,180,200,0.45);
+      transform: translateY(-1px);
+    }
+
+    /* ─── NAV DOTS ─── */
+    .nav-dots {
+      position: fixed;
+      right: 1.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 100;
+    }
+
+    .nav-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.15);
+      cursor: pointer;
+      transition: all 0.3s;
+      border: none;
+    }
+
+    .nav-dot:hover, .nav-dot.active {
+      background: var(--accent);
+      transform: scale(1.5);
+    }
+
+    .arrow-hint {
+      position: fixed;
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.18);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      z-index: 100;
+      transition: opacity 0.5s;
+    }
+
+    /* ─── VIEWPORT SECTIONS ─── */
+    .vp {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: clamp(1rem, 3.5vh, 3rem) clamp(1.25rem, 3vw, 3rem);
+      position: relative;
+    }
+
+    .vp-inner {
+      max-width: 760px;
+      width: 100%;
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      background:
+        radial-gradient(ellipse at 50% 30%, rgba(143,180,200,0.12) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 80%, rgba(217,200,158,0.06) 0%, transparent 50%);
+      text-align: center;
+    }
+
+    .hero-label {
+      text-transform: uppercase;
+      letter-spacing: 0.32em;
+      font-size: 0.72rem;
+      color: var(--accent);
+      margin-bottom: 1.75rem;
+      font-weight: 600;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.6rem, 7vh, 5.2rem);
+      font-weight: 700;
+      line-height: 1.05;
+      padding-bottom: 0.1em;
+      background: linear-gradient(135deg, #fff 0%, var(--accent) 55%, var(--accent2) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      margin-top: 1.75rem;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(1.05rem, 2.2vh, 1.3rem);
+      color: var(--accent2);
+      letter-spacing: 0.01em;
+    }
+
+    .hero-meta {
+      margin-top: 2.5rem;
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .hero-coming {
+      display: inline-block;
+      margin-top: 2.5rem;
+      padding: 0.55rem 1.1rem;
+      border: 1px solid rgba(143,180,200,0.35);
+      border-radius: 999px;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 0.85rem;
+      color: var(--accent);
+      letter-spacing: 0.04em;
+    }
+
+    /* ─── OPENER (PARABLE) ─── */
+    .opener-block {
+      text-align: left;
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.2rem, 3vh, 1.8rem);
+      line-height: 1.55;
+      color: var(--white);
+      font-style: italic;
+      border-left: 2px solid var(--accent);
+      padding: 0.5rem 0 0.5rem 1.75rem;
+    }
+
+    .opener-block p + p { margin-top: 1.1rem; }
+
+    .opener-attr {
+      display: block;
+      margin-top: 1.5rem;
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    /* ─── SECTION CONTENT ─── */
+    .section-numeral {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(0.95rem, 1.6vh, 1.15rem);
+      color: var(--accent2);
+      letter-spacing: 0.2em;
+      margin-bottom: 0.55rem;
+    }
+
+    .section-h {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 4.5vh, 2.6rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--white);
+      margin-bottom: clamp(1rem, 2.2vh, 1.6rem);
+    }
+
+    .section-p {
+      font-size: clamp(0.95rem, 2vh, 1.1rem);
+      line-height: 1.7;
+      color: var(--text);
+      margin-bottom: clamp(0.7rem, 1.5vh, 1.1rem);
+    }
+
+    .section-p strong {
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    .pullquote {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(1.05rem, 2.5vh, 1.35rem);
+      color: var(--accent);
+      line-height: 1.5;
+      padding: clamp(0.9rem, 1.8vh, 1.4rem) 0 clamp(0.9rem, 1.8vh, 1.4rem) 1.5rem;
+      border-left: 2px solid var(--accent2);
+      margin: clamp(1rem, 2vh, 1.6rem) 0;
+    }
+
+    .pullquote-attr {
+      display: block;
+      margin-top: 0.55rem;
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      font-size: 0.7rem;
+      color: var(--muted);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    /* ─── DIVIDER ─── */
+    .divider {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+    }
+
+    /* ─── CLOSING ─── */
+    .closing {
+      text-align: center;
+      position: relative;
+    }
+
+    .closing::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 380px;
+      height: 380px;
+      border-radius: 50%;
+      filter: blur(130px);
+      opacity: 0.12;
+      background: var(--accent);
+      z-index: 0;
+    }
+
+    .closing > * { position: relative; z-index: 1; }
+
+    .closing blockquote {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 7vh, 3.8rem);
+      font-weight: 700;
+      line-height: 1.25;
+      color: var(--white);
+    }
+
+    .closing blockquote em {
+      font-style: italic;
+      color: var(--accent);
+      font-weight: 400;
+    }
+
+    .closing-attr {
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-top: 1.75rem;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      text-align: center;
+      padding: 3rem 2rem;
+      color: var(--muted);
+      font-size: 0.8rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      line-height: 1.7;
+    }
+
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { color: var(--accent2); }
+
+    @media (max-width: 768px) {
+      body { overflow-x: hidden; }
+      .vp {
+        min-height: 100dvh;
+        padding: 4rem 1.25rem 3rem;
+      }
+      .home-link {
+        top: 0.875rem;
+        left: 0.875rem;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.62rem;
+      }
+      .hero-meta { gap: 1.25rem; font-size: 0.68rem; }
+      .opener-block { padding-left: 1.1rem; font-size: 1.1rem; }
+      .pullquote { padding-left: 1.1rem; font-size: 1rem; }
+      footer { padding: 2.5rem 1.25rem; }
+      .nav-dots { right: 0.75rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <a class="home-link" href="/">&#8592; Home</a>
+
+  <nav class="nav-dots" id="navDots"></nav>
+  <div class="arrow-hint" id="arrowHint">&larr; &rarr; arrow keys to navigate</div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- HERO -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="vp hero" id="hero">
+    <div class="vp-inner" style="text-align:center;">
+      <div class="hero-label">Mindware &mdash; A Timeless Reflection</div>
+      <h1>This Is Water</h1>
+      <div class="hero-sub">David Foster Wallace &mdash; Kenyon College, 2005</div>
+      <div class="hero-meta">
+        <span>~22 min listen</span>
+        <span>5 reflections</span>
+        <span>One commencement speech</span>
+      </div>
+      <div><span class="hero-coming">Recording soon</span></div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- OPENER: THE PARABLE -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="vp" id="opener">
+    <div class="vp-inner">
+      <div class="opener-block">
+        <p>Two young fish are swimming along when they pass an older fish going the other way. He nods and says, &ldquo;Morning, boys. How&rsquo;s the water?&rdquo;</p>
+        <p>The two young fish swim on for a while. Eventually one of them looks at the other and asks, &ldquo;What the hell is water?&rdquo;</p>
+        <span class="opener-attr">The parable that opens the speech</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- I. THE TWO FISH -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="vp" id="t1">
+    <div class="vp-inner">
+      <div class="section-numeral">I</div>
+      <h2 class="section-h">The Two Fish</h2>
+      <p class="section-p">The speech is about the parable. The parable is about adult life. The point Wallace is gentle about &mdash; almost embarrassed to deliver &mdash; is that <strong>the most important realities are the hardest to see</strong>. They&rsquo;re the water you&rsquo;re already swimming in.</p>
+      <p class="section-p">Most of what matters isn&rsquo;t hidden behind some advanced practice or special knowledge. It&rsquo;s right here, surrounding you, so constant and obvious that your brain has stopped registering it. The work isn&rsquo;t to find new water. The work is to notice the water you&rsquo;ve been in this whole time.</p>
+      <div class="pullquote">
+        The most obvious, important realities are often the ones that are hardest to see and talk about.
+        <span class="pullquote-attr">David Foster Wallace</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- II. MAIN CHARACTER SYNDROME -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="vp" id="t2">
+    <div class="vp-inner">
+      <div class="section-numeral">II</div>
+      <h2 class="section-h">Main Character Syndrome</h2>
+      <p class="section-p">You walk through life as the main character of your own movie. Everyone else is a side character &mdash; the guy in front of you in line, the woman on her phone in traffic, the cashier who won&rsquo;t make eye contact. It&rsquo;s not a choice you made. It&rsquo;s the operating system.</p>
+      <p class="section-p">Wallace is generous about this. He doesn&rsquo;t call it a moral failing. He calls it the <strong>default</strong> &mdash; biology&rsquo;s gift and burden. Every experience you&rsquo;ve ever had has been routed through your own head. Of course you feel central. The miracle is that anyone, ever, manages to feel otherwise.</p>
+      <p class="section-p">Awareness is what lets you remember that every one of those side characters is the main character of their own movie &mdash; with the same hunger, the same fear, the same long bad day you&rsquo;re having. That remembering isn&rsquo;t automatic. It has to be chosen, and re-chosen, every time the line at the grocery store starts to slow down.</p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- III. THE REAL VALUE OF A REAL EDUCATION -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="vp" id="t3">
+    <div class="vp-inner">
+      <div class="section-numeral">III</div>
+      <h2 class="section-h">The Real Value of a Real Education</h2>
+      <p class="section-p">Wallace makes a quiet argument that &ldquo;learning how to think&rdquo; doesn&rsquo;t mean stockpiling knowledge. It means having <strong>some control over what and how you pay attention</strong>. That&rsquo;s it. That&rsquo;s the whole point of education, in his telling.</p>
+      <p class="section-p">The freedom isn&rsquo;t the freedom to win arguments or earn more or know more things. It&rsquo;s the freedom to construct meaning out of an experience instead of having the meaning constructed for you by your default settings. It&rsquo;s the daily, small, unspectacular act of choosing the story.</p>
+      <div class="pullquote">
+        Learning how to think really means learning how to exercise some control over how and what you think.
+        <span class="pullquote-attr">David Foster Wallace</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- IV. THE SUPERMARKET AND THE TRAFFIC JAM -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="vp" id="t4">
+    <div class="vp-inner">
+      <div class="section-numeral">IV</div>
+      <h2 class="section-h">The Supermarket and the Traffic Jam</h2>
+      <p class="section-p">The whole moral argument lives in the mundane. Wallace doesn&rsquo;t reach for the dramatic example. He reaches for the boring grocery store after a long day. The slow-moving SUV in front of you. The rude person at the register. The fluorescent lights.</p>
+      <p class="section-p">The default story is that everyone is in your way. That the world is conspiring against you, personally, today. That you are uniquely tired and they are uniquely thoughtless.</p>
+      <p class="section-p">The chosen story is harder. Maybe the woman screaming at her child has been up since 4am with a parent in the hospital. Maybe the SUV is rushing a kid to the ER. Maybe none of that is true &mdash; but you don&rsquo;t actually know, and the default story isn&rsquo;t true either. <strong>The story is a choice.</strong> You may as well choose the one that doesn&rsquo;t corrode you from the inside.</p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- V. EVERYONE WORSHIPS SOMETHING -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="vp" id="t5">
+    <div class="vp-inner">
+      <div class="section-numeral">V</div>
+      <h2 class="section-h">Everyone Worships Something</h2>
+      <p class="section-p">This is the section that people remember. Wallace argues there is no such thing as not worshipping. The only choice you ever get is <strong>what</strong> to worship.</p>
+      <p class="section-p">Wallace walks through the menu. Money, beauty, status, intellect, power. He&rsquo;s not saying these things are evil. He&rsquo;s saying that as objects of worship they all share the same flaw &mdash; each one quietly tells you that you don&rsquo;t have enough of it, and never will. The worship itself is what generates the lack.</p>
+      <div class="pullquote">
+        The only choice we get is what to worship.
+        <span class="pullquote-attr">David Foster Wallace</span>
+      </div>
+      <p class="section-p">The insidious thing about these default worships isn&rsquo;t that they&rsquo;re evil. It&rsquo;s that they&rsquo;re <em>unconscious</em>. They&rsquo;re the water. You don&rsquo;t know you&rsquo;ve been bowing down to them until they&rsquo;ve already taken most of your years.</p>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- CLOSING -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="vp closing" id="close">
+    <div class="vp-inner" style="text-align:center;">
+      <blockquote>
+        <em>This is water.</em><br>
+        <em>This is water.</em>
+      </blockquote>
+      <div class="closing-attr">The discipline of re-noticing &mdash; every day</div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- FOOTER -->
+  <!-- ═══════════════════════════════════════ -->
+  <footer>
+    <p>Source: <a href="https://open.spotify.com/episode/4yNz82ya3VhwT9ntGiAX9D" target="_blank">Mindware &mdash; This Is Water</a></p>
+    <p style="margin-top:0.5rem;">David Foster Wallace &mdash; Kenyon College commencement address, May 21, 2005</p>
+  </footer>
+
+  <script>
+    const pages = [
+      { id: 'hero', label: 'Intro' },
+      { id: 'opener', label: 'Parable' },
+      { id: 't1', label: 'I. The Two Fish' },
+      { id: 't2', label: 'II. Main Character' },
+      { id: 't3', label: 'III. Real Education' },
+      { id: 't4', label: 'IV. Supermarket & Traffic' },
+      { id: 't5', label: 'V. Everyone Worships' },
+      { id: 'close', label: 'Close' },
+    ];
+
+    let currentPage = 0;
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+        e.preventDefault();
+        if (currentPage < pages.length - 1) {
+          currentPage++;
+          document.getElementById(pages[currentPage].id).scrollIntoView({ behavior: 'smooth' });
+        }
+      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        if (currentPage > 0) {
+          currentPage--;
+          document.getElementById(pages[currentPage].id).scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+
+    const nav = document.getElementById('navDots');
+    pages.forEach((s, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'nav-dot';
+      dot.title = s.label;
+      dot.dataset.target = s.id;
+      dot.dataset.index = i;
+      dot.addEventListener('click', () => {
+        currentPage = i;
+        document.getElementById(s.id).scrollIntoView({ behavior: 'smooth' });
+      });
+      nav.appendChild(dot);
+    });
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const idx = pages.findIndex(p => p.id === entry.target.id);
+          if (idx !== -1) currentPage = idx;
+          document.querySelectorAll('.nav-dot').forEach(d => d.classList.remove('active'));
+          const dot = document.querySelector(`.nav-dot[data-target="${entry.target.id}"]`);
+          if (dot) dot.classList.add('active');
+        }
+      });
+    }, { threshold: 0.3 });
+
+    pages.forEach(s => {
+      const el = document.getElementById(s.id);
+      if (el) observer.observe(el);
+    });
+
+    let hintShown = true;
+    document.addEventListener('keydown', () => {
+      if (hintShown) {
+        document.getElementById('arrowHint').style.opacity = '0';
+        hintShown = false;
+      }
+    }, { once: false });
+  </script>
+
+</body>
+</html>

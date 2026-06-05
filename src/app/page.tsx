@@ -56,6 +56,7 @@ const podcastReviews: PodcastReview[] = [
     subtitle: "Strategy, Obsession & the Long Game",
     summary:
       "Kobe's last great interview — on obsession, structure, unpacking fear, and why figuring it out yourself matters more than being handed the answer.",
+    videoId: "6XrpmLnRIQk",
   },
   {
     number: "07",

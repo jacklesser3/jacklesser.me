@@ -86,6 +86,88 @@
       align-items: center;
     }
 
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      align-items: center;
+      gap: 4rem;
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    .hero-left { text-align: left; }
+
+    .hero-video {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #000;
+      box-shadow: 0 0 80px rgba(239,182,80,0.16);
+    }
+
+    .hero-video iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .hero-video .video-thumb {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      cursor: pointer;
+      transition: transform 0.5s;
+    }
+
+    .hero-video:hover .video-thumb { transform: scale(1.05); }
+
+    .hero-video .video-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.2);
+      transition: background 0.3s;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-video:hover .video-overlay { background: rgba(0,0,0,0.1); }
+
+    .hero-video .play-btn {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(12,8,18,0.72);
+      border: 1px solid rgba(239,182,80,0.4);
+      backdrop-filter: blur(12px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s, border-color 0.3s, background 0.3s;
+    }
+
+    .hero-video:hover .play-btn {
+      transform: scale(1.1);
+      border-color: rgba(239,182,80,0.65);
+      background: rgba(12,8,18,0.88);
+    }
+
+    .hero-video .play-btn svg { width: 20px; height: 20px; margin: 0; }
+
+    @media (max-width: 768px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .hero-left { text-align: center; }
+    }
+
     .hero-label {
       text-transform: uppercase;
       letter-spacing: 0.3em;
@@ -455,16 +537,25 @@
   <!-- HERO -->
   <!-- ═══════════════════════════════════════ -->
   <div class="hero" id="hero">
-    <div class="hero-center">
-      <div class="hero-label">On Purpose with Jay Shetty &mdash; 5 Key Takeaways</div>
-      <h1>Strategy, Obsession &amp; the Long Game</h1>
-      <p class="hero-sub">Kobe's last great interview &mdash; recorded four months before he died &mdash; on what changes when the trophies stop being the point, and what you actually owe the work.</p>
-      <div class="hero-meta">
-        <span>Kobe Bryant &amp; Jay Shetty</span>
-        <span>~45 min</span>
-        <span>5 Takeaways</span>
+    <div class="hero-grid">
+      <div class="hero-left">
+        <div class="hero-label">On Purpose with Jay Shetty &mdash; 5 Key Takeaways</div>
+        <h1>Strategy, Obsession &amp; the Long Game</h1>
+        <p class="hero-sub">Kobe's last great interview &mdash; recorded four months before he died &mdash; on what changes when the trophies stop being the point, and what you actually owe the work.</p>
+        <div class="hero-meta">
+          <span>Kobe Bryant &amp; Jay Shetty</span>
+          <span>~45 min</span>
+          <span>5 Takeaways</span>
+        </div>
       </div>
-      <div class="hero-coming">Timeless reflection &mdash; recording soon</div>
+      <div class="hero-video" id="heroVideo">
+        <img class="video-thumb" src="https://img.youtube.com/vi/6XrpmLnRIQk/maxresdefault.jpg" alt="The Mamba Mentality &mdash; Overcoming Fear &amp; Playing the Long Game" />
+        <div class="video-overlay" onclick="playVideo()">
+          <div class="play-btn">
+            <svg viewBox="0 0 20 20" fill="none" width="20" height="20"><path d="M6.5 3.5L16 10L6.5 16.5V3.5Z" fill="#efb650"/></svg>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -739,6 +830,11 @@
   </footer>
 
   <script>
+    function playVideo() {
+      const container = document.getElementById('heroVideo');
+      container.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/6XrpmLnRIQk?autoplay=1&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&controls=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+    }
+
     const pages = [
       { id: 'hero', label: 'Intro' },
       { id: 't1-quote', label: '' },

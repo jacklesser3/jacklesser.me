@@ -50,6 +50,81 @@
       font-family: 'Inter', sans-serif;
       line-height: 1.7;
       overflow-x: hidden;
+      position: relative;
+    }
+
+    /* ─── WATER BACKGROUND ─── */
+    .water-bg {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    /* caustic ripple layer */
+    .water-bg::before {
+      content: '';
+      position: absolute;
+      inset: -10%;
+      background:
+        radial-gradient(ellipse 60% 30% at 20% 20%, rgba(143,180,200,0.06), transparent 70%),
+        radial-gradient(ellipse 50% 40% at 80% 60%, rgba(107,138,158,0.05), transparent 70%),
+        radial-gradient(ellipse 70% 30% at 50% 90%, rgba(143,180,200,0.04), transparent 70%);
+      animation: drift 40s ease-in-out infinite alternate;
+    }
+
+    /* faint wave lines */
+    .water-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        repeating-linear-gradient(
+          175deg,
+          transparent 0,
+          transparent 80px,
+          rgba(143,180,200,0.025) 80px,
+          rgba(143,180,200,0.025) 81px,
+          transparent 82px,
+          transparent 160px
+        );
+      animation: drift 60s ease-in-out infinite alternate-reverse;
+    }
+
+    @keyframes drift {
+      from { transform: translate(0, 0); }
+      to { transform: translate(-2%, 2%); }
+    }
+
+    .fish {
+      position: absolute;
+      color: var(--accent);
+      will-change: transform;
+    }
+
+    .fish svg { display: block; width: 100%; height: auto; }
+
+    .fish-1 { top: 8%;  width: 90px;  opacity: 0.07; animation: swim-r 75s linear infinite; }
+    .fish-2 { top: 22%; width: 50px;  opacity: 0.05; animation: swim-l 95s linear infinite; animation-delay: -30s; }
+    .fish-3 { top: 38%; width: 110px; opacity: 0.06; animation: swim-r 110s linear infinite; animation-delay: -45s; }
+    .fish-4 { top: 55%; width: 60px;  opacity: 0.08; animation: swim-l 85s linear infinite; animation-delay: -10s; }
+    .fish-5 { top: 72%; width: 100px; opacity: 0.05; animation: swim-r 100s linear infinite; animation-delay: -60s; }
+    .fish-6 { top: 88%; width: 70px;  opacity: 0.07; animation: swim-l 90s linear infinite; animation-delay: -25s; }
+    .fish-7 { top: 15%; width: 40px;  opacity: 0.04; animation: swim-l 120s linear infinite; animation-delay: -70s; }
+    .fish-8 { top: 65%; width: 45px;  opacity: 0.05; animation: swim-r 130s linear infinite; animation-delay: -15s; }
+
+    @keyframes swim-r {
+      from { transform: translateX(-15vw); }
+      to   { transform: translateX(115vw); }
+    }
+    @keyframes swim-l {
+      from { transform: translateX(115vw) scaleX(-1); }
+      to   { transform: translateX(-15vw) scaleX(-1); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .fish, .water-bg::before, .water-bg::after { animation: none !important; }
     }
 
     /* ─── HOME LINK ─── */
@@ -130,7 +205,11 @@
       align-items: center;
       padding: clamp(1rem, 3.5vh, 3rem) clamp(1.25rem, 3vw, 3rem);
       position: relative;
+      z-index: 1;
     }
+
+    .divider { position: relative; z-index: 1; }
+    footer { position: relative; z-index: 1; }
 
     .vp-inner {
       max-width: 760px;
@@ -367,6 +446,30 @@
 </head>
 <body>
 
+  <!-- ═══════════════════════════════════════ -->
+  <!-- WATER + FISH BACKGROUND -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="water-bg" aria-hidden="true">
+    <svg width="0" height="0" style="position:absolute">
+      <defs>
+        <symbol id="fish-shape" viewBox="0 0 120 50">
+          <path d="M5 25 Q20 6, 52 9 Q86 13, 100 25 Q86 37, 52 41 Q20 44, 5 25 Z" fill="currentColor"/>
+          <path d="M97 25 L120 9 L114 25 L120 41 Z" fill="currentColor"/>
+          <circle cx="82" cy="22" r="1.8" fill="#0a0e12"/>
+          <path d="M55 20 Q65 14, 78 18" stroke="rgba(10,14,18,0.25)" stroke-width="0.6" fill="none"/>
+        </symbol>
+      </defs>
+    </svg>
+    <div class="fish fish-1"><svg viewBox="0 0 120 50"><use href="#fish-shape"/></svg></div>
+    <div class="fish fish-2"><svg viewBox="0 0 120 50"><use href="#fish-shape"/></svg></div>
+    <div class="fish fish-3"><svg viewBox="0 0 120 50"><use href="#fish-shape"/></svg></div>
+    <div class="fish fish-4"><svg viewBox="0 0 120 50"><use href="#fish-shape"/></svg></div>
+    <div class="fish fish-5"><svg viewBox="0 0 120 50"><use href="#fish-shape"/></svg></div>
+    <div class="fish fish-6"><svg viewBox="0 0 120 50"><use href="#fish-shape"/></svg></div>
+    <div class="fish fish-7"><svg viewBox="0 0 120 50"><use href="#fish-shape"/></svg></div>
+    <div class="fish fish-8"><svg viewBox="0 0 120 50"><use href="#fish-shape"/></svg></div>
+  </div>
+
   <a class="home-link" href="/">&#8592; Home</a>
 
   <nav class="nav-dots" id="navDots"></nav>
@@ -413,8 +516,9 @@
     <div class="vp-inner">
       <div class="section-numeral">I</div>
       <h2 class="section-h">The Two Fish</h2>
-      <p class="section-p">The speech is about the parable. The parable is about adult life. The point Wallace is gentle about &mdash; almost embarrassed to deliver &mdash; is that <strong>the most important realities are the hardest to see</strong>. They&rsquo;re the water you&rsquo;re already swimming in.</p>
-      <p class="section-p">Most of what matters isn&rsquo;t hidden behind some advanced practice or special knowledge. It&rsquo;s right here, surrounding you, so constant and obvious that your brain has stopped registering it. The work isn&rsquo;t to find new water. The work is to notice the water you&rsquo;ve been in this whole time.</p>
+      <p class="section-p">The point is gentle &mdash; almost embarrassed: <strong>the most important realities are the hardest to see.</strong></p>
+      <p class="section-p">They&rsquo;re the water you&rsquo;re already in. So constant, so obvious, your brain stopped registering them.</p>
+      <p class="section-p">The work isn&rsquo;t finding new water. It&rsquo;s <strong>noticing what&rsquo;s already here.</strong></p>
       <div class="pullquote">
         The most obvious, important realities are often the ones that are hardest to see and talk about.
         <span class="pullquote-attr">David Foster Wallace</span>
@@ -431,9 +535,13 @@
     <div class="vp-inner">
       <div class="section-numeral">II</div>
       <h2 class="section-h">Main Character Syndrome</h2>
-      <p class="section-p">You walk through life as the main character of your own movie. Everyone else is a side character &mdash; the guy in front of you in line, the woman on her phone in traffic, the cashier who won&rsquo;t make eye contact. It&rsquo;s not a choice you made. It&rsquo;s the operating system.</p>
-      <p class="section-p">Wallace is generous about this. He doesn&rsquo;t call it a moral failing. He calls it the <strong>default</strong> &mdash; biology&rsquo;s gift and burden. Every experience you&rsquo;ve ever had has been routed through your own head. Of course you feel central. The miracle is that anyone, ever, manages to feel otherwise.</p>
-      <p class="section-p">Awareness is what lets you remember that every one of those side characters is the main character of their own movie &mdash; with the same hunger, the same fear, the same long bad day you&rsquo;re having. That remembering isn&rsquo;t automatic. It has to be chosen, and re-chosen, every time the line at the grocery store starts to slow down.</p>
+      <p class="section-p">You walk through life as the main character of your own movie.</p>
+      <p class="section-p">Everyone else is a side character. The guy in line. The woman on her phone. The cashier who won&rsquo;t make eye contact.</p>
+      <p class="section-p">It&rsquo;s not a moral failing. It&rsquo;s the <strong>default</strong> &mdash; biology&rsquo;s gift and burden. Every experience you&rsquo;ve had has been routed through your own head. Of course you feel central.</p>
+      <div class="pullquote">
+        Every side character is the main character of their own movie.
+      </div>
+      <p class="section-p">Same hunger. Same fear. Same long bad day. That remembering isn&rsquo;t automatic &mdash; it has to be re-chosen every time the line slows down.</p>
     </div>
   </section>
 
@@ -446,8 +554,9 @@
     <div class="vp-inner">
       <div class="section-numeral">III</div>
       <h2 class="section-h">The Real Value of a Real Education</h2>
-      <p class="section-p">Wallace makes a quiet argument that &ldquo;learning how to think&rdquo; doesn&rsquo;t mean stockpiling knowledge. It means having <strong>some control over what and how you pay attention</strong>. That&rsquo;s it. That&rsquo;s the whole point of education, in his telling.</p>
-      <p class="section-p">The freedom isn&rsquo;t the freedom to win arguments or earn more or know more things. It&rsquo;s the freedom to construct meaning out of an experience instead of having the meaning constructed for you by your default settings. It&rsquo;s the daily, small, unspectacular act of choosing the story.</p>
+      <p class="section-p">Learning how to think isn&rsquo;t stockpiling knowledge.</p>
+      <p class="section-p">It&rsquo;s having <strong>some control over what you pay attention to.</strong> That&rsquo;s it. That&rsquo;s the whole point.</p>
+      <p class="section-p">Not the freedom to win arguments or earn more. The freedom to <strong>choose the meaning</strong> instead of letting your defaults choose it for you.</p>
       <div class="pullquote">
         Learning how to think really means learning how to exercise some control over how and what you think.
         <span class="pullquote-attr">David Foster Wallace</span>
@@ -464,9 +573,13 @@
     <div class="vp-inner">
       <div class="section-numeral">IV</div>
       <h2 class="section-h">The Supermarket and the Traffic Jam</h2>
-      <p class="section-p">The whole moral argument lives in the mundane. Wallace doesn&rsquo;t reach for the dramatic example. He reaches for the boring grocery store after a long day. The slow-moving SUV in front of you. The rude person at the register. The fluorescent lights.</p>
-      <p class="section-p">The default story is that everyone is in your way. That the world is conspiring against you, personally, today. That you are uniquely tired and they are uniquely thoughtless.</p>
-      <p class="section-p">The chosen story is harder. Maybe the woman screaming at her child has been up since 4am with a parent in the hospital. Maybe the SUV is rushing a kid to the ER. Maybe none of that is true &mdash; but you don&rsquo;t actually know, and the default story isn&rsquo;t true either. <strong>The story is a choice.</strong> You may as well choose the one that doesn&rsquo;t corrode you from the inside.</p>
+      <p class="section-p">The whole argument lives in the mundane. Not the dramatic. The grocery store after a long day. The slow SUV. The rude cashier.</p>
+      <p class="section-p"><strong>Default story:</strong> everyone is in your way. The world is conspiring against you, personally, today.</p>
+      <p class="section-p"><strong>Chosen story:</strong> maybe she&rsquo;s been up since 4am with a parent in the hospital. Maybe the SUV is rushing a kid to the ER.</p>
+      <p class="section-p">You don&rsquo;t actually know. But the default isn&rsquo;t true either.</p>
+      <div class="pullquote">
+        The story is a choice. Choose the one that doesn&rsquo;t corrode you.
+      </div>
     </div>
   </section>
 
@@ -479,13 +592,15 @@
     <div class="vp-inner">
       <div class="section-numeral">V</div>
       <h2 class="section-h">Everyone Worships Something</h2>
-      <p class="section-p">This is the section that people remember. Wallace argues there is no such thing as not worshipping. The only choice you ever get is <strong>what</strong> to worship.</p>
-      <p class="section-p">Wallace walks through the menu. Money, beauty, status, intellect, power. He&rsquo;s not saying these things are evil. He&rsquo;s saying that as objects of worship they all share the same flaw &mdash; each one quietly tells you that you don&rsquo;t have enough of it, and never will. The worship itself is what generates the lack.</p>
+      <p class="section-p">There is no such thing as not worshipping.</p>
+      <p class="section-p">The only choice is <strong>what.</strong></p>
       <div class="pullquote">
         The only choice we get is what to worship.
         <span class="pullquote-attr">David Foster Wallace</span>
       </div>
-      <p class="section-p">The insidious thing about these default worships isn&rsquo;t that they&rsquo;re evil. It&rsquo;s that they&rsquo;re <em>unconscious</em>. They&rsquo;re the water. You don&rsquo;t know you&rsquo;ve been bowing down to them until they&rsquo;ve already taken most of your years.</p>
+      <p class="section-p">Money. Beauty. Status. Intellect. Power. None of it evil. Each one shares the same flaw &mdash; it quietly tells you that you don&rsquo;t have enough, and never will.</p>
+      <p class="section-p"><strong>The worship itself generates the lack.</strong></p>
+      <p class="section-p">The danger isn&rsquo;t that they&rsquo;re evil. It&rsquo;s that they&rsquo;re <em>unconscious</em>. They&rsquo;re the water. You don&rsquo;t notice them until they&rsquo;ve taken most of your years.</p>
     </div>
   </section>
 

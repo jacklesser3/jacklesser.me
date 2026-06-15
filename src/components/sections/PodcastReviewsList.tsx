@@ -10,6 +10,7 @@ export interface PodcastReview {
   subtitle: string;
   summary: string;
   videoId?: string;
+  thumbnail?: string;
 }
 
 type SortKey = "recorded" | "newest" | "oldest" | "episode-desc" | "episode-asc";
@@ -139,6 +140,7 @@ export function PodcastReviewsList({ reviews }: { reviews: PodcastReview[] }) {
                   {review.videoId ? (
                     <YouTubeEmbed
                       videoId={review.videoId}
+                      thumbnail={review.thumbnail}
                       className="self-center rounded-lg border border-white/[0.08]"
                     />
                   ) : (

@@ -4,9 +4,11 @@ import { useState } from "react";
 
 export function YouTubeEmbed({
   videoId,
+  thumbnail,
   className = "",
 }: {
   videoId: string;
+  thumbnail?: string;
   className?: string;
 }) {
   const [playing, setPlaying] = useState(false);
@@ -29,7 +31,7 @@ export function YouTubeEmbed({
         <>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
+            src={thumbnail ?? `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
             alt=""
             className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           />

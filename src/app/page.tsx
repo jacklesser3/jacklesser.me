@@ -65,6 +65,8 @@ const podcastReviews: PodcastReview[] = [
     subtitle: "David Foster Wallace — Kenyon College, 2005",
     summary:
       "The two fish, main character syndrome, what real education actually is, and the choice of what to worship — a reflection on one of the most studied commencement speeches in American letters.",
+    videoId: "UQIJpGvoztQ",
+    thumbnail: "/this-is-water-thumbnail.jpg",
   },
 ];
 

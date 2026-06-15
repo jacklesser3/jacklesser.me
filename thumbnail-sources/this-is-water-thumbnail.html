@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>This Is Water Thumbnail</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+    :root {
+      --bg: #04131a;
+      --card: #0c2230;
+      --deep-teal: #0e7490;
+      --cyan: #38bdf8;
+      --seafoam: #5eead4;
+      --aqua: #a5f3fc;
+      --sun: #fde9b0;
+      --text: #dff1f3;
+      --muted: #6f9aa1;
+      --white: #f2fbfb;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      width: 1280px;
+      height: 720px;
+      overflow: hidden;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', Arial, sans-serif;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(ellipse at 50% -10%, rgba(56, 189, 248, 0.30) 0%, transparent 55%),
+        radial-gradient(ellipse at 82% 78%, rgba(94, 234, 212, 0.12) 0%, transparent 50%),
+        radial-gradient(ellipse at 16% 72%, rgba(14, 116, 144, 0.22) 0%, transparent 45%);
+    }
+
+    /* light rays filtering down through the water */
+    body::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(168deg, rgba(165, 243, 252, 0.10) 0%, transparent 22%),
+        linear-gradient(196deg, rgba(165, 243, 252, 0.07) 0%, transparent 26%),
+        linear-gradient(180deg, rgba(0, 0, 0, 0.0) 55%, rgba(2, 10, 14, 0.45) 100%);
+      mix-blend-mode: screen;
+    }
+
+    .canvas {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      isolation: isolate;
+      padding: 48px 44px 0;
+      text-align: center;
+    }
+
+    .bubble {
+      position: absolute;
+      border-radius: 999px;
+      background: radial-gradient(circle at 35% 30%, rgba(223, 247, 250, 0.9), rgba(94, 234, 212, 0.12) 60%, transparent 72%);
+      border: 1px solid rgba(165, 243, 252, 0.18);
+      width: var(--s);
+      height: var(--s);
+      opacity: var(--opacity);
+    }
+
+    .eyebrow {
+      position: relative;
+      z-index: 1;
+      color: var(--seafoam);
+      font-size: 14px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      font-weight: 600;
+      opacity: 0.95;
+    }
+
+    .eyebrow-mark {
+      display: inline-block;
+      width: 44px;
+      height: 2px;
+      margin: 0 14px 4px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, rgba(94, 234, 212, 0), rgba(94, 234, 212, 1), rgba(94, 234, 212, 0));
+    }
+
+    .title-wrap {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 1200px;
+      margin: 40px auto 0;
+    }
+
+    .title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 176px;
+      line-height: 1.0;
+      letter-spacing: -0.03em;
+      font-weight: 700;
+      background: linear-gradient(135deg, #ffffff 0%, var(--aqua) 50%, var(--cyan) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow:
+        0 0 28px rgba(56, 189, 248, 0.14),
+        0 0 80px rgba(14, 116, 144, 0.12);
+      text-wrap: balance;
+      padding-bottom: 0.18em;
+    }
+
+    .divider {
+      position: relative;
+      z-index: 1;
+      width: 460px;
+      margin: 26px auto 0;
+      height: 2px;
+      background: linear-gradient(90deg, rgba(14, 116, 144, 0), rgba(56, 189, 248, 0.85) 30%, rgba(94, 234, 212, 0.92) 70%, rgba(94, 234, 212, 0));
+      box-shadow: 0 0 18px rgba(94, 234, 212, 0.16);
+    }
+
+    .hook {
+      position: relative;
+      z-index: 1;
+      margin-top: 22px;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 46px;
+      letter-spacing: 0.005em;
+      color: var(--aqua);
+      opacity: 0.96;
+    }
+
+    .author {
+      position: relative;
+      z-index: 1;
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 17px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .takeaways {
+      position: absolute;
+      left: 44px;
+      right: 44px;
+      bottom: 50px;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .pill {
+      position: relative;
+      padding: 9px 12px 10px 14px;
+      border-radius: 8px;
+      background: linear-gradient(180deg, rgba(12, 34, 48, 0.55), rgba(6, 20, 28, 0.6));
+      border: 1px solid rgba(165, 243, 252, 0.06);
+      text-align: left;
+      overflow: hidden;
+    }
+
+    .pill::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 9px;
+      bottom: 9px;
+      width: 2px;
+      border-radius: 0 3px 3px 0;
+      background: var(--accent);
+      opacity: 0.8;
+    }
+
+    .pill-num {
+      color: color-mix(in srgb, var(--accent) 70%, white);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      opacity: 0.9;
+    }
+
+    .pill-title {
+      margin-top: 3px;
+      font-size: 13px;
+      line-height: 1.12;
+      font-weight: 600;
+      color: rgba(223, 247, 250, 0.9);
+      letter-spacing: -0.005em;
+    }
+
+    .deep { --accent: var(--deep-teal); }
+    .cyan { --accent: var(--cyan); }
+    .foam { --accent: var(--seafoam); }
+    .aqua { --accent: var(--aqua); }
+    .sun { --accent: var(--sun); }
+
+    .site {
+      position: absolute;
+      left: 48px;
+      bottom: 18px;
+      z-index: 2;
+      font-size: 13px;
+      color: rgba(111, 154, 161, 0.7);
+      letter-spacing: 0.04em;
+    }
+
+    .episode-corner {
+      position: absolute;
+      right: 48px;
+      bottom: 18px;
+      z-index: 2;
+      font-size: 13px;
+      color: rgba(111, 154, 161, 0.7);
+      letter-spacing: 0.04em;
+    }
+  </style>
+</head>
+<body>
+  <div class="canvas">
+    <span class="bubble" style="left: 38px; top: 70px; --s: 10px; --opacity: 0.55;"></span>
+    <span class="bubble" style="left: 96px; top: 38px; --s: 6px; --opacity: 0.5;"></span>
+    <span class="bubble" style="left: 150px; top: 96px; --s: 14px; --opacity: 0.45;"></span>
+    <span class="bubble" style="left: 232px; top: 30px; --s: 7px; --opacity: 0.6;"></span>
+    <span class="bubble" style="left: 1086px; top: 58px; --s: 12px; --opacity: 0.5;"></span>
+    <span class="bubble" style="left: 1150px; top: 30px; --s: 7px; --opacity: 0.55;"></span>
+    <span class="bubble" style="left: 1018px; top: 92px; --s: 9px; --opacity: 0.4;"></span>
+    <span class="bubble" style="left: 1198px; top: 84px; --s: 5px; --opacity: 0.5;"></span>
+    <span class="bubble" style="left: 120px; top: 330px; --s: 8px; --opacity: 0.3;"></span>
+    <span class="bubble" style="left: 1130px; top: 300px; --s: 11px; --opacity: 0.28;"></span>
+    <span class="bubble" style="left: 60px; top: 250px; --s: 5px; --opacity: 0.28;"></span>
+    <span class="bubble" style="left: 1205px; top: 220px; --s: 6px; --opacity: 0.26;"></span>
+
+    <div class="eyebrow">TIMELESS <span class="eyebrow-mark"></span> KEY TAKEAWAYS</div>
+
+    <div class="title-wrap">
+      <div class="title">This Is Water</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="hook">How to Think, Not What to Think</div>
+
+    <div class="author">David Foster Wallace &middot; Kenyon, 2005</div>
+
+    <div class="takeaways">
+      <div class="pill cyan">
+        <div class="pill-num">01</div>
+        <div class="pill-title">What the Hell Is Water?</div>
+      </div>
+      <div class="pill foam">
+        <div class="pill-num">02</div>
+        <div class="pill-title">Main Character Syndrome</div>
+      </div>
+      <div class="pill aqua">
+        <div class="pill-num">03</div>
+        <div class="pill-title">Sonder</div>
+      </div>
+      <div class="pill sun">
+        <div class="pill-num">04</div>
+        <div class="pill-title">Everybody Worships Something</div>
+      </div>
+      <div class="pill deep">
+        <div class="pill-num">05</div>
+        <div class="pill-title">Take the AirPods Out</div>
+      </div>
+    </div>
+
+    <div class="site">jacklesser.me</div>
+    <div class="episode-corner">This Is Water &mdash; D.F. Wallace</div>
+  </div>
+</body>
+</html>

@@ -75,7 +75,6 @@ const podcastReviews: PodcastReview[] = [
     subtitle: "Quiet Operators & the Long Game",
     summary:
       "The Gymshark founder on Modern Wisdom — the quiet traits of great operators, when to bet the house and when to hire past yourself, the role models worth having, and why every goal in the gym is equal.",
-    videoId: "QfKwidYQW6M",
   },
 ];
 

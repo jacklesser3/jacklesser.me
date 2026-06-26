@@ -75,9 +75,8 @@ const podcastReviews: PodcastReview[] = [
     subtitle: "Quiet Operators & the Long Game",
     summary:
       "The Gymshark founder on Modern Wisdom — the quiet traits of great operators, when to bet the house and when to hire past yourself, the role models worth having, and why every goal in the gym is equal.",
-    // Reflection video coming soon. When ready, add `videoId: "QfKwidYQW6M"` here to
-    // restore the homepage thumbnail (and return this episode to the "Watch" tab), then
-    // re-embed it in the hero of public/ben-francis-podcast.html.
+    videoId: "bj4iFGQW4GU",
+    thumbnail: "/ego-in-between-thumbnail.jpg",
   },
 ];
 

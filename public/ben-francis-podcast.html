@@ -528,14 +528,24 @@
   <!-- HERO -->
   <!-- ═══════════════════════════════════════ -->
   <div class="hero" id="hero">
-    <div class="hero-center">
-      <div class="hero-label">Modern Wisdom #619 &mdash; 4 Key Takeaways</div>
-      <h1>Quiet Operators &amp; the Long Game</h1>
-      <p class="hero-sub">The Gymshark founder on building from a teenage screen-printer to a billion-pound brand &mdash; on who actually wins over time, when to bet the house, and the humility to hire past yourself.</p>
-      <div class="hero-meta">
-        <span>Ben Francis &amp; Chris Williamson</span>
-        <span>~1 hr 15 min</span>
-        <span>4 Takeaways</span>
+    <div class="hero-grid">
+      <div class="hero-left">
+        <div class="hero-label">Modern Wisdom #619 &mdash; 4 Key Takeaways</div>
+        <h1>Quiet Operators &amp; the Long Game</h1>
+        <p class="hero-sub">The Gymshark founder on building from a teenage screen-printer to a billion-pound brand &mdash; on who actually wins over time, when to bet the house, and the humility to hire past yourself.</p>
+        <div class="hero-meta">
+          <span>Ben Francis &amp; Chris Williamson</span>
+          <span>~1 hr 15 min</span>
+          <span>4 Takeaways</span>
+        </div>
+      </div>
+      <div class="hero-video" id="heroVideo">
+        <img class="video-thumb" src="/ego-in-between-thumbnail.jpg" alt="Confidence, Humility &amp; the Ego In Between &mdash; a Timeless reflection on Ben Francis" />
+        <div class="video-overlay" onclick="playVideo()">
+          <div class="play-btn">
+            <svg viewBox="0 0 20 20" fill="none" width="20" height="20"><path d="M6.5 3.5L16 10L6.5 16.5V3.5Z" fill="#5598ff"/></svg>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -750,6 +760,11 @@
   </footer>
 
   <script>
+    function playVideo() {
+      const container = document.getElementById('heroVideo');
+      container.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/bj4iFGQW4GU?autoplay=1&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&controls=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+    }
+
     const pages = [
       { id: 'hero', label: 'Intro' },
       { id: 't1-quote', label: '' },

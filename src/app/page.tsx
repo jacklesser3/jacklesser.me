@@ -78,6 +78,16 @@ const podcastReviews: PodcastReview[] = [
     videoId: "bj4iFGQW4GU",
     thumbnail: "/ego-in-between-thumbnail.jpg",
   },
+  {
+    number: "09",
+    href: "/make-your-bed.html",
+    title: "Make Your Bed",
+    subtitle: "Admiral William H. McRaven — Ten Lessons from SEAL Training",
+    summary:
+      "The audiobook of the speech that became a movement — start with a task completed, find someone to help you paddle, get over being a sugar cookie, sing when you're neck-deep in mud, and never, ever ring the bell.",
+    videoId: "l3e3tfxqejE",
+    thumbnail: "/make-your-bed-thumbnail.jpg",
+  },
 ];
 
 const pillars = [

@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Make Your Bed &mdash; Admiral William H. McRaven</title>
+  <meta name="description" content="Ten lessons from Navy SEAL training &mdash; a reflection on Admiral William H. McRaven's Make Your Bed: start with a task completed, find someone to help you paddle, get over being a sugar cookie, and never, ever ring the bell.">
+  <meta name="author" content="Jack Lesser">
+  <link rel="canonical" href="https://jacklesser.me/make-your-bed.html">
+  <meta property="og:title" content="Make Your Bed &mdash; Admiral William H. McRaven">
+  <meta property="og:description" content="Ten lessons from Navy SEAL training &mdash; start with a task completed, find someone to help you paddle, get over being a sugar cookie, and never, ever ring the bell.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://jacklesser.me/make-your-bed.html">
+  <meta property="og:site_name" content="Timeless Practice">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Make Your Bed &mdash; Admiral William H. McRaven">
+  <meta name="twitter:description" content="Ten lessons from Navy SEAL training that can change your life &mdash; and maybe the world.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Make Your Bed — Admiral William H. McRaven",
+    "author": { "@type": "Person", "name": "Jack Lesser", "url": "https://jacklesser.me" },
+    "publisher": { "@type": "Person", "name": "Jack Lesser" },
+    "description": "Ten lessons from Navy SEAL training — a reflection on Admiral William H. McRaven's Make Your Bed.",
+    "url": "https://jacklesser.me/make-your-bed.html"
+  }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #0a0f16;
+      --card: #121a26;
+      --accent: #c9a86a;   /* brass / dawn gold */
+      --accent2: #7d97ad;  /* steel blue */
+      --accent3: #94794a;  /* deep brass */
+      --text: #d9dee4;
+      --muted: #6e7883;
+      --white: #f5f6f8;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* ─── DAWN / SURF BACKGROUND ─── */
+    .dawn-bg {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    /* first light on the horizon */
+    .dawn-bg::before {
+      content: '';
+      position: absolute;
+      inset: -10%;
+      background:
+        radial-gradient(ellipse 70% 35% at 50% 108%, rgba(201,168,106,0.10), transparent 70%),
+        radial-gradient(ellipse 50% 30% at 15% 15%, rgba(125,151,173,0.06), transparent 70%),
+        radial-gradient(ellipse 55% 35% at 85% 45%, rgba(125,151,173,0.05), transparent 70%);
+      animation: drift 45s ease-in-out infinite alternate;
+    }
+
+    /* faint surf lines rolling toward the beach */
+    .dawn-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        repeating-linear-gradient(
+          178deg,
+          transparent 0,
+          transparent 90px,
+          rgba(125,151,173,0.03) 90px,
+          rgba(125,151,173,0.03) 91px,
+          transparent 92px,
+          transparent 180px
+        );
+      animation: drift 60s ease-in-out infinite alternate-reverse;
+    }
+
+    @keyframes drift {
+      from { transform: translate(0, 0); }
+      to { transform: translate(-2%, 2%); }
+    }
+
+    .star {
+      position: absolute;
+      border-radius: 50%;
+      background: var(--white);
+      animation: twinkle 8s ease-in-out infinite;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.05; }
+      50% { opacity: 0.35; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .star, .dawn-bg::before, .dawn-bg::after { animation: none !important; }
+    }
+
+    /* ─── HOME LINK ─── */
+    .home-link {
+      position: fixed;
+      top: 1.25rem;
+      left: 1.25rem;
+      z-index: 1000;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.7rem 1rem;
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 999px;
+      background: rgba(10,15,22,0.78);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      backdrop-filter: blur(12px);
+      transition: border-color 0.3s, color 0.3s, transform 0.3s;
+    }
+
+    .home-link:hover {
+      color: var(--accent);
+      border-color: rgba(201,168,106,0.45);
+      transform: translateY(-1px);
+    }
+
+    /* ─── NAV DOTS ─── */
+    .nav-dots {
+      position: fixed;
+      right: 1.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      z-index: 100;
+    }
+
+    .nav-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.15);
+      cursor: pointer;
+      transition: all 0.3s;
+      border: none;
+    }
+
+    .nav-dot:hover, .nav-dot.active {
+      background: var(--accent);
+      transform: scale(1.5);
+    }
+
+    .arrow-hint {
+      position: fixed;
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.18);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      z-index: 100;
+      transition: opacity 0.5s;
+    }
+
+    /* ─── VIEWPORT SECTIONS ─── */
+    .vp {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: clamp(1rem, 3.5vh, 3rem) clamp(1.25rem, 3vw, 3rem);
+      position: relative;
+      z-index: 1;
+    }
+
+    .divider { position: relative; z-index: 1; }
+    footer { position: relative; z-index: 1; }
+
+    .vp-inner {
+      max-width: 760px;
+      width: 100%;
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      background:
+        radial-gradient(ellipse at 50% 30%, rgba(201,168,106,0.10) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 80%, rgba(125,151,173,0.07) 0%, transparent 50%);
+      text-align: center;
+    }
+
+    .hero-label {
+      text-transform: uppercase;
+      letter-spacing: 0.32em;
+      font-size: 0.72rem;
+      color: var(--accent);
+      margin-bottom: 1.75rem;
+      font-weight: 600;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.6rem, 7vh, 5.2rem);
+      font-weight: 700;
+      line-height: 1.05;
+      padding-bottom: 0.1em;
+      background: linear-gradient(135deg, #fff 0%, var(--accent) 55%, var(--accent2) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      margin-top: 1.75rem;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(1.05rem, 2.2vh, 1.3rem);
+      color: var(--accent2);
+      letter-spacing: 0.01em;
+    }
+
+    .hero-meta {
+      margin-top: 2.5rem;
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    /* ─── HERO VIDEO ─── */
+    .hero-video {
+      position: relative;
+      width: 100%;
+      max-width: 760px;
+      margin: 2.75rem auto 0;
+      padding-bottom: min(56.25%, 427px);
+      border-radius: 16px;
+      overflow: hidden;
+      background: #000;
+      box-shadow: 0 0 80px rgba(201,168,106,0.16);
+    }
+
+    .hero-video iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .hero-video .video-thumb {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      cursor: pointer;
+      transition: transform 0.5s;
+    }
+
+    .hero-video:hover .video-thumb { transform: scale(1.05); }
+
+    .hero-video .video-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.2);
+      transition: background 0.3s;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-video:hover .video-overlay { background: rgba(0,0,0,0.1); }
+
+    .hero-video .play-btn {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(10,15,22,0.72);
+      border: 1px solid rgba(201,168,106,0.4);
+      backdrop-filter: blur(12px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s, border-color 0.3s, background 0.3s;
+    }
+
+    .hero-video:hover .play-btn {
+      transform: scale(1.1);
+      border-color: rgba(201,168,106,0.65);
+      background: rgba(10,15,22,0.88);
+    }
+
+    .hero-video .play-btn svg { width: 20px; height: 20px; margin: 0; }
+
+    /* ─── OPENER ─── */
+    .opener-block {
+      text-align: left;
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.2rem, 3vh, 1.8rem);
+      line-height: 1.55;
+      color: var(--white);
+      font-style: italic;
+      border-left: 2px solid var(--accent);
+      padding: 0.5rem 0 0.5rem 1.75rem;
+    }
+
+    .opener-block p + p { margin-top: 1.1rem; }
+
+    .opener-attr {
+      display: block;
+      margin-top: 1.5rem;
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    /* ─── SECTION CONTENT ─── */
+    .section-numeral {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(0.95rem, 1.6vh, 1.15rem);
+      color: var(--accent2);
+      letter-spacing: 0.2em;
+      margin-bottom: 0.55rem;
+    }
+
+    .section-h {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 4.5vh, 2.6rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--white);
+      margin-bottom: clamp(1rem, 2.2vh, 1.6rem);
+    }
+
+    .section-p {
+      font-size: clamp(0.95rem, 2vh, 1.1rem);
+      line-height: 1.7;
+      color: var(--text);
+      margin-bottom: clamp(0.7rem, 1.5vh, 1.1rem);
+    }
+
+    .section-p strong {
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    .pullquote {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(1.05rem, 2.5vh, 1.35rem);
+      color: var(--accent);
+      line-height: 1.5;
+      padding: clamp(0.9rem, 1.8vh, 1.4rem) 0 clamp(0.9rem, 1.8vh, 1.4rem) 1.5rem;
+      border-left: 2px solid var(--accent2);
+      margin: clamp(1rem, 2vh, 1.6rem) 0;
+    }
+
+    .pullquote-attr {
+      display: block;
+      margin-top: 0.55rem;
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      font-size: 0.7rem;
+      color: var(--muted);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    /* ─── DIVIDER ─── */
+    .divider {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+    }
+
+    /* ─── CLOSING ─── */
+    .closing {
+      text-align: center;
+      position: relative;
+    }
+
+    .closing::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 380px;
+      height: 380px;
+      border-radius: 50%;
+      filter: blur(130px);
+      opacity: 0.12;
+      background: var(--accent);
+      z-index: 0;
+    }
+
+    .closing > * { position: relative; z-index: 1; }
+
+    .closing blockquote {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 6vh, 3.4rem);
+      font-weight: 700;
+      line-height: 1.3;
+      color: var(--white);
+    }
+
+    .closing blockquote em {
+      font-style: italic;
+      color: var(--accent);
+      font-weight: 400;
+    }
+
+    .closing-attr {
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-top: 1.75rem;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      text-align: center;
+      padding: 3rem 2rem;
+      color: var(--muted);
+      font-size: 0.8rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      line-height: 1.7;
+    }
+
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { color: var(--accent2); }
+
+    @media (max-width: 768px) {
+      body { overflow-x: hidden; }
+      .vp {
+        min-height: 100dvh;
+        padding: 4rem 1.25rem 3rem;
+      }
+      .home-link {
+        top: 0.875rem;
+        left: 0.875rem;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.62rem;
+      }
+      .hero-meta { gap: 1.25rem; font-size: 0.68rem; }
+      .opener-block { padding-left: 1.1rem; font-size: 1.1rem; }
+      .pullquote { padding-left: 1.1rem; font-size: 1rem; }
+      footer { padding: 2.5rem 1.25rem; }
+      .nav-dots { right: 0.75rem; gap: 6px; }
+      .nav-dot { width: 7px; height: 7px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- DAWN BACKGROUND -->
+  <!-- ═══════════════════════════════════════ -->
+  <div class="dawn-bg" aria-hidden="true">
+    <span class="star" style="left: 8%;  top: 10%; width: 2px; height: 2px; animation-delay: 0s;"></span>
+    <span class="star" style="left: 18%; top: 22%; width: 1px; height: 1px; animation-delay: 1.5s;"></span>
+    <span class="star" style="left: 27%; top: 8%;  width: 2px; height: 2px; animation-delay: 3s;"></span>
+    <span class="star" style="left: 41%; top: 16%; width: 1px; height: 1px; animation-delay: 4.2s;"></span>
+    <span class="star" style="left: 55%; top: 6%;  width: 2px; height: 2px; animation-delay: 2.1s;"></span>
+    <span class="star" style="left: 66%; top: 19%; width: 1px; height: 1px; animation-delay: 5.4s;"></span>
+    <span class="star" style="left: 78%; top: 11%; width: 2px; height: 2px; animation-delay: 0.8s;"></span>
+    <span class="star" style="left: 90%; top: 24%; width: 1px; height: 1px; animation-delay: 3.6s;"></span>
+    <span class="star" style="left: 13%; top: 38%; width: 1px; height: 1px; animation-delay: 6.1s;"></span>
+    <span class="star" style="left: 84%; top: 42%; width: 1px; height: 1px; animation-delay: 2.7s;"></span>
+    <span class="star" style="left: 48%; top: 33%; width: 1px; height: 1px; animation-delay: 4.8s;"></span>
+    <span class="star" style="left: 71%; top: 55%; width: 1px; height: 1px; animation-delay: 1.2s;"></span>
+    <span class="star" style="left: 22%; top: 60%; width: 1px; height: 1px; animation-delay: 5s;"></span>
+  </div>
+
+  <a class="home-link" href="/">&#8592; Home</a>
+
+  <nav class="nav-dots" id="navDots"></nav>
+  <div class="arrow-hint" id="arrowHint">&larr; &rarr; arrow keys to navigate</div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- HERO -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="vp hero" id="hero">
+    <div class="vp-inner" style="text-align:center;">
+      <div class="hero-label">Audiobook &mdash; A Timeless Reflection</div>
+      <h1>Make Your Bed</h1>
+      <div class="hero-sub">Admiral William H. McRaven &mdash; Little Things That Can Change Your Life</div>
+      <div class="hero-meta">
+        <span>10 lessons</span>
+        <span>Six months of SEAL training</span>
+        <span>One speech that became a book</span>
+      </div>
+      <div class="hero-video" id="heroVideo">
+        <img class="video-thumb" src="/make-your-bed-thumbnail.jpg" alt="Make Your Bed &mdash; Ten Lessons from Navy SEAL Training" />
+        <div class="video-overlay" onclick="playVideo()">
+          <div class="play-btn">
+            <svg viewBox="0 0 20 20" fill="none" width="20" height="20"><path d="M6.5 3.5L16 10L6.5 16.5V3.5Z" fill="#c9a86a"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- OPENER -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="vp" id="opener">
+    <div class="vp-inner">
+      <div class="opener-block">
+        <p>In 2014, Admiral McRaven stood before the graduating class at the University of Texas and made a strange promise: if you want to change the world, start off by making your bed.</p>
+        <p>The speech drew on the ten hardest lessons of Navy SEAL training. It became one of the most-watched commencement addresses ever given &mdash; and then a small book with a big argument: <strong>it&rsquo;s the little things that change everything.</strong></p>
+        <span class="opener-attr">University of Texas at Austin &mdash; Commencement, 2014</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- I. MAKE YOUR BED -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="vp" id="t1">
+    <div class="vp-inner">
+      <div class="section-numeral">I</div>
+      <h2 class="section-h">Start Your Day with a Task Completed</h2>
+      <p class="section-p">Every morning in basic SEAL training, instructors inspected the beds. Square corners. Tight blanket. Pillow centered under the headboard.</p>
+      <p class="section-p">It seemed ridiculous &mdash; aspiring warriors graded on hospital corners. But the wisdom was quiet: <strong>making your bed is the first task of the day, done right.</strong> One small pride. One small sense of order. Momentum before the world gets a vote.</p>
+      <p class="section-p">And if the day goes badly &mdash; and some days will &mdash; you come home to a bed that is made. A made bed is proof that tomorrow can be better.</p>
+      <div class="pullquote">
+        If you can&rsquo;t do the little things right, you will never do the big things right.
+        <span class="pullquote-attr">Admiral William H. McRaven</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- II. FIND SOMEONE TO HELP YOU PADDLE -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="vp" id="t2">
+    <div class="vp-inner">
+      <div class="section-numeral">II</div>
+      <h2 class="section-h">You Can&rsquo;t Go It Alone</h2>
+      <p class="section-p">Trainees paddle small rubber boats through pounding California surf. Every wave threatens to flip the boat. No one gets through alone &mdash; not the strongest, not the most stubborn.</p>
+      <p class="section-p">Everyone paddles in rhythm, everyone pulls their weight, and the coxswain&rsquo;s job is to keep the crew in sync &mdash; not to paddle hardest.</p>
+      <p class="section-p">Life is the same boat. <strong>Find people to help you paddle</strong> &mdash; and be someone worth having in the boat when their wave comes.</p>
+      <div class="pullquote">
+        You can&rsquo;t change the world alone &mdash; you will need some help.
+        <span class="pullquote-attr">Admiral William H. McRaven</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- III. SIZE OF YOUR HEART -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="vp" id="t3">
+    <div class="vp-inner">
+      <div class="section-numeral">III</div>
+      <h2 class="section-h">Measure a Person by the Size of Their Heart</h2>
+      <p class="section-p">The best boat crew in McRaven&rsquo;s class wasn&rsquo;t the tall one. It was the &ldquo;munchkin crew&rdquo; &mdash; nobody over five-foot-five, little flippers, mocked by everyone.</p>
+      <p class="section-p">They outpaddled, outran, and outswam every other crew.</p>
+      <p class="section-p">SEAL training was a great equalizer: <strong>nothing mattered but your will to succeed.</strong> Not your color, not your background, not your education, not your social status.</p>
+      <div class="pullquote">
+        Measure a person by the size of their heart, not the size of their flippers.
+        <span class="pullquote-attr">Admiral William H. McRaven</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- IV. SUGAR COOKIE -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="vp" id="t4">
+    <div class="vp-inner">
+      <div class="section-numeral">IV</div>
+      <h2 class="section-h">Life&rsquo;s Not Fair &mdash; Drive On</h2>
+      <p class="section-p">Fail a uniform inspection &mdash; sometimes for no reason at all &mdash; and you ran fully clothed into the surf, then rolled in the sand until every inch of you was covered. A <strong>&ldquo;sugar cookie.&rdquo;</strong> Wet and sandy the rest of the day.</p>
+      <p class="section-p">The instructors weren&rsquo;t looking for a perfect uniform. They were looking for the student who couldn&rsquo;t accept that effort doesn&rsquo;t always get rewarded &mdash; the one who complains, who blames, who breaks when things aren&rsquo;t fair.</p>
+      <p class="section-p">Sometimes you do everything right and still end up a sugar cookie. <strong>Get over it. Keep moving forward.</strong></p>
+      <div class="pullquote">
+        Sometimes, no matter how well you prepare or how well you perform, you still end up as a sugar cookie.
+        <span class="pullquote-attr">Admiral William H. McRaven</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- V. THE CIRCUS -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="vp" id="t5">
+    <div class="vp-inner">
+      <div class="section-numeral">V</div>
+      <h2 class="section-h">Failure Can Make You Stronger</h2>
+      <p class="section-p">Fall short on any event and your name went on a list. That evening you got &ldquo;the circus&rdquo; &mdash; two extra hours of calisthenics designed to break you.</p>
+      <p class="section-p">McRaven and his swim buddy made the list constantly. But all those circuses had a side effect no one advertised: <strong>they were getting stronger.</strong> By the end of training, the pair that failed the most was among the fastest in the water.</p>
+      <p class="section-p">The pain of failure builds the capacity that comfort never will. Don&rsquo;t fear the circus.</p>
+      <div class="pullquote">
+        Life is filled with circuses. You will fail. You will likely fail often. It will be painful. But if you persevere, it will make you stronger.
+        <span class="pullquote-attr">Admiral William H. McRaven</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- VI. SLIDE HEAD FIRST -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="vp" id="t6">
+    <div class="vp-inner">
+      <div class="section-numeral">VI</div>
+      <h2 class="section-h">You Must Dare Greatly</h2>
+      <p class="section-p">The obstacle course record stood for years &mdash; until one student went down the &ldquo;slide for life&rdquo; head first. Riskier. Faster. The record fell.</p>
+      <p class="section-p">The safe way was proven. It was also the reason the record never moved.</p>
+      <p class="section-p">Playing it safe feels responsible. Over a lifetime, it&rsquo;s the quiet way to guarantee you never find your edge. <strong>At some point you have to go head first.</strong></p>
+      <div class="pullquote">
+        Slide down the obstacle head first.
+        <span class="pullquote-attr">Admiral William H. McRaven</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- VII. DON'T BACK DOWN FROM THE SHARKS -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="vp" id="t7">
+    <div class="vp-inner">
+      <div class="section-numeral">VII</div>
+      <h2 class="section-h">Stand Up to the Bullies</h2>
+      <p class="section-p">Before the night swim off San Clemente Island &mdash; water thick with sharks &mdash; the instructors gave simple guidance: if one circles you, stand your ground. Don&rsquo;t swim away. Don&rsquo;t act afraid. And if it charges, punch it in the snout.</p>
+      <p class="section-p">Bullies are all the same &mdash; in the water, in the schoolyard, in the office, in whole countries. <strong>They feed on fear and retreat.</strong></p>
+      <p class="section-p">The lesson isn&rsquo;t about sharks. It&rsquo;s that the moment you show you won&rsquo;t be moved, most predators look for easier prey.</p>
+      <div class="pullquote">
+        If you hope to complete the swim, you will have to deal with the sharks.
+        <span class="pullquote-attr">Admiral William H. McRaven</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- VIII. DARKEST MOMENT -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="vp" id="t8">
+    <div class="vp-inner">
+      <div class="section-numeral">VIII</div>
+      <h2 class="section-h">Rise to the Occasion</h2>
+      <p class="section-p">The ship-attack dive is the darkest part of training &mdash; literally. Under an enemy hull at night, no light reaches you. You can&rsquo;t see your hands. The machinery hums above you and it&rsquo;s easy to get disoriented, easy to panic.</p>
+      <p class="section-p">And that&rsquo;s exactly where the mission gets done. <strong>At the darkest moment of the mission is the time to be calm, composed &mdash; your very best.</strong></p>
+      <p class="section-p">Everyone hits a keel moment eventually: the diagnosis, the loss, the failure that goes all the way down. What you&rsquo;ve practiced in small dark moments is what shows up in the big one.</p>
+      <div class="pullquote">
+        At the darkest moment of the mission, is the time when you must be calm, composed &mdash; when all your tactical skills, your physical power and all your inner strength must be brought to bear.
+        <span class="pullquote-attr">Admiral William H. McRaven</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- IX. SING IN THE MUD -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="vp" id="t9">
+    <div class="vp-inner">
+      <div class="section-numeral">IX</div>
+      <h2 class="section-h">Give People Hope</h2>
+      <p class="section-p">Hell Week, Wednesday night: the class stands neck-deep in the freezing mud of the Tijuana flats. The instructors offer a deal &mdash; if just five men quit, everyone else can come out of the mud and warm up by the fire.</p>
+      <p class="section-p">Eight hours of cold left. Some are ready to take the deal. Then one voice starts singing. Badly. Then two. Then the whole class &mdash; and somehow the mud feels a little warmer, the dawn a little closer.</p>
+      <p class="section-p"><strong>One person, singing, changed what the whole group believed was possible.</strong> Hope is contagious &mdash; and it only takes one carrier.</p>
+      <div class="pullquote">
+        If I have learned anything in my time traveling the world, it is the power of hope. The power of one person &mdash; Washington, Lincoln, King, Mandela and even a young girl from Pakistan, Malala &mdash; one person can change the world by giving people hope.
+        <span class="pullquote-attr">Admiral William H. McRaven</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- X. NEVER RING THE BELL -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="vp" id="t10">
+    <div class="vp-inner">
+      <div class="section-numeral">X</div>
+      <h2 class="section-h">Never, Ever Quit</h2>
+      <p class="section-p">In the center of the training compound hangs a brass bell. Ring it, and the suffering ends instantly. No more 5 a.m. swims. No more cold. No more circuses. All you have to do is quit &mdash; publicly, with one pull of the rope.</p>
+      <p class="section-p">The ones who made it through weren&rsquo;t always the strongest or the fastest. They were the ones who <strong>simply refused to touch the bell.</strong></p>
+      <p class="section-p">Every hard thing you&rsquo;ll ever do hangs its own bell nearby. Quitting is always available, always easier, always ringing softly. The whole game is deciding &mdash; in advance &mdash; that it isn&rsquo;t an option.</p>
+      <div class="pullquote">
+        If you want to change the world, don&rsquo;t ever, ever ring the bell.
+        <span class="pullquote-attr">Admiral William H. McRaven</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- CLOSING -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="vp closing" id="close">
+    <div class="vp-inner" style="text-align:center;">
+      <blockquote>
+        <em>If you want to change the world,</em><br>
+        start off by making your bed.
+      </blockquote>
+      <div class="closing-attr">Little things, done right, every day</div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- FOOTER -->
+  <!-- ═══════════════════════════════════════ -->
+  <footer>
+    <p>Source: <a href="https://www.youtube.com/watch?v=l3e3tfxqejE" target="_blank">Make Your Bed &mdash; Audiobook</a></p>
+    <p style="margin-top:0.5rem;">Admiral William H. McRaven &mdash; Make Your Bed: Little Things That Can Change Your Life&hellip;And Maybe the World (2017)</p>
+  </footer>
+
+  <script>
+    function playVideo() {
+      const container = document.getElementById('heroVideo');
+      container.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/l3e3tfxqejE?autoplay=1&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&controls=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+    }
+
+    const pages = [
+      { id: 'hero', label: 'Intro' },
+      { id: 'opener', label: 'The Speech' },
+      { id: 't1', label: 'I. Make Your Bed' },
+      { id: 't2', label: 'II. Help You Paddle' },
+      { id: 't3', label: 'III. Size of Your Heart' },
+      { id: 't4', label: 'IV. Sugar Cookie' },
+      { id: 't5', label: 'V. The Circus' },
+      { id: 't6', label: 'VI. Head First' },
+      { id: 't7', label: 'VII. The Sharks' },
+      { id: 't8', label: 'VIII. Darkest Moment' },
+      { id: 't9', label: 'IX. Sing in the Mud' },
+      { id: 't10', label: 'X. Never Ring the Bell' },
+      { id: 'close', label: 'Close' },
+    ];
+
+    let currentPage = 0;
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+        e.preventDefault();
+        if (currentPage < pages.length - 1) {
+          currentPage++;
+          document.getElementById(pages[currentPage].id).scrollIntoView({ behavior: 'smooth' });
+        }
+      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        if (currentPage > 0) {
+          currentPage--;
+          document.getElementById(pages[currentPage].id).scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+
+    const nav = document.getElementById('navDots');
+    pages.forEach((s, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'nav-dot';
+      dot.title = s.label;
+      dot.dataset.target = s.id;
+      dot.dataset.index = i;
+      dot.addEventListener('click', () => {
+        currentPage = i;
+        document.getElementById(s.id).scrollIntoView({ behavior: 'smooth' });
+      });
+      nav.appendChild(dot);
+    });
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const idx = pages.findIndex(p => p.id === entry.target.id);
+          if (idx !== -1) currentPage = idx;
+          document.querySelectorAll('.nav-dot').forEach(d => d.classList.remove('active'));
+          const dot = document.querySelector(`.nav-dot[data-target="${entry.target.id}"]`);
+          if (dot) dot.classList.add('active');
+        }
+      });
+    }, { threshold: 0.3 });
+
+    pages.forEach(s => {
+      const el = document.getElementById(s.id);
+      if (el) observer.observe(el);
+    });
+
+    let hintShown = true;
+    document.addEventListener('keydown', () => {
+      if (hintShown) {
+        document.getElementById('arrowHint').style.opacity = '0';
+        hintShown = false;
+      }
+    }, { once: false });
+  </script>
+
+</body>
+</html>

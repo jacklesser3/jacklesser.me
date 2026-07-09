@@ -85,8 +85,10 @@ const podcastReviews: PodcastReview[] = [
     subtitle: "Admiral William H. McRaven — Ten Lessons from SEAL Training",
     summary:
       "The audiobook of the speech that became a movement — start with a task completed, find someone to help you paddle, get over being a sugar cookie, sing when you're neck-deep in mud, and never, ever ring the bell.",
-    videoId: "l3e3tfxqejE",
-    thumbnail: "/make-your-bed-thumbnail.jpg",
+    // Reflection video coming soon. When Jack's recording is ready, add its `videoId` and
+    // `thumbnail: "/make-your-bed-thumbnail.jpg"` here to restore the homepage embed (and
+    // return this episode to the "Watch" tab), then re-embed it in the hero of
+    // public/make-your-bed.html. Reference audiobook: youtube.com/watch?v=l3e3tfxqejE
   },
 ];
 

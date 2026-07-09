@@ -252,6 +252,19 @@
       text-transform: uppercase;
     }
 
+    .hero-coming {
+      display: inline-block;
+      margin-top: 2.5rem;
+      padding: 0.55rem 1.1rem;
+      border: 1px solid rgba(201,168,106,0.35);
+      border-radius: 999px;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 0.85rem;
+      color: var(--accent);
+      letter-spacing: 0.04em;
+    }
+
     /* ─── HERO VIDEO ─── */
     .hero-video {
       position: relative;
@@ -526,14 +539,11 @@
         <span>Six months of SEAL training</span>
         <span>One speech that became a book</span>
       </div>
-      <div class="hero-video" id="heroVideo">
-        <img class="video-thumb" src="/make-your-bed-thumbnail.jpg" alt="Make Your Bed &mdash; Ten Lessons from Navy SEAL Training" />
-        <div class="video-overlay" onclick="playVideo()">
-          <div class="play-btn">
-            <svg viewBox="0 0 20 20" fill="none" width="20" height="20"><path d="M6.5 3.5L16 10L6.5 16.5V3.5Z" fill="#c9a86a"/></svg>
-          </div>
-        </div>
-      </div>
+      <!-- Reflection video coming soon. When Jack's podcast recording is ready, replace the
+           pill below with the hero-video block (thumbnail /make-your-bed-thumbnail.jpg +
+           play overlay calling playVideo() with the new YouTube id) — see this-is-water.html
+           for the exact markup. -->
+      <div class="hero-coming">Timeless reflection episode &mdash; coming soon</div>
     </div>
   </section>
 
@@ -766,11 +776,6 @@
   </footer>
 
   <script>
-    function playVideo() {
-      const container = document.getElementById('heroVideo');
-      container.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/l3e3tfxqejE?autoplay=1&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&controls=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-    }
-
     const pages = [
       { id: 'hero', label: 'Intro' },
       { id: 'opener', label: 'The Speech' },

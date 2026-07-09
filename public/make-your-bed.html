@@ -412,6 +412,36 @@
       text-transform: uppercase;
     }
 
+    .lesson {
+      display: grid;
+      grid-template-columns: 2.4rem 1fr;
+      gap: 0.9rem;
+      margin-bottom: clamp(0.9rem, 2.2vh, 1.5rem);
+    }
+
+    .lesson-num {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: var(--accent2);
+      font-size: clamp(0.9rem, 1.8vh, 1.05rem);
+      letter-spacing: 0.1em;
+      padding-top: 0.12rem;
+    }
+
+    .lesson-t {
+      color: var(--white);
+      font-weight: 600;
+      font-size: clamp(0.98rem, 2vh, 1.12rem);
+      line-height: 1.4;
+    }
+
+    .lesson-p {
+      font-size: clamp(0.86rem, 1.8vh, 0.98rem);
+      color: var(--text);
+      line-height: 1.6;
+      margin-top: 0.25rem;
+    }
+
     /* ─── DIVIDER ─── */
     .divider {
       width: 100%;
@@ -565,15 +595,33 @@
   <div class="divider"></div>
 
   <!-- ═══════════════════════════════════════ -->
-  <!-- I. MAKE YOUR BED -->
+  <!-- I. THE FOUNDATIONS (LESSONS 1–3) -->
   <!-- ═══════════════════════════════════════ -->
   <section class="vp" id="t1">
     <div class="vp-inner">
       <div class="section-numeral">I</div>
-      <h2 class="section-h">Start Your Day with a Task Completed</h2>
-      <p class="section-p">Every morning in basic SEAL training, instructors inspected the beds. Square corners. Tight blanket. Pillow centered under the headboard.</p>
-      <p class="section-p">It seemed ridiculous &mdash; aspiring warriors graded on hospital corners. But the wisdom was quiet: <strong>making your bed is the first task of the day, done right.</strong> One small pride. One small sense of order. Momentum before the world gets a vote.</p>
-      <p class="section-p">And if the day goes badly &mdash; and some days will &mdash; you come home to a bed that is made. A made bed is proof that tomorrow can be better.</p>
+      <h2 class="section-h">The Foundations</h2>
+      <div class="lesson">
+        <div class="lesson-num">01</div>
+        <div>
+          <div class="lesson-t">Start your day with a task completed</div>
+          <p class="lesson-p">Square corners, tight blanket. The first task of the day, done right &mdash; one small pride, momentum before the world gets a vote. And if the day goes badly, you come home to a bed that is made.</p>
+        </div>
+      </div>
+      <div class="lesson">
+        <div class="lesson-num">02</div>
+        <div>
+          <div class="lesson-t">Find someone to help you paddle</div>
+          <p class="lesson-p">No one gets through the pounding surf alone &mdash; not the strongest, not the most stubborn. Everyone paddles in rhythm, everyone pulls their weight. Be someone worth having in the boat.</p>
+        </div>
+      </div>
+      <div class="lesson">
+        <div class="lesson-num">03</div>
+        <div>
+          <div class="lesson-t">Measure a person by the size of their heart</div>
+          <p class="lesson-p">The &ldquo;munchkin crew&rdquo; &mdash; nobody over five-foot-five, little flippers, mocked by everyone &mdash; outpaddled every other boat. Nothing mattered but the will to succeed.</p>
+        </div>
+      </div>
       <div class="pullquote">
         If you can&rsquo;t do the little things right, you will never do the big things right.
         <span class="pullquote-attr">Admiral William H. McRaven</span>
@@ -584,72 +632,26 @@
   <div class="divider"></div>
 
   <!-- ═══════════════════════════════════════ -->
-  <!-- II. FIND SOMEONE TO HELP YOU PADDLE -->
+  <!-- II. LIFE'S NOT FAIR — DRIVE ON (LESSONS 4–5) -->
   <!-- ═══════════════════════════════════════ -->
   <section class="vp" id="t2">
     <div class="vp-inner">
       <div class="section-numeral">II</div>
-      <h2 class="section-h">You Can&rsquo;t Go It Alone</h2>
-      <p class="section-p">Trainees paddle small rubber boats through pounding California surf. Every wave threatens to flip the boat. No one gets through alone &mdash; not the strongest, not the most stubborn.</p>
-      <p class="section-p">Everyone paddles in rhythm, everyone pulls their weight, and the coxswain&rsquo;s job is to keep the crew in sync &mdash; not to paddle hardest.</p>
-      <p class="section-p">Life is the same boat. <strong>Find people to help you paddle</strong> &mdash; and be someone worth having in the boat when their wave comes.</p>
-      <div class="pullquote">
-        You can&rsquo;t change the world alone &mdash; you will need some help.
-        <span class="pullquote-attr">Admiral William H. McRaven</span>
-      </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- ═══════════════════════════════════════ -->
-  <!-- III. SIZE OF YOUR HEART -->
-  <!-- ═══════════════════════════════════════ -->
-  <section class="vp" id="t3">
-    <div class="vp-inner">
-      <div class="section-numeral">III</div>
-      <h2 class="section-h">Measure a Person by the Size of Their Heart</h2>
-      <p class="section-p">The best boat crew in McRaven&rsquo;s class wasn&rsquo;t the tall one. It was the &ldquo;munchkin crew&rdquo; &mdash; nobody over five-foot-five, little flippers, mocked by everyone.</p>
-      <p class="section-p">They outpaddled, outran, and outswam every other crew.</p>
-      <p class="section-p">SEAL training was a great equalizer: <strong>nothing mattered but your will to succeed.</strong> Not your color, not your background, not your education, not your social status.</p>
-      <div class="pullquote">
-        Measure a person by the size of their heart, not the size of their flippers.
-        <span class="pullquote-attr">Admiral William H. McRaven</span>
-      </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- ═══════════════════════════════════════ -->
-  <!-- IV. SUGAR COOKIE -->
-  <!-- ═══════════════════════════════════════ -->
-  <section class="vp" id="t4">
-    <div class="vp-inner">
-      <div class="section-numeral">IV</div>
       <h2 class="section-h">Life&rsquo;s Not Fair &mdash; Drive On</h2>
-      <p class="section-p">Fail a uniform inspection &mdash; sometimes for no reason at all &mdash; and you ran fully clothed into the surf, then rolled in the sand until every inch of you was covered. A <strong>&ldquo;sugar cookie.&rdquo;</strong> Wet and sandy the rest of the day.</p>
-      <p class="section-p">The instructors weren&rsquo;t looking for a perfect uniform. They were looking for the student who couldn&rsquo;t accept that effort doesn&rsquo;t always get rewarded &mdash; the one who complains, who blames, who breaks when things aren&rsquo;t fair.</p>
-      <p class="section-p">Sometimes you do everything right and still end up a sugar cookie. <strong>Get over it. Keep moving forward.</strong></p>
-      <div class="pullquote">
-        Sometimes, no matter how well you prepare or how well you perform, you still end up as a sugar cookie.
-        <span class="pullquote-attr">Admiral William H. McRaven</span>
+      <div class="lesson">
+        <div class="lesson-num">04</div>
+        <div>
+          <div class="lesson-t">Get over being a sugar cookie</div>
+          <p class="lesson-p">Fail a uniform inspection &mdash; sometimes for no reason at all &mdash; and you ran into the surf, then rolled in the sand until every inch of you was covered. Sometimes you do everything right and still end up a sugar cookie. Keep moving forward.</p>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- ═══════════════════════════════════════ -->
-  <!-- V. THE CIRCUS -->
-  <!-- ═══════════════════════════════════════ -->
-  <section class="vp" id="t5">
-    <div class="vp-inner">
-      <div class="section-numeral">V</div>
-      <h2 class="section-h">Failure Can Make You Stronger</h2>
-      <p class="section-p">Fall short on any event and your name went on a list. That evening you got &ldquo;the circus&rdquo; &mdash; two extra hours of calisthenics designed to break you.</p>
-      <p class="section-p">McRaven and his swim buddy made the list constantly. But all those circuses had a side effect no one advertised: <strong>they were getting stronger.</strong> By the end of training, the pair that failed the most was among the fastest in the water.</p>
-      <p class="section-p">The pain of failure builds the capacity that comfort never will. Don&rsquo;t fear the circus.</p>
+      <div class="lesson">
+        <div class="lesson-num">05</div>
+        <div>
+          <div class="lesson-t">Don&rsquo;t be afraid of the circus</div>
+          <p class="lesson-p">Fall short on any event and you earned two extra hours of calisthenics designed to break you. But the circuses had a side effect no one advertised: the pairs that failed the most were getting stronger.</p>
+        </div>
+      </div>
       <div class="pullquote">
         Life is filled with circuses. You will fail. You will likely fail often. It will be painful. But if you persevere, it will make you stronger.
         <span class="pullquote-attr">Admiral William H. McRaven</span>
@@ -660,34 +662,26 @@
   <div class="divider"></div>
 
   <!-- ═══════════════════════════════════════ -->
-  <!-- VI. SLIDE HEAD FIRST -->
+  <!-- III. DARE GREATLY (LESSONS 6–7) -->
   <!-- ═══════════════════════════════════════ -->
-  <section class="vp" id="t6">
+  <section class="vp" id="t3">
     <div class="vp-inner">
-      <div class="section-numeral">VI</div>
-      <h2 class="section-h">You Must Dare Greatly</h2>
-      <p class="section-p">The obstacle course record stood for years &mdash; until one student went down the &ldquo;slide for life&rdquo; head first. Riskier. Faster. The record fell.</p>
-      <p class="section-p">The safe way was proven. It was also the reason the record never moved.</p>
-      <p class="section-p">Playing it safe feels responsible. Over a lifetime, it&rsquo;s the quiet way to guarantee you never find your edge. <strong>At some point you have to go head first.</strong></p>
-      <div class="pullquote">
-        Slide down the obstacle head first.
-        <span class="pullquote-attr">Admiral William H. McRaven</span>
+      <div class="section-numeral">III</div>
+      <h2 class="section-h">Dare Greatly</h2>
+      <div class="lesson">
+        <div class="lesson-num">06</div>
+        <div>
+          <div class="lesson-t">Slide down the obstacle head first</div>
+          <p class="lesson-p">The obstacle course record stood for years &mdash; until one student went down the &ldquo;slide for life&rdquo; head first. The safe way was proven. It was also the reason the record never moved.</p>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- ═══════════════════════════════════════ -->
-  <!-- VII. DON'T BACK DOWN FROM THE SHARKS -->
-  <!-- ═══════════════════════════════════════ -->
-  <section class="vp" id="t7">
-    <div class="vp-inner">
-      <div class="section-numeral">VII</div>
-      <h2 class="section-h">Stand Up to the Bullies</h2>
-      <p class="section-p">Before the night swim off San Clemente Island &mdash; water thick with sharks &mdash; the instructors gave simple guidance: if one circles you, stand your ground. Don&rsquo;t swim away. Don&rsquo;t act afraid. And if it charges, punch it in the snout.</p>
-      <p class="section-p">Bullies are all the same &mdash; in the water, in the schoolyard, in the office, in whole countries. <strong>They feed on fear and retreat.</strong></p>
-      <p class="section-p">The lesson isn&rsquo;t about sharks. It&rsquo;s that the moment you show you won&rsquo;t be moved, most predators look for easier prey.</p>
+      <div class="lesson">
+        <div class="lesson-num">07</div>
+        <div>
+          <div class="lesson-t">Don&rsquo;t back down from the sharks</div>
+          <p class="lesson-p">Night swim off San Clemente, water thick with sharks: stand your ground, don&rsquo;t act afraid &mdash; and if one charges, punch it in the snout. Bullies are all the same. They feed on fear, and they retreat the moment you show you won&rsquo;t be moved.</p>
+        </div>
+      </div>
       <div class="pullquote">
         If you hope to complete the swim, you will have to deal with the sharks.
         <span class="pullquote-attr">Admiral William H. McRaven</span>
@@ -698,53 +692,33 @@
   <div class="divider"></div>
 
   <!-- ═══════════════════════════════════════ -->
-  <!-- VIII. DARKEST MOMENT -->
+  <!-- IV. THE DARKEST HOURS (LESSONS 8–10) -->
   <!-- ═══════════════════════════════════════ -->
-  <section class="vp" id="t8">
+  <section class="vp" id="t4">
     <div class="vp-inner">
-      <div class="section-numeral">VIII</div>
-      <h2 class="section-h">Rise to the Occasion</h2>
-      <p class="section-p">The ship-attack dive is the darkest part of training &mdash; literally. Under an enemy hull at night, no light reaches you. You can&rsquo;t see your hands. The machinery hums above you and it&rsquo;s easy to get disoriented, easy to panic.</p>
-      <p class="section-p">And that&rsquo;s exactly where the mission gets done. <strong>At the darkest moment of the mission is the time to be calm, composed &mdash; your very best.</strong></p>
-      <p class="section-p">Everyone hits a keel moment eventually: the diagnosis, the loss, the failure that goes all the way down. What you&rsquo;ve practiced in small dark moments is what shows up in the big one.</p>
-      <div class="pullquote">
-        At the darkest moment of the mission, is the time when you must be calm, composed &mdash; when all your tactical skills, your physical power and all your inner strength must be brought to bear.
-        <span class="pullquote-attr">Admiral William H. McRaven</span>
+      <div class="section-numeral">IV</div>
+      <h2 class="section-h">The Darkest Hours</h2>
+      <div class="lesson">
+        <div class="lesson-num">08</div>
+        <div>
+          <div class="lesson-t">Be your very best in the darkest moment</div>
+          <p class="lesson-p">Under an enemy hull at night, no light reaches you &mdash; and that&rsquo;s exactly where the mission gets done. Everyone hits a keel moment eventually. What you practice in small dark moments shows up in the big one.</p>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- ═══════════════════════════════════════ -->
-  <!-- IX. SING IN THE MUD -->
-  <!-- ═══════════════════════════════════════ -->
-  <section class="vp" id="t9">
-    <div class="vp-inner">
-      <div class="section-numeral">IX</div>
-      <h2 class="section-h">Give People Hope</h2>
-      <p class="section-p">Hell Week, Wednesday night: the class stands neck-deep in the freezing mud of the Tijuana flats. The instructors offer a deal &mdash; if just five men quit, everyone else can come out of the mud and warm up by the fire.</p>
-      <p class="section-p">Eight hours of cold left. Some are ready to take the deal. Then one voice starts singing. Badly. Then two. Then the whole class &mdash; and somehow the mud feels a little warmer, the dawn a little closer.</p>
-      <p class="section-p"><strong>One person, singing, changed what the whole group believed was possible.</strong> Hope is contagious &mdash; and it only takes one carrier.</p>
-      <div class="pullquote">
-        If I have learned anything in my time traveling the world, it is the power of hope. The power of one person &mdash; Washington, Lincoln, King, Mandela and even a young girl from Pakistan, Malala &mdash; one person can change the world by giving people hope.
-        <span class="pullquote-attr">Admiral William H. McRaven</span>
+      <div class="lesson">
+        <div class="lesson-num">09</div>
+        <div>
+          <div class="lesson-t">Start singing when you&rsquo;re up to your neck in mud</div>
+          <p class="lesson-p">Hell Week, freezing mud, eight hours to dawn, and a standing offer: five quitters and everyone warms up by the fire. Then one voice started singing &mdash; and the whole class believed again. Hope is contagious, and it only takes one carrier.</p>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- ═══════════════════════════════════════ -->
-  <!-- X. NEVER RING THE BELL -->
-  <!-- ═══════════════════════════════════════ -->
-  <section class="vp" id="t10">
-    <div class="vp-inner">
-      <div class="section-numeral">X</div>
-      <h2 class="section-h">Never, Ever Quit</h2>
-      <p class="section-p">In the center of the training compound hangs a brass bell. Ring it, and the suffering ends instantly. No more 5 a.m. swims. No more cold. No more circuses. All you have to do is quit &mdash; publicly, with one pull of the rope.</p>
-      <p class="section-p">The ones who made it through weren&rsquo;t always the strongest or the fastest. They were the ones who <strong>simply refused to touch the bell.</strong></p>
-      <p class="section-p">Every hard thing you&rsquo;ll ever do hangs its own bell nearby. Quitting is always available, always easier, always ringing softly. The whole game is deciding &mdash; in advance &mdash; that it isn&rsquo;t an option.</p>
+      <div class="lesson">
+        <div class="lesson-num">10</div>
+        <div>
+          <div class="lesson-t">Never, ever ring the bell</div>
+          <p class="lesson-p">Ring the brass bell in the courtyard and the suffering ends instantly &mdash; all you have to do is quit, publicly. The ones who made it weren&rsquo;t the strongest. They simply refused to touch the bell. Decide in advance that quitting isn&rsquo;t an option.</p>
+        </div>
+      </div>
       <div class="pullquote">
         If you want to change the world, don&rsquo;t ever, ever ring the bell.
         <span class="pullquote-attr">Admiral William H. McRaven</span>
@@ -779,16 +753,10 @@
     const pages = [
       { id: 'hero', label: 'Intro' },
       { id: 'opener', label: 'The Speech' },
-      { id: 't1', label: 'I. Make Your Bed' },
-      { id: 't2', label: 'II. Help You Paddle' },
-      { id: 't3', label: 'III. Size of Your Heart' },
-      { id: 't4', label: 'IV. Sugar Cookie' },
-      { id: 't5', label: 'V. The Circus' },
-      { id: 't6', label: 'VI. Head First' },
-      { id: 't7', label: 'VII. The Sharks' },
-      { id: 't8', label: 'VIII. Darkest Moment' },
-      { id: 't9', label: 'IX. Sing in the Mud' },
-      { id: 't10', label: 'X. Never Ring the Bell' },
+      { id: 't1', label: 'I. The Foundations' },
+      { id: 't2', label: "II. Life's Not Fair" },
+      { id: 't3', label: 'III. Dare Greatly' },
+      { id: 't4', label: 'IV. The Darkest Hours' },
       { id: 'close', label: 'Close' },
     ];
 

@@ -32,14 +32,14 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      --bg: #0a0f16;
-      --card: #121a26;
-      --accent: #c9a86a;   /* brass / dawn gold */
-      --accent2: #7d97ad;  /* steel blue */
-      --accent3: #94794a;  /* deep brass */
-      --text: #d9dee4;
-      --muted: #6e7883;
-      --white: #f5f6f8;
+      --bg: #120b05;
+      --card: #1e130a;
+      --accent: #cc6414;   /* burnt orange, lifted for dark bg */
+      --accent2: #b9b2a3;  /* UT limestone, muted */
+      --accent3: #bf5700;  /* true UT burnt orange */
+      --text: #ded7cb;
+      --muted: #857b6d;
+      --white: #faf6f0;
     }
 
     html { scroll-behavior: smooth; }
@@ -68,9 +68,9 @@
       position: absolute;
       inset: -10%;
       background:
-        radial-gradient(ellipse 70% 35% at 50% 108%, rgba(201,168,106,0.10), transparent 70%),
-        radial-gradient(ellipse 50% 30% at 15% 15%, rgba(125,151,173,0.06), transparent 70%),
-        radial-gradient(ellipse 55% 35% at 85% 45%, rgba(125,151,173,0.05), transparent 70%);
+        radial-gradient(ellipse 70% 35% at 50% 108%, rgba(191,87,0,0.14), transparent 70%),
+        radial-gradient(ellipse 50% 30% at 15% 15%, rgba(185,178,163,0.05), transparent 70%),
+        radial-gradient(ellipse 55% 35% at 85% 45%, rgba(185,178,163,0.04), transparent 70%);
       animation: drift 45s ease-in-out infinite alternate;
     }
 
@@ -84,8 +84,8 @@
           178deg,
           transparent 0,
           transparent 90px,
-          rgba(125,151,173,0.03) 90px,
-          rgba(125,151,173,0.03) 91px,
+          rgba(185,178,163,0.03) 90px,
+          rgba(185,178,163,0.03) 91px,
           transparent 92px,
           transparent 180px
         );
@@ -125,7 +125,7 @@
       padding: 0.7rem 1rem;
       border: 1px solid rgba(255,255,255,0.10);
       border-radius: 999px;
-      background: rgba(10,15,22,0.78);
+      background: rgba(18,11,5,0.78);
       color: var(--white);
       text-decoration: none;
       font-size: 0.72rem;
@@ -138,7 +138,7 @@
 
     .home-link:hover {
       color: var(--accent);
-      border-color: rgba(201,168,106,0.45);
+      border-color: rgba(204,100,20,0.5);
       transform: translateY(-1px);
     }
 
@@ -205,8 +205,8 @@
     /* ─── HERO ─── */
     .hero {
       background:
-        radial-gradient(ellipse at 50% 30%, rgba(201,168,106,0.10) 0%, transparent 60%),
-        radial-gradient(ellipse at 80% 80%, rgba(125,151,173,0.07) 0%, transparent 50%);
+        radial-gradient(ellipse at 50% 30%, rgba(191,87,0,0.14) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 80%, rgba(185,178,163,0.06) 0%, transparent 50%);
       text-align: center;
     }
 
@@ -256,7 +256,7 @@
       display: inline-block;
       margin-top: 2.5rem;
       padding: 0.55rem 1.1rem;
-      border: 1px solid rgba(201,168,106,0.35);
+      border: 1px solid rgba(204,100,20,0.45);
       border-radius: 999px;
       font-family: 'Playfair Display', serif;
       font-style: italic;
@@ -275,7 +275,7 @@
       border-radius: 16px;
       overflow: hidden;
       background: #000;
-      box-shadow: 0 0 80px rgba(201,168,106,0.16);
+      box-shadow: 0 0 80px rgba(191,87,0,0.20);
     }
 
     .hero-video iframe {
@@ -317,8 +317,8 @@
       width: 56px;
       height: 56px;
       border-radius: 50%;
-      background: rgba(10,15,22,0.72);
-      border: 1px solid rgba(201,168,106,0.4);
+      background: rgba(18,11,5,0.72);
+      border: 1px solid rgba(204,100,20,0.45);
       backdrop-filter: blur(12px);
       display: flex;
       align-items: center;
@@ -328,8 +328,8 @@
 
     .hero-video:hover .play-btn {
       transform: scale(1.1);
-      border-color: rgba(201,168,106,0.65);
-      background: rgba(10,15,22,0.88);
+      border-color: rgba(204,100,20,0.7);
+      background: rgba(18,11,5,0.88);
     }
 
     .hero-video .play-btn svg { width: 20px; height: 20px; margin: 0; }
@@ -569,11 +569,14 @@
         <span>Six months of SEAL training</span>
         <span>One speech that became a book</span>
       </div>
-      <!-- Reflection video coming soon. When Jack's podcast recording is ready, replace the
-           pill below with the hero-video block (thumbnail /make-your-bed-thumbnail.jpg +
-           play overlay calling playVideo() with the new YouTube id) — see this-is-water.html
-           for the exact markup. -->
-      <div class="hero-coming">Timeless reflection episode &mdash; coming soon</div>
+      <div class="hero-video" id="heroVideo">
+        <img class="video-thumb" src="/stay-in-the-game-thumbnail.jpg" alt="Stay in the Game &mdash; a Timeless reflection on Make Your Bed" />
+        <div class="video-overlay" onclick="playVideo()">
+          <div class="play-btn">
+            <svg viewBox="0 0 20 20" fill="none" width="20" height="20"><path d="M6.5 3.5L16 10L6.5 16.5V3.5Z" fill="#cc6414"/></svg>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -750,6 +753,11 @@
   </footer>
 
   <script>
+    function playVideo() {
+      const container = document.getElementById('heroVideo');
+      container.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/dPnREDvMoRI?autoplay=1&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&controls=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+    }
+
     const pages = [
       { id: 'hero', label: 'Intro' },
       { id: 'opener', label: 'The Speech' },

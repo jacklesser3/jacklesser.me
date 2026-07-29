@@ -297,3 +297,20 @@ hr {
 .animate-delay-300 { animation-delay: 300ms; }
 .animate-delay-400 { animation-delay: 400ms; }
 .animate-delay-500 { animation-delay: 500ms; }
+
+/* ── The Shelf (/shelf) — cream editorial page, ink links ── */
+.shelf-ui a {
+  color: rgba(42, 33, 24, 0.6);
+}
+
+.shelf-ui a:hover {
+  color: #2a2118;
+}
+
+.shelf-ui a.shelf-read-link {
+  color: #5a4030;
+}
+
+.shelf-ui a.shelf-read-link:hover {
+  color: #2a2118;
+}

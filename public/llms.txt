@@ -16,6 +16,10 @@ Jack Lesser leads programming at Bitcoin Park, teaches yoga and breathwork, and 
 - [Ben Francis x Chris Williamson](https://jacklesser.me/ben-francis-podcast.html): The Gymshark founder on quiet operators, the long game, and ambitions for the business over ambitions for yourself.
 - [Make Your Bed — Admiral William H. McRaven](https://jacklesser.me/make-your-bed.html): Ten lessons from Navy SEAL training — start with a task completed, and never, ever ring the bell.
 
+## Experiences
+
+- [The Shelf](https://jacklesser.me/shelf): An interactive 3D library — clothbound volumes of Timeless Practice episodes and essays on a walnut shelf; pull any book forward to inspect it and read the piece behind it.
+
 ## Pillars
 
 - [Freedom Tech](https://jacklesser.me/freedom-tech): Bitcoin, sovereign AI, and privacy — technology that expands individual freedom.

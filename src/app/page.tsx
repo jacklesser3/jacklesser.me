@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { Container } from "@/components/ui/Container";
 import { PodcastReviewsList, type PodcastReview } from "@/components/sections/PodcastReviewsList";
 
@@ -326,6 +328,25 @@ export default function Home() {
           </div>
 
           <PodcastReviewsList reviews={podcastReviews} />
+
+          <Link
+            href="/shelf"
+            className="group mt-12 flex flex-col items-center gap-3 rounded-2xl border border-white/[0.08] bg-white/[0.02] px-6 py-10 text-center transition-colors hover:border-[rgba(217,165,114,0.35)] hover:bg-white/[0.04] sm:mt-16"
+          >
+            <p className="text-[0.65rem] font-medium uppercase tracking-[0.36em] text-[rgba(184,137,90,0.6)]">
+              New
+            </p>
+            <span className="font-[family-name:var(--font-cormorant)] text-3xl italic leading-tight text-[var(--color-text-primary)] sm:text-4xl">
+              The Shelf
+            </span>
+            <p className="max-w-md text-sm leading-6 text-[var(--color-text-secondary)]">
+              Every reflection, bound. Browse the clothbound volumes on a
+              walnut shelf and pull one forward to read it.
+            </p>
+            <span className="mt-1 text-sm text-[var(--color-text-muted)] transition-colors group-hover:text-[var(--color-text-secondary)]">
+              Enter the library →
+            </span>
+          </Link>
         </Container>
       </section>
     </div>

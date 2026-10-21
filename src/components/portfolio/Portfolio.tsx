@@ -107,9 +107,9 @@ function VideoCarousel({ channel, items }: { channel: string; items: Video[] }) 
 }
 
 const pillars = [
-  { name: "Aura", number: "01 / CONNECT", subtitle: "Spaces & connection", text: "The feeling of being there. Physical community and connection, shaped by the details that make a space come alive.", tags: ["Setting · Music · Photography", "Food · Drink · Atmosphere"], href: "#jp-photography", action: "Explore the photography ↗" },
-  { name: "Soul", number: "02 / FEEL", subtitle: "Presence, ideas & collaboration", text: "Coming back to the body. Exploring what comes next. Workshops and programming around frontier ideas, freedom technology, and freedom from technology—creating space for presence, new perspectives, and collaboration.", tags: ["Frontier ideas · Freedom technology", "Presence · Workshops · Collaboration"], href: "/freedom-from-tech", action: "Explore the practice ↗" },
-  { name: "Time", number: "03 / CREATE", subtitle: "Digital creation", text: "Giving ideas a digital home. Design, interfaces, technology, and the ongoing practice of making things online.", tags: ["Design · Web UX/UI", "Vibe coding · Technology"], href: "/timeless", action: "Explore Time ↗" },
+  { name: "Aura", number: "01 / CONNECT", subtitle: "Spaces & connection", text: "The feeling of being there. Physical community and connection, shaped by the details that make a space come alive.", tags: ["Environment · Music · Photography", "Food · Drink · Atmosphere · Aesthetic"], href: "#jp-photography", action: "Explore the photography ↗" },
+  { name: "Soul", number: "02 / FEEL", subtitle: "Presence, ideas & collaboration", text: "Coming back to the body. Exploring what comes next. Workshops and programming around frontier ideas, freedom technology, and freedom from technology—creating space for presence, new perspectives, and collaboration.", tags: ["Frontier ideas · Freedom technology", "Presence · Workshops · Collaboration · Leadership"], href: "/freedom-from-tech", action: "Explore the practice ↗" },
+  { name: "Time", number: "03 / CREATE", subtitle: "Digital creation", text: "Giving ideas a digital home. Design, interfaces, technology, and the ongoing practice of making things online.", tags: ["Design · Web UX/UI", "Production · Technology · Distribution"], href: "/timeless", action: "Explore Time ↗" },
 ];
 
 export default function Portfolio() {

@@ -31,7 +31,7 @@ export function ScrollFlow() {
         const edge = width - (mobile ? 5 : 14) - i * spacing;
         const bend = center + 210 + i * 5;
         // Distribution expands into a wider, evenly spaced fan below the door.
-        const spread = width * (mobile ? .20 : .26);
+        const spread = width - (mobile ? 10 : 28);
         const destination = width - (mobile ? 5 : 14) - (i / 14) * spread;
         // Independent, uneven paths across the canvas gradually resolve into
         // a shared horizontal tangent at the door. Deterministic on resize.

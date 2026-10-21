@@ -150,9 +150,15 @@
 #jack-portfolio .jp-mixed-gallery figure:nth-child(4) img{object-position:50% 15%}
 @media(max-width:600px){#jack-portfolio .jp-mixed-gallery{grid-template-rows:auto auto}#jack-portfolio .jp-mixed-gallery figure:nth-child(n){aspect-ratio:3 / 2;height:auto}#jack-portfolio .jp-mixed-gallery img{object-position:50% 10%}}
 
-/* Four balanced frames avoid the panoramic crop on the bottom photograph. */
-#jack-portfolio .jp-mixed-gallery{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto auto}
-#jack-portfolio .jp-mixed-gallery figure:nth-child(n){grid-column:auto;grid-row:auto;aspect-ratio:3 / 2;height:auto}
+/* Asymmetric editorial mosaic with a deeper lower frame for people. */
+@media(min-width:601px){
+#jack-portfolio .jp-mixed-gallery{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:auto auto;align-items:stretch}
+#jack-portfolio .jp-mixed-gallery figure:nth-child(n){height:auto;aspect-ratio:auto}
+#jack-portfolio .jp-mixed-gallery figure:nth-child(1){grid-column:1;grid-row:1 / 3}
+#jack-portfolio .jp-mixed-gallery figure:nth-child(2){grid-column:2;grid-row:1;aspect-ratio:16 / 9}
+#jack-portfolio .jp-mixed-gallery figure:nth-child(3){grid-column:3;grid-row:1;aspect-ratio:16 / 9}
+#jack-portfolio .jp-mixed-gallery figure:nth-child(4){grid-column:2 / 4;grid-row:2;aspect-ratio:16 / 9}
+}
 #jack-portfolio .jp-photo-open{display:block;width:100%;height:100%;border:0;padding:0;background:transparent;cursor:zoom-in}
 #jack-portfolio .jp-photo-open:focus-visible{outline:3px solid #d7b675;outline-offset:-4px}
 #jack-portfolio .jp-photo-dialog{position:fixed;inset:0;width:100vw;max-width:none;height:100dvh;max-height:none;margin:0;padding:60px 24px 20px;border:0;background:#091421f5;color:#fff;z-index:1000}

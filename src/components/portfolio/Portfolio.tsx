@@ -92,7 +92,7 @@ function PhotoMosaic() {
         <div className="jp-viewer-controls"><button type="button" onClick={() => move(-1)} aria-label="Previous photo">←</button><span aria-live="polite">{selected + 1} / {galleryPhotos.length}</span><button type="button" onClick={() => move(1)} aria-label="Next photo">→</button></div>
       </>}
     </dialog>
-    <div className="jp-gallery-bottom"><button type="button" className="jp-photo-pause" onClick={rotation.toggle} aria-label={rotation.paused ? "Play photo slideshow" : "Pause photo slideshow"}>{rotation.paused ? "Play slideshow" : "Pause slideshow"}</button><span>From the archive</span></div>
+    <div className="jp-gallery-bottom"><button type="button" className="jp-photo-pause" onClick={rotation.toggle} aria-label={rotation.paused ? "Play photo portfolio" : "Pause photo portfolio"}>{rotation.paused ? "Play portfolio" : "Pause portfolio"}</button><span>From the archive</span></div>
   </div>;
 }
 
@@ -114,7 +114,7 @@ function VideoCarousel({ channel, items }: { channel: string; items: Video[] }) 
         <div className="jp-video-meta">{video.label}</div><h4>{video.title}</h4><p>{video.subtitle}</p><a className="jp-watch" href={`https://www.youtube.com/watch?v=${video.id}`} target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a>
       </article>)}
     </div>
-    <div className="jp-carousel-controls"><button type="button" onClick={() => move(-1)} aria-label={`Previous ${channel} video`}>←</button><span className="jp-carousel-count" aria-live={rotation.paused ? "polite" : "off"}>{String(active + 1).padStart(2, "0")} / {String(items.length).padStart(2, "0")}</span><button type="button" onClick={() => move(1)} aria-label={`Next ${channel} video`}>→</button><button type="button" className="jp-toggle" onClick={() => { setPlaying(null); rotation.toggle(); }} aria-label={`${rotation.paused ? "Play" : "Pause"} ${channel} slideshow`}>{rotation.paused ? "Play" : "Pause"}</button></div>
+    <div className="jp-carousel-controls"><button type="button" onClick={() => move(-1)} aria-label={`Previous ${channel} video`}>←</button><span className="jp-carousel-count" aria-live={rotation.paused ? "polite" : "off"}>{String(active + 1).padStart(2, "0")} / {String(items.length).padStart(2, "0")}</span><button type="button" onClick={() => move(1)} aria-label={`Next ${channel} video`}>→</button><button type="button" className="jp-toggle" onClick={() => { setPlaying(null); rotation.toggle(); }} aria-label={`${rotation.paused ? "Play" : "Pause"} ${channel} portfolio`}>{rotation.paused ? "Play" : "Pause"}</button></div>
   </div>;
 }
 

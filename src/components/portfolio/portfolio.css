@@ -215,3 +215,7 @@
 #jack-portfolio .jp-ribbon-strand{opacity:.25}
 #jack-portfolio .jp-ribbon-frame{opacity:.65}
 @media(max-width:600px){#jack-portfolio .jp-ribbon-strand{opacity:.17}}
+
+/* One navy canvas keeps the photography, ribbon and media continuous. */
+#jack-portfolio{color-scheme:dark;--paper:#172943;--ink:#e8eff9;--muted:#a7bad2;--line:#354a66}
+#jack-portfolio .jp-capture,#jack-portfolio .jp-media{background:transparent}

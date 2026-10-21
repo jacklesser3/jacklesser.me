@@ -41,6 +41,21 @@ const pools = [
 
 const galleryPhotos = pools.flat();
 
+function FlowArtwork() {
+  return <svg className="jp-flow-art" viewBox="0 0 1440 440" fill="none" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice">
+    <g className="jp-flow-lines" strokeWidth="1">
+      {Array.from({ length: 15 }, (_, i) => {
+        const gather = 207 + (i - 7) * 2.6;
+        return <path key={i} d={`M -100 ${-170 + i * 39} C 210 ${-170 + i * 39}, 295 ${gather}, 560 ${gather} S 670 ${gather}, 730 ${gather} C 945 ${gather}, 1130 ${-95 + i * 42}, 1540 ${-95 + i * 42}`} />;
+      })}
+    </g>
+    <g className="jp-flow-frame" strokeWidth="1.2" strokeLinejoin="round">
+      <path d="M 560 92 L 622 133 L 622 294 L 560 334 Z" />
+      <path d="M 622 133 L 815 153 L 815 270" />
+    </g>
+  </svg>;
+}
+
 function PhotoMosaic() {
   const rotation = useRotation(3000);
   const dialog = useRef<HTMLDialogElement>(null);
@@ -119,7 +134,7 @@ export default function Portfolio() {
     <div className="jp-caption"><span>A portfolio of experiences, images, and things I’m building.</span><span>Jack Lesser / Selected work</span></div>
     <section className="jp-section" id="jp-pillars"><div className="jp-section-head"><div><div className="jp-eyebrow">One philosophy, three expressions</div><h2>It starts with how it feels.</h2></div></div><div className="jp-pillars">{pillars.map(pillar => <article key={pillar.name}><div className="jp-pillar-number">{pillar.number}</div><h3>{pillar.name}</h3><div className="jp-pillar-subtitle">{pillar.subtitle}</div><p>{pillar.text}</p><div className="jp-pillar-tags">{pillar.tags.map(tag => <div key={tag}>{tag}</div>)}</div><Link className="jp-pillar-link" href={pillar.href}>{pillar.action}</Link></article>)}</div></section>
     <section className="jp-section jp-capture" id="jp-photography"><div className="jp-section-head"><div><div className="jp-eyebrow">Capture / Selected photography</div><h2>Produced locally.</h2></div><span className="jp-gallery-context">People, places &amp; everything between.</span></div><PhotoMosaic /></section>
-    <section className="jp-media" id="jp-channels"><div className="jp-eyebrow">Media / Channel operations</div><div className="jp-media-top"><h2>Distributed globally.</h2><p>I operate the Bitcoin Park and Tangents YouTube channels. The ongoing work of sharing conversations, ideas, and the people behind them.</p></div>
+    <section className="jp-media" id="jp-channels"><div className="jp-media-intro"><FlowArtwork /><div className="jp-flow-steps" aria-label="The process"><span>01 / Separate</span><span>02 / Curate</span><span>03 / Distribute</span></div><div className="jp-eyebrow">Media / Channel operations</div><div className="jp-media-top"><h2>Distributed globally.</h2><p>I operate the Bitcoin Park and Tangents YouTube channels. The ongoing work of sharing conversations, ideas, and the people behind them.</p></div></div>
       {(["Bitcoin Park", "Tangents"] as const).map(channel => <article className="jp-channel jp-channel-real" key={channel}><div className="jp-channel-heading"><div><div className="jp-role">Channel operations</div><h3>{channel}</h3></div><a className="jp-channel-link" href={channel === "Bitcoin Park" ? "https://www.youtube.com/@BitcoinPark/videos" : "https://www.youtube.com/@tangents_d/videos"} target="_blank" rel="noopener noreferrer">Explore the channel ↗</a></div><p className="jp-channel-description">{channel === "Bitcoin Park" ? "Conversations from Bitcoin Takeover, NEMS, Imagine IF, and the wider Bitcoin Park community." : "Following ideas across money, technology, and open systems."}</p><VideoCarousel channel={channel} items={videos[channel]} /></article>)}
     </section>
     <section className="jp-section jp-about"><div className="jp-eyebrow">The person behind the practice</div><div><h2>Different forms.<br />The same attention.</h2><p>I’m Jack. Vibes Architecture is how I connect my interests in wellness, digital creation, and community. Sometimes that means making something. Sometimes it means bringing people together. Sometimes it means noticing a moment and capturing it.</p><Link href="/timeless">Explore Timeless: reflections, reviews &amp; The Shelf ↗</Link></div></section>

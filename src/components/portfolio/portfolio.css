@@ -169,3 +169,17 @@
 #jack-portfolio .jp-photo-dialog button{border:1px solid #ffffff55;background:#14263b;color:#fff;border-radius:50%;width:44px;height:44px;font-size:22px}
 #jack-portfolio .jp-viewer-close{position:absolute;right:20px;top:12px}
 #jack-portfolio .jp-viewer-controls{display:flex;align-items:center;gap:24px;font-size:14px;font-variant-numeric:tabular-nums}
+
+/* A quiet flow of ideas: gathered, curated, then shared outward. */
+#jack-portfolio .jp-media{overflow:hidden}
+#jack-portfolio .jp-media-intro{position:relative;isolation:isolate;padding-top:210px}
+#jack-portfolio .jp-flow-art{position:absolute;z-index:-1;pointer-events:none;left:-6%;top:-65px;width:112%;height:380px;mask-image:linear-gradient(to bottom,transparent,#000 12%,#000 68%,transparent)}
+#jack-portfolio .jp-flow-lines{stroke:#85b5d9;opacity:.3}
+#jack-portfolio .jp-flow-frame{stroke:#dfc17e;opacity:.65}
+#jack-portfolio .jp-flow-steps{display:grid;grid-template-columns:repeat(3,1fr);text-align:center;margin:0 0 44px;gap:20px;color:#d4ba75;font-size:10px;letter-spacing:2px;text-transform:uppercase}
+#jack-portfolio .jp-media-intro .jp-eyebrow,#jack-portfolio .jp-media-intro .jp-media-top{position:relative}
+@media(max-width:600px){
+#jack-portfolio .jp-media-intro{padding-top:160px}
+#jack-portfolio .jp-flow-art{width:180%;left:-40%;height:290px;top:-45px}
+#jack-portfolio .jp-flow-steps{font-size:8px;letter-spacing:1px;gap:10px;margin-bottom:32px}
+}

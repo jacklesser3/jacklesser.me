@@ -108,7 +108,7 @@ function VideoCarousel({ channel, items }: { channel: string; items: Video[] }) 
 const pillars = [
   { name: "Aura", number: "01 / CONNECT", subtitle: "Spaces & connection", text: "The feeling of being there. Physical community and connection, shaped by the details that make a space come alive.", tags: ["Setting · Music · Photography", "Food · Drink · Atmosphere"], href: "#jp-photography", action: "Explore the photography ↗" },
   { name: "Soul", number: "02 / FEEL", subtitle: "Movement & presence", text: "Coming back to the body. A full spectrum of wellness experiences, from movement and strength to breath and stillness.", tags: ["Yoga · Meditation · Running", "Lifting · Breathwork"], href: "/freedom-from-tech", action: "Explore the practice ↗" },
-  { name: "Timeless", number: "03 / CREATE", subtitle: "Digital creation", text: "Giving ideas a digital home. Design, interfaces, technology, and the ongoing practice of making things online.", tags: ["Design · Web UX/UI", "Vibe coding · Technology"], href: "/timeless", action: "Explore Timeless ↗" },
+  { name: "Time", number: "03 / CREATE", subtitle: "Digital creation", text: "Giving ideas a digital home. Design, interfaces, technology, and the ongoing practice of making things online.", tags: ["Design · Web UX/UI", "Vibe coding · Technology"], href: "/timeless", action: "Explore Timeless ↗" },
 ];
 
 export default function Portfolio() {

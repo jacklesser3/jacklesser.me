@@ -37,7 +37,7 @@
   },
   "/portfolio/photos/nems-speaker-coral-cropped.svg": {
     "name": "Sen. Marsha Blackburn",
-    "event": "NEMS",
+    "event": "Nashville Energy & Mining Summit (NEMS)",
     "date": "2026",
     "bio": "U.S. Senator representing Tennessee.",
     "identitySource": "User identification, October 21, 2026",
@@ -46,13 +46,13 @@
   },
   "/portfolio/photos/nems-2026-02-49-D81_7534.webp": {
     "name": "Two seated panelists smiling",
-    "event": "NEMS",
+    "event": "Nashville Energy & Mining Summit (NEMS)",
     "date": "2026",
     "bio": "Two seated panelists smiling."
   },
   "/portfolio/photos/nems-2026-03-60-D81_7555.webp": {
     "name": "Rapha Zagury",
-    "event": "NEMS",
+    "event": "Nashville Energy & Mining Summit (NEMS)",
     "date": "2026",
     "bio": "CEO of Twenty One Capital, with a background in finance and Bitcoin infrastructure.",
     "x": "https://x.com/RaphaZagury",
@@ -60,7 +60,7 @@
   },
   "/portfolio/photos/nems-speaker-gesture-cropped.svg": {
     "name": "Michael Schmid (Schnitzel)",
-    "event": "NEMS",
+    "event": "Nashville Energy & Mining Summit (NEMS)",
     "date": "2026",
     "bio": "Michael Schmid of the 256 Foundation, supporting open-source Bitcoin mining.",
     "identitySource": "User identification, October 21, 2026"
@@ -332,20 +332,20 @@
   },
   "/portfolio/photos/summit-blue-shirt-conversation.webp": {
     "name": "Thomas Templeton in conversation",
-    "event": "Nashville Energy & Mining Summit",
+    "event": "Nashville Energy & Mining Summit (NEMS)",
     "date": "2026",
     "bio": "Head of Hardware at Block."
   },
   "/portfolio/photos/summit-black-jacket-speaker.webp": {
     "name": "Will Paul",
-    "event": "Nashville Energy & Mining Summit",
+    "event": "Nashville Energy & Mining Summit (NEMS)",
     "date": "2026",
     "bio": "Head of Public Policy at Block.",
     "identitySource": "User identification, October 21, 2026"
   },
   "/portfolio/photos/summit-plaid-speaker.webp": {
     "name": "Harry Sudock",
-    "event": "Nashville Energy & Mining Summit",
+    "event": "Nashville Energy & Mining Summit (NEMS)",
     "date": "2026",
     "bio": "Chief Business Officer at CleanSpark, working across Bitcoin mining and compute infrastructure.",
     "x": "https://x.com/harry_sudock",
@@ -353,14 +353,14 @@
   },
   "/portfolio/photos/summit-powering-places.webp": {
     "name": "Nacho Pauls",
-    "event": "Texas Energy & Mining Summit",
+    "event": "Texas Energy & Mining Summit (TEMS)",
     "date": "May 20–21, 2026",
     "bio": "Chief Commercial Officer at OCEAN, developing open Bitcoin mining infrastructure.",
     "linkedin": "https://www.linkedin.com/in/nacho-pauls-67501b115/"
   },
   "/portfolio/photos/summit-denim-presenter.webp": {
     "name": "Margot Paez",
-    "event": "Texas Energy & Mining Summit",
+    "event": "Texas Energy & Mining Summit (TEMS)",
     "date": "May 20–21, 2026",
     "bio": "Presenting at the Texas Energy & Mining Summit."
   },
@@ -380,7 +380,7 @@
   },
   "/portfolio/photos/nems-rory-murray.jpg": {
     "name": "Rory Murray",
-    "event": "Nashville Energy & Mining Summit",
+    "event": "Nashville Energy & Mining Summit (NEMS)",
     "date": "2026",
     "bio": "Speaking on the Financialization of Energy Assets panel at NEMS.",
     "identitySource": "User confirmation, October 21, 2026"

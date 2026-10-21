@@ -42,16 +42,31 @@ const archivePools = [
 ];
 
 // Portraits stay in the tall first tile; landscapes rotate through the wide tiles.
-// Start with speakers and travel, saving both yoga photographs for later.
+// Imagine IF leads the selection, with other experiences interleaved and yoga later.
 const pools = [
-  [photos.GFTS[4], photos["Practice and travel"][4], photos["Peru 2026"][3], photos.GFTS[0], photos["Practice and travel"][1], photos["Practice and travel"][0]],
-  [photos.GFTS[3], photos["Practice and travel"][2], photos["Selected additions"][1], photos.GFTS[9], photos["Peru 2026"][0], photos["Bitcoin Takeover 2026"][9]],
-  [photos.GFTS[14], photos["Practice and travel"][3], photos["NEMS 2026"][0], photos.GFTS[11], photos.GFTS[12], photos["Bitcoin Takeover 2026"][10]],
-  [photos.IF26[7], photos["Selected additions"][0], photos["Peru 2026"][1], photos.IF26[4], photos.IF26[8], photos.GFTS[6]],
+  [photos.GFTS[4], photos["Practice and travel"][4], photos["Peru 2026"][3], photos.IF26[9], photos["Practice and travel"][1], photos["Practice and travel"][0]],
+  [photos.IF26[4], photos["Selected additions"][1], photos["Practice and travel"][2], photos.IF26[5], photos.GFTS[9], photos["Bitcoin Takeover 2026"][9]],
+  [photos["NEMS 2026"][0], photos.IF26[6], photos.GFTS[11], photos["Practice and travel"][3], photos.IF26[8], photos["Peru 2026"][0]],
+  [photos.IF26[7], photos.GFTS[3], photos["Selected additions"][0], photos["Peru 2026"][1], photos["Bitcoin Takeover 2026"][10], photos.GFTS[6]],
 ];
-const featuredPhotos = pools.flat();
+// Match viewer order to successive mosaic rounds rather than exhausting each tile.
+const featuredPhotos = pools[0].flatMap((_, round) => pools.map(pool => pool[round]));
 const featuredSources = new Set(featuredPhotos.map(photo => photo.src));
-const archivePhotos = archivePools.flat().filter(photo => !featuredSources.has(photo.src));
+const remainingPhotos = archivePools.flat().filter(photo => !featuredSources.has(photo.src));
+// Alternate experiences in See more, including the numbered viewer.
+const eventGroups = new Map<string, typeof remainingPhotos>();
+for (const photo of remainingPhotos) {
+  const event = (photoDetails as Record<string, { event: string }>)[photo.src].event.split(" · ")[0];
+  const group = eventGroups.get(event) ?? [];
+  group.push(photo);
+  eventGroups.set(event, group);
+}
+const orderedGroups = [...eventGroups.entries()].sort(([a, aa], [b, bb]) =>
+  a === "Imagine IF" ? -1 : b === "Imagine IF" ? 1 : bb.length - aa.length);
+const archivePhotos: typeof remainingPhotos = [];
+for (let round = 0; orderedGroups.some(([, group]) => round < group.length); round++) {
+  for (const [, group] of orderedGroups) if (group[round]) archivePhotos.push(group[round]);
+}
 type PhotoDetails = { name: string; event: string; date: string; bio: string; x?: string; linkedin?: string };
 const detailFor = (src: string): PhotoDetails => (photoDetails as Record<string, PhotoDetails>)[src];
 

@@ -261,3 +261,16 @@
 #jack-portfolio .jp-mixed-gallery img[src*="teaching-"]{object-position:50% 40%}
 #jack-portfolio .jp-mixed-gallery img[src*="japan-"]{object-position:50% 50%}
 #jack-portfolio .jp-mixed-gallery img[src*="seoul-library"]{object-position:50% 20%}
+
+#jack-portfolio .jp-photo-archive{margin-top:40px;padding-top:32px;border-top:1px solid var(--line)}
+#jack-portfolio .jp-archive-heading{margin-bottom:24px}
+#jack-portfolio .jp-archive-heading h3{margin:0 0 8px}
+#jack-portfolio .jp-archive-heading p{color:var(--muted);margin:0}
+#jack-portfolio .jp-archive-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 20px}
+#jack-portfolio .jp-archive-grid button{border:0;background:transparent;color:inherit;text-align:left;padding:0;cursor:pointer;min-width:0}
+#jack-portfolio .jp-archive-grid img{width:100%;aspect-ratio:4/3;object-fit:contain;background:#101e31;display:block}
+#jack-portfolio .jp-archive-grid button>span{display:block;padding-top:12px;font-size:13px}
+#jack-portfolio .jp-archive-grid strong{display:block;margin-bottom:4px}
+#jack-portfolio .jp-archive-grid span span{color:var(--muted);font-size:11px}
+#jack-portfolio .jp-archive-grid button:focus-visible{outline:2px solid #dfc17e;outline-offset:6px}
+@media(max-width:600px){#jack-portfolio .jp-archive-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 12px}}

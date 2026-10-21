@@ -34,14 +34,23 @@ function useRotation(delay: number) {
   return { ref, step, setStep, paused: paused || reduced, toggle: () => { if (reduced) setReduced(false); setPaused(p => !reduced && !p); }, setPaused, setEngaged };
 }
 
-const pools = [
+const archivePools = [
   [photos.GFTS[4], photos.IF26[4], photos.GFTS[5], photos["Practice and travel"][0], photos.IF26[5], photos["Selected additions"][2], photos.GFTS[6], photos.IF26[6], photos.GFTS[7], photos.IF26[9], photos["Practice and travel"][1], photos.IF26[10], photos.GFTS[12], photos["Practice and travel"][4], photos["Bitcoin Takeover 2026"][9]],
   [photos.GFTS[3], photos.GFTS[2], photos["Practice and travel"][2], photos.GFTS[0], photos["Selected additions"][1], photos.IF26[1], photos["Peru 2026"][2], photos["Peru 2026"][0], photos.GFTS[9], photos.GFTS[14]],
   [photos["Bitcoin Takeover 2026"][0], photos["Bitcoin Takeover 2026"][2], photos["NEMS 2026"][0], photos["NEMS 2026"][3], photos["Practice and travel"][3], photos.IF26[8], photos["Selected additions"][4], photos.GFTS[10], photos.GFTS[11], photos["Bitcoin Takeover 2026"][5], photos["Bitcoin Takeover 2026"][6], photos["Bitcoin Takeover 2026"][8]],
   [photos.IF26[7], photos["NEMS 2026"][2], photos["Selected additions"][0], photos["Bitcoin Takeover 2026"][1], photos["Bitcoin Takeover 2026"][3], photos.GFTS[13], photos["Selected additions"][3], photos["Bitcoin Takeover 2026"][4], photos["Bitcoin Takeover 2026"][7], photos["Bitcoin Takeover 2026"][10], photos["NEMS 2026"][4]],
 ];
 
-const galleryPhotos = pools.flat();
+// Six images per tile keep the featured rotation short and balanced.
+const pools = [
+  [photos.IF26[4], photos["Practice and travel"][0], photos.GFTS[4], photos["Practice and travel"][4], photos.GFTS[6], photos.GFTS[12]],
+  [photos.GFTS[3], photos["Practice and travel"][2], photos["Selected additions"][1], photos.GFTS[9], photos["Peru 2026"][0], photos["Bitcoin Takeover 2026"][9]],
+  [photos.GFTS[14], photos["Practice and travel"][3], photos["NEMS 2026"][0], photos.GFTS[11], photos["Peru 2026"][3], photos["Bitcoin Takeover 2026"][10]],
+  [photos.IF26[7], photos["Selected additions"][0], photos["Peru 2026"][1], photos["Practice and travel"][1], photos.IF26[8], photos.GFTS[0]],
+];
+const featuredPhotos = pools.flat();
+const featuredSources = new Set(featuredPhotos.map(photo => photo.src));
+const archivePhotos = archivePools.flat().filter(photo => !featuredSources.has(photo.src));
 type PhotoDetails = { name: string; event: string; date: string; bio: string; x?: string; linkedin?: string };
 const detailFor = (src: string): PhotoDetails => (photoDetails as Record<string, PhotoDetails>)[src];
 
@@ -49,6 +58,9 @@ function PhotoMosaic() {
   const rotation = useRotation(3000);
   const dialog = useRef<HTMLDialogElement>(null);
   const [selected, setSelected] = useState(0);
+  const [archiveOpen, setArchiveOpen] = useState(false);
+  const [viewerCollection, setViewerCollection] = useState<"featured" | "archive">("featured");
+  const galleryPhotos = viewerCollection === "archive" ? archivePhotos : featuredPhotos;
   const [viewerOpen, setViewerOpen] = useState(false);
   const detail = detailFor(galleryPhotos[selected].src);
   const touchStart = useRef<number | null>(null);
@@ -59,8 +71,10 @@ function PhotoMosaic() {
     document.body.style.overflow = "hidden";
     return () => { document.body.style.overflow = overflow; };
   }, [viewerOpen]);
-  function openPhoto(src: string) {
-    setSelected(galleryPhotos.findIndex(photo => photo.src === src));
+  function openPhoto(src: string, collection: "featured" | "archive" = "featured") {
+    setViewerCollection(collection);
+    const items = collection === "archive" ? archivePhotos : featuredPhotos;
+    setSelected(items.findIndex(photo => photo.src === src));
     setViewerOpen(true);
     rotation.setEngaged(true);
     dialog.current?.showModal();
@@ -92,7 +106,11 @@ function PhotoMosaic() {
         <div className="jp-viewer-controls"><button type="button" onClick={() => move(-1)} aria-label="Previous photo">←</button><span aria-live="polite">{selected + 1} / {galleryPhotos.length}</span><button type="button" onClick={() => move(1)} aria-label="Next photo">→</button></div>
       </>}
     </dialog>
-    <div className="jp-gallery-bottom"><button type="button" className="jp-photo-pause" onClick={rotation.toggle} aria-label={rotation.paused ? "Play photo portfolio" : "Pause photo portfolio"}>{rotation.paused ? "Play portfolio" : "Pause portfolio"}</button><span>From the archive</span></div>
+    <div className="jp-gallery-bottom"><button type="button" className="jp-photo-pause" onClick={rotation.toggle} aria-label={rotation.paused ? "Play photo portfolio" : "Pause photo portfolio"}>{rotation.paused ? "Play portfolio" : "Pause portfolio"}</button><button type="button" className="jp-photo-pause" aria-expanded={archiveOpen} aria-controls="jp-photo-archive" onClick={() => { setArchiveOpen(open => !open); rotation.setPaused(true); }}>{archiveOpen ? "Close archive −" : "View archive +"}</button></div>
+    {archiveOpen && <section id="jp-photo-archive" className="jp-photo-archive" aria-label="Photography archive">
+      <div className="jp-archive-heading"><h3>From the archive</h3><p>More people, places, and moments.</p></div>
+      <div className="jp-archive-grid">{archivePhotos.map(photo => { const info = detailFor(photo.src); return <button type="button" key={photo.src} onClick={() => openPhoto(photo.src, "archive")} aria-label={`Open archive photo: ${info.name}`}><img src={photo.src} alt={info.name} loading="lazy" decoding="async" /><span><strong>{info.name}</strong><span>{info.event} · {info.date}</span></span></button>; })}</div>
+    </section>}
   </div>;
 }
 

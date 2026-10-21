@@ -1,0 +1,16 @@
+{
+  "Bitcoin Park": [
+    {"id":"YRZhk4Fbhrc","title":"The Bitcoin Thesis Today","subtitle":"Adam Back, Tuur Demeester & Parker Lewis","label":"Bitcoin Park","duration":"41:11"},
+    {"id":"dXhEnCyp_Es","title":"The Future of Bitcoin Education","subtitle":"Texas A&M Professor Korok Ray","label":"Bitcoin Takeover 2026","duration":"10:36"},
+    {"id":"ZYk6ve5ibSQ","title":"What (Technical) Problems Are Left to Solve?","subtitle":"Nashville Energy & Mining Summit","label":"NEMS 2026","duration":"30 min"},
+    {"id":"Z2bYeRwxCCA","title":"The Future of Managed (Energy) Load","subtitle":"Nashville Energy & Mining Summit","label":"NEMS 2026","duration":"32 min"},
+    {"id":"-quRdYNpfCA","title":"Imagine IF AI Set Learning Free","subtitle":"Principal Joe Liemandt","label":"Imagine IF","duration":"58 min"}
+  ],
+  "Tangents": [
+    {"id":"Ev57R9u_tps","title":"Open Source Money Meets Open-Source AI","subtitle":"Haley Berkoe","label":"Tangents","duration":"11:47"},
+    {"id":"OQEErvbW1zY","title":"What Happened With Liquid?","subtitle":"Lisa Neigut / niftynei","label":"Tangents","duration":"19:42"},
+    {"id":"53UTxeVr-RM","title":"Custody Corner","subtitle":"Keith Mukai","label":"Tangents","duration":"16 min"},
+    {"id":"eIBGnLWac-0","title":"It’s All About the Energy","subtitle":"Nacho Pauls","label":"Tangents","duration":"11:13"},
+    {"id":"kTX1nBNTcu8","title":"White Noise: Private Messaging for Humans and AI","subtitle":"Jeff Gardner","label":"Tangents","duration":"10:33"}
+  ]
+}

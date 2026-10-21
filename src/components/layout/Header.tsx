@@ -5,6 +5,8 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
 const navigation = [
+  { name: "Timeless", href: "/timeless" },
+  { name: "The Shelf", href: "/shelf" },
   { name: "Freedom Technology", href: "/freedom-tech" },
   { name: "Freedom from Technology", href: "/freedom-from-tech" },
 ];
@@ -112,7 +114,7 @@ export function Header() {
           </span>
         </Link>
 
-        <ul className="hidden items-center gap-5 sm:gap-8 md:flex">
+        <ul className="hidden items-center gap-5 sm:gap-8 lg:flex">
           {navigation.map((item) => {
             const isActive = pathname === item.href;
             return (
@@ -168,7 +170,7 @@ export function Header() {
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/[0.03] p-3 text-[var(--color-text-primary)] transition hover:border-white/20 hover:bg-white/[0.06] md:hidden"
+          className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/[0.03] p-3 text-[var(--color-text-primary)] transition hover:border-white/20 hover:bg-white/[0.06] lg:hidden"
           aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={isMenuOpen}
           aria-controls="mobile-navigation"
@@ -202,7 +204,7 @@ export function Header() {
         {isMenuOpen ? (
           <div
             id="mobile-navigation"
-            className="absolute left-0 right-0 top-full mt-3 rounded-2xl border border-white/10 bg-[rgba(12,12,15,0.96)] p-3 shadow-[0_22px_80px_rgba(0,0,0,0.35)] backdrop-blur md:hidden"
+            className="absolute left-0 right-0 top-full mt-3 rounded-2xl border border-white/10 bg-[rgba(12,12,15,0.96)] p-3 shadow-[0_22px_80px_rgba(0,0,0,0.35)] backdrop-blur lg:hidden"
           >
             <ul className="grid gap-2">
               {navigation.map((item) => {

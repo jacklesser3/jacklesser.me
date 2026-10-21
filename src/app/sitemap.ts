@@ -6,6 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://jacklesser.me";
 
   return [
+    { url: `${baseUrl}/timeless`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
     {
       url: baseUrl,
       lastModified: new Date(),

@@ -1,8 +1,13 @@
-# Timeless Practice — jacklesser.me
+# Jack Lesser — Vibes Architecture & Timeless Practice
 
 > Jack Lesser distills timeless long-form podcasts, speeches, and books into visual takeaway pages and reflection episodes — organized around three pillars: performance, leverage, and inner work.
 
 Jack Lesser leads programming at Bitcoin Park, teaches yoga and breathwork, and writes about freedom technology (Bitcoin, sovereign AI, privacy) and freedom from technology (breath, movement, presence). Each episode page below distills one long-form conversation or speech into its key takeaways, alongside a video reflection and a companion essay on Substack.
+
+## Portfolio and Timeless
+
+- [Portfolio](https://jacklesser.me): Photography, media channel operations, wellness, and digital creation through Aura, Soul, and Timeless.
+- [Timeless](https://jacklesser.me/timeless): The full Timeless Practice collection of reviews, reflections, and The Shelf.
 
 ## Episodes
 

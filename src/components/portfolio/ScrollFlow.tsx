@@ -36,17 +36,16 @@ export function ScrollFlow() {
         // Distribution expands into a wider, evenly spaced fan below the prism.
         const spread = width - (mobile ? 10 : 28);
         const destination = width - (mobile ? 5 : 14) - (i / 14) * spread;
-        // Crossed, uneven approaches stay loose until inside the opaque prism.
+        // Broad, continuous curves overlap gently before entering the prism.
         // The ordered output begins behind its face, hiding the transition.
         const start = width * ((i * 7 % 15 + .5) / 15);
         const driftA = width * (.5 + .47 * Math.sin(i * 2.3));
         const driftB = width * (.5 + .46 * Math.cos(i * 1.7));
         const approachX = width * (.025 + (i % 5) * .065);
         const approachY = center - 110 - (i % 7) * 30;
-        const tangleX = mid - radius - width * (.04 + (i % 4) * .025);
-        const tangleY = center + Math.sin(i * 2.4) * radius * 1.25;
-        const entryY = center + Math.sin(i * 1.9) * radius * .28;
-        const loose = `M ${start} -50 C ${start + Math.sin(i) * width * .18} ${center * .12}, ${driftA + sway} ${center * .2}, ${driftA} ${center * .32} S ${driftB - sway} ${center * .54}, ${driftB} ${center * .65} C ${driftB} ${center * .79}, ${approachX} ${approachY - 140}, ${approachX} ${approachY} C ${approachX + width * .12} ${center + Math.cos(i * 1.7) * radius * 2}, ${tangleX - width * .08} ${tangleY}, ${tangleX} ${tangleY} C ${mid - radius * .6} ${center - Math.sin(i * 2.4) * radius}, ${mid - radius * .25} ${entryY}, ${mid} ${entryY} L ${mid + radius * .18} ${y}`;
+        const arcY = center + Math.sin(i * 1.3) * radius * .55;
+        const entryY = center + Math.sin(i * 1.9) * radius * .24;
+        const loose = `M ${start} -50 C ${start + Math.sin(i) * width * .18} ${center * .12}, ${driftA + sway} ${center * .2}, ${driftA} ${center * .32} S ${driftB - sway} ${center * .54}, ${driftB} ${center * .65} C ${driftB} ${center * .79}, ${approachX} ${approachY - 140}, ${approachX} ${approachY} C ${approachX} ${arcY}, ${mid - radius * .65} ${arcY}, ${mid} ${entryY} L ${mid + radius * .18} ${y}`;
         path.setAttribute("d", `${loose} L ${exit} ${y} C ${edge} ${y}, ${edge} ${bend - 120}, ${edge} ${bend} C ${edge} ${bend + 230}, ${destination + sway} ${height - 480}, ${destination} ${height + 50}`);
       });
       element.querySelectorAll<SVGTextElement>(".jp-prism-point").forEach((label, i) => {

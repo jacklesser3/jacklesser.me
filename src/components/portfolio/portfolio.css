@@ -274,3 +274,6 @@
 #jack-portfolio .jp-archive-grid span span{color:var(--muted);font-size:11px}
 #jack-portfolio .jp-archive-grid button:focus-visible{outline:2px solid #dfc17e;outline-offset:6px}
 @media(max-width:600px){#jack-portfolio .jp-archive-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 12px}}
+
+/* Preserve the portrait slot when the mosaic stacks on mobile, too. */
+@media(max-width:600px){#jack-portfolio .jp-mixed-gallery figure:first-child{aspect-ratio:3 / 4}}

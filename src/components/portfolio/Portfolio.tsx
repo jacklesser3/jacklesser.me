@@ -41,12 +41,13 @@ const archivePools = [
   [photos.IF26[7], photos["NEMS 2026"][2], photos["Selected additions"][0], photos["Bitcoin Takeover 2026"][1], photos["Bitcoin Takeover 2026"][3], photos.GFTS[13], photos["Selected additions"][3], photos["Bitcoin Takeover 2026"][4], photos["Bitcoin Takeover 2026"][7], photos["Bitcoin Takeover 2026"][10], photos["NEMS 2026"][4]],
 ];
 
-// Six images per tile keep the featured rotation short and balanced.
+// Portraits stay in the tall first tile; landscapes rotate through the wide tiles.
+// Start with speakers and travel, saving both yoga photographs for later.
 const pools = [
-  [photos["Practice and travel"][1], photos["Practice and travel"][0], photos.GFTS[4], photos["Practice and travel"][4], photos.GFTS[6], photos["Peru 2026"][3]],
+  [photos.GFTS[4], photos["Practice and travel"][4], photos["Peru 2026"][3], photos.GFTS[0], photos["Practice and travel"][1], photos["Practice and travel"][0]],
   [photos.GFTS[3], photos["Practice and travel"][2], photos["Selected additions"][1], photos.GFTS[9], photos["Peru 2026"][0], photos["Bitcoin Takeover 2026"][9]],
   [photos.GFTS[14], photos["Practice and travel"][3], photos["NEMS 2026"][0], photos.GFTS[11], photos.GFTS[12], photos["Bitcoin Takeover 2026"][10]],
-  [photos.IF26[7], photos["Selected additions"][0], photos["Peru 2026"][1], photos.IF26[4], photos.IF26[8], photos.GFTS[0]],
+  [photos.IF26[7], photos["Selected additions"][0], photos["Peru 2026"][1], photos.IF26[4], photos.IF26[8], photos.GFTS[6]],
 ];
 const featuredPhotos = pools.flat();
 const featuredSources = new Set(featuredPhotos.map(photo => photo.src));

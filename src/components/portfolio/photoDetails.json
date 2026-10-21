@@ -384,5 +384,47 @@
     "date": "2026",
     "bio": "Speaking on the Financialization of Energy Assets panel at NEMS.",
     "identitySource": "User confirmation, October 21, 2026"
+  },
+  "/portfolio/photos/teaching-rooftop.webp": {
+    "name": "Jack Lesser",
+    "event": "Higher Ground Yoga · Austin",
+    "date": "June 2026",
+    "bio": "Leading a rooftop practice in Austin. Photo: @julz.delviscio."
+  },
+  "/portfolio/photos/teaching-movement.webp": {
+    "name": "Jack Lesser",
+    "event": "Higher Ground Yoga · Austin",
+    "date": "June 2026",
+    "bio": "Guiding movement and shared attention on the rooftop. Photo: @julz.delviscio."
+  },
+  "/portfolio/photos/japan-wooded-steps.webp": {
+    "name": "A path through the trees",
+    "event": "Japan",
+    "date": "August 2026",
+    "bio": "Stone steps winding through a quiet green canopy."
+  },
+  "/portfolio/photos/japan-light-installation.webp": {
+    "name": "Immersed in light",
+    "event": "Japan",
+    "date": "August 2026",
+    "bio": "Color, reflection, and light filling the space."
+  },
+  "/portfolio/photos/seoul-library.webp": {
+    "name": "A world of books",
+    "event": "Seoul · COEX",
+    "date": "September 2026",
+    "bio": "Bookshelves rising beneath a sunlit glass roof."
+  },
+  "/portfolio/photos/japan-shrine-path.webp": {
+    "name": "A quiet passage",
+    "event": "Japan",
+    "date": "August 2026",
+    "bio": "A stone path framed by green banners and trees."
+  },
+  "/portfolio/photos/japan-temple-interior.webp": {
+    "name": "Gold and stillness",
+    "event": "Japan",
+    "date": "August 2026",
+    "bio": "Warm light and intricate details inside a temple."
   }
 }

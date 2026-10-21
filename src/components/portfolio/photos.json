@@ -222,5 +222,35 @@
       "src": "/portfolio/photos/summit-denim-presenter.webp",
       "alt": "A presenter holding a microphone and remote between Texas and American flags"
     }
+  ],
+  "Practice and travel": [
+    {
+      "src": "/portfolio/photos/teaching-rooftop.webp",
+      "alt": "Jack Lesser"
+    },
+    {
+      "src": "/portfolio/photos/teaching-movement.webp",
+      "alt": "Jack Lesser"
+    },
+    {
+      "src": "/portfolio/photos/japan-wooded-steps.webp",
+      "alt": "A path through the trees"
+    },
+    {
+      "src": "/portfolio/photos/japan-light-installation.webp",
+      "alt": "Immersed in light"
+    },
+    {
+      "src": "/portfolio/photos/seoul-library.webp",
+      "alt": "A world of books"
+    },
+    {
+      "src": "/portfolio/photos/japan-shrine-path.webp",
+      "alt": "A quiet passage"
+    },
+    {
+      "src": "/portfolio/photos/japan-temple-interior.webp",
+      "alt": "Gold and stillness"
+    }
   ]
 }

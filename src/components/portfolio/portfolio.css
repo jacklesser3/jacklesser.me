@@ -256,3 +256,8 @@
 #jack-portfolio .jp-about{grid-template-columns:minmax(220px,300px) minmax(0,490px);justify-content:center;align-items:center;column-gap:48px;row-gap:24px}
 #jack-portfolio .jp-about-label{grid-column:1/-1;margin-bottom:0}
 @media(max-width:600px){#jack-portfolio .jp-about{grid-template-columns:1fr;gap:24px}#jack-portfolio .jp-headshot{max-width:280px}#jack-portfolio .jp-about-portrait{justify-self:center;width:100%;max-width:280px}}
+
+/* Keep the teaching portraits and travel compositions centered in the rotation. */
+#jack-portfolio .jp-mixed-gallery img[src*="teaching-"]{object-position:50% 40%}
+#jack-portfolio .jp-mixed-gallery img[src*="japan-"]{object-position:50% 50%}
+#jack-portfolio .jp-mixed-gallery img[src*="seoul-library"]{object-position:50% 20%}

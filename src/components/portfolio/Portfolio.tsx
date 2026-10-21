@@ -39,15 +39,50 @@ const pools = [
   [photos["NEMS 2026"][1], photos["NEMS 2026"][2], photos["Bitcoin Takeover 2026"][1], photos["Bitcoin Takeover 2026"][3], photos.IF26[2]],
 ];
 
+const galleryPhotos = pools.flat();
+
 function PhotoMosaic() {
   const rotation = useRotation(3000);
+  const dialog = useRef<HTMLDialogElement>(null);
+  const [selected, setSelected] = useState(0);
+  const [viewerOpen, setViewerOpen] = useState(false);
+  const touchStart = useRef<number | null>(null);
+  const move = (delta: number) => setSelected(index => (index + delta + galleryPhotos.length) % galleryPhotos.length);
+  useEffect(() => {
+    if (!viewerOpen) return;
+    const overflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => { document.body.style.overflow = overflow; };
+  }, [viewerOpen]);
+  function openPhoto(src: string) {
+    setSelected(galleryPhotos.findIndex(photo => photo.src === src));
+    setViewerOpen(true);
+    rotation.setEngaged(true);
+    dialog.current?.showModal();
+  }
+  function closePhoto() { dialog.current?.close(); }
+
   return <div ref={rotation.ref}>
     <div className="jp-mixed-gallery" aria-label="Selected photographs">
       {pools.map((pool, slot) => {
         const active = Math.floor((rotation.step + 3 - slot) / 4) % pool.length;
-        return <figure key={slot}>{pool.map((photo, index) => <img key={photo.src} src={photo.src} alt={photo.alt} loading="lazy" decoding="async" className={index === active ? "is-visible" : ""} aria-hidden={index !== active} />)}</figure>;
+        return <figure key={slot}><button className="jp-photo-open" type="button" aria-label={`Open photo: ${pool[active].alt}`} onClick={() => openPhoto(pool[active].src)}>{pool.map((photo, index) => <img key={photo.src} src={photo.src} alt={photo.alt} loading="lazy" decoding="async" className={index === active ? "is-visible" : ""} aria-hidden={index !== active} />)}</button></figure>;
       })}
     </div>
+    <dialog ref={dialog} className="jp-photo-dialog" aria-label="Photo viewer" onClose={() => { setViewerOpen(false); rotation.setEngaged(false); }}
+      onClick={event => { if (event.target === event.currentTarget) closePhoto(); }}
+      onKeyDown={event => {
+        if (event.key === "ArrowRight" || event.key === "ArrowLeft") { event.preventDefault(); move(event.key === "ArrowRight" ? 1 : -1); }
+      }}>
+      {viewerOpen && <>
+        <button type="button" className="jp-viewer-close" onClick={closePhoto} aria-label="Close photo viewer" autoFocus>✕</button>
+        <div className="jp-viewer-image" onTouchStart={event => { touchStart.current = event.touches[0].clientX; }} onTouchEnd={event => {
+          if (touchStart.current !== null) { const delta = touchStart.current - event.changedTouches[0].clientX; if (Math.abs(delta) > 50) move(delta > 0 ? 1 : -1); }
+          touchStart.current = null;
+        }}><img src={galleryPhotos[selected].src} alt={galleryPhotos[selected].alt} /></div>
+        <div className="jp-viewer-controls"><button type="button" onClick={() => move(-1)} aria-label="Previous photo">←</button><span aria-live="polite">{selected + 1} / {galleryPhotos.length}</span><button type="button" onClick={() => move(1)} aria-label="Next photo">→</button></div>
+      </>}
+    </dialog>
     <div className="jp-gallery-bottom"><button type="button" className="jp-photo-pause" onClick={rotation.toggle} aria-label={rotation.paused ? "Play photo slideshow" : "Pause photo slideshow"}>{rotation.paused ? "Play slideshow" : "Pause slideshow"}</button><span>From the archive</span></div>
   </div>;
 }

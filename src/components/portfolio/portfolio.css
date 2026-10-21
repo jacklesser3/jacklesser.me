@@ -209,3 +209,9 @@
 #jack-portfolio img[src*="summit-black-jacket-speaker"]{object-position:50% 10%}
 #jack-portfolio img[src*="summit-powering-places"]{object-position:45% 35%}
 #jack-portfolio img[src*="summit-denim-presenter"]{object-position:50% 35%}
+
+/* Distribute bends into the page margin: one ribbon, no crossing overlay. */
+#jack-portfolio .jp-scroll-flow{position:absolute;inset:0;width:100%;height:100%;opacity:1;mask-image:none}
+#jack-portfolio .jp-ribbon-strand{opacity:.25}
+#jack-portfolio .jp-ribbon-frame{opacity:.65}
+@media(max-width:600px){#jack-portfolio .jp-ribbon-strand{opacity:.17}}

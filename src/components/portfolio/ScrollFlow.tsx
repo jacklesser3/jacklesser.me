@@ -2,29 +2,37 @@
 
 import { useEffect, useRef } from "react";
 
-/** An ambient layer driven by native scroll; no idle animation loop. */
+/** One continuous ribbon from the curation frame through the page footer. */
 export function ScrollFlow() {
   const svg = useRef<SVGSVGElement>(null);
   useEffect(() => {
     const element = svg.current;
-    if (!element) return;
+    const root = element?.parentElement;
+    const intro = root?.querySelector<HTMLElement>(".jp-media-intro");
+    if (!element || !root || !intro) return;
     const motion = matchMedia("(prefers-reduced-motion: reduce)");
     let frame = 0;
     const draw = () => {
       frame = 0;
-      const root = document.getElementById("jack-portfolio");
-      if (!root) return;
-      const progress = motion.matches ? 0.4 : Math.max(0, Math.min(1, -root.getBoundingClientRect().top / Math.max(1, root.offsetHeight - innerHeight)));
-      const gather = Math.sin(progress * Math.PI);
-      element.querySelectorAll<SVGPathElement>("path").forEach((path, i) => {
-        const side = i < 12 ? 1 : -1;
-        const n = i % 12;
-        const edge = side === 1 ? 0 : 1440;
-        const spread = 28 + n * (17 - gather * 8);
-        const shift = progress * 240;
-        path.setAttribute("d", `M ${edge + side * (n * 20 - 180)} -100 C ${edge + side * (spread + 150)} ${200 + shift}, ${edge + side * (spread - 40)} ${430 - shift}, ${edge + side * spread} 900`);
+      const rect = root.getBoundingClientRect();
+      const width = root.clientWidth;
+      const height = root.offsetHeight;
+      const top = intro.getBoundingClientRect().top - rect.top;
+      const mobile = width <= 600;
+      const center = top + (mobile ? 45 : 80);
+      const x = width * 0.43;
+      const exit = width * 0.58;
+      const progress = motion.matches ? 0 : Math.max(0, Math.min(1, -rect.top / Math.max(1, height - innerHeight)));
+      const sway = Math.sin(progress * Math.PI * 2) * (mobile ? 3 : 12);
+      const spacing = mobile ? 2.1 : 5;
+      element.setAttribute("viewBox", `0 0 ${width} ${height}`);
+      element.querySelectorAll<SVGPathElement>(".jp-ribbon-strand").forEach((path, i) => {
+        const y = center + (i - 7) * (mobile ? 1.5 : 2.6);
+        const edge = width - (mobile ? 5 : 14) - i * spacing;
+        const bend = center + 210 + i * 5;
+        path.setAttribute("d", `M -50 ${center - 180 + i * 25} C ${width * .2} ${center - 180 + i * 25}, ${x * .65} ${y}, ${x} ${y} L ${exit} ${y} C ${edge} ${y}, ${edge} ${bend - 120}, ${edge} ${bend} C ${edge} ${bend + 230}, ${edge - 24 + sway} ${height - 480}, ${edge - 12} ${height + 50}`);
       });
-      root.style.setProperty("--flow-travel", `${(progress - 0.5) * 70}px`);
+      element.querySelector(".jp-ribbon-frame")?.setAttribute("d", `M ${x - 32} ${center - 115} L ${x + 18} ${center - 80} L ${x + 18} ${center + 90} L ${x - 32} ${center + 125} Z M ${x + 18} ${center - 80} L ${exit + 24} ${center - 60} L ${exit + 24} ${center + 65}`);
     };
     const schedule = () => { if (!frame) frame = requestAnimationFrame(draw); };
     draw();
@@ -32,7 +40,7 @@ export function ScrollFlow() {
     window.addEventListener("resize", schedule);
     motion.addEventListener("change", schedule);
     const observer = new ResizeObserver(schedule);
-    if (element.parentElement) observer.observe(element.parentElement);
+    observer.observe(root);
     return () => {
       cancelAnimationFrame(frame);
       observer.disconnect();
@@ -41,7 +49,8 @@ export function ScrollFlow() {
       motion.removeEventListener("change", schedule);
     };
   }, []);
-  return <svg ref={svg} className="jp-scroll-flow" viewBox="0 0 1440 900" preserveAspectRatio="none" fill="none" aria-hidden="true" focusable="false">
-    {Array.from({ length: 24 }, (_, i) => <path key={i} stroke={i % 12 === 5 ? "#d5b76f" : "#83b5dc"} strokeWidth={i % 12 === 5 ? 1.3 : 0.8} />)}
+  return <svg ref={svg} className="jp-scroll-flow" fill="none" aria-hidden="true" focusable="false" preserveAspectRatio="none">
+    {Array.from({ length: 15 }, (_, i) => <path className="jp-ribbon-strand" key={i} stroke="#83b5dc" strokeWidth="1" />)}
+    <path className="jp-ribbon-frame" stroke="#dfc17e" strokeWidth="1.2" strokeLinejoin="round" />
   </svg>;
 }

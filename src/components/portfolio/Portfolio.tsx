@@ -34,10 +34,10 @@ function useRotation(delay: number) {
 }
 
 const pools = [
-  [photos.GFTS[4], photos.IF26[4], photos.GFTS[5], photos.IF26[5], photos.GFTS[6], photos.IF26[6], photos.GFTS[7], photos.IF26[9], photos.IF26[10], photos.GFTS[12]],
-  [photos.GFTS[3], photos.GFTS[2], photos.GFTS[0], photos.IF26[1], photos["Peru 2026"][2], photos["Peru 2026"][0], photos.GFTS[8], photos.GFTS[9], photos.GFTS[14]],
-  [photos["Bitcoin Takeover 2026"][0], photos["Bitcoin Takeover 2026"][2], photos["NEMS 2026"][0], photos["NEMS 2026"][3], photos.IF26[8], photos.GFTS[10], photos.GFTS[11], photos["Bitcoin Takeover 2026"][5], photos["Bitcoin Takeover 2026"][6], photos["Bitcoin Takeover 2026"][8]],
-  [photos.IF26[7], photos["NEMS 2026"][1], photos["NEMS 2026"][2], photos["Bitcoin Takeover 2026"][1], photos["Bitcoin Takeover 2026"][3], photos.GFTS[13], photos["Bitcoin Takeover 2026"][4], photos["Bitcoin Takeover 2026"][7]],
+  [photos.GFTS[4], photos.IF26[4], photos.GFTS[5], photos.IF26[5], photos["Selected additions"][2], photos.GFTS[6], photos.IF26[6], photos.GFTS[7], photos.IF26[9], photos.IF26[10], photos.GFTS[12]],
+  [photos.GFTS[3], photos.GFTS[2], photos.GFTS[0], photos["Selected additions"][1], photos.IF26[1], photos["Peru 2026"][2], photos["Peru 2026"][0], photos.GFTS[8], photos.GFTS[9], photos.GFTS[14]],
+  [photos["Bitcoin Takeover 2026"][0], photos["Bitcoin Takeover 2026"][2], photos["NEMS 2026"][0], photos["NEMS 2026"][3], photos.IF26[8], photos["Selected additions"][4], photos.GFTS[10], photos.GFTS[11], photos["Bitcoin Takeover 2026"][5], photos["Bitcoin Takeover 2026"][6], photos["Bitcoin Takeover 2026"][8]],
+  [photos.IF26[7], photos["NEMS 2026"][1], photos["NEMS 2026"][2], photos["Selected additions"][0], photos["Bitcoin Takeover 2026"][1], photos["Bitcoin Takeover 2026"][3], photos.GFTS[13], photos["Selected additions"][3], photos["Bitcoin Takeover 2026"][4], photos["Bitcoin Takeover 2026"][7]],
 ];
 
 const galleryPhotos = pools.flat();

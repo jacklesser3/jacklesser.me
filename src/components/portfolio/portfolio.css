@@ -202,3 +202,10 @@
 #jack-portfolio img[src*="takeover-outstretched-gesture"]{object-position:65% 25%}
 @media(max-width:600px){#jack-portfolio .jp-scroll-flow{opacity:.16;mask-image:linear-gradient(90deg,#000,transparent 15%,transparent 85%,#000)}}
 @media(prefers-reduced-motion:reduce){#jack-portfolio .jp-flow-art{transform:none}}
+
+/* Individual focal points for the latest summit selections. */
+#jack-portfolio img[src*="summit-plaid-speaker"]{object-position:27% 12%}
+#jack-portfolio img[src*="summit-blue-shirt-conversation"]{object-position:50% 0%}
+#jack-portfolio img[src*="summit-black-jacket-speaker"]{object-position:50% 10%}
+#jack-portfolio img[src*="summit-powering-places"]{object-position:45% 35%}
+#jack-portfolio img[src*="summit-denim-presenter"]{object-position:50% 35%}

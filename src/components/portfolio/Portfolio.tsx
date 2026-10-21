@@ -6,6 +6,7 @@ import Link from "next/link";
 import photos from "./photos.json";
 import videos from "./videos.json";
 import "./portfolio.css";
+import { ConnectMenu } from "./ConnectMenu";
 
 function useRotation(delay: number) {
   const ref = useRef<HTMLDivElement>(null);
@@ -39,7 +40,7 @@ const pools = [
 ];
 
 function PhotoMosaic() {
-  const rotation = useRotation(6000);
+  const rotation = useRotation(3000);
   return <div ref={rotation.ref}>
     <div className="jp-mixed-gallery" aria-label="Selected photographs">
       {pools.map((pool, slot) => {
@@ -77,7 +78,7 @@ const pillars = [
 
 export default function Portfolio() {
   return <div id="jack-portfolio">
-    <header className="jp-nav"><Link className="jp-brand" href="/">Jack Lesser.</Link><nav className="jp-links" aria-label="Portfolio"><a href="#jp-pillars">The practice</a><a href="#jp-photography">Photography</a><a href="#jp-channels">Media</a><Link href="/timeless">Timeless</Link><a href="#jp-contact">Connect</a></nav></header>
+    <header className="jp-nav"><Link className="jp-brand" href="/">Jack Lesser.</Link><nav className="jp-links" aria-label="Portfolio"><a href="#jp-pillars">The practice</a><a href="#jp-photography">Photography</a><a href="#jp-channels">Media</a><Link href="/timeless">Timeless</Link><ConnectMenu /></nav></header>
     <section className="jp-intro" id="jp-top"><div><div className="jp-eyebrow">Jack Lesser / A creative practice</div><h1>Vibes<br /><span className="jp-title-second">Architecture.</span></h1></div><div className="jp-lead"><p>How we feel. What we create. How we come together.</p><p className="jp-lead-second">Wellness, digital creation, and physical connection—with an eye for capturing it all.</p><a href="#jp-pillars">Explore the three pillars ↓</a></div></section>
     <div className="jp-cover"><img src={photos["Peru 2026"][1].src} alt="Warm light on snow-covered mountains in Peru" fetchPriority="high" width="1800" height="1200" /><div className="jp-cover-overlay"><div className="jp-cover-title">Create the feeling.<br />Capture the moment.</div><small>PERU / 2026</small></div></div>
     <div className="jp-caption"><span>A portfolio of experiences, images, and things I’m building.</span><span>Jack Lesser / Selected work</span></div>

@@ -136,3 +136,13 @@
 @media(max-width:600px){#jack-portfolio .jp-mixed-gallery{grid-template-columns:1fr 1fr;grid-template-rows:220px 150px}#jack-portfolio .jp-channel-heading{flex-wrap:wrap}#jack-portfolio h1{font-size:clamp(52px,16vw,64px)}#jack-portfolio .jp-links{gap:16px}#jack-portfolio .jp-carousel-controls{gap:8px}}
 @media(prefers-reduced-motion:reduce){#jack-portfolio .jp-videos.jp-carousel .jp-video-card,#jack-portfolio .jp-mixed-gallery img{transition:none}html{scroll-behavior:auto}}
 @media(min-width:701px){#jack-portfolio .jp-pillars article{display:grid;grid-row:span 6;grid-template-rows:subgrid}#jack-portfolio .jp-pillar-link{align-self:end;width:100%;margin-top:0}}
+#jack-portfolio .jp-links{position:relative;align-items:center}
+#jack-portfolio .jp-connect{position:relative}
+#jack-portfolio .jp-connect-trigger{border:0;padding:0;background:transparent;font:inherit;line-height:inherit}
+#jack-portfolio .jp-connect-menu{position:absolute;right:0;top:calc(100% + 16px);z-index:50;width:190px;padding:8px;background:var(--paper);border:1px solid var(--line);border-radius:10px;box-shadow:0 14px 36px #07182d26}
+#jack-portfolio .jp-connect-menu a{display:flex;gap:12px;align-items:center;padding:11px 12px;border-radius:5px;min-height:42px;font-size:12px}
+#jack-portfolio .jp-connect-menu a:hover{background:light-dark(#dfe8f3,#233b59)}
+#jack-portfolio .jp-connect-icon{width:18px;display:inline-flex;align-items:center;justify-content:center;color:var(--accent)}
+#jack-portfolio .jp-mixed-gallery img{transition:opacity 1.2s ease-in-out}
+@media(max-width:600px){#jack-portfolio .jp-connect{position:static}#jack-portfolio .jp-connect-menu{top:calc(100% + 12px)}#jack-portfolio .jp-connect-trigger{min-height:44px}}
+@media(prefers-reduced-motion:reduce){#jack-portfolio .jp-mixed-gallery img{transition:none}}

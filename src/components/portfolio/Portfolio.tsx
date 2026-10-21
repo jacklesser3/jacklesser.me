@@ -33,10 +33,10 @@ function useRotation(delay: number) {
 }
 
 const pools = [
-  [photos.IF26[4], photos.IF26[5], photos.IF26[6], photos.GFTS[0]],
-  [photos.GFTS[3], photos.GFTS[2], photos.IF26[1], photos["Peru 2026"][2], photos["Peru 2026"][0]],
-  [photos["Bitcoin Takeover 2026"][0], photos["Bitcoin Takeover 2026"][2], photos["NEMS 2026"][0], photos["NEMS 2026"][3], photos.IF26[7], photos.IF26[8]],
-  [photos["NEMS 2026"][1], photos["NEMS 2026"][2], photos["Bitcoin Takeover 2026"][1], photos["Bitcoin Takeover 2026"][3]],
+  [photos.IF26[4], photos.IF26[5], photos.IF26[6]],
+  [photos.GFTS[3], photos.GFTS[2], photos.GFTS[0], photos.IF26[1], photos["Peru 2026"][2], photos["Peru 2026"][0]],
+  [photos["Bitcoin Takeover 2026"][0], photos["Bitcoin Takeover 2026"][2], photos["NEMS 2026"][0], photos["NEMS 2026"][3], photos.IF26[8]],
+  [photos.IF26[9], photos.IF26[10], photos.IF26[7], photos["NEMS 2026"][1], photos["NEMS 2026"][2], photos["Bitcoin Takeover 2026"][1], photos["Bitcoin Takeover 2026"][3]],
 ];
 
 const galleryPhotos = pools.flat();

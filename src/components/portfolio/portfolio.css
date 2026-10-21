@@ -185,3 +185,7 @@
 }
 /* Keep Cathie's face centered in the tall portrait frame. */
 @media(min-width:601px){#jack-portfolio .jp-mixed-gallery img[src$="if26-cathie-wood.webp"]{object-position:33% 15%}}
+/* Keep every panelist in frame for the panoramic stage photographs. */
+#jack-portfolio .jp-mixed-gallery img[src$="convergence-decade-panel.webp"],#jack-portfolio .jp-mixed-gallery img[src$="speed-to-power-panel.webp"]{object-fit:contain;object-position:center;background:#111e32}
+
+#jack-portfolio .jp-mixed-gallery img[src$="if26-it-already-happened.webp"],#jack-portfolio .jp-mixed-gallery img[src$="gfts-01-IMG_5452.webp"]{object-position:50% 0%}

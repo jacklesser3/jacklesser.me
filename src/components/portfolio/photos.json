@@ -27,7 +27,7 @@
   ],
   "NEMS 2026": [
     {
-      "src": "/portfolio/photos/nems-2026-01-34-D81_7502.webp",
+      "src": "/portfolio/photos/nems-speaker-coral-cropped.svg",
       "alt": "A seated speaker in a coral jacket gesturing"
     },
     {
@@ -39,7 +39,7 @@
       "alt": "A seated panelist gesturing toward another participant"
     },
     {
-      "src": "/portfolio/photos/nems-2026-04-D81_7612.webp",
+      "src": "/portfolio/photos/nems-speaker-gesture-cropped.svg",
       "alt": "A panelist pointing while holding a microphone"
     }
   ],
@@ -115,6 +115,14 @@
     {
       "src": "/portfolio/photos/if26-it-already-happened.webp",
       "alt": "A speaker presenting Imagine IF It Already Happened"
+    },
+    {
+      "src": "/portfolio/photos/if26-convergence-decade-panel.webp",
+      "alt": "Three speakers in the Imagine IF Convergence Decade panel"
+    },
+    {
+      "src": "/portfolio/photos/if26-speed-to-power-panel.webp",
+      "alt": "The three-person Speed to Power panel on the Imagine IF stage"
     }
   ]
 }

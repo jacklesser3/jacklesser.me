@@ -106,10 +106,10 @@ function PhotoMosaic() {
         <div className="jp-viewer-controls"><button type="button" onClick={() => move(-1)} aria-label="Previous photo">←</button><span aria-live="polite">{selected + 1} / {galleryPhotos.length}</span><button type="button" onClick={() => move(1)} aria-label="Next photo">→</button></div>
       </>}
     </dialog>
-    <div className="jp-gallery-bottom"><button type="button" className="jp-photo-pause" onClick={rotation.toggle} aria-label={rotation.paused ? "Play photo portfolio" : "Pause photo portfolio"}>{rotation.paused ? "Play portfolio" : "Pause portfolio"}</button><button type="button" className="jp-photo-pause" aria-expanded={archiveOpen} aria-controls="jp-photo-archive" onClick={() => { setArchiveOpen(open => !open); rotation.setPaused(true); }}>{archiveOpen ? "Close archive −" : "View archive +"}</button></div>
-    {archiveOpen && <section id="jp-photo-archive" className="jp-photo-archive" aria-label="Photography archive">
-      <div className="jp-archive-heading"><h3>From the archive</h3><p>More people, places, and moments.</p></div>
-      <div className="jp-archive-grid">{archivePhotos.map(photo => { const info = detailFor(photo.src); return <button type="button" key={photo.src} onClick={() => openPhoto(photo.src, "archive")} aria-label={`Open archive photo: ${info.name}`}><img src={photo.src} alt={info.name} loading="lazy" decoding="async" /><span><strong>{info.name}</strong><span>{info.event} · {info.date}</span></span></button>; })}</div>
+    <div className="jp-gallery-bottom"><button type="button" className="jp-photo-pause" onClick={rotation.toggle} aria-label={rotation.paused ? "Play photo portfolio" : "Pause photo portfolio"}>{rotation.paused ? "Play portfolio" : "Pause portfolio"}</button><button type="button" className="jp-photo-pause" aria-expanded={archiveOpen} aria-controls="jp-photo-archive" onClick={() => { setArchiveOpen(open => !open); rotation.setPaused(true); }}>{archiveOpen ? "See less −" : "See more +"}</button></div>
+    {archiveOpen && <section id="jp-photo-archive" className="jp-photo-archive" aria-label="More photography">
+      <div className="jp-archive-heading"><h3>More moments</h3><p>More people, places, and moments.</p></div>
+      <div className="jp-archive-grid">{archivePhotos.map(photo => { const info = detailFor(photo.src); return <button type="button" key={photo.src} onClick={() => openPhoto(photo.src, "archive")} aria-label={`Open photo: ${info.name}`}><img src={photo.src} alt={info.name} loading="lazy" decoding="async" /><span><strong>{info.name}</strong><span>{info.event} · {info.date}</span></span></button>; })}</div>
     </section>}
   </div>;
 }

@@ -377,5 +377,12 @@
     "date": "March 12–13, 2026",
     "bio": "Head of Digital Assets & Emerging Tech Policy at Block.",
     "identitySource": "User identification, October 21, 2026"
+  },
+  "/portfolio/photos/nems-rory-murray.jpg": {
+    "name": "Rory Murray",
+    "event": "Nashville Energy & Mining Summit",
+    "date": "2026",
+    "bio": "Speaking on the Financialization of Energy Assets panel at NEMS.",
+    "identitySource": "User confirmation, October 21, 2026"
   }
 }

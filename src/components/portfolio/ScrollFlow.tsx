@@ -50,7 +50,14 @@ export function ScrollFlow() {
         label.setAttribute("x", String(i === 0 ? mid : i === 1 ? mid-radius : mid+radius));
         label.setAttribute("y", String(i === 0 ? center-radius-depth-12 : center+radius*.7+22));
       });
-      element.querySelector(".jp-ribbon-frame")?.setAttribute("d", `M ${mid} ${center-radius} L ${mid-radius} ${center+radius*.7} L ${mid+radius} ${center+radius*.7} Z M ${mid} ${center-radius} L ${mid+depth} ${center-radius-depth} L ${mid+radius+depth} ${center+radius*.7-depth} L ${mid+radius} ${center+radius*.7} M ${mid+depth} ${center-radius-depth} L ${mid-radius+depth} ${center+radius*.7-depth} L ${mid-radius} ${center+radius*.7} M ${mid-radius+depth} ${center+radius*.7-depth} L ${mid+radius+depth} ${center+radius*.7-depth}`);
+      const apex = `${mid},${center-radius}`;
+      const left = `${mid-radius},${center+radius*.7}`;
+      const right = `${mid+radius},${center+radius*.7}`;
+      const rearApex = `${mid+depth},${center-radius-depth}`;
+      const rearRight = `${mid+radius+depth},${center+radius*.7-depth}`;
+      element.querySelector(".jp-prism-side")?.setAttribute("points", `${apex} ${rearApex} ${rearRight} ${right}`);
+      element.querySelector(".jp-prism-face")?.setAttribute("points", `${apex} ${left} ${right}`);
+
     };
     const schedule = () => { if (!frame) frame = requestAnimationFrame(draw); };
     draw();
@@ -69,7 +76,8 @@ export function ScrollFlow() {
   }, []);
   return <svg ref={svg} className="jp-scroll-flow" fill="none" aria-hidden="true" focusable="false" preserveAspectRatio="none">
     {Array.from({ length: 15 }, (_, i) => <path className="jp-ribbon-strand" key={i} stroke="#83b5dc" strokeWidth="1" />)}
+    <polygon className="jp-prism-side" fill="#263b51" fillOpacity=".98" stroke="#b89c63" strokeWidth="1.2" strokeLinejoin="round" />
+    <polygon className="jp-prism-face" fill="#101e31" fillOpacity=".98" stroke="#dfc17e" strokeOpacity=".8" strokeWidth="1.2" strokeLinejoin="round" />
     {["Aura", "Soul", "Time"].map(name => <text key={name} className="jp-prism-point" fill="#dfc17e" textAnchor="middle" fontSize="10" letterSpacing="2">{name.toUpperCase()}</text>)}
-    <path className="jp-ribbon-frame" stroke="#dfc17e" strokeWidth="1.2" strokeLinejoin="round" />
   </svg>;
 }

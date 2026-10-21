@@ -36,10 +36,13 @@
     "bio": "Colored bands across a mountain ridge."
   },
   "/portfolio/photos/nems-speaker-coral-cropped.svg": {
-    "name": "A seated speaker in a coral jacket gesturing",
+    "name": "Sen. Marsha Blackburn",
     "event": "NEMS",
     "date": "2026",
-    "bio": "A seated speaker in a coral jacket gesturing."
+    "bio": "U.S. Senator representing Tennessee.",
+    "identitySource": "User identification, October 21, 2026",
+    "x": "https://x.com/marshablackburn",
+    "source": "https://imagineifnashville.com/"
   },
   "/portfolio/photos/nems-2026-02-49-D81_7534.webp": {
     "name": "Two seated panelists smiling",
@@ -56,64 +59,87 @@
     "linkedin": "https://www.linkedin.com/in/rzagury/"
   },
   "/portfolio/photos/nems-speaker-gesture-cropped.svg": {
-    "name": "A panelist pointing while holding a microphone",
+    "name": "Michael Schmid (Schnitzel)",
     "event": "NEMS",
     "date": "2026",
-    "bio": "A panelist pointing while holding a microphone."
+    "bio": "Michael Schmid of the 256 Foundation, supporting open-source Bitcoin mining.",
+    "identitySource": "User identification, October 21, 2026"
   },
   "/portfolio/photos/bitcoin-takeover-2026-01-[BP][BT26][EXTRAS]-8.webp": {
-    "name": "Two presenters speaking beneath blue event lighting",
+    "name": "Rabble",
     "event": "Bitcoin Takeover",
-    "date": "March 12\u201313, 2026",
-    "bio": "Two presenters speaking beneath blue event lighting."
+    "date": "March 12–13, 2026",
+    "bio": "Founder of Divine, building open social media for human creativity.",
+    "identitySource": "User identification, October 21, 2026"
   },
   "/portfolio/photos/bitcoin-takeover-2026-02-[BP][BT26][Converging Technologies]-4.webp": {
-    "name": "Two seated panelists, one speaking and gesturing",
+    "name": "Derek Ross",
     "event": "Bitcoin Takeover",
-    "date": "March 12\u201313, 2026",
-    "bio": "Two seated panelists, one speaking and gesturing."
+    "date": "March 12–13, 2026",
+    "bio": "Building open social technology at Soapbox.",
+    "identitySource": "User identification, October 21, 2026",
+    "linkedin": "https://www.linkedin.com/in/derekross",
+    "source": "https://derekross.me/about/"
   },
   "/portfolio/photos/bitcoin-takeover-2026-03-[BP][BT26][Epoch]-3.webp": {
-    "name": "A smiling presenter gesturing beside a laptop",
+    "name": "Clark Moody",
     "event": "Bitcoin Takeover",
-    "date": "March 12\u201313, 2026",
-    "bio": "A smiling presenter gesturing beside a laptop."
+    "date": "March 12–13, 2026",
+    "bio": "Clark Moody presenting at Bitcoin Takeover.",
+    "identitySource": "User identification, October 21, 2026"
   },
   "/portfolio/photos/takeover-indie-building-cropped.svg": {
-    "name": "A seated panelist speaking into a microphone",
+    "name": "Leopoldo Lopez",
     "event": "Bitcoin Takeover",
-    "date": "March 12\u201313, 2026",
-    "bio": "A seated panelist speaking into a microphone."
+    "date": "March 12–13, 2026",
+    "bio": "Founder of the World Liberty Congress.",
+    "identitySource": "User identification, October 21, 2026"
   },
   "/portfolio/photos/takeover-panel-exchange.webp": {
-    "name": "Two panelists in conversation at Bitcoin Takeover",
+    "name": "Michael Goldstein",
     "event": "Bitcoin Takeover",
-    "date": "March 12\u201313, 2026",
-    "bio": "Two panelists in conversation at Bitcoin Takeover."
+    "date": "March 12–13, 2026",
+    "bio": "President of the Satoshi Nakamoto Institute.",
+    "identitySource": "User identification, October 21, 2026",
+    "x": "https://x.com/bitstein",
+    "source": "https://imagineifnashville.com/"
   },
   "/portfolio/photos/takeover-zbd-speaker.webp": {
-    "name": "A speaker in a black ZBD shirt presenting at Bitcoin Takeover",
+    "name": "Andre Neves",
     "event": "Bitcoin Takeover",
-    "date": "March 12\u201313, 2026",
-    "bio": "A speaker in a black ZBD shirt presenting at Bitcoin Takeover."
+    "date": "March 12–13, 2026",
+    "bio": "Co-founder and CTO of ZBD, building Bitcoin payment technology.",
+    "identitySource": "User identification, October 21, 2026",
+    "x": "https://x.com/andreneves",
+    "linkedin": "https://www.linkedin.com/in/andrerfneves",
+    "source": "https://imagineifnashville.com/"
   },
   "/portfolio/photos/takeover-lectern-speaker.webp": {
-    "name": "A speaker in a green pullover presenting at the lectern",
+    "name": "Parker Lewis",
     "event": "Bitcoin Takeover",
-    "date": "March 12\u201313, 2026",
-    "bio": "A speaker in a green pullover presenting at the lectern."
+    "date": "March 12–13, 2026",
+    "bio": "Author of Gradually Then Suddenly and a member of the Zaprite team.",
+    "identitySource": "User identification, October 21, 2026",
+    "x": "https://x.com/parkeralewis",
+    "linkedin": "https://www.linkedin.com/in/parker-lewis-ab904669/",
+    "source": "https://imagineifnashville.com/"
   },
   "/portfolio/photos/takeover-outstretched-gesture.webp": {
-    "name": "A speaker extending his arm during a Bitcoin Takeover presentation",
+    "name": "Robert Warren",
     "event": "Bitcoin Takeover",
-    "date": "March 12\u201313, 2026",
-    "bio": "A speaker extending his arm during a Bitcoin Takeover presentation."
+    "date": "March 12–13, 2026",
+    "bio": "Research and education at Bitcoin Park.",
+    "identitySource": "User identification, October 21, 2026"
   },
   "/portfolio/photos/takeover-cowboy-hat.webp": {
-    "name": "A speaker in a cowboy hat presenting at Bitcoin Takeover",
+    "name": "Gideon Powell",
     "event": "Bitcoin Takeover",
-    "date": "March 12\u201313, 2026",
-    "bio": "A speaker in a cowboy hat presenting at Bitcoin Takeover."
+    "date": "March 12–13, 2026",
+    "bio": "CEO of Cholla Inc., working across energy and compute infrastructure.",
+    "identitySource": "User identification, October 21, 2026",
+    "x": "https://x.com/GideonOPowell",
+    "linkedin": "https://www.linkedin.com/in/gideon-o-powell-%F0%9F%8F%B4%E2%80%8D%E2%98%A0%EF%B8%8F-84615a50/",
+    "source": "https://imagineifnashville.com/"
   },
   "/portfolio/photos/gfts-01-IMG_5452.webp": {
     "name": "Two attendees sharing a hug indoors",
@@ -140,10 +166,12 @@
     "bio": "Two attendees laughing outdoors."
   },
   "/portfolio/photos/gfts-seated-portrait.webp": {
-    "name": "A seated speaker with hands together at GFTS",
+    "name": "Gilbert Tuhabonye",
     "event": "Global Freedom Tech Summit",
     "date": "2026",
-    "bio": "A seated speaker with hands together at GFTS."
+    "bio": "Runner, coach, and co-founder of the Gazelle Foundation.",
+    "identitySource": "User identification, October 21, 2026",
+    "source": "https://www.gazellefoundation.org/gilberttuhabonye"
   },
   "/portfolio/photos/gfts-window-portrait.webp": {
     "name": "An attendee smiling beside a window at GFTS",
@@ -152,16 +180,20 @@
     "bio": "An attendee smiling beside a window at GFTS."
   },
   "/portfolio/photos/gfts-smiling-speaker.webp": {
-    "name": "A smiling GFTS speaker holding a microphone",
+    "name": "Jeff Gardner",
     "event": "Global Freedom Tech Summit",
     "date": "2026",
-    "bio": "A smiling GFTS speaker holding a microphone."
+    "bio": "Building private communications with White Noise.",
+    "identitySource": "User identification, October 21, 2026",
+    "x": "https://x.com/erskingardner",
+    "source": "https://www.podpage.com/citadeldispatch/cd166-jeff-gardner-and-max-hillebrand-white-noise-private-chat/"
   },
   "/portfolio/photos/gfts-courtyard-portrait.webp": {
-    "name": "An attendee smiling in the GFTS courtyard",
+    "name": "Anna Chekovich",
     "event": "Global Freedom Tech Summit",
     "date": "2026",
-    "bio": "An attendee smiling in the GFTS courtyard."
+    "bio": "Anna Chekovich at the Global Freedom Tech Summit.",
+    "identitySource": "User identification, October 21, 2026"
   },
   "/portfolio/photos/gfts-conversation.webp": {
     "name": "Two attendees in conversation at GFTS",
@@ -170,34 +202,39 @@
     "bio": "Two attendees in conversation at GFTS."
   },
   "/portfolio/photos/gfts-workshop.webp": {
-    "name": "An attendee gesturing during a GFTS workshop",
+    "name": "Autumn Domingo",
     "event": "Global Freedom Tech Summit",
     "date": "2026",
-    "bio": "An attendee gesturing during a GFTS workshop."
+    "bio": "Autumn Domingo at a Global Freedom Tech Summit workshop.",
+    "identitySource": "User identification, October 21, 2026"
   },
   "/portfolio/photos/gfts-laughter.webp": {
-    "name": "A GFTS speaker laughing into a microphone",
+    "name": "Joey Siu",
     "event": "Global Freedom Tech Summit",
     "date": "2026",
-    "bio": "A GFTS speaker laughing into a microphone."
+    "bio": "Hong Kong democracy and human rights advocate.",
+    "identitySource": "User identification, October 21, 2026"
   },
   "/portfolio/photos/gfts-performance.webp": {
-    "name": "A live musical performance at GFTS",
+    "name": "Joshua Roman",
     "event": "Global Freedom Tech Summit",
     "date": "2026",
-    "bio": "A live musical performance at GFTS."
+    "bio": "Performing with the Resonance Trio.",
+    "identitySource": "User identification, October 21, 2026"
   },
   "/portfolio/photos/gfts-smiling-panelist.webp": {
-    "name": "A smiling panelist holding a microphone against the GFTS stage backdrop",
+    "name": "Anaise Kanimba",
     "event": "Global Freedom Tech Summit",
     "date": "2026",
-    "bio": "A smiling panelist holding a microphone against the GFTS stage backdrop."
+    "bio": "Anaise Kanimba at the Global Freedom Tech Summit.",
+    "identitySource": "User identification, October 21, 2026"
   },
   "/portfolio/photos/gfts-seated-conversation.webp": {
-    "name": "A seated speaker gesturing during a GFTS conversation",
+    "name": "Justin Moon",
     "event": "Global Freedom Tech Summit",
     "date": "2026",
-    "bio": "A seated speaker gesturing during a GFTS conversation."
+    "bio": "Working on AI and individual rights at the Human Rights Foundation.",
+    "identitySource": "User identification, October 21, 2026"
   },
   "/portfolio/photos/gfts-blue-stage.webp": {
     "name": "Alex Gladstein",
@@ -214,10 +251,11 @@
     "bio": "A speaker gesturing in a gray suit against a blue stage."
   },
   "/portfolio/photos/if26-02-IMG_4725.webp": {
-    "name": "Two attendees talking near a window",
-    "event": "Imagine IF",
+    "name": "Rod Roudi & Sen. Bill Hagerty",
+    "event": "Imagine IF · Speaker/Sponsor Reception",
     "date": "2026",
-    "bio": "Two attendees talking near a window."
+    "bio": "Bitcoin Park co-founder Rod Roudi and Tennessee Senator Bill Hagerty at the Imagine IF speaker and sponsor reception.",
+    "identitySource": "User identification, October 21, 2026"
   },
   "/portfolio/photos/if26-03-IMG_4818.webp": {
     "name": "A seated speaker gesturing against a blue backdrop",
@@ -234,8 +272,8 @@
   "/portfolio/photos/if26-cathie-wood.webp": {
     "name": "Cathie Wood",
     "event": "Imagine IF",
-    "date": "October 5\u20136, 2026",
-    "bio": "Founder, CEO, and CIO \u00b7 ARK Invest",
+    "date": "October 5–6, 2026",
+    "bio": "Founder, CEO, and CIO · ARK Invest",
     "source": "https://imagineifnashville.com/",
     "x": "https://x.com/CathieDWood",
     "linkedin": "https://www.linkedin.com/in/catherinedwood/"
@@ -243,16 +281,16 @@
   "/portfolio/photos/if26-art-laffer.webp": {
     "name": "Dr. Art Laffer",
     "event": "Imagine IF",
-    "date": "October 5\u20136, 2026",
-    "bio": "Founder and Chairman \u00b7 Laffer Associates",
+    "date": "October 5–6, 2026",
+    "bio": "Founder and Chairman · Laffer Associates",
     "source": "https://imagineifnashville.com/",
     "x": "https://x.com/realartlaffer"
   },
   "/portfolio/photos/if26-joe-liemandt.webp": {
     "name": "Joe Liemandt",
     "event": "Imagine IF",
-    "date": "October 5\u20136, 2026",
-    "bio": "Principal \u00b7 Alpha School",
+    "date": "October 5–6, 2026",
+    "bio": "Principal · Alpha School",
     "source": "https://imagineifnashville.com/",
     "x": "https://x.com/jliemandt",
     "linkedin": "https://www.linkedin.com/in/liemandt/"
@@ -260,21 +298,25 @@
   "/portfolio/photos/if26-hash-hashemian.webp": {
     "name": "Hash Hashemian",
     "event": "Imagine IF",
-    "date": "October 5\u20136, 2026",
-    "bio": "Past President \u00b7 American Nuclear Society",
+    "date": "October 5–6, 2026",
+    "bio": "Past President · American Nuclear Society",
     "source": "https://imagineifnashville.com/"
   },
   "/portfolio/photos/if26-it-already-happened.webp": {
-    "name": "A speaker presenting Imagine IF It Already Happened",
+    "name": "Jeff Booth",
     "event": "Imagine IF",
     "date": "2026",
-    "bio": "A speaker presenting Imagine IF It Already Happened."
+    "bio": "Entrepreneur and author of The Price of Tomorrow.",
+    "identitySource": "User identification, October 21, 2026",
+    "x": "https://x.com/JeffBooth",
+    "linkedin": "https://www.linkedin.com/in/jeffdbooth/",
+    "source": "https://imagineifnashville.com/"
   },
   "/portfolio/photos/if26-hagerty-looking-up.webp": {
     "name": "Bill Hagerty",
     "event": "Imagine IF",
-    "date": "October 5\u20136, 2026",
-    "bio": "U.S. Senator \u00b7 Tennessee",
+    "date": "October 5–6, 2026",
+    "bio": "U.S. Senator · Tennessee",
     "source": "https://imagineifnashville.com/",
     "x": "https://x.com/SenatorHagerty",
     "linkedin": "https://www.linkedin.com/in/bill-hagerty-363876b4/"
@@ -282,8 +324,8 @@
   "/portfolio/photos/if26-adam-sullivan-speaking.webp": {
     "name": "Adam Sullivan",
     "event": "Imagine IF",
-    "date": "October 5\u20136, 2026",
-    "bio": "CEO \u00b7 Core Scientific",
+    "date": "October 5–6, 2026",
+    "bio": "CEO · Core Scientific",
     "source": "https://imagineifnashville.com/",
     "x": "https://x.com/_Adam_Sullivan1"
   },
@@ -294,10 +336,11 @@
     "bio": "A conversation at the Nashville Energy & Mining Summit."
   },
   "/portfolio/photos/summit-black-jacket-speaker.webp": {
-    "name": "A seated speaker holding a microphone against a blue stage backdrop",
-    "event": "Summit archive",
+    "name": "Will Paul",
+    "event": "Nashville Energy & Mining Summit",
     "date": "2026",
-    "bio": "A seated speaker holding a microphone against a blue stage backdrop."
+    "bio": "Will Paul speaking at the Nashville Energy & Mining Summit.",
+    "identitySource": "User identification, October 21, 2026"
   },
   "/portfolio/photos/summit-plaid-speaker.webp": {
     "name": "Harry Sudock",
@@ -310,14 +353,14 @@
   "/portfolio/photos/summit-powering-places.webp": {
     "name": "Nacho Pauls",
     "event": "Texas Energy & Mining Summit",
-    "date": "May 20\u201321, 2026",
+    "date": "May 20–21, 2026",
     "bio": "Chief Commercial Officer at OCEAN, developing open Bitcoin mining infrastructure.",
     "linkedin": "https://www.linkedin.com/in/nacho-pauls-67501b115/"
   },
   "/portfolio/photos/summit-denim-presenter.webp": {
     "name": "Margot Paez",
     "event": "Texas Energy & Mining Summit",
-    "date": "May 20\u201321, 2026",
+    "date": "May 20–21, 2026",
     "bio": "Presenting at the Texas Energy & Mining Summit."
   }
 }

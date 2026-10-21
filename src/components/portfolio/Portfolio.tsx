@@ -36,7 +36,7 @@ function useRotation(delay: number) {
 
 const pools = [
   [photos.GFTS[4], photos.IF26[4], photos.GFTS[5], photos.IF26[5], photos["Selected additions"][2], photos.GFTS[6], photos.IF26[6], photos.GFTS[7], photos.IF26[9], photos.IF26[10], photos.GFTS[12]],
-  [photos.GFTS[3], photos.GFTS[2], photos.GFTS[0], photos["Selected additions"][1], photos.IF26[1], photos["Peru 2026"][2], photos["Peru 2026"][0], photos.GFTS[8], photos.GFTS[9], photos.GFTS[14]],
+  [photos.GFTS[3], photos.GFTS[2], photos.GFTS[0], photos["Selected additions"][1], photos.IF26[1], photos["Peru 2026"][2], photos["Peru 2026"][0], photos.GFTS[9], photos.GFTS[14]],
   [photos["Bitcoin Takeover 2026"][0], photos["Bitcoin Takeover 2026"][2], photos["NEMS 2026"][0], photos["NEMS 2026"][3], photos.IF26[8], photos["Selected additions"][4], photos.GFTS[10], photos.GFTS[11], photos["Bitcoin Takeover 2026"][5], photos["Bitcoin Takeover 2026"][6], photos["Bitcoin Takeover 2026"][8]],
   [photos.IF26[7], photos["NEMS 2026"][1], photos["NEMS 2026"][2], photos["Selected additions"][0], photos["Bitcoin Takeover 2026"][1], photos["Bitcoin Takeover 2026"][3], photos.GFTS[13], photos["Selected additions"][3], photos["Bitcoin Takeover 2026"][4], photos["Bitcoin Takeover 2026"][7]],
 ];
@@ -74,7 +74,7 @@ function PhotoMosaic() {
       {pools.map((pool, slot) => {
         const active = Math.floor((rotation.step + 3 - slot) / 4) % pool.length;
         const info = detailFor(pool[active].src);
-        return <figure key={slot}><button className="jp-photo-open" type="button" aria-label={`Open photo: ${pool[active].alt}`} onClick={() => openPhoto(pool[active].src)}>{pool.map((photo, index) => <img key={photo.src} src={photo.src} alt={photo.alt} loading="lazy" decoding="async" className={index === active ? "is-visible" : ""} aria-hidden={index !== active} />)}<span className="jp-photo-label"><strong>{info.name}</strong><span>{info.event} · {info.date}</span></span></button></figure>;
+        return <figure key={slot}><button className="jp-photo-open" type="button" aria-label={`Open photo: ${info.name}`} onClick={() => openPhoto(pool[active].src)}>{pool.map((photo, index) => <img key={photo.src} src={photo.src} alt={detailFor(photo.src).name} loading="lazy" decoding="async" className={index === active ? "is-visible" : ""} aria-hidden={index !== active} />)}<span className="jp-photo-label"><strong>{info.name}</strong><span>{info.event} · {info.date}</span></span></button></figure>;
       })}
     </div>
     <dialog ref={dialog} className="jp-photo-dialog" aria-label="Photo viewer" onClose={() => { setViewerOpen(false); rotation.setEngaged(false); }}
@@ -87,7 +87,7 @@ function PhotoMosaic() {
         <div className="jp-viewer-image" onTouchStart={event => { touchStart.current = event.touches[0].clientX; }} onTouchEnd={event => {
           if (touchStart.current !== null) { const delta = touchStart.current - event.changedTouches[0].clientX; if (Math.abs(delta) > 50) move(delta > 0 ? 1 : -1); }
           touchStart.current = null;
-        }}><img src={galleryPhotos[selected].src} alt={galleryPhotos[selected].alt} /></div>
+        }}><img src={galleryPhotos[selected].src} alt={detail.name} /></div>
         <div className="jp-viewer-caption" aria-live="polite"><strong>{detail.name}</strong><div>{detail.event} · {detail.date}</div><p>{detail.bio}</p><div className="jp-photo-socials">{detail.x && <a href={detail.x} target="_blank" rel="noopener noreferrer">X ↗</a>}{detail.linkedin && <a href={detail.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>}</div></div>
         <div className="jp-viewer-controls"><button type="button" onClick={() => move(-1)} aria-label="Previous photo">←</button><span aria-live="polite">{selected + 1} / {galleryPhotos.length}</span><button type="button" onClick={() => move(1)} aria-label="Next photo">→</button></div>
       </>}

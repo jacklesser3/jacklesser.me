@@ -219,3 +219,9 @@
 /* One navy canvas keeps the photography, ribbon and media continuous. */
 #jack-portfolio{color-scheme:dark;--paper:#172943;--ink:#e8eff9;--muted:#a7bad2;--line:#354a66}
 #jack-portfolio .jp-capture,#jack-portfolio .jp-media{background:transparent}
+
+/* Loose source strands live behind content; the door resolves them into order. */
+#jack-portfolio > :not(.jp-scroll-flow){position:relative;z-index:1}
+#jack-portfolio > .jp-scroll-flow{z-index:0}
+#jack-portfolio .jp-ribbon-strand{opacity:.18}
+@media(max-width:600px){#jack-portfolio .jp-ribbon-strand{opacity:.12}}

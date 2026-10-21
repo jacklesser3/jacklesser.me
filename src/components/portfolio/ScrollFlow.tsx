@@ -30,9 +30,15 @@ export function ScrollFlow() {
         const y = center + (i - 7) * (mobile ? 1.5 : 2.6);
         const edge = width - (mobile ? 5 : 14) - i * spacing;
         const bend = center + 210 + i * 5;
-        const left = (mobile ? 3 : 8) + (14 - i) * (mobile ? 1.8 : Math.min(4, width * .0028));
-        const approach = center - 240 + i * 5;
-        path.setAttribute("d", `M ${left} -50 C ${left + sway * .4} ${center * .3}, ${left} ${approach - 180}, ${left} ${approach} C ${left} ${y}, ${x * .55} ${y}, ${x} ${y} L ${exit} ${y} C ${edge} ${y}, ${edge} ${bend - 120}, ${edge} ${bend} C ${edge} ${bend + 230}, ${edge - 24 + sway} ${height - 480}, ${edge - 12} ${height + 50}`);
+        // Independent, uneven paths across the canvas gradually resolve into
+        // a shared horizontal tangent at the door. Deterministic on resize.
+        const start = width * ((i * 7 % 15 + .5) / 15);
+        const driftA = width * (.5 + .47 * Math.sin(i * 2.3));
+        const driftB = width * (.5 + .46 * Math.cos(i * 1.7));
+        const approachX = width * (.025 + (i % 5) * .065);
+        const approachY = center - 110 - (i % 7) * 30;
+        const loose = `M ${start} -50 C ${start + Math.sin(i) * width * .18} ${center * .12}, ${driftA + sway} ${center * .2}, ${driftA} ${center * .32} S ${driftB - sway} ${center * .54}, ${driftB} ${center * .65} C ${driftB} ${center * .79}, ${approachX} ${approachY - 140}, ${approachX} ${approachY} C ${approachX} ${y}, ${x * .7} ${y}, ${x} ${y}`;
+        path.setAttribute("d", `${loose} L ${exit} ${y} C ${edge} ${y}, ${edge} ${bend - 120}, ${edge} ${bend} C ${edge} ${bend + 230}, ${edge - 24 + sway} ${height - 480}, ${edge - 12} ${height + 50}`);
       });
       element.querySelector(".jp-ribbon-frame")?.setAttribute("d", `M ${x - 32} ${center - 115} L ${x + 18} ${center - 80} L ${x + 18} ${center + 90} L ${x - 32} ${center + 125} Z M ${x + 18} ${center - 80} L ${exit + 24} ${center - 60} L ${exit + 24} ${center + 65}`);
     };

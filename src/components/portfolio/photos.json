@@ -77,6 +77,38 @@
     {
       "src": "/portfolio/photos/gfts-04-IMG_6778-2.webp",
       "alt": "Two attendees laughing outdoors"
+    },
+    {
+      "src": "/portfolio/photos/gfts-seated-portrait.webp",
+      "alt": "A seated speaker with hands together at GFTS"
+    },
+    {
+      "src": "/portfolio/photos/gfts-window-portrait.webp",
+      "alt": "An attendee smiling beside a window at GFTS"
+    },
+    {
+      "src": "/portfolio/photos/gfts-smiling-speaker.webp",
+      "alt": "A smiling GFTS speaker holding a microphone"
+    },
+    {
+      "src": "/portfolio/photos/gfts-courtyard-portrait.webp",
+      "alt": "An attendee smiling in the GFTS courtyard"
+    },
+    {
+      "src": "/portfolio/photos/gfts-conversation.webp",
+      "alt": "Two attendees in conversation at GFTS"
+    },
+    {
+      "src": "/portfolio/photos/gfts-workshop.webp",
+      "alt": "An attendee gesturing during a GFTS workshop"
+    },
+    {
+      "src": "/portfolio/photos/gfts-laughter.webp",
+      "alt": "A GFTS speaker laughing into a microphone"
+    },
+    {
+      "src": "/portfolio/photos/gfts-performance.webp",
+      "alt": "A live musical performance at GFTS"
     }
   ],
   "IF26": [
@@ -117,12 +149,12 @@
       "alt": "A speaker presenting Imagine IF It Already Happened"
     },
     {
-      "src": "/portfolio/photos/if26-convergence-decade-panel.webp",
-      "alt": "Three speakers in the Imagine IF Convergence Decade panel"
+      "src": "/portfolio/photos/if26-convergence-decade-close.webp",
+      "alt": "Two speakers in conversation during the Convergence Decade panel"
     },
     {
-      "src": "/portfolio/photos/if26-speed-to-power-panel.webp",
-      "alt": "The three-person Speed to Power panel on the Imagine IF stage"
+      "src": "/portfolio/photos/if26-speed-to-power-close.webp",
+      "alt": "Two panelists discussing Speed to Power at Imagine IF"
     }
   ]
 }

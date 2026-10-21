@@ -183,3 +183,5 @@
 #jack-portfolio .jp-flow-art{width:180%;left:-40%;height:290px;top:-45px}
 #jack-portfolio .jp-flow-steps{font-size:8px;letter-spacing:1px;gap:10px;margin-bottom:32px}
 }
+/* Keep Cathie's face centered in the tall portrait frame. */
+@media(min-width:601px){#jack-portfolio .jp-mixed-gallery img[src$="if26-cathie-wood.webp"]{object-position:33% 15%}}

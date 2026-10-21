@@ -190,3 +190,15 @@
 
 /* Preserve headroom in the selected GFTS portraits and close panel frames. */
 #jack-portfolio .jp-mixed-gallery img[src$="gfts-smiling-speaker.webp"],#jack-portfolio .jp-mixed-gallery img[src$="gfts-laughter.webp"],#jack-portfolio .jp-mixed-gallery img[src$="if26-convergence-decade-close.webp"]{object-position:50% 0%}
+
+/* A continuous ambient thread, responsive to native page scrolling. */
+#jack-portfolio{position:relative;isolation:isolate}
+#jack-portfolio .jp-scroll-flow{position:fixed;inset:0;width:100%;height:100dvh;z-index:2;pointer-events:none;opacity:.23;mask-image:linear-gradient(90deg,#000,transparent 24%,transparent 76%,#000)}
+#jack-portfolio .jp-flow-art{transform:translateY(var(--flow-travel,0px))}
+#jack-portfolio .jp-nav{position:relative;z-index:3}
+#jack-portfolio img[src*="gfts-blue-stage"]{object-position:50% 0%}
+#jack-portfolio img[src*="gfts-smiling-panelist"]{object-position:54% 12%}
+#jack-portfolio img[src*="takeover-panel-exchange"]{object-position:50% 30%}
+#jack-portfolio img[src*="takeover-outstretched-gesture"]{object-position:65% 25%}
+@media(max-width:600px){#jack-portfolio .jp-scroll-flow{opacity:.16;mask-image:linear-gradient(90deg,#000,transparent 15%,transparent 85%,#000)}}
+@media(prefers-reduced-motion:reduce){#jack-portfolio .jp-flow-art{transform:none}}

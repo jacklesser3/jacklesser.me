@@ -6,6 +6,7 @@ import Link from "next/link";
 import photos from "./photos.json";
 import videos from "./videos.json";
 import "./portfolio.css";
+import { ScrollFlow } from "./ScrollFlow";
 import { ConnectMenu } from "./ConnectMenu";
 
 function useRotation(delay: number) {
@@ -33,10 +34,10 @@ function useRotation(delay: number) {
 }
 
 const pools = [
-  [photos.GFTS[4], photos.IF26[4], photos.GFTS[5], photos.IF26[5], photos.GFTS[6], photos.IF26[6], photos.GFTS[7], photos.IF26[9], photos.IF26[10]],
-  [photos.GFTS[3], photos.GFTS[2], photos.GFTS[0], photos.IF26[1], photos["Peru 2026"][2], photos["Peru 2026"][0], photos.GFTS[8], photos.GFTS[9]],
-  [photos["Bitcoin Takeover 2026"][0], photos["Bitcoin Takeover 2026"][2], photos["NEMS 2026"][0], photos["NEMS 2026"][3], photos.IF26[8], photos.GFTS[10], photos.GFTS[11]],
-  [photos.IF26[7], photos["NEMS 2026"][1], photos["NEMS 2026"][2], photos["Bitcoin Takeover 2026"][1], photos["Bitcoin Takeover 2026"][3]],
+  [photos.GFTS[4], photos.IF26[4], photos.GFTS[5], photos.IF26[5], photos.GFTS[6], photos.IF26[6], photos.GFTS[7], photos.IF26[9], photos.IF26[10], photos.GFTS[12]],
+  [photos.GFTS[3], photos.GFTS[2], photos.GFTS[0], photos.IF26[1], photos["Peru 2026"][2], photos["Peru 2026"][0], photos.GFTS[8], photos.GFTS[9], photos.GFTS[14]],
+  [photos["Bitcoin Takeover 2026"][0], photos["Bitcoin Takeover 2026"][2], photos["NEMS 2026"][0], photos["NEMS 2026"][3], photos.IF26[8], photos.GFTS[10], photos.GFTS[11], photos["Bitcoin Takeover 2026"][5], photos["Bitcoin Takeover 2026"][6], photos["Bitcoin Takeover 2026"][8]],
+  [photos.IF26[7], photos["NEMS 2026"][1], photos["NEMS 2026"][2], photos["Bitcoin Takeover 2026"][1], photos["Bitcoin Takeover 2026"][3], photos.GFTS[13], photos["Bitcoin Takeover 2026"][4], photos["Bitcoin Takeover 2026"][7]],
 ];
 
 const galleryPhotos = pools.flat();
@@ -128,6 +129,7 @@ const pillars = [
 
 export default function Portfolio() {
   return <div id="jack-portfolio">
+    <ScrollFlow />
     <header className="jp-nav"><Link className="jp-brand" href="/">Jack Lesser.</Link><nav className="jp-links" aria-label="Portfolio"><a href="#jp-pillars">The practice</a><a href="#jp-photography">Photography</a><a href="#jp-channels">Media</a><Link href="/timeless">Timeless</Link><ConnectMenu /></nav></header>
     <section className="jp-intro" id="jp-top"><div><div className="jp-eyebrow">Jack Lesser / A creative practice</div><h1>Vibes<br /><span className="jp-title-second">Architecture.</span></h1></div><div className="jp-lead"><p>How we feel. What we create. How we come together.</p><p className="jp-lead-second">Wellness, digital creation, and physical connection—with an eye for capturing it all.</p><a href="#jp-pillars">Explore the three pillars ↓</a></div></section>
     <div className="jp-cover"><img src={photos["Peru 2026"][1].src} alt="Warm light on snow-covered mountains in Peru" fetchPriority="high" width="1800" height="1200" /><div className="jp-cover-overlay"><div className="jp-cover-title">Create the feeling.<br />Capture the moment.<br />Share with the world.</div></div></div>

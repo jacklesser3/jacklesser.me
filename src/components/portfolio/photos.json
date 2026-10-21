@@ -59,6 +59,26 @@
     {
       "src": "/portfolio/photos/takeover-indie-building-cropped.svg",
       "alt": "A seated panelist speaking into a microphone"
+    },
+    {
+      "src": "/portfolio/photos/takeover-panel-exchange.webp",
+      "alt": "Two panelists in conversation at Bitcoin Takeover"
+    },
+    {
+      "src": "/portfolio/photos/takeover-zbd-speaker.webp",
+      "alt": "A speaker in a black ZBD shirt presenting at Bitcoin Takeover"
+    },
+    {
+      "src": "/portfolio/photos/takeover-lectern-speaker.webp",
+      "alt": "A speaker in a green pullover presenting at the lectern"
+    },
+    {
+      "src": "/portfolio/photos/takeover-outstretched-gesture.webp",
+      "alt": "A speaker extending his arm during a Bitcoin Takeover presentation"
+    },
+    {
+      "src": "/portfolio/photos/takeover-cowboy-hat.webp",
+      "alt": "A speaker in a cowboy hat presenting at Bitcoin Takeover"
     }
   ],
   "GFTS": [
@@ -109,6 +129,18 @@
     {
       "src": "/portfolio/photos/gfts-performance.webp",
       "alt": "A live musical performance at GFTS"
+    },
+    {
+      "src": "/portfolio/photos/gfts-smiling-panelist.webp",
+      "alt": "A smiling panelist holding a microphone against the GFTS stage backdrop"
+    },
+    {
+      "src": "/portfolio/photos/gfts-seated-conversation.webp",
+      "alt": "A seated speaker gesturing during a GFTS conversation"
+    },
+    {
+      "src": "/portfolio/photos/gfts-blue-stage.webp",
+      "alt": "A speaker in a blue GFTS shirt sharing an idea on stage"
     }
   ],
   "IF26": [

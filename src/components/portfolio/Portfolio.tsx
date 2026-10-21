@@ -91,18 +91,22 @@ function PhotoMosaic() {
 type Video = (typeof videos)["Bitcoin Park"][number];
 function VideoCarousel({ channel, items }: { channel: string; items: Video[] }) {
   const rotation = useRotation(8000);
+  const [playing, setPlaying] = useState<string | null>(null);
   const active = ((rotation.step % items.length) + items.length) % items.length;
-  function move(delta: number) { rotation.setPaused(true); rotation.setStep(step => step + delta); }
+  function move(delta: number) { setPlaying(null); rotation.setPaused(true); rotation.setStep(step => step + delta); }
+  function play(id: string) { rotation.setPaused(true); setPlaying(id); }
   return <div ref={rotation.ref} role="region" aria-roledescription="carousel" aria-label={`${channel} selected videos`}
     onMouseEnter={() => rotation.setEngaged(true)} onMouseLeave={() => rotation.setEngaged(false)}
     onFocus={() => rotation.setEngaged(true)} onBlur={event => { if (!event.currentTarget.contains(event.relatedTarget)) rotation.setEngaged(false); }}>
     <div className="jp-videos jp-carousel">
-      {items.map((video, i) => <a key={video.id} className={`jp-video-card ${active === i ? "is-current" : ""}`} href={`https://www.youtube.com/watch?v=${video.id}`} target="_blank" rel="noopener noreferrer" inert={active !== i} aria-hidden={active !== i}>
-        <div className="jp-thumbnail"><img src={`/portfolio/videos/${video.id}.webp`} alt={`${video.title} — ${video.subtitle}`} loading="lazy" width="1280" height="720" /><span className="jp-duration">{video.duration}</span></div>
-        <div className="jp-video-meta">{video.label}</div><h4>{video.title}</h4><p>{video.subtitle}</p><span className="jp-watch">Watch conversation ↗</span>
-      </a>)}
+      {items.map((video, i) => <article key={video.id} className={`jp-video-card ${active === i ? "is-current" : ""}`} inert={active !== i} aria-hidden={active !== i}>
+        <div className="jp-thumbnail">{playing === video.id && active === i
+          ? <iframe src={`https://www.youtube-nocookie.com/embed/${video.id}?autoplay=1&playsinline=1&rel=0`} title={`${video.title} — ${video.subtitle}`} allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowFullScreen referrerPolicy="strict-origin-when-cross-origin" />
+          : <button type="button" className="jp-video-play" aria-label={`Play ${video.title}`} onClick={() => play(video.id)}><img src={`/portfolio/videos/${video.id}.webp`} alt={`${video.title} — ${video.subtitle}`} loading="lazy" width="1280" height="720" /><span className="jp-play-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 4.5v15l12-7.5z" /></svg></span><span className="jp-duration">{video.duration}</span></button>}</div>
+        <div className="jp-video-meta">{video.label}</div><h4>{video.title}</h4><p>{video.subtitle}</p><a className="jp-watch" href={`https://www.youtube.com/watch?v=${video.id}`} target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a>
+      </article>)}
     </div>
-    <div className="jp-carousel-controls"><button type="button" onClick={() => move(-1)} aria-label={`Previous ${channel} video`}>←</button><span className="jp-carousel-count" aria-live={rotation.paused ? "polite" : "off"}>{String(active + 1).padStart(2, "0")} / {String(items.length).padStart(2, "0")}</span><button type="button" onClick={() => move(1)} aria-label={`Next ${channel} video`}>→</button><button type="button" className="jp-toggle" onClick={rotation.toggle} aria-label={`${rotation.paused ? "Play" : "Pause"} ${channel} slideshow`}>{rotation.paused ? "Play" : "Pause"}</button></div>
+    <div className="jp-carousel-controls"><button type="button" onClick={() => move(-1)} aria-label={`Previous ${channel} video`}>←</button><span className="jp-carousel-count" aria-live={rotation.paused ? "polite" : "off"}>{String(active + 1).padStart(2, "0")} / {String(items.length).padStart(2, "0")}</span><button type="button" onClick={() => move(1)} aria-label={`Next ${channel} video`}>→</button><button type="button" className="jp-toggle" onClick={() => { setPlaying(null); rotation.toggle(); }} aria-label={`${rotation.paused ? "Play" : "Pause"} ${channel} slideshow`}>{rotation.paused ? "Play" : "Pause"}</button></div>
   </div>;
 }
 

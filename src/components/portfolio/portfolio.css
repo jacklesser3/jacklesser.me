@@ -221,7 +221,7 @@
 #jack-portfolio .jp-capture,#jack-portfolio .jp-media{background:transparent}
 
 /* Loose source strands live behind content; the door resolves them into order. */
-#jack-portfolio > :not(.jp-scroll-flow){position:relative;z-index:1}
+#jack-portfolio > :not(.jp-scroll-flow):not(.jp-nav){position:relative;z-index:1}
 #jack-portfolio > .jp-scroll-flow{z-index:0}
 #jack-portfolio .jp-ribbon-strand{opacity:.18}
 @media(max-width:600px){#jack-portfolio .jp-ribbon-strand{opacity:.12}}
@@ -234,3 +234,8 @@
 #jack-portfolio .jp-video-play:hover .jp-play-icon,#jack-portfolio .jp-video-play:focus-visible .jp-play-icon{transform:translate(-50%,-50%) scale(1.1);background:#294668}
 #jack-portfolio .jp-video-play:focus-visible{outline:2px solid #dfc17e;outline-offset:-3px}
 @media(prefers-reduced-motion:reduce){#jack-portfolio .jp-play-icon{transition:none}}
+
+/* Keep dropdown hit targets above the hero and show clear pointer feedback. */
+#jack-portfolio .jp-connect-trigger,#jack-portfolio .jp-connect-menu a{cursor:pointer}
+#jack-portfolio .jp-connect-menu a:hover,#jack-portfolio .jp-connect-menu a:focus-visible{background:#29425f;color:#e8cb87;outline:2px solid #d4ba75;outline-offset:-2px}
+#jack-portfolio .jp-connect-trigger:hover,#jack-portfolio .jp-connect-trigger:focus-visible{color:#e8cb87}

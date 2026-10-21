@@ -4,6 +4,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import photos from "./photos.json";
+import photoDetails from "./photoDetails.json";
 import videos from "./videos.json";
 import "./portfolio.css";
 import { ScrollFlow } from "./ScrollFlow";
@@ -41,12 +42,15 @@ const pools = [
 ];
 
 const galleryPhotos = pools.flat();
+type PhotoDetails = { name: string; event: string; date: string; bio: string; x?: string; linkedin?: string };
+const detailFor = (src: string): PhotoDetails => (photoDetails as Record<string, PhotoDetails>)[src];
 
 function PhotoMosaic() {
   const rotation = useRotation(3000);
   const dialog = useRef<HTMLDialogElement>(null);
   const [selected, setSelected] = useState(0);
   const [viewerOpen, setViewerOpen] = useState(false);
+  const detail = detailFor(galleryPhotos[selected].src);
   const touchStart = useRef<number | null>(null);
   const move = (delta: number) => setSelected(index => (index + delta + galleryPhotos.length) % galleryPhotos.length);
   useEffect(() => {
@@ -64,10 +68,13 @@ function PhotoMosaic() {
   function closePhoto() { dialog.current?.close(); }
 
   return <div ref={rotation.ref}>
-    <div className="jp-mixed-gallery" aria-label="Selected photographs">
+    <div className="jp-mixed-gallery" aria-label="Selected photographs"
+      onMouseEnter={() => rotation.setEngaged(true)} onMouseLeave={() => { if (!viewerOpen) rotation.setEngaged(false); }}
+      onFocus={() => rotation.setEngaged(true)} onBlur={event => { if (!viewerOpen && !event.currentTarget.contains(event.relatedTarget)) rotation.setEngaged(false); }}>
       {pools.map((pool, slot) => {
         const active = Math.floor((rotation.step + 3 - slot) / 4) % pool.length;
-        return <figure key={slot}><button className="jp-photo-open" type="button" aria-label={`Open photo: ${pool[active].alt}`} onClick={() => openPhoto(pool[active].src)}>{pool.map((photo, index) => <img key={photo.src} src={photo.src} alt={photo.alt} loading="lazy" decoding="async" className={index === active ? "is-visible" : ""} aria-hidden={index !== active} />)}</button></figure>;
+        const info = detailFor(pool[active].src);
+        return <figure key={slot}><button className="jp-photo-open" type="button" aria-label={`Open photo: ${pool[active].alt}`} onClick={() => openPhoto(pool[active].src)}>{pool.map((photo, index) => <img key={photo.src} src={photo.src} alt={photo.alt} loading="lazy" decoding="async" className={index === active ? "is-visible" : ""} aria-hidden={index !== active} />)}<span className="jp-photo-label"><strong>{info.name}</strong><span>{info.event} · {info.date}</span></span></button></figure>;
       })}
     </div>
     <dialog ref={dialog} className="jp-photo-dialog" aria-label="Photo viewer" onClose={() => { setViewerOpen(false); rotation.setEngaged(false); }}
@@ -81,6 +88,7 @@ function PhotoMosaic() {
           if (touchStart.current !== null) { const delta = touchStart.current - event.changedTouches[0].clientX; if (Math.abs(delta) > 50) move(delta > 0 ? 1 : -1); }
           touchStart.current = null;
         }}><img src={galleryPhotos[selected].src} alt={galleryPhotos[selected].alt} /></div>
+        <div className="jp-viewer-caption" aria-live="polite"><strong>{detail.name}</strong><div>{detail.event} · {detail.date}</div><p>{detail.bio}</p><div className="jp-photo-socials">{detail.x && <a href={detail.x} target="_blank" rel="noopener noreferrer">X ↗</a>}{detail.linkedin && <a href={detail.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>}</div></div>
         <div className="jp-viewer-controls"><button type="button" onClick={() => move(-1)} aria-label="Previous photo">←</button><span aria-live="polite">{selected + 1} / {galleryPhotos.length}</span><button type="button" onClick={() => move(1)} aria-label="Next photo">→</button></div>
       </>}
     </dialog>
@@ -111,9 +119,9 @@ function VideoCarousel({ channel, items }: { channel: string; items: Video[] }) 
 }
 
 const pillars = [
-  { name: "Aura", number: "01 / CONNECT", subtitle: "Spaces & connection", text: "The feeling of being there. Physical community and connection, shaped by the details that make a space come alive.", tags: ["Environment · Music · Photography", "Food · Drink · Atmosphere · Aesthetic"], href: "#jp-photography", action: "Explore the photography ↗" },
-  { name: "Soul", number: "02 / FEEL", subtitle: "Presence, ideas & collaboration", text: "Coming back to the body. Exploring what comes next. Workshops and programming around frontier ideas, freedom technology, and freedom from technology—creating space for presence, new perspectives, and collaboration.", tags: ["Frontier ideas · Freedom technology", "Presence · Workshops · Collaboration · Leadership"], href: "/freedom-from-tech", action: "Explore the practice ↗" },
-  { name: "Time", number: "03 / CREATE", subtitle: "Digital creation", text: "Giving ideas a digital home. Design, interfaces, technology, and the ongoing practice of making things online.", tags: ["Design · Web UX/UI", "Production · Technology · Distribution"], href: "/timeless", action: "Explore Time ↗" },
+  { name: "Aura", number: "A", subtitle: "Spaces & connection", text: "The feeling of being there. Physical community and connection, shaped by the details that make a space come alive.", tags: ["Environment · Music · Photography", "Food · Drink · Atmosphere · Aesthetic"], href: "#jp-photography", action: "Explore the photography ↗" },
+  { name: "Soul", number: "B", subtitle: "Presence, ideas & collaboration", text: "Coming back to the body. Exploring what comes next. Workshops and programming around frontier ideas, freedom technology, and freedom from technology—creating space for presence, new perspectives, and collaboration.", tags: ["Frontier ideas · Freedom technology", "Presence · Workshops · Collaboration · Leadership"], href: "/freedom-from-tech", action: "Explore the practice ↗" },
+  { name: "Time", number: "C", subtitle: "Digital creation", text: "Giving ideas a digital home. Design, interfaces, technology, and the ongoing practice of making things online.", tags: ["Design · Web UX/UI", "Production · Technology · Distribution"], href: "/timeless", action: "Explore Time ↗" },
 ];
 
 export default function Portfolio() {

@@ -93,10 +93,10 @@ export function ShelfUI({
       {/* Hover tooltip */}
       {hover && browsing && (
         <div
-          className="pointer-events-none absolute z-10 -translate-x-1/2 whitespace-nowrap rounded-sm border border-[#2a2118]/10 bg-[#fbf7ee]/95 px-3 py-1.5 text-sm italic shadow-sm"
-          style={{ ...serif, left: hover.x, top: hover.y - 44 }}
+          className="pointer-events-none absolute z-10 -translate-x-1/2 w-[280px] max-w-[calc(100vw-32px)] whitespace-normal rounded-sm border border-[#2a2118]/10 bg-[#fbf7ee]/95 px-3 py-1.5 text-sm italic shadow-sm"
+          style={{ ...serifInk, left: `clamp(156px, ${hover.x}px, calc(100% - 156px))`, top: Math.max(92, hover.y - 110), fontSize: 18, lineHeight: 1.3 }}
         >
-          {hover.title}
+          {hover.title}<span className="mt-1 block text-xs not-italic" style={sans}>{books.find(book => book.title === hover.title)?.context}</span>
         </div>
       )}
 

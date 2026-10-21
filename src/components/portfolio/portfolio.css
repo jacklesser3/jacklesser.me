@@ -239,3 +239,14 @@
 #jack-portfolio .jp-connect-trigger,#jack-portfolio .jp-connect-menu a{cursor:pointer}
 #jack-portfolio .jp-connect-menu a:hover,#jack-portfolio .jp-connect-menu a:focus-visible{background:#29425f;color:#e8cb87;outline:2px solid #d4ba75;outline-offset:-2px}
 #jack-portfolio .jp-connect-trigger:hover,#jack-portfolio .jp-connect-trigger:focus-visible{color:#e8cb87}
+
+#jack-portfolio .jp-photo-open{position:relative}
+#jack-portfolio .jp-photo-label{position:absolute;inset:auto 0 0;padding:40px 20px 18px;background:linear-gradient(transparent,rgba(5,15,28,.92));color:#fff;text-align:left;opacity:0;transition:opacity .25s;pointer-events:none}
+#jack-portfolio .jp-photo-label strong{display:block;font-size:17px;line-height:1.3}
+#jack-portfolio .jp-photo-label span{display:block;font-size:12px;margin-top:6px;color:#d6dfeb}
+#jack-portfolio .jp-photo-open:hover .jp-photo-label,#jack-portfolio .jp-photo-open:focus-visible .jp-photo-label{opacity:1}
+#jack-portfolio .jp-viewer-caption{text-align:center;flex-shrink:0;max-width:700px;font-size:13px;color:#bacbdd}
+#jack-portfolio .jp-viewer-caption strong{color:#fff;font-size:18px}
+#jack-portfolio .jp-viewer-caption p{margin:6px 0}
+#jack-portfolio .jp-photo-socials{display:flex;justify-content:center;gap:18px;color:#dfc17e}
+@media(hover:none){#jack-portfolio .jp-photo-label{opacity:1;padding:24px 10px 10px}#jack-portfolio .jp-photo-label strong{font-size:12px}#jack-portfolio .jp-photo-label span{font-size:10px}}

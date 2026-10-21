@@ -30,7 +30,9 @@ export function ScrollFlow() {
         const y = center + (i - 7) * (mobile ? 1.5 : 2.6);
         const edge = width - (mobile ? 5 : 14) - i * spacing;
         const bend = center + 210 + i * 5;
-        path.setAttribute("d", `M -50 ${center - 180 + i * 25} C ${width * .2} ${center - 180 + i * 25}, ${x * .65} ${y}, ${x} ${y} L ${exit} ${y} C ${edge} ${y}, ${edge} ${bend - 120}, ${edge} ${bend} C ${edge} ${bend + 230}, ${edge - 24 + sway} ${height - 480}, ${edge - 12} ${height + 50}`);
+        const left = (mobile ? 3 : 8) + (14 - i) * (mobile ? 1.8 : Math.min(4, width * .0028));
+        const approach = center - 240 + i * 5;
+        path.setAttribute("d", `M ${left} -50 C ${left + sway * .4} ${center * .3}, ${left} ${approach - 180}, ${left} ${approach} C ${left} ${y}, ${x * .55} ${y}, ${x} ${y} L ${exit} ${y} C ${edge} ${y}, ${edge} ${bend - 120}, ${edge} ${bend} C ${edge} ${bend + 230}, ${edge - 24 + sway} ${height - 480}, ${edge - 12} ${height + 50}`);
       });
       element.querySelector(".jp-ribbon-frame")?.setAttribute("d", `M ${x - 32} ${center - 115} L ${x + 18} ${center - 80} L ${x + 18} ${center + 90} L ${x - 32} ${center + 125} Z M ${x + 18} ${center - 80} L ${exit + 24} ${center - 60} L ${exit + 24} ${center + 65}`);
     };

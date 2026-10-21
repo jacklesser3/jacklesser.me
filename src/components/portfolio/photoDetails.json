@@ -363,5 +363,19 @@
     "event": "Texas Energy & Mining Summit",
     "date": "May 20–21, 2026",
     "bio": "Presenting at the Texas Energy & Mining Summit."
+  },
+  "/portfolio/photos/takeover-david-zell.jpg": {
+    "name": "David Zell",
+    "event": "Bitcoin Takeover",
+    "date": "March 12–13, 2026",
+    "bio": "President of Bitcoin Policy Institute.",
+    "identitySource": "User identification, October 21, 2026"
+  },
+  "/portfolio/photos/takeover-janessa-lopez.jpg": {
+    "name": "Janessa Lopez",
+    "event": "Bitcoin Takeover",
+    "date": "March 12–13, 2026",
+    "bio": "Head of Digital Assets & Emerging Tech Policy at Block.",
+    "identitySource": "User identification, October 21, 2026"
   }
 }

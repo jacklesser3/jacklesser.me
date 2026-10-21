@@ -33,10 +33,10 @@ function useRotation(delay: number) {
 }
 
 const pools = [
-  [photos.GFTS[0], photos["Peru 2026"][3], photos.IF26[0]],
-  [photos["Peru 2026"][0], photos["Peru 2026"][4], photos["Peru 2026"][5]],
-  [photos["Bitcoin Takeover 2026"][0], photos["NEMS 2026"][1], photos["Bitcoin Takeover 2026"][2], photos["NEMS 2026"][0]],
-  [photos.GFTS[1], photos["Peru 2026"][5], photos["Peru 2026"][0], photos["Peru 2026"][4]],
+  [photos.GFTS[0], photos.IF26[0], photos.IF26[3]],
+  [photos.GFTS[3], photos.GFTS[2], photos.IF26[1], photos["Peru 2026"][2], photos["Peru 2026"][0]],
+  [photos["Bitcoin Takeover 2026"][0], photos["Bitcoin Takeover 2026"][2], photos["NEMS 2026"][0], photos["NEMS 2026"][3]],
+  [photos["NEMS 2026"][1], photos["NEMS 2026"][2], photos["Bitcoin Takeover 2026"][1], photos["Bitcoin Takeover 2026"][3], photos.IF26[2]],
 ];
 
 function PhotoMosaic() {

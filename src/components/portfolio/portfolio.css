@@ -146,3 +146,6 @@
 #jack-portfolio .jp-mixed-gallery img{transition:opacity 1.2s ease-in-out}
 @media(max-width:600px){#jack-portfolio .jp-connect{position:static}#jack-portfolio .jp-connect-menu{top:calc(100% + 12px)}#jack-portfolio .jp-connect-trigger{min-height:44px}}
 @media(prefers-reduced-motion:reduce){#jack-portfolio .jp-mixed-gallery img{transition:none}}
+/* Keep the wider speaker tile anchored above the faces, not at image center. */
+#jack-portfolio .jp-mixed-gallery figure:nth-child(4) img{object-position:50% 15%}
+@media(max-width:600px){#jack-portfolio .jp-mixed-gallery{grid-template-rows:auto auto}#jack-portfolio .jp-mixed-gallery figure:nth-child(n){aspect-ratio:3 / 2;height:auto}#jack-portfolio .jp-mixed-gallery img{object-position:50% 10%}}

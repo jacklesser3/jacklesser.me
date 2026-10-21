@@ -391,12 +391,6 @@
     "date": "June 2026",
     "bio": "Leading a rooftop practice in Austin. Photo: @julz.delviscio."
   },
-  "/portfolio/photos/teaching-movement.webp": {
-    "name": "Jack Lesser",
-    "event": "Higher Ground Yoga · Austin",
-    "date": "June 2026",
-    "bio": "Guiding movement and shared attention on the rooftop. Photo: @julz.delviscio."
-  },
   "/portfolio/photos/japan-wooded-steps.webp": {
     "name": "A path through the trees",
     "event": "Japan",
@@ -426,5 +420,11 @@
     "event": "Japan",
     "date": "August 2026",
     "bio": "Warm light and intricate details inside a temple."
+  },
+  "/portfolio/photos/teaching-wild-thing.webp": {
+    "name": "Wild Thing",
+    "event": "Higher Ground Yoga · Austin",
+    "date": "June 2026",
+    "bio": "Students moving through Wild Thing during a rooftop practice led by Jack Lesser. Photo: @julz.delviscio."
   }
 }

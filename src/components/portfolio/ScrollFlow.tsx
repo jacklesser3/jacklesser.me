@@ -47,13 +47,20 @@ export function ScrollFlow() {
         const entryY = center + Math.sin(i * 1.9) * radius * .24;
         const loose = `M ${start} -50 C ${start + Math.sin(i) * width * .18} ${center * .12}, ${driftA + sway} ${center * .2}, ${driftA} ${center * .32} S ${driftB - sway} ${center * .54}, ${driftB} ${center * .65} C ${driftB} ${center * .79}, ${approachX} ${approachY - 140}, ${approachX} ${approachY} C ${approachX} ${arcY}, ${mid - radius * .65} ${arcY}, ${mid} ${entryY} L ${mid + radius * .18} ${y}`;
         path.setAttribute("d", loose);
-        // Start each refracted ray on the visible side plane, halfway through
-        // its depth, instead of letting the face conceal the outgoing bundle.
-        const sideDepth = depth * .55;
-        const faceFraction = (y - center + radius + sideDepth) / (radius * 1.7);
+        // A compact beam becomes visible within the side plane, then gently
+        // opens into the evenly spaced distribution strands outside the prism.
+        const sourceY = center + (y - center) * .55;
+        const sideDepth = depth * .4;
+        const faceFraction = (sourceY - center + radius + sideDepth) / (radius * 1.7);
         const sourceX = mid + radius * faceFraction + sideDepth;
+        const releaseX = mid + radius + depth + radius * .45;
+        const gradient = element.querySelector(`#jp-ray-fade-${i}`);
+        gradient?.setAttribute("x1", String(sourceX));
+        gradient?.setAttribute("x2", String(releaseX));
+        const emergence = element.querySelectorAll<SVGPathElement>(".jp-ray-emergence")[i];
+        emergence.setAttribute("d", `M ${sourceX} ${sourceY} C ${sourceX + radius * .45} ${sourceY}, ${releaseX - radius * .35} ${y}, ${releaseX} ${y}`);
         const outgoing = element.querySelectorAll<SVGPathElement>(".jp-ribbon-outgoing")[i];
-        outgoing.setAttribute("d", `M ${sourceX} ${y} C ${sourceX + radius * .6} ${y}, ${edge} ${y}, ${edge} ${bend} C ${edge} ${bend + 230}, ${destination + sway} ${height - 480}, ${destination} ${height + 50}`);
+        outgoing.setAttribute("d", `M ${releaseX} ${y} C ${releaseX + radius * .6} ${y}, ${edge} ${y}, ${edge} ${bend} C ${edge} ${bend + 230}, ${destination + sway} ${height - 480}, ${destination} ${height + 50}`);
       });
       element.querySelectorAll<SVGTextElement>(".jp-prism-point").forEach((label, i) => {
         label.setAttribute("x", String(i === 0 ? mid : i === 1 ? mid-radius : mid+radius));
@@ -84,8 +91,14 @@ export function ScrollFlow() {
     };
   }, []);
   return <svg ref={svg} className="jp-scroll-flow" fill="none" aria-hidden="true" focusable="false" preserveAspectRatio="none">
+    <defs>{Array.from({ length: 15 }, (_, i) => <linearGradient key={i} id={`jp-ray-fade-${i}`} gradientUnits="userSpaceOnUse" y1="0" y2="0">
+      <stop offset="0" stopColor="#83b5dc" stopOpacity="0" />
+      <stop offset=".4" stopColor="#83b5dc" stopOpacity=".45" />
+      <stop offset="1" stopColor="#83b5dc" stopOpacity="1" />
+    </linearGradient>)}</defs>
     {Array.from({ length: 15 }, (_, i) => <path className="jp-ribbon-strand jp-ribbon-incoming" key={i} stroke="#83b5dc" strokeWidth="1" />)}
     <polygon className="jp-prism-side" fill="#263b51" fillOpacity=".98" stroke="#b89c63" strokeWidth="1.2" strokeLinejoin="round" />
+    {Array.from({ length: 15 }, (_, i) => <path className="jp-ribbon-strand jp-ray-emergence" key={i} stroke={`url(#jp-ray-fade-${i})`} strokeWidth="1" />)}
     {Array.from({ length: 15 }, (_, i) => <path className="jp-ribbon-strand jp-ribbon-outgoing" key={i} stroke="#83b5dc" strokeWidth="1" strokeLinecap="round" />)}
     <polygon className="jp-prism-face" fill="#101e31" fillOpacity=".98" stroke="#dfc17e" strokeOpacity=".8" strokeWidth="1.2" strokeLinejoin="round" />
     {["Aura", "Soul", "Time"].map(name => <text key={name} className="jp-prism-point" fill="#dfc17e" textAnchor="middle" fontSize="10" letterSpacing="2">{name.toUpperCase()}</text>)}

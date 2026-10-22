@@ -72,6 +72,14 @@ const detailFor = (src: string): PhotoDetails => (photoDetails as Record<string,
 
 function PhotoMosaic() {
   const rotation = useRotation(3000);
+  const [mobile, setMobile] = useState(false);
+  useEffect(() => {
+    const query = matchMedia("(max-width: 600px)");
+    const update = () => setMobile(query.matches);
+    update();
+    query.addEventListener("change", update);
+    return () => query.removeEventListener("change", update);
+  }, []);
   const dialog = useRef<HTMLDialogElement>(null);
   const [selected, setSelected] = useState(0);
   const [archiveOpen, setArchiveOpen] = useState(false);
@@ -101,8 +109,8 @@ function PhotoMosaic() {
     <div className="jp-mixed-gallery" aria-label="Selected photographs"
       onMouseEnter={() => rotation.setEngaged(true)} onMouseLeave={() => { if (!viewerOpen) rotation.setEngaged(false); }}
       onFocus={() => rotation.setEngaged(true)} onBlur={event => { if (!viewerOpen && !event.currentTarget.contains(event.relatedTarget)) rotation.setEngaged(false); }}>
-      {pools.map((pool, slot) => {
-        const active = Math.floor((rotation.step + 3 - slot) / 4) % pool.length;
+      {(mobile ? [featuredPhotos] : pools).map((pool, slot) => {
+        const active = (mobile ? rotation.step : Math.floor((rotation.step + 3 - slot) / 4)) % pool.length;
         const info = detailFor(pool[active].src);
         return <figure key={slot}><button className="jp-photo-open" type="button" aria-label={`Open photo: ${info.name}`} onClick={() => openPhoto(pool[active].src)}>{pool.map((photo, index) => <img key={photo.src} src={photo.src} alt={detailFor(photo.src).name} loading="lazy" decoding="async" className={index === active ? "is-visible" : ""} aria-hidden={index !== active} />)}<span className="jp-photo-label"><strong>{info.name}</strong><span>{info.event} · {info.date}</span></span></button></figure>;
       })}

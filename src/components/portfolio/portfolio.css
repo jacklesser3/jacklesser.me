@@ -277,3 +277,10 @@
 
 /* Preserve the portrait slot when the mosaic stacks on mobile, too. */
 @media(max-width:600px){#jack-portfolio .jp-mixed-gallery figure:first-child{aspect-ratio:3 / 4}}
+
+/* One stable mobile frame cycles through every featured photo without cropping. */
+@media(max-width:600px){
+#jack-portfolio .jp-mixed-gallery{display:block}
+#jack-portfolio .jp-mixed-gallery figure:nth-child(n){width:100%;aspect-ratio:3/4;margin:0}
+#jack-portfolio .jp-mixed-gallery img{object-fit:contain;object-position:center}
+}

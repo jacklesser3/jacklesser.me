@@ -29,7 +29,7 @@ export function ScrollFlow() {
       const sway = Math.sin(progress * Math.PI * 2) * (mobile ? 3 : 12);
       const spacing = mobile ? 2.1 : 5;
       element.setAttribute("viewBox", `0 0 ${width} ${height}`);
-      element.querySelectorAll<SVGPathElement>(".jp-ribbon-strand").forEach((path, i) => {
+      element.querySelectorAll<SVGPathElement>(".jp-ribbon-incoming").forEach((path, i) => {
         const y = center + (i - 7) * (mobile ? 1.5 : 2.6);
         const edge = width - (mobile ? 5 : 14) - i * spacing;
         const bend = center + 210 + i * 5;
@@ -37,7 +37,7 @@ export function ScrollFlow() {
         const spread = width - (mobile ? 10 : 28);
         const destination = width - (mobile ? 5 : 14) - (i / 14) * spread;
         // Broad, continuous curves overlap gently before entering the prism.
-        // The ordered output begins behind its face, hiding the transition.
+        // Incoming strands disappear inside the opaque front face.
         const start = width * ((i * 7 % 15 + .5) / 15);
         const driftA = width * (.5 + .47 * Math.sin(i * 2.3));
         const driftB = width * (.5 + .46 * Math.cos(i * 1.7));
@@ -46,7 +46,14 @@ export function ScrollFlow() {
         const arcY = center + Math.sin(i * 1.3) * radius * .55;
         const entryY = center + Math.sin(i * 1.9) * radius * .24;
         const loose = `M ${start} -50 C ${start + Math.sin(i) * width * .18} ${center * .12}, ${driftA + sway} ${center * .2}, ${driftA} ${center * .32} S ${driftB - sway} ${center * .54}, ${driftB} ${center * .65} C ${driftB} ${center * .79}, ${approachX} ${approachY - 140}, ${approachX} ${approachY} C ${approachX} ${arcY}, ${mid - radius * .65} ${arcY}, ${mid} ${entryY} L ${mid + radius * .18} ${y}`;
-        path.setAttribute("d", `${loose} L ${exit} ${y} C ${edge} ${y}, ${edge} ${bend - 120}, ${edge} ${bend} C ${edge} ${bend + 230}, ${destination + sway} ${height - 480}, ${destination} ${height + 50}`);
+        path.setAttribute("d", loose);
+        // Start each refracted ray on the visible side plane, halfway through
+        // its depth, instead of letting the face conceal the outgoing bundle.
+        const sideDepth = depth * .55;
+        const faceFraction = (y - center + radius + sideDepth) / (radius * 1.7);
+        const sourceX = mid + radius * faceFraction + sideDepth;
+        const outgoing = element.querySelectorAll<SVGPathElement>(".jp-ribbon-outgoing")[i];
+        outgoing.setAttribute("d", `M ${sourceX} ${y} C ${sourceX + radius * .6} ${y}, ${edge} ${y}, ${edge} ${bend} C ${edge} ${bend + 230}, ${destination + sway} ${height - 480}, ${destination} ${height + 50}`);
       });
       element.querySelectorAll<SVGTextElement>(".jp-prism-point").forEach((label, i) => {
         label.setAttribute("x", String(i === 0 ? mid : i === 1 ? mid-radius : mid+radius));
@@ -77,8 +84,9 @@ export function ScrollFlow() {
     };
   }, []);
   return <svg ref={svg} className="jp-scroll-flow" fill="none" aria-hidden="true" focusable="false" preserveAspectRatio="none">
-    {Array.from({ length: 15 }, (_, i) => <path className="jp-ribbon-strand" key={i} stroke="#83b5dc" strokeWidth="1" />)}
+    {Array.from({ length: 15 }, (_, i) => <path className="jp-ribbon-strand jp-ribbon-incoming" key={i} stroke="#83b5dc" strokeWidth="1" />)}
     <polygon className="jp-prism-side" fill="#263b51" fillOpacity=".98" stroke="#b89c63" strokeWidth="1.2" strokeLinejoin="round" />
+    {Array.from({ length: 15 }, (_, i) => <path className="jp-ribbon-strand jp-ribbon-outgoing" key={i} stroke="#83b5dc" strokeWidth="1" strokeLinecap="round" />)}
     <polygon className="jp-prism-face" fill="#101e31" fillOpacity=".98" stroke="#dfc17e" strokeOpacity=".8" strokeWidth="1.2" strokeLinejoin="round" />
     {["Aura", "Soul", "Time"].map(name => <text key={name} className="jp-prism-point" fill="#dfc17e" textAnchor="middle" fontSize="10" letterSpacing="2">{name.toUpperCase()}</text>)}
   </svg>;

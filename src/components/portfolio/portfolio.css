@@ -284,3 +284,6 @@
 #jack-portfolio .jp-mixed-gallery figure:nth-child(n){width:100%;aspect-ratio:3/4;margin:0}
 #jack-portfolio .jp-mixed-gallery img{object-fit:contain;object-position:center}
 }
+
+/* Center Laffer in the requested large left portrait frame. */
+@media(min-width:601px){#jack-portfolio .jp-mixed-gallery img[src="/portfolio/photos/if26-art-laffer.webp"]{object-position:51% center}}

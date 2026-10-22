@@ -44,13 +44,13 @@ const archivePools = [
 // Portraits stay in the tall first tile; landscapes rotate through the wide tiles.
 // Imagine IF leads the selection, with other experiences interleaved and yoga later.
 const pools = [
-  [photos.GFTS[4], photos["Practice and travel"][4], photos["Peru 2026"][3], photos.IF26[9], photos["Practice and travel"][1], photos["Practice and travel"][0]],
+  [photos.IF26[5], photos.GFTS[4], photos["Practice and travel"][4], photos["Peru 2026"][3], photos.IF26[9], photos["Practice and travel"][1], photos["Practice and travel"][0]],
   [photos["Selected additions"][0], photos["Selected additions"][1], photos["Practice and travel"][2], photos["Peru 2026"][1], photos.GFTS[9], photos["Bitcoin Takeover 2026"][9]],
-  [photos["NEMS 2026"][0], photos.GFTS[3], photos.GFTS[11], photos.GFTS[6], photos.IF26[8], photos["Peru 2026"][0]],
-  [photos.IF26[4], photos["Practice and travel"][3], photos.IF26[5], photos.IF26[6], photos.IF26[7], photos["Bitcoin Takeover 2026"][10]],
+  [photos.GFTS[6], photos["Bitcoin Takeover 2026"][10], photos.GFTS[11], photos["NEMS 2026"][0], photos.IF26[8], photos["Peru 2026"][0]],
+  [photos.IF26[4], photos["Practice and travel"][3], photos.GFTS[3], photos.IF26[6], photos.IF26[7]],
 ];
 // Match viewer order to successive mosaic rounds rather than exhausting each tile.
-const featuredPhotos = pools[0].flatMap((_, round) => pools.map(pool => pool[round]));
+const featuredPhotos = pools[0].flatMap((_, round) => pools.flatMap(pool => pool[round] ? [pool[round]] : []));
 const featuredSources = new Set(featuredPhotos.map(photo => photo.src));
 const remainingPhotos = archivePools.flat().filter(photo => !featuredSources.has(photo.src));
 // Alternate experiences in See more, including the numbered viewer.
@@ -110,7 +110,7 @@ function PhotoMosaic() {
       onMouseEnter={() => rotation.setEngaged(true)} onMouseLeave={() => { if (!viewerOpen) rotation.setEngaged(false); }}
       onFocus={() => rotation.setEngaged(true)} onBlur={event => { if (!viewerOpen && !event.currentTarget.contains(event.relatedTarget)) rotation.setEngaged(false); }}>
       {(mobile ? [featuredPhotos] : pools).map((pool, slot) => {
-        const active = (mobile ? rotation.step : Math.floor((rotation.step + 3 - slot) / 4)) % pool.length;
+        const active = (mobile ? rotation.step : Math.floor((rotation.step + 3 - slot) / 4) % pools[0].length) % pool.length;
         const info = detailFor(pool[active].src);
         return <figure key={slot}><button className="jp-photo-open" type="button" aria-label={`Open photo: ${info.name}`} onClick={() => openPhoto(pool[active].src)}>{pool.map((photo, index) => <img key={photo.src} src={photo.src} alt={detailFor(photo.src).name} loading="lazy" decoding="async" className={index === active ? "is-visible" : ""} aria-hidden={index !== active} />)}<span className="jp-photo-label"><strong>{info.name}</strong><span>{info.event} · {info.date}</span></span></button></figure>;
       })}

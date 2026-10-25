@@ -312,3 +312,8 @@
 #jack-portfolio .jp-channel-grid .jp-videos{margin-top:0}
 #jack-portfolio .jp-channel-grid .jp-channel-link{margin-top:0}
 #jack-portfolio .jp-channel-grid{scroll-margin-top:100px}
+/* Share heading and description row heights so every video starts together. */
+@media(min-width:801px){
+  #jack-portfolio .jp-channel-grid{grid-template-rows:auto auto auto;row-gap:0}
+  #jack-portfolio .jp-channel-grid .jp-channel-real{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:subgrid;grid-row:span 3;gap:0}
+}

@@ -305,3 +305,10 @@
 #jack-portfolio .jp-channel-grid .jp-thumbnail img{object-fit:cover}
 #jack-portfolio .jp-channel-grid .jp-video-card h4{font-size:24px}
 @media(max-width:800px){#jack-portfolio .jp-channel-grid{grid-template-columns:1fr;gap:0}#jack-portfolio .jp-channel-grid .jp-channel-description{min-height:0}}
+
+/* One project story, directly connected to its videos. */
+#jack-portfolio .jp-channel-grid .jp-channel-real{gap:0;padding-top:24px}
+#jack-portfolio .jp-channel-grid .jp-channel-description{margin:18px 0 18px;min-height:0;font-size:16px;line-height:1.6}
+#jack-portfolio .jp-channel-grid .jp-videos{margin-top:0}
+#jack-portfolio .jp-channel-grid .jp-channel-link{margin-top:0}
+#jack-portfolio .jp-channel-grid{scroll-margin-top:100px}

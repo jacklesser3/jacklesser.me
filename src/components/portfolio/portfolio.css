@@ -317,3 +317,6 @@
   #jack-portfolio .jp-channel-grid{grid-template-rows:auto auto auto;row-gap:0}
   #jack-portfolio .jp-channel-grid .jp-channel-real{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:subgrid;grid-row:span 3;gap:0}
 }
+
+#jack-portfolio .jp-flow-steps{grid-template-columns:1fr auto 1fr auto 1fr;align-items:center}
+#jack-portfolio .jp-flow-arrow{font-size:22px;line-height:1;letter-spacing:0}

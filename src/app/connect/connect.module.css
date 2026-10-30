@@ -34,3 +34,19 @@
 .backLink { display: inline-flex; align-items: center; min-height: 44px; color: inherit; text-decoration: none; font-size: 11px; }
 .footer { align-items: center; }
 .footer .monogram { justify-content: flex-end; font-size: 24px; }
+
+@media (max-width: 599px) {
+  .page { padding: max(12px, env(safe-area-inset-top)) 20px max(12px, env(safe-area-inset-bottom)); }
+  .wordmark { padding-bottom: 10px; }
+  .identity { display: flex; align-items: center; gap: 16px; margin: 6px 0 20px; text-align: left; }
+  .portrait { flex-shrink: 0; width: 64px; height: 64px; margin: 0; border-width: 3px; }
+  .eyebrow { font-size: 9px; letter-spacing: 1.7px; margin-bottom: 5px; }
+  .profile h1 { font-size: 36px; letter-spacing: -1.2px; }
+  .intro, .label small { display: none; }
+  .save { min-height: 46px; }
+  .links { gap: 6px; margin-top: 12px; }
+  .link { min-height: 48px; padding: 8px 14px; gap: 12px; }
+  .icon { font-size: 21px; }
+  .icon svg { width: 17px; height: 17px; }
+  .footer { margin-top: 8px; }
+}

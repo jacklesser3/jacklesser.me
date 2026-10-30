@@ -32,10 +32,10 @@ export default function ConnectPage() {
       <div className={styles.card}>
         <header className={styles.profile}>
           <div className={styles.wordmark}><Link href="/" className={styles.backLink}>← Back to main site</Link><span className={styles.connectLabel}>/ CONNECT</span></div>
-          <div className={styles.portrait}><Image src="/portfolio/photos/jack-lesser-peru.jpg" alt="Jack Lesser in Peru" width={96} height={96} priority /></div>
-          <p className={styles.eyebrow}>GREAT TO MEET YOU</p>
+          <div className={styles.identity}><div className={styles.portrait}><Image src="/portfolio/photos/jack-lesser-peru.jpg" alt="Jack Lesser in Peru" width={96} height={96} priority /></div>
+          <div className={styles.identityCopy}><p className={styles.eyebrow}>GREAT TO MEET YOU</p>
           <h1>Jack Lesser<span>.</span></h1>
-          <p className={styles.intro}>Let’s stay in touch.</p>
+          <p className={styles.intro}>Let’s stay in touch.</p></div></div>
           <a className={styles.save} href="/jack-lesser.vcf" download="Jack-Lesser.vcf"><span aria-hidden="true">＋</span> Save my contact</a>
         </header>
         <nav aria-label="Connect with Jack" className={styles.links}>

@@ -4,6 +4,7 @@ import { Header } from "./Header";
 import { Footer } from "./Footer";
 
 export function SiteChrome({ children }: { children: React.ReactNode }) {
-  const isPortfolio = usePathname() === "/";
+  const pathname = usePathname();
+  const isPortfolio = pathname === "/" || pathname === "/connect" || pathname === "/connect/";
   return <>{!isPortfolio && <Header />}<main className="flex-1">{children}</main>{!isPortfolio && <Footer />}</>;
 }

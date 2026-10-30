@@ -1,91 +1,57 @@
-import { Metadata } from "next";
-import { Container } from "@/components/ui/Container";
-import { H1, H3, Text, SectionTitle } from "@/components/ui/Typography";
-import { Card, CardContent } from "@/components/ui/Card";
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { socialLinks } from "@/components/layout/socialLinks";
+import styles from "./connect.module.css";
 
 export const metadata: Metadata = {
-  title: "Connect",
-  description:
-    "Get in touch with Jack Lesser. Reach out for collaboration, questions, or conversation.",
+  title: { absolute: "Connect with Jack Lesser" },
+  description: "Great to meet you. Find Jack Lesser on social, send a note, or save his contact details.",
+  alternates: { canonical: "/connect" },
   openGraph: {
-    title: "Connect | Timeless Practice",
-    description:
-      "Get in touch with Jack Lesser. Reach out for collaboration, questions, or conversation.",
+    title: "Connect with Jack Lesser",
+    description: "All my links. One place. Let's stay in touch.",
+    url: "/connect",
   },
 };
 
+const details: Record<string, string> = {
+  Email: "jacklesser44@gmail.com",
+  X: "@jacklesser_",
+  Instagram: "@jacklesser_",
+  LinkedIn: "Jack Lesser",
+  Substack: "Timeless Practice",
+  YouTube: "@timeless.practice",
+  GitHub: "@jacklesser3",
+};
+const order = ["Email", "X", "Instagram", "LinkedIn", "Substack", "YouTube", "GitHub"];
+
 export default function ConnectPage() {
   return (
-    <>
-      <section className="py-12 md:py-24">
-        <Container size="narrow">
-          <H1 className="mb-6">Connect</H1>
-          <Text variant="lead">
-            Whether you have a question, want to collaborate, or just want to
-            say hello — I&apos;d love to hear from you.
-          </Text>
-
-          <div className="mt-10">
-            <a
-              href="mailto:jack@bitcoinpark.com"
-              className="inline-flex w-full items-center justify-center rounded-xl border border-[var(--color-accent-ember)]/30 bg-[var(--color-accent-ember)]/10 px-8 py-4 text-xs font-medium uppercase tracking-[0.2em] text-[var(--color-accent-ember)] transition hover:bg-[var(--color-accent-ember)]/20 sm:w-auto sm:text-sm"
-            >
-              Get in Touch
-            </a>
-          </div>
-        </Container>
-      </section>
-
-      <section className="py-16 md:py-24 bg-[var(--color-bg-secondary)]">
-        <Container>
-          <div className="grid gap-6 max-w-2xl">
-            <Card variant="elevated">
-              <CardContent>
-                <H3 className="mb-2">Substack</H3>
-                <Text variant="muted">
-                  Ideas, thinkers, and technologies that hold up across time.
-                  Essays on performance, leverage, and inner work.
-                </Text>
-                <a
-                  href="https://satflow.substack.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block mt-3 text-[var(--color-accent-ember)] hover:text-[var(--color-text-primary)] transition-colors"
-                >
-                  satflow.substack.com
-                </a>
-              </CardContent>
-            </Card>
-
-            <Card variant="elevated">
-              <CardContent>
-                <H3 className="mb-2">Social</H3>
-                <Text variant="muted">
-                  More frequent updates, threads, and conversations.
-                </Text>
-                <div className="flex gap-4 mt-3">
-                  <a
-                    href="https://twitter.com/jacklesser"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[var(--color-accent-ember)] hover:text-[var(--color-text-primary)] transition-colors"
-                  >
-                    Twitter
-                  </a>
-                  <a
-                    href="https://linkedin.com/in/jacklesser"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[var(--color-accent-ember)] hover:text-[var(--color-text-primary)] transition-colors"
-                  >
-                    LinkedIn
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </Container>
-      </section>
-    </>
+    <div className={styles.page}>
+      <div className={styles.card}>
+        <header className={styles.profile}>
+          <div className={styles.wordmark}><Link href="/" className={styles.backLink}>← Back to main site</Link><span className={styles.connectLabel}>/ CONNECT</span></div>
+          <div className={styles.portrait}><Image src="/portfolio/photos/jack-lesser-peru.jpg" alt="Jack Lesser in Peru" width={96} height={96} priority /></div>
+          <p className={styles.eyebrow}>GREAT TO MEET YOU</p>
+          <h1>Jack Lesser<span>.</span></h1>
+          <p className={styles.intro}>Let’s stay in touch.</p>
+          <a className={styles.save} href="/jack-lesser.vcf" download="Jack-Lesser.vcf"><span aria-hidden="true">＋</span> Save my contact</a>
+        </header>
+        <nav aria-label="Connect with Jack" className={styles.links}>
+          {order.map(name => {
+            const link = socialLinks.find(item => item.name === name)!;
+            return (
+              <a key={name} className={styles.link} href={link.href} target={name === "Email" ? undefined : "_blank"} rel={name === "Email" ? undefined : "noopener noreferrer"}>
+                <span className={styles.icon}>{link.icon}</span>
+                <span className={styles.label}><span>{link.name}</span><small>{details[name]}</small></span>
+                <span className={styles.action}>{name === "Email" ? "Say hello →" : "View profile ↗"}</span>
+              </a>
+            );
+          })}
+        </nav>
+        <footer className={styles.footer}><Link href="/">Explore my work <span aria-hidden="true">↗</span></Link><Link href="/" className={styles.monogram} aria-label="Jack Lesser — main site">JL</Link></footer>
+      </div>
+    </div>
   );
 }

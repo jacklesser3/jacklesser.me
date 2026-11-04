@@ -1,17 +1,35 @@
 {
   "window": {
-    "start": "2026-08-31",
-    "end": "2026-10-29",
-    "days": 60,
+    "start": "2026-08-07",
+    "end": "2026-11-04",
+    "days": 90,
     "end_incomplete": true,
-    "date_basis": "Calendar dates; collected during October 29 in America/Chicago. X search uses platform date boundaries, which may differ near midnight."
+    "date_basis": "Inclusive calendar dates in America/Los_Angeles. X normalized from rendered UTC times. Older LinkedIn dates inferred from activity IDs; labeled in records."
   },
-  "observed_on": "2026-10-29",
+  "observed_on": "2026-11-04",
   "source": "External Chrome; only Brendan\u2019s public-facing posts and visible engagement counters retained. No private messages or account analytics used.",
-  "query": "from:Brendan_McCord since:2026-08-31 until:2026-10-30 -filter:replies -filter:nativeretweets",
-  "coverage": "49 unique authored posts surfaced by the date-filtered Latest search; includes quote posts, excludes replies and native reposts. Search completeness is not guaranteed. Quoted authors are not Brendan.",
-  "metric_note": "Lifetime counters at observation, not engagement earned only inside the window. Missing labels are null, not zero. Views are not unique people or LinkedIn impressions.",
+  "query": "from:Brendan_McCord since:2026-08-07 until:2026-11-05 -filter:replies -filter:nativeretweets",
+  "coverage": "80 X posts surfaced by Latest search through August 7; 18 authored LinkedIn posts inspected through a July 31 item beyond the window. Originals and authored quote/commentary posts only; replies and native reposts excluded. Public UI and search are not guaranteed complete.",
+  "metric_note": "Lifetime counters observed November 4, not engagement earned inside the window. Unlabeled counts are null, not zero. Counters can decrease; changes are net differences, not new unique interactions. LinkedIn impressions unavailable.",
   "records": [
+    {
+      "id": "2115980980431581631",
+      "platform": "X",
+      "url": "https://x.com/Brendan_McCord/status/2115980980431581631",
+      "summary": "The night watch: trusted, independent operators",
+      "topic": "People & ecosystem",
+      "format": "quote",
+      "text_coverage": "Authored text visible",
+      "published_at": "2026-10-30T01:35:53Z",
+      "date_label": "2026-10-29",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04",
+      "replies": 1,
+      "reposts": 2,
+      "likes": 14,
+      "bookmarks": 3,
+      "views": 1149
+    },
     {
       "id": "2115162221332545979",
       "platform": "X",
@@ -21,11 +39,14 @@
       "topic": "Hiring",
       "format": "original",
       "text_coverage": "Authored text visible",
-      "replies": 18,
-      "reposts": 71,
-      "likes": 469,
-      "bookmarks": 394,
-      "views": 60891
+      "replies": 20,
+      "reposts": 73,
+      "likes": 476,
+      "bookmarks": 400,
+      "views": 64183,
+      "published_at": "2026-10-27T19:22:26Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2114719168935404001",
@@ -38,9 +59,12 @@
       "text_coverage": "Authored text visible",
       "replies": 1,
       "reposts": 1,
-      "likes": 34,
+      "likes": 36,
       "bookmarks": 9,
-      "views": 1985
+      "views": 2066,
+      "published_at": "2026-10-26T14:01:54Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2112639471870984549",
@@ -53,9 +77,12 @@
       "text_coverage": "Authored text visible",
       "replies": 1,
       "reposts": 2,
-      "likes": 41,
+      "likes": 42,
       "bookmarks": 14,
-      "views": 2277
+      "views": 2330,
+      "published_at": "2026-10-20T20:17:55Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2108617801317695748",
@@ -70,7 +97,10 @@
       "reposts": 1,
       "likes": 28,
       "bookmarks": 11,
-      "views": 4497
+      "views": 4533,
+      "published_at": "2026-10-09T17:57:14Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2108324534051119231",
@@ -83,9 +113,12 @@
       "text_coverage": "Authored text visible",
       "replies": 7,
       "reposts": 4,
-      "likes": 37,
+      "likes": 36,
       "bookmarks": 2,
-      "views": 5705
+      "views": 5737,
+      "published_at": "2026-10-08T22:31:54Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2108239977033416935",
@@ -100,7 +133,10 @@
       "reposts": 3,
       "likes": 34,
       "bookmarks": 3,
-      "views": 2682
+      "views": 2707,
+      "published_at": "2026-10-08T16:55:54Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2107893888690135538",
@@ -113,9 +149,12 @@
       "text_coverage": "Preview only",
       "replies": 1,
       "reposts": 2,
-      "likes": 12,
+      "likes": 11,
       "bookmarks": 1,
-      "views": 1304
+      "views": 1326,
+      "published_at": "2026-10-07T18:00:40Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2107582524738428997",
@@ -128,9 +167,12 @@
       "text_coverage": "Authored text visible",
       "replies": 3,
       "reposts": 5,
-      "likes": 86,
+      "likes": 85,
       "bookmarks": 11,
-      "views": 4419
+      "views": 4433,
+      "published_at": "2026-10-06T21:23:25Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2107571066113585163",
@@ -141,11 +183,14 @@
       "topic": "Education & formation",
       "format": "quote",
       "text_coverage": "Authored text visible",
-      "replies": 1,
+      "replies": 2,
       "reposts": 3,
-      "likes": 12,
+      "likes": 14,
       "bookmarks": 5,
-      "views": 1046
+      "views": 1066,
+      "published_at": "2026-10-06T20:37:53Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2107491792811884641",
@@ -158,9 +203,12 @@
       "text_coverage": "Authored text visible",
       "replies": 2,
       "reposts": 2,
-      "likes": 29,
+      "likes": 28,
       "bookmarks": null,
-      "views": 2457
+      "views": 2488,
+      "published_at": "2026-10-06T15:22:53Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2107491655947604011",
@@ -175,7 +223,10 @@
       "reposts": null,
       "likes": 11,
       "bookmarks": 2,
-      "views": 797
+      "views": 806,
+      "published_at": "2026-10-06T15:22:20Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2107234821525447058",
@@ -188,9 +239,12 @@
       "text_coverage": "Authored text visible",
       "replies": 3,
       "reposts": 1,
-      "likes": 8,
+      "likes": 7,
       "bookmarks": 2,
-      "views": 1441
+      "views": 1453,
+      "published_at": "2026-10-05T22:21:46Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2106559787106439504",
@@ -203,9 +257,12 @@
       "text_coverage": "Authored text visible",
       "replies": 8,
       "reposts": null,
-      "likes": 89,
+      "likes": 88,
       "bookmarks": 13,
-      "views": 8342
+      "views": 8360,
+      "published_at": "2026-10-04T01:39:25Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2106123764807196735",
@@ -218,9 +275,12 @@
       "text_coverage": "Authored text visible",
       "replies": 1,
       "reposts": 2,
-      "likes": 27,
+      "likes": 28,
       "bookmarks": 1,
-      "views": 2223
+      "views": 2231,
+      "published_at": "2026-10-02T20:46:50Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2106037269446475877",
@@ -235,7 +295,10 @@
       "reposts": 7,
       "likes": 20,
       "bookmarks": 18,
-      "views": 2030
+      "views": 2040,
+      "published_at": "2026-10-02T15:03:07Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2106035471814197709",
@@ -250,7 +313,10 @@
       "reposts": 5,
       "likes": 43,
       "bookmarks": 16,
-      "views": 10539
+      "views": 10563,
+      "published_at": "2026-10-02T14:55:59Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2105330380068835697",
@@ -265,7 +331,10 @@
       "reposts": null,
       "likes": 7,
       "bookmarks": 2,
-      "views": 2854
+      "views": 2861,
+      "published_at": "2026-09-30T16:14:12Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2105006283816644859",
@@ -280,7 +349,10 @@
       "reposts": 3,
       "likes": 20,
       "bookmarks": 2,
-      "views": 2862
+      "views": 2877,
+      "published_at": "2026-09-29T18:46:21Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2103222242251624944",
@@ -295,7 +367,10 @@
       "reposts": null,
       "likes": 21,
       "bookmarks": 2,
-      "views": 1658
+      "views": 1664,
+      "published_at": "2026-09-24T20:37:13Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2103222090828853630",
@@ -310,7 +385,10 @@
       "reposts": 7,
       "likes": 38,
       "bookmarks": 11,
-      "views": 12226
+      "views": 12232,
+      "published_at": "2026-09-24T20:36:37Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2102810594545926563",
@@ -325,7 +403,10 @@
       "reposts": null,
       "likes": 5,
       "bookmarks": 2,
-      "views": 1661
+      "views": 1666,
+      "published_at": "2026-09-23T17:21:28Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2102112272852144311",
@@ -340,7 +421,10 @@
       "reposts": null,
       "likes": 13,
       "bookmarks": 4,
-      "views": 4947
+      "views": 4952,
+      "published_at": "2026-09-21T19:06:35Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2100792715999093052",
@@ -355,7 +439,10 @@
       "reposts": null,
       "likes": 10,
       "bookmarks": 3,
-      "views": 1986
+      "views": 1991,
+      "published_at": "2026-09-18T03:43:08Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2100732098391036031",
@@ -368,9 +455,12 @@
       "text_coverage": "Authored text visible",
       "replies": 1,
       "reposts": 2,
-      "likes": 55,
+      "likes": 54,
       "bookmarks": 2,
-      "views": 6412
+      "views": 6422,
+      "published_at": "2026-09-17T23:42:16Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2100690352533615031",
@@ -385,7 +475,10 @@
       "reposts": 7,
       "likes": 230,
       "bookmarks": 39,
-      "views": 21646
+      "views": 21665,
+      "published_at": "2026-09-17T20:56:23Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2100627882582446533",
@@ -400,7 +493,10 @@
       "reposts": 2,
       "likes": 51,
       "bookmarks": 14,
-      "views": 3074
+      "views": 3080,
+      "published_at": "2026-09-17T16:48:09Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2100610598891643312",
@@ -415,7 +511,10 @@
       "reposts": 2,
       "likes": 17,
       "bookmarks": 5,
-      "views": 2647
+      "views": 2651,
+      "published_at": "2026-09-17T15:39:28Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2100314265802662321",
@@ -430,7 +529,10 @@
       "reposts": null,
       "likes": 18,
       "bookmarks": 1,
-      "views": 1949
+      "views": 1953,
+      "published_at": "2026-09-16T20:01:57Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2100254107823222969",
@@ -445,7 +547,10 @@
       "reposts": null,
       "likes": 7,
       "bookmarks": null,
-      "views": 1658
+      "views": 1662,
+      "published_at": "2026-09-16T16:02:54Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2100251743049421232",
@@ -460,7 +565,10 @@
       "reposts": 2,
       "likes": 30,
       "bookmarks": 4,
-      "views": 2754
+      "views": 2758,
+      "published_at": "2026-09-16T15:53:30Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2100237198222401908",
@@ -475,7 +583,10 @@
       "reposts": null,
       "likes": 16,
       "bookmarks": 3,
-      "views": 1706
+      "views": 1713,
+      "published_at": "2026-09-16T14:55:43Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2100234909872996706",
@@ -488,9 +599,12 @@
       "text_coverage": "Authored text visible",
       "replies": 1,
       "reposts": 2,
-      "likes": 22,
+      "likes": 21,
       "bookmarks": 2,
-      "views": 2308
+      "views": 2315,
+      "published_at": "2026-09-16T14:46:37Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2100233488775659979",
@@ -505,7 +619,10 @@
       "reposts": null,
       "likes": 20,
       "bookmarks": 1,
-      "views": 1467
+      "views": 1473,
+      "published_at": "2026-09-16T14:40:58Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2100230125677900122",
@@ -520,7 +637,10 @@
       "reposts": null,
       "likes": 19,
       "bookmarks": null,
-      "views": 2146
+      "views": 2150,
+      "published_at": "2026-09-16T14:27:37Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2100223618609541308",
@@ -533,9 +653,12 @@
       "text_coverage": "Preview only",
       "replies": 111,
       "reposts": 126,
-      "likes": 982,
+      "likes": 983,
       "bookmarks": 659,
-      "views": 225405
+      "views": 226201,
+      "published_at": "2026-09-16T14:01:45Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2099696758376829298",
@@ -550,7 +673,10 @@
       "reposts": null,
       "likes": 17,
       "bookmarks": 10,
-      "views": 2688
+      "views": 2691,
+      "published_at": "2026-09-15T03:08:12Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2099553476896338360",
@@ -565,7 +691,10 @@
       "reposts": 1,
       "likes": 4,
       "bookmarks": null,
-      "views": 975
+      "views": 978,
+      "published_at": "2026-09-14T17:38:51Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2098595303754731569",
@@ -580,7 +709,10 @@
       "reposts": 2,
       "likes": 41,
       "bookmarks": 5,
-      "views": 2847
+      "views": 2849,
+      "published_at": "2026-09-12T02:11:25Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2098567758372126964",
@@ -595,7 +727,10 @@
       "reposts": 1,
       "likes": 13,
       "bookmarks": 2,
-      "views": 2268
+      "views": 2270,
+      "published_at": "2026-09-12T00:21:57Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2098509293385359420",
@@ -610,7 +745,10 @@
       "reposts": 5,
       "likes": 49,
       "bookmarks": 5,
-      "views": 13612
+      "views": 13616,
+      "published_at": "2026-09-11T20:29:38Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2098503386840584224",
@@ -625,7 +763,10 @@
       "reposts": 3,
       "likes": 26,
       "bookmarks": 4,
-      "views": 1161
+      "views": 1166,
+      "published_at": "2026-09-11T20:06:10Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2098430492391387470",
@@ -640,7 +781,10 @@
       "reposts": 4,
       "likes": 67,
       "bookmarks": 6,
-      "views": 8105
+      "views": 8105,
+      "published_at": "2026-09-11T15:16:30Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2098244627371348243",
@@ -655,7 +799,10 @@
       "reposts": 6,
       "likes": 46,
       "bookmarks": 5,
-      "views": 6023
+      "views": 6030,
+      "published_at": "2026-09-11T02:57:57Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2097843041801584823",
@@ -670,7 +817,10 @@
       "reposts": 3,
       "likes": 21,
       "bookmarks": 5,
-      "views": 2199
+      "views": 2199,
+      "published_at": "2026-09-10T00:22:11Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2097838605268124123",
@@ -685,7 +835,10 @@
       "reposts": 6,
       "likes": 50,
       "bookmarks": 12,
-      "views": 5242
+      "views": 5243,
+      "published_at": "2026-09-10T00:04:34Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2097765744847237545",
@@ -700,7 +853,10 @@
       "reposts": 5,
       "likes": 83,
       "bookmarks": 35,
-      "views": 7928
+      "views": 7929,
+      "published_at": "2026-09-09T19:15:02Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2095235051839701487",
@@ -715,7 +871,10 @@
       "reposts": 3,
       "likes": 100,
       "bookmarks": 46,
-      "views": 7472
+      "views": 7472,
+      "published_at": "2026-09-02T19:38:58Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2095158263163875754",
@@ -728,9 +887,12 @@
       "text_coverage": "Authored text visible",
       "replies": 1,
       "reposts": 6,
-      "likes": 45,
+      "likes": 44,
       "bookmarks": 2,
-      "views": 3067
+      "views": 3068,
+      "published_at": "2026-09-02T14:33:50Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
     },
     {
       "id": "2095153961624084758",
@@ -745,7 +907,550 @@
       "reposts": 1,
       "likes": 50,
       "bookmarks": 7,
-      "views": 4685
+      "views": 4686,
+      "published_at": "2026-09-02T14:16:45Z",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04"
+    },
+    {
+      "id": "2093750439678242869",
+      "platform": "X",
+      "url": "https://x.com/Brendan_McCord/status/2093750439678242869",
+      "summary": "AI agents, safeguards and the angels analogy",
+      "topic": "Philosophy & autonomy",
+      "format": "original",
+      "text_coverage": "Authored text visible",
+      "published_at": "2026-08-29T17:19:39Z",
+      "date_label": "2026-08-29",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04",
+      "replies": 18,
+      "reposts": 7,
+      "likes": 72,
+      "bookmarks": 8,
+      "views": 6063
+    },
+    {
+      "id": "2093404651119100076",
+      "platform": "X",
+      "url": "https://x.com/Brendan_McCord/status/2093404651119100076",
+      "summary": "Liberal institutions and the possibility of renewal",
+      "topic": "Programs & research",
+      "format": "quote",
+      "text_coverage": "Authored text visible",
+      "published_at": "2026-08-28T18:25:37Z",
+      "date_label": "2026-08-28",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04",
+      "replies": 1,
+      "reposts": null,
+      "likes": 10,
+      "bookmarks": 2,
+      "views": 1110
+    },
+    {
+      "id": "2093365188212736453",
+      "platform": "X",
+      "url": "https://x.com/Brendan_McCord/status/2093365188212736453",
+      "summary": "First editions and distinctive visions of the future",
+      "topic": "Personal & informal",
+      "format": "quote",
+      "text_coverage": "Authored text visible",
+      "published_at": "2026-08-28T15:48:48Z",
+      "date_label": "2026-08-28",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04",
+      "replies": null,
+      "reposts": null,
+      "likes": 9,
+      "bookmarks": 8,
+      "views": 1085
+    },
+    {
+      "id": "2093362101460881680",
+      "platform": "X",
+      "url": "https://x.com/Brendan_McCord/status/2093362101460881680",
+      "summary": "Informal response to Tyler Cowen and AI regulation",
+      "topic": "Personal & informal",
+      "format": "original",
+      "text_coverage": "Authored text visible",
+      "published_at": "2026-08-28T15:36:32Z",
+      "date_label": "2026-08-28",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04",
+      "replies": 1,
+      "reposts": null,
+      "likes": 12,
+      "bookmarks": 1,
+      "views": 1511
+    },
+    {
+      "id": "2092699895299711127",
+      "platform": "X",
+      "url": "https://x.com/Brendan_McCord/status/2092699895299711127",
+      "summary": "Finish planting the sapling: a philosophical reminder",
+      "topic": "Philosophy & autonomy",
+      "format": "original",
+      "text_coverage": "Authored text visible",
+      "published_at": "2026-08-26T19:45:10Z",
+      "date_label": "2026-08-26",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04",
+      "replies": null,
+      "reposts": 1,
+      "likes": 4,
+      "bookmarks": 2,
+      "views": 915
+    },
+    {
+      "id": "2092638300783747341",
+      "platform": "X",
+      "url": "https://x.com/Brendan_McCord/status/2092638300783747341",
+      "summary": "Aspen seminar writeup and reading aloud together",
+      "topic": "Education & formation",
+      "format": "quote",
+      "text_coverage": "Authored text visible",
+      "published_at": "2026-08-26T15:40:24Z",
+      "date_label": "2026-08-26",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04",
+      "replies": null,
+      "reposts": null,
+      "likes": 11,
+      "bookmarks": 5,
+      "views": 1208
+    },
+    {
+      "id": "2092633595781234694",
+      "platform": "X",
+      "url": "https://x.com/Brendan_McCord/status/2092633595781234694",
+      "summary": "Cosmos beyond conventional political and technology axes",
+      "topic": "Philosophy & autonomy",
+      "format": "quote",
+      "text_coverage": "Authored text visible",
+      "published_at": "2026-08-26T15:21:43Z",
+      "date_label": "2026-08-26",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04",
+      "replies": 3,
+      "reposts": 4,
+      "likes": 34,
+      "bookmarks": 10,
+      "views": 2732
+    },
+    {
+      "id": "2092463565516964112",
+      "platform": "X",
+      "url": "https://x.com/Brendan_McCord/status/2092463565516964112",
+      "summary": "Tyler Cowen and a proposal for frontier AI governance",
+      "topic": "Policy & economy",
+      "format": "quote",
+      "text_coverage": "Preview only",
+      "published_at": "2026-08-26T04:06:04Z",
+      "date_label": "2026-08-25",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04",
+      "replies": 7,
+      "reposts": 15,
+      "likes": 79,
+      "bookmarks": 74,
+      "views": 24834
+    },
+    {
+      "id": "2092268448722071719",
+      "platform": "X",
+      "url": "https://x.com/Brendan_McCord/status/2092268448722071719",
+      "summary": "Bringing romance back: human flourishing",
+      "topic": "Philosophy & autonomy",
+      "format": "quote",
+      "text_coverage": "Authored text visible",
+      "published_at": "2026-08-25T15:10:45Z",
+      "date_label": "2026-08-25",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04",
+      "replies": 1,
+      "reposts": 1,
+      "likes": 13,
+      "bookmarks": 5,
+      "views": 1590
+    },
+    {
+      "id": "2091263291108516080",
+      "platform": "X",
+      "url": "https://x.com/Brendan_McCord/status/2091263291108516080",
+      "summary": "Austin STEM Center grand opening and Peter Wang",
+      "topic": "Events & community",
+      "format": "original",
+      "text_coverage": "Authored text visible",
+      "published_at": "2026-08-22T20:36:37Z",
+      "date_label": "2026-08-22",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04",
+      "replies": 2,
+      "reposts": 5,
+      "likes": 29,
+      "bookmarks": 3,
+      "views": 4338
+    },
+    {
+      "id": "2090845281726140652",
+      "platform": "X",
+      "url": "https://x.com/Brendan_McCord/status/2090845281726140652",
+      "summary": "High standards and children",
+      "topic": "Education & formation",
+      "format": "quote",
+      "text_coverage": "Authored text visible",
+      "published_at": "2026-08-21T16:55:35Z",
+      "date_label": "2026-08-21",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04",
+      "replies": null,
+      "reposts": 1,
+      "likes": 9,
+      "bookmarks": 3,
+      "views": 1044
+    },
+    {
+      "id": "2090834677309243699",
+      "platform": "X",
+      "url": "https://x.com/Brendan_McCord/status/2090834677309243699",
+      "summary": "Alignment as constitutional and institutional design",
+      "topic": "Philosophy & autonomy",
+      "format": "quote",
+      "text_coverage": "Authored text visible",
+      "published_at": "2026-08-21T16:13:27Z",
+      "date_label": "2026-08-21",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04",
+      "replies": 2,
+      "reposts": 2,
+      "likes": 31,
+      "bookmarks": 3,
+      "views": 3199
+    },
+    {
+      "id": "2090174947486318785",
+      "platform": "X",
+      "url": "https://x.com/Brendan_McCord/status/2090174947486318785",
+      "summary": "Hannah Arendt letter to James Baldwin",
+      "topic": "Philosophy & autonomy",
+      "format": "quote",
+      "text_coverage": "Authored text visible",
+      "published_at": "2026-08-19T20:31:55Z",
+      "date_label": "2026-08-19",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04",
+      "replies": null,
+      "reposts": 1,
+      "likes": 4,
+      "bookmarks": 5,
+      "views": 883
+    },
+    {
+      "id": "2090153938351689773",
+      "platform": "X",
+      "url": "https://x.com/Brendan_McCord/status/2090153938351689773",
+      "summary": "Brief endorsement: Yes way",
+      "topic": "Personal & informal",
+      "format": "quote",
+      "text_coverage": "Authored text visible",
+      "published_at": "2026-08-19T19:08:26Z",
+      "date_label": "2026-08-19",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04",
+      "replies": null,
+      "reposts": null,
+      "likes": 4,
+      "bookmarks": null,
+      "views": 997
+    },
+    {
+      "id": "2090117050895069479",
+      "platform": "X",
+      "url": "https://x.com/Brendan_McCord/status/2090117050895069479",
+      "summary": "Philipp Koralus provocation and linked paper",
+      "topic": "Programs & research",
+      "format": "quote",
+      "text_coverage": "Authored text visible",
+      "published_at": "2026-08-19T16:41:52Z",
+      "date_label": "2026-08-19",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04",
+      "replies": null,
+      "reposts": 2,
+      "likes": 14,
+      "bookmarks": 7,
+      "views": 1723
+    },
+    {
+      "id": "2089805075149394379",
+      "platform": "X",
+      "url": "https://x.com/Brendan_McCord/status/2089805075149394379",
+      "summary": "Seth Lazar on universities and the AGI transition",
+      "topic": "Education & formation",
+      "format": "quote",
+      "text_coverage": "Authored text visible",
+      "published_at": "2026-08-18T20:02:11Z",
+      "date_label": "2026-08-18",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04",
+      "replies": 3,
+      "reposts": 2,
+      "likes": 36,
+      "bookmarks": 5,
+      "views": 2420
+    },
+    {
+      "id": "2089772470072930575",
+      "platform": "X",
+      "url": "https://x.com/Brendan_McCord/status/2089772470072930575",
+      "summary": "Brief agreement with a quoted closing sentence",
+      "topic": "Personal & informal",
+      "format": "quote",
+      "text_coverage": "Authored text visible",
+      "published_at": "2026-08-18T17:52:37Z",
+      "date_label": "2026-08-18",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04",
+      "replies": 1,
+      "reposts": null,
+      "likes": 19,
+      "bookmarks": 2,
+      "views": 1576
+    },
+    {
+      "id": "2089757802424152346",
+      "platform": "X",
+      "url": "https://x.com/Brendan_McCord/status/2089757802424152346",
+      "summary": "Independent minds, frontier labs and Cosmos staying outside",
+      "topic": "Ventures & institutions",
+      "format": "original",
+      "text_coverage": "Preview only",
+      "published_at": "2026-08-18T16:54:20Z",
+      "date_label": "2026-08-18",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04",
+      "replies": 12,
+      "reposts": 28,
+      "likes": 246,
+      "bookmarks": 93,
+      "views": 18693
+    },
+    {
+      "id": "2089364403191792047",
+      "platform": "X",
+      "url": "https://x.com/Brendan_McCord/status/2089364403191792047",
+      "summary": "Agency can rise while autonomy falls",
+      "topic": "Philosophy & autonomy",
+      "format": "quote",
+      "text_coverage": "Authored text visible",
+      "published_at": "2026-08-17T14:51:06Z",
+      "date_label": "2026-08-17",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04",
+      "replies": 1,
+      "reposts": 2,
+      "likes": 23,
+      "bookmarks": 9,
+      "views": 20464
+    },
+    {
+      "id": "2088289834632712269",
+      "platform": "X",
+      "url": "https://x.com/Brendan_McCord/status/2088289834632712269",
+      "summary": "Aspen seminar reading list on ownership of judgment",
+      "topic": "Education & formation",
+      "format": "quote",
+      "text_coverage": "Authored text visible",
+      "published_at": "2026-08-14T15:41:09Z",
+      "date_label": "2026-08-14",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04",
+      "replies": 1,
+      "reposts": 2,
+      "likes": 12,
+      "bookmarks": null,
+      "views": 1207
+    },
+    {
+      "id": "2088260269164130333",
+      "platform": "X",
+      "url": "https://x.com/Brendan_McCord/status/2088260269164130333",
+      "summary": "Peter Boettke and a forthcoming book",
+      "topic": "People & ecosystem",
+      "format": "quote",
+      "text_coverage": "Authored text visible",
+      "published_at": "2026-08-14T13:43:40Z",
+      "date_label": "2026-08-14",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04",
+      "replies": null,
+      "reposts": 1,
+      "likes": 5,
+      "bookmarks": 3,
+      "views": 991
+    },
+    {
+      "id": "2087936432077738292",
+      "platform": "X",
+      "url": "https://x.com/Brendan_McCord/status/2087936432077738292",
+      "summary": "Rune Kvist and private mechanisms for AI risk",
+      "topic": "Ventures & institutions",
+      "format": "quote",
+      "text_coverage": "Authored text visible",
+      "published_at": "2026-08-13T16:16:52Z",
+      "date_label": "2026-08-13",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04",
+      "replies": 1,
+      "reposts": 1,
+      "likes": 90,
+      "bookmarks": 86,
+      "views": 26978
+    },
+    {
+      "id": "2087721121269600558",
+      "platform": "X",
+      "url": "https://x.com/Brendan_McCord/status/2087721121269600558",
+      "summary": "Devin Stauffer Austin event recommendation",
+      "topic": "Events & community",
+      "format": "quote",
+      "text_coverage": "Authored text visible",
+      "published_at": "2026-08-13T02:01:17Z",
+      "date_label": "2026-08-12",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04",
+      "replies": 2,
+      "reposts": 2,
+      "likes": 19,
+      "bookmarks": 7,
+      "views": 4625
+    },
+    {
+      "id": "2087314479973544292",
+      "platform": "X",
+      "url": "https://x.com/Brendan_McCord/status/2087314479973544292",
+      "summary": "You can just do applied philosophy",
+      "topic": "Philosophy & autonomy",
+      "format": "quote",
+      "text_coverage": "Authored text visible",
+      "published_at": "2026-08-11T23:05:27Z",
+      "date_label": "2026-08-11",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04",
+      "replies": 1,
+      "reposts": 2,
+      "likes": 40,
+      "bookmarks": 9,
+      "views": 6025
+    },
+    {
+      "id": "2086823671184650619",
+      "platform": "X",
+      "url": "https://x.com/Brendan_McCord/status/2086823671184650619",
+      "summary": "Human-shaped mathematical concepts as a constraint on AI",
+      "topic": "Programs & research",
+      "format": "original",
+      "text_coverage": "Authored text visible",
+      "published_at": "2026-08-10T14:35:09Z",
+      "date_label": "2026-08-10",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04",
+      "replies": 4,
+      "reposts": 1,
+      "likes": 12,
+      "bookmarks": 1,
+      "views": 2096
+    },
+    {
+      "id": "2086566539315057116",
+      "platform": "X",
+      "url": "https://x.com/Brendan_McCord/status/2086566539315057116",
+      "summary": "Reid Hoffman gift for America\u2019s 250th anniversary",
+      "topic": "Personal & informal",
+      "format": "original",
+      "text_coverage": "Authored text visible",
+      "published_at": "2026-08-09T21:33:24Z",
+      "date_label": "2026-08-09",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04",
+      "replies": null,
+      "reposts": 1,
+      "likes": 16,
+      "bookmarks": 4,
+      "views": 1886
+    },
+    {
+      "id": "2086472792149745757",
+      "platform": "X",
+      "url": "https://x.com/Brendan_McCord/status/2086472792149745757",
+      "summary": "Reading John Gray despite fundamental disagreement",
+      "topic": "Philosophy & autonomy",
+      "format": "quote",
+      "text_coverage": "Authored text visible",
+      "published_at": "2026-08-09T15:20:53Z",
+      "date_label": "2026-08-09",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04",
+      "replies": 2,
+      "reposts": 1,
+      "likes": 8,
+      "bookmarks": 4,
+      "views": 1813
+    },
+    {
+      "id": "2086293959471738999",
+      "platform": "X",
+      "url": "https://x.com/Brendan_McCord/status/2086293959471738999",
+      "summary": "Informal Ozymandias reference",
+      "topic": "Personal & informal",
+      "format": "quote",
+      "text_coverage": "Authored text visible",
+      "published_at": "2026-08-09T03:30:16Z",
+      "date_label": "2026-08-08",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04",
+      "replies": 2,
+      "reposts": null,
+      "likes": 15,
+      "bookmarks": 2,
+      "views": 1590
+    },
+    {
+      "id": "2085843679760228606",
+      "platform": "X",
+      "url": "https://x.com/Brendan_McCord/status/2085843679760228606",
+      "summary": "AIUC and new models for AI risk",
+      "topic": "Ventures & institutions",
+      "format": "quote",
+      "text_coverage": "Authored text visible",
+      "published_at": "2026-08-07T21:41:01Z",
+      "date_label": "2026-08-07",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04",
+      "replies": null,
+      "reposts": null,
+      "likes": 5,
+      "bookmarks": 3,
+      "views": 826
+    },
+    {
+      "id": "2085752653158695016",
+      "platform": "X",
+      "url": "https://x.com/Brendan_McCord/status/2085752653158695016",
+      "summary": "Cosmos Feast essay winners at Tocqueville",
+      "topic": "Programs & research",
+      "format": "quote",
+      "text_coverage": "Authored text visible",
+      "published_at": "2026-08-07T15:39:18Z",
+      "date_label": "2026-08-07",
+      "date_basis": "X rendered time; normalized to America/Los_Angeles",
+      "observed_on": "2026-11-04",
+      "replies": null,
+      "reposts": null,
+      "likes": 6,
+      "bookmarks": 2,
+      "views": 1094
     },
     {
       "id": "linkedin-0",
@@ -756,13 +1461,15 @@
       "topic": "Hiring",
       "format": "original",
       "text_coverage": "Authored text visible",
-      "reactions": 490,
-      "replies": 35,
-      "reposts": 52,
+      "reactions": 528,
+      "replies": 38,
+      "reposts": 58,
       "likes": null,
       "bookmarks": null,
       "views": null,
-      "matched_x_id": "2115162221332545979"
+      "matched_x_id": "2115162221332545979",
+      "observed_on": "2026-11-04",
+      "date_basis": "Previously visible explicit date, or Yesterday label for hiring; October 29 date evidence retained"
     },
     {
       "id": "linkedin-1",
@@ -773,13 +1480,15 @@
       "topic": "Events & community",
       "format": "original",
       "text_coverage": "Authored text visible",
-      "reactions": 91,
+      "reactions": 93,
       "replies": 2,
       "reposts": 2,
       "likes": null,
       "bookmarks": null,
       "views": null,
-      "matched_x_id": "2107582524738428997"
+      "matched_x_id": "2107582524738428997",
+      "observed_on": "2026-11-04",
+      "date_basis": "Previously visible explicit date, or Yesterday label for hiring; October 29 date evidence retained"
     },
     {
       "id": "linkedin-2",
@@ -790,13 +1499,15 @@
       "topic": "Events & community",
       "format": "original",
       "text_coverage": "Authored text visible",
-      "reactions": 71,
+      "reactions": 72,
       "replies": 2,
       "reposts": 1,
       "likes": null,
       "bookmarks": null,
       "views": null,
-      "matched_x_id": "2106559787106439504"
+      "matched_x_id": "2106559787106439504",
+      "observed_on": "2026-11-04",
+      "date_basis": "Previously visible explicit date, or Yesterday label for hiring; October 29 date evidence retained"
     },
     {
       "id": "linkedin-3",
@@ -807,13 +1518,15 @@
       "topic": "Education & formation",
       "format": "commentary reshare",
       "text_coverage": "Authored text visible",
-      "reactions": 41,
+      "reactions": 42,
       "replies": 4,
       "reposts": 3,
       "likes": null,
       "bookmarks": null,
       "views": null,
-      "matched_x_id": "2106037269446475877"
+      "matched_x_id": "2106037269446475877",
+      "observed_on": "2026-11-04",
+      "date_basis": "Previously visible explicit date, or Yesterday label for hiring; October 29 date evidence retained"
     },
     {
       "id": "linkedin-4",
@@ -830,7 +1543,9 @@
       "likes": null,
       "bookmarks": null,
       "views": null,
-      "matched_x_id": "2106035471814197709"
+      "matched_x_id": "2106035471814197709",
+      "observed_on": "2026-11-04",
+      "date_basis": "Previously visible explicit date, or Yesterday label for hiring; October 29 date evidence retained"
     },
     {
       "id": "linkedin-5",
@@ -847,7 +1562,9 @@
       "likes": null,
       "bookmarks": null,
       "views": null,
-      "matched_x_id": "2103222090828853630"
+      "matched_x_id": "2103222090828853630",
+      "observed_on": "2026-11-04",
+      "date_basis": "Previously visible explicit date, or Yesterday label for hiring; October 29 date evidence retained"
     },
     {
       "id": "linkedin-6",
@@ -858,13 +1575,15 @@
       "topic": "Ventures & institutions",
       "format": "original",
       "text_coverage": "Authored text visible",
-      "reactions": 259,
+      "reactions": 260,
       "replies": 19,
       "reposts": 7,
       "likes": null,
       "bookmarks": null,
       "views": null,
-      "matched_x_id": "2100690352533615031"
+      "matched_x_id": "2100690352533615031",
+      "observed_on": "2026-11-04",
+      "date_basis": "Previously visible explicit date, or Yesterday label for hiring; October 29 date evidence retained"
     },
     {
       "id": "linkedin-7",
@@ -881,7 +1600,9 @@
       "likes": null,
       "bookmarks": null,
       "views": null,
-      "matched_x_id": "2100223618609541308"
+      "matched_x_id": "2100223618609541308",
+      "observed_on": "2026-11-04",
+      "date_basis": "Previously visible explicit date, or Yesterday label for hiring; October 29 date evidence retained"
     },
     {
       "id": "linkedin-8",
@@ -898,7 +1619,9 @@
       "likes": null,
       "bookmarks": null,
       "views": null,
-      "matched_x_id": "2098509293385359420"
+      "matched_x_id": "2098509293385359420",
+      "observed_on": "2026-11-04",
+      "date_basis": "Previously visible explicit date, or Yesterday label for hiring; October 29 date evidence retained"
     },
     {
       "id": "linkedin-9",
@@ -915,7 +1638,9 @@
       "likes": null,
       "bookmarks": null,
       "views": null,
-      "matched_x_id": "2098430492391387470"
+      "matched_x_id": "2098430492391387470",
+      "observed_on": "2026-11-04",
+      "date_basis": "Previously visible explicit date, or Yesterday label for hiring; October 29 date evidence retained"
     },
     {
       "id": "linkedin-10",
@@ -932,14 +1657,156 @@
       "likes": null,
       "bookmarks": null,
       "views": null,
-      "matched_x_id": "2097765744847237545"
+      "matched_x_id": "2097765744847237545",
+      "observed_on": "2026-11-04",
+      "date_basis": "Previously visible explicit date, or Yesterday label for hiring; October 29 date evidence retained"
+    },
+    {
+      "id": "linkedin-7499170724377473024",
+      "platform": "LinkedIn",
+      "url": "https://www.linkedin.com/posts/brendan-mccord_liberal-institutions-are-dead-long-live-share-7499170724377473024-jjXL/",
+      "published_at": "2026-08-28T18:27:08.546Z",
+      "date_label": "2026-08-28",
+      "date_basis": "Inferred from timestamp encoded in public LinkedIn activity ID; UI displayed 2mo, not an explicit calendar date",
+      "summary": "Liberal institutions and the possibility of renewal",
+      "topic": "Programs & research",
+      "format": "commentary reshare",
+      "text_coverage": "Authored text visible",
+      "reactions": 13,
+      "replies": null,
+      "reposts": null,
+      "likes": null,
+      "bookmarks": null,
+      "views": null,
+      "matched_x_id": "2093404651119100076",
+      "observed_on": "2026-11-04"
+    },
+    {
+      "id": "linkedin-7498404203489562624",
+      "platform": "LinkedIn",
+      "url": "https://www.linkedin.com/posts/brendan-mccord_if-you-find-yourself-thinking-about-this-share-7498404203489562624-z5m4/",
+      "published_at": "2026-08-26T15:41:15.725Z",
+      "date_label": "2026-08-26",
+      "date_basis": "Inferred from timestamp encoded in public LinkedIn activity ID; UI displayed 2mo, not an explicit calendar date",
+      "summary": "Aspen seminar writeup and reading aloud together",
+      "topic": "Education & formation",
+      "format": "commentary reshare",
+      "text_coverage": "Authored text visible",
+      "reactions": 35,
+      "replies": null,
+      "reposts": 1,
+      "likes": null,
+      "bookmarks": null,
+      "views": null,
+      "matched_x_id": "2092638300783747341",
+      "observed_on": "2026-11-04"
+    },
+    {
+      "id": "linkedin-7498115319790735360",
+      "platform": "LinkedIn",
+      "url": "https://www.linkedin.com/posts/brendan-mccord_congrats-cameron-mccord-for-making-the-return-share-7498115319790735360-fmcT/",
+      "published_at": "2026-08-25T20:33:20.484Z",
+      "date_label": "2026-08-25",
+      "date_basis": "Inferred from timestamp encoded in public LinkedIn activity ID; UI displayed 2mo, not an explicit calendar date",
+      "summary": "Congratulating Cameron McCord on a Harvard Business School return",
+      "topic": "People & ecosystem",
+      "format": "commentary reshare",
+      "text_coverage": "Authored text visible",
+      "reactions": 21,
+      "replies": null,
+      "reposts": null,
+      "likes": null,
+      "bookmarks": null,
+      "views": null,
+      "matched_x_id": null,
+      "observed_on": "2026-11-04"
+    },
+    {
+      "id": "linkedin-7498072987393429504",
+      "platform": "LinkedIn",
+      "url": "https://www.linkedin.com/posts/brendan-mccord_bringing-romance-back-ugcPost-7498072987393429504-zluh/",
+      "published_at": "2026-08-25T17:45:07.654Z",
+      "date_label": "2026-08-25",
+      "date_basis": "Inferred from timestamp encoded in public LinkedIn activity ID; UI displayed 2mo, not an explicit calendar date",
+      "summary": "Bringing romance back: human flourishing",
+      "topic": "Philosophy & autonomy",
+      "format": "commentary reshare",
+      "text_coverage": "Authored text visible",
+      "reactions": 25,
+      "replies": 3,
+      "reposts": null,
+      "likes": null,
+      "bookmarks": null,
+      "views": null,
+      "matched_x_id": "2092268448722071719",
+      "observed_on": "2026-11-04"
+    },
+    {
+      "id": "linkedin-7495523891797258240",
+      "platform": "LinkedIn",
+      "url": "https://www.linkedin.com/posts/brendan-mccord_we-are-witnessing-an-unprecedented-shift-share-7495523891797258240-6QTj/",
+      "published_at": "2026-08-18T16:55:55.904Z",
+      "date_label": "2026-08-18",
+      "date_basis": "Inferred from timestamp encoded in public LinkedIn activity ID; UI displayed 2mo, not an explicit calendar date",
+      "summary": "Independent minds, frontier labs and Cosmos staying outside",
+      "topic": "Ventures & institutions",
+      "format": "original",
+      "text_coverage": "Authored text visible",
+      "reactions": 227,
+      "replies": 18,
+      "reposts": 21,
+      "likes": null,
+      "bookmarks": null,
+      "views": null,
+      "matched_x_id": "2089757802424152346",
+      "observed_on": "2026-11-04"
+    },
+    {
+      "id": "linkedin-7495132565696143360",
+      "platform": "LinkedIn",
+      "url": "https://www.linkedin.com/posts/brendan-mccord_agency-autonomy-this-potential-ugcPost-7495132565696143360-oCyv/",
+      "published_at": "2026-08-17T15:00:56.491Z",
+      "date_label": "2026-08-17",
+      "date_basis": "Inferred from timestamp encoded in public LinkedIn activity ID; UI displayed 2mo, not an explicit calendar date",
+      "summary": "Agency can rise while autonomy falls",
+      "topic": "Philosophy & autonomy",
+      "format": "commentary reshare",
+      "text_coverage": "Authored text visible",
+      "reactions": 38,
+      "replies": 3,
+      "reposts": null,
+      "likes": null,
+      "bookmarks": null,
+      "views": null,
+      "matched_x_id": "2089364403191792047",
+      "observed_on": "2026-11-04"
+    },
+    {
+      "id": "linkedin-7494363425901326337",
+      "platform": "LinkedIn",
+      "url": "https://www.linkedin.com/posts/brendan-mccord_autocomplete-for-life-task-force-had-a-blast-share-7494363425901326337-H5AI/",
+      "published_at": "2026-08-15T12:04:39.274Z",
+      "date_label": "2026-08-15",
+      "date_basis": "Inferred from timestamp encoded in public LinkedIn activity ID; UI displayed 2mo, not an explicit calendar date",
+      "summary": "Aspen seminar reading list on ownership of judgment",
+      "topic": "Education & formation",
+      "format": "commentary reshare",
+      "text_coverage": "Authored text visible",
+      "reactions": 42,
+      "replies": 1,
+      "reposts": 2,
+      "likes": null,
+      "bookmarks": null,
+      "views": null,
+      "matched_x_id": "2088289834632712269",
+      "observed_on": "2026-11-04"
     }
   ],
   "linkedin": {
-    "status": "Retrieved in external Chrome after sign-in",
-    "observed_authored_posts": 11,
-    "coverage": "Recent activity inspected past the August 31 boundary to August 28 and August 26; 11 posts with Brendan-authored text retained. Native reposts, comments and reactions excluded. No guarantee of a complete platform archive.",
-    "date_note": "Hiring post displayed Yesterday on Oct 29, recorded as Oct 28; other dates displayed explicitly. Exact timestamp not captured.",
+    "status": "Retrieved in signed-in external Chrome November 4",
+    "observed_authored_posts": 18,
+    "coverage": "All activity inspected past August 7 to a July 31 authored post. Native reposts (including a self-repost) excluded.",
+    "date_note": "11 prior dates retained from explicit October 29 labels. Seven added dates inferred from public activity IDs; exact date precision is not claimed from the relative 2mo UI label.",
     "impressions": null
   }
 }

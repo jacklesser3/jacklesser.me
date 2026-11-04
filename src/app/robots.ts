@@ -34,10 +34,12 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
+        disallow: "/cos_cosmos_application",
       },
       {
         userAgent: aiCrawlers,
         allow: "/",
+        disallow: "/cos_cosmos_application",
       },
     ],
     sitemap: "https://jacklesser.me/sitemap.xml",

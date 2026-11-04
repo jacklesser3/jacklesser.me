@@ -1,0 +1,84 @@
+{
+  "reviewed_on": "2026-11-04",
+  "timezone": "America/Los_Angeles",
+  "source": "Public-facing pages read in signed-in external Chrome; public website and official pages. No private messages or internal analytics.",
+  "baseline_observed_on": "2026-10-29",
+  "baseline_window": {
+    "start": "2026-08-31",
+    "end": "2026-10-29",
+    "days": 60,
+    "end_incomplete": true,
+    "date_basis": "Calendar dates; collected during October 29 in America/Chicago. X search uses platform date boundaries, which may differ near midnight."
+  },
+  "coverage": "Targeted follow-up, not a refreshed complete 60-day collection. Original social-data.json and chart counters remain October 29. X Latest search Oct29\u2013Nov4 surfaced one later Oct29 quote post; no newer authored LinkedIn post surfaced above hiring in visible activity. Search completeness is not guaranteed.",
+  "observations": [
+    {
+      "platform": "X",
+      "post_id": "2115162221332545979",
+      "url": "https://x.com/Brendan_McCord/status/2115162221332545979",
+      "observed_on": "2026-11-04",
+      "likes": 476,
+      "replies": 20,
+      "reposts": 73,
+      "bookmarks": 400,
+      "views": 64179
+    },
+    {
+      "platform": "LinkedIn",
+      "post_id": "linkedin-0",
+      "url": "https://www.linkedin.com/posts/brendan-mccord_careers-cosmos-institute-share-7520924765096693763-o0RR/",
+      "observed_on": "2026-11-04",
+      "reactions": 528,
+      "views": null
+    },
+    {
+      "platform": "X",
+      "post_id": "2115980980431581631",
+      "url": "https://x.com/Brendan_McCord/status/2115980980431581631",
+      "date_label": "2026-10-29",
+      "observed_on": "2026-11-04",
+      "summary": "The night watch: quote about trusted independent operators",
+      "format": "quote",
+      "likes": 14,
+      "replies": 1,
+      "reposts": 2,
+      "bookmarks": 3,
+      "views": 1146
+    }
+  ],
+  "checks": [
+    {
+      "url": "https://www.brendanmccord.com/",
+      "finding": "Homepage still links to https://twitter.com/mbrendan1; not fixed."
+    },
+    {
+      "url": "https://www.cosmos-institute.org/research-and-fellowships",
+      "finding": "Research lenses and Tianyi Qiu project rechecked."
+    },
+    {
+      "url": "https://www.cosmos-institute.org/grants",
+      "finding": "Priori and Cathy Fang study description rechecked; no new study results inferred."
+    },
+    {
+      "url": "https://www.cosmos-institute.org/careers",
+      "finding": "Chief of Staff role still listed."
+    },
+    {
+      "url": "https://blog.cosmos-institute.org/p/cosmos-is-hiring-a-chief-of-staff",
+      "finding": "Application deadline November 8. Page displayed 22 hours ago; exact publication timestamp not captured."
+    },
+    {
+      "url": "https://blog.cosmos-institute.org/p/verification-is-not-knowledge",
+      "published_on": "2026-10-30",
+      "finding": "Guest essay by Jessica Hullman; read November 4."
+    },
+    {
+      "url": "https://blog.cosmos-institute.org/feed",
+      "finding": "HTTP 403 from collection environment; unattended retrieval remains unvalidated."
+    },
+    {
+      "url": "https://www.cosmos-institute.org/team",
+      "finding": "Web retrieval failed; October 29 role and shortlist observations retained."
+    }
+  ]
+}

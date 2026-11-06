@@ -37,7 +37,8 @@ export default function ConnectPage() {
           <div className={styles.identityCopy}><p className={styles.eyebrow}>GREAT TO MEET YOU</p>
           <h1>Jack Lesser<span>.</span></h1>
           <p className={styles.intro}>Let’s stay in touch.</p></div></div>
-          <a className={styles.save} href="/jack-lesser.vcf"><span aria-hidden="true">＋</span> Open contact card</a>
+          <a className={styles.save} href="/jack-lesser.vcf" download="Jack-Lesser.vcf" aria-describedby="contact-help"><span aria-hidden="true">＋</span> Save my contact</a>
+          <p className={styles.contactHelp} id="contact-help">Open the downloaded contact file to add me to your contacts. If it won’t open here, try Safari or Chrome.</p>
         </header>
         <nav aria-label="Connect with Jack" className={styles.links}>
           {order.map(name => {

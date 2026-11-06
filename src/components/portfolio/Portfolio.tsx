@@ -160,6 +160,12 @@ function VideoCarousel({ channel, items, playlist }: { channel: string; items: V
   </div>;
 }
 
+const pillars = [
+  { name: "Aura", number: "01", subtitle: "Strategy, story & environment", text: "What should this feel like, and what should it say? I shape the strategy, story, and creative direction—from the environment in the room to the messaging that invites people in.", tags: ["Experience strategy · Messaging · Creative direction", "Environment · Music · Aesthetic"], href: "#jp-work", action: "Explore selected work ↗" },
+  { name: "Soul", number: "02", subtitle: "Programming, leadership & connection", text: "Bring the right people and ideas together. I shape workshops and programming around frontier ideas, freedom technology, and freedom from technology—making room for presence, collaboration, and a return to the body.", tags: ["Programming · Leadership · Workshops", "Frontier ideas · Presence · Collaboration"], href: "/freedom-from-tech", action: "Explore the practice ↗" },
+  { name: "Time", number: "03", subtitle: "Making it happen & carrying it forward", text: "The idea needs a plan, a team, and someone following through. I connect operations and production with marketing and communications—making the experience happen, then carrying its stories into the world.", tags: ["Operations · Production · Execution", "Marketing · Communications · Distribution"], href: "#jp-channels", action: "Explore the media ↗" },
+];
+
 const selectedWork = [
   { name: "Imagine IF", text: "Website, campaigns, speaker coordination, and production for a two-day summit on AI, energy, and Bitcoin." },
   { name: "Bitcoin Park", text: "I run Austin operations and help produce summits, workshops, and community events, including the communications and media around them." },
@@ -171,6 +177,7 @@ export default function Portfolio() {
     <ScrollFlow />
     <header className="jp-nav"><Link className="jp-brand" href="/">Jack Lesser.</Link><nav className="jp-links" aria-label="Portfolio"><a href="#jp-work">Work</a><a href="#jp-about">About</a><Link href="/timeless">Timeless</Link><a href="#jp-contact">Contact</a></nav></header>
     <section className="jp-intro" id="jp-top"><div><h1>Vibes<br /><span className="jp-title-second">Architecture.</span></h1></div><div className="jp-lead"><p>I bring people together and help good ideas travel.</p><a href="#jp-work">See the work ↓</a></div></section>
+    <section className="jp-section" id="jp-pillars"><div className="jp-section-head"><div><div className="jp-eyebrow">One philosophy, three expressions</div><h2>It starts with how it feels.</h2></div></div><div className="jp-pillars">{pillars.map(pillar => <article key={pillar.name}><div className="jp-pillar-number">{pillar.number}</div><h3>{pillar.name}</h3><div className="jp-pillar-subtitle">{pillar.subtitle}</div><p>{pillar.text}</p><div className="jp-pillar-tags">{pillar.tags.map(tag => <div key={tag}>{tag}</div>)}</div><Link className="jp-pillar-link" href={pillar.href}>{pillar.action}</Link></article>)}</div></section>
     <section className="jp-section jp-capture" id="jp-photography"><div className="jp-section-head"><div><h2>Produced locally.</h2></div><span className="jp-gallery-context">People, places, and moments I’ve photographed.</span></div><PhotoMosaic /></section>
     <section className="jp-media" id="jp-channels"><div className="jp-media-intro"><div className="jp-media-top"><h2>Distributed globally.</h2></div></div>
       <div className="jp-channel-grid" id="jp-work">

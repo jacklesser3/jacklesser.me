@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { socialLinks } from "@/components/layout/socialLinks";
+import { SignalContact } from "./SignalContact";
 import styles from "./connect.module.css";
 
 export const metadata: Metadata = {
@@ -24,7 +25,7 @@ const details: Record<string, string> = {
   YouTube: "@timeless.practice",
   GitHub: "@jacklesser3",
 };
-const order = ["Email", "X", "Instagram", "LinkedIn", "Substack", "YouTube", "GitHub"];
+const order = ["Email", "Signal", "X", "Instagram", "LinkedIn", "Substack", "YouTube", "GitHub"];
 
 export default function ConnectPage() {
   return (
@@ -36,10 +37,12 @@ export default function ConnectPage() {
           <div className={styles.identityCopy}><p className={styles.eyebrow}>GREAT TO MEET YOU</p>
           <h1>Jack Lesser<span>.</span></h1>
           <p className={styles.intro}>Let’s stay in touch.</p></div></div>
-          <a className={styles.save} href="/jack-lesser.vcf" download="Jack-Lesser.vcf"><span aria-hidden="true">＋</span> Save my contact</a>
+          <a className={styles.save} href="/jack-lesser.vcf"><span aria-hidden="true">＋</span> Open contact card</a>
         </header>
         <nav aria-label="Connect with Jack" className={styles.links}>
           {order.map(name => {
+            if (name === "Signal") return <SignalContact key={name} />;
+
             const link = socialLinks.find(item => item.name === name)!;
             return (
               <a key={name} className={styles.link} href={link.href} target={name === "Email" ? undefined : "_blank"} rel={name === "Email" ? undefined : "noopener noreferrer"}>

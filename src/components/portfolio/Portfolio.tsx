@@ -8,7 +8,7 @@ import photoDetails from "./photoDetails.json";
 import videos from "./videos.json";
 import "./portfolio.css";
 import { ScrollFlow } from "./ScrollFlow";
-import { ConnectMenu } from "./ConnectMenu";
+import "./refined.css";
 
 function useRotation(delay: number) {
   const ref = useRef<HTMLDivElement>(null);
@@ -71,7 +71,7 @@ type PhotoDetails = { name: string; event: string; date: string; bio: string; x?
 const detailFor = (src: string): PhotoDetails => (photoDetails as Record<string, PhotoDetails>)[src];
 
 function PhotoMosaic() {
-  const rotation = useRotation(3000);
+  const rotation = useRotation(5500);
   const [mobile, setMobile] = useState(false);
   useEffect(() => {
     const query = matchMedia("(max-width: 600px)");
@@ -140,7 +140,7 @@ function PhotoMosaic() {
 
 type Video = (typeof videos)["Bitcoin Park"][number];
 function VideoCarousel({ channel, items, playlist }: { channel: string; items: Video[]; playlist?: string }) {
-  const rotation = useRotation(8000);
+  const rotation = useRotation(12000);
   const [playing, setPlaying] = useState<string | null>(null);
   const active = ((rotation.step % items.length) + items.length) % items.length;
   function move(delta: number) { setPlaying(null); rotation.setPaused(true); rotation.setStep(step => step + delta); }
@@ -160,33 +160,24 @@ function VideoCarousel({ channel, items, playlist }: { channel: string; items: V
   </div>;
 }
 
-const pillars = [
-  { name: "Aura", number: "01", subtitle: "Strategy, story & environment", text: "What should this feel like, and what should it say? I shape the strategy, story, and creative direction—from the environment in the room to the messaging that invites people in.", tags: ["Experience strategy · Messaging · Creative direction", "Environment · Music · Aesthetic"], href: "#jp-work", action: "Explore selected work ↗" },
-  { name: "Soul", number: "02", subtitle: "Programming, leadership & connection", text: "Bring the right people and ideas together. I shape workshops and programming around frontier ideas, freedom technology, and freedom from technology—making room for presence, collaboration, and a return to the body.", tags: ["Programming · Leadership · Workshops", "Frontier ideas · Presence · Collaboration"], href: "/freedom-from-tech", action: "Explore the practice ↗" },
-  { name: "Time", number: "03", subtitle: "Making it happen & carrying it forward", text: "The idea needs a plan, a team, and someone following through. I connect operations and production with marketing and communications—making the experience happen, then carrying its stories into the world.", tags: ["Operations · Production · Execution", "Marketing · Communications · Distribution"], href: "#jp-channels", action: "Explore the media ↗" },
-];
-
 const selectedWork = [
-  { name: "Imagine IF", text: "I connect the website and digital campaign with speaker coordination and production—bringing the invitation, the room, and the conversations together." },
-  { name: "Bitcoin Park", text: "I shape gatherings, run Austin operations, and connect the community through campaigns, communications, and media—turning a place to meet into a place where things happen." },
-  { name: "Tangents", text: "I bring the weekly show and daily newsletter together—from guests and editorial direction to production, promotion, and publishing—so ideas keep finding new people." },
+  { name: "Imagine IF", text: "Website, campaigns, speaker coordination, and production for a two-day summit on AI, energy, and Bitcoin." },
+  { name: "Bitcoin Park", text: "I run Austin operations and help produce summits, workshops, and community events, including the communications and media around them." },
+  { name: "Tangents", text: "A weekly show and daily newsletter. I work on guest booking, editorial planning, production, and promotion." },
 ];
 
 export default function Portfolio() {
-  return <div id="jack-portfolio">
+  return <div id="jack-portfolio" className="jp-refined">
     <ScrollFlow />
-    <header className="jp-nav"><Link className="jp-brand" href="/">Jack Lesser.</Link><nav className="jp-links" aria-label="Portfolio"><a href="#jp-pillars">The practice</a><a href="#jp-photography">Media</a><Link href="/timeless">Timeless</Link><ConnectMenu /></nav></header>
-    <section className="jp-intro" id="jp-top"><div><h1>Vibes<br /><span className="jp-title-second">Architecture.</span></h1></div><div className="jp-lead"><p>I bring people and ideas together through experiences and media—from strategy to execution.</p><a href="#jp-pillars">Explore the three pillars ↓</a></div></section>
-    <div className="jp-cover"><img src={photos["Peru 2026"][1].src} alt="Warm light on snow-covered mountains in Peru" fetchPriority="high" width="1800" height="1200" /><div className="jp-cover-overlay"><div className="jp-cover-title">Create the feeling.<br />Capture the moment.<br />Share with the world.</div></div></div>
-    <div className="jp-caption"><span>From the first idea to the people it reaches.</span><span>Jack Lesser / Selected work</span></div>
-    <section className="jp-section" id="jp-pillars"><div className="jp-section-head"><div><div className="jp-eyebrow">One philosophy, three expressions</div><h2>It starts with how it feels.</h2></div></div><div className="jp-pillars">{pillars.map(pillar => <article key={pillar.name}><div className="jp-pillar-number">{pillar.number}</div><h3>{pillar.name}</h3><div className="jp-pillar-subtitle">{pillar.subtitle}</div><p>{pillar.text}</p><div className="jp-pillar-tags">{pillar.tags.map(tag => <div key={tag}>{tag}</div>)}</div><Link className="jp-pillar-link" href={pillar.href}>{pillar.action}</Link></article>)}</div></section>
-    <section className="jp-section jp-capture" id="jp-photography"><div className="jp-section-head"><div><div className="jp-eyebrow">Inside the work / Selected photography</div><h2>Produced locally.</h2></div><span className="jp-gallery-context">A glimpse into the experiences, conversations, and communities I help bring to life.</span></div><PhotoMosaic /></section>
-    <section className="jp-media" id="jp-channels"><div className="jp-media-intro"><div className="jp-flow-steps" aria-label="The process"><span>Gather</span><span className="jp-flow-arrow" aria-hidden="true">→</span><span>Curate</span><span className="jp-flow-arrow" aria-hidden="true">→</span><span>Distribute</span></div><div className="jp-eyebrow">Media / Channel operations</div><div className="jp-media-top"><h2>Distributed globally.</h2><p>I lead content and channel operations for Bitcoin Park and Tangents—from editorial planning and production to publishing, promotion, and distribution.</p></div></div>
+    <header className="jp-nav"><Link className="jp-brand" href="/">Jack Lesser.</Link><nav className="jp-links" aria-label="Portfolio"><a href="#jp-work">Work</a><a href="#jp-about">About</a><Link href="/timeless">Timeless</Link><a href="#jp-contact">Contact</a></nav></header>
+    <section className="jp-intro" id="jp-top"><div><h1>Vibes<br /><span className="jp-title-second">Architecture.</span></h1></div><div className="jp-lead"><p>I bring people together and help good ideas travel.</p><a href="#jp-work">See the work ↓</a></div></section>
+    <section className="jp-section jp-capture" id="jp-photography"><div className="jp-section-head"><div><h2>Produced locally.</h2></div><span className="jp-gallery-context">People, places, and moments I’ve photographed.</span></div><PhotoMosaic /></section>
+    <section className="jp-media" id="jp-channels"><div className="jp-media-intro"><div className="jp-media-top"><h2>Distributed globally.</h2></div></div>
       <div className="jp-channel-grid" id="jp-work">
-      {(["Imagine IF", "Bitcoin Park", "Tangents"] as const).map(channel => <article className="jp-channel jp-channel-real" key={channel}><div className="jp-channel-heading"><div><div className="jp-role">{channel === "Imagine IF" ? "Conversations from the summit" : channel === "Bitcoin Park" ? "Conversations from the community" : "Conversations from the show"}</div><h3>{channel}</h3></div><a className="jp-channel-link" href={channel === "Imagine IF" ? "https://www.youtube.com/playlist?list=PLLwxDBDGP_Js" : channel === "Bitcoin Park" ? "https://www.youtube.com/@BitcoinPark/videos" : "https://www.youtube.com/@tangents_d/videos"} target="_blank" rel="noopener noreferrer">{channel === "Imagine IF" ? "Explore the playlist ↗" : "Explore the channel ↗"}</a></div><p className="jp-channel-description">{selectedWork.find(project => project.name === channel)?.text}</p><VideoCarousel channel={channel} items={videos[channel]} playlist={channel === "Imagine IF" ? "PLLwxDBDGP_Js" : undefined} /></article>)}
+      {(["Imagine IF", "Bitcoin Park", "Tangents"] as const).map(channel => <article className="jp-channel jp-channel-real" key={channel}><div className="jp-channel-heading"><div><h3>{channel}</h3></div><a className="jp-channel-link" href={channel === "Imagine IF" ? "https://www.youtube.com/playlist?list=PLLwxDBDGP_Js" : channel === "Bitcoin Park" ? "https://www.youtube.com/@BitcoinPark/videos" : "https://www.youtube.com/@tangents_d/videos"} target="_blank" rel="noopener noreferrer">{channel === "Imagine IF" ? "Watch the summit ↗" : "Watch the channel ↗"}</a></div><p className="jp-channel-description">{selectedWork.find(project => project.name === channel)?.text}</p><VideoCarousel channel={channel} items={videos[channel]} playlist={channel === "Imagine IF" ? "PLLwxDBDGP_Js" : undefined} /></article>)}
       </div>
     </section>
-    <section className="jp-section jp-about"><div className="jp-eyebrow jp-about-label">The person behind the practice</div><div className="jp-about-portrait"><div className="jp-headshot"><img src="/portfolio/photos/jack-lesser-peru.jpg" alt="Jack Lesser in the mountains of Peru" width="2048" height="1365" loading="lazy" /></div></div><div><h2>Different forms.<br />The same attention.</h2><p>I’m Jack. Vibes Architecture is how I connect frontier ideas, technology, and community. I’m interested in both freedom technology and freedom from technology: tools that expand what we can do, and space to reconnect with our bodies, our attention, and each other. I like connecting the big picture with the details: shaping the idea, bringing people together, making it happen, and finding the words and images that carry it forward.</p><Link href="/timeless">Explore Timeless: reflections, reviews &amp; The Shelf ↗</Link></div></section>
-    <footer className="jp-footer" id="jp-contact"><div><div className="jp-eyebrow">Something in mind?</div><p>Let’s make it happen.</p></div><a href="mailto:jacklesser44@gmail.com">jacklesser44@gmail.com ↗</a><small>Jack Lesser · <a href="/documents/Jack_Lesser_2026_Resume.pdf" target="_blank" rel="noopener noreferrer">Résumé (PDF) ↗</a></small></footer>
+    <section className="jp-section jp-about" id="jp-about"><div className="jp-about-portrait"><div className="jp-headshot"><img src="/portfolio/photos/jack-lesser-peru.jpg" alt="Jack Lesser in the mountains of Peru" width="2048" height="1365" loading="lazy" /></div></div><div><h2>I’m Jack.</h2><p>I work across events, media, and community, from the first plan to the day it happens.</p><p>I’m interested in freedom technology and freedom from technology. Away from a screen, I teach yoga, travel, and take photographs.</p><Link href="/timeless">Notes, reading &amp; reflections ↗</Link></div></section>
+    <footer className="jp-footer" id="jp-contact"><div><div className="jp-eyebrow">Have something in mind?</div><p>Let’s talk.</p></div><a href="mailto:jacklesser44@gmail.com">jacklesser44@gmail.com ↗</a><small>Jack Lesser · <a href="/documents/Jack_Lesser_2026_Resume.pdf" target="_blank" rel="noopener noreferrer">Résumé (PDF) ↗</a></small></footer>
   </div>;
 }

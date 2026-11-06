@@ -50,3 +50,25 @@
   .icon svg { width: 17px; height: 17px; }
   .footer { margin-top: 8px; }
 }
+
+.signalUsername {
+  color: #536b86;
+  font-size: 11px;
+  font-weight: 400;
+  user-select: text;
+}
+
+@media (max-width: 599px) and (max-height: 720px) {
+  .links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .link {
+    padding-inline: 10px;
+    gap: 7px;
+  }
+
+  .action {
+    display: none;
+  }
+}

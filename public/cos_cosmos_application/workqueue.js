@@ -1,16 +1,73 @@
 (()=>{
 const key='cosmos-workqueue-v1',stages=['Next','Doing','Waiting','Done'];let mode='list';
 const seed=[
-{"id": "builder-pilot", "priority": "P1", "type": "Proposed project", "title": "Scope the Philosopher-Builder Pilot", "next": "Review the prepared brief and shortlist; agree academic–builder pairings and a 2–4 week sprint scope.", "done": "A source-linked decision pack includes the research question, existing-work map, justified shortlist, pilot agenda, resource estimate, proposed owners and measurement plan; record Brendan\u2019s scope decision.", "url": "https://www.cosmos-institute.org/careers", "evidence": "The role calls for strategic projects and translating ideas into action. Human autonomy is a stated Cosmos priority; this pilot is Jack\u2019s proposal.", "dependency": "Brendan confirms priority and an internal collaborator; scope, resources and candidate interest remain unconfirmed.", "suggested": "Jack to prepare the proposal; Cosmos collaborator to confirm"},
-{id:'x-link',priority:'P1',type:'Fix',title:'Publish the corrected personal-site X link',next:'Hand the website owner the exact replacement URL.',done:'The live homepage icon opens https://x.com/Brendan_McCord on desktop and mobile; record the verification date and final destination.',url:'https://www.brendanmccord.com/',evidence:'Verified: the Twitter icon points to twitter.com/mbrendan1; its destination shows an unavailable-account page.',dependency:'Website owner needs CMS or source access.',suggested:'Website owner',handoff:'x-link'},
-{"id": "enhance-rss", "priority": "P2", "type": "Enhancement", "title": "Validate Cosmos’s Substack feed and essay monitoring", "next": "Test the public RSS feed and document available fields, recent-item coverage and duplicate handling.", "done": "A sample import with source links, a field/coverage note and a proposed new-essay review flow are ready; distinguish public content from unavailable private analytics.", "url": "https://blog.cosmos-institute.org/feed", "evidence": "Substack documents publication RSS feeds. Cosmos feed parsing and unattended collection have not been implemented.", "dependency": "Confirm the collection environment, cadence and reviewer before enabling a schedule.", "suggested": "Jack to scope; technical owner to confirm"},
-{"id": "enhance-x", "priority": "P2", "type": "Enhancement", "title": "Scope automated X collection and metric history", "next": "Prepare an access-and-cost assessment for the official X API; specify posts, metrics and observation cadence.", "done": "A reviewed plan specifies credentials, supported fields, coverage, spending cap, database snapshots, retry handling and acceptance checks; implementation awaits agreed access and budget.", "url": "https://docs.x.com/x-api/users/get-posts", "evidence": "The official X API supports user-post retrieval. The dashboard currently uses a manually collected snapshot.", "dependency": "Developer access, server-side secrets, storage and an agreed budget; none configured here.", "suggested": "Jack with a technical collaborator"},
-{"id": "enhance-owner-access", "priority": "P2", "type": "Enhancement", "title": "Assess LinkedIn and Substack analytics access", "next": "Create a permissions matrix for Brendan’s LinkedIn and Cosmos’s Substack; confirm who could authorize each connection.", "done": "An access matrix records required permissions, consenting account/admin, eligibility, returned fields and fallback import route; unknown access remains unconfirmed.", "url": "https://support.substack.com/hc/en-us/articles/50834026608916-How-to-connect-Substack-to-your-AI-Assistant", "evidence": "LinkedIn member-post and analytics permissions are distinct. Substack’s official MCP requires a publication Admin and Bestseller eligibility.", "dependency": "Brendan’s consent and approved LinkedIn access; Cosmos Substack admin and eligibility confirmation.", "suggested": "Jack to document requirements; account owners to confirm"},
+  {
+    "id": "builder-pilot",
+    "priority": "P1",
+    "type": "Proposed project",
+    "title": "Plan the philosopher-builder pilot",
+    "next": "Review the brief and shortlist with you, then agree on a scholar–developer pairing and a two-week project.",
+    "done": "You have reviewed the research question, proposed pairing, time commitment and evaluation plan, and decided whether to proceed.",
+    "url": "https://www.cosmos-institute.org/careers",
+    "evidence": "The role calls for strategic projects and translating ideas into action. Human autonomy is a stated Cosmos priority; this pilot is Jack’s proposal.",
+    "dependency": "Your agreement on the priority, a Cosmos collaborator and the time available. Candidate interest is not yet confirmed.",
+    "suggested": "Jack to prepare; Cosmos collaborator to confirm"
+  },
+  {
+    "id": "x-link",
+    "priority": "P1",
+    "type": "Fix",
+    "title": "Publish the corrected personal-site X link",
+    "next": "Hand the website owner the exact replacement URL.",
+    "done": "The live homepage icon opens https://x.com/Brendan_McCord on desktop and mobile; record the verification date and final destination.",
+    "url": "https://www.brendanmccord.com/",
+    "evidence": "The personal-site icon pointed to twitter.com/mbrendan1 when checked on November 4. The destination was unavailable on October 29; the cause is unknown.",
+    "dependency": "Website owner needs CMS or source access.",
+    "suggested": "Website owner",
+    "handoff": "x-link"
+  },
+  {
+    "id": "enhance-rss",
+    "priority": "P2",
+    "type": "Enhancement",
+    "title": "Validate Cosmos’s Substack feed and essay monitoring",
+    "next": "Test the public RSS feed and document available fields, recent-item coverage and duplicate handling.",
+    "done": "A sample import with source links, a field/coverage note and a proposed new-essay review flow are ready; distinguish public content from unavailable private analytics.",
+    "url": "https://blog.cosmos-institute.org/feed",
+    "evidence": "Substack documents publication RSS feeds. Cosmos feed parsing and unattended collection have not been implemented.",
+    "dependency": "Confirm the collection environment, cadence and reviewer before enabling a schedule.",
+    "suggested": "Jack to scope; technical owner to confirm"
+  },
+  {
+    "id": "enhance-x",
+    "priority": "P2",
+    "type": "Enhancement",
+    "title": "Scope automated X collection and metric history",
+    "next": "Prepare an access-and-cost assessment for the official X API; specify posts, metrics and observation cadence.",
+    "done": "A reviewed plan specifies credentials, supported fields, coverage, spending cap, database snapshots, retry handling and acceptance checks; implementation awaits agreed access and budget.",
+    "url": "https://docs.x.com/x-api/users/get-posts",
+    "evidence": "The official X API supports user-post retrieval. The dashboard currently uses a manually collected snapshot.",
+    "dependency": "Developer access, server-side secrets, storage and an agreed budget; none configured here.",
+    "suggested": "Jack with a technical collaborator"
+  },
+  {
+    "id": "enhance-owner-access",
+    "priority": "P2",
+    "type": "Enhancement",
+    "title": "Assess LinkedIn and Substack analytics access",
+    "next": "Identify what access you and the Cosmos publication owner could authorize, and what each connection would return.",
+    "done": "A short access plan names the required permissions, account owner, available data and a fallback import method. Access is confirmed before implementation.",
+    "url": "https://support.substack.com/hc/en-us/articles/50834026608916-How-to-connect-Substack-to-your-AI-Assistant",
+    "evidence": "LinkedIn member-post and analytics permissions are distinct. Substack’s official MCP requires a publication Admin and Bestseller eligibility.",
+    "dependency": "Brendan’s consent and approved LinkedIn access; Cosmos Substack admin and eligibility confirmation.",
+    "suggested": "Jack to document requirements; account owners to confirm"
+  }
 ].map(t=>({...t,status:'Next',owner:'',date:'',proof:'',waiting:''}));
 let tasks=seed;try{const raw=JSON.parse(localStorage.getItem(key)||'null');if(Array.isArray(raw)&&raw.every(t=>t.id&&t.title&&stages.includes(t.status)))tasks=raw}catch{}
 tasks=tasks.filter(t=>!['projects','bio','campus'].includes(t.id));
 for(const t of seed)if(!tasks.some(existing=>existing.id===t.id))tasks.push({...t});
-const pilotTask=tasks.find(t=>t.id==='builder-pilot');if(pilotTask)pilotTask.next=seed.find(t=>t.id==='builder-pilot').next;
+const previousDefaults=[{"id":"builder-pilot","priority":"P1","type":"Proposed project","title":"Scope the Philosopher-Builder Pilot","next":"Review the prepared brief and shortlist; agree academic–builder pairings and a 2–4 week sprint scope.","done":"A source-linked decision pack includes the research question, existing-work map, justified shortlist, pilot agenda, resource estimate, proposed owners and measurement plan; record Brendan’s scope decision.","url":"https://www.cosmos-institute.org/careers","evidence":"The role calls for strategic projects and translating ideas into action. Human autonomy is a stated Cosmos priority; this pilot is Jack’s proposal.","dependency":"Brendan confirms priority and an internal collaborator; scope, resources and candidate interest remain unconfirmed.","suggested":"Jack to prepare the proposal; Cosmos collaborator to confirm"},{"id":"x-link","priority":"P1","type":"Fix","title":"Publish the corrected personal-site X link","next":"Hand the website owner the exact replacement URL.","done":"The live homepage icon opens https://x.com/Brendan_McCord on desktop and mobile; record the verification date and final destination.","url":"https://www.brendanmccord.com/","evidence":"Verified: the Twitter icon points to twitter.com/mbrendan1; its destination shows an unavailable-account page.","dependency":"Website owner needs CMS or source access.","suggested":"Website owner","handoff":"x-link"},{"id":"enhance-rss","priority":"P2","type":"Enhancement","title":"Validate Cosmos’s Substack feed and essay monitoring","next":"Test the public RSS feed and document available fields, recent-item coverage and duplicate handling.","done":"A sample import with source links, a field/coverage note and a proposed new-essay review flow are ready; distinguish public content from unavailable private analytics.","url":"https://blog.cosmos-institute.org/feed","evidence":"Substack documents publication RSS feeds. Cosmos feed parsing and unattended collection have not been implemented.","dependency":"Confirm the collection environment, cadence and reviewer before enabling a schedule.","suggested":"Jack to scope; technical owner to confirm"},{"id":"enhance-x","priority":"P2","type":"Enhancement","title":"Scope automated X collection and metric history","next":"Prepare an access-and-cost assessment for the official X API; specify posts, metrics and observation cadence.","done":"A reviewed plan specifies credentials, supported fields, coverage, spending cap, database snapshots, retry handling and acceptance checks; implementation awaits agreed access and budget.","url":"https://docs.x.com/x-api/users/get-posts","evidence":"The official X API supports user-post retrieval. The dashboard currently uses a manually collected snapshot.","dependency":"Developer access, server-side secrets, storage and an agreed budget; none configured here.","suggested":"Jack with a technical collaborator"},{"id":"enhance-owner-access","priority":"P2","type":"Enhancement","title":"Assess LinkedIn and Substack analytics access","next":"Create a permissions matrix for Brendan’s LinkedIn and Cosmos’s Substack; confirm who could authorize each connection.","done":"An access matrix records required permissions, consenting account/admin, eligibility, returned fields and fallback import route; unknown access remains unconfirmed.","url":"https://support.substack.com/hc/en-us/articles/50834026608916-How-to-connect-Substack-to-your-AI-Assistant","evidence":"LinkedIn member-post and analytics permissions are distinct. Substack’s official MCP requires a publication Admin and Bestseller eligibility.","dependency":"Brendan’s consent and approved LinkedIn access; Cosmos Substack admin and eligibility confirmation.","suggested":"Jack to document requirements; account owners to confirm"}];
+for(const t of tasks){const before=previousDefaults.find(x=>x.id===t.id),after=seed.find(x=>x.id===t.id);if(before&&after)for(const field of ['title','next','done','evidence','dependency','suggested'])if(t[field]===before[field])t[field]=after[field];}
 const e=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const msg=s=>document.getElementById('queue-message').textContent=s;
 function save(){try{localStorage.setItem(key,JSON.stringify(tasks))}catch{msg('Browser storage is unavailable. Changes last only in this session.')}}
 function card(t){return `<article class="queue-item" data-id="${e(t.id)}"><div class="queue-item-top"><span class="tag">${e(t.priority)} / ${e(t.id==='x-link'?'Quick win':t.type)}</span><select aria-label="Status: ${e(t.title)}" data-stage="${e(t.id)}">${stages.map(s=>`<option ${s===t.status?'selected':''}>${s}</option>`).join('')}</select></div><h3>${e(t.title)}</h3><p class="queue-next">${e(t.next||'Define the next concrete step.')}</p>${['builder-pilot','x-link','enhance-rss','enhance-x','enhance-owner-access'].includes(t.id)?`<button class="btn discussion-task-button" data-discussion="${e(t.id)}">Recommendation &amp; discussion</button>`:''}<div class="queue-meta"><span>${t.owner?e(t.owner):'Owner unassigned'}</span><span>${t.date?'Review: '+e(t.date):'No review date'}</span></div><details ${t.status==='Waiting'?'open':''}><summary>Details</summary><div class="queue-detail"><p><b>Done when:</b> ${e(t.done)}</p>${t.evidence?`<p><b>Evidence:</b> ${e(t.evidence)} ${t.url?`<a href="${e(t.url)}" target="_blank" rel="noopener">Source ↗</a>`:''}</p>`:t.url?`<a href="${e(t.url)}" target="_blank" rel="noopener">Evidence ↗</a>`:''}<p><b>Dependency:</b> ${e(t.dependency||'Not specified.')}</p>${t.suggested?`<p class="subtle">Suggested owner: ${e(t.suggested)}.</p>`:''}<label>Owner<input data-field="owner" data-task="${e(t.id)}" value="${e(t.owner)}" placeholder="Name"></label><label>Review date<input type="date" data-field="date" data-task="${e(t.id)}" value="${e(t.date)}"></label><label>Waiting on<textarea rows="2" data-field="waiting" data-task="${e(t.id)}" placeholder="Who or what is needed, and the next follow-up?">${e(t.waiting)}</textarea></label><label>Result / verification note<textarea rows="2" data-field="proof" data-task="${e(t.id)}" placeholder="Required before marking Done. Link the result or describe the verified decision.">${e(t.proof)}</textarea></label>${t.handoff?`<button class="btn" data-ticket="${e(t.handoff)}">Copy brief</button>`:''}</div></details></article>`}

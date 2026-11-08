@@ -60,3 +60,11 @@ main{margin:0 auto;max-width:1440px;padding:28px 40px 80px}.top{font-size:11px;l
 @media(min-width:1000px){.weekly-four .weekly-heading{margin-top:12px}.weekly-four .weekly-heading h1{font-size:29px}.weekly-four .weekly-context{margin-bottom:10px}.weekly-four .weekly-item{padding:12px 0;gap:22px;grid-template-columns:200px minmax(0,1.35fr) minmax(0,1fr)}.weekly-four .weekly-title h2{font-size:20px;margin-top:6px}.weekly-four .weekly-recommendation p,.weekly-four .weekly-decision p{font-size:12px;line-height:1.45}.weekly-four .weekly-decision .btn{margin-top:7px;padding:5px 9px}.weekly-four .weekly-footer{margin-top:12px}}
 
 @media(min-width:1000px){.weekly-four .weekly-item{padding:8px 0}.weekly-four .weekly-context{margin-bottom:6px}.weekly-four .weekly-footer{margin-top:8px}body:has(#overview.active.weekly-four) main>footer{margin-top:3px;padding-top:3px}}
+
+/* Slightly larger reading text, with a compact desktop brief. */
+@media(min-width:1000px){.weekly-four .weekly-heading h1{font-size:31px}.weekly-four .weekly-title h2{font-size:22px}.weekly-four .weekly-recommendation p,.weekly-four .weekly-decision p{font-size:13px;line-height:1.45}.weekly-four .weekly-item{gap:20px}.weekly-four .weekly-decision .btn,.weekly-four .weekly-links .btn{font-size:12px}.weekly-four .weekly-context{font-size:12px}}
+@media(min-width:721px){#insight-dialog-content p,#insight-dialog-content li,#insight-dialog-content .subtle{font-size:16px;line-height:1.6}#insight-dialog-content .insight-lead{font-size:21px;line-height:1.45}}
+
+@media(min-width:1000px) and (max-height:800px){body:has(#overview.active.weekly-four) main{padding-top:16px;padding-bottom:12px}.weekly-four .weekly-item{padding:5px 0}.weekly-four .weekly-heading{margin-top:6px}.weekly-four .weekly-title h2{line-height:1.15}}
+
+@media(min-width:1000px) and (max-height:800px){.weekly-four .weekly-item{padding:3px 0}}

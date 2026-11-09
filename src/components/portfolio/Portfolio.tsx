@@ -162,7 +162,7 @@ function VideoCarousel({ channel, items, playlist }: { channel: string; items: V
 
 const pillars = [
   { name: "Aura", number: "01", subtitle: "How it feels", text: "I shape the story, look, and feel of an experience. The invitation, music, and environment should all feel connected.", href: "#jp-work", action: "See my work ↗" },
-  { name: "Soul", number: "02", subtitle: "What brings us together", text: "I lead workshops and gatherings where people explore frontier ideas and build on each other’s thinking. There’s room for new technology, collaboration, and time away from screens to reconnect with the body.", href: "/freedom-from-tech", action: "Explore the practice ↗" },
+  { name: "Soul", number: "02", subtitle: "What brings us together", text: "I lead gatherings, workshops, summits, and retreats where people explore frontier ideas and build on each other’s thinking. There’s room for new technology, collaboration, and time away from screens to reconnect with the body.", href: "/freedom-from-tech", action: "Explore the practice ↗" },
   { name: "Time", number: "03", subtitle: "How it comes to life", text: "I turn the idea into a plan and see it through production. Marketing and communications bring people in; the media we share afterward helps the ideas travel.", href: "#jp-channels", action: "Watch the work ↗" },
 ];
 

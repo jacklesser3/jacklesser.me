@@ -7,3 +7,19 @@
 #jack-portfolio.jp-refined .jp-media-top{margin-bottom:28px}
 #jack-portfolio.jp-refined .jp-about p{max-width:460px}
 @media(max-width:600px){#jack-portfolio.jp-refined .jp-media-intro{padding-top:170px}#jack-portfolio.jp-refined .jp-intro{padding-bottom:35px}}
+
+/* Keep the desktop introduction balanced as the copy wraps. */
+@media(min-width:801px){
+  #jack-portfolio.jp-refined .jp-intro{
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+    align-items:center;
+    column-gap:clamp(40px,6vw,96px);
+    padding-top:64px;
+  }
+  #jack-portfolio.jp-refined .jp-lead{
+    max-width:480px;
+    font-size:clamp(21px,1.8vw,26px);
+    line-height:1.5;
+  }
+  #jack-portfolio.jp-refined .jp-lead a{margin-top:24px;font-size:20px}
+}

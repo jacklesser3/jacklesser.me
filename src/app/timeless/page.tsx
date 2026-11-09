@@ -95,15 +95,15 @@ const podcastReviews: PodcastReview[] = [
 const pillars = [
   {
     label: "Performance",
-    text: "Discipline, standards, resilience, and the kind of effort that changes identity.",
+    text: "How practice, effort, and discipline shape what we can do.",
   },
   {
     label: "Leverage",
-    text: "Business, judgment, wealth, and clearer models for building a life with optionality.",
+    text: "How we use our time, tools, and judgment to create more choices.",
   },
   {
     label: "Inner Work",
-    text: "Healing, spirituality, attention, and the practices that make ambition sustainable.",
+    text: "How we understand ourselves and make room for what matters.",
   },
 ];
 
@@ -266,7 +266,7 @@ export default function Home() {
                 </span>
               </div>
               <p className="mx-auto mt-5 max-w-[18rem] text-sm leading-6 tracking-[0.18em] text-[var(--color-text-muted)] sm:max-w-2xl sm:text-base sm:tracking-wide">
-                Ideas, thinkers, and technologies that hold up across time.
+                My notes on what I’m reading, listening to, and learning.
               </p>
             </div>
 
@@ -323,7 +323,7 @@ export default function Home() {
               Timeless
             </p>
             <h2 className="mt-4 font-[family-name:var(--font-cormorant)] text-3xl leading-tight text-[var(--color-text-primary)] sm:text-4xl sm:leading-none md:text-5xl">
-              Discover to unlock ancient and present wisdom.
+              What I took from these conversations.
             </h2>
           </div>
 
@@ -340,8 +340,7 @@ export default function Home() {
               The Shelf
             </span>
             <p className="max-w-md text-sm leading-6 text-[var(--color-text-secondary)]">
-              Every reflection, bound. Browse the clothbound volumes on a
-              walnut shelf and pull one forward to read it.
+              Browse my reflections on the shelf. Choose a book to read.
             </p>
             <span className="mt-1 text-sm text-[var(--color-text-muted)] transition-colors group-hover:text-[var(--color-text-secondary)]">
               Enter the library →

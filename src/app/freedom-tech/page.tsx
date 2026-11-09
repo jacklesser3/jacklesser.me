@@ -6,11 +6,11 @@ import { Card, CardContent } from "@/components/ui/Card";
 export const metadata: Metadata = {
   title: "Freedom Tech",
   description:
-    "Freedom tech will be the underpinning thesis for all human-centered innovation. Bitcoin, sovereign systems, and the builders who make it real.",
+    "I work with people building technology that gives us more control over our money, tools, and information.",
   openGraph: {
     title: "Freedom Tech | Timeless Practice",
     description:
-      "Freedom tech will be the underpinning thesis for all human-centered innovation. Bitcoin, sovereign systems, and the builders who make it real.",
+      "I work with people building technology that gives us more control over our money, tools, and information.",
   },
 };
 
@@ -18,22 +18,22 @@ const workAreas = [
   {
     title: "Bitcoin Park",
     description:
-      "Building the physical hub for Bitcoin and freedom technology. A space where builders, thinkers, and adopters converge in Nashville and Austin. The community is the product.",
+      "Bitcoin Park brings people together around Bitcoin and freedom technology in Nashville and Austin. I run Austin operations and help organize events and communications.",
   },
   {
     title: "Summits & Events",
     description:
-      "ImagineIF, NEMS, TEMS, and more. High-signal gatherings where the most curious and capable minds in Bitcoin, AI, energy, and freedom tech come together. Every talk should entertain, inform, and inspire.",
+      "I help produce Imagine IF, the Nashville Energy & Mining Summit (NEMS), and the Texas Energy & Mining Summit (TEMS). These gatherings give people working in Bitcoin, AI, and energy a place to exchange ideas.",
   },
   {
-    title: "Vibe Coding",
+    title: "Building with AI",
     description:
-      "Building real tools with AI. Organization matters most. Hallucination control is learnable. Breathing helps. Making is momentum — learn by shipping, breaking, fixing, and repeating.",
+      "I use AI to build tools and websites. I learn by making something useful, testing it, and improving what doesn’t work.",
   },
   {
     title: "Bitcoin as Proof of Work",
     description:
-      "Sound money that escapes inflationary systems. Not just a financial tool but an energy optimization protocol and a buyer of last resort for energy producers. The walls are cracking — it's not fringe anymore.",
+      "I’m interested in Bitcoin as a form of money people can hold and use independently, and in how mining connects it to energy production.",
   },
 ];
 
@@ -44,17 +44,17 @@ export default function FreedomTechPage() {
         <Container size="narrow">
           <H1 className="mb-6">Freedom Tech</H1>
           <Text variant="lead">
-            Freedom tech will be the underpinning thesis for all human-centered
-            innovation and abundance. AI will shape our future — and we&apos;re
-            building the one we want to see.
+            I’m interested in technology that gives people more control over
+            their money, tools, and information. My work brings together the
+            people building and using it.
           </Text>
         </Container>
       </section>
 
       <section className="py-12 md:py-24 bg-[var(--color-bg-secondary)]">
         <Container>
-          <SectionTitle subtitle="Where I show up. Proof of work in the freedom tech ecosystem.">
-            Work &amp; Presence
+          <SectionTitle subtitle="Here’s how that interest takes shape in my work.">
+            What I’m working on
           </SectionTitle>
 
           <div className="grid gap-6 max-w-3xl">

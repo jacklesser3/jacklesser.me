@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | Timeless Practice",
   },
   description:
-    "Ideas, thinkers, and technologies that hold up across time. Podcast reviews, wellness tools, and notes on performance, leverage, and inner work.",
+    "My notes on what I’m reading, listening to, and learning about work, technology, and attention.",
   keywords: [
     "Jack Lesser",
     "Timeless Practice",
@@ -45,13 +45,13 @@ export const metadata: Metadata = {
     siteName: "Timeless Practice",
     title: "Timeless Practice | Jack Lesser",
     description:
-      "Ideas, thinkers, and technologies that hold up across time. Podcast reviews, wellness tools, and notes on performance, leverage, and inner work.",
+      "My notes on what I’m reading, listening to, and learning about work, technology, and attention.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Timeless Practice | Jack Lesser",
     description:
-      "Ideas, thinkers, and technologies that hold up across time. Podcast reviews and notes on performance, leverage, and inner work.",
+      "My notes on what I’m reading, listening to, and learning about work, technology, and attention.",
   },
   robots: {
     index: true,

@@ -6,11 +6,11 @@ import { Card, CardContent } from "@/components/ui/Card";
 export const metadata: Metadata = {
   title: "Freedom from Tech",
   description:
-    "The competitive advantage of the future is the ability to disconnect. Yoga, breathwork, nervous system regulation, and the reclamation of presence.",
+    "I teach yoga and breathwork and make time to move, slow down, and step away from screens.",
   openGraph: {
     title: "Freedom from Tech | Timeless Practice",
     description:
-      "The competitive advantage of the future is the ability to disconnect. Yoga, breathwork, nervous system regulation, and the reclamation of presence.",
+      "I teach yoga and breathwork and make time to move, slow down, and step away from screens.",
   },
 };
 
@@ -18,22 +18,22 @@ const workAreas = [
   {
     title: "Yoga & Movement",
     description:
-      "Teaching and practicing on rooftops, in studios, and wherever the cathedral effect opens minds. The body is the first teacher. The hardest moment for most people isn't the hardest posture — it's stillness.",
+      "I teach and practice yoga in studios, on rooftops, and wherever we have room to move. The practice makes space for both movement and stillness.",
   },
   {
     title: "Breathwork",
     description:
-      "You're not breathing correctly. That sounds crazy, but it's true. Intentional breathing is the most accessible tool for clarity, resilience, and nervous system regulation. Proof of work that happens in the body, breath by breath.",
+      "I guide breathwork sessions that invite people to slow down and notice their breathing and how they feel.",
   },
   {
-    title: "Slowmaxxing",
+    title: "Slowing Down",
     description:
-      "Purposeful deceleration. Not laziness — discipline. Slow is smooth, smooth is fast. Brushing your teeth, showering, typing — transform mundane activities through deliberate slowness and watch your attention expand.",
+      "I practice doing ordinary things without rushing. A walk, a meal, or a few minutes between tasks can be a chance to pay attention.",
   },
   {
     title: "Nervous System Regulation",
     description:
-      "We're in an era of numbness — dependency on quick dopamine hits from fake news and AI-generated slop. The antidote is learning to balance sympathetic and parasympathetic activation. The morning walk before the screen. The breath before the reaction.",
+      "I make room to notice stress and pause before reacting. For me, that can mean a morning walk before opening my laptop or a few quiet breaths between conversations.",
   },
 ];
 
@@ -44,17 +44,17 @@ export default function FreedomFromTechPage() {
         <Container size="narrow">
           <H1 className="mb-6">Freedom from Tech</H1>
           <Text variant="lead">
-            The reclamation of our attention is essentially the reclamation of
-            our life. Technology is leverage for sovereignty — but the
-            competitive advantage is the ability to disconnect.
+            Technology is part of my work, but so is knowing when to step away.
+            Yoga, breathwork, and time outside help me return to my body
+            and pay attention to the people around me.
           </Text>
         </Container>
       </section>
 
       <section className="py-12 md:py-24 bg-[var(--color-bg-secondary)]">
         <Container>
-          <SectionTitle subtitle="Where I show up. Proof of work in the human system.">
-            Work &amp; Presence
+          <SectionTitle subtitle="What I teach and make time for.">
+            My practice
           </SectionTitle>
 
           <div className="grid gap-6 max-w-3xl">

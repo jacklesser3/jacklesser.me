@@ -7,11 +7,11 @@ import styles from "./connect.module.css";
 
 export const metadata: Metadata = {
   title: { absolute: "Connect with Jack Lesser" },
-  description: "Great to meet you. Find Jack Lesser on social, send a note, or save his contact details.",
+  description: "Send me a note or find me on social.",
   alternates: { canonical: "/connect" },
   openGraph: {
     title: "Connect with Jack Lesser",
-    description: "All my links. One place. Let's stay in touch.",
+    description: "Send me a note or find me on social.",
     url: "/connect",
   },
 };

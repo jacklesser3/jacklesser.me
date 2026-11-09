@@ -4,11 +4,11 @@ import ShelfExperience from "@/components/shelf/ShelfExperience";
 export const metadata: Metadata = {
   title: "The Shelf",
   description:
-    "A 3D library of Timeless Practice — clothbound volumes of podcast reflections and essays. Browse the shelf, pull a book forward, and read the piece behind it.",
+    "Browse my podcast reflections and essays. Choose a book from the shelf to read.",
   openGraph: {
     title: "The Shelf | Timeless Practice",
     description:
-      "Browse the clothbound volumes of Timeless Practice reflections in a warm editorial 3D library.",
+      "Browse my podcast reflections and essays. Choose a book from the shelf to read.",
     url: "https://jacklesser.me/shelf",
   },
 };

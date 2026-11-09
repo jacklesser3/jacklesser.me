@@ -23,3 +23,15 @@
   }
   #jack-portfolio.jp-refined .jp-lead a{margin-top:24px;font-size:20px}
 }
+
+/* Give phone layouts readable headings and comfortable touch targets. */
+@media(max-width:600px){
+  #jack-portfolio.jp-refined .jp-links{width:100%;justify-content:space-between;gap:8px}
+  #jack-portfolio.jp-refined .jp-links a{display:inline-flex;align-items:center;min-height:44px;padding:0 4px;font-size:14px}
+  #jack-portfolio.jp-refined .jp-section-head{flex-direction:column;align-items:flex-start;gap:12px}
+  #jack-portfolio.jp-refined .jp-gallery-context{max-width:100%;font-size:14px}
+  #jack-portfolio.jp-refined .jp-pillar-link{display:inline-flex;align-items:center;min-height:44px;margin-top:20px;padding:12px 0;font-size:14px}
+  #jack-portfolio.jp-refined .jp-channel-link,
+  #jack-portfolio.jp-refined .jp-watch{display:inline-flex;align-items:center;min-height:44px}
+  #jack-portfolio.jp-refined .jp-footer>a{overflow-wrap:anywhere}
+}

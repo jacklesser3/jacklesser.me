@@ -8,6 +8,7 @@ import photoDetails from "./photoDetails.json";
 import videos from "./videos.json";
 import "./portfolio.css";
 import { ScrollFlow } from "./ScrollFlow";
+import { ConnectMenu } from "./ConnectMenu";
 import "./refined.css";
 
 function useRotation(delay: number) {
@@ -175,7 +176,7 @@ const selectedWork = [
 export default function Portfolio() {
   return <div id="jack-portfolio" className="jp-refined">
     <ScrollFlow />
-    <header className="jp-nav"><Link className="jp-brand" href="/">Jack Lesser.</Link><nav className="jp-links" aria-label="Portfolio"><a href="#jp-work">Work</a><a href="#jp-about">About</a><Link href="/timeless">Timeless</Link><a href="#jp-contact">Contact</a></nav></header>
+    <header className="jp-nav"><Link className="jp-brand" href="/">Jack Lesser.</Link><nav className="jp-links" aria-label="Portfolio"><a href="#jp-work">Work</a><a href="#jp-about">About</a><Link href="/timeless">Timeless</Link><ConnectMenu /></nav></header>
     <section className="jp-intro" id="jp-top"><div><h1>Vibes<br /><span className="jp-title-second">Architecture.</span></h1></div><div className="jp-lead"><p>I design experiences that bring people together and create media that helps ideas travel.</p><a href="#jp-work">See my work ↓</a></div></section>
     <div className="jp-cover"><img src={photos["Peru 2026"][1].src} alt="Warm light on snow-covered mountains in Peru" fetchPriority="high" width="1800" height="1200" /><div className="jp-cover-overlay"><div className="jp-cover-title">Create the feeling.<br />Capture the moment.<br />Share with the world.</div></div></div>
     <section className="jp-section" id="jp-pillars"><div className="jp-section-head"><div><div className="jp-eyebrow">How I approach the work</div><h2>It starts with how it feels.</h2></div></div><div className="jp-pillars">{pillars.map(pillar => <article key={pillar.name}><div className="jp-pillar-number">{pillar.number}</div><h3>{pillar.name}</h3><div className="jp-pillar-subtitle">{pillar.subtitle}</div><p>{pillar.text}</p><Link className="jp-pillar-link" href={pillar.href}>{pillar.action}</Link></article>)}</div></section>

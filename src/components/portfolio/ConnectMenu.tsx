@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useEffect, useId, useRef, useState } from "react";
 import { socialLinks } from "../layout/socialLinks";
 
@@ -20,7 +21,10 @@ export function ConnectMenu() {
     return () => { document.removeEventListener("pointerdown", outside); document.removeEventListener("keydown", escape); };
   }, [open]);
   return <div className="jp-connect" ref={root} onBlur={event => { if (!event.currentTarget.contains(event.relatedTarget)) setOpen(false); }}>
-    <button ref={trigger} className="jp-connect-trigger" type="button" aria-expanded={open} aria-controls={id} onClick={() => setOpen(value => !value)}>Connect</button>
-    {open && <div className="jp-connect-menu" id={id} aria-label="Connect links">{socialLinks.map(link => <a key={link.name} href={link.href} target={link.href.startsWith("mailto:") ? undefined : "_blank"} rel="noopener noreferrer" onClick={() => setOpen(false)}><span className="jp-connect-icon">{link.icon}</span><span>{link.name}</span></a>)}</div>}
+    <button ref={trigger} className="jp-connect-trigger" type="button" aria-expanded={open} aria-controls={id} onClick={() => setOpen(value => !value)}>Contact</button>
+    <div className="jp-connect-menu" id={id} hidden={!open}>
+      {socialLinks.map(link => <a key={link.name} href={link.href} target={link.href.startsWith("mailto:") ? undefined : "_blank"} rel="noopener noreferrer" onClick={() => { trigger.current?.focus(); setOpen(false); }}><span className="jp-connect-icon">{link.icon}</span><span>{link.name}</span></a>)}
+      <Link href="/connect" onClick={() => setOpen(false)}><span className="jp-connect-icon" aria-hidden="true">→</span>All contact options</Link>
+    </div>
   </div>;
 }

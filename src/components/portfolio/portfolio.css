@@ -236,7 +236,7 @@
 @media(prefers-reduced-motion:reduce){#jack-portfolio .jp-play-icon{transition:none}}
 
 /* Keep dropdown hit targets above the hero and show clear pointer feedback. */
-#jack-portfolio .jp-connect-trigger,#jack-portfolio .jp-connect-menu a{cursor:pointer}
+#jack-portfolio button.jp-connect-trigger,#jack-portfolio .jp-connect-menu a{cursor:pointer}
 #jack-portfolio .jp-connect-menu a:hover,#jack-portfolio .jp-connect-menu a:focus-visible{background:#29425f;color:#e8cb87;outline:2px solid #d4ba75;outline-offset:-2px}
 #jack-portfolio .jp-connect-trigger:hover,#jack-portfolio .jp-connect-trigger:focus-visible{color:#e8cb87}
 

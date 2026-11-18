@@ -63,7 +63,7 @@ p{max-width:66ch}
 .exec-points b{display:block;font:500 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#F1EDE6;margin-bottom:2px}
 .mosaic{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .tile{position:relative;display:block;text-decoration:none;border:1px solid #2A3150;transition:transform .2s,box-shadow .2s}
-.tile:hover,.tile:focus-visible{transform:translateY(-2px);box-shadow:0 0 0 2px var(--city),0 0 28px var(--city)}
+.tile:hover,.tile:focus-visible{z-index:1;transform:translateY(-2px);box-shadow:0 0 0 2px #FFAE46,0 0 9px #FF7900,0 0 26px var(--city)}
 .tile:focus-visible{outline:2px solid transparent;outline-offset:0}
 .tile span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 .exec-stats{display:flex;flex-wrap:wrap;gap:12px 36px;margin-top:28px;color:#8E949C;align-items:baseline}
@@ -1220,17 +1220,28 @@ img[alt="Mockup of the Atlanta billboard in place"]{content:url(/terrafirma_bill
   if(isHome){el.scrollIntoView();}else{window.scrollTo(0,0);}
   return true;
  }
+ function navigate(id){
+  if(!show(id)) return false;
+  var hash='#'+id;
+  if(location.hash!==hash) history.pushState(null,'',hash);
+  return true;
+ }
  document.addEventListener('click',function(e){
   var a=e.target.closest&&e.target.closest('a[href^="#"]');
-  if(a){if(show(a.getAttribute('href').slice(1))) e.preventDefault(); return;}
+  if(a){
+   if(!e.defaultPrevented&&e.button===0&&!e.metaKey&&!e.ctrlKey&&!e.shiftKey&&!e.altKey&&navigate(a.hash.slice(1))) e.preventDefault();
+   return;
+  }
   var b=e.target.closest&&e.target.closest('.pgnav button'); if(!b) return;
-  if(b.dataset.go){show(b.dataset.go);return;}
+  if(b.dataset.go){navigate(b.dataset.go);return;}
   var i=detail.indexOf(cur)+(+b.dataset.step);
-  if(i>=0&&i<detail.length) show(detail[i].id); else show('contents');
+  navigate(i>=0&&i<detail.length ? detail[i].id : 'contents');
  });
  function showHash(){
   if(!show(location.hash.slice(1))) show('cover');
  }
+ history.scrollRestoration='manual';
+ window.addEventListener('popstate',showHash);
  window.addEventListener('hashchange',showHash);
  showHash();
 })();

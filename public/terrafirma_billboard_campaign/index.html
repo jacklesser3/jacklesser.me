@@ -265,15 +265,15 @@ footer li{margin-bottom:6px;break-inside:avoid}
 .toc ol{list-style:none;padding:0;margin:0;display:grid;grid-template-rows:repeat(5,1fr);grid-row:2;border-bottom:1px solid #2E3554}
 .toc li{display:flex}
 .toc a{flex:1;display:grid;grid-template-columns:30px minmax(0,1fr);grid-template-rows:auto auto;column-gap:8px;align-content:start;padding:clamp(9px,2vh,18px) 0;border-top:1px solid #2E3554;text-decoration:none}
-.toc a:hover .t,.toc a:focus-visible .t{color:var(--chrome);text-decoration:underline;text-underline-offset:.18em}
+.toc a:is(:hover,:focus-visible) .t{color:var(--chrome)}
 .toc a:focus-visible{outline-color:var(--chrome)}
 @media screen{
- .toc .city-links a{position:relative;transition:transform .24s cubic-bezier(.2,.72,.25,1),box-shadow .24s ease,background-color .24s ease}
- .toc .city-links a:is(:hover,:focus-visible){z-index:1;transform:translateY(-5px);background:#1D2339;box-shadow:0 0 0 1px var(--chrome),0 10px 18px #0008}
+ .toc .city-links .t{transition:transform .24s cubic-bezier(.2,.72,.25,1),color .16s ease}
+ .toc .city-links a:is(:hover,:focus-visible) .t{transform:translateY(-5px)}
 }
 @media screen and (prefers-reduced-motion:reduce){
- .toc .city-links a{transition:none}
- .toc .city-links a:is(:hover,:focus-visible){transform:none}
+ .toc .city-links .t{transition:none}
+ .toc .city-links a:is(:hover,:focus-visible) .t{transform:none}
 }
 .toc .n{grid-row:1/3;font:500 12px/1.6 var(--mono);color:#8E949C}
 .toc .t{font:800 clamp(16px,2.5vh,23px)/1.15 var(--display);text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}

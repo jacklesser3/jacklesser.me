@@ -221,6 +221,14 @@ td.hl em{--city:var(--mars)}
 .q{border-top:3px solid var(--ink);padding-top:14px}
 .q h3{font-size:28px;margin-bottom:8px}
 .q h3::before{counter-increment:q;content:'Q'counter(q)' ';color:var(--mars)}
+#leadership .qs{grid-template-columns:1fr;gap:0;margin-top:24px}
+#leadership .q{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);align-items:start;gap:24px 40px;border-top:1px solid #B8AFA2;padding:16px 0}
+#leadership .q:last-child{border-bottom:1px solid #B8AFA2}
+#leadership .q h3{margin:0;font-size:clamp(23px,2.25vw,30px);line-height:1.08;text-wrap:initial}
+@media (max-width:640px){
+ #leadership .q{grid-template-columns:1fr;gap:8px}
+}
+
 .assume{margin-top:44px;background:var(--paper);border-left:6px solid var(--grid);padding:22px 26px}
 .assume ul{padding-left:18px}
 

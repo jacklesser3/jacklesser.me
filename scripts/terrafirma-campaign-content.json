@@ -1,5 +1,5 @@
 {
-  "version": "18 November 2026 \u00b7 Revision 9",
+  "version": "18 November 2026 \u00b7 Revision 10",
   "cities": [
     {
       "id": "austin",
@@ -134,18 +134,18 @@
       "family": "nyc",
       "lines": [
         "EVERY SKYLINE",
-        "STARTS IN",
-        "THE DIRT."
+        "STARTS IN THE DIRT."
       ],
       "status": "Future concept",
       "role": "Infrastructure, technical, and operations talent",
       "reason": "A simple local truth: even the most ambitious skyline starts with earthwork.",
       "placement": "Relevant technical commuter inventory, considered only after the Austin test supports expanding the campaign.",
       "proof": "An approved before-and-after site story, with the people and machinery behind it.",
-      "size": 166,
+      "size": 200,
       "character": "The skyline builder",
       "character_detail": "A worn hardhat, heavy utility layers, and determined forward posture give the Operator the character of an experienced ironworker.",
-      "skyline": "Empire State Building, One World Trade Center, and a spare bridge cable line."
+      "skyline": "Empire State Building, One World Trade Center, and a spare bridge cable line.",
+      "fit_headline_lines": true
     },
     {
       "id": "dc",

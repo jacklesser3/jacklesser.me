@@ -262,25 +262,27 @@ footer li{margin-bottom:6px;break-inside:avoid}
 .toc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr)) 36px repeat(2,minmax(0,1fr))}
 .toc .toc-h{color:var(--chrome);margin:0 0 8px;grid-row:1}
 .toc .toc-h1{grid-column:1/3}.toc .toc-h2{grid-column:4/6}
-.toc ol{list-style:none;padding:0;margin:0;display:grid;grid-template-rows:repeat(6,1fr);grid-row:2;border-bottom:1px solid #2E3554}
+.toc ol{list-style:none;padding:0;margin:0;display:grid;grid-template-rows:repeat(7,1fr);grid-row:2;border-bottom:1px solid #2E3554}
 .toc ol:nth-of-type(1){grid-column:1}
 .toc ol:nth-of-type(2){grid-column:2}
 .toc ol:nth-of-type(3){grid-column:4}
 .toc ol:nth-of-type(4){grid-column:5}
-.toc .city-links{border-bottom-color:transparent}
-.toc .city-links::after{content:"";border-top:1px solid #2E3554}
+.toc ol:nth-of-type(3),.toc ol:nth-of-type(4){border-bottom-color:transparent}
+.toc ol:nth-of-type(2)::after,.toc ol:nth-of-type(3)::after,.toc ol:nth-of-type(4)::before,.toc ol:nth-of-type(4)::after{content:"";border-top:1px solid #2E3554}
+.toc ol:nth-of-type(4)::before{grid-row:5}
+.toc ol:nth-of-type(3)::after,.toc ol:nth-of-type(4)::after{grid-row:6}
 .toc ol:nth-of-type(odd) a{padding-inline-end:24px}
 .toc li{display:flex}
 .toc a{flex:1;display:grid;grid-template-columns:30px minmax(0,1fr);grid-template-rows:auto auto;column-gap:8px;align-content:start;padding:clamp(9px,2vh,18px) 0;border-top:1px solid #2E3554;text-decoration:none}
 .toc a:is(:hover,:focus-visible) .t{color:var(--chrome)}
 .toc a:focus-visible{outline-color:var(--chrome)}
 @media screen{
- .toc .city-links .t{transition:transform .24s cubic-bezier(.2,.72,.25,1),color .16s ease}
- .toc .city-links a:is(:hover,:focus-visible) .t{transform:translateY(-7px)}
+ .toc .city-link .t{transition:transform .24s cubic-bezier(.2,.72,.25,1),color .16s ease}
+ .toc .city-link:is(:hover,:focus-visible) .t{transform:translateY(-7px)}
 }
 @media screen and (prefers-reduced-motion:reduce){
- .toc .city-links .t{transition:none}
- .toc .city-links a:is(:hover,:focus-visible) .t{transform:none}
+ .toc .city-link .t{transition:none}
+ .toc .city-link:is(:hover,:focus-visible) .t{transform:none}
 }
 .toc .n{grid-row:1/3;font:500 12px/1.6 var(--mono);color:#8E949C}
 .toc .t{font:800 clamp(16px,2.5vh,23px)/1.15 var(--display);text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -291,13 +293,15 @@ footer li{margin-bottom:6px;break-inside:avoid}
  .toc ol:nth-of-type(n){grid-column:auto}
  .toc .toc-h1,.toc .toc-h2{grid-column:1/-1}
  .toc .toc-h2{margin-top:24px}
- .toc .city-links{grid-template-rows:repeat(5,1fr);border-bottom-color:#2E3554}
- .toc .city-links::after{content:none}
+ .toc ol:nth-of-type(3),.toc ol:nth-of-type(4){grid-template-rows:repeat(5,1fr);border-bottom-color:#2E3554}
+ .toc ol:nth-of-type(3)::after,.toc ol:nth-of-type(4)::after{content:none}
 }
 @media (max-width:600px){
  .toc{grid-template-columns:1fr}
  .toc ol:nth-of-type(odd) a{padding-inline-end:0}
+ .toc ol:nth-of-type(n){grid-template-rows:none}
  .toc ol:nth-of-type(odd){border-bottom:0}
+ .toc ol:nth-of-type(2)::after,.toc ol:nth-of-type(4)::before{content:none}
  .contents{min-height:0}
 }
 /* folds: every page shows the essentials, then opens into more detail */
@@ -408,33 +412,33 @@ img[alt="Mockup of the Atlanta billboard in place"]{content:url(/terrafirma_bill
  <div class="wrap">
   <div class="plate-num mono"><span>CONTENTS</span><span>CLICK ANY LINE TO JUMP THERE · CLICK + ON ANY PAGE FOR MORE DETAIL</span></div>
   <nav class="toc" aria-label="Table of contents">
-   <p class="mono toc-h toc-h1">THE BILLBOARDS</p>
-    <ol class="city-links">
-     <li><a href="#austin"><span class="n">01</span><span class="t">Austin</span><span class="d">Keep Austin Building.</span></a></li>
-     <li><a href="#nashville"><span class="n">02</span><span class="t">Nashville</span><span class="d">We Built a Parthenon. Next Up: Mars.</span></a></li>
-     <li><a href="#la"><span class="n">03</span><span class="t">Los Angeles</span><span class="d">The Future Isn't a Rendering.</span></a></li>
-     <li><a href="#sf"><span class="n">04</span><span class="t">San Francisco</span><span class="d">AI Needs Ground to Stand On.</span></a></li>
-     <li><a href="#chicago"><span class="n">05</span><span class="t">Chicago</span><span class="d">Deep Dish. Deeper Dig.</span></a></li>
-    </ol>
-    <ol class="city-links">
-     <li><a href="#boston"><span class="n">06</span><span class="t">Boston</span><span class="d">The Bigger Dig.</span></a></li>
-     <li><a href="#miami"><span class="n">07</span><span class="t">Miami</span><span class="d">Aquí Se Trabaja.</span></a></li>
-     <li><a href="#nyc"><span class="n">08</span><span class="t">New York</span><span class="d">Every Skyline Starts in the Dirt.</span></a></li>
-     <li><a href="#dc"><span class="n">09</span><span class="t">Washington, DC</span><span class="d">Less Red Tape. More Red Dirt.</span></a></li>
-     <li><a href="#atlanta"><span class="n">10</span><span class="t">Atlanta</span><span class="d">The Cloud Lives in Georgia Dirt.</span></a></li>
-    </ol>
-   <p class="mono toc-h toc-h2">THE PLAN AND APPENDIX</p>
+   <p class="mono toc-h toc-h1">MAIN SECTIONS</p>
     <ol>
      <li><a href="#intro"><span class="n">01</span><span class="t">Executive summary</span><span class="d">The campaign on one page.</span></a></li>
      <li><a href="#leadership"><span class="n">02</span><span class="t">Leadership asks</span><span class="d">Three decisions before launch.</span></a></li>
-     <li><a href="#demos"><span class="n">03</span><span class="t">Activation &amp; gamification</span><span class="d">Pop-up games with real machines.</span></a></li>
-     <li><a href="#thesis"><span class="n">A</span><span class="t">The spiky point of view</span><span class="d">Why Mars starts with dirt.</span></a></li>
-     <li><a href="#dna"><span class="n">B</span><span class="t">Brand DNA</span><span class="d">The mural, colors and Operators.</span></a></li>
-     <li><a href="#system"><span class="n">C</span><span class="t">Message system</span><span class="d">One line, ten local accents.</span></a></li>
+     <li><a class="city-link" href="#austin"><span class="n">03</span><span class="t">Austin</span><span class="d">Keep Austin Building.</span></a></li>
+     <li><a class="city-link" href="#nashville"><span class="n">04</span><span class="t">Nashville</span><span class="d">We Built a Parthenon. Next Up: Mars.</span></a></li>
+     <li><a class="city-link" href="#la"><span class="n">05</span><span class="t">Los Angeles</span><span class="d">The Future Isn't a Rendering.</span></a></li>
+     <li><a class="city-link" href="#sf"><span class="n">06</span><span class="t">San Francisco</span><span class="d">AI Needs Ground to Stand On.</span></a></li>
+     <li><a class="city-link" href="#chicago"><span class="n">07</span><span class="t">Chicago</span><span class="d">Deep Dish. Deeper Dig.</span></a></li>
     </ol>
     <ol>
+     <li><a class="city-link" href="#boston"><span class="n">08</span><span class="t">Boston</span><span class="d">The Bigger Dig.</span></a></li>
+     <li><a class="city-link" href="#miami"><span class="n">09</span><span class="t">Miami</span><span class="d">Aquí Se Trabaja.</span></a></li>
+     <li><a class="city-link" href="#nyc"><span class="n">10</span><span class="t">New York</span><span class="d">Every Skyline Starts in the Dirt.</span></a></li>
+     <li><a class="city-link" href="#dc"><span class="n">11</span><span class="t">Washington, DC</span><span class="d">Less Red Tape. More Red Dirt.</span></a></li>
+     <li><a class="city-link" href="#atlanta"><span class="n">12</span><span class="t">Atlanta</span><span class="d">The Cloud Lives in Georgia Dirt.</span></a></li>
+     <li><a href="#demos"><span class="n">13</span><span class="t">Activation &amp; gamification</span><span class="d">Pop-up games with real machines.</span></a></li>
+    </ol>
+   <p class="mono toc-h toc-h2">APPENDIX</p>
+    <ol>
+     <li><a href="#thesis"><span class="n">A</span><span class="t">The spiky point of view</span><span class="d">Why Mars starts with dirt.</span></a></li>
+     <li><a href="#dna"><span class="n">B</span><span class="t">Brand DNA</span><span class="d">The mural, colors and Operators.</span></a></li>
+     <li><a href="#system"><span class="n">C</span><span class="t">Message system</span><span class="d">One thread, ten local accents.</span></a></li>
      <li><a href="#rollout"><span class="n">D</span><span class="t">Go-to-market rollout</span><span class="d">Tease, launch, then prove it.</span></a></li>
      <li><a href="#budget"><span class="n">E</span><span class="t">Budget</span><span class="d">Estimates, quotes and actuals.</span></a></li>
+    </ol>
+    <ol>
      <li><a href="#execution"><span class="n">F</span><span class="t">Vendors and calendar</span><span class="d">Who puts it up, and when.</span></a></li>
      <li><a href="#questions"><span class="n">G</span><span class="t">Open questions</span><span class="d">What I need from you.</span></a></li>
      <li><a href="#realworld"><span class="n">H</span><span class="t">Austin on a real billboard</span><span class="d">What a driver would see.</span></a></li>
@@ -461,7 +465,7 @@ img[alt="Mockup of the Atlanta billboard in place"]{content:url(/terrafirma_bill
 
 <section class="city" id="austin" style="--city:#FF3D9A">
  <header class="plate-head">
-  <span class="mono">01 / AUSTIN, TX</span>
+  <span class="mono">03 / AUSTIN, TX</span>
   <span class="mono bin">01000001 01010101 01010011 01010100 01001001 01001110</span>
  </header>
  <figure class="scene">
@@ -496,7 +500,7 @@ img[alt="Mockup of the Atlanta billboard in place"]{content:url(/terrafirma_bill
 </section>
 <section class="city" id="nashville" style="--city:#FFB21A">
  <header class="plate-head">
-  <span class="mono">02 / NASHVILLE, TN</span>
+  <span class="mono">04 / NASHVILLE, TN</span>
   <span class="mono bin">01001110 01000001 01010011 01001000 01010110 01001001 01001100 01001100 01000101</span>
  </header>
  <figure class="scene">
@@ -531,7 +535,7 @@ img[alt="Mockup of the Atlanta billboard in place"]{content:url(/terrafirma_bill
 </section>
 <section class="city" id="la" style="--city:#FF5FD2">
  <header class="plate-head">
-  <span class="mono">03 / LOS ANGELES, CA</span>
+  <span class="mono">05 / LOS ANGELES, CA</span>
   <span class="mono bin">01001100 01001111 01010011 01000001 01001110 01000111 01000101 01001100 01000101 01010011</span>
  </header>
  <figure class="scene">
@@ -566,7 +570,7 @@ img[alt="Mockup of the Atlanta billboard in place"]{content:url(/terrafirma_bill
 </section>
 <section class="city" id="sf" style="--city:#FF6B2C">
  <header class="plate-head">
-  <span class="mono">04 / SAN FRANCISCO, CA</span>
+  <span class="mono">06 / SAN FRANCISCO, CA</span>
   <span class="mono bin">01010011 01000001 01001110 01000110 01010010 01000001 01001110 01000011 01001001 01010011 01000011 01001111</span>
  </header>
  <figure class="scene">
@@ -601,7 +605,7 @@ img[alt="Mockup of the Atlanta billboard in place"]{content:url(/terrafirma_bill
 </section>
 <section class="city" id="chicago" style="--city:#4FC3FF">
  <header class="plate-head">
-  <span class="mono">05 / CHICAGO, IL</span>
+  <span class="mono">07 / CHICAGO, IL</span>
   <span class="mono bin">01000011 01001000 01001001 01000011 01000001 01000111 01001111</span>
  </header>
  <figure class="scene">
@@ -636,7 +640,7 @@ img[alt="Mockup of the Atlanta billboard in place"]{content:url(/terrafirma_bill
 </section>
 <section class="city" id="boston" style="--city:#39FF88">
  <header class="plate-head">
-  <span class="mono">06 / BOSTON, MA</span>
+  <span class="mono">08 / BOSTON, MA</span>
   <span class="mono bin">01000010 01001111 01010011 01010100 01001111 01001110</span>
  </header>
  <figure class="scene">
@@ -671,7 +675,7 @@ img[alt="Mockup of the Atlanta billboard in place"]{content:url(/terrafirma_bill
 </section>
 <section class="city" id="miami" style="--city:#18F0D0">
  <header class="plate-head">
-  <span class="mono">07 / MIAMI, FL</span>
+  <span class="mono">09 / MIAMI, FL</span>
   <span class="mono bin">01001101 01001001 01000001 01001101 01001001</span>
  </header>
  <figure class="scene">
@@ -706,7 +710,7 @@ img[alt="Mockup of the Atlanta billboard in place"]{content:url(/terrafirma_bill
 </section>
 <section class="city" id="nyc" style="--city:#FFD21A">
  <header class="plate-head">
-  <span class="mono">08 / NEW YORK, NY</span>
+  <span class="mono">10 / NEW YORK, NY</span>
   <span class="mono bin">01001110 01000101 01010111 01011001 01001111 01010010 01001011</span>
  </header>
  <figure class="scene">
@@ -741,7 +745,7 @@ img[alt="Mockup of the Atlanta billboard in place"]{content:url(/terrafirma_bill
 </section>
 <section class="city" id="dc" style="--city:#FF3B30">
  <header class="plate-head">
-  <span class="mono">09 / WASHINGTON, DC</span>
+  <span class="mono">11 / WASHINGTON, DC</span>
   <span class="mono bin">01010111 01000001 01010011 01001000 01001001 01001110 01000111 01010100 01001111 01001110</span>
  </header>
  <figure class="scene">
@@ -776,7 +780,7 @@ img[alt="Mockup of the Atlanta billboard in place"]{content:url(/terrafirma_bill
 </section>
 <section class="city" id="atlanta" style="--city:#FF9E6B">
  <header class="plate-head">
-  <span class="mono">10 / ATLANTA, GA</span>
+  <span class="mono">12 / ATLANTA, GA</span>
   <span class="mono bin">01000001 01010100 01001100 01000001 01001110 01010100 01000001</span>
  </header>
  <figure class="scene">
@@ -811,7 +815,7 @@ img[alt="Mockup of the Atlanta billboard in place"]{content:url(/terrafirma_bill
 </section>
 <section class="plate demos" id="demos">
  <div class="wrap">
-  <div class="plate-num mono"><span>03 / ACTIVATION &amp; GAMIFICATION</span><span>THE BILLBOARD MAKES THE CLAIM. THE PLAYGROUND PROVES IT.</span></div>
+  <div class="plate-num mono"><span>13 / ACTIVATION &amp; GAMIFICATION</span><span>THE BILLBOARD MAKES THE CLAIM. THE PLAYGROUND PROVES IT.</span></div>
   <h2>Don't read the billboard. Drive the machine.</h2>
   <p class="pull">Nobody sits in the machine. That's the point.</p>
   <p class="lead">Every city gets a pop-up where people run a real TerraFirma machine from a remote station, race through three challenges and post a score to a public leaderboard. Recruiters are waiting at the finish line. And nobody ever stands in line: every visitor books a time or joins a virtual queue on their phone, and gets a text when it’s their turn. That frees them to explore the other displays, exhibits and activations around the Playground while they wait.</p>

@@ -62,13 +62,14 @@ p{max-width:66ch}
 .exec-points{list-style:none;padding:0;display:grid;gap:14px;font-size:15.5px;color:#C9C4BA}
 .exec-points b{display:block;font:500 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#F1EDE6;margin-bottom:2px}
 .mosaic{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.tile{position:relative;display:block;text-decoration:none;border:1px solid #2A3150;transition:transform .2s,box-shadow .2s}
-.tile:hover,.tile:focus-visible{z-index:1;transform:translateY(-2px);box-shadow:0 0 0 2px #FFAE46,0 0 9px #FF7900,0 0 26px var(--city)}
+.tile{position:relative;display:block;text-decoration:none;border:1px solid #2A3150;transition:transform .24s cubic-bezier(.2,.72,.25,1),box-shadow .24s ease}
+.tile:hover,.tile:focus-visible{z-index:1;transform:translateY(-8px) scale(1.025);box-shadow:0 0 0 3px #FFC16A,0 0 12px 3px #FF8A00,0 0 32px 5px var(--city),0 18px 26px 4px #000C}
+.tile:active{transform:translateY(-3px) scale(1.008);transition-duration:.08s}
 .tile:focus-visible{outline:2px solid transparent;outline-offset:0}
 .tile span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 .exec-stats{display:flex;flex-wrap:wrap;gap:12px 36px;margin-top:28px;color:#8E949C;align-items:baseline}
 .exec-stats b{font:900 34px var(--display);color:#F1EDE6;margin-right:8px}
-@media (prefers-reduced-motion:reduce){.tile{transition:none}}
+@media (prefers-reduced-motion:reduce){.tile{transition:none}.tile:hover,.tile:focus-visible,.tile:active{transform:none}}
 /* plates */
 section.plate{padding:96px 0;border-bottom:1px solid #CFC8BC}
 .plate-num{display:flex;justify-content:space-between;gap:20px;border-top:3px solid var(--ink);padding-top:10px;margin-bottom:44px}
@@ -283,6 +284,7 @@ footer li{margin-bottom:6px;break-inside:avoid}
 .why p{font-size:15.5px;margin:0}
 @media (max-width:900px){.intro-cols,.why>div{grid-template-columns:1fr}}
 @media print{
+ .pgnav{display:none!important}
  details>*{display:block}
  #cover .tile{border:0;outline:0;box-shadow:none;transform:none;transition:none}
  #cover .tile span{display:none}
@@ -1205,10 +1207,11 @@ img[alt="Mockup of the Atlanta billboard in place"]{content:url(/terrafirma_bill
  var home=['cover','intro','contents','leadership'], sel='header#cover,section[id],footer#sources';
  var pages=[].slice.call(document.querySelectorAll(sel));
  var st=document.createElement('style');
- st.textContent='.pg-hide{display:none!important}.pgnav{position:sticky;top:52px;z-index:40;display:flex;gap:10px;justify-content:space-between;padding:10px 20px;background:#14182A;border-bottom:1px solid #2E3554}.pgnav button{font:500 12px var(--mono);letter-spacing:.1em;text-transform:uppercase;background:none;color:#EFEBE4;border:1px solid #5A6080;padding:8px 12px;border-radius:4px;cursor:pointer}.pgnav button:hover,.pgnav button:focus-visible{border-color:#F5C02B;color:#F5C02B}.pgnav span{display:flex;gap:10px}';
+ st.textContent='.pg-hide{display:none!important}.pgnav{position:sticky;top:52px;z-index:40;display:flex;gap:10px;justify-content:space-between;padding:10px 20px;background:#14182A;border-bottom:1px solid #2E3554}.pgnav button{font:500 12px var(--mono);letter-spacing:.1em;text-transform:uppercase;background:none;color:#EFEBE4;border:1px solid #5A6080;padding:8px 12px;border-radius:4px;cursor:pointer}.pgnav button:hover,.pgnav button:focus-visible{border-color:#F5C02B;color:#F5C02B}.pgnav span{display:flex;gap:10px}@media(max-width:440px){.pgnav{padding-inline:8px;gap:6px}.pgnav span{gap:6px}.pgnav button{font-size:11px;letter-spacing:0;padding-inline:7px}}';
  document.head.appendChild(st);
  var nav=document.createElement('div'); nav.className='pgnav pg-hide';
  nav.innerHTML='<button type="button" data-go="contents">← Contents</button><span><button type="button" data-step="-1">← Previous</button><button type="button" data-step="1">Next →</button></span>';
+ var returnButton=nav.querySelector('[data-go]');
  var bar=document.querySelector('.bar'); bar.parentNode.insertBefore(nav,bar.nextSibling);
  var detail=pages.filter(function(p){return home.indexOf(p.id)<0;}), cur=null;
  function show(id){
@@ -1217,6 +1220,9 @@ img[alt="Mockup of the Atlanta billboard in place"]{content:url(/terrafirma_bill
   var isHome=home.indexOf(pg.id)>=0;
   pages.forEach(function(p){var h=home.indexOf(p.id)>=0; p.classList.toggle('pg-hide',isHome?!h:p!==pg);});
   nav.classList.toggle('pg-hide',isHome); cur=isHome?null:pg;
+  var isCity=pg.classList.contains('city');
+  returnButton.dataset.go=isCity?'cover':'contents';
+  returnButton.textContent=isCity?'← Back to billboards':'← Contents';
   if(isHome){el.scrollIntoView();}else{window.scrollTo(0,0);}
   return true;
  }

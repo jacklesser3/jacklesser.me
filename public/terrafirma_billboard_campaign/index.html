@@ -62,6 +62,15 @@ p{max-width:66ch}
 .exec-points{list-style:none;padding:0;display:grid;gap:14px;font-size:15.5px;color:#C9C4BA}
 .exec-points b{display:block;font:500 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#F1EDE6;margin-bottom:2px}
 .mosaic{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.mosaic > a{display:block;position:relative;transition:transform .18s ease,box-shadow .18s ease}
+.mosaic > a:focus-visible{z-index:1;outline:2px solid #FF5A1F;outline-offset:3px;box-shadow:0 8px 20px #0009}
+@media (hover:hover){
+ .mosaic > a:hover{z-index:1;transform:translateY(-4px) scale(1.015);box-shadow:0 0 0 2px #FF5A1F,0 10px 24px #000b}
+}
+@media (prefers-reduced-motion:reduce){
+ .mosaic > a{transition:none}
+ .mosaic > a:hover{transform:none}
+}
 .tile{position:relative;display:block;text-decoration:none;border:1px solid #2A3150;transition:transform .2s,box-shadow .2s}
 .tile:hover,.tile:focus-visible{transform:translateY(-2px);box-shadow:0 0 0 2px var(--city),0 0 28px var(--city)}
 .tile span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
@@ -280,8 +289,6 @@ footer li{margin-bottom:6px;break-inside:avoid}
 .why>div{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
 .why img{width:100%;display:block}
 .why p{font-size:15.5px;margin:0}
-.openall{margin-left:auto;flex:none;font:500 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;background:none;color:var(--bone);border:1px solid #5A6080;padding:6px 10px;border-radius:4px;cursor:pointer}
-.openall:hover,.openall:focus-visible{border-color:#F5C02B;color:#F5C02B}
 @media (max-width:900px){.intro-cols,.why>div{grid-template-columns:1fr}}
 @media print{details>*{display:block}}
 /* Miami: Spanish headline, English sign-off and hiring line (small patches laid over the embedded board images) */
@@ -329,8 +336,7 @@ img[alt="Mockup of the Atlanta billboard in place"]{content:url(/terrafirma_bill
 
 <div class="bar">
  <span class="wm">TERRAFIRMA</span>
- <nav aria-label="Sections"><a href="#cover">Billboards</a><a href="#intro">Intro</a><a href="#contents">Contents</a><a href="#austin">Cities</a><a href="#demos">Activation</a><a href="#appendix">Appendix</a></nav>
- <button class="openall" type="button" aria-pressed="false">Open all</button>
+ <nav aria-label="Sections"><a href="#cover">Billboards</a><a href="#intro">Intro</a><a href="#contents">Contents</a><a href="#leadership">Leadership asks</a><a href="#austin">Cities</a><a href="#demos">Activation</a><a href="#appendix">Appendix</a></nav>
 </div>
 
 <header class="cover-mosaic" id="cover" aria-label="All ten TerraFirma billboards">
@@ -373,6 +379,7 @@ img[alt="Mockup of the Atlanta billboard in place"]{content:url(/terrafirma_bill
    <p class="mono toc-h toc-h2">THE PLAN AND APPENDIX</p>
     <ol>
      <li><a href="#intro"><span class="n">00</span><span class="t">Executive summary</span><span class="d">The campaign on one page.</span></a></li>
+     <li><a href="#leadership"><span class="n"></span><span class="t">Leadership asks</span><span class="d">Four decisions before launch.</span></a></li>
      <li><a href="#demos"><span class="n">11</span><span class="t">Activation &amp; gamification</span><span class="d">Pop-up games with real machines.</span></a></li>
      <li><a href="#thesis"><span class="n">A</span><span class="t">The spiky point of view</span><span class="d">Why Mars starts with dirt.</span></a></li>
      <li><a href="#dna"><span class="n">B</span><span class="t">Brand DNA</span><span class="d">The mural, colors and Operators.</span></a></li>
@@ -387,6 +394,20 @@ img[alt="Mockup of the Atlanta billboard in place"]{content:url(/terrafirma_bill
      <li><a href="#sources"><span class="n">I</span><span class="t">Sources</span><span class="d">Where the numbers come from.</span></a></li>
     </ol>
   </nav>
+ </div>
+</section>
+
+<section class="plate intro" id="leadership">
+ <div class="wrap">
+  <div class="plate-num mono"><span>LEADERSHIP ASKS</span><span>DECISIONS BEFORE LAUNCH</span></div>
+  <h2>What we need from leadership.</h2>
+  <p class="lead">Four decisions get this campaign from concept to a plan we can price and run.</p>
+  <div class="qs">
+   <div class="q"><h3>Pick the launch scope.</h3><p>Decide whether to prove the idea in four cities with Pilot or take the same budget per city to all ten with Core. Approve a spending ceiling before we ask vendors to hold space.</p></div>
+   <div class="q"><h3>Approve the creative and rights.</h3><p>Choose the strongest billboard concept and flag any headline you would cut. Connect us with the HQ mural artist to license the Operator, share the official wordmark and approve any local artist outreach.</p></div>
+   <div class="q"><h3>Confirm the recruiting priorities.</h3><p>Ask the People team to name the priority roles, clarify which hires need to move to Texas and confirm the careers URL and how we’ll track applications by city.</p></div>
+   <div class="q"><h3>Decide how the public can drive.</h3><p>Have Operations and Legal confirm whether a supervised demo can meet site safety, connection and insurance requirements. If live driving is out, use a simulator with video from a real site.</p></div>
+  </div>
  </div>
 </section>
 
@@ -1025,18 +1046,19 @@ img[alt="Mockup of the Atlanta billboard in place"]{content:url(/terrafirma_bill
  <div class="wrap">
   <div class="plate-num mono"><span>APPENDIX E / BUDGET</span><span>ESTIMATE · QUOTE · ACTUAL</span></div>
   <h2>What it costs.</h2>
-  <p class="lead">Each tier has its own tab in the budget sheet, with roughly 70 to 390 line items grouped by category and a subtotal under each. Every line is priced from a public rate guide or clearly marked as an assumption, shows its math in the notes, and has columns for the estimate, the vendor's quote, the actual spend, deposits and payments. A flat $50,000 contingency sits on top of each tier. The run-of-show doc lists every vendor and when to book them.</p>
+  <p class="lead">The budget sheet details Pilot, expanded Core and Flagship line by line. Core uses the same average per city as Pilot and extends that rate to all ten markets. Every line is priced from a public rate guide or clearly marked as an assumption, shows its math in the notes, and has columns for the estimate, the vendor's quote, the actual spend, deposits and payments. Each detailed estimate includes a flat $50,000 contingency. The run-of-show doc lists every vendor and when to book them.</p>
   <div class="budget-links"><a href="https://docs.google.com/spreadsheets/d/1TlqzvtqhdvCjV7jZ3DyA-0L99agpJd_GKvHXxnaIfL8/edit" target="_blank" rel="noopener">Open the budget sheet ↗</a><a class="alt" href="https://docs.google.com/document/d/1AvJHVNCvMkM5g7VbDOEPXk3jdEVIrIygRy8tBnVAdqo/edit" target="_blank" rel="noopener">Run of show and vendors ↗</a></div>
-  <div class="budget-tots"><div><p class="mono">PILOT</p><p class="amt">~$428K</p><p class="mono" style="margin:2px 0 8px">ABOUT $107K PER CITY</p><p>Four cities, one painted wall and one Playground at SXSW.</p></div><div><p class="mono">CORE</p><p class="amt">~$1.79M</p><p class="mono" style="margin:2px 0 8px">ABOUT $179K PER CITY</p><p>All ten cities, four painted walls, transit, three Playgrounds and three Pods.</p></div><div><p class="mono">FLAGSHIP</p><p class="amt">~$3.12M</p><p class="mono" style="margin:2px 0 8px">ABOUT $312K PER CITY</p><p>Core plus Times Square, the Sunset Strip and a live demo in every city.</p></div></div>
+  <div class="budget-tots"><div><p class="mono">PILOT</p><p class="amt">~$428K</p><p class="mono" style="margin:2px 0 8px">ABOUT $107K PER CITY</p><p>Four cities, one painted wall and one Playground at SXSW.</p></div><div><p class="mono">CORE</p><p class="amt">~$1.07M</p><p class="mono" style="margin:2px 0 8px">ABOUT $107K PER CITY</p><p>Ten cities at the Pilot rate. Local quotes will determine the final mix.</p></div><div><p class="mono">FLAGSHIP</p><p class="amt">~$3.12M</p><p class="mono" style="margin:2px 0 8px">ABOUT $312K PER CITY</p><p>Expanded Core plus Times Square, the Sunset Strip and a live demo in every city.</p></div></div>
+  <p class="note">The expanded Core option is $1,791,779, about $722K above the ten-city baseline. It includes more billboard and transit space, four painted walls, paid social, two artist editions, three Playgrounds and three Pods.</p>
   <details class="fold">
    <summary>The full budget</summary>
    <div class="fold-body">
     <details class="sub"><summary>What each tier includes</summary><div class="sub-body">
-  <div class="tiers"><div class="tier"><p class="mono">PILOT</p><p class="amt">~$428K</p><p class="tier-sub">Prove the message in four cities</p><ul><li>One main bulletin each in Austin, SF, Boston and Chicago for 8 weeks</li><li>Street posters in SoMa, Kendall, East Austin and Williamsburg</li><li>One hand-painted wall: Austin (home base)</li><li>One Playground: Austin during SXSW</li><li>Organic social built from the billboard photos</li></ul></div><div class="tier"><p class="mono">CORE</p><p class="amt">~$1.79M</p><p class="tier-sub">All 10 cities for 8 weeks</p><ul><li>A main billboard in every city (a bulletin or a painted wall)</li><li>Painted walls in NYC, Miami, Austin, Atlanta</li><li>Transit packages: CTA Loop, Kendall/MIT, DC Metro</li><li>Paid social ads aimed at people in the same cities who saw the billboards or visited the careers site</li><li>Two artist editions (LA, Miami)</li><li>Playgrounds in Austin, NYC and Atlanta; Mission Control Pods in SF, Boston and DC</li></ul></div><div class="tier"><p class="mono">FLAGSHIP</p><p class="amt">~$3.12M</p><p class="tier-sub">The Times Square photo</p><ul><li>Everything in Core</li><li>Times Square flagship screen, 2 months</li><li>Sunset Strip landmark billboard, 8 weeks</li><li>A top-tier billboard on SF’s 101 skyway for 2 months</li><li>An activation in all 10 cities: Playground or Pod (see Activation &amp; gamification)</li><li>Commissioned artist edition in every city</li></ul></div></div>
+  <div class="tiers"><div class="tier"><p class="mono">PILOT</p><p class="amt">~$428K</p><p class="tier-sub">Prove the message in four cities</p><ul><li>One main bulletin each in Austin, SF, Boston and Chicago for 8 weeks</li><li>Street posters in SoMa, Kendall, East Austin and Williamsburg</li><li>One hand-painted wall: Austin (home base)</li><li>One Playground: Austin during SXSW</li><li>Organic social built from the billboard photos</li></ul></div><div class="tier"><p class="mono">CORE EXPANDED</p><p class="amt">~$1.79M</p><p class="tier-sub">The larger ten-city option</p><ul><li>A main billboard in every city (a bulletin or a painted wall)</li><li>Painted walls in NYC, Miami, Austin, Atlanta</li><li>Transit packages: CTA Loop, Kendall/MIT, DC Metro</li><li>Paid social ads aimed at people in the same cities who saw the billboards or visited the careers site</li><li>Two artist editions (LA, Miami)</li><li>Playgrounds in Austin, NYC and Atlanta; Mission Control Pods in SF, Boston and DC</li></ul></div><div class="tier"><p class="mono">FLAGSHIP</p><p class="amt">~$3.12M</p><p class="tier-sub">The Times Square photo</p><ul><li>Everything in expanded Core</li><li>Times Square flagship screen, 2 months</li><li>Sunset Strip landmark billboard, 8 weeks</li><li>A top-tier billboard on SF’s 101 skyway for 2 months</li><li>An activation in all 10 cities: Playground or Pod (see Activation &amp; gamification)</li><li>Commissioned artist edition in every city</li></ul></div></div>
     </div></details>
     <details class="sub"><summary>Where the money goes</summary><div class="sub-body">
-  <div class="tablewrap"><table class="budget-table"><thead><tr><th>Category</th><th class="num">Pilot</th><th class="num">Core</th><th class="num">Flagship</th></tr></thead><tbody><tr><td>Ad space</td><td class="num">$46,000</td><td class="num">$562,036</td><td class="num">$1,110,036</td></tr><tr><td>Street posters</td><td class="num">$34,000</td><td class="num">$8,500</td><td class="num">$8,500</td></tr><tr><td>Painted walls</td><td class="num">$60,500</td><td class="num">$242,000</td><td class="num">$242,000</td></tr><tr><td>Printing and install</td><td class="num">$4,000</td><td class="num">$30,000</td><td class="num">$32,376</td></tr><tr><td>Activations (Playgrounds, Pods, container, crew travel)</td><td class="num">$162,072</td><td class="num">$604,895</td><td class="num">$1,247,367</td></tr><tr><td>Creative and rights</td><td class="num">$30,910</td><td class="num">$71,910</td><td class="num">$169,410</td></tr><tr><td>Careers pages, virtual queue and paid social</td><td class="num">$19,220</td><td class="num">$123,720</td><td class="num">$123,720</td></tr><tr><td>Photo, video and PR</td><td class="num">$11,990</td><td class="num">$70,880</td><td class="num">$105,880</td></tr><tr><td>Team travel and legal</td><td class="num">$9,387</td><td class="num">$27,838</td><td class="num">$31,748</td></tr><tr><td><b>Subtotal</b></td><td class="num">$378,079</td><td class="num">$1,741,779</td><td class="num">$3,071,037</td></tr><tr><td>Contingency (flat)</td><td class="num">$50,000</td><td class="num">$50,000</td><td class="num">$50,000</td></tr><tr><td><b>Total</b></td><td class="num"><b>$428,079</b></td><td class="num"><b>$1,791,779</b></td><td class="num"><b>$3,121,037</b></td></tr><tr><td>Average per city (4, 10 and 10 cities)</td><td class="num">$107,020</td><td class="num">$179,178</td><td class="num">$312,104</td></tr></tbody></table></div>
-  <p class="note">These totals come from the budget sheet. As quotes and invoices come in, the sheet updates and this table becomes a snapshot of the estimate.</p>
+  <div class="tablewrap"><table class="budget-table"><thead><tr><th>Category</th><th class="num">Pilot</th><th class="num">Core expanded</th><th class="num">Flagship</th></tr></thead><tbody><tr><td>Ad space</td><td class="num">$46,000</td><td class="num">$562,036</td><td class="num">$1,110,036</td></tr><tr><td>Street posters</td><td class="num">$34,000</td><td class="num">$8,500</td><td class="num">$8,500</td></tr><tr><td>Painted walls</td><td class="num">$60,500</td><td class="num">$242,000</td><td class="num">$242,000</td></tr><tr><td>Printing and install</td><td class="num">$4,000</td><td class="num">$30,000</td><td class="num">$32,376</td></tr><tr><td>Activations (Playgrounds, Pods, container, crew travel)</td><td class="num">$162,072</td><td class="num">$604,895</td><td class="num">$1,247,367</td></tr><tr><td>Creative and rights</td><td class="num">$30,910</td><td class="num">$71,910</td><td class="num">$169,410</td></tr><tr><td>Careers pages, virtual queue and paid social</td><td class="num">$19,220</td><td class="num">$123,720</td><td class="num">$123,720</td></tr><tr><td>Photo, video and PR</td><td class="num">$11,990</td><td class="num">$70,880</td><td class="num">$105,880</td></tr><tr><td>Team travel and legal</td><td class="num">$9,387</td><td class="num">$27,838</td><td class="num">$31,748</td></tr><tr><td><b>Subtotal</b></td><td class="num">$378,079</td><td class="num">$1,741,779</td><td class="num">$3,071,037</td></tr><tr><td>Contingency (flat)</td><td class="num">$50,000</td><td class="num">$50,000</td><td class="num">$50,000</td></tr><tr><td><b>Total</b></td><td class="num"><b>$428,079</b></td><td class="num"><b>$1,791,779</b></td><td class="num"><b>$3,121,037</b></td></tr><tr><td>Average per city (4, 10 and 10 cities)</td><td class="num">$107,020</td><td class="num">$179,178</td><td class="num">$312,104</td></tr></tbody></table></div>
+  <p class="note">The table shows the three detailed estimates. The Core baseline is $1,070,198.50, calculated by applying the Pilot average of $107,019.85 to ten cities. It includes the Pilot rate’s share of contingency and other shared costs. The final ten-city budget will depend on local quotes.</p>
     </div></details>
     <details class="sub"><summary>How the numbers were built</summary><div class="sub-body prose" style="max-width:860px">
 <p>The budget follows the same proof-of-work idea: every number shows its math and links to where it came from. Each line multiplies a quantity by a unit cost, and every unit cost cites a public source on the sheet's Sources tab. Billboard prices come from rate guides by Dash Two and Alluvit Media, the SF skyway prices from the SF Standard, Times Square from AdQuick, and painted walls from Colossal Media's published minimum. Each Playground is built piece by piece in its own block: the lot, permits, dirt, fencing, machines, power, lighting, restrooms, LED screens, staff, security, EMTs, insurance and crew travel. Travel assumes $600 a flight and about $250 a hotel night, plus the federal per diem for meals. Where a source gives a range, the sheet uses the midpoint.</p>
@@ -1174,18 +1196,7 @@ img[alt="Mockup of the Atlanta billboard in place"]{content:url(/terrafirma_bill
 </footer>
 <script>
 (function(){
- var b=document.querySelector('.openall'); if(!b) return;
- b.addEventListener('click',function(){
-  var open=b.getAttribute('aria-pressed')!=='true';
-  document.querySelectorAll('details.fold,details.sub').forEach(function(d){d.open=open;});
-  b.setAttribute('aria-pressed',open?'true':'false');
-  b.textContent=open?'Close all':'Open all';
- });
-})();
-</script>
-<script>
-(function(){
- var home=['cover','intro','contents'], sel='header#cover,section[id],footer#sources';
+ var home=['cover','intro','contents','leadership'], sel='header#cover,section[id],footer#sources';
  var pages=[].slice.call(document.querySelectorAll(sel));
  var st=document.createElement('style');
  st.textContent='.pg-hide{display:none!important}.pgnav{position:sticky;top:52px;z-index:40;display:flex;gap:10px;justify-content:space-between;padding:10px 20px;background:#14182A;border-bottom:1px solid #2E3554}.pgnav button{font:500 12px var(--mono);letter-spacing:.1em;text-transform:uppercase;background:none;color:#EFEBE4;border:1px solid #5A6080;padding:8px 12px;border-radius:4px;cursor:pointer}.pgnav button:hover,.pgnav button:focus-visible{border-color:#F5C02B;color:#F5C02B}.pgnav span{display:flex;gap:10px}';
@@ -1211,7 +1222,11 @@ img[alt="Mockup of the Atlanta billboard in place"]{content:url(/terrafirma_bill
   var i=detail.indexOf(cur)+(+b.dataset.step);
   if(i>=0&&i<detail.length) show(detail[i].id); else show('contents');
  });
- show('cover');
+ function showHash(){
+  if(!show(location.hash.slice(1))) show('cover');
+ }
+ window.addEventListener('hashchange',showHash);
+ showHash();
 })();
 </script>
 </body>

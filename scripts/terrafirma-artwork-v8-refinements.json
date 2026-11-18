@@ -1,0 +1,20 @@
+{
+  "mode": "built-in image_gen",
+  "edits": [
+    {
+      "city": "austin",
+      "prompt": "Use case: precise-object-edit. Input image is the EDIT TARGET, an existing TerraFirma Austin billboard background. Make one very small repair, preserving everything else pixel-faithfully: the cowboy chrome Operator at left appears cut off along the bottom, with a pale bone sliver beneath the jacket and shoulders. Continue the existing jacket, vest, scarf and shoulder contours naturally all the way down to the bottom canvas edge wherever the torso exists. This must be an intentional full-bleed portrait crop at the exact bottom edge, with NO pale horizontal strip, notch, cut-out gap, or artificial baseline under the torso. Keep the exact original 3:1 canvas and framing. Do not shrink, reposition, redesign, or add a lower body. Keep the cowboy hat, chrome face, clothing, Mars discs, Austin skyline, bridge, excavator, rocket, orange rim lighting, ink illustration texture and central clean bone negative space unchanged. No text, logos or labels. Output only the repaired wide background.",
+      "asset": "public/terrafirma_billboard_campaign/img/v4/austin-background.png"
+    },
+    {
+      "city": "sf",
+      "prompt": "Use case: precise-object-edit. Input image is the EDIT TARGET, an existing TerraFirma San Francisco billboard background. Make one very small repair, preserving everything else pixel-faithfully: the hooded chrome Operator at left ends abruptly at a straight horizontal cut about 3% above the canvas bottom, leaving a pale bone strip. Extend the same jacket, hoodie, fabric and chrome arm naturally into that narrow bottom strip and all the way to the exact canvas bottom edge. The portrait should bleed cleanly off the bottom edge, with NO pale strip or artificial baseline beneath it. Keep the exact original 3:1 canvas and framing. Do not shrink, reposition, redesign, or add a lower body. Keep the hoodie silhouette, chrome face, cyan visor and rim accents, Mars discs, Golden Gate Bridge, skyline, excavator, rocket, ink illustration texture and central clean bone negative space unchanged. No text, logos or labels. Output only the repaired wide background.",
+      "asset": "public/terrafirma_billboard_campaign/img/v4/sf-background.png"
+    },
+    {
+      "city": "nashville",
+      "prompt": "Use case: precise-object-edit. Input image is the EDIT TARGET, the existing TerraFirma Nashville billboard background. Change ONLY the terrain connection in the right-hand illustration. The skyline currently ends on a sharp horizontal line behind the excavator cab and floats over an empty pale gap. Anchor the Nashville buildings and trees naturally into one continuous receding ground plane behind the excavator. Use very restrained, fine navy ink terrain contours, low embankment hatching and a few perspective lines to connect the base of the skyline down toward the ground under the excavator tracks. Keep the terrain subtle and clearly connected with no floating horizontal shelf or empty cut-out stripe. Maintain calm negative space. Confine the repair to the rightmost approximately 32% of the image, between the skyline base and foreground ground; no additional buildings, objects or scenic clutter. Preserve the Operator at left, its exact face and dark jacket, orange Mars disc, skyline landmarks and their positions, excavator and bucket, rocket and launch glow, existing composition, original bone background, orange rim lights and precise ink illustration style. Keep exact 3:1 wide canvas. Keep the central type area empty. No text, labels or logos. Output only the repaired wide background.",
+      "asset": "public/terrafirma_billboard_campaign/img/v4/nashville-background.png"
+    }
+  ]
+}

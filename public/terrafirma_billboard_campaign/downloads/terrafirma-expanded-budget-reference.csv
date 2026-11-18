@@ -1,0 +1,28 @@
+Scenario,Category,Line item,Quantity,Unit,Unit low USD,Unit high USD,Extended low USD,Extended high USD,Basis / owner
+Austin recommended pilot,Creative,"Campaign system, copy, and production artwork",1,package,12000,18000,12000,18000,"Brand lead; includes ten concepts and two print-ready Austin files; planning allowance, not a quote"
+Austin recommended pilot,Recruiting journey,"Landing page, role routing, and tracking",1,package,8000,14000,8000,14000,"Recruiting + web; includes QA and accessible application handoff; planning allowance, not a quote"
+Austin recommended pilot,Media,Standard Austin bulletin face,2,face × 4 weeks,10000,18000,20000,36000,"Media buyer; four weeks per face, no teaser extension; planning allowance, not a quote"
+Austin recommended pilot,Production,"Print, install, and removal",2,face,1500,2500,3000,5000,"Printer / media owner; confirm all fees in writing; planning allowance, not a quote"
+Austin recommended pilot,Experience,Controlled Austin venue and site setup,1,event day,8000,14000,8000,14000,"Producer; one day, eight programmed hours; planning allowance, not a quote"
+Austin recommended pilot,Demo,"One machine, one console, and integration",1,package,12000,22000,12000,22000,"Engineering; rental / incremental allocation, not a purchase; planning allowance, not a quote"
+Austin recommended pilot,Staffing,External event crew and supervision,1,event day,6000,10000,6000,10000,"Producer; internal engineering and recruiting time tracked separately; planning allowance, not a quote"
+Austin recommended pilot,Logistics,"Local freight, power, and connectivity",1,package,4000,7000,4000,7000,"Producer; include delivery, collection, fuel, and backup connection; planning allowance, not a quote"
+Austin recommended pilot,Site approvals,"Permits, insurance, and safety services",1,allowance,4000,8000,4000,8000,"Producer + EHS; scope and premiums require confirmation; planning allowance, not a quote"
+Austin recommended pilot,Content,"Photo, film, and edit",1,package,5000,8000,5000,8000,"Brand; approved product footage and employee releases; planning allowance, not a quote"
+Austin recommended pilot,Distribution,Recruiting and content amplification,1,flight,6000,10000,6000,10000,"Marketing; four-week flight, first-party audiences where permitted; planning allowance, not a quote"
+Austin recommended pilot,Measurement,"Research, booking, and reporting tools",1,package,2000,4000,2000,4000,"Marketing ops; include baseline and 90-day cohort reporting; planning allowance, not a quote"
+Austin recommended pilot,Subtotal,,,,,,90000,156000,USD; no vendor commitments; internal payroll and owned assets excluded
+Austin recommended pilot,Contingency 15%,,,,,,13500,23400,USD; no vendor commitments; internal payroll and owned assets excluded
+Austin recommended pilot,TOTAL,,,,,,103500,179400,USD; no vendor commitments; internal payroll and owned assets excluded
+Boston optional expansion,Media,Standard Boston bulletin face,2,face × 4 weeks,15000,25000,30000,50000,"Unbooked; obtain inventory-specific quotes; planning allowance, not a quote"
+Boston optional expansion,Production,"Print, install, and removal",2,face,1500,2500,3000,5000,"No premium landmark inventory; planning allowance, not a quote"
+Boston optional expansion,Venue,Technical recruiting session,1,event,6000,10000,6000,10000,"Independent venue; no assumed conference booth; planning allowance, not a quote"
+Boston optional expansion,Demo,Simulator / approved demonstration setup,1,package,8000,14000,8000,14000,"One session format; no second live machine implied; planning allowance, not a quote"
+Boston optional expansion,Travel,Crew travel and accommodation,1,package,8000,12000,8000,12000,"Scoped roster and dates required; planning allowance, not a quote"
+Boston optional expansion,Content,Local capture and edit,1,package,3000,5000,3000,5000,"Reuse the campaign system; planning allowance, not a quote"
+Boston optional expansion,Creative,Local adaptation and production QA,1,package,3000,5000,3000,5000,"Plain technical workwear; planning allowance, not a quote"
+Boston optional expansion,Distribution,Targeted recruiting amplification,1,flight,5000,8000,5000,8000,"Separate market attribution; planning allowance, not a quote"
+Boston optional expansion,Staffing,External event crew,1,event,4000,7000,4000,7000,"Internal staff time tracked separately; planning allowance, not a quote"
+Boston optional expansion,Subtotal,,,,,,70000,116000,USD; no vendor commitments; internal payroll and owned assets excluded
+Boston optional expansion,Contingency 15%,,,,,,10500,17400,USD; no vendor commitments; internal payroll and owned assets excluded
+Boston optional expansion,TOTAL,,,,,,80500,133400,USD; no vendor commitments; internal payroll and owned assets excluded

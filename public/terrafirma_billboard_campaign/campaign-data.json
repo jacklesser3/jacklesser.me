@@ -1,5 +1,5 @@
 {
-  "version": "18 November 2026 \u00b7 Revision 4",
+  "version": "18 November 2026 \u00b7 Revision 5",
   "cities": [
     {
       "id": "austin",
@@ -27,10 +27,10 @@
         "BUILD THE NEXT",
         "BREAKTHROUGH."
       ],
-      "status": "Gated expansion",
+      "status": "Future concept",
       "role": "Robotics, autonomy, controls, and systems engineers",
       "reason": "An invitation to robotics and systems builders to work on the next consequential breakthrough.",
-      "placement": "Candidate specialist market after the Austin review. Quote employer and university corridors; select inventory for the hiring brief, not a landmark.",
+      "placement": "A possible specialist market after the Austin review. Quote employer or university corridors only when hiring priorities support another test.",
       "proof": "A technical session with the engineers building Mission Control. All roles and relocation details must be current.",
       "size": 218,
       "character": "The inventor",
@@ -140,7 +140,7 @@
       "status": "Future concept",
       "role": "Infrastructure, technical, and operations talent",
       "reason": "A simple local truth: even the most ambitious skyline starts with earthwork.",
-      "placement": "Relevant commuter inventory before Times Square. No Williamsburg poster package is hidden inside the Austin budget.",
+      "placement": "Relevant technical commuter inventory, considered only after the Austin test supports expanding the campaign.",
       "proof": "An approved before-and-after site story, with the people and machinery behind it.",
       "size": 184,
       "character": "The skyline builder",
@@ -186,196 +186,68 @@
   ],
   "austin": [
     [
-      "Creative",
-      "Campaign system, copy, and production artwork",
-      1,
-      "package",
-      12000,
-      18000,
-      "Brand lead; includes ten concepts and two print-ready Austin files"
-    ],
-    [
-      "Recruiting journey",
-      "Landing page, role routing, and tracking",
-      1,
-      "package",
-      8000,
-      14000,
-      "Recruiting + web; includes QA and accessible application handoff"
-    ],
-    [
       "Media",
-      "Standard Austin bulletin face",
+      "Two Austin billboard faces",
       2,
       "face \u00d7 4 weeks",
-      10000,
-      18000,
-      "Media buyer; four weeks per face, no teaser extension"
+      5000,
+      8000,
+      "Blue Line Media published Austin static bulletin estimate; ordinary inventory, exact sites and dates to be quoted"
     ],
     [
       "Production",
-      "Print, install, and removal",
+      "Print, installation, and removal",
       2,
       "face",
       1500,
       2500,
-      "Printer / media owner; confirm all fees in writing"
+      "Planning allowance; confirm printing, posting, removal, taxes, and media-owner fees"
     ],
     [
-      "Experience",
-      "Controlled Austin venue and site setup",
-      1,
-      "event day",
-      8000,
-      14000,
-      "Producer; one day, eight programmed hours"
-    ],
-    [
-      "Demo",
-      "One machine, one console, and integration",
-      1,
-      "package",
-      12000,
-      22000,
-      "Engineering; rental / incremental allocation, not a purchase"
-    ],
-    [
-      "Staffing",
-      "External event crew and supervision",
-      1,
-      "event day",
-      6000,
-      10000,
-      "Producer; internal engineering and recruiting time tracked separately"
-    ],
-    [
-      "Logistics",
-      "Local freight, power, and connectivity",
-      1,
-      "package",
-      4000,
-      7000,
-      "Producer; include delivery, collection, fuel, and backup connection"
-    ],
-    [
-      "Site approvals",
-      "Permits, insurance, and safety services",
-      1,
-      "allowance",
-      4000,
-      8000,
-      "Producer + EHS; scope and premiums require confirmation"
-    ],
-    [
-      "Content",
-      "Photo, film, and edit",
-      1,
-      "package",
-      5000,
-      8000,
-      "Brand; approved product footage and employee releases"
-    ],
-    [
-      "Distribution",
-      "Recruiting and content amplification",
-      1,
-      "flight",
-      6000,
-      10000,
-      "Marketing; four-week flight, first-party audiences where permitted"
-    ],
-    [
-      "Measurement",
-      "Research, booking, and reporting tools",
+      "Creative",
+      "Austin artwork finalization",
       1,
       "package",
       2000,
       4000,
-      "Marketing ops; include baseline and 90-day cohort reporting"
-    ]
-  ],
-  "boston": [
-    [
-      "Media",
-      "Standard Boston bulletin face",
-      2,
-      "face \u00d7 4 weeks",
-      15000,
-      25000,
-      "Unbooked; obtain inventory-specific quotes"
+      "Planning allowance; adapt the existing concept, proof typography, and prepare vendor files; no new ten-city creative development"
     ],
     [
-      "Production",
-      "Print, install, and removal",
-      2,
-      "face",
+      "Recruiting journey",
+      "Existing careers page setup",
+      1,
+      "package",
       1500,
-      2500,
-      "No premium landmark inventory"
-    ],
-    [
-      "Venue",
-      "Technical recruiting session",
-      1,
-      "event",
-      6000,
-      10000,
-      "Independent venue; no assumed conference booth"
-    ],
-    [
-      "Demo",
-      "Simulator / approved demonstration setup",
-      1,
-      "package",
-      8000,
-      14000,
-      "One session format; no second live machine implied"
-    ],
-    [
-      "Travel",
-      "Crew travel and accommodation",
-      1,
-      "package",
-      8000,
-      12000,
-      "Scoped roster and dates required"
-    ],
-    [
-      "Content",
-      "Local capture and edit",
-      1,
-      "package",
       3000,
-      5000,
-      "Reuse the campaign system"
+      "Planning allowance; role routing, mobile QA, and source tracking using the existing site and recruiting tools"
     ],
     [
-      "Creative",
-      "Local adaptation and production QA",
+      "Measurement",
+      "Baseline and pilot reporting",
       1,
       "package",
-      3000,
-      5000,
-      "Plain technical workwear"
-    ],
-    [
-      "Distribution",
-      "Targeted recruiting amplification",
-      1,
-      "flight",
-      5000,
-      8000,
-      "Separate market attribution"
-    ],
-    [
-      "Staffing",
-      "External event crew",
-      1,
-      "event",
-      4000,
-      7000,
-      "Internal staff time tracked separately"
+      500,
+      1000,
+      "Planning allowance; basic traffic and candidate-source reporting; internal recruiting follow-up remains in-house"
     ]
   ],
-  "contingency_rate": 0.15
+  "contingency_rate": 0.15,
+  "budget_reference": "terrafirma-expanded-budget-reference.json",
+  "pilot": {
+    "city": "Austin",
+    "faces": 2,
+    "weeks": 4,
+    "markets": 1,
+    "scope": "Static billboard test with existing concept and careers destination",
+    "timing": "Dates selected after inventory and production quotes; no event-linked premium assumed",
+    "reference": "Expanded activation and second-market budgets retained separately; excluded from first-test total"
+  },
+  "budget_sources": [
+    {
+      "title": "Blue Line Media \u2014 Austin static bulletin estimates",
+      "url": "https://www.bluelinemedia.com/billboard-advertising/austin-tx",
+      "reviewed": "2026-11-18",
+      "use": "Media line only; other lines are planning allowances, not vendor quotes"
+    }
+  ]
 }

@@ -259,12 +259,17 @@ footer li{margin-bottom:6px;break-inside:avoid}
 .contents{background:var(--ink);color:var(--bone);min-height:calc(100vh - 52px);display:flex;align-items:center;padding:32px 0;box-sizing:border-box}
 .contents .wrap{width:100%}
 .contents .plate-num{border-top-color:var(--bone);margin-bottom:clamp(20px,4vh,40px)}
-.toc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.toc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr)) 36px repeat(2,minmax(0,1fr))}
 .toc .toc-h{color:var(--chrome);margin:0 0 8px;grid-row:1}
-.toc .toc-h1{grid-column:1/3}.toc .toc-h2{grid-column:3/5}
+.toc .toc-h1{grid-column:1/3}.toc .toc-h2{grid-column:4/6}
 .toc ol{list-style:none;padding:0;margin:0;display:grid;grid-template-rows:repeat(6,1fr);grid-row:2;border-bottom:1px solid #2E3554}
+.toc ol:nth-of-type(1){grid-column:1}
+.toc ol:nth-of-type(2){grid-column:2}
+.toc ol:nth-of-type(3){grid-column:4}
+.toc ol:nth-of-type(4){grid-column:5}
+.toc .city-links{border-bottom-color:transparent}
 .toc .city-links::after{content:"";border-top:1px solid #2E3554}
-.toc ol:not(:last-child) a{padding-inline-end:32px}
+.toc ol:nth-of-type(odd) a{padding-inline-end:24px}
 .toc li{display:flex}
 .toc a{flex:1;display:grid;grid-template-columns:30px minmax(0,1fr);grid-template-rows:auto auto;column-gap:8px;align-content:start;padding:clamp(9px,2vh,18px) 0;border-top:1px solid #2E3554;text-decoration:none}
 .toc a:is(:hover,:focus-visible) .t{color:var(--chrome)}
@@ -283,15 +288,15 @@ footer li{margin-bottom:6px;break-inside:avoid}
 @media (max-width:1100px){
  .toc{grid-template-columns:repeat(2,minmax(0,1fr))}
  .toc .toc-h,.toc ol{grid-row:auto}
+ .toc ol:nth-of-type(n){grid-column:auto}
  .toc .toc-h1,.toc .toc-h2{grid-column:1/-1}
  .toc .toc-h2{margin-top:24px}
- .toc .city-links{grid-template-rows:repeat(5,1fr)}
+ .toc .city-links{grid-template-rows:repeat(5,1fr);border-bottom-color:#2E3554}
  .toc .city-links::after{content:none}
- .toc ol:nth-of-type(even) a{padding-inline-end:0}
 }
 @media (max-width:600px){
  .toc{grid-template-columns:1fr}
- .toc ol:not(:last-child) a{padding-inline-end:0}
+ .toc ol:nth-of-type(odd) a{padding-inline-end:0}
  .toc ol:nth-of-type(odd){border-bottom:0}
  .contents{min-height:0}
 }
@@ -420,8 +425,8 @@ img[alt="Mockup of the Atlanta billboard in place"]{content:url(/terrafirma_bill
     </ol>
    <p class="mono toc-h toc-h2">THE PLAN AND APPENDIX</p>
     <ol>
-     <li><a href="#intro"><span class="n">00</span><span class="t">Executive summary</span><span class="d">The campaign on one page.</span></a></li>
-     <li><a href="#leadership"><span class="n"></span><span class="t">Leadership asks</span><span class="d">Three decisions before launch.</span></a></li>
+     <li><a href="#intro"><span class="n">00.1</span><span class="t">Executive summary</span><span class="d">The campaign on one page.</span></a></li>
+     <li><a href="#leadership"><span class="n">00.2</span><span class="t">Leadership asks</span><span class="d">Three decisions before launch.</span></a></li>
      <li><a href="#demos"><span class="n">11</span><span class="t">Activation &amp; gamification</span><span class="d">Pop-up games with real machines.</span></a></li>
      <li><a href="#thesis"><span class="n">A</span><span class="t">The spiky point of view</span><span class="d">Why Mars starts with dirt.</span></a></li>
      <li><a href="#dna"><span class="n">B</span><span class="t">Brand DNA</span><span class="d">The mural, colors and Operators.</span></a></li>

@@ -1,5 +1,5 @@
 {
-  "version": "18 November 2026 \u00b7 Revision 10",
+  "version": "18 November 2026 \u00b7 Revision 11",
   "cities": [
     {
       "id": "austin",
@@ -213,15 +213,6 @@
       "Planning allowance; adapt the existing concept, proof typography, and prepare vendor files; no new ten-city creative development"
     ],
     [
-      "Recruiting journey",
-      "Existing careers page setup",
-      1,
-      "package",
-      1500,
-      3000,
-      "Planning allowance; role routing, mobile QA, and source tracking using the existing site and recruiting tools"
-    ],
-    [
       "Measurement",
       "Baseline and pilot reporting",
       1,
@@ -232,15 +223,13 @@
     ]
   ],
   "contingency_rate": 0.15,
-  "budget_reference": "terrafirma-expanded-budget-reference.json",
   "pilot": {
     "city": "Austin",
     "faces": 2,
     "weeks": 4,
     "markets": 1,
     "scope": "Static billboard test with existing concept and careers destination",
-    "timing": "Dates selected after inventory and production quotes; no event-linked premium assumed",
-    "reference": "Expanded activation and second-market budgets retained separately; excluded from first-test total"
+    "timing": "Dates selected after inventory and production quotes; no event-linked premium assumed"
   },
   "budget_sources": [
     {

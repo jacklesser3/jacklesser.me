@@ -2,8 +2,7 @@ Scenario,Category,Line item,Quantity,Unit,Unit low USD,Unit high USD,Extended lo
 Austin first billboard test,Media,Two Austin billboard faces,2,face × 4 weeks,5000,8000,10000,16000,"Blue Line Media published Austin static bulletin estimate; ordinary inventory, exact sites and dates to be quoted; planning allowance, not a quote"
 Austin first billboard test,Production,"Print, installation, and removal",2,face,1500,2500,3000,5000,"Planning allowance; confirm printing, posting, removal, taxes, and media-owner fees; planning allowance, not a quote"
 Austin first billboard test,Creative,Austin artwork finalization,1,package,2000,4000,2000,4000,"Planning allowance; adapt the existing concept, proof typography, and prepare vendor files; no new ten-city creative development; planning allowance, not a quote"
-Austin first billboard test,Recruiting journey,Existing careers page setup,1,package,1500,3000,1500,3000,"Planning allowance; role routing, mobile QA, and source tracking using the existing site and recruiting tools; planning allowance, not a quote"
 Austin first billboard test,Measurement,Baseline and pilot reporting,1,package,500,1000,500,1000,"Planning allowance; basic traffic and candidate-source reporting; internal recruiting follow-up remains in-house; planning allowance, not a quote"
-Austin first billboard test,Subtotal,,,,,,17000,29000,USD; no vendor commitments; internal payroll and owned assets excluded
-Austin first billboard test,Contingency 15%,,,,,,2550,4350,USD; no vendor commitments; internal payroll and owned assets excluded
-Austin first billboard test,TOTAL,,,,,,19550,33350,USD; no vendor commitments; internal payroll and owned assets excluded
+Austin first billboard test,Subtotal,,,,,,15500,26000,USD; no vendor commitments; internal payroll and owned assets excluded
+Austin first billboard test,Contingency 15%,,,,,,2325,3900,USD; no vendor commitments; internal payroll and owned assets excluded
+Austin first billboard test,TOTAL,,,,,,17825,29900,USD; no vendor commitments; internal payroll and owned assets excluded

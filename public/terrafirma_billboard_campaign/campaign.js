@@ -31,9 +31,9 @@
   const hash=location.hash.slice(1)||'campaign';
   if(cityIds.includes(hash)){if(!pages.includes(active))showPage('campaign');openCity(hash);return;}
   closeViewer(false);
-  const aliases={top:'campaign',cities:'campaign',story:'brand',system:'brand',budget:'pilot',timeline:'pilot',execution:'decision',downloads:'decision',measurement:'decision','budget-reference':'decision'};
+  const aliases={top:'campaign',cities:'campaign',story:'brand',system:'brand',budget:'pilot',timeline:'pilot',execution:'decision',downloads:'decision',measurement:'decision','budget-reference':'pilot'};
   const page=pages.includes(hash)?hash:(aliases[hash]||'campaign');showPage(page);
-  if(hash==='budget'||hash==='timeline'||hash==='budget-reference'){const detail=document.querySelector('#'+hash);detail.open=true;detail.scrollIntoView({block:'start',behavior:'instant'});}
+  if(hash==='budget'||hash==='timeline'){const detail=document.querySelector('#'+hash);detail.open=true;detail.scrollIntoView({block:'start',behavior:'instant'});}
   else window.scrollTo({top:0,behavior:'instant'});
  }
  document.addEventListener('click',e=>{

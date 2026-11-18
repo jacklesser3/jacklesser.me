@@ -1,5 +1,5 @@
 {
-  "version": "18 November 2026 \u00b7 Revision 6",
+  "version": "18 November 2026 \u00b7 Revision 7",
   "cities": [
     {
       "id": "austin",
@@ -249,5 +249,6 @@
       "reviewed": "2026-11-18",
       "use": "Media line only; other lines are planning allowances, not vendor quotes"
     }
-  ]
+  ],
+  "austin_budget_sheet_url": "https://docs.google.com/spreadsheets/d/1mGjwiQqbiV3Q4EQeDVK58Vph5ou-S7Z-Yyh91MVaDNw"
 }

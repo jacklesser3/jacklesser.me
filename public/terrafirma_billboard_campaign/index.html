@@ -122,11 +122,8 @@ td.hl{font:800 22px/1.05 var(--display);text-transform:uppercase}
 section.city{padding:80px 0 96px;border-bottom:1px solid #CFC8BC}
 section.city:nth-of-type(even){background:var(--paper)}
 .plate-head{max-width:1240px;margin:0 auto 18px;padding:0 28px;display:flex;justify-content:space-between;gap:20px;border-top:3px solid var(--ink);padding-top:10px}
-.plate-head .bin{color:#6B7184;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;max-width:55%}
 .scene{max-width:1440px;margin:0 auto;position:relative}
 .scene img{width:100%;aspect-ratio:16/10;object-fit:cover}
-.scene figcaption{position:absolute;left:16px;bottom:14px;right:16px;color:#F1EDE6;font:500 12px var(--mono);letter-spacing:.05em;display:flex;gap:10px;align-items:center;text-shadow:0 1px 4px #000}
-.chip{background:var(--city);color:#0B0F1D;padding:3px 8px;border-radius:3px;text-shadow:none;font-weight:500;white-space:nowrap;flex:none}
 .spread{max-width:1240px;margin:44px auto 0;padding:0 28px;display:grid;grid-template-columns:1fr 1.05fr;gap:56px}
 .eyebrow{font:13px var(--mark);letter-spacing:.3em;color:var(--city);margin-bottom:14px}
 .spread h2{font-size:clamp(46px,5.4vw,82px);margin-bottom:20px}
@@ -139,9 +136,10 @@ dd{padding:10px 0;border-top:1px solid #BDB6AA;font-size:15px}
 dd ul{padding-left:18px}
 .num{font-variant-numeric:tabular-nums}
 
-.city-copy h2 em,td.hl em{font-style:normal;background:linear-gradient(transparent 64%,color-mix(in srgb,var(--city) 70%,transparent) 64%)}
-td.hl em{--city:var(--mars)}
-.city-copy h2 s,td.hl s{text-decoration-color:var(--city);opacity:.5}
+.city-copy h2 em{font-style:normal}
+td.hl em{font-style:normal;background:linear-gradient(transparent 64%,color-mix(in srgb,var(--mars) 70%,transparent) 64%)}
+.city-copy h2 s{text-decoration-color:#6B7184;opacity:.55}
+td.hl s{text-decoration-color:var(--city);opacity:.5}
 .city-copy{max-width:1240px;margin:36px auto 0;padding:0 28px}
 .city-copy h2{font-size:clamp(46px,6vw,92px);margin-bottom:16px}
 .simple{font:500 clamp(20px,2.2vw,28px)/1.35 var(--body);max-width:40ch;margin-bottom:30px}
@@ -304,6 +302,41 @@ footer li{margin-bottom:6px;break-inside:avoid}
  .toc ol:nth-of-type(2)::after,.toc ol:nth-of-type(4)::before{content:none}
  .contents{min-height:0}
 }
+/* City pages and downloads */
+.pdf-downloads{display:flex;flex-wrap:wrap;gap:10px 20px;margin-top:28px}
+.pdf-downloads a,.scene-open span{display:inline-flex;align-items:center;gap:10px;font:500 12px/1.4 var(--mono)}
+.pdf-downloads a{padding:10px 13px;border:1px solid #A29C91;border-radius:3px;text-decoration:none}
+.pdf-downloads a:is(:hover,:focus-visible){border-color:var(--ink);background:var(--paper)}
+.city-number{font:500 12px/1.4 var(--mono);color:#4A4F5E;text-align:right;letter-spacing:.12em}
+.scene-open{display:block;color:var(--ink);text-decoration:none}
+.scene-open span{display:flex;justify-content:flex-end;padding-top:10px}
+.scene-open:is(:hover,:focus-visible) span{text-decoration:underline;text-underline-offset:3px}
+.scene-open img{border-radius:4px}
+.scene-viewer[open]{position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;padding:16px 24px 24px;border:0;display:grid;grid-template-rows:auto minmax(0,1fr);gap:16px;background:#0B0F1D;color:var(--bone)}
+.scene-viewer::backdrop{background:#0B0F1D}
+.scene-viewer form{justify-self:end}
+.scene-viewer button{padding:10px 14px;border:1px solid var(--chrome);border-radius:3px;background:transparent;color:inherit;font:500 12px var(--mono);cursor:pointer}
+.scene-viewer img{width:100%;height:100%;object-fit:contain}
+@media screen{
+ section.city{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.04fr);column-gap:clamp(28px,5vw,72px);align-items:start;padding:44px max(28px,calc((100% - 1184px)/2)) 40px}
+ .city>.plate-head,.city>.city-number,.city>.fold{grid-column:1/-1}
+ .city>.plate-head{width:100%;padding:12px 0 0;margin:0 0 24px;border-top:1px solid #A29C91}
+ .city-copy{padding:0;margin:0}
+ .city-copy h2{font-size:clamp(40px,5vw,70px)}
+ .city-copy .simple{font-size:clamp(17px,1.5vw,21px);margin-bottom:18px}
+ .city .facts3{grid-template-columns:1fr;border-top:1px solid #B8AFA2}
+ .city .facts3>div{display:grid;grid-template-columns:96px minmax(0,1fr);gap:8px;padding:10px 0;border-bottom:1px solid #B8AFA2}
+ .city .facts3 .mono{color:#4A4F5E;filter:none;margin:0}
+ .city>.scene{width:100%;max-width:570px;margin:0;justify-self:end}
+ .city>.fold{margin-top:30px}
+ .city>.city-number{border-top:1px solid #B8AFA2;padding-top:12px;margin-top:20px}
+}
+@media screen and (max-width:760px){
+ section.city{grid-template-columns:minmax(0,1fr);row-gap:20px;padding:28px 20px}
+ .city>.plate-head,.city>.fold,.city>.city-number{margin:0}
+ .city>.scene{justify-self:start}
+ .scene-viewer[open]{padding:12px}
+}
 /* folds: every page shows the essentials, then opens into more detail */
 .fold{margin-top:36px;border-top:3px solid currentColor}
 .fold>summary,.sub>summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px}
@@ -326,7 +359,7 @@ footer li{margin-bottom:6px;break-inside:avoid}
 .why p{font-size:15.5px;margin:0}
 @media (max-width:900px){.intro-cols,.why>div{grid-template-columns:1fr}}
 @media print{
- .pgnav{display:none!important}
+ .pgnav,.pdf-downloads,.scene-open span,.scene-viewer{display:none!important}
  details>*{display:block}
  #cover .tile{border:0;outline:0;box-shadow:none;transform:none;transition:none}
  #cover .tile span{display:none}
@@ -347,7 +380,6 @@ footer li{margin-bottom:6px;break-inside:avoid}
 .budget-table td.num,.budget-table th.num{text-align:right;white-space:nowrap}
 /* v2 boards: daylight design, shown in place of the embedded originals */
 .flat.vert{max-width:none}
-.scene figcaption{display:none}
 .cover-mosaic a[href="#miami"]::after,#miami .why>div::after,#miami .scene::after{display:none}
 @media (max-width:900px){.budget-tots{grid-template-columns:1fr}}
 </style>
@@ -356,7 +388,7 @@ footer li{margin-bottom:6px;break-inside:avoid}
 
 <div class="bar">
  <span class="wm">TERRAFIRMA</span>
- <nav aria-label="Sections"><a href="#cover">Billboards</a><a href="#intro">Intro</a><a href="#contents">Contents</a><a href="#leadership">Leadership asks</a><a href="#austin">Cities</a><a href="#demos">Activation</a><a href="#appendix">Appendix</a></nav>
+ <nav aria-label="Sections"><a href="#cover">Billboards</a><a href="#intro">Intro</a><a href="#contents">Contents</a><a href="#downloads">Downloads</a><a href="#leadership">Leadership asks</a><a href="#austin">Cities</a><a href="#demos">Activation</a><a href="#appendix">Appendix</a></nav>
 </div>
 
 <header class="cover-mosaic" id="cover" aria-label="All ten TerraFirma billboards">
@@ -385,6 +417,10 @@ footer li{margin-bottom:6px;break-inside:avoid}
    <div><p class="mono">THE STYLE</p><p>The billboards borrow their colors from TerraFirma’s headquarters mural. Each one uses neon orange to highlight part of the headline. The Operator wears gear from the city, and a local skyline frames an excavator at work and rockets rising in front of Mars.</p></div>
   </div>
   <div class="exec-stats mono intro-stats"><span><b>10</b>cities</span><span><b>8 wks</b>live</span><span><b>3</b>budget tiers, from ~$428K to ~$3.1M</span></div>
+  <div class="pdf-downloads" id="downloads" role="group" aria-label="Download the lookbook">
+   <a href="/terrafirma_billboard_campaign/downloads/terrafirma-full-book.pdf" download="TerraFirma Lookbook - Full Book.pdf">Download Full Book <span aria-hidden="true">↓</span></a>
+   <a href="/terrafirma_billboard_campaign/downloads/terrafirma-billboards-edition.pdf" download="TerraFirma Lookbook - Billboards Edition.pdf">Download Billboards Edition <span aria-hidden="true">↓</span></a>
+  </div>
  </div>
 </section>
 
@@ -444,14 +480,7 @@ footer li{margin-bottom:6px;break-inside:avoid}
 <main>
 
 <section class="city" id="austin" style="--city:#FF3D9A">
- <header class="plate-head">
-  <span class="mono">03 / AUSTIN, TX</span>
-  <span class="mono bin">01000001 01010101 01010011 01010100 01001001 01001110</span>
- </header>
- <figure class="scene">
-  <img src="/terrafirma_billboard_campaign/img/v2/scene-austin.jpg" srcset="/terrafirma_billboard_campaign/img/v2/scene-austin.jpg 1600w, /terrafirma_billboard_campaign/img/v2/scene-austin@2x.webp 3200w" sizes="(max-width: 1440px) 100vw, 1440px" loading="lazy" decoding="async" alt="Mockup of the Austin billboard in place">
-  <figcaption><span class="chip">MOCKUP</span> Replace with a real photo once the billboard is up</figcaption>
- </figure>
+ <header class="plate-head"><span class="mono">AUSTIN, TX</span></header>
  <div class="city-copy">
   <h2>KEEP AUSTIN<br><em>BUILDING.</em></h2>
   <p class="simple">A play on Austin's famous slogan, Keep Austin Weird. Change one word and it becomes a call to build.</p>
@@ -460,6 +489,13 @@ footer li{margin-bottom:6px;break-inside:avoid}
    <div><p class="mono">HIRING</p><p>Operators, field engineers, and technicians</p></div>
    <div><p class="mono">ACTIVATION</p><p>SXSW (Mar 15–21, 2027): a full Playground on an East Austin lot near I-35, plus an open house at the Texas yard</p></div>
   </div>
+ </div>
+ <figure class="scene">
+  <a class="scene-open" href="/terrafirma_billboard_campaign/img/v2/board-austin@2x.webp" aria-label="View the Austin billboard full screen">
+   <img src="/terrafirma_billboard_campaign/img/v2/scene-austin.jpg" srcset="/terrafirma_billboard_campaign/img/v2/scene-austin.jpg 1600w, /terrafirma_billboard_campaign/img/v2/scene-austin@2x.webp 3200w" sizes="(max-width: 610px) calc(100vw - 40px), (max-width: 760px) 570px, (max-width: 1240px) 47vw, 570px" loading="lazy" decoding="async" alt="Mockup of the Austin billboard in place">
+   <span>View billboard full screen <b aria-hidden="true">↗</b></span>
+  </a>
+ </figure>
   <details class="fold">
    <summary>The full Austin plan</summary>
    <div class="fold-body">
@@ -476,17 +512,10 @@ footer li{margin-bottom:6px;break-inside:avoid}
     </dl></div></details>
    </div>
   </details>
- </div>
+ <div class="city-number" aria-label="Section 03">03</div>
 </section>
 <section class="city" id="nashville" style="--city:#FFB21A">
- <header class="plate-head">
-  <span class="mono">04 / NASHVILLE, TN</span>
-  <span class="mono bin">01001110 01000001 01010011 01001000 01010110 01001001 01001100 01001100 01000101</span>
- </header>
- <figure class="scene">
-  <img src="/terrafirma_billboard_campaign/img/v2/scene-nashville.jpg" srcset="/terrafirma_billboard_campaign/img/v2/scene-nashville.jpg 1600w, /terrafirma_billboard_campaign/img/v2/scene-nashville@2x.webp 3200w" sizes="(max-width: 1440px) 100vw, 1440px" loading="lazy" decoding="async" alt="Mockup of the Nashville billboard in place">
-  <figcaption><span class="chip">MOCKUP</span> Replace with a real photo once the billboard is up</figcaption>
- </figure>
+ <header class="plate-head"><span class="mono">NASHVILLE, TN</span></header>
  <div class="city-copy">
   <h2>WE BUILT A PARTHENON.<br>NEXT UP: <em>MARS.</em></h2>
   <p class="simple">Nashville built a full-size copy of the Parthenon in Centennial Park. A city that did that can aim for Mars.</p>
@@ -495,6 +524,13 @@ footer li{margin-bottom:6px;break-inside:avoid}
    <div><p class="mono">HIRING</p><p>Operators, field crews, and estimators</p></div>
    <div><p class="mono">ACTIVATION</p><p>CMA Fest week (June): a Playground on a lot in the Gulch or SoBro, steps from the Broadway crowds</p></div>
   </div>
+ </div>
+ <figure class="scene">
+  <a class="scene-open" href="/terrafirma_billboard_campaign/img/v2/board-nashville@2x.webp" aria-label="View the Nashville billboard full screen">
+   <img src="/terrafirma_billboard_campaign/img/v2/scene-nashville.jpg" srcset="/terrafirma_billboard_campaign/img/v2/scene-nashville.jpg 1600w, /terrafirma_billboard_campaign/img/v2/scene-nashville@2x.webp 3200w" sizes="(max-width: 610px) calc(100vw - 40px), (max-width: 760px) 570px, (max-width: 1240px) 47vw, 570px" loading="lazy" decoding="async" alt="Mockup of the Nashville billboard in place">
+   <span>View billboard full screen <b aria-hidden="true">↗</b></span>
+  </a>
+ </figure>
   <details class="fold">
    <summary>The full Nashville plan</summary>
    <div class="fold-body">
@@ -511,17 +547,10 @@ footer li{margin-bottom:6px;break-inside:avoid}
     </dl></div></details>
    </div>
   </details>
- </div>
+ <div class="city-number" aria-label="Section 04">04</div>
 </section>
 <section class="city" id="la" style="--city:#FF5FD2">
- <header class="plate-head">
-  <span class="mono">05 / LOS ANGELES, CA</span>
-  <span class="mono bin">01001100 01001111 01010011 01000001 01001110 01000111 01000101 01001100 01000101 01010011</span>
- </header>
- <figure class="scene">
-  <img src="/terrafirma_billboard_campaign/img/v2/scene-la.jpg" srcset="/terrafirma_billboard_campaign/img/v2/scene-la.jpg 1600w, /terrafirma_billboard_campaign/img/v2/scene-la@2x.webp 3200w" sizes="(max-width: 1440px) 100vw, 1440px" loading="lazy" decoding="async" alt="Mockup of the Los Angeles billboard in place">
-  <figcaption><span class="chip">MOCKUP</span> Replace with a real photo once the billboard is up</figcaption>
- </figure>
+ <header class="plate-head"><span class="mono">LOS ANGELES, CA</span></header>
  <div class="city-copy">
   <h2>THE FUTURE ISN'T<br>A <em>RENDERING.</em></h2>
   <p class="simple">Los Angeles builds cities for the screen. TerraFirma wants the people who can build them for real.</p>
@@ -530,6 +559,13 @@ footer li{margin-bottom:6px;break-inside:avoid}
    <div><p class="mono">HIRING</p><p>Aerospace, robotics, and controls engineers</p></div>
    <div><p class="mono">ACTIVATION</p><p>LA Tech Week (fall): a Playground on an industrial lot in Hawthorne or El Segundo, next to the aerospace corridor</p></div>
   </div>
+ </div>
+ <figure class="scene">
+  <a class="scene-open" href="/terrafirma_billboard_campaign/img/v2/board-la@2x.webp" aria-label="View the Los Angeles billboard full screen">
+   <img src="/terrafirma_billboard_campaign/img/v2/scene-la.jpg" srcset="/terrafirma_billboard_campaign/img/v2/scene-la.jpg 1600w, /terrafirma_billboard_campaign/img/v2/scene-la@2x.webp 3200w" sizes="(max-width: 610px) calc(100vw - 40px), (max-width: 760px) 570px, (max-width: 1240px) 47vw, 570px" loading="lazy" decoding="async" alt="Mockup of the Los Angeles billboard in place">
+   <span>View billboard full screen <b aria-hidden="true">↗</b></span>
+  </a>
+ </figure>
   <details class="fold">
    <summary>The full Los Angeles plan</summary>
    <div class="fold-body">
@@ -546,17 +582,10 @@ footer li{margin-bottom:6px;break-inside:avoid}
     </dl></div></details>
    </div>
   </details>
- </div>
+ <div class="city-number" aria-label="Section 05">05</div>
 </section>
 <section class="city" id="sf" style="--city:#FF6B2C">
- <header class="plate-head">
-  <span class="mono">06 / SAN FRANCISCO, CA</span>
-  <span class="mono bin">01010011 01000001 01001110 01000110 01010010 01000001 01001110 01000011 01001001 01010011 01000011 01001111</span>
- </header>
- <figure class="scene">
-  <img src="/terrafirma_billboard_campaign/img/v2/scene-sf.jpg" srcset="/terrafirma_billboard_campaign/img/v2/scene-sf.jpg 1600w, /terrafirma_billboard_campaign/img/v2/scene-sf@2x.webp 3200w" sizes="(max-width: 1440px) 100vw, 1440px" loading="lazy" decoding="async" alt="Mockup of the San Francisco billboard in place">
-  <figcaption><span class="chip">MOCKUP</span> Replace with a real photo once the billboard is up</figcaption>
- </figure>
+ <header class="plate-head"><span class="mono">SAN FRANCISCO, CA</span></header>
  <div class="city-copy">
   <h2>AI NEEDS <em>GROUND</em><br>TO STAND ON.</h2>
   <p class="simple">AI ads are common on the 101. The headline points to something those ads rarely show. Every data center starts with a construction site.</p>
@@ -565,6 +594,13 @@ footer li{margin-bottom:6px;break-inside:avoid}
    <div><p class="mono">HIRING</p><p>Software, autonomy, perception, and controls engineers</p></div>
    <div><p class="mono">ACTIVATION</p><p>SF Tech Week (fall): a Mission Control Pod in SoMa, where visitors drive a real machine in Texas over a live connection</p></div>
   </div>
+ </div>
+ <figure class="scene">
+  <a class="scene-open" href="/terrafirma_billboard_campaign/img/v2/board-sf@2x.webp" aria-label="View the San Francisco billboard full screen">
+   <img src="/terrafirma_billboard_campaign/img/v2/scene-sf.jpg" srcset="/terrafirma_billboard_campaign/img/v2/scene-sf.jpg 1600w, /terrafirma_billboard_campaign/img/v2/scene-sf@2x.webp 3200w" sizes="(max-width: 610px) calc(100vw - 40px), (max-width: 760px) 570px, (max-width: 1240px) 47vw, 570px" loading="lazy" decoding="async" alt="Mockup of the San Francisco billboard in place">
+   <span>View billboard full screen <b aria-hidden="true">↗</b></span>
+  </a>
+ </figure>
   <details class="fold">
    <summary>The full San Francisco plan</summary>
    <div class="fold-body">
@@ -581,17 +617,10 @@ footer li{margin-bottom:6px;break-inside:avoid}
     </dl></div></details>
    </div>
   </details>
- </div>
+ <div class="city-number" aria-label="Section 06">06</div>
 </section>
 <section class="city" id="chicago" style="--city:#4FC3FF">
- <header class="plate-head">
-  <span class="mono">07 / CHICAGO, IL</span>
-  <span class="mono bin">01000011 01001000 01001001 01000011 01000001 01000111 01001111</span>
- </header>
- <figure class="scene">
-  <img src="/terrafirma_billboard_campaign/img/v2/scene-chicago.jpg" srcset="/terrafirma_billboard_campaign/img/v2/scene-chicago.jpg 1600w, /terrafirma_billboard_campaign/img/v2/scene-chicago@2x.webp 3200w" sizes="(max-width: 1440px) 100vw, 1440px" loading="lazy" decoding="async" alt="Mockup of the Chicago billboard in place">
-  <figcaption><span class="chip">MOCKUP</span> Replace with a real photo once the billboard is up</figcaption>
- </figure>
+ <header class="plate-head"><span class="mono">CHICAGO, IL</span></header>
  <div class="city-copy">
   <h2>DEEP DISH.<br><em>DEEPER DIG.</em></h2>
   <p class="simple">Chicago is famous for deep-dish pizza. We dig deeper.</p>
@@ -600,6 +629,13 @@ footer li{margin-bottom:6px;break-inside:avoid}
    <div><p class="mono">HIRING</p><p>Operators, civil engineers, and mechanical engineers</p></div>
    <div><p class="mono">ACTIVATION</p><p>A summer weekend: a Playground on a lot in the West Loop or Fulton Market</p></div>
   </div>
+ </div>
+ <figure class="scene">
+  <a class="scene-open" href="/terrafirma_billboard_campaign/img/v2/board-chicago@2x.webp" aria-label="View the Chicago billboard full screen">
+   <img src="/terrafirma_billboard_campaign/img/v2/scene-chicago.jpg" srcset="/terrafirma_billboard_campaign/img/v2/scene-chicago.jpg 1600w, /terrafirma_billboard_campaign/img/v2/scene-chicago@2x.webp 3200w" sizes="(max-width: 610px) calc(100vw - 40px), (max-width: 760px) 570px, (max-width: 1240px) 47vw, 570px" loading="lazy" decoding="async" alt="Mockup of the Chicago billboard in place">
+   <span>View billboard full screen <b aria-hidden="true">↗</b></span>
+  </a>
+ </figure>
   <details class="fold">
    <summary>The full Chicago plan</summary>
    <div class="fold-body">
@@ -616,17 +652,10 @@ footer li{margin-bottom:6px;break-inside:avoid}
     </dl></div></details>
    </div>
   </details>
- </div>
+ <div class="city-number" aria-label="Section 07">07</div>
 </section>
 <section class="city" id="boston" style="--city:#39FF88">
- <header class="plate-head">
-  <span class="mono">08 / BOSTON, MA</span>
-  <span class="mono bin">01000010 01001111 01010011 01010100 01001111 01001110</span>
- </header>
- <figure class="scene">
-  <img src="/terrafirma_billboard_campaign/img/v2/scene-boston.jpg" srcset="/terrafirma_billboard_campaign/img/v2/scene-boston.jpg 1600w, /terrafirma_billboard_campaign/img/v2/scene-boston@2x.webp 3200w" sizes="(max-width: 1440px) 100vw, 1440px" loading="lazy" decoding="async" alt="Mockup of the Boston billboard in place">
-  <figcaption><span class="chip">MOCKUP</span> Replace with a real photo once the billboard is up</figcaption>
- </figure>
+ <header class="plate-head"><span class="mono">BOSTON, MA</span></header>
  <div class="city-copy">
   <h2>THE <s>BIG</s><br><em>BIGGER DIG.</em></h2>
   <p class="simple">The Big Dig is Boston's most famous construction project. We're here for the next, bigger one.</p>
@@ -635,6 +664,13 @@ footer li{margin-bottom:6px;break-inside:avoid}
    <div><p class="mono">HIRING</p><p>Robotics grads, civil engineers, and controls engineers</p></div>
    <div><p class="mono">ACTIVATION</p><p>Fall career-fair season: a Mission Control Pod in Kendall Square, open to MIT, Northeastern, and BU students</p></div>
   </div>
+ </div>
+ <figure class="scene">
+  <a class="scene-open" href="/terrafirma_billboard_campaign/img/v2/board-boston@2x.webp" aria-label="View the Boston billboard full screen">
+   <img src="/terrafirma_billboard_campaign/img/v2/scene-boston.jpg" srcset="/terrafirma_billboard_campaign/img/v2/scene-boston.jpg 1600w, /terrafirma_billboard_campaign/img/v2/scene-boston@2x.webp 3200w" sizes="(max-width: 610px) calc(100vw - 40px), (max-width: 760px) 570px, (max-width: 1240px) 47vw, 570px" loading="lazy" decoding="async" alt="Mockup of the Boston billboard in place">
+   <span>View billboard full screen <b aria-hidden="true">↗</b></span>
+  </a>
+ </figure>
   <details class="fold">
    <summary>The full Boston plan</summary>
    <div class="fold-body">
@@ -651,17 +687,10 @@ footer li{margin-bottom:6px;break-inside:avoid}
     </dl></div></details>
    </div>
   </details>
- </div>
+ <div class="city-number" aria-label="Section 08">08</div>
 </section>
 <section class="city" id="miami" style="--city:#18F0D0">
- <header class="plate-head">
-  <span class="mono">09 / MIAMI, FL</span>
-  <span class="mono bin">01001101 01001001 01000001 01001101 01001001</span>
- </header>
- <figure class="scene">
-  <img src="/terrafirma_billboard_campaign/img/v2/scene-miami.jpg" srcset="/terrafirma_billboard_campaign/img/v2/scene-miami.jpg 1600w, /terrafirma_billboard_campaign/img/v2/scene-miami@2x.webp 3200w" sizes="(max-width: 1440px) 100vw, 1440px" loading="lazy" decoding="async" alt="Mockup of the Miami billboard in place">
-  <figcaption><span class="chip">MOCKUP</span> Replace with a real photo once the billboard is up</figcaption>
- </figure>
+ <header class="plate-head"><span class="mono">MIAMI, FL</span></header>
  <div class="city-copy">
   <h2>AQUÍ SE<br><em>TRABAJA.</em></h2>
   <p class="simple">“Aquí se trabaja” means “We work here.” It’s for the crews who build Miami.</p>
@@ -670,6 +699,13 @@ footer li{margin-bottom:6px;break-inside:avoid}
    <div><p class="mono">HIRING</p><p>Operators, technicians, and bilingual field crews</p></div>
    <div><p class="mono">ACTIVATION</p><p>eMerge Americas (spring): a Mission Control Pod at the conference, plus a Playground in Wynwood the same weekend</p></div>
   </div>
+ </div>
+ <figure class="scene">
+  <a class="scene-open" href="/terrafirma_billboard_campaign/img/v2/board-miami@2x.webp" aria-label="View the Miami billboard full screen">
+   <img src="/terrafirma_billboard_campaign/img/v2/scene-miami.jpg" srcset="/terrafirma_billboard_campaign/img/v2/scene-miami.jpg 1600w, /terrafirma_billboard_campaign/img/v2/scene-miami@2x.webp 3200w" sizes="(max-width: 610px) calc(100vw - 40px), (max-width: 760px) 570px, (max-width: 1240px) 47vw, 570px" loading="lazy" decoding="async" alt="Mockup of the Miami billboard in place">
+   <span>View billboard full screen <b aria-hidden="true">↗</b></span>
+  </a>
+ </figure>
   <details class="fold">
    <summary>The full Miami plan</summary>
    <div class="fold-body">
@@ -686,17 +722,10 @@ footer li{margin-bottom:6px;break-inside:avoid}
     </dl></div></details>
    </div>
   </details>
- </div>
+ <div class="city-number" aria-label="Section 09">09</div>
 </section>
 <section class="city" id="nyc" style="--city:#FFD21A">
- <header class="plate-head">
-  <span class="mono">10 / NEW YORK, NY</span>
-  <span class="mono bin">01001110 01000101 01010111 01011001 01001111 01010010 01001011</span>
- </header>
- <figure class="scene">
-  <img src="/terrafirma_billboard_campaign/img/v2/scene-nyc.jpg" srcset="/terrafirma_billboard_campaign/img/v2/scene-nyc.jpg 1600w, /terrafirma_billboard_campaign/img/v2/scene-nyc@2x.webp 3200w" sizes="(max-width: 1440px) 100vw, 1440px" loading="lazy" decoding="async" alt="Mockup of the New York billboard in place">
-  <figcaption><span class="chip">MOCKUP</span> Replace with a real photo once the billboard is up</figcaption>
- </figure>
+ <header class="plate-head"><span class="mono">NEW YORK, NY</span></header>
  <div class="city-copy">
   <h2>EVERY SKYLINE<br>STARTS IN <em>THE DIRT.</em></h2>
   <p class="simple">Every skyscraper starts with a hole in the ground. That's our job.</p>
@@ -705,6 +734,13 @@ footer li{margin-bottom:6px;break-inside:avoid}
    <div><p class="mono">HIRING</p><p>Engineers</p></div>
    <div><p class="mono">ACTIVATION</p><p>NY Tech Week (June): a Mission Control Pod near Times Square, plus a Playground at the Brooklyn Navy Yard</p></div>
   </div>
+ </div>
+ <figure class="scene">
+  <a class="scene-open" href="/terrafirma_billboard_campaign/img/v2/board-nyc@2x.webp" aria-label="View the New York billboard full screen">
+   <img src="/terrafirma_billboard_campaign/img/v2/scene-nyc.jpg" srcset="/terrafirma_billboard_campaign/img/v2/scene-nyc.jpg 1600w, /terrafirma_billboard_campaign/img/v2/scene-nyc@2x.webp 3200w" sizes="(max-width: 610px) calc(100vw - 40px), (max-width: 760px) 570px, (max-width: 1240px) 47vw, 570px" loading="lazy" decoding="async" alt="Mockup of the New York billboard in place">
+   <span>View billboard full screen <b aria-hidden="true">↗</b></span>
+  </a>
+ </figure>
   <details class="fold">
    <summary>The full New York plan</summary>
    <div class="fold-body">
@@ -721,17 +757,10 @@ footer li{margin-bottom:6px;break-inside:avoid}
     </dl></div></details>
    </div>
   </details>
- </div>
+ <div class="city-number" aria-label="Section 10">10</div>
 </section>
 <section class="city" id="dc" style="--city:#FF3B30">
- <header class="plate-head">
-  <span class="mono">11 / WASHINGTON, DC</span>
-  <span class="mono bin">01010111 01000001 01010011 01001000 01001001 01001110 01000111 01010100 01001111 01001110</span>
- </header>
- <figure class="scene">
-  <img src="/terrafirma_billboard_campaign/img/v2/scene-dc.jpg" srcset="/terrafirma_billboard_campaign/img/v2/scene-dc.jpg 1600w, /terrafirma_billboard_campaign/img/v2/scene-dc@2x.webp 3200w" sizes="(max-width: 1440px) 100vw, 1440px" loading="lazy" decoding="async" alt="Mockup of the Washington billboard in place">
-  <figcaption><span class="chip">MOCKUP</span> Replace with a real photo once the billboard is up</figcaption>
- </figure>
+ <header class="plate-head"><span class="mono">WASHINGTON, DC</span></header>
  <div class="city-copy">
   <h2>LESS RED TAPE.<br><em>MORE RED DIRT.</em></h2>
   <p class="simple">DC is known for red tape. Texas is known for red dirt. We'd rather move dirt.</p>
@@ -740,6 +769,13 @@ footer li{margin-bottom:6px;break-inside:avoid}
    <div><p class="mono">HIRING</p><p>Defense and government technology specialists, civil engineers, and program leads</p></div>
    <div><p class="mono">ACTIVATION</p><p>The AUSA Annual Meeting (October): a Mission Control Pod near the convention center, aimed at defense and government-tech talent</p></div>
   </div>
+ </div>
+ <figure class="scene">
+  <a class="scene-open" href="/terrafirma_billboard_campaign/img/v2/board-dc@2x.webp" aria-label="View the Washington billboard full screen">
+   <img src="/terrafirma_billboard_campaign/img/v2/scene-dc.jpg" srcset="/terrafirma_billboard_campaign/img/v2/scene-dc.jpg 1600w, /terrafirma_billboard_campaign/img/v2/scene-dc@2x.webp 3200w" sizes="(max-width: 610px) calc(100vw - 40px), (max-width: 760px) 570px, (max-width: 1240px) 47vw, 570px" loading="lazy" decoding="async" alt="Mockup of the Washington billboard in place">
+   <span>View billboard full screen <b aria-hidden="true">↗</b></span>
+  </a>
+ </figure>
   <details class="fold">
    <summary>The full Washington, DC plan</summary>
    <div class="fold-body">
@@ -756,17 +792,10 @@ footer li{margin-bottom:6px;break-inside:avoid}
     </dl></div></details>
    </div>
   </details>
- </div>
+ <div class="city-number" aria-label="Section 11">11</div>
 </section>
 <section class="city" id="atlanta" style="--city:#FF9E6B">
- <header class="plate-head">
-  <span class="mono">12 / ATLANTA, GA</span>
-  <span class="mono bin">01000001 01010100 01001100 01000001 01001110 01010100 01000001</span>
- </header>
- <figure class="scene">
-  <img src="/terrafirma_billboard_campaign/img/v2/scene-atlanta.jpg" srcset="/terrafirma_billboard_campaign/img/v2/scene-atlanta.jpg 1600w, /terrafirma_billboard_campaign/img/v2/scene-atlanta@2x.webp 3200w" sizes="(max-width: 1440px) 100vw, 1440px" loading="lazy" decoding="async" alt="Mockup of the Atlanta billboard in place">
-  <figcaption><span class="chip">MOCKUP</span> Replace with a real photo once the billboard is up</figcaption>
- </figure>
+ <header class="plate-head"><span class="mono">ATLANTA, GA</span></header>
  <div class="city-copy">
   <h2>THE CLOUD LIVES<br>IN <em>GEORGIA DIRT.</em></h2>
   <p class="simple">Atlanta is a growing hub for data centers. Before any of those buildings can go up, crews have to level the ground.</p>
@@ -775,6 +804,13 @@ footer li{margin-bottom:6px;break-inside:avoid}
    <div><p class="mono">HIRING</p><p>Operators, engineers, and Georgia Tech grads</p></div>
    <div><p class="mono">ACTIVATION</p><p>Render ATL (summer): a Playground on a lot next to the BeltLine</p></div>
   </div>
+ </div>
+ <figure class="scene">
+  <a class="scene-open" href="/terrafirma_billboard_campaign/img/v2/board-atlanta@2x.webp" aria-label="View the Atlanta billboard full screen">
+   <img src="/terrafirma_billboard_campaign/img/v2/scene-atlanta.jpg" srcset="/terrafirma_billboard_campaign/img/v2/scene-atlanta.jpg 1600w, /terrafirma_billboard_campaign/img/v2/scene-atlanta@2x.webp 3200w" sizes="(max-width: 610px) calc(100vw - 40px), (max-width: 760px) 570px, (max-width: 1240px) 47vw, 570px" loading="lazy" decoding="async" alt="Mockup of the Atlanta billboard in place">
+   <span>View billboard full screen <b aria-hidden="true">↗</b></span>
+  </a>
+ </figure>
   <details class="fold">
    <summary>The full Atlanta plan</summary>
    <div class="fold-body">
@@ -791,7 +827,7 @@ footer li{margin-bottom:6px;break-inside:avoid}
     </dl></div></details>
    </div>
   </details>
- </div>
+ <div class="city-number" aria-label="Section 12">12</div>
 </section>
 <section class="plate demos" id="demos">
  <div class="wrap">
@@ -1224,10 +1260,17 @@ footer li{margin-bottom:6px;break-inside:avoid}
   <p class="note" style="color:#8E949C;margin-top:28px">Mock plan prepared for TerraFirma recruiting. Not affiliated with any vendor listed. No local artist is named or contacted until TerraFirma approves them.</p>
  </div>
 </footer>
+<dialog class="scene-viewer" aria-label="Billboard artwork">
+ <form method="dialog"><button type="submit" autofocus>Close <span aria-hidden="true">×</span></button></form>
+ <img alt="">
+</dialog>
 <script>
 (function(){
  var home=['cover','intro','contents','leadership'], sel='header#cover,section[id],footer#sources';
  var pages=[].slice.call(document.querySelectorAll(sel));
+ var viewer=document.querySelector('.scene-viewer');
+ var artwork=viewer.querySelector('img');
+ viewer.addEventListener('close',function(){artwork.removeAttribute('src');});
  var st=document.createElement('style');
  st.textContent='.pg-hide{display:none!important}.pgnav{position:sticky;top:52px;z-index:40;display:flex;gap:10px;justify-content:space-between;padding:10px 20px;background:#14182A;border-bottom:1px solid #2E3554}.pgnav button{font:500 12px var(--mono);letter-spacing:.1em;text-transform:uppercase;background:none;color:#EFEBE4;border:1px solid #5A6080;padding:8px 12px;border-radius:4px;cursor:pointer}.pgnav button:hover,.pgnav button:focus-visible{border-color:var(--chrome);color:var(--chrome);outline-color:var(--chrome)}.pgnav span{display:flex;gap:10px}@media(max-width:440px){.pgnav{padding-inline:8px;gap:6px}.pgnav span{gap:6px}.pgnav button{font-size:11px;letter-spacing:0;padding-inline:7px}}';
  document.head.appendChild(st);
@@ -1255,6 +1298,14 @@ footer li{margin-bottom:6px;break-inside:avoid}
   return true;
  }
  document.addEventListener('click',function(e){
+  var preview=e.target.closest&&e.target.closest('.scene-open');
+  if(preview&&e.button===0&&!e.metaKey&&!e.ctrlKey&&!e.shiftKey&&!e.altKey&&typeof viewer.showModal==='function'){
+   e.preventDefault();
+   artwork.src=preview.href;
+   artwork.alt=preview.getAttribute('aria-label').replace('View the ','').replace(' full screen','');
+   viewer.showModal();
+   return;
+  }
   var a=e.target.closest&&e.target.closest('a[href^="#"]');
   if(a){
    if(!e.defaultPrevented&&e.button===0&&!e.metaKey&&!e.ctrlKey&&!e.shiftKey&&!e.altKey&&navigate(a.hash.slice(1))) e.preventDefault();
@@ -1266,6 +1317,7 @@ footer li{margin-bottom:6px;break-inside:avoid}
   navigate(i>=0&&i<detail.length ? detail[i].id : 'contents');
  });
  function showHash(){
+  if(viewer.open) viewer.close();
   if(!show(location.hash.slice(1))) show('cover');
  }
  history.scrollRestoration='manual';

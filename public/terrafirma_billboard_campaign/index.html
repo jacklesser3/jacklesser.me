@@ -62,17 +62,9 @@ p{max-width:66ch}
 .exec-points{list-style:none;padding:0;display:grid;gap:14px;font-size:15.5px;color:#C9C4BA}
 .exec-points b{display:block;font:500 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#F1EDE6;margin-bottom:2px}
 .mosaic{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.mosaic > a{display:block;position:relative;transition:transform .18s ease,box-shadow .18s ease}
-.mosaic > a:focus-visible{z-index:1;outline:2px solid #FF5A1F;outline-offset:3px;box-shadow:0 8px 20px #0009}
-@media (hover:hover){
- .mosaic > a:hover{z-index:1;transform:translateY(-4px) scale(1.015);box-shadow:0 0 0 2px #FF5A1F,0 10px 24px #000b}
-}
-@media (prefers-reduced-motion:reduce){
- .mosaic > a{transition:none}
- .mosaic > a:hover{transform:none}
-}
 .tile{position:relative;display:block;text-decoration:none;border:1px solid #2A3150;transition:transform .2s,box-shadow .2s}
 .tile:hover,.tile:focus-visible{transform:translateY(-2px);box-shadow:0 0 0 2px var(--city),0 0 28px var(--city)}
+.tile:focus-visible{outline:2px solid transparent;outline-offset:0}
 .tile span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 .exec-stats{display:flex;flex-wrap:wrap;gap:12px 36px;margin-top:28px;color:#8E949C;align-items:baseline}
 .exec-stats b{font:900 34px var(--display);color:#F1EDE6;margin-right:8px}
@@ -290,7 +282,11 @@ footer li{margin-bottom:6px;break-inside:avoid}
 .why img{width:100%;display:block}
 .why p{font-size:15.5px;margin:0}
 @media (max-width:900px){.intro-cols,.why>div{grid-template-columns:1fr}}
-@media print{details>*{display:block}}
+@media print{
+ details>*{display:block}
+ #cover .tile{border:0;outline:0;box-shadow:none;transform:none;transition:none}
+ #cover .tile span{display:none}
+}
 /* Miami: Spanish headline, English sign-off and hiring line (small patches laid over the embedded board images) */
 :root{--mia-flat:url(/terrafirma_billboard_campaign/img/miami-en-flat.webp);--mia-scene:url(/terrafirma_billboard_campaign/img/miami-en-scene.webp)}
 .cover-mosaic a[href="#miami"]::after{content:'';position:absolute;left:0;top:0;width:100%;aspect-ratio:1600/466;background:var(--mia-flat) 47.698% 95.5445%/32.125% 13.3047% no-repeat;pointer-events:none}
@@ -340,7 +336,18 @@ img[alt="Mockup of the Atlanta billboard in place"]{content:url(/terrafirma_bill
 </div>
 
 <header class="cover-mosaic" id="cover" aria-label="All ten TerraFirma billboards">
-<div class="mosaic"><a href="#austin"><img src="/terrafirma_billboard_campaign/img/v2/board-austin.jpg" alt="Austin billboard"></a><a href="#nashville"><img src="/terrafirma_billboard_campaign/img/v2/board-nashville.jpg" alt="Nashville billboard"></a><a href="#la"><img src="/terrafirma_billboard_campaign/img/v2/board-la.jpg" alt="Los Angeles billboard"></a><a href="#sf"><img src="/terrafirma_billboard_campaign/img/v2/board-sf.jpg" alt="San Francisco billboard"></a><a href="#chicago"><img src="/terrafirma_billboard_campaign/img/v2/board-chicago.jpg" alt="Chicago billboard"></a><a href="#boston"><img src="/terrafirma_billboard_campaign/img/v2/board-boston.jpg" alt="Boston billboard"></a><a href="#miami"><img src="/terrafirma_billboard_campaign/img/v2/board-miami.jpg" alt="Miami billboard"></a><a href="#nyc"><img src="/terrafirma_billboard_campaign/img/v2/board-nyc.jpg" alt="New York billboard"></a><a href="#dc"><img src="/terrafirma_billboard_campaign/img/v2/board-dc.jpg" alt="Washington, DC billboard"></a><a href="#atlanta"><img src="/terrafirma_billboard_campaign/img/v2/board-atlanta.jpg" alt="Atlanta billboard"></a></div>
+<div class="mosaic">
+ <a href="#austin" class="tile" style="--city:#FF5A1F"><img src="/terrafirma_billboard_campaign/img/v2/board-austin.jpg" alt=""><span>Austin</span></a>
+ <a href="#nashville" class="tile" style="--city:#FF5A1F"><img src="/terrafirma_billboard_campaign/img/v2/board-nashville.jpg" alt=""><span>Nashville</span></a>
+ <a href="#la" class="tile" style="--city:#FF5A1F"><img src="/terrafirma_billboard_campaign/img/v2/board-la.jpg" alt=""><span>Los Angeles</span></a>
+ <a href="#sf" class="tile" style="--city:#FF5A1F"><img src="/terrafirma_billboard_campaign/img/v2/board-sf.jpg" alt=""><span>San Francisco</span></a>
+ <a href="#chicago" class="tile" style="--city:#FF5A1F"><img src="/terrafirma_billboard_campaign/img/v2/board-chicago.jpg" alt=""><span>Chicago</span></a>
+ <a href="#boston" class="tile" style="--city:#FF5A1F"><img src="/terrafirma_billboard_campaign/img/v2/board-boston.jpg" alt=""><span>Boston</span></a>
+ <a href="#miami" class="tile" style="--city:#FF5A1F"><img src="/terrafirma_billboard_campaign/img/v2/board-miami.jpg" alt=""><span>Miami</span></a>
+ <a href="#nyc" class="tile" style="--city:#FF5A1F"><img src="/terrafirma_billboard_campaign/img/v2/board-nyc.jpg" alt=""><span>New York</span></a>
+ <a href="#dc" class="tile" style="--city:#FF5A1F"><img src="/terrafirma_billboard_campaign/img/v2/board-dc.jpg" alt=""><span>Washington, DC</span></a>
+ <a href="#atlanta" class="tile" style="--city:#FF5A1F"><img src="/terrafirma_billboard_campaign/img/v2/board-atlanta.jpg" alt=""><span>Atlanta</span></a>
+</div>
 </header>
 
 <section class="plate intro" id="intro">

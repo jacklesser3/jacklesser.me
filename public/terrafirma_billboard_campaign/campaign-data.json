@@ -1,0 +1,351 @@
+{
+  "version": "18 November 2026 \u00b7 Revision 3",
+  "cities": [
+    {
+      "id": "austin",
+      "name": "Austin",
+      "family": "texas",
+      "lines": [
+        "KEEP AUSTIN",
+        "BUILDING."
+      ],
+      "status": "Recommended pilot",
+      "role": "Texas builders, operators, and engineering talent",
+      "reason": "A confident hometown invitation. The Texas character belongs here, and the message connects directly to work already happening on the ground.",
+      "placement": "Two standard bulletin faces for four weeks. Select routes near relevant employers and commuting corridors after inventory, sightline, and audience review.",
+      "proof": "An Austin field demonstration and an approved Texas job-site story.",
+      "size": 238
+    },
+    {
+      "id": "boston",
+      "name": "Boston",
+      "family": "engineering",
+      "lines": [
+        "BUILD THE NEXT",
+        "BREAKTHROUGH."
+      ],
+      "status": "Gated expansion",
+      "role": "Robotics, autonomy, controls, and systems engineers",
+      "reason": "Lead with the work a technical audience can own. Plain workwear replaces the scally cap and shamrock; the ambition carries the local relevance.",
+      "placement": "Candidate specialist market after the Austin review. Quote employer and university corridors; select inventory for the hiring brief, not a landmark.",
+      "proof": "A technical session with the engineers building Mission Control. All roles and relocation details must be current.",
+      "size": 218
+    },
+    {
+      "id": "sf",
+      "name": "San Francisco",
+      "family": "engineering",
+      "lines": [
+        "YOUR CODE.",
+        "REAL MACHINES."
+      ],
+      "status": "Future concept",
+      "role": "Software, autonomy, and robotics engineers",
+      "reason": "Make the consequence of the work tangible: software that reaches the physical world. Keep the language direct and the character consistent.",
+      "placement": "Consider only when role demand supports the market. Standard formats first; premium skyline placements require a separate business case.",
+      "proof": "A short, approved code-to-machine demonstration with a named engineering role.",
+      "size": 230
+    },
+    {
+      "id": "la",
+      "name": "Los Angeles",
+      "family": "engineering",
+      "lines": [
+        "ENGINEER THE",
+        "NEXT FRONTIER."
+      ],
+      "status": "Future concept",
+      "role": "Aerospace, hardware, and advanced systems talent",
+      "reason": "A future-facing invitation that works honestly with illustration. It does not make a photographic-proof claim that the artwork cannot support.",
+      "placement": "Evaluate aerospace and engineering corridors before entertainment districts. No Sunset Strip commitment.",
+      "proof": "Show real hardware, real teammates, and the connection between engineering decisions and field results.",
+      "size": 224
+    },
+    {
+      "id": "chicago",
+      "name": "Chicago",
+      "family": "field",
+      "lines": [
+        "BUILD THE",
+        "NEXT WORLD."
+      ],
+      "status": "Future concept",
+      "role": "Industrial systems, equipment, and field operations talent",
+      "reason": "Give the city a serious industrial invitation. The plain hardhat signals the work without relying on food jokes or costume.",
+      "placement": "Industrial and technical commuter routes, subject to hiring demand and audience evidence.",
+      "proof": "An operator-and-engineer story about moving a project from plan to ground.",
+      "size": 254
+    },
+    {
+      "id": "nashville",
+      "name": "Nashville",
+      "family": "field",
+      "lines": [
+        "MARS STARTS",
+        "WITH EARTHWORK."
+      ],
+      "status": "Future concept",
+      "role": "Builders, equipment specialists, and operations talent",
+      "reason": "Use the national mission line where a stronger local truth has not been established. No rhinestones or tourist-landmark setup is needed.",
+      "placement": "A future role-led test, not a mandatory stop on a national tour.",
+      "proof": "Texas work today, with Mars clearly identified as the long-term ambition.",
+      "size": 222
+    },
+    {
+      "id": "miami",
+      "name": "Miami",
+      "family": "engineering",
+      "lines": [
+        "CONSTRUYE",
+        "EL FUTURO."
+      ],
+      "cta": "TRABAJA CON NOSOTROS EN TEXAS",
+      "status": "Future concept",
+      "role": "Bilingual engineering and operations audiences",
+      "reason": "A concise invitation to build the future, with Texas stated in the action line. Use a fluent local copy review before production.",
+      "placement": "Test Spanish and English variants with the actual target audience before selecting a language or buying inventory.",
+      "proof": "A bilingual recruiting journey with matching role requirements and no unsupported relocation promise.",
+      "size": 255
+    },
+    {
+      "id": "nyc",
+      "name": "New York",
+      "family": "field",
+      "lines": [
+        "EVERY SKYLINE",
+        "STARTS IN",
+        "THE DIRT."
+      ],
+      "status": "Future concept",
+      "role": "Infrastructure, technical, and operations talent",
+      "reason": "Keep the strongest city observation: every skyline depends on groundwork. The headline receives three short lines and no decorative script.",
+      "placement": "Relevant commuter inventory before Times Square. No Williamsburg poster package is hidden inside the Austin budget.",
+      "proof": "An approved before-and-after site story, with the people and machinery behind it.",
+      "size": 197
+    },
+    {
+      "id": "dc",
+      "name": "Washington, DC",
+      "family": "engineering",
+      "lines": [
+        "BUILD WHAT THE",
+        "MISSION NEEDS."
+      ],
+      "status": "Future concept",
+      "role": "Mission-driven systems and engineering talent",
+      "reason": "Keep the mission clear without a suit, security badge, or visual implication of government endorsement.",
+      "placement": "Technical employer corridors only if the recruiting brief supports a dedicated market test.",
+      "proof": "Approved capabilities and open roles; no implied clearance requirement or government affiliation.",
+      "size": 216
+    },
+    {
+      "id": "atlanta",
+      "name": "Atlanta",
+      "family": "field",
+      "lines": [
+        "THE CLOUD",
+        "NEEDS GROUND."
+      ],
+      "status": "Future concept",
+      "role": "Infrastructure, data-center, and operations talent",
+      "reason": "Connect digital ambition to physical construction in five words. Plain workwear keeps the focus on the idea.",
+      "placement": "Evaluate infrastructure and technical commuter audiences, rather than adding a stop just to complete the map.",
+      "proof": "A verified infrastructure story. Do not imply an unannounced data-center customer or contract.",
+      "size": 236
+    }
+  ],
+  "austin": [
+    [
+      "Creative",
+      "Campaign system, copy, and production artwork",
+      1,
+      "package",
+      12000,
+      18000,
+      "Brand lead; includes ten concepts and two print-ready Austin files"
+    ],
+    [
+      "Recruiting journey",
+      "Landing page, role routing, and tracking",
+      1,
+      "package",
+      8000,
+      14000,
+      "Recruiting + web; includes QA and accessible application handoff"
+    ],
+    [
+      "Media",
+      "Standard Austin bulletin face",
+      2,
+      "face \u00d7 4 weeks",
+      10000,
+      18000,
+      "Media buyer; four weeks per face, no teaser extension"
+    ],
+    [
+      "Production",
+      "Print, install, and removal",
+      2,
+      "face",
+      1500,
+      2500,
+      "Printer / media owner; confirm all fees in writing"
+    ],
+    [
+      "Experience",
+      "Controlled Austin venue and site setup",
+      1,
+      "event day",
+      8000,
+      14000,
+      "Producer; one day, eight programmed hours"
+    ],
+    [
+      "Demo",
+      "One machine, one console, and integration",
+      1,
+      "package",
+      12000,
+      22000,
+      "Engineering; rental / incremental allocation, not a purchase"
+    ],
+    [
+      "Staffing",
+      "External event crew and supervision",
+      1,
+      "event day",
+      6000,
+      10000,
+      "Producer; internal engineering and recruiting time tracked separately"
+    ],
+    [
+      "Logistics",
+      "Local freight, power, and connectivity",
+      1,
+      "package",
+      4000,
+      7000,
+      "Producer; include delivery, collection, fuel, and backup connection"
+    ],
+    [
+      "Site approvals",
+      "Permits, insurance, and safety services",
+      1,
+      "allowance",
+      4000,
+      8000,
+      "Producer + EHS; scope and premiums require confirmation"
+    ],
+    [
+      "Content",
+      "Photo, film, and edit",
+      1,
+      "package",
+      5000,
+      8000,
+      "Brand; approved product footage and employee releases"
+    ],
+    [
+      "Distribution",
+      "Recruiting and content amplification",
+      1,
+      "flight",
+      6000,
+      10000,
+      "Marketing; four-week flight, first-party audiences where permitted"
+    ],
+    [
+      "Measurement",
+      "Research, booking, and reporting tools",
+      1,
+      "package",
+      2000,
+      4000,
+      "Marketing ops; include baseline and 90-day cohort reporting"
+    ]
+  ],
+  "boston": [
+    [
+      "Media",
+      "Standard Boston bulletin face",
+      2,
+      "face \u00d7 4 weeks",
+      15000,
+      25000,
+      "Unbooked; obtain inventory-specific quotes"
+    ],
+    [
+      "Production",
+      "Print, install, and removal",
+      2,
+      "face",
+      1500,
+      2500,
+      "No premium landmark inventory"
+    ],
+    [
+      "Venue",
+      "Technical recruiting session",
+      1,
+      "event",
+      6000,
+      10000,
+      "Independent venue; no assumed conference booth"
+    ],
+    [
+      "Demo",
+      "Simulator / approved demonstration setup",
+      1,
+      "package",
+      8000,
+      14000,
+      "One session format; no second live machine implied"
+    ],
+    [
+      "Travel",
+      "Crew travel and accommodation",
+      1,
+      "package",
+      8000,
+      12000,
+      "Scoped roster and dates required"
+    ],
+    [
+      "Content",
+      "Local capture and edit",
+      1,
+      "package",
+      3000,
+      5000,
+      "Reuse the campaign system"
+    ],
+    [
+      "Creative",
+      "Local adaptation and production QA",
+      1,
+      "package",
+      3000,
+      5000,
+      "Plain technical workwear"
+    ],
+    [
+      "Distribution",
+      "Targeted recruiting amplification",
+      1,
+      "flight",
+      5000,
+      8000,
+      "Separate market attribution"
+    ],
+    [
+      "Staffing",
+      "External event crew",
+      1,
+      "event",
+      4000,
+      7000,
+      "Internal staff time tracked separately"
+    ]
+  ],
+  "contingency_rate": 0.15
+}

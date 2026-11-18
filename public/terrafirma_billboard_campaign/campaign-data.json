@@ -1,100 +1,118 @@
 {
-  "version": "18 November 2026 \u00b7 Revision 3",
+  "version": "18 November 2026 \u00b7 Revision 4",
   "cities": [
     {
       "id": "austin",
       "name": "Austin",
-      "family": "texas",
+      "family": "austin",
       "lines": [
         "KEEP AUSTIN",
         "BUILDING."
       ],
       "status": "Recommended pilot",
       "role": "Texas builders, operators, and engineering talent",
-      "reason": "A confident hometown invitation. The Texas character belongs here, and the message connects directly to work already happening on the ground.",
+      "reason": "A hometown rallying cry that connects the Mars ambition to work happening in Texas today.",
       "placement": "Two standard bulletin faces for four weeks. Select routes near relevant employers and commuting corridors after inventory, sightline, and audience review.",
       "proof": "An Austin field demonstration and an approved Texas job-site story.",
-      "size": 238
+      "size": 225,
+      "character": "The Texas original",
+      "character_detail": "A broad cowboy hat, loose bandana, and western utility vest give the Operator a confident hometown presence.",
+      "skyline": "Frost Bank Tower, downtown towers, and a spare bridge line."
     },
     {
       "id": "boston",
       "name": "Boston",
-      "family": "engineering",
+      "family": "boston",
       "lines": [
         "BUILD THE NEXT",
         "BREAKTHROUGH."
       ],
       "status": "Gated expansion",
       "role": "Robotics, autonomy, controls, and systems engineers",
-      "reason": "Lead with the work a technical audience can own. Plain workwear replaces the scally cap and shamrock; the ambition carries the local relevance.",
+      "reason": "An invitation to robotics and systems builders to work on the next consequential breakthrough.",
       "placement": "Candidate specialist market after the Austin review. Quote employer and university corridors; select inventory for the hiring brief, not a landmark.",
       "proof": "A technical session with the engineers building Mission Control. All roles and relocation details must be current.",
-      "size": 218
+      "size": 218,
+      "character": "The inventor",
+      "character_detail": "A precision optical detail, technical peacoat, and curious head tilt create an engineering personality without the scally cap.",
+      "skyline": "Custom House Tower and the cable geometry of Zakim Bridge."
     },
     {
       "id": "sf",
       "name": "San Francisco",
-      "family": "engineering",
+      "family": "sf",
       "lines": [
         "YOUR CODE.",
         "REAL MACHINES."
       ],
       "status": "Future concept",
       "role": "Software, autonomy, and robotics engineers",
-      "reason": "Make the consequence of the work tangible: software that reaches the physical world. Keep the language direct and the character consistent.",
+      "reason": "Software with a physical consequence: code that helps real machines do real work.",
       "placement": "Consider only when role demand supports the market. Standard formats first; premium skyline placements require a separate business case.",
       "proof": "A short, approved code-to-machine demonstration with a named engineering role.",
-      "size": 230
+      "size": 225,
+      "character": "The code-to-field builder",
+      "character_detail": "An asymmetric sensor visor, hooded layer, and cropped work jacket give the Operator an informal, inventive character.",
+      "skyline": "Golden Gate Bridge and the Transamerica Pyramid."
     },
     {
       "id": "la",
       "name": "Los Angeles",
-      "family": "engineering",
+      "family": "la",
       "lines": [
         "ENGINEER THE",
         "NEXT FRONTIER."
       ],
       "status": "Future concept",
       "role": "Aerospace, hardware, and advanced systems talent",
-      "reason": "A future-facing invitation that works honestly with illustration. It does not make a photographic-proof claim that the artwork cannot support.",
+      "reason": "A future-facing engineering invitation with a clear connection to hardware and systems work.",
       "placement": "Evaluate aerospace and engineering corridors before entertainment districts. No Sunset Strip commitment.",
       "proof": "Show real hardware, real teammates, and the connection between engineering decisions and field results.",
-      "size": 224
+      "size": 224,
+      "character": "The frontier engineer",
+      "character_detail": "An aviator-style helmet, amber visor, and structured bomber jacket connect aerospace craft to the next frontier.",
+      "skyline": "Downtown LA towers and a restrained pair of palms."
     },
     {
       "id": "chicago",
       "name": "Chicago",
-      "family": "field",
+      "family": "chicago",
       "lines": [
         "BUILD THE",
         "NEXT WORLD."
       ],
       "status": "Future concept",
       "role": "Industrial systems, equipment, and field operations talent",
-      "reason": "Give the city a serious industrial invitation. The plain hardhat signals the work without relying on food jokes or costume.",
+      "reason": "A serious invitation to the people who understand how industry and infrastructure get built.",
       "placement": "Industrial and technical commuter routes, subject to hiring demand and audience evidence.",
       "proof": "An operator-and-engineer story about moving a project from plan to ground.",
-      "size": 254
+      "size": 225,
+      "character": "The industrial builder",
+      "character_detail": "A riveted hardhat, heavy canvas coat, and broad stance bring weight and industrial confidence.",
+      "skyline": "Willis Tower, the Hancock silhouette, and a spare elevated rail line."
     },
     {
       "id": "nashville",
       "name": "Nashville",
-      "family": "field",
+      "family": "nashville",
       "lines": [
         "MARS STARTS",
         "WITH EARTHWORK."
       ],
       "status": "Future concept",
       "role": "Builders, equipment specialists, and operations talent",
-      "reason": "Use the national mission line where a stronger local truth has not been established. No rhinestones or tourist-landmark setup is needed.",
+      "reason": "The campaign\u2019s mission line connects hands-on construction to the ambition of building beyond Earth.",
       "placement": "A future role-led test, not a mandatory stop on a national tour.",
       "proof": "Texas work today, with Mars clearly identified as the long-term ambition.",
-      "size": 222
+      "size": 222,
+      "character": "The modern maker",
+      "character_detail": "Pearl snaps, narrow western piping, and a lively chrome helmet bring personality without rhinestone excess.",
+      "skyline": "The twin-spired AT&T building and a low downtown skyline."
     },
     {
       "id": "miami",
       "name": "Miami",
-      "family": "engineering",
+      "family": "miami",
       "lines": [
         "CONSTRUYE",
         "EL FUTURO."
@@ -102,15 +120,18 @@
       "cta": "TRABAJA CON NOSOTROS EN TEXAS",
       "status": "Future concept",
       "role": "Bilingual engineering and operations audiences",
-      "reason": "A concise invitation to build the future, with Texas stated in the action line. Use a fluent local copy review before production.",
+      "reason": "A concise Spanish invitation to build the future, with Texas clearly stated in the action line.",
       "placement": "Test Spanish and English variants with the actual target audience before selecting a language or buying inventory.",
       "proof": "A bilingual recruiting journey with matching role requirements and no unsupported relocation promise.",
-      "size": 255
+      "size": 225,
+      "character": "The coastal futurist",
+      "character_detail": "An ivory open-collar overshirt, teal technical layer, and relaxed pose carry warm-weather confidence.",
+      "skyline": "Brickell towers, a geometric Art Deco facade, and one palm."
     },
     {
       "id": "nyc",
       "name": "New York",
-      "family": "field",
+      "family": "nyc",
       "lines": [
         "EVERY SKYLINE",
         "STARTS IN",
@@ -118,40 +139,49 @@
       ],
       "status": "Future concept",
       "role": "Infrastructure, technical, and operations talent",
-      "reason": "Keep the strongest city observation: every skyline depends on groundwork. The headline receives three short lines and no decorative script.",
+      "reason": "A simple local truth: even the most ambitious skyline starts with earthwork.",
       "placement": "Relevant commuter inventory before Times Square. No Williamsburg poster package is hidden inside the Austin budget.",
       "proof": "An approved before-and-after site story, with the people and machinery behind it.",
-      "size": 197
+      "size": 184,
+      "character": "The skyline builder",
+      "character_detail": "A worn hardhat, heavy utility layers, and determined forward posture give the Operator the character of an experienced ironworker.",
+      "skyline": "Empire State Building, One World Trade Center, and a spare bridge cable line."
     },
     {
       "id": "dc",
       "name": "Washington, DC",
-      "family": "engineering",
+      "family": "dc",
       "lines": [
         "BUILD WHAT THE",
         "MISSION NEEDS."
       ],
       "status": "Future concept",
       "role": "Mission-driven systems and engineering talent",
-      "reason": "Keep the mission clear without a suit, security badge, or visual implication of government endorsement.",
+      "reason": "Mission-led engineering, expressed through the work rather than an implied institutional endorsement.",
       "placement": "Technical employer corridors only if the recruiting brief supports a dedicated market test.",
       "proof": "Approved capabilities and open roles; no implied clearance requirement or government affiliation.",
-      "size": 216
+      "size": 216,
+      "character": "The mission builder",
+      "character_detail": "A sculpted helmet and structured technical field coat create a composed, capable character without official insignia.",
+      "skyline": "The Capitol dome and Washington Monument in spare silhouette."
     },
     {
       "id": "atlanta",
       "name": "Atlanta",
-      "family": "field",
+      "family": "atlanta",
       "lines": [
         "THE CLOUD",
         "NEEDS GROUND."
       ],
       "status": "Future concept",
       "role": "Infrastructure, data-center, and operations talent",
-      "reason": "Connect digital ambition to physical construction in five words. Plain workwear keeps the focus on the idea.",
+      "reason": "A short connection between digital ambition and the physical infrastructure beneath it.",
       "placement": "Evaluate infrastructure and technical commuter audiences, rather than adding a stop just to complete the map.",
       "proof": "A verified infrastructure story. Do not imply an unannounced data-center customer or contract.",
-      "size": 236
+      "size": 225,
+      "character": "The infrastructure inventor",
+      "character_detail": "A fitted utility vest, peach technical layer, and asymmetric visor bring an energetic, forward-looking character.",
+      "skyline": "Bank of America Plaza and the cylindrical Westin Peachtree tower."
     }
   ],
   "austin": [

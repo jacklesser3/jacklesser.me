@@ -1,5 +1,5 @@
 {
-  "version": "18 November 2026 \u00b7 Revision 11",
+  "version": "18 November 2026 \u00b7 Revision 12",
   "cities": [
     {
       "id": "austin",
@@ -17,7 +17,14 @@
       "size": 225,
       "character": "The Texas original",
       "character_detail": "A broad cowboy hat, loose bandana, and western utility vest give the Operator a confident hometown presence.",
-      "skyline": "Frost Bank Tower, downtown towers, and a spare bridge line."
+      "skyline": "Frost Bank Tower, downtown towers, and a spare bridge line.",
+      "social": {
+        "market": "Austin metro, including Round Rock and the surrounding commuting area",
+        "audience": "Local builders, equipment operators, and engineering talent for current Texas roles.",
+        "channels": "Instagram and Facebook for the hometown builder story; LinkedIn for engineering and operations roles. Paid distribution stays within the Austin metro.",
+        "copy": "Keep Austin building. Real machines. Texas work. A bigger horizon. Build with us in Texas.",
+        "proof": "Follow an approved Texas job-site story from the plan to the machine at work, with a teammate explaining the problem being solved. Start with existing footage and photos."
+      }
     },
     {
       "id": "boston",
@@ -35,7 +42,14 @@
       "size": 218,
       "character": "The inventor",
       "character_detail": "A precision optical detail, technical peacoat, and curious head tilt create an engineering personality without the scally cap.",
-      "skyline": "Custom House Tower and the cable geometry of Zakim Bridge."
+      "skyline": "Custom House Tower and the cable geometry of Zakim Bridge.",
+      "social": {
+        "market": "Greater Boston, including Cambridge and Somerville",
+        "audience": "Robotics, autonomy, controls, and systems engineers whose experience matches open Texas roles.",
+        "channels": "Lead with LinkedIn technical posts and sponsored content; use Instagram for the inventor character and engineering story. Paid distribution stays within Greater Boston.",
+        "copy": "Boston, build the next breakthrough. Bring your robotics thinking to real machines in Texas.",
+        "proof": "An engineer-led carousel: the field problem, the controls or autonomy challenge, and the verified result. A short teammate clip connects that work to a current role."
+      }
     },
     {
       "id": "sf",
@@ -53,7 +67,14 @@
       "size": 225,
       "character": "The code-to-field builder",
       "character_detail": "An asymmetric sensor visor, hooded layer, and cropped work jacket give the Operator an informal, inventive character.",
-      "skyline": "Golden Gate Bridge and the Transamerica Pyramid."
+      "skyline": "Golden Gate Bridge and the Transamerica Pyramid.",
+      "social": {
+        "market": "San Francisco Bay Area, including Oakland and San Jose",
+        "audience": "Software, autonomy, and robotics engineers who want their code to affect the physical world.",
+        "channels": "Lead with LinkedIn for the technical hiring story; Instagram carries the code-to-field visual sequence. Paid distribution targets the Bay Area market.",
+        "copy": "Bay Area, your code belongs in the real world. Help build the machines moving Texas forward.",
+        "proof": "Use an approved code-to-machine sequence: one engineering decision, the machine response, and the person behind it. Show actual capability and a relevant open role."
+      }
     },
     {
       "id": "la",
@@ -71,7 +92,14 @@
       "size": 224,
       "character": "The frontier engineer",
       "character_detail": "An aviator-style helmet, amber visor, and structured bomber jacket connect aerospace craft to the next frontier.",
-      "skyline": "Downtown LA towers and a restrained pair of palms."
+      "skyline": "Downtown LA towers and a restrained pair of palms.",
+      "social": {
+        "market": "Greater Los Angeles, including the South Bay and Long Beach",
+        "audience": "Aerospace, hardware, mechanical, and advanced systems talent for relevant Texas engineering roles.",
+        "channels": "LinkedIn leads with hardware and systems work; Instagram brings the frontier engineer and machinery to life. Paid distribution stays within the Greater LA market.",
+        "copy": "LA, engineer the next frontier. Put your hardware thinking to work on the ground in Texas.",
+        "proof": "A hardware-to-field carousel or existing test clip shows a real component, an integration challenge, and the team solving it. Keep the Mars ambition connected to work happening today."
+      }
     },
     {
       "id": "chicago",
@@ -89,7 +117,14 @@
       "size": 225,
       "character": "The industrial builder",
       "character_detail": "A riveted hardhat, heavy canvas coat, and broad stance bring weight and industrial confidence.",
-      "skyline": "Willis Tower, the Hancock silhouette, and a spare elevated rail line."
+      "skyline": "Willis Tower, the Hancock silhouette, and a spare elevated rail line.",
+      "social": {
+        "market": "Chicago metro and its surrounding industrial communities",
+        "audience": "Industrial systems specialists, equipment professionals, and field operations talent.",
+        "channels": "Facebook and Instagram lead with operators and equipment; LinkedIn carries the industrial systems story. Paid distribution focuses on the Chicago metro.",
+        "copy": "Chicago knows what it takes to build. Bring that know-how to the next world. Build with us in Texas.",
+        "proof": "Pair an operator and engineer in a story about moving from a project plan to work on the ground. Show practical problem-solving and documented field results."
+      }
     },
     {
       "id": "nashville",
@@ -107,7 +142,14 @@
       "size": 222,
       "character": "The modern maker",
       "character_detail": "Pearl snaps, narrow western piping, and a lively chrome helmet bring personality without rhinestone excess.",
-      "skyline": "The twin-spired AT&T building and a low downtown skyline."
+      "skyline": "The twin-spired AT&T building and a low downtown skyline.",
+      "social": {
+        "market": "Nashville metro, including Franklin and Murfreesboro",
+        "audience": "Builders, equipment specialists, and operations talent interested in hands-on Texas work.",
+        "channels": "Instagram and Facebook lead with the crew and earthwork; LinkedIn supports operations hiring. Paid distribution stays within the Nashville metro.",
+        "copy": "Nashville, Mars starts with earthwork. Bring your craft to the work happening in Texas today.",
+        "proof": "Show an approved sequence of a Texas crew preparing and working a site. Let an operator explain the craft behind the machine; Mars remains the long-term horizon."
+      }
     },
     {
       "id": "miami",
@@ -126,7 +168,14 @@
       "size": 225,
       "character": "The coastal futurist",
       "character_detail": "An ivory open-collar overshirt, teal technical layer, and relaxed pose carry warm-weather confidence.",
-      "skyline": "Brickell towers, a geometric Art Deco facade, and one palm."
+      "skyline": "Brickell towers, a geometric Art Deco facade, and one palm.",
+      "social": {
+        "market": "Miami metro, with Miami-Dade and Broward in the proposed audience area",
+        "audience": "Engineering and operations talent, with English and Spanish creative that makes the invitation accessible to both audiences.",
+        "channels": "Instagram and Facebook lead with the coastal creative; LinkedIn supports technical roles. Paid distribution targets the Miami metro. Compare language variants within the same geographic brief.",
+        "copy": "Miami, build the future. Bring your ambition to real machines and real work in Texas.",
+        "proof": "Pair the Spanish billboard headline with this English companion copy and an approved teammate or job-site story. Test a fluent-reviewed Spanish variant too; keep the hiring CTA and destination in English and make that clear."
+      }
     },
     {
       "id": "nyc",
@@ -145,7 +194,14 @@
       "character": "The skyline builder",
       "character_detail": "A worn hardhat, heavy utility layers, and determined forward posture give the Operator the character of an experienced ironworker.",
       "skyline": "Empire State Building, One World Trade Center, and a spare bridge cable line.",
-      "fit_headline_lines": true
+      "fit_headline_lines": true,
+      "social": {
+        "market": "New York City metro, including nearby New Jersey commuting communities",
+        "audience": "Infrastructure, engineering, and operations talent who understand how ambitious projects get built.",
+        "channels": "LinkedIn leads with infrastructure and technical roles; Instagram turns the skyline-to-ground idea into a visual story. Paid distribution focuses on the NYC metro.",
+        "copy": "New York, every skyline starts in the dirt. Help build what comes next, from the ground up in Texas.",
+        "proof": "Open with the NYC skyline illustration, then move to approved before-and-after Texas site images and the people behind the earthwork. Clearly identify the real project location."
+      }
     },
     {
       "id": "dc",
@@ -163,7 +219,14 @@
       "size": 216,
       "character": "The mission builder",
       "character_detail": "A sculpted helmet and structured technical field coat create a composed, capable character without official insignia.",
-      "skyline": "The Capitol dome and Washington Monument in spare silhouette."
+      "skyline": "The Capitol dome and Washington Monument in spare silhouette.",
+      "social": {
+        "market": "Washington, DC metro, including Northern Virginia and nearby Maryland",
+        "audience": "Systems, integration, and engineering talent motivated by difficult physical-world missions.",
+        "channels": "LinkedIn leads with systems work and current roles; Instagram supports the mission-builder story. Paid distribution stays within the DC metro.",
+        "copy": "DC, build what the mission needs. Bring your systems thinking to real machines in Texas.",
+        "proof": "An engineer explains a documented field challenge, the integration work, and the result. Use approved capabilities and current roles without implying government endorsement or a clearance requirement."
+      }
     },
     {
       "id": "atlanta",
@@ -181,7 +244,14 @@
       "size": 225,
       "character": "The infrastructure inventor",
       "character_detail": "A fitted utility vest, peach technical layer, and asymmetric visor bring an energetic, forward-looking character.",
-      "skyline": "Bank of America Plaza and the cylindrical Westin Peachtree tower."
+      "skyline": "Bank of America Plaza and the cylindrical Westin Peachtree tower.",
+      "social": {
+        "market": "Atlanta metro and its surrounding infrastructure employment corridors",
+        "audience": "Infrastructure, data-center, engineering, and operations talent relevant to current Texas roles.",
+        "channels": "LinkedIn leads with physical infrastructure and hiring; Instagram and Facebook carry the ground-to-cloud visual idea. Paid distribution focuses on the Atlanta metro.",
+        "copy": "Atlanta, the cloud needs ground. Help build the physical world behind the digital one. Build with us in Texas.",
+        "proof": "Connect the illustrated skyline to verified Texas earthwork and the team delivering it. Explain the physical groundwork behind infrastructure without implying an unannounced customer or contract."
+      }
     }
   ],
   "austin": [

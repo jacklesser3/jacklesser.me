@@ -118,7 +118,8 @@ figcaption a { color: var(--bone); }
 .external::after { content: "↗" / ""; color: var(--orange); font-size: 1rem; line-height: 1; }
 .decision { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); align-items: center; gap: 16px 24px; padding: clamp(18px, 3vw, 32px); margin-top: 24px; background: var(--bone); color: var(--ink); }
 .decision .kicker { color: var(--dark-orange); margin-bottom: 6px; }
-.decision h2 { font-size: clamp(1.85rem, 3.3vw, 3rem); }
+.decision > div { container-type: inline-size; }
+#decision-title { font-size: min(clamp(1.85rem, 3.3vw, 3rem), 8.4cqi); white-space: nowrap; }
 .footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 20px; padding-block: 20px; color: var(--muted); font-size: .82rem; }
 
 .listing { width: min(760px, 100% - 64px); margin-inline: auto; padding-block: 35px 55px; }

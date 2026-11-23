@@ -74,13 +74,19 @@ dd span { display: block; margin-top: 5px; color: var(--muted); font-size: .8rem
 #execution .section-head > div { container-type: inline-size; }
 #execution-title { font-size: min(clamp(2.45rem, 5.2vw, 4.45rem), 9.5cqi); white-space: nowrap; }
 
-.experience-grid { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); gap: clamp(18px, 3.1vw, 38px); align-items: start; }
+#experience .section-head, .experience-grid {
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  column-gap: clamp(24px, 4vw, 48px);
+}
+#experience .section-head { margin-bottom: clamp(22px, 2.8vw, 36px); }
+.experience-grid { display: grid; align-items: center; }
 .event-render img, .floor-art > a { border: 1px solid var(--line); }
 .event-render img { aspect-ratio: 3/2; object-fit: cover; }
 figcaption { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 18px; margin-top: 9px; color: var(--muted); font-size: .82rem; }
 figcaption a { color: var(--bone); }
-.experience-copy h3 + p { margin-top: 7px; }
-.experience-copy p { margin-bottom: 20px; color: var(--muted); }
+.experience-copy { display: grid; justify-items: start; gap: clamp(20px, 2.4vw, 34px); }
+.experience-copy h3 + p { margin-top: 9px; }
+.experience-copy p { max-width: 50ch; color: var(--muted); }
 .experience-copy h3 { font-size: clamp(1.35rem, 2.25vw, 1.9rem); }
 .floor-art > a { display: block; }
 .floor-art > a:hover { border-color: var(--orange); }
@@ -148,7 +154,9 @@ figcaption a { color: var(--bone); }
   .brief { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .brief > div:nth-child(3) { border-left: 0; }
   .brief > div:nth-child(n + 3) { border-top: 1px solid var(--line); }
-  .section-head, .experience-grid, .decision { grid-template-columns: 1fr; gap: 12px; }
+  .section-head, .decision { grid-template-columns: 1fr; gap: 12px; }
+  #experience .section-head, .experience-grid { grid-template-columns: 1fr; }
+  .experience-grid { row-gap: 24px; }
   .station-grid, .tiers, .results, .queue-note, .exhibit, .program { grid-template-columns: 1fr; }
   .queue-note .action-link { grid-column: auto; }
   .timeline { grid-template-columns: repeat(2, minmax(0, 1fr)); }

@@ -86,7 +86,7 @@ figcaption a { color: var(--bone); }
 .floor-art > a:hover { border-color: var(--orange); }
 
 .station-grid, .tiers, .results { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
-.station-grid { margin-top: 22px; }
+.station-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 22px; }
 .station-grid article, .tiers article, .results article { min-width: 0; padding: clamp(15px, 2.1vw, 26px); border: 1px solid var(--line); background: var(--panel); }
 .station-grid h3, .tiers h3 { margin: 7px 0 9px; }
 .station-grid p:not(.kicker), .tiers p:not(.kicker), .results p:not(.kicker) { color: var(--muted); }

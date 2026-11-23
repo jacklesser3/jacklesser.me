@@ -1,9 +1,21 @@
 import type { Metadata } from "next";
-import { Barlow_Condensed, DM_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import Portfolio from "@/components/portfolio/Portfolio";
 
-const barlow = Barlow_Condensed({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-barlow", display: "swap" });
-const dm = DM_Sans({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-dm-sans", display: "swap" });
+const barlow = localFont({
+  src: [
+    { path: "./fonts/barlow-condensed-400.woff2", weight: "400" },
+    { path: "./fonts/barlow-condensed-500.woff2", weight: "500" },
+  ],
+  variable: "--font-barlow",
+  display: "swap",
+});
+const dm = localFont({
+  src: "./fonts/dm-sans.woff2",
+  weight: "400 500",
+  variable: "--font-dm-sans",
+  display: "swap",
+});
 export const metadata: Metadata = {
   title: { absolute: "Jack Lesser | Vibes Architecture" },
   description: "I design experiences that bring people together and create media that helps ideas travel.",

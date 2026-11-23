@@ -124,6 +124,9 @@ figcaption a { color: var(--bone); }
 .listing section { padding-block: 21px; border-top: 1px solid var(--line); }
 .listing ul { padding-left: 20px; }
 .ticket-panel { background: var(--panel); padding-inline: 19px; border: 1px solid var(--line); }
+.ticket-panel details { margin-block: 16px; padding: 12px 0; border-block: 1px solid var(--line); }
+.ticket-panel summary { cursor: pointer; font-weight: 700; }
+.ticket-panel details[open] summary { margin-bottom: 12px; }
 .ticket-panel form { margin-top: 14px; }
 .ticket-panel label { display: block; margin-bottom: 6px; font-weight: 700; }
 .ticket-panel select { width: 100%; padding: 10px; border: 1px solid var(--line); background: var(--bone); color: var(--ink); font: inherit; }

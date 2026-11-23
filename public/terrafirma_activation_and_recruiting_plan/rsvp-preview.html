@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
   <title>Keep Austin Building · Luma RSVP preview</title>
-  <link rel="stylesheet" href="./proposal.css">
-  <script src="./rsvp-preview.js" defer></script>
+  <link rel="stylesheet" href="./proposal.css?v=one-ticket">
+  <script src="./rsvp-preview.js?v=one-ticket" defer></script>
 </head>
 <body>
   <header class="masthead">
@@ -23,47 +23,53 @@
     <figure><img src="./playground.webp" width="1500" height="1000" alt="Concept rendering of a coached excavator demo in Austin"></figure>
 
     <section id="ticket-preview" class="ticket-panel" aria-labelledby="ticket-title">
-      <h2 id="ticket-title">Choose a ticket</h2>
-      <p>Choose general admission or a ticket with one demo block. Arrive anytime from 5–9 p.m. For a reserved demo, check in with its host ten minutes early if you can.</p>
-      <form id="preview-form">
-        <label for="ticket">Preview a free ticket</label>
-        <select id="ticket" name="ticket" aria-describedby="preview-notice" required>
-          <option value="ga">General admission · 5–9 p.m.</option>
+      <h2 id="ticket-title">Free general admission</h2>
+      <p>RSVP once and arrive anytime from 5–9 p.m. Your confirmation email includes a link to reserve one demo.</p>
+      <details>
+        <summary>Preview the confirmation email</summary>
+        <p>Your RSVP is confirmed. Scan your ticket at check-in. Use the demo sign-up link to choose a station and a time block. You can also sign up at the demo table just past check-in.</p>
+        <a class="action-link" href="#demo-signup">Sign up for a demo</a>
+      </details>
+      <form id="demo-signup">
+        <h3>Preview demo sign-up</h3>
+        <label for="demo">Choose a station and time block</label>
+        <select id="demo" name="demo" aria-describedby="preview-notice" required>
+          <option value="">Select a demo</option>
           <optgroup label="Live machine">
-            <option value="live-a">Admission + live machine · 5:10–6:10 p.m.</option>
-            <option value="live-b">Admission + live machine · 6:55–7:55 p.m.</option>
-            <option value="live-c">Admission + live machine · 8:00–8:55 p.m.</option>
+            <option value="live-a">Live machine · 5:10–6:10 p.m.</option>
+            <option value="live-b">Live machine · 6:55–7:55 p.m.</option>
+            <option value="live-c">Live machine · 8:00–8:55 p.m.</option>
           </optgroup>
           <optgroup label="Practice simulator">
-            <option value="sim-a">Admission + simulator · 5:15–6:20 p.m.</option>
-            <option value="sim-b">Admission + simulator · 6:55–7:55 p.m.</option>
-            <option value="sim-c">Admission + simulator · 8:00–8:50 p.m.</option>
+            <option value="sim-a">Simulator · 5:15–6:20 p.m.</option>
+            <option value="sim-b">Simulator · 6:55–7:55 p.m.</option>
+            <option value="sim-c">Simulator · 8:00–8:50 p.m.</option>
           </optgroup>
           <optgroup label="Remote-vehicle course">
-            <option value="rc-a">Admission + remote-vehicle course · 5:15–6:20 p.m.</option>
-            <option value="rc-b">Admission + remote-vehicle course · 6:55–7:55 p.m.</option>
-            <option value="rc-c">Admission + remote-vehicle course · 8:00–8:50 p.m.</option>
+            <option value="rc-a">Remote-vehicle course · 5:15–6:20 p.m.</option>
+            <option value="rc-b">Remote-vehicle course · 6:55–7:55 p.m.</option>
+            <option value="rc-c">Remote-vehicle course · 8:00–8:50 p.m.</option>
           </optgroup>
         </select>
-        <button type="submit" disabled>Preview confirmation</button>
-        <p id="preview-notice" class="kicker">Preview only · no ticket is issued</p>
-        <output id="preview-result" for="ticket" aria-live="polite"></output>
+        <button type="submit" disabled>Preview demo confirmation</button>
+        <p id="preview-notice" class="kicker">Preview only · no demo is booked</p>
+        <output id="preview-result" for="demo" aria-live="polite"></output>
       </form>
     </section>
 
     <section>
       <h2>What to expect</h2>
       <p><strong>5:00 p.m.</strong> Doors open<br><strong>6:10 p.m.</strong> Narrated machine demo<br><strong>6:30–6:50 p.m.</strong> Fireside and Q&amp;A<br><strong>9:00 p.m.</strong> Event closes</p>
-      <p>Scan your ticket at the door. For a walk-up demo, use the queue QR or ask a host. Drop by Under the Hood to see the hardware and ask an engineer how it works.</p>
+      <p>Scan your ticket at the door. For a same-day demo spot, visit the demo sign-up table just past check-in. Drop by Under the Hood to see the hardware and ask an engineer how it works.</p>
       <p>We’re planning Texas BBQ and nonalcoholic drinks, with beer pending venue approval. Coached machine turns are subject to TerraFirma approval.</p>
     </section>
 
     <section>
       <h2>Luma setup</h2>
-      <p>Plan for 300 general-admission tickets and 60 tickets with a demo block. Hold 35 demo turns for walk-ups. Each ticket includes admission.</p>
+      <p>Plan for up to 360 free RSVPs, subject to venue approval. Offer 60 advance demo spots through the confirmation email and hold 35 for day-of sign-up.</p>
       <p>Confirm the date, venue, and demo approval before opening registration.</p>
       <div class="actions">
-        <a class="action-link external" href="https://docs.google.com/spreadsheets/d/1XYcmkThVhWJxToiwfaCheQjiKUXMqsb61tgqgP-504E/edit#gid=908347448&amp;range=A40:D53" target="_blank" rel="noopener noreferrer">Luma ticket inventory</a>
+        <a class="action-link external" href="https://docs.google.com/spreadsheets/d/1XYcmkThVhWJxToiwfaCheQjiKUXMqsb61tgqgP-504E/edit#gid=908347448&amp;range=A40:D53" target="_blank" rel="noopener noreferrer">RSVP cap and demo capacity</a>
         <a class="action-link external" href="https://luma.com/create?duration=PT4H&amp;timezone=America%2FChicago&amp;visibility=private&amp;tint_color=%23ff823f&amp;max_capacity=360&amp;cover_url=https%3A%2F%2Fjacklesser.me%2Fterrafirma_activation_and_recruiting_plan%2Fplayground.webp" target="_blank" rel="noopener noreferrer">Open prefilled Luma editor</a>
         <a class="action-link" href="/terrafirma-info/">Guest guide</a>
       </div>

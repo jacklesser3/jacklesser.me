@@ -125,3 +125,22 @@ thead th,tfoot { background:var(--panel); }
   .brief,.journey,.tiers,.decision,figure { break-inside:avoid; }
   .decision { background:#f4d8ca; }
 }
+
+.program-card {
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  align-items:center;
+  gap:24px;
+  padding:22px clamp(16px,2.8vw,27px);
+  margin-bottom:22px;
+  border:1px solid var(--line);
+  border-left:4px solid var(--accent);
+}
+.program-card p:last-child { color:var(--muted); }
+.category-total { background:var(--panel); font-weight:700; }
+.budget-tracker th:nth-child(4),.budget-tracker td:nth-child(4) { text-align:right; white-space:nowrap; }
+@media(max-width:760px) {
+  .program-card { grid-template-columns:1fr; gap:10px; }
+  .table-scroll .schedule,.table-scroll .budget-tracker { min-width:720px; }
+}
+.detail .production-gates { margin-top:16px; }

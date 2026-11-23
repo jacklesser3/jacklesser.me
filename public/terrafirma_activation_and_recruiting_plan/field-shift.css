@@ -56,6 +56,8 @@ dd span { color:var(--muted); font-size:.875rem; font-weight:400; }
 .plan-section { padding:38px 0 48px; border-top:1px solid var(--line); }
 .section-head { display:grid; grid-template-columns:1.25fr 1fr; gap:30px; align-items:end; margin-bottom:26px; }
 #experience .section-head { align-items:start; }
+#execution .section-head > div { container-type:inline-size; }
+#execution-title { font-size:min(clamp(2.6rem,6.2vw,4.7rem),9.5cqi); white-space:nowrap; }
 .section-head>p { color:var(--muted); max-width:52ch; }
 .journey,.tiers { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); margin:0 0 24px; border:1px solid var(--line); }
 .journey article,.tiers article { padding:22px clamp(16px,2.8vw,27px); }

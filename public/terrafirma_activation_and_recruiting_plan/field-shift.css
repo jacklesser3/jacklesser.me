@@ -144,3 +144,7 @@ thead th,tfoot { background:var(--panel); }
   .table-scroll .schedule,.table-scroll .budget-tracker { min-width:720px; }
 }
 .detail .production-gates { margin-top:16px; }
+.asset-links { display:flex; flex-wrap:wrap; gap:10px; margin:0 0 16px; }
+.asset-links a { display:inline-block; padding:8px 10px; border:1px solid var(--line); }
+.vendor-budget { min-width:840px; }
+.vendor-budget td:nth-last-child(2) { white-space:nowrap; text-align:right; }

@@ -1,44 +1,72 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <title>Keep Austin Building · Luma listing preview</title>
-  <link rel="stylesheet" href="./field-shift.css">
-  <style>
-    .listing { max-width:730px;padding:34px 0 52px; }
-    .listing h1 { font-size:clamp(3rem,9vw,6rem); margin-bottom:12px; }
-    .listing h2 { font-size:2.15rem; margin-bottom:10px; }
-    .listing img.cover { margin:22px 0; height:auto; aspect-ratio:3/2; object-fit:cover; }
-    .listing section { border-top:1px solid var(--line); padding:20px 0; }
-    .listing section p+p { margin-top:12px; }
-  </style>
+  <title>Keep Austin Building · Luma RSVP preview</title>
+  <link rel="stylesheet" href="./proposal.css">
+  <script src="./rsvp-preview.js" defer></script>
 </head>
 <body>
-  <header class="header"><div class="wrap header-inner">
-    <a href="./"><img class="logo" src="../terrafirma_billboard_campaign/img/v3/official-logo-1.svg" alt="TerraFirma" width="1164" height="144"></a>
-    <nav aria-label="Proposal"><a href="./#execution">Back to the launch plan</a></nav>
-  </div></header>
-  <main class="wrap listing">
-    <p class="eyebrow">Luma listing preview</p>
+  <header class="masthead">
+    <div class="wrap masthead-inner">
+      <a class="brandmark" href="./"><img src="../terrafirma_billboard_campaign/img/v3/official-logo-1.svg" alt="TerraFirma" width="1164" height="144"></a>
+      <nav aria-label="Proposal"><a href="./#execution">Back to the proposal</a></nav>
+    </div>
+  </header>
+  <main class="listing">
+    <p class="kicker">Luma RSVP preview</p>
     <h1>Keep Austin Building.</h1>
-    <p>TerraFirma Playground is planned for East Austin in spring 2027. We’ll confirm the date and venue before registration opens.</p>
-    <img class="cover" src="./playground.webp" width="1500" height="1000" alt="Concept rendering of a coached excavator demo in Austin">
-    <section>
-      <h2>Operate the machine. Meet the crew.</h2>
-      <p>Come see how TerraFirma moves dirt. An operator and an engineer will show how they use Mission Control to run a machine from a screen. Ask about a coached turn, meet the hiring team, or bring a question about your next excavation or grading project.</p>
-      <p>Admission is free. RSVP once and show your ticket when you arrive between 5 and 9 p.m. Central. Once inside, you can join the demo queue by QR code or ask a host to add you. Coached turns are limited and subject to TerraFirma approval. You can also watch from the rail or on the big screen, try the simulator, or join the fireside.</p>
+    <p>TerraFirma Playground · East Austin · Proposed 5–9 p.m. Central</p>
+    <p>Free admission. Date and location will be confirmed before registration opens.</p>
+    <figure><img src="./playground.webp" width="1500" height="1000" alt="Concept rendering of a coached excavator demo in Austin"></figure>
+
+    <section id="ticket-preview" class="ticket-panel" aria-labelledby="ticket-title">
+      <h2 id="ticket-title">Choose a ticket</h2>
+      <p>Pick general admission or admission with one reserved demo block. Come through the door any time during public hours. If you reserved a demo, check in with its host ten minutes before your block when possible.</p>
+      <form id="preview-form">
+        <label for="ticket">Preview a free ticket</label>
+        <select id="ticket" name="ticket" aria-describedby="preview-notice" required>
+          <option value="ga">General admission · 5–9 p.m.</option>
+          <optgroup label="Live machine">
+            <option value="live-a">Admission + live machine · 5:10–6:10 p.m.</option>
+            <option value="live-b">Admission + live machine · 6:55–7:55 p.m.</option>
+            <option value="live-c">Admission + live machine · 8:00–8:55 p.m.</option>
+          </optgroup>
+          <optgroup label="Practice simulator">
+            <option value="sim-a">Admission + simulator · 5:15–6:20 p.m.</option>
+            <option value="sim-b">Admission + simulator · 6:55–7:55 p.m.</option>
+            <option value="sim-c">Admission + simulator · 8:00–8:50 p.m.</option>
+          </optgroup>
+          <optgroup label="Remote-vehicle course">
+            <option value="rc-a">Admission + remote-vehicle course · 5:15–6:20 p.m.</option>
+            <option value="rc-b">Admission + remote-vehicle course · 6:55–7:55 p.m.</option>
+            <option value="rc-c">Admission + remote-vehicle course · 8:00–8:50 p.m.</option>
+          </optgroup>
+        </select>
+        <button type="submit" disabled>Preview confirmation</button>
+        <p id="preview-notice" class="kicker">Preview only · no ticket is issued</p>
+        <output id="preview-result" for="ticket" aria-live="polite"></output>
+      </form>
     </section>
+
     <section>
       <h2>What to expect</h2>
-      <p><strong>5:00 p.m.</strong> Doors and demo queue open<br><strong>6:10 p.m.</strong> Narrated machine demo<br><strong>6:30–6:50 p.m.</strong> Fireside and audience Q&amp;A<br><strong>9:00 p.m.</strong> Event closes</p>
-      <p>We’re planning Texas BBQ hors d’oeuvres from Johnny Ochoa, plus water and nonalcoholic drinks. Elevate will serve beer if the venue approves. If you’re taking a coached turn, save the beer for afterward. Wear comfortable shoes for the outdoor demo and tell us about any access needs when you register.</p>
+      <p><strong>5:00 p.m.</strong> Doors open<br><strong>6:10 p.m.</strong> Narrated machine demo<br><strong>6:30–6:50 p.m.</strong> Fireside and Q&amp;A<br><strong>9:00 p.m.</strong> Event closes</p>
+      <p>Scan your ticket once at the door. Use the on-site QR or ask a host for a walk-up demo turn. Check out the retrofit hardware at Under the Hood, meet the crew, or talk with a recruiter. A technical host will be at the table at 6–6:25 and 7:45–8:45 p.m.</p>
+      <p>We’re planning Texas BBQ hors d’oeuvres, water, and nonalcoholic drinks, with beer pending venue approval. Guest use of the live machine requires TerraFirma’s approval.</p>
     </section>
+
     <section>
-      <h2>Registration setup</h2>
-      <p>Publish one free general-admission ticket from TerraFirma’s approved calendar once the date, location, demo format, and venue capacity are confirmed. Set the event for 5–9 p.m. Central (America/Chicago). Release tickets in batches based on the venue’s capacity and keep the demo queue separate from registration.</p>
-      <p>Ask guests whether they want to meet the team, learn about jobs, or discuss a project. Leave role, company, and access needs optional and ask separately for permission to follow up. Collect phone numbers only from people who want demo waitlist texts. Put the guest guide in the confirmation. Include parking, access, weather, and demo updates in the reminders.</p>
-      <p><a href="/terrafirma-info/">Open the mobile guest guide</a> · <a href="https://luma.com/create">Open Luma’s event editor</a></p>
+      <h2>Luma setup</h2>
+      <p>Use one event with ten free ticket types and group registration off. Set a provisional 360-ticket cap after venue review: 300 general-admission tickets and 60 demo-block tickets. Hold 35 demo turns for guests who sign up on site. A demo ticket includes admission and appears once on the entry roster.</p>
+      <p>Confirm the date, venue, approved calendar, and machine eligibility before opening registration. Use the station rosters to return unclaimed reservations to the on-site queue ten minutes into a block.</p>
+      <div class="actions">
+        <a class="action-link external" href="https://docs.google.com/spreadsheets/d/1XYcmkThVhWJxToiwfaCheQjiKUXMqsb61tgqgP-504E/edit#gid=908347448&amp;range=A40:D53" target="_blank" rel="noopener noreferrer">Luma ticket inventory</a>
+        <a class="action-link external" href="https://luma.com/create?duration=PT4H&amp;timezone=America%2FChicago&amp;visibility=private&amp;tint_color=%23ff823f&amp;max_capacity=360&amp;cover_url=https%3A%2F%2Fjacklesser.me%2Fterrafirma_activation_and_recruiting_plan%2Fplayground.webp" target="_blank" rel="noopener noreferrer">Open prefilled Luma editor</a>
+        <a class="action-link" href="/terrafirma-info/">Guest guide</a>
+      </div>
     </section>
   </main>
 </body>

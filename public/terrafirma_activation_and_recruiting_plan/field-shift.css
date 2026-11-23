@@ -148,3 +148,4 @@ thead th,tfoot { background:var(--panel); }
 .asset-links a { display:inline-block; padding:8px 10px; border:1px solid var(--line); }
 .vendor-budget { min-width:840px; }
 .vendor-budget td:nth-last-child(2) { white-space:nowrap; text-align:right; }
+.flow-priority { margin:0 0 22px; padding:14px 18px; border-left:4px solid var(--accent); background:var(--panel); }

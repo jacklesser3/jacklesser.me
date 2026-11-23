@@ -102,6 +102,9 @@ figcaption a { color: var(--bone); }
 .queue-note .action-link { grid-column: 2; justify-self: start; }
 .queue-note p, .program p:not(.kicker), .exhibit p:not(.kicker) { color: var(--muted); }
 .program .kicker, .exhibit .kicker { margin-bottom: 7px; }
+.exhibit { align-items: center; }
+.exhibit-copy h3 + p, .exhibit-copy p + p { margin-top: 10px; }
+.exhibit-copy .action-link { margin-top: 16px; }
 .timeline { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); padding: 0; list-style: none; border-block: 1px solid var(--line); margin-bottom: 16px; }
 .timeline li { padding: 15px 12px; }
 .timeline li + li { border-left: 1px solid var(--line); }

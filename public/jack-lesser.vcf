@@ -2,7 +2,23 @@ BEGIN:VCARD
 VERSION:3.0
 N:Lesser;Jack;;;
 FN:Jack Lesser
+TEL;TYPE=CELL:+17819157741
 EMAIL;TYPE=INTERNET:jacklesser44@gmail.com
-URL:https://jacklesser.me/connect
+URL:https://jacklesser.me
+item1.URL:https://signal.me/#eu/unf9pQFAvrcYPvTIRF763CKZXrTFSsLg605Pa7muFjn
+ psi8WP01FU4nO-ZqyfXQA
+item1.X-ABLabel:Signal
+item2.URL:https://x.com/jacklesser_
+item2.X-ABLabel:X
+item3.URL:https://www.instagram.com/jacklesser_/
+item3.X-ABLabel:Instagram
+item4.URL:https://www.linkedin.com/in/jacklesser/
+item4.X-ABLabel:LinkedIn
+item5.URL:https://satflow.substack.com
+item5.X-ABLabel:Substack
+item6.URL:https://www.youtube.com/@timeless.practice
+item6.X-ABLabel:YouTube
+item7.URL:https://github.com/jacklesser3
+item7.X-ABLabel:GitHub
 NOTE:Signal username: jackless.09
 END:VCARD

@@ -60,3 +60,11 @@
 
 .links { grid-template-columns: minmax(0, 1fr); }
 .contactHelp { margin: 10px auto 0; max-width: 320px; font-size: 11px; line-height: 1.5; color: #536b86; }
+
+@media (max-width: 599px) {
+  .links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .link { padding-inline: 10px; gap: 8px; }
+  .action { display: none; }
+  .links > a:first-child { grid-column: 1 / -1; }
+  .links > a:first-child small { display: block; }
+}

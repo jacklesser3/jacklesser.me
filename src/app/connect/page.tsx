@@ -37,8 +37,16 @@ export default function ConnectPage() {
           <div className={styles.identityCopy}><p className={styles.eyebrow}>GREAT TO MEET YOU</p>
           <h1>Jack Lesser<span>.</span></h1>
           <p className={styles.intro}>Let’s stay in touch.</p></div></div>
+          <a className={styles.save} href="/jack-lesser.vcf">
+            <span aria-hidden="true">＋</span> Save my contact
+          </a>
         </header>
         <nav aria-label="Connect with Jack" className={styles.links}>
+          <a className={styles.link} href="tel:+17819157741">
+            <span className={styles.icon} aria-hidden="true">☎</span>
+            <span className={styles.label}>Call me<small>(781) 915-7741</small></span>
+            <span className={styles.action}>Call →</span>
+          </a>
           {order.map(name => {
             if (name === "Signal") return <SignalContact key={name} />;
 

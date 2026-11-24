@@ -111,12 +111,12 @@ figcaption a { color: var(--bone); }
 .exhibit { align-items: center; }
 .exhibit-copy h3 + p, .exhibit-copy p + p { margin-top: 10px; }
 .exhibit-copy .action-link { margin-top: 16px; }
-.timeline { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); padding: 0; list-style: none; border-block: 1px solid var(--line); margin-bottom: 16px; }
-.timeline li { padding: 15px 12px; }
-.timeline li + li { border-left: 1px solid var(--line); }
+.timeline { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); padding: 1px; gap: 1px; list-style: none; background: var(--line); margin-bottom: 16px; }
+.timeline li { padding: 15px 12px; background: var(--ink); }
 .timeline strong { display: block; color: var(--orange); }
 .timeline span { color: var(--muted); font-size: .875rem; }
 
+.results { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .tiers strong, .results strong { display: block; margin: 5px 0 8px; font: 900 clamp(2.65rem, 5.1vw, 4.4rem)/1 var(--display); color: var(--orange); white-space: nowrap; }
 .tiers .recommended { border-color: var(--orange); background: var(--bone); color: var(--ink); }
 .recommended strong, .recommended .kicker { color: var(--dark-orange); }
@@ -188,6 +188,4 @@ figcaption a { color: var(--bone); }
   .station-grid, .tiers, .results, .queue-note, .exhibit, .program { grid-template-columns: 1fr; }
   .queue-note .action-link { grid-column: auto; }
   .timeline { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .timeline li:nth-child(3) { border-left: 0; }
-  .timeline li:nth-child(n + 3) { border-top: 1px solid var(--line); }
 }

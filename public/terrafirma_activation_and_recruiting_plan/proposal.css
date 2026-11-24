@@ -74,6 +74,7 @@ dd span { display: block; margin-top: 5px; color: var(--muted); font-size: .8rem
 #execution .section-head > div { container-type: inline-size; }
 #execution-title { font-size: min(clamp(2.45rem, 5.2vw, 4.45rem), 9.5cqi); white-space: nowrap; }
 
+#experience { padding-block-start: clamp(16px, 2vw, 24px); }
 #experience .section-head, .experience-grid {
   grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
   column-gap: clamp(24px, 4vw, 48px);
@@ -119,7 +120,7 @@ figcaption a { color: var(--bone); }
 .action-link { display: inline-flex; align-items: center; gap: 10px; max-width: 100%; padding: 9px 13px; border: 1px solid var(--line); text-decoration: none; font-weight: 700; font-size: .81rem; }
 .action-link:hover { border-color: var(--orange); }
 .external::after { content: "↗" / ""; color: var(--orange); font-size: 1rem; line-height: 1; }
-.decision { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 44px; margin-top: 12px; padding: 10px clamp(14px, 2vw, 24px); background: #fff; color: var(--ink); font-weight: 700; line-height: 1.4; text-decoration: none; }
+.decision { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 44px; margin-top: 6px; padding: 10px clamp(14px, 2vw, 24px); background: #fff; color: var(--ink); font-weight: 700; line-height: 1.4; text-decoration: none; }
 .decision::after { color: var(--dark-orange); }
 .decision:hover, .decision:focus-visible { color: var(--dark-orange); text-decoration: underline; }
 .campaign-calendar { list-style: none; padding: 0; border-top: 1px solid var(--line); }

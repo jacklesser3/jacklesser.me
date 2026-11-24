@@ -157,6 +157,9 @@ figcaption a { color: var(--bone); }
   .masthead-inner { min-height: 0; padding-block: 13px; align-items: start; flex-direction: column; gap: 10px; }
   .brandmark { width: 141px; }
   nav a { font-size: .76rem; }
+  .proposal-header { flex-flow: row wrap; align-items: center; gap: 4px 12px; padding-block: 3px; }
+  .proposal-header .brandmark { width: clamp(105px, 29vw, 141px); }
+  .proposal-header nav a { display: inline-flex; align-items: center; min-height: 44px; }
   .hero { aspect-ratio: auto; display: block; margin-top: 17px; }
   .hero-art { display: block; position: static; background: var(--bone); }
   .hero-art img { height: auto; }

@@ -121,7 +121,6 @@ figcaption a { color: var(--bone); }
 .tiers .recommended { border-color: var(--orange); background: var(--bone); color: var(--ink); }
 .recommended strong, .recommended .kicker { color: var(--dark-orange); }
 .tiers .recommended p:not(.kicker) { color: #4d5060; }
-.budget-note { margin-top: 12px; color: var(--muted); font-size: .85rem; }
 .actions { display: flex; gap: 9px; flex-wrap: wrap; margin-top: 17px; }
 .action-link { display: inline-flex; align-items: center; gap: 10px; max-width: 100%; padding: 9px 13px; border: 1px solid var(--line); text-decoration: none; font-weight: 700; font-size: .81rem; }
 .action-link:hover { border-color: var(--orange); }

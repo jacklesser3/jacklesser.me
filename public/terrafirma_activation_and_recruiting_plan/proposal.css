@@ -71,8 +71,9 @@ dd span { display: block; margin-top: 5px; color: var(--muted); font-size: .8rem
 .section-head > div { min-width: 0; }
 .section-head .kicker { margin-bottom: 7px; }
 .section-head > p { max-width: 50ch; color: var(--muted); }
-#execution .section-head > div { container-type: inline-size; }
-#execution-title { font-size: min(clamp(2.45rem, 5.2vw, 4.45rem), 9.5cqi); white-space: nowrap; }
+#approvals .section-head { align-items: center; grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr); }
+#approvals .section-head > div, #execution .section-head > div { container-type: inline-size; }
+#decision, #execution-title { font-size: min(clamp(2.45rem, 5.2vw, 4.45rem), 9.5cqi); white-space: nowrap; }
 
 #experience { padding-block-start: clamp(30px, 3.5vw, 44px); }
 #experience .section-head, .experience-grid {
@@ -177,6 +178,7 @@ figcaption a { color: var(--bone); }
   .brief > div:nth-child(3) { border-left: 0; }
   .brief > div:nth-child(n + 3) { border-top: 1px solid var(--line); }
   .section-head { grid-template-columns: 1fr; gap: 12px; }
+  #approvals .section-head { grid-template-columns: 1fr; }
   .campaign-calendar li, .campaign-notes { grid-template-columns: 1fr; }
   #experience .section-head, .experience-grid { grid-template-columns: 1fr; }
   .experience-grid { row-gap: 24px; }

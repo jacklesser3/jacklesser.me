@@ -120,7 +120,7 @@ figcaption a { color: var(--bone); }
 .action-link:hover { border-color: var(--orange); }
 .external::after { content: "↗" / ""; color: var(--orange); font-size: 1rem; line-height: 1; }
 .decision { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 44px; margin-top: 12px; padding: 10px clamp(14px, 2vw, 24px); background: #fff; color: var(--ink); font-weight: 700; line-height: 1.4; text-decoration: none; }
-.decision::after { content: "↓" / ""; color: var(--dark-orange); line-height: 1; }
+.decision::after { color: var(--dark-orange); }
 .decision:hover, .decision:focus-visible { color: var(--dark-orange); text-decoration: underline; }
 .campaign-calendar { list-style: none; padding: 0; border-top: 1px solid var(--line); }
 .campaign-calendar li { display: grid; grid-template-columns: minmax(160px, 1fr) minmax(0, 3.1fr); gap: 12px 28px; padding: 16px 0; border-bottom: 1px solid var(--line); }

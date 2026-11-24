@@ -119,6 +119,13 @@ figcaption a { color: var(--bone); }
 .actions { display: flex; gap: 9px; flex-wrap: wrap; margin-top: 17px; }
 .action-link { display: inline-flex; align-items: center; gap: 10px; max-width: 100%; padding: 9px 13px; border: 1px solid var(--line); text-decoration: none; font-weight: 700; font-size: .81rem; }
 .action-link:hover { border-color: var(--orange); }
+.venue-cards article { display: grid; grid-row: span 2; grid-template-rows: subgrid; row-gap: 16px; }
+.venue-options > summary { cursor: pointer; list-style: none; }
+.venue-options > summary::-webkit-details-marker { display: none; }
+.venue-options > summary::after { content: "+" / ""; }
+.venue-options[open] > summary::after { content: "−" / ""; }
+.venue-options ul { padding-inline-start: 1.25em; color: var(--muted); }
+.venue-options li + li { margin-top: 6px; }
 .external::after { content: "↗" / ""; color: var(--orange); font-size: 1rem; line-height: 1; }
 .decision { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 44px; margin-top: clamp(12px, 1.5vw, 18px); padding: 10px clamp(14px, 2vw, 24px); background: #fff; color: var(--ink); font-weight: 700; line-height: 1.4; text-decoration: none; }
 .decision::after { color: var(--dark-orange); }

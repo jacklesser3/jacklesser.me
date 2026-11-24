@@ -119,11 +119,9 @@ figcaption a { color: var(--bone); }
 .action-link { display: inline-flex; align-items: center; gap: 10px; max-width: 100%; padding: 9px 13px; border: 1px solid var(--line); text-decoration: none; font-weight: 700; font-size: .81rem; }
 .action-link:hover { border-color: var(--orange); }
 .external::after { content: "↗" / ""; color: var(--orange); font-size: 1rem; line-height: 1; }
-.decision { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); align-items: center; gap: 16px 24px; padding: clamp(18px, 3vw, 32px); margin-top: 24px; background: var(--bone); color: var(--ink); }
-.decision .kicker { color: var(--dark-orange); margin-bottom: 6px; }
-.decision > div { container-type: inline-size; }
-.decision-copy p + p { margin-top: .65rem; }
-#decision-title { font-size: min(clamp(1.85rem, 3.3vw, 3rem), 8.4cqi); white-space: nowrap; }
+.decision { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 44px; margin-top: 12px; padding: 10px clamp(14px, 2vw, 24px); background: #fff; color: var(--ink); font-weight: 700; line-height: 1.4; text-decoration: none; }
+.decision::after { color: var(--dark-orange); }
+.decision:hover, .decision:focus-visible { color: var(--dark-orange); text-decoration: underline; }
 .campaign-calendar { list-style: none; padding: 0; border-top: 1px solid var(--line); }
 .campaign-calendar li { display: grid; grid-template-columns: minmax(160px, 1fr) minmax(0, 3.1fr); gap: 12px 28px; padding: 16px 0; border-bottom: 1px solid var(--line); }
 .campaign-calendar strong { display: block; font-size: 1.12rem; }
@@ -166,7 +164,7 @@ figcaption a { color: var(--bone); }
   .brief { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .brief > div:nth-child(3) { border-left: 0; }
   .brief > div:nth-child(n + 3) { border-top: 1px solid var(--line); }
-  .section-head, .decision { grid-template-columns: 1fr; gap: 12px; }
+  .section-head { grid-template-columns: 1fr; gap: 12px; }
   .campaign-calendar li, .campaign-notes { grid-template-columns: 1fr; }
   #experience .section-head, .experience-grid { grid-template-columns: 1fr; }
   .experience-grid { row-gap: 24px; }

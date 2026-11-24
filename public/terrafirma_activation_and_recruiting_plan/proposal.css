@@ -104,6 +104,9 @@ figcaption a { color: var(--bone); }
 .queue-note .action-link { grid-column: 2; justify-self: start; }
 .queue-note p, .program p:not(.kicker), .exhibit p:not(.kicker) { color: var(--muted); }
 .queue-note p + p { margin-top: 10px; }
+.next-steps-list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.next-steps-list label { display: grid; grid-template-columns: 1rem minmax(0, 1fr); align-items: start; gap: 10px; cursor: pointer; }
+.next-steps-list input { width: 1rem; height: 1rem; margin: .25em 0 0; accent-color: var(--orange); cursor: inherit; }
 .program .kicker, .exhibit .kicker { margin-bottom: 7px; }
 .exhibit { align-items: center; }
 .exhibit-copy h3 + p, .exhibit-copy p + p { margin-top: 10px; }

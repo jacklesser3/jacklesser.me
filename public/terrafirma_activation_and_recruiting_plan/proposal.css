@@ -102,6 +102,7 @@ figcaption a { color: var(--bone); }
 .queue-note, .exhibit { margin-top: 16px; }
 .queue-note .action-link { grid-column: 2; justify-self: start; }
 .queue-note p, .program p:not(.kicker), .exhibit p:not(.kicker) { color: var(--muted); }
+.queue-note p + p { margin-top: 10px; }
 .program .kicker, .exhibit .kicker { margin-bottom: 7px; }
 .exhibit { align-items: center; }
 .exhibit-copy h3 + p, .exhibit-copy p + p { margin-top: 10px; }

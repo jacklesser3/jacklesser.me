@@ -55,12 +55,12 @@ nav a { text-decoration: none; white-space: nowrap; font-size: .83rem; }
 .hero-art img { height: 100%; object-fit: contain; }
 .hero-copy { text-align: center; padding: 26px 16px; }
 .hero-copy .kicker { color: var(--dark-orange); }
-.hero h1 { margin: 8px 0 10px; font-size: clamp(2.4rem, 6.45cqi, 5.5rem); letter-spacing: -.01em; }
+.hero h1 { margin: 10px 0 14px; font-size: clamp(2.4rem, 6.45cqi, 5.5rem); letter-spacing: -.01em; }
 .hero h1 em { color: var(--dark-orange); font-style: normal; }
-.hero-copy p:last-child { font-size: clamp(.84rem, 1.5cqi, 1.1rem); font-weight: 700; }
+.hero-copy p:last-child { max-width: 28ch; margin-inline: auto; text-wrap: balance; font-size: clamp(.84rem, 1.5cqi, 1.1rem); font-weight: 700; }
 
 .brief { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border: 1px solid var(--line); border-top: 0; background: var(--panel); }
-.brief > div { padding: 18px clamp(13px, 2vw, 28px); }
+.brief > div { padding: clamp(18px, 1.9vw, 24px) clamp(13px, 2vw, 28px); }
 .brief > div + div { border-left: 1px solid var(--line); }
 dt { color: var(--orange); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; }
 dd { margin-top: 5px; font-size: clamp(1rem, 1.7vw, 1.38rem); font-weight: 700; line-height: 1.28; }
@@ -74,7 +74,7 @@ dd span { display: block; margin-top: 5px; color: var(--muted); font-size: .8rem
 #execution .section-head > div { container-type: inline-size; }
 #execution-title { font-size: min(clamp(2.45rem, 5.2vw, 4.45rem), 9.5cqi); white-space: nowrap; }
 
-#experience { padding-block-start: clamp(16px, 2vw, 24px); }
+#experience { padding-block-start: clamp(30px, 3.5vw, 44px); }
 #experience .section-head, .experience-grid {
   grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
   column-gap: clamp(24px, 4vw, 48px);
@@ -120,7 +120,7 @@ figcaption a { color: var(--bone); }
 .action-link { display: inline-flex; align-items: center; gap: 10px; max-width: 100%; padding: 9px 13px; border: 1px solid var(--line); text-decoration: none; font-weight: 700; font-size: .81rem; }
 .action-link:hover { border-color: var(--orange); }
 .external::after { content: "↗" / ""; color: var(--orange); font-size: 1rem; line-height: 1; }
-.decision { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 44px; margin-top: 6px; padding: 10px clamp(14px, 2vw, 24px); background: #fff; color: var(--ink); font-weight: 700; line-height: 1.4; text-decoration: none; }
+.decision { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 44px; margin-top: clamp(12px, 1.5vw, 18px); padding: 10px clamp(14px, 2vw, 24px); background: #fff; color: var(--ink); font-weight: 700; line-height: 1.4; text-decoration: none; }
 .decision::after { color: var(--dark-orange); }
 .decision:hover, .decision:focus-visible { color: var(--dark-orange); text-decoration: underline; }
 .campaign-calendar { list-style: none; padding: 0; border-top: 1px solid var(--line); }

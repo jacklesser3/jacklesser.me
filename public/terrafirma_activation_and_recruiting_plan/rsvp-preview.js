@@ -4,8 +4,8 @@ const result = document.querySelector("#preview-result");
 
 demoForm.addEventListener("submit", (event) => {
   event.preventDefault();
-  const selection = demo.selectedOptions[0].text.replace(/\.$/, "");
-  result.textContent = `Sample demo confirmation — ${selection}. Check in with the station host. We’ll call you when your turn is ready.`;
+  const selection = demo.selectedOptions[0].text;
+  result.textContent = `Sample confirmation for ${selection} Check in with the host at the demo sign-up table. We’ll call you when the operator is ready.`;
 });
 demo.addEventListener("change", () => {
   result.textContent = "";

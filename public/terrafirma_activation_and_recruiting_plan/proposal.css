@@ -99,15 +99,15 @@ figcaption a { color: var(--bone); }
 .station-grid h3, .tiers h3 { margin: 7px 0 9px; }
 .station-grid p:not(.kicker), .tiers p:not(.kicker), .results p:not(.kicker) { color: var(--muted); }
 .station-grid strong { display: block; margin-top: 12px; font-size: .9rem; color: var(--orange); }
-.queue-note, .program, .exhibit { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.65fr); align-items: start; gap: 16px 26px; padding: 21px clamp(17px, 2.4vw, 29px); border: 1px solid var(--line); border-left: 3px solid var(--orange); background: var(--panel); }
+.queue-note, .exhibit { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.65fr); align-items: start; gap: 16px 26px; padding: 21px clamp(17px, 2.4vw, 29px); border: 1px solid var(--line); border-left: 3px solid var(--orange); background: var(--panel); }
 .queue-note, .exhibit { margin-top: 16px; }
 .queue-note .action-link { grid-column: 2; justify-self: start; }
-.queue-note p, .program p:not(.kicker), .exhibit p:not(.kicker) { color: var(--muted); }
+.queue-note p, .exhibit p:not(.kicker) { color: var(--muted); }
 .queue-note p + p { margin-top: 10px; }
 .next-steps-list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
 .next-steps-list label { display: grid; grid-template-columns: 1rem minmax(0, 1fr); align-items: start; gap: 10px; cursor: pointer; }
 .next-steps-list input { width: 1rem; height: 1rem; margin: .25em 0 0; accent-color: var(--orange); cursor: inherit; }
-.program .kicker, .exhibit .kicker { margin-bottom: 7px; }
+.exhibit .kicker { margin-bottom: 7px; }
 .exhibit { align-items: center; }
 .exhibit-copy h3 + p, .exhibit-copy p + p { margin-top: 10px; }
 .exhibit-copy .action-link { margin-top: 16px; }
@@ -115,6 +115,15 @@ figcaption a { color: var(--bone); }
 .timeline li { padding: 15px 12px; background: var(--ink); }
 .timeline strong { display: block; color: var(--orange); }
 .timeline span { color: var(--muted); font-size: .875rem; }
+.schedule-details { border: 1px solid var(--line); background: var(--panel); }
+.schedule-details > summary { padding: 12px 16px; cursor: pointer; font-weight: 700; }
+.schedule-details > summary::marker { color: var(--orange); }
+.schedule-details > summary:hover { color: var(--orange); }
+.schedule-content { padding-inline: 16px; color: var(--muted); }
+.schedule-content dl { margin-top: 12px; }
+.schedule-content dl > div { display: grid; grid-template-columns: minmax(145px, .65fr) minmax(0, 3fr); gap: 8px 18px; padding-block: 12px; border-top: 1px solid var(--line); }
+.schedule-content dt { font-size: .83rem; letter-spacing: 0; text-transform: none; font-weight: 700; }
+.schedule-content dd { margin: 0; font-size: .875rem; font-weight: 400; line-height: 1.55; }
 
 .results { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .tiers strong, .results strong { display: block; margin: 5px 0 8px; font: 900 clamp(2.65rem, 5.1vw, 4.4rem)/1 var(--display); color: var(--orange); white-space: nowrap; }
@@ -185,7 +194,11 @@ figcaption a { color: var(--bone); }
   .campaign-calendar li, .campaign-notes { grid-template-columns: 1fr; }
   #experience .section-head, .experience-grid { grid-template-columns: 1fr; }
   .experience-grid { row-gap: 24px; }
-  .station-grid, .tiers, .results, .queue-note, .exhibit, .program { grid-template-columns: 1fr; }
+  .station-grid, .tiers, .results, .queue-note, .exhibit { grid-template-columns: 1fr; }
   .queue-note .action-link { grid-column: auto; }
   .timeline { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 480px) {
+  .schedule-content dl > div { grid-template-columns: 1fr; gap: 4px; }
 }
